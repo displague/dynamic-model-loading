@@ -1,0 +1,60 @@
+{
+  "purpose": "numerical_diagnosis_not_sparse_quality_evaluation",
+  "modes": [
+    "bf16",
+    "reduction_off",
+    "fp32_down",
+    "fp32_ffn",
+    "canonical_down"
+  ],
+  "config_sha256": "8837257577e0b0e095c6ec2d1f0ced5dd13ebd0ba1fc3cc2916633e553fa98cc",
+  "corpus_sha256": "564b0be92239c5dad036981c6fd9756bbfff86118497df980d8b5eb8f1ee9de1",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "environment": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cuda",
+    "torch": "2.10.0+cu130",
+    "cuda_build": "13.0",
+    "versions": {
+      "transformers": "5.13.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.19.0",
+      "numpy": "2.3.5"
+    },
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "bf16_reduced_precision_reduction": true,
+    "fp16_reduced_precision_reduction": true,
+    "cpu_threads": 4,
+    "process_id": 4292,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "total_bytes": 17066033152,
+      "compute_capability": [
+        12,
+        0
+      ]
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 5080 Laptop GPU, 616.64, 16303 MiB, 24 MiB, 40, 6.03 W"
+  },
+  "sources": {
+    "adapters.py": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc",
+    "experiment.py": "9b13a125007fca4cbb8a69e7d606eea6b58a51e3e58e7e1691602938923f6033",
+    "ffn.py": "5f99973e1d9779023a06f64cccc084dea90a143b74116ca40b58bfa6ffc26e55",
+    "metrics.py": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53",
+    "precision.py": "7a9f43b2a403006d7f25f3a855ad21847dbdbba449f38170b59a64c78f1c2b7a",
+    "__init__.py": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738"
+  },
+  "checkpoint_files": {
+    "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+    "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  }
+}

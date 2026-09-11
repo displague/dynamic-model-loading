@@ -1,0 +1,10 @@
+{
+  "reason": "Repeat the precision diagnosis after adding missing token IDs, token digests, exact layouts and protocol receipts before measurement",
+  "previous_run": "precision",
+  "new_run": "precision-receipted",
+  "raw_results_byte_identical": true,
+  "summary_byte_identical": true,
+  "new_raw_sha256": "c9fc2ca9d7b4e81870a94f10af6a12e923f5b8757b63be217432dc2f07e53a3a",
+  "previous_raw_sha256": "c9fc2ca9d7b4e81870a94f10af6a12e923f5b8757b63be217432dc2f07e53a3a",
+  "layouts_match_original_initial_bf16_run": true
+}

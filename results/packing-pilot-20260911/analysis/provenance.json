@@ -1,0 +1,10 @@
+{
+  "source_sha256": "ba578312bb18e3af8104fd50f6bcf30a02d887fcf6224b4bb56434f5fb1fb086",
+  "versions": {
+    "numpy": "2.3.5",
+    "matplotlib": "3.11.1",
+    "pyarrow": "25.0.1"
+  },
+  "input_raw_sha256": "332d1de1177dc3eb33a87e94a7ea76a3ebbbc82c1dd3a409f54f2a05754ca66d",
+  "input_summary_sha256": "9292c18dd113b2539354c997339cb114986130c6ef694b5aae6cce8805f13acf"
+}

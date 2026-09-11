@@ -8,11 +8,12 @@ The starting point is the final critical review in the
 The executable first milestone checks packing correctness and produces optional
 hindsight sparsity diagnostics. It is not yet a weight pager.
 
-**Current result:** the BF16 reordered-layout numerical gate failed. A separate FP32
-control passed and completed 18 diagnostic configurations. See
-[initial findings](docs/initial-results.md) for the failure, controls, and grouping
-results. The default BF16 command currently reproduces the gated experiment; it must
-not be treated as a passing reference.
+**Current result:** the larger FP32 pilot passed correctness checks and completed 24
+configurations. The tested co-activation packing heuristic lost to simple popularity
+packing in all four grouped settings. See [pilot findings](docs/packing-pilot-results.md)
+for results, precision controls, and preserved receipts. The
+[initial BF16 numerical failure](docs/initial-results.md) remains unresolved by a
+practical execution policy; the default BF16 command still reproduces that failure.
 
 ## Run locally
 
@@ -80,7 +81,28 @@ The diagnostic hook computes dense gate/up activations, scores neurons using
 random, and calibration-popularity layouts. It does not perform sparse GPU execution.
 Hypothetical selected weight bytes are not measured PCIe transfers or memory savings.
 
-The next substantive milestone is larger, separated data plus packing and cache traces.
+The packing pilot additionally supports calibration-only co-activation signatures and
+capacity-constrained grouping. It still has no bounded-cache or transfer runtime.
 A learned selector and corrective refinement should follow only if those measurements
 show an opportunity. CUDA timing and memory reporting follow the distinctions in
 [PyTorch's CUDA notes](https://docs.pytorch.org/docs/2.14/notes/cuda.html).
+
+## Continue the experiment
+
+[The pilot protocol](docs/packing-pilot-protocol.md) fixes the development data recipe,
+numerical controls, grouping method, and exploratory comparison before measurements.
+Install the optional analysis dependencies with `pip install -e ".[analysis]"` in the
+project environment. Download only WikiText training and validation data:
+
+```powershell
+hf download Salesforce/wikitext --repo-type dataset --revision b08601e04326c79dfdd32d625aee71d232d685c3 --include "wikitext-2-raw-v1/train-*.parquet" "wikitext-2-raw-v1/validation-*.parquet"
+.\.venv\Scripts\python.exe -m dynamic_model_loading.precision --output runs/precision
+.\.venv\Scripts\python.exe -m dynamic_model_loading.corpus --output runs/pilot-corpus
+.\.venv\Scripts\python.exe -m dynamic_model_loading.experiment --config configs/packing-pilot.json --corpus runs/pilot-corpus/corpus.jsonl --diagnostics --output runs/packing-pilot
+.\.venv\Scripts\python.exe -m dynamic_model_loading.analysis --run runs/packing-pilot --output runs/packing-figures
+```
+
+The corpus builder selects distinct articles and records source hashes, titles, and
+licensing. The test split is unused. The larger run spills reference logits to disk
+(about 2.5 GB for the default slice); these are analytical reference files, not weight
+offload traffic. New runs snapshot their source and protocol as well as their inputs.

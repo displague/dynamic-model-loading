@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-09-11T14:14:21.133582+00:00",
+  "purpose": "exploratory_wikitext_packing_pilot_not_confirmatory_evaluation",
+  "mode": "diagnostics",
+  "config_sha256": "0b69b16f567147ecc9b7946a28957404e5c897ba1455117957dfd5f7ce3e15ae",
+  "corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "sources": {
+    "__init__.py": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738",
+    "adapters.py": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc",
+    "corpus.py": "f8612383da7c95205beefcc3ece7ae25608ba3ca6f5f19fa8a6ac20cd73e719e",
+    "experiment.py": "0e22f87b911521a55700b9079f5c2f4d014fe5b1d5f48b11d689ea29d7a5c391",
+    "ffn.py": "5f99973e1d9779023a06f64cccc084dea90a143b74116ca40b58bfa6ffc26e55",
+    "metrics.py": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53",
+    "packing.py": "b13c919d54ebc7e97669ee454a37b09732b3faa5cb78f697ee6a3a9f6297fe46",
+    "precision.py": "7a9f43b2a403006d7f25f3a855ad21847dbdbba449f38170b59a64c78f1c2b7a"
+  },
+  "environment": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cuda",
+    "torch": "2.10.0+cu130",
+    "cuda_build": "13.0",
+    "versions": {
+      "transformers": "5.13.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.19.0",
+      "numpy": "2.3.5"
+    },
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "bf16_reduced_precision_reduction": true,
+    "fp16_reduced_precision_reduction": true,
+    "cpu_threads": 4,
+    "process_id": 17968,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "total_bytes": 17066033152,
+      "compute_capability": [
+        12,
+        0
+      ]
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 5080 Laptop GPU, 616.64, 16303 MiB, 24 MiB, 40, 5.84 W"
+  },
+  "checkpoint": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "protocol_sha256": "c143e1682136e572d1d24af76a85d37352b706ab4b1189de7e2970e69efbcb50",
+  "corpus_provenance_sha256": "48058d59eb0e647410c30c932620c21f2433b08c9e0cb5db80bd13845f5fb92a"
+}

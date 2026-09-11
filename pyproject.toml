@@ -11,6 +11,7 @@ dependencies = ["torch>=2.10,<3", "transformers>=5.13,<6", "safetensors>=0.8"]
 
 [project.optional-dependencies]
 dev = ["pytest>=9"]
+analysis = ["pyarrow>=25", "matplotlib>=3.11"]
 
 [project.scripts]
 dml = "dynamic_model_loading.experiment:main"

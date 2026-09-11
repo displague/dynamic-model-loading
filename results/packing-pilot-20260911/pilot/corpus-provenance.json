@@ -1,0 +1,700 @@
+{
+  "dataset": "Salesforce/wikitext",
+  "dataset_revision": "b08601e04326c79dfdd32d625aee71d232d685c3",
+  "source": "https://huggingface.co/datasets/Salesforce/wikitext",
+  "licenses": [
+    "CC-BY-SA-3.0",
+    "GFDL"
+  ],
+  "files": {
+    "train": {
+      "filename": "train-00000-of-00001.parquet",
+      "sha256": "e83889baabc497075506f91975be5fac0d45c5290b6b20582c8cd1e853d0c9f7"
+    },
+    "validation": {
+      "filename": "validation-00000-of-00001.parquet",
+      "sha256": "204929b7ff9d6184953f867dedb860e40aa69c078fc1e54b3baaa8fb28511c4c"
+    }
+  },
+  "excluded_overlapping_titles": [],
+  "selection": [
+    {
+      "id": "wikitext-train-8e1c37980c3d3c28",
+      "title": "Gregorian Tower",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "78b566791d89b4330d516cd93706ae05ab8119049cb140a008c4db1337e2e159"
+    },
+    {
+      "id": "wikitext-train-850abe090d258c3c",
+      "title": "Sholay",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "4a2282e32e8b41845eecaafc3fd6895d7a39e259fa0efce453a018fb39a3e1c5"
+    },
+    {
+      "id": "wikitext-train-957b54c84eddb069",
+      "title": "World War Z",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "62758097290d367039518a7a03518bc30c77c200e530bcfda577a5d58faa7c63"
+    },
+    {
+      "id": "wikitext-train-86f97e1be8510bb0",
+      "title": "Youth on the Prow , and Pleasure at the Helm",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "15002847f97b11f5ba05d515fe5705d419bfa84cc6dd8f74840ed3cd176a5f7a"
+    },
+    {
+      "id": "wikitext-train-3f55ee4b48a5d6dc",
+      "title": "James Robert Baker",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "1625bba7de40140842e4077753215b3838737a66a32590c8e8ab636f87c16585"
+    },
+    {
+      "id": "wikitext-train-d0215dcb2d866b47",
+      "title": "First Ostend Raid",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "a612608a50e4e609f0ca0f2f7a9e8bc5c9f6add3e3decadc28e82e9a007fbec6"
+    },
+    {
+      "id": "wikitext-train-812ca8532e867424",
+      "title": "Battle of Romani",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "75dd5fde23fb8b9a492f61b41362ceacdcac94676d9eedabd8b538f078c3c228"
+    },
+    {
+      "id": "wikitext-train-b2ae0b90262d65d5",
+      "title": "Old Pine Church",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "cd52e20f2f402e44a8c5537d6a157f9201465d4d0a953af9b0a40f05cd8a2f15"
+    },
+    {
+      "id": "wikitext-train-c755da18f6a10caf",
+      "title": "Meralda Warren",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "4262946319b214e394558551a7fd6169ea83948a61cd986d83145a7f6e4ec3c3"
+    },
+    {
+      "id": "wikitext-train-e1e2d099ffa04d1f",
+      "title": "Xenon",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "8e1b357d51487a36693745553044674a9ed449c889464d4cd29923f8370098d1"
+    },
+    {
+      "id": "wikitext-train-aa16442b777b877f",
+      "title": "Perfect Dark ( 2010 video game )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "6686de4a066b302b3672690743ab9becd57e49065a9c08a1badc4c092652d8ee"
+    },
+    {
+      "id": "wikitext-train-73339a6861563b90",
+      "title": "Mortimer Wheeler",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "e66464f8f608f64956beef73ce2978ed731691428681f070d6c6d30a741aeffa"
+    },
+    {
+      "id": "wikitext-train-1c18fe4009737ace",
+      "title": "Ulysses ( poem )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "7c3b5d4795456c8d55d1ec73f09631d5327083dbf63380d3095ed0a068b3cc0d"
+    },
+    {
+      "id": "wikitext-train-e357d396871d1012",
+      "title": "Star",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "8495b04d9f6785314241da41044a1fd6c5bcadbc3e4ac71021ff03d76fba40c9"
+    },
+    {
+      "id": "wikitext-train-13a58d810c4db37e",
+      "title": "Arizona State Route 67",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "b17696157f68cf0b184b7bb3cf4a79887367e41da7a1bb48f10efcc861b065e2"
+    },
+    {
+      "id": "wikitext-train-a6bf0ecd12bf9ee0",
+      "title": "Bodyline",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "4f809279db2176a717e3868d158debd03e1af1d0c305e1ee12292d6563b8d00c"
+    },
+    {
+      "id": "wikitext-train-bf37898842725980",
+      "title": "The Tramp Dentists",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "d462f1f2292d33a1208cf7d428087b1ffad63cbfcab39cc047201311cc1fcd47"
+    },
+    {
+      "id": "wikitext-train-bfb9fdd07f7ef86a",
+      "title": "1973 Atlantic hurricane season",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "b3314af33ada28c990e4d920ec9b7258b455a7188ad5917c9f277fa05ea2f56f"
+    },
+    {
+      "id": "wikitext-train-013e16bd610f13b9",
+      "title": "The Crab with the Golden Claws",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "e37d28c4feb4bef420c015af3543fc7ad59aaca5743afd5f1fa1c2e8e732625f"
+    },
+    {
+      "id": "wikitext-train-012ceac920d909c3",
+      "title": "Laborintus II ( 2012 recording )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "b1b2dbee29e1ee1f8071787a07907cd05cb80b2ccfe33b1009fe7b1b1640dbd8"
+    },
+    {
+      "id": "wikitext-train-8bb749a89f428954",
+      "title": "August ( Fringe )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "7447418880b1c70a264f1ad55ca33d3467863a54183252162edda11f32702d97"
+    },
+    {
+      "id": "wikitext-train-6f81ef74fa7ec5a6",
+      "title": "Stanley Price Weir",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "c82656a7b94aa4f1d6002cbbec26e1c48e240a4183584edb0a2550ffc6f71af3"
+    },
+    {
+      "id": "wikitext-train-6c594f69c8c1b2aa",
+      "title": "Tower Building of the Little Rock Arsenal",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "62f496d8edb29020c84ebda41d0fabbabe94d2e6b0467a0006a08b111aaaeb32"
+    },
+    {
+      "id": "wikitext-train-3506e505f17f7739",
+      "title": "Banksia violacea",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "50e069c3b89aa257fd73f5bd51a19587cf15c3b0814178c9f7ead43569eb5a85"
+    },
+    {
+      "id": "wikitext-train-cbe17725afaee462",
+      "title": "Arnhem Oosterbeek War Cemetery",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "ec5f0fb96a582bbb141d8fadbb9e5a99793cc7533a95198fe6b0594ddd2f2305"
+    },
+    {
+      "id": "wikitext-train-7fbe456bb71b5c73",
+      "title": "World War I Memorial ( East Providence , Rhode Island )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "984cfa4bebb2948f46fb48da37c5d17cb885823db7572dad32a12ce5aeee7bc8"
+    },
+    {
+      "id": "wikitext-train-13823dc4e7b6eef3",
+      "title": "2 / 4th Machine Gun Battalion ( Australia )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "504e10e6c57d04b638bff3186ec4355833d1219a1eeebf303e3178ac049087f1"
+    },
+    {
+      "id": "wikitext-train-a8dcdc7e31d5c25d",
+      "title": "Greens Ledge Light",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "90935abdc1c76c5e618c169c5d1983cffe9165455808dc62282b93755f38dc15"
+    },
+    {
+      "id": "wikitext-train-2df3513b3b7bba1f",
+      "title": "Rockstar 101",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "93af80407dd3967049ff821d3988c4e893e968a09ede53cb91e7419a2b10ce7a"
+    },
+    {
+      "id": "wikitext-train-21c566a0b1196ce1",
+      "title": "Murder of Tom ap Rhys Pryce",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "980c1d2949b90d5f51b2e97446348d604164c3408ad5f7b39ab1806d29072ad7"
+    },
+    {
+      "id": "wikitext-train-9a40f17202dc081b",
+      "title": "\u00cdmar mac Arailt",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "b3e5b394eef4a6ccbc18342c4e2abbcc23a5b9890fe2c5a2fceed111b196e18a"
+    },
+    {
+      "id": "wikitext-train-d06dd63347ce015c",
+      "title": "Stay @-@ at @-@ home dad",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "d9ea641b56110d05e9d3703a73840c3599b4fd3c8d0adb4db041c7766b648743"
+    },
+    {
+      "id": "wikitext-train-066c48cc7e28afd8",
+      "title": "Fear of Flying ( The Simpsons )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "6d2ff951600dbfec2a1db7e4ce01b08c8343bc37441968c2647c9e41d362f9b9"
+    },
+    {
+      "id": "wikitext-train-034afecf0c7fbfb2",
+      "title": "Stuart McCall",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "68ed3285707497ed224c8d1b118dced01a3b29f3fb6d820a72a414ae9444b886"
+    },
+    {
+      "id": "wikitext-train-6a10e702f61e8133",
+      "title": "Leslie Andrew",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "47895a4eb696d65100a72cbb116ebe4662e5cf01352d51fc815137c2e216a1ca"
+    },
+    {
+      "id": "wikitext-train-52e3398f942ab05b",
+      "title": "DuMont Television Network",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "4c54f3f4367eea71cf481deec9d98d81d3f7c3ef52a68d58285010783b4b5b1b"
+    },
+    {
+      "id": "wikitext-train-d539be56c116ca0e",
+      "title": "Florida Atlantic University",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "4a18636b91587230240c3d7f6d74c7cbdd2458569595956abd38170bd62498d3"
+    },
+    {
+      "id": "wikitext-train-0df479d329688304",
+      "title": "Westminster Assembly",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "c029378a06ddb69613c167e78b27c0074e57aae2e3d7ed11b5e9cd568d2bbb37"
+    },
+    {
+      "id": "wikitext-train-5fd855e460b496b7",
+      "title": "Not Quite Hollywood : The Wild , Untold Story of Ozploitation !",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "b250202dfc376fb015cef531cfca09f30e9644291e9d4c04c309a6995ea69673"
+    },
+    {
+      "id": "wikitext-train-02934e3e23cd70ad",
+      "title": "New Year 's Eve ( Up All Night )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "febc6512412b33edcf05a388d2c99a0ffe35c33a03e0e9cb5b429ff462242e51"
+    },
+    {
+      "id": "wikitext-train-24322df2cc3217d7",
+      "title": "Key ( basketball )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "a372fa906e6affce34a2ca6f9d4d63a9bd3efc1ea4ac189d3ead1831e2f20c9d"
+    },
+    {
+      "id": "wikitext-train-549e3ba337bb0738",
+      "title": "Rebbie Jackson",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "f8a2281a51a8443c5dfbe5c7e8e4981539e4bca6fda6fd7277a61a62a2d5b07c"
+    },
+    {
+      "id": "wikitext-train-8aab3b0b00dda495",
+      "title": "Old Baltimore Pike",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "c6b99cef4f0aa3c7d35a4af07cfc9bf6094b5872b358f23c86ac3e20f22ef5df"
+    },
+    {
+      "id": "wikitext-train-073cfc2af0c7b544",
+      "title": "Elgin Cathedral",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "300d5c02dffd188242806a99b55c6689236b04899670a0b09e4fd34689853d73"
+    },
+    {
+      "id": "wikitext-train-f161d1f89e14c78d",
+      "title": "Sovetsky Soyuz @-@ class battleship",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "9ca32bd2aee035ddc0d2665b5c635ec52490689ad3f83a296755310a71abd3bd"
+    },
+    {
+      "id": "wikitext-train-5b30089ef32c8db2",
+      "title": "M @-@ 47 ( Michigan highway )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "39672ca575a9dd8de0b4f46977c1fd8d43d9346358237e017c29cb0ac0167c67"
+    },
+    {
+      "id": "wikitext-train-0d534b2502e9a15c",
+      "title": "Burning of women in England",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "36436e97a67df975967cf4c77a84d22e2aba8a8ee369e4a380ab7d14331597a4"
+    },
+    {
+      "id": "wikitext-train-7e00e4a37c5af021",
+      "title": "Texas A & M Singing Cadets",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "bcd90e829b02f773f4a3cc2680752cc8b2f09f15d87e812672f558e17552bc19"
+    },
+    {
+      "id": "wikitext-train-3775ac6a3d0efd74",
+      "title": "Who Am I ( Casting Crowns song )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "eb97926719da5953d7daf146f229b168fcba8f9d7ec95b3859d08c08adcb1e7d"
+    },
+    {
+      "id": "wikitext-train-d0051849fb0a5466",
+      "title": "First Battle of Maryang San",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "3df10c67029cd3a6768bf55a4719b700d5f01928bfc9d3bdc4ed0d181b015b56"
+    },
+    {
+      "id": "wikitext-train-6ef31b3f7d6f7950",
+      "title": "Hugh Walpole",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "97fdc6d7e89c22f2d74b4947e2267388f15e36530baa1d0cb1d9e70ff8ced1e0"
+    },
+    {
+      "id": "wikitext-train-2fd033e90393e155",
+      "title": "Rosemary 's Baby ( 30 Rock )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "2f6f6e6bcbe7337a8c818370535d7e51c6f493bb53a2730bae43ac9d59ed3686"
+    },
+    {
+      "id": "wikitext-train-d4001945c281b830",
+      "title": "Something Borrowed ( Torchwood )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "cb2bde1725ec95015b6221bae1f7b7fba87a635586bb782cafef3fe1fb6a2810"
+    },
+    {
+      "id": "wikitext-train-939b69ccded21d63",
+      "title": "The Boat Race 1900",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "8fb44880322b747401d7be6786fe1e1b74ae03ced917f5d71dd3979d53e38b61"
+    },
+    {
+      "id": "wikitext-train-8c2b5d1d3c19e894",
+      "title": "Arbeideren ( Hamar )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "eaa559237e76520c6351a55068b591f3adfab11a81ea4d147b2b751d043e1e2d"
+    },
+    {
+      "id": "wikitext-train-8bb3b5d34b673e09",
+      "title": "Kir 'Shara",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "4124b546303d0a6464142ddd2a901674a34e6189e35ff451ee8cbf49ced42890"
+    },
+    {
+      "id": "wikitext-train-67ee26c8d86fe869",
+      "title": "Loose ( Nelly Furtado album )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "97eae46099f032c9b0c8b91f7c861efd66c56e3fbee06b8ba8b007380af0653f"
+    },
+    {
+      "id": "wikitext-train-19c0ae0826fe8304",
+      "title": "Tropical Storm Domoina",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "41332ade2ed6d30bc1c07ed0405f5f2b562f2e21af3775354e8c0e61c2620271"
+    },
+    {
+      "id": "wikitext-train-c49205bcb5f5ea96",
+      "title": "Mutinus elegans",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "c0674b1c091cfb5bd97f0cac572707e15ad66df73ae92ccf9b7de5d19180153e"
+    },
+    {
+      "id": "wikitext-train-e55026f07ef2354b",
+      "title": "The Remix ( Lady Gaga album )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "b5d6ada4132931dbca225e126a1eac0e487b0e96879c76ebcd7666a3e524e851"
+    },
+    {
+      "id": "wikitext-train-a68c03660314cf45",
+      "title": "Simon Bradstreet",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "eaa3703886565406ea350163edbb8f06885c6e9241ff96b05065cf1790474f3b"
+    },
+    {
+      "id": "wikitext-train-9a768800f82c84ce",
+      "title": "Ohio State Route 319",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "de1acfff6084eb8c1726de9e212afe531fb0bdba5d953f293c0d02eb50be9514"
+    },
+    {
+      "id": "wikitext-train-5e741101a00ea2a5",
+      "title": "Christine Hakim",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "892251a5ea33d867de32fd252aff28a12bf7e642397354cafc0b24f33acd40d5"
+    },
+    {
+      "id": "wikitext-train-487f9b32ff6db8dd",
+      "title": "God 's Choice",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "cddd4215deb7f5194dd8f16aea7cdc9b1734787ae51f7af90aa119d03e9bc55e"
+    },
+    {
+      "id": "wikitext-train-7921f3b8ba3d5afc",
+      "title": "Halo : Uprising",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "0493908dc4e6f5027033942cb3bbca1f04d02c5611b83f62bc5a7f51e803cb17"
+    },
+    {
+      "id": "wikitext-train-a5c09313c3f59296",
+      "title": "The Dreamscape",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "8d085bda236107afd55ed34c90a7c8d7ec1827e725c16663a1bad4b0d6884070"
+    },
+    {
+      "id": "wikitext-train-8c9658ecfc5714e7",
+      "title": "Awakening ( Star Trek : Enterprise )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "a3803458a66f33bba7d8686028d6e3781d19643e871616f08ebbdc288cb672b4"
+    },
+    {
+      "id": "wikitext-train-8be3b61ce726842a",
+      "title": "Nicole Franklin",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "abca08b6b956ad120ce0f94b7b7c95eb898d59c1cc31f72cb875c9250285d072"
+    },
+    {
+      "id": "wikitext-train-ad35f253e9e3a34d",
+      "title": "Central Area Command ( RAAF )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "74e5f3a98c5ecbc26e67e792b0eb6ccca66c8389b33f709f62c8c7237b7b27f2"
+    },
+    {
+      "id": "wikitext-train-011e6b3fb22621f4",
+      "title": "Gerard ( archbishop of York )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "f1513068f7a131652133291df8edfdcf4188b3fe585848290bfee36623ddad4a"
+    },
+    {
+      "id": "wikitext-train-ac9c5ee826c95d33",
+      "title": "130th Engineer Brigade ( United States )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "a128ae49243714621204992927b872c78b95eed0e3965f6252dd4bd7634b1495"
+    },
+    {
+      "id": "wikitext-train-bbbb23fc5fe6c48e",
+      "title": "Van Morrison : Too Late to Stop Now",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "25155f7d2101cc1e3f293fda227431cd018e549b899789ebecc8e5593e41827b"
+    },
+    {
+      "id": "wikitext-train-11f0551b49d3b5c8",
+      "title": "Thomas Quiney",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "a8fa18de1a261eaabab78405807359638bdcbba027344595cc51c2d52a3a5910"
+    },
+    {
+      "id": "wikitext-train-3e02c8ec17edee9e",
+      "title": "1981 Peach Bowl ( January )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "c2a7f3fbcc29d95644fb202c9f5f0c4cbea78f116056438ac502c51d342642e6"
+    },
+    {
+      "id": "wikitext-train-1bf1be58f8268537",
+      "title": "George N. Briggs",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "143ff9df82a8ec0c289d1cf9086879ec7bdde2a1f282e7ab0bf9fbe1b1c70451"
+    },
+    {
+      "id": "wikitext-train-9b4a5ecca40134a1",
+      "title": "Kyra ( Charmed )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "ad6ed30d7c7345bcd867cfeaf6221ecd2a9915dcf8c623e0efec91db3321bc9e"
+    },
+    {
+      "id": "wikitext-train-a15481d84933cb31",
+      "title": "K @-@ 22 ( Kansas highway )",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "fd7c4b839b00aafb126d91df085b737ff36a42fb1ff2b0b0d972fcf74252d780"
+    },
+    {
+      "id": "wikitext-train-e7f30990bafe7d7f",
+      "title": "New York State Route 368",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "87a441ee0e60a424935d2207e074d732d04a89970e6c876d738a16a5ce56dc1d"
+    },
+    {
+      "id": "wikitext-train-a86b5636edfdf2e1",
+      "title": "Development of Fez",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "cd8c66087a8b8f498278e868f1ee4f108f1bbd08f0d52be0d484d547afbff284"
+    },
+    {
+      "id": "wikitext-train-47d61b99767b8633",
+      "title": "Bath Assembly Rooms",
+      "source_split": "train",
+      "tokens": 256,
+      "text_sha256": "531b7ed905b8f19fc7763dd8b22a73fa132fc2a9071c177fbdaf895a81c93d3a"
+    },
+    {
+      "id": "wikitext-validation-59a50d9ab4d0c84c",
+      "title": "Where the Streets Have No Name",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "a833fc615563f0d4ef29a9118e1533b21f9e21eb9098be5d8086aea6b9ea06a6"
+    },
+    {
+      "id": "wikitext-validation-2c7c602b5ac557ff",
+      "title": "Shikamaru Nara",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "df46af3289dda9524510419aaaab8bbb56d49b783bcb659b4392fcab5985cc2a"
+    },
+    {
+      "id": "wikitext-validation-9fb0c61a50d8cdb9",
+      "title": "Exit Through the Kwik @-@ E @-@ Mart",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "4cee186826451a2e760d09ce935f9de6160646adaa123136f1c7e0b6d649617f"
+    },
+    {
+      "id": "wikitext-validation-b3e260a8369ed0d7",
+      "title": "Horrible Bosses",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "e3fbb07ab751856095adaa8e3d510fc37ee4f242e7fea1a075ff217aa580dc75"
+    },
+    {
+      "id": "wikitext-validation-b256338c76e256d6",
+      "title": "Hurricane Beatriz ( 2011 )",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "489867af4cd6d28d50b6a1c97d147c6dcb4919a6c79706e8c9137b6fee659201"
+    },
+    {
+      "id": "wikitext-validation-6c14437e5b969831",
+      "title": "Meridian , Mississippi",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "1fccea6db2ff08f9cf82d03b9280090f332ba37600667e61339c4b304e30406c"
+    },
+    {
+      "id": "wikitext-validation-14477f3a8cb2b173",
+      "title": "Battle of the Hongorai River",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "7e80c90c53fc617ac00299c8dd73dd895d3252b73d5f8ef5c6e6ce1d8a1194a8"
+    },
+    {
+      "id": "wikitext-validation-c0226c6dcf643123",
+      "title": "Butterfly World Tour",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "2cdff098c447239e77e236043deabc51c44c9987fce88cc7c98ab42b9f77691e"
+    },
+    {
+      "id": "wikitext-validation-f1bac44e128c88f7",
+      "title": "Die Another Day",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "5364646246addfdf87695f246ebc15351c7462f80128cbaace0cb84fa7424d0f"
+    },
+    {
+      "id": "wikitext-validation-41a33989abb2ac1e",
+      "title": "First Mongol invasion of Burma",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "ab3626c6dc6ec4c5495c8118cc1de32bbc644df4429a90b5642708d1c8fbfd0b"
+    },
+    {
+      "id": "wikitext-validation-3b439644584a6d78",
+      "title": "High Five Interchange",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "549231f94dd5687f21f14b9a70efe21cbe48490fc94465ccc6a3bbe4b2db5b2c"
+    },
+    {
+      "id": "wikitext-validation-ec90c700f7c05fdc",
+      "title": "Raid on Manila ( 1798 )",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "e7fc9533292a3ac932c0053ac95cc59585354b508e8d5dbdb97cb0dcdb24a16a"
+    },
+    {
+      "id": "wikitext-validation-feab27ae43cf2886",
+      "title": "The Bourgeois Blues",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "30f2b89172d856a46c492d85aaf8dc9326c08b4939eb3893feaf461718e4d855"
+    },
+    {
+      "id": "wikitext-validation-76b494cf8075a5f3",
+      "title": "Sonic the Hedgehog ( 1991 video game )",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "cb762833d831d28250be30b0b23d2445eb856dc67c868910f8ca6504a9bf864a"
+    },
+    {
+      "id": "wikitext-validation-97b5f9a9c00917ff",
+      "title": "Military history of Australia",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "f71872440934d74b3b1eb5cb9bac1c67b29151a2c690386ca1eabaf69154c02b"
+    },
+    {
+      "id": "wikitext-validation-a2ef3dfbc1b9c5ca",
+      "title": "Ward Churchill",
+      "source_split": "validation",
+      "tokens": 256,
+      "text_sha256": "7845f5050bee9783fb4a65c4ef63522fe14e2e64b5f04ff5425d1f37a3a6620e"
+    }
+  ],
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "tokenizer_revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "seed": 1729,
+  "max_tokens": 256,
+  "corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "test_split_accessed": false
+}

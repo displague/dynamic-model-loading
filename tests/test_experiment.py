@@ -63,3 +63,21 @@ def test_duplicate_corpus_is_rejected(tmp_path):
     path.write_text(json.dumps(row) + '\n' + json.dumps({**row, "id": "y", "split": "diagnostic"}))
     with pytest.raises(ValueError, match="Duplicate"):
         experiment.load_corpus(path)
+
+
+def test_coactivation_pilot_with_disk_references(tiny_run):
+    path = Path(tiny_run.config)
+    config = json.loads(path.read_text())
+    config.update(layouts=["native", "random", "popularity", "coactivation"],
+                  coactivation_reservoir=3, coactivation_sketch_dim=4,
+                  coactivation_group_width=4, coactivation_iterations=3,
+                  spill_reference_logits=True)
+    path.write_text(json.dumps(config))
+    summary = experiment.run(tiny_run)
+    assert summary["status"] == "packing_pilot_completed"
+    assert len(summary["probes"]) == 8
+    output = Path(tiny_run.output)
+    assert len(list((output / "reference_logits").glob("*.safetensors"))) == 1
+    assert (output / "source" / "packing.py").is_file()
+    reservoir = json.loads((output / "reservoir.json").read_text())
+    assert reservoir["samples_per_layer"] == [3, 3]

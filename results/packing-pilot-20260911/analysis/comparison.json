@@ -1,0 +1,16 @@
+{
+  "comparison": "coactivation_minus_popularity_mean_KL",
+  "group_width": 32,
+  "keep_fraction": 0.75,
+  "documents": 16,
+  "bootstrap_replicates": 2000,
+  "bootstrap_seed": 1729,
+  "delta": 0.025240473020021643,
+  "percentile_95_interval": [
+    0.01647865140423353,
+    0.03468115505017997
+  ],
+  "interpretation": "Exploratory paired whole-document interval, not confirmatory inference",
+  "raw_results_sha256": "332d1de1177dc3eb33a87e94a7ea76a3ebbbc82c1dd3a409f54f2a05754ca66d",
+  "numpy_version": "2.3.5"
+}

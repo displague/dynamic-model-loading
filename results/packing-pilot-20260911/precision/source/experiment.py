@@ -19,12 +19,10 @@ import time
 import torch
 from huggingface_hub import snapshot_download
 from transformers import AutoModelForCausalLM, AutoTokenizer
-from safetensors.torch import load_file, save_file
 
 from .adapters import extract_ffns
 from .ffn import HindsightMask, ImportanceCollector, dimensions, grouped_forward, repack_
 from .metrics import aggregate, compare_logits, relative_l2
-from .packing import CoactivationCollector
 
 
 def digest(path: Path) -> str:
@@ -71,12 +69,8 @@ def validate_config(cfg: dict) -> None:
         raise ValueError("Group widths must be positive integers")
     if any(not 0 < x <= 1 for x in cfg["keep_fractions"]):
         raise ValueError("Keep fractions must be in (0, 1]")
-    if not set(cfg["layouts"]) <= {"native", "random", "popularity", "coactivation"}:
+    if not set(cfg["layouts"]) <= {"native", "random", "popularity"}:
         raise ValueError("Unsupported layout")
-    if "coactivation" in cfg["layouts"]:
-        for key in ("coactivation_reservoir", "coactivation_sketch_dim", "coactivation_group_width", "coactivation_iterations"):
-            if type(cfg.get(key)) is not int or cfg[key] <= 0:
-                raise ValueError(f"{key} must be a positive integer")
     for key in ("max_tokens", "cpu_threads", "reconstruction_group_width", "timing_repeats", "decode_tokens"):
         if type(cfg[key]) is not int or cfg[key] <= 0:
             raise ValueError(f"{key} must be a positive integer")
@@ -158,8 +152,7 @@ def cuda_memory(device) -> dict:
 
 def render_report(summary: dict) -> str:
     text = ["# Apparatus run", "", f"Status: **{summary['status']}**.", "",
-            f"Purpose: `{summary.get('purpose', 'apparatus_smoke_test')}`.", "",
-            "This is an exploratory diagnostic. It is not a confirmatory held-out quality benchmark,",
+            "This is a smoke test on a small authored corpus. It is not a held-out quality benchmark,",
             "a bounded-memory runtime, or evidence of an inference speedup.", "",
             "## Correctness", "", f"All-group reconstruction and layout checks passed: {summary['correctness_passed']}.", "",
             "Tolerances were copied into this run before measurement. Raw per-document and per-layer",
@@ -174,7 +167,7 @@ def render_report(summary: dict) -> str:
             text.append(f"| {row['layout']} | {row['group_width']} | {row['keep_fraction']:.0%} | "
                         f"{row['hypothetical_weight_fraction']:.3f} | {row['mean_kl_dense_to_candidate']:.5g} | "
                         f"{row['relative_perplexity']:.4f} | {row['top1_agreement']:.3%} |")
-    text += ["", "No selection predictor, cache simulation, weight transfer runtime,",
+    text += ["", "No selection predictor, co-activation clustering, cache simulation, weight transfer runtime,",
              "or omission-error detector is implemented. These measurements do not establish their feasibility.", ""]
     return "\n".join(text)
 
@@ -200,13 +193,10 @@ def run(args) -> dict:
     output.mkdir(parents=True, exist_ok=False)
     shutil.copyfile(config_path, output / "config.json")
     shutil.copyfile(corpus_path, output / "corpus.jsonl")
-    protocol = Path(cfg.get("protocol", Path(__file__).resolve().parents[2] / "docs" / "protocol.md"))
-    if "protocol" in cfg and not protocol.is_file():
-        raise ValueError("Configured protocol file does not exist")
+    protocol = Path(__file__).resolve().parents[2] / "docs" / "protocol.md"
     if protocol.exists():
         shutil.copyfile(protocol, output / "protocol.md")
     source_root = Path(__file__).parent
-    shutil.copytree(source_root, output / "source", ignore=shutil.ignore_patterns("__pycache__"))
     manifest = {
         "schema_version": 1, "started_utc": datetime.now(timezone.utc).isoformat(),
         "purpose": cfg["purpose"], "mode": "diagnostics" if args.diagnostics else "stage0",
@@ -214,14 +204,6 @@ def run(args) -> dict:
         "sources": {p.name: digest(p) for p in sorted(source_root.glob("*.py"))},
         "environment": environment(device), "checkpoint": {"model": cfg["model"], "revision": cfg["revision"]},
     }
-    if protocol.is_file():
-        manifest["protocol_sha256"] = digest(output / "protocol.md")
-    provenance = corpus_path.parent / "provenance.json"
-    if provenance.is_file():
-        if json.loads(provenance.read_text())["corpus_sha256"] != manifest["corpus_sha256"]:
-            raise ValueError("Corpus provenance does not match the input corpus")
-        shutil.copyfile(provenance, output / "corpus-provenance.json")
-        manifest["corpus_provenance_sha256"] = digest(output / "corpus-provenance.json")
     write_json(output / "started.json", manifest)
     raw = (output / "results.jsonl").open("x", encoding="utf-8")
 
@@ -230,7 +212,7 @@ def run(args) -> dict:
         raw.flush()
         os.fsync(raw.fileno())
 
-    summary = {"status": "running", "purpose": cfg["purpose"], "correctness_passed": False, "probes": []}
+    summary = {"status": "running", "correctness_passed": False, "probes": []}
     try:
         print("Loading pinned checkpoint", flush=True)
         start = time.perf_counter()
@@ -275,13 +257,6 @@ def run(args) -> dict:
         if device.type == "cuda":
             torch.cuda.reset_peak_memory_stats(device)
         references = {}
-        if cfg.get("spill_reference_logits", False):
-            (output / "reference_logits").mkdir()
-
-        def reference(document):
-            value = references[document]
-            return load_file(value)["logits"] if isinstance(value, Path) else value
-
         for row in diagnostics:
             ids = tokens[row["id"]]
             del_output = forward(ids)  # Shape-specific warmup is excluded.
@@ -293,13 +268,7 @@ def run(args) -> dict:
                 logits = forward(ids)
                 synchronize(device)
                 timings.append(time.perf_counter() - start)
-                if cfg.get("spill_reference_logits", False):
-                    if len(timings) == cfg["timing_repeats"]:
-                        ref_path = output / "reference_logits" / f"{len(references):04d}.safetensors"
-                        save_file({"logits": logits.cpu().contiguous()}, ref_path)
-                        references[row["id"]] = ref_path
-                else:
-                    references[row["id"]] = logits.cpu()
+                references[row["id"]] = logits.cpu()
                 del logits
             record("dense_prefill", document=row["id"], input_tokens=ids.shape[1],
                    seconds=timings, median_seconds=statistics.median(timings), memory=cuda_memory(device))
@@ -324,32 +293,21 @@ def run(args) -> dict:
                output_token_ids=generated, memory=cuda_memory(device))
         del cache
 
-        print("Calibration-only layouts", flush=True)
-        calibration_start = time.perf_counter()
-        collectors = ([CoactivationCollector(m, cfg["coactivation_reservoir"], cfg["seed"]) for m in mlps]
-                      if "coactivation" in cfg["layouts"] else [ImportanceCollector(m) for m in mlps])
+        print("Calibration-only popularity layout", flush=True)
+        collectors = [ImportanceCollector(m) for m in mlps]
         with hooks(mlps, collectors):
             for row in calibration:
                 forward(tokens[row["id"]])
         popularity = [c.order() for c in collectors]
         calibration_counts = [c.tokens for c in collectors]
+        del collectors
         generator = torch.Generator().manual_seed(cfg["seed"])
         orders = {"native": [torch.arange(width) for _, width in dims],
                   "random": [torch.randperm(width, generator=generator) for _, width in dims],
                   "popularity": popularity}
-        if "coactivation" in cfg["layouts"]:
-            orders["coactivation"] = []
-            for index, collector in enumerate(collectors):
-                orders["coactivation"].append(collector.coactivation_order(
-                    cfg["coactivation_group_width"], cfg["coactivation_sketch_dim"],
-                    cfg["coactivation_iterations"], cfg["seed"] + index))
-            write_json(output / "reservoir.json", {"token_ordinals_per_layer": [c.ordinals.tolist() for c in collectors],
-                                                   "samples_per_layer": [len(c.ordinals) for c in collectors]})
-        del collectors
         write_json(output / "layouts.json", {key: [p.tolist() for p in value] for key, value in orders.items()})
         record("calibration", token_observations_per_layer=calibration_counts,
-               documents=[r["id"] for r in calibration], layouts_sha256=digest(output / "layouts.json"),
-               seconds=time.perf_counter() - calibration_start)
+               documents=[r["id"] for r in calibration], layouts_sha256=digest(output / "layouts.json"))
 
         inputs = []
         handles = []
@@ -371,7 +329,7 @@ def run(args) -> dict:
                     passed &= ok
                 for row in diagnostics:
                     candidate = forward(tokens[row["id"]]).cpu()
-                    metrics = compare_logits(reference(row["id"]), candidate, tokens[row["id"]].cpu())
+                    metrics = compare_logits(references[row["id"]], candidate, tokens[row["id"]].cpu())
                     ok = (metrics["logit_relative_l2"] <= cfg["logit_relative_l2_max"] and
                           metrics["mean_kl_dense_to_candidate"] <= cfg["logit_mean_kl_max"])
                     record("layout_correctness", layout=name, document=row["id"], passed=ok, **metrics)
@@ -393,7 +351,7 @@ def run(args) -> dict:
                             with hooks(mlps, masks):
                                 for row in diagnostics:
                                     candidate = forward(tokens[row["id"]]).cpu()
-                                    metrics = compare_logits(reference(row["id"]), candidate, tokens[row["id"]].cpu())
+                                    metrics = compare_logits(references[row["id"]], candidate, tokens[row["id"]].cpu())
                                     record("hindsight_document", layout=name, group_width=width, keep_fraction=keep,
                                            document=row["id"], domain=row["domain"], **metrics)
                                     measurements.append(metrics)
@@ -409,7 +367,7 @@ def run(args) -> dict:
                             summary["probes"].append(result)
                             print(f"{name} group={width} keep={keep}: KL={result['mean_kl_dense_to_candidate']:.5g}", flush=True)
                             del masks
-            summary["status"] = "packing_pilot_completed" if "coactivation" in cfg["layouts"] else "smoke_diagnostics_completed"
+            summary["status"] = "smoke_diagnostics_completed"
         else:
             summary["status"] = "stage0_passed"
         summary["finished_utc"] = datetime.now(timezone.utc).isoformat()

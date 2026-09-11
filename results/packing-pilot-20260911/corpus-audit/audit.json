@@ -1,0 +1,20 @@
+{
+  "correction": "Require blank rows on both sides of top-level article titles; exclude duplicate selected titles",
+  "original_builder": "../pilot/source/corpus.py",
+  "original_builder_sha256": "f8612383da7c95205beefcc3ece7ae25608ba3ca6f5f19fa8a6ac20cd73e719e",
+  "corrected_builder": "corrected-corpus.py",
+  "corrected_builder_sha256": "127735e3b9f13c040fc4fa99b5c38b4bb1d2f9c39205e38650211d3acc7d4567",
+  "original_train_boundaries": 629,
+  "corrected_train_boundaries": 600,
+  "original_validation_boundaries": 60,
+  "corrected_validation_boundaries": 60,
+  "original_corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "corrected_corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "original_provenance_sha256": "48058d59eb0e647410c30c932620c21f2433b08c9e0cb5db80bd13845f5fb92a",
+  "corrected_provenance_sha256": "48058d59eb0e647410c30c932620c21f2433b08c9e0cb5db80bd13845f5fb92a",
+  "selected_documents": 96,
+  "corpus_byte_identical": true,
+  "provenance_byte_identical": true,
+  "gpu_rescoring_performed": false,
+  "reason_no_rescore": "Selected experiment inputs are byte-identical after a fresh corrected corpus build; preserve original measurements."
+}
