@@ -8,6 +8,11 @@ The starting point is the final critical review in the
 The executable first milestone checks packing correctness and produces optional
 hindsight sparsity diagnostics. It is not yet a weight pager.
 
+See the [research stages and delivery history](docs/plan.md),
+[release notes](docs/releases/), and
+[GitHub milestones](https://github.com/displague/dynamic-model-loading/milestones)
+for the original plan, completed experiments, and remaining gates.
+
 **Current result:** the larger FP32 pilot passed correctness checks and completed 24
 configurations. The tested co-activation packing heuristic lost to simple popularity
 packing in all four grouped settings. See [pilot findings](docs/packing-pilot-results.md)

@@ -1,0 +1,126 @@
+{
+  "repository": "displague/dynamic-model-loading",
+  "milestones": {
+    "0": {
+      "number": 1,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/1",
+      "title": "Stage 0 - Reproducible reference"
+    },
+    "1": {
+      "number": 2,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/2",
+      "title": "Stage 1 - Hindsight sparsity envelope"
+    },
+    "2": {
+      "number": 3,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/3",
+      "title": "Stage 2 - Physical packing and cache traces"
+    },
+    "3": {
+      "number": 4,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/4",
+      "title": "Stage 3 - Causal working-set prediction"
+    },
+    "4": {
+      "number": 5,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/5",
+      "title": "Stage 4 - Bounded RAM-to-VRAM execution"
+    },
+    "5": {
+      "number": 6,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/6",
+      "title": "Stage 5 - Corrective refinement"
+    },
+    "later": {
+      "number": 7,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/7",
+      "title": "Later - Generalization and representation studies"
+    }
+  },
+  "issues": {
+    "reference": {
+      "number": 1,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/1",
+      "title": "Deliver the reference apparatus and preserve the BF16 numerical failure",
+      "state": "closed"
+    },
+    "packing": {
+      "number": 2,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/2",
+      "title": "Compare calibration-only co-activation packing with native, random, and popularity layouts",
+      "state": "closed"
+    },
+    "precision_diagnosis": {
+      "number": 3,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/3",
+      "title": "Isolate BF16 permutation sensitivity with explicit arithmetic controls",
+      "state": "closed"
+    },
+    "bf16_policy": {
+      "number": 4,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/4",
+      "title": "Establish a practical BF16 grouped execution policy without relaxing numerical gates",
+      "state": "open"
+    },
+    "torch_control": {
+      "number": 5,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/5",
+      "title": "Validate PyTorch 2.12 CUDA as a separate environment control",
+      "state": "open"
+    },
+    "relu_control": {
+      "number": 6,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/6",
+      "title": "Add the original plan's ReLU positive control",
+      "state": "open"
+    },
+    "layer_study": {
+      "number": 7,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/7",
+      "title": "Measure per-layer omission sensitivity and joint-layer interaction",
+      "state": "open"
+    },
+    "heldout": {
+      "number": 8,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/8",
+      "title": "Establish whole-document multi-domain held-out quality gates",
+      "state": "open"
+    },
+    "cache_traces": {
+      "number": 9,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/9",
+      "title": "Measure transfer amplification and bounded-cache traces at realistic group sizes",
+      "state": "open"
+    },
+    "predictor": {
+      "number": 10,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/10",
+      "title": "Compare causally available working-set predictors and their charged cost",
+      "state": "open"
+    },
+    "pager": {
+      "number": 11,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/11",
+      "title": "Implement bounded FFN residency with measured RAM-to-VRAM traffic",
+      "state": "open"
+    },
+    "refinement": {
+      "number": 12,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/12",
+      "title": "Test omission detection and additive refinement against larger initial subsets",
+      "state": "open"
+    },
+    "generalization": {
+      "number": 13,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/13",
+      "title": "Replicate useful results on a larger model and another architecture",
+      "state": "open"
+    },
+    "representation": {
+      "number": 14,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/14",
+      "title": "Evaluate quantization, residual representations, and storage paging as separate branches",
+      "state": "open"
+    }
+  }
+}

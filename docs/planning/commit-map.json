@@ -1,0 +1,17 @@
+{
+  "reason": "Authorized retrospective message expansion; exact trees and author dates preserved",
+  "commits": [
+    {
+      "release": "v0.1.0",
+      "original_commit": "119cbbc67891d50a68755923324e4b927fb69ee9",
+      "expanded_message_commit": "dec5fa8c574de28f2a0e000c5f0825623ca9e366",
+      "unchanged_tree": "8f69a4a52544dd05512873f775590ba4417670d1"
+    },
+    {
+      "release": "v0.2.0",
+      "original_commit": "b5eb4a91eb7aaa063eafefd083931e1b5663722d",
+      "expanded_message_commit": "8c383f10ebeb1082a716ec04da2c92f603204cad",
+      "unchanged_tree": "b26e8b6355808e84a63fcda31003076b4250bcda"
+    }
+  ]
+}
