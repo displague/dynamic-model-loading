@@ -66,7 +66,7 @@
       "number": 5,
       "url": "https://github.com/displague/dynamic-model-loading/issues/5",
       "title": "Validate PyTorch 2.12 CUDA as a separate environment control",
-      "state": "open"
+      "state": "closed"
     },
     "relu_control": {
       "number": 6,
@@ -123,5 +123,5 @@
       "state": "open"
     }
   },
-  "last_refreshed_utc": "2026-09-11T16:28:26.367897+00:00"
+  "last_refreshed_utc": "2026-09-11T16:36:17.226617+00:00"
 }

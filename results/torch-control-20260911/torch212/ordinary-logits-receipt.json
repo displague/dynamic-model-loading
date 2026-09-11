@@ -1,0 +1,12 @@
+{
+  "sha256": "6e5e3854b9bccb7a0dac6ce91e2dfa4fbb59a66b125a7aa8397c6afab36c9282",
+  "documents": [
+    "diag-code",
+    "diag-arithmetic",
+    "diag-copy",
+    "diag-switch",
+    "diag-multilingual",
+    "diag-instruction"
+  ],
+  "comparison": "ordinary_native_bf16"
+}

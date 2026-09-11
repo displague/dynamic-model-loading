@@ -1,0 +1,10 @@
+{
+  "archive_hashes_verified": 61,
+  "asset_sha256_verified": true,
+  "logit_payloads_verified": 2,
+  "restored_analysis_summary_exact": true,
+  "baseline_parent_rows_exact": 60,
+  "new_arithmetic_rows_validated": 120,
+  "cross_environment_documents": 6,
+  "test_suites": "59 passed in both declared environments"
+}

@@ -1,0 +1,26 @@
+{
+  "scope": "environment preparation, before model measurements",
+  "python": "C:/Python314/python.exe",
+  "attempts": [
+    {
+      "change": "Install torch 2.12.0+cu130 without replacing shared torchvision 0.25.0+cu130",
+      "cuda_tensor_check": "passed",
+      "test_result": "4 collection errors",
+      "error": "Windows fatal exception: code 0xc0000139 during torchvision extension DLL loading; Qwen2ForCausalLM import failed",
+      "evidence_kind": "operator receipt of tool output; full initial terminal output was not archived"
+    },
+    {
+      "change": "Attempt torchvision 0.27.0 and torchaudio 2.12.0 installation together",
+      "result": "resolver rejected: no torchaudio==2.12.0 distribution; no packages changed"
+    },
+    {
+      "change": "Install torchvision 0.27.0+cu130 alone",
+      "test_result": "51 passed in 6.64s",
+      "raw_test_log": "torch212-tests-02.txt"
+    },
+    {
+      "change": "Align all other effective installed distribution versions with baseline",
+      "result": "only torch and torchvision versions differ; both packages required dependencies satisfied"
+    }
+  ]
+}

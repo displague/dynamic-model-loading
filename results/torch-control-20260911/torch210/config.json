@@ -1,0 +1,47 @@
+{
+  "purpose": "same_interpreter_torch_environment_control",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "dtype": "bfloat16",
+  "seed": 1729,
+  "max_tokens": 128,
+  "cpu_threads": 4,
+  "group_widths": [
+    1,
+    32,
+    128
+  ],
+  "keep_fractions": [
+    0.5,
+    0.75
+  ],
+  "layouts": [
+    "native",
+    "random",
+    "popularity"
+  ],
+  "reconstruction_group_width": 128,
+  "reconstruction_relative_l2_max": 0.01,
+  "logit_relative_l2_max": 0.01,
+  "logit_mean_kl_max": 0.001,
+  "timing_repeats": 3,
+  "decode_tokens": 16,
+  "environment_control": true,
+  "protocol": "docs/torch212-protocol.md",
+  "expected_python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "expected_versions_sha256": "5b666245ddf61cc39d708ca5d92d39d92bc6f32e31a129dcc24929760d156941",
+  "expected_corpus_sha256": "564b0be92239c5dad036981c6fd9756bbfff86118497df980d8b5eb8f1ee9de1",
+  "expected_checkpoint_files": {
+    "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+    "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "expected_token_ids_sha256": "f412b2537e39bc57ecb20ad568d055870bd59d76c26677bf8b26c01649f3f750",
+  "expected_layouts_sha256": "e618cd8e19f3dc184a47f6ab44cba2127f160f0bc1bcd280a401759e3d8c989a",
+  "expected_parent_results_sha256": "c9fc2ca9d7b4e81870a94f10af6a12e923f5b8757b63be217432dc2f07e53a3a",
+  "expected_parent_config_sha256": "8837257577e0b0e095c6ec2d1f0ced5dd13ebd0ba1fc3cc2916633e553fa98cc"
+}

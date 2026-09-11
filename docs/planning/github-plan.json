@@ -74,8 +74,9 @@
       "key": "torch_control",
       "stage": "0",
       "title": "Validate PyTorch 2.12 CUDA as a separate environment control",
-      "completed": false,
-      "body": "The uv cache contains torch 2.12.0+cu130 for CPython 3.13; baseline runs use CPython 3.14 and torch 2.10.0+cu130. Use an isolated environment, preferably the same interpreter if isolating torch alone, verify CUDA and all tests, then repeat dense/repacked numerical controls with pinned input hashes. Record every changed dependency. Do not silently combine environments or reinterpret historical timings."
+      "completed": true,
+      "body": "Completed the isolated Python 3.14.3 torch/torchvision environment pair: 2.10.0/0.25.0 versus 2.12.0/0.27.0, CUDA 13.0, with every other effective package version aligned. Both full suites pass 59 tests. The 2.10 repeat reproduces all 60 archived arithmetic rows exactly; 2.12 still fails four of five policies under original numerical limits. Canonical down order is exact within each environment. Ordinary dense BF16 outputs differ across all six documents: L2 0.015831-0.024369, KL 0.001018-0.001567, top-1 agreement 95.51-98.78%. Complete inventories, pinned inputs, source snapshots, original failure receipts and manifest-bound logits are preserved. Initial shared torchvision was incompatible and the matching companion resolved it; this is not an unqualified torch-only attribution. This closes the environment-control experiment, not practical BF16 grouping. Evidence: docs/torch212-protocol.md, docs/torch212-results.md, results/torch-control-20260911, docs/releases/v0.5.0.md. Optional shared torchaudio retains a torch-2.10 dependency and is outside the validated text-model path.",
+      "release": "v0.5.0"
     },
     {
       "key": "relu_control",

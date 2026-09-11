@@ -21,7 +21,8 @@ gain is established. See the [cache findings](docs/cache-trace-results.md),
 [layer study](docs/layer-study-results.md), and [packing pilot](docs/packing-pilot-results.md)
 for the full curves and preserved negative results. The
 [initial BF16 numerical failure](docs/initial-results.md) remains unresolved by a
-practical execution policy; the default BF16 command still reproduces that failure.
+practical execution policy. The [same-interpreter PyTorch 2.12 control](docs/torch212-results.md)
+also preserves the failure; the default BF16 command still reproduces it.
 
 ## Run locally
 
