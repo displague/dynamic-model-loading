@@ -1,0 +1,27 @@
+{
+  "purpose": "diagnose failed BF16 layout gate on one document; not a sparsity result",
+  "results": [
+    {
+      "allow_bf16_reduced_precision_reduction": true,
+      "predicted_tokens": 73,
+      "mean_kl_dense_to_candidate": 0.0013417915284313893,
+      "top1_agreement": 0.9863013698630136,
+      "dense_nll": 1.89243540821648,
+      "candidate_nll": 1.8900353468935427,
+      "relative_perplexity": 0.9976028165214447,
+      "logit_relative_l2": 0.018139548728035436,
+      "logit_max_abs_error": 1.125
+    },
+    {
+      "allow_bf16_reduced_precision_reduction": false,
+      "predicted_tokens": 73,
+      "mean_kl_dense_to_candidate": 0.0009280776162989378,
+      "top1_agreement": 1.0,
+      "dense_nll": 1.8912408804450795,
+      "candidate_nll": 1.9008689404940489,
+      "relative_perplexity": 1.0096745589306533,
+      "logit_relative_l2": 0.01483667459197434,
+      "logit_max_abs_error": 0.40625
+    }
+  ]
+}

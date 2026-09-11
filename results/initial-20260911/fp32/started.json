@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-09-11T13:51:24.025686+00:00",
+  "purpose": "float32_numerical_control_after_failed_bf16_gate_not_research_evaluation",
+  "mode": "diagnostics",
+  "config_sha256": "736996d10d207176865e6becf47cfd784aaa9a47e6a760480c95bf747363130e",
+  "corpus_sha256": "564b0be92239c5dad036981c6fd9756bbfff86118497df980d8b5eb8f1ee9de1",
+  "sources": {
+    "__init__.py": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738",
+    "adapters.py": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc",
+    "experiment.py": "9b13a125007fca4cbb8a69e7d606eea6b58a51e3e58e7e1691602938923f6033",
+    "ffn.py": "5f99973e1d9779023a06f64cccc084dea90a143b74116ca40b58bfa6ffc26e55",
+    "metrics.py": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53"
+  },
+  "environment": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cuda",
+    "torch": "2.10.0+cu130",
+    "cuda_build": "13.0",
+    "versions": {
+      "transformers": "5.13.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.19.0",
+      "numpy": "2.3.5"
+    },
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "bf16_reduced_precision_reduction": true,
+    "fp16_reduced_precision_reduction": true,
+    "cpu_threads": 4,
+    "process_id": 29772,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "total_bytes": 17066033152,
+      "compute_capability": [
+        12,
+        0
+      ]
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 5080 Laptop GPU, 616.64, 16303 MiB, 24 MiB, 41, 6.03 W"
+  },
+  "checkpoint": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  }
+}
