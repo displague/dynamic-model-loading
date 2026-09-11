@@ -1,0 +1,48 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "expected_torch": "2.10.0+cu130",
+  "dtype": "float32",
+  "seed": 1729,
+  "cpu_threads": 4,
+  "group_width": 8,
+  "keep": 0.9,
+  "budget_bytes": 2147483648,
+  "ridge": 0.01,
+  "features": 64,
+  "alpha": 0.1,
+  "layers": 28,
+  "hidden": 1536,
+  "neurons": 8960,
+  "modes": [
+    "static",
+    "recency",
+    "ema",
+    "learned",
+    "hindsight"
+  ],
+  "timing_warmups": 3,
+  "timing_repetitions": 10,
+  "timing_tokens": 32,
+  "generation_documents": 4,
+  "prompt_tokens": 32,
+  "generation_tokens": 64,
+  "screen_relative_ppl_max": 1.01,
+  "screen_warm_savings_min": 0.1,
+  "screen_cost_ratio_max": 0.1,
+  "protocol": "docs/causal-control-protocol.md",
+  "parent_hashes": {
+    "manifest.json": "bf253d16dcef390b0d11cb15bf50caa45f3f9dbec0dbb9803c4e776e669b3ff6",
+    "results.jsonl": "9e2313683fcbe1b1e8af0c604e0271eaf1ab93b2b9fe766ff5f43e0788e0e0e1",
+    "summary.json": "e915b6642720e354d0233f656244cc2efe9c391891de9163bfee90cd0b25c691",
+    "config.json": "03de1dc4dfd98ad7bd0313d2b96e56a92b7ff04448620ef9c9fad7f7ec360644",
+    "corpus.jsonl": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+    "layouts.json.gz": "ab0c2657c4c183aab5ff4f6c03ef4c27c877a5a262893164ddfa71ff581558fa",
+    "calibration-importance.safetensors.gz": "c80d3999af0c3012b95fc23ad4b93201f1b3d6d9dbc8e0723f647e5ac2d5a826",
+    "token-ids.json": "f26039f7ca013329da2aa2e6872bb80d878a872f159e17e8723d3339d2ede505"
+  },
+  "document_counts": [
+    80,
+    16
+  ]
+}

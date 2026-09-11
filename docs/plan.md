@@ -18,9 +18,9 @@ silently damage quality without causing a residency miss.
 | 0. Reproducible reference | Dense and physically repacked outputs agree under declared tolerances; record timing, memory, and provenance. | FP32 passes. BF16 permutation fails in both torch 2.10 and 2.12; canonical down order is exact within each environment but costly. The 2.10 repeat reproduces all 60 historical rows. The OPT ReLU positive control passes: 96.04% exact-zero neurons; grouping increases selected volume. Practical BF16 policy remains open. |
 | 1. Hindsight sparsity envelope | Individual-neuron and per-layer/multi-layer omission curves on whole-document and domain splits; useful sparsity survives unseen inputs. | Smoke, a 16-article Wikipedia slice, and 66 per-layer/joint conditions exist. Sensitivity is distributed on this slice. Multi-domain held-out quality and task outcomes remain unmeasured. |
 | 2. Physical packing and cache traces | Quality versus transferred bytes and transfer amplification at 256/512 MiB and 1/2 GiB FFN-cache budgets. | All 72 declared conditions and 1,152 traces completed. Popularity/width 8/90% retention is the only condition passing the prospective development screen; best warm traffic saving is 15.54% at 2 GiB. This is reused-data simulation; held-out quality and physical transfers remain open. |
-| 3. Causal prediction | Static hot-set, recency, EMA, and learned-selector quality/bytes/cost curves; savings pay for prediction, including approximate closed-loop inference. | The frozen Stage 2 ordering nominates popularity/width 8/90%, with the 2 GiB equal-layer static cache. Predictor measurements have not started. Document feature availability and audit omitted computation independently. |
-| 4. RAM-to-VRAM execution | Explicit bounded slots, pinned staging, actual skipped reads/computation; beat the strongest same-budget baseline after all costs. | Not started. Compare dense streaming, static/recency/activation-aware caches, and CPU/GPU execution splits. |
-| 5. Corrective refinement | Silent-failure risk versus added bytes/latency; improve on choosing a larger initial subset. | Not started. Define unsafe omission first, retain the FFN input, add missing contributions before downstream commitment, and include bounded dense fallback. |
+| 3. Causal prediction | Static hot-set, recency, EMA, and learned-selector quality/bytes/cost curves; savings pay for prediction, including approximate closed-loop inference. | The first frozen-point experiment is complete: all four causal selectors fail quality on all 16 articles. Aggregate relative PPL is 1.089204-1.158203; all meet the simulated traffic screen, but three adaptive selectors also fail cost. Incremental hindsight reaches 1.009318 and cannot qualify. Broader predictor curves and held-out feasibility remain open. |
+| 4. RAM-to-VRAM execution | Explicit bounded slots, pinned staging, actual skipped reads/computation; beat the strongest same-budget baseline after all costs. | Not started: no causal selector qualifies under v0.7's frozen screen. Retain comparisons with dense streaming, static/recency/activation-aware caches, and CPU/GPU execution splits if a subsequent prospective experiment establishes feasibility. |
+| 5. Corrective refinement | Silent-failure risk versus added bytes/latency; improve on choosing a larger initial subset. | Not started and still gated after v0.7. Define unsafe omission first, retain the FFN input, add missing contributions before downstream commitment, and include bounded dense fallback. Local audit norms alone are not a validated failure detector. |
 
 The original longer-term milestone follows these stages: repeat on a 7B-class model
 and another family, then study quantization, heterogeneous groups, and limited
@@ -39,6 +39,7 @@ memory, and an always-on service remain deferred.
 | [v0.4.0](releases/v0.4.0.md) | Applied-mask traces, transfer amplification, and bounded-cache simulation | One of 72 conditions passes the development screen; best simulated warm saving 15.54%, relative PPL 1.008978. |
 | [v0.5.0](releases/v0.5.0.md) | Same-interpreter torch 2.12 arithmetic control | Four policies still fail; canonical down is exact within each environment; ordinary BF16 outputs drift across environments. |
 | [v0.6.0](releases/v0.6.0.md) | OPT ReLU positive control | 96.04% exact-zero neurons; popularity width-128 exact-zero selection needs 60.40% of FFN bytes. |
+| [v0.7.0](releases/v0.7.0.md) | Causal selection at the frozen Qwen operating point | No nominee: four quality failures; recency/EMA/learned also exceed the 10% selector-cost screen. All 307 raw rows, 85 document masks and 20 generated paths are retained. |
 
 No completed delivery establishes an inference speedup or achieved memory reduction.
 The stage milestones remain open where their full gates have not been met. The
@@ -57,6 +58,14 @@ The v0.4 protocol prospectively adopts aggregate relative PPL <=1.01 and >=10% w
 simulated traffic reduction for a development feasibility screen only. It does not
 adopt or satisfy deployment/task/runtime gates; 9/16 articles at the nominated
 condition individually exceed 1% PPL increase.
+
+The v0.7 protocol retains that nominated condition and adds an affordability screen:
+both CUDA and synchronized wall selector-time medians must be <=10% of the paired
+resident dense-FFN medians. All four causal selectors fail the unchanged quality
+screen; no final-test evaluation, new retention choice, or runtime build follows from
+this result. Completing bounded experiment #15 leaves broader predictor issue #10
+open. A new predictor, retention sweep or scale control requires a fresh prospective
+protocol, not replacement of these failed rows.
 
 Charge fixed weights, FFN cache, KV, predictor, staging, workspaces, and other GPU
 allocations separately. Selected weight volume is neither transferred bytes nor cache

@@ -1,0 +1,10 @@
+{
+  "analysis_sha256": "b00f0fbf535aafbcaf245e3e357bb60986b6a519a6140c1efc06ead34fe73dd3",
+  "plot_source_sha256": "18de19d95a2c35b33951e9fb76f318ed461782e873181babee088f0f295a03c9",
+  "input_tokens": 4096,
+  "artifacts": {
+    "causal-frontier.png": "3f9fb9f99a77d53ffdc104bf87efbf71ac47e211f8bcf4fb3b09c07b8e4b2d9d",
+    "causal-frontier.svg": "2c48b2157e8a3578d9bb1cfe3b852a62375ecad3c8f71ae9dc965f58cdcd1455"
+  },
+  "note": "Hindsight is noncausal and has no eligible cost bar. Traffic excludes actual transfer execution; no speedup claim."
+}

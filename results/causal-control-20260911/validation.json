@@ -1,0 +1,18 @@
+{
+  "status": "validated",
+  "raw_rows": 307,
+  "raw_sha256": "88b22dfeed9649d0c255f084cf737376ff12fb44a588edb8a794c635eb68186e",
+  "analysis_sha256": "b00f0fbf535aafbcaf245e3e357bb60986b6a519a6140c1efc06ead34fe73dd3",
+  "restored_analysis_sha256": "b00f0fbf535aafbcaf245e3e357bb60986b6a519a6140c1efc06ead34fe73dd3",
+  "restored_analysis_equal": true,
+  "assets": 3,
+  "restored_payloads": 124,
+  "premeasurement_tests": 90,
+  "integrated_candidate_tests": {
+    "torch_2.10.0_cu130": 111,
+    "torch_2.12.0_cu130": 111
+  },
+  "candidate_test_scope": "Full CPU fixture suites passed after integration; clean committed candidate verification is a separate publication check.",
+  "nomination": null,
+  "scope": "Restored artifact hashes and independent ledger analysis; no new pretrained scoring or physical transfers."
+}

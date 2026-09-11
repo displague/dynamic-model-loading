@@ -20,17 +20,17 @@
     {
       "stage": "3",
       "title": "Stage 3 - Causal working-set prediction",
-      "description": "Compare static, recency, EMA, and learned selectors with explicit feature availability, predictor cost, independent omission audits, and approximate closed-loop evaluation. Depends on a useful packed frontier."
+      "description": "First causal experiment completed in v0.7: all four selectors fail quality; three also fail affordability. No nominee for runtime/refinement. Broader quality/bytes/cost curves and useful predictor feasibility remain open; preserve the frozen negative result."
     },
     {
       "stage": "4",
       "title": "Stage 4 - Bounded RAM-to-VRAM execution",
-      "description": "Implement bounded GPU slots and staging with actual skipped reads/computation. Compare against strongest same-budget streaming, cache, and CPU/GPU baselines after charging every overhead."
+      "description": "Implement bounded GPU slots and staging with actual skipped reads/computation. Compare against strongest same-budget streaming, cache, and CPU/GPU baselines after charging every overhead. Still gated after v0.7: no causal selector passes the frozen development screen."
     },
     {
       "stage": "5",
       "title": "Stage 5 - Corrective refinement",
-      "description": "Define unsafe omission, detect it cheaply, add omitted contributions before downstream commitment, and measure silent-failure risk versus extra bytes/latency against a larger initial subset."
+      "description": "Define unsafe omission, detect it cheaply, add omitted contributions before downstream commitment, and measure silent-failure risk versus extra bytes/latency against a larger initial subset. Still gated after v0.7: no causal selector passes the frozen development screen."
     },
     {
       "stage": "later",
@@ -114,21 +114,21 @@
       "stage": "3",
       "title": "Compare causally available working-set predictors and their charged cost",
       "completed": false,
-      "body": "After Stage 2 demonstrates opportunity, compare static popularity, last-token/window reuse, EMA, and a small learned selector. Document when every input feature becomes available. Measure recovered contribution, unnecessary bytes, execution cost, and topic-transition behavior. Audit omitted groups independently and evaluate inside approximate closed-loop generation. Gate: useful proximity to hindsight at an affordable measured cost."
+      "body": "Compare static popularity, last-token/window reuse, EMA and learned selectors with explicit feature availability, charged predictor storage and execution cost, independent omission audits, and approximate closed-loop evaluation. Measure quality/bytes/cost curves and topic transitions. Gate: useful proximity to hindsight at an affordable measured cost.\n\nThe first frozen-point experiment is complete in #15 / [v0.7.0](https://github.com/displague/dynamic-model-loading/releases/tag/v0.7.0). All four causal selectors fail quality at Qwen popularity/width 8/90% retention: aggregate relative PPL 1.089204-1.158203 versus <=1.01, and all 16 articles individually fail for each selector. All pass the >=10% simulated warm-traffic screen; recency/EMA/learned also fail the <=10% CUDA-and-wall cost screen at about 72-83%. Static is cheap but loses quality. Incremental hindsight reaches 1.009318 and is ineligible. The complete raw ledger, masks, transition, generation and timing evidence are published.\n\nThis issue remains open for the broader useful-predictor gate and curves. No selector is nominated for paging/refinement. The negative result applies to these initial eager implementations and one operating point; it is not a proof that all predictors fail. Faster execution alone does not change the measured mask quality. Any new predictor, retention sweep or scale control needs a separate prospective protocol with fresh immutable receipts. Preserve this failed experiment and the original thresholds; do not retune on final test. Held-out quality #8 and runtime/refinement #11/#12 retain their separate gates.\n"
     },
     {
       "key": "pager",
       "stage": "4",
       "title": "Implement bounded FFN residency with measured RAM-to-VRAM traffic",
       "completed": false,
-      "body": "After prediction feasibility, implement CPU-backed groups, bounded pinned staging, bounded GPU slots, and kernels that avoid the claimed weight reads and work. Run dense reference separately without retaining a full GPU copy. Compare dense streaming, static/recency/activation-aware caches, and CPU execution alternatives at identical budgets. Charge scheduling, packing, transfers, synchronization, KV, and workspaces. Gate: measured end-to-end improvement over the strongest same-budget baseline."
+      "body": "After prediction feasibility, implement CPU-backed groups, bounded pinned staging, bounded GPU slots, and kernels that avoid the claimed weight reads and work. Run dense reference separately without retaining a full GPU copy. Compare dense streaming, static/recency/activation-aware caches, and CPU execution alternatives at identical budgets. Charge scheduling, packing, transfers, synchronization, KV, and workspaces. Gate: measured end-to-end improvement over the strongest same-budget baseline.\n\nCurrent gate status after v0.7.0 / #15: no causal selector qualifies at the frozen Qwen operating point. This phase remains unstarted and gated; completing the negative selector experiment does not satisfy prediction feasibility. Broader predictor issue #10 remains open."
     },
     {
       "key": "refinement",
       "stage": "5",
       "title": "Test omission detection and additive refinement against larger initial subsets",
       "completed": false,
-      "body": "Define unsafe omission before scoring. Estimate omitted effects from cheap causally available signals, preserve the FFN input, add missing group contributions before downstream commitment, and provide a bounded dense fallback. Plot silent quality failures against added bytes and latency, including detector cost. Residency misses and silent selection errors must remain separate. Gate: refinement improves the risk/cost frontier over simply selecting more initially; otherwise remove it."
+      "body": "Define unsafe omission before scoring. Estimate omitted effects from cheap causally available signals, preserve the FFN input, add missing group contributions before downstream commitment, and provide a bounded dense fallback. Plot silent quality failures against added bytes and latency, including detector cost. Residency misses and silent selection errors must remain separate. Gate: refinement improves the risk/cost frontier over simply selecting more initially; otherwise remove it.\n\nCurrent gate status after v0.7.0 / #15: no causal selector qualifies at the frozen Qwen operating point. This phase remains unstarted and gated; completing the negative selector experiment does not satisfy prediction feasibility. Broader predictor issue #10 remains open."
     },
     {
       "key": "generalization",
@@ -143,6 +143,14 @@
       "title": "Evaluate quantization, residual representations, and storage paging as separate branches",
       "completed": false,
       "body": "Keep quantization metadata aligned with neuron permutations and revalidate the function. Study heterogeneous groups, limited lookahead, low-rank-plus-residual decomposition, or training for block structure one change at a time; do not assume residuals are sparse or cheap. For NVMe/SSD work verify actual device reads, RAM cache residency, and swap. MTP integration, Bayesian state, and an always-on service remain deferred until core gates justify them."
+    },
+    {
+      "key": "causal_control",
+      "stage": "3",
+      "title": "Deliver the first causal selector experiment at the frozen Qwen operating point",
+      "completed": true,
+      "body": "Completed the first causal selector experiment at the unchanged v0.4 Qwen popularity/width-8/90% condition and 2 GiB equal-layer static cache. None of the four causal selectors passes the frozen screen. Static, recency, EMA and learned relative PPL are 1.158203, 1.117159, 1.111589 and 1.089204; every causal selector exceeds 1% on all 16 development articles. All meet the simulated warm traffic screen (15.103-18.663% saving). Static costs 0.450% CUDA / 0.456% wall of paired resident dense FFNs; recency, EMA and learned cost about 72-83%, above the 10% affordability screen. Incremental hindsight reaches relative PPL 1.009318 and 15.539% warm saving, but is noncausal and cannot qualify.\n\nThe protocol/apparatus were pushed as [85efbc7](https://github.com/displague/dynamic-model-loading/commit/85efbc771b75487b7aecfe0c521c1d3e4fd5452e) before fitting/evaluation. All 28 local plus 17 incremental layout gates pass under original 0.01 relative-L2 / 0.001 KL limits. Retain 307 raw rows, 85 document masks/audits, 20 generated-path traces, four dense continuations, 17 dense reference episodes, calibration statistics and fitted weights. All modes complete every article, the fixed topic transition and four closed-loop continuations. Persistent selector tensors reduce simulated FFN-cache capacity; query and necessary update cost are measured separately from the dense diagnostic.\n\nValidation: 111 tests in both baseline torch 2.10 and separate torch 2.12 environments. The independent analyzer checks provenance, complete grids and ordering, numerical gates, actual reference NLL, charged mask replay, timing medians, generation receipts and every aggregate. Restoring all 124 payloads from three hashed release assets reproduces the validated analysis exactly.\n\nThis closes a bounded experiment, not the Stage 3 milestone or broader useful-predictor goal #10. Held-out quality #8 stays open. Physical paging #11 and refinement #12 remain gated. No physical transfer, bounded residency, task accuracy or speedup claim; full model and restoration copies remain resident. Predictor initialization traffic/time are excluded from replay, and the cost result covers the measured eager implementations. No final-test score or threshold/retention retuning follows from the failure.\n\nEvidence: [v0.7.0 release](https://github.com/displague/dynamic-model-loading/releases/tag/v0.7.0), [complete findings](https://github.com/displague/dynamic-model-loading/blob/v0.7.0/docs/causal-control-results.md), [protocol](https://github.com/displague/dynamic-model-loading/blob/v0.7.0/docs/causal-control-protocol.md), [archive and restoration](https://github.com/displague/dynamic-model-loading/tree/v0.7.0/results/causal-control-20260911).\n",
+      "release": "v0.7.0"
     }
   ]
 }

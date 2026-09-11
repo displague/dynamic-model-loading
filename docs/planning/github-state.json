@@ -121,7 +121,13 @@
       "url": "https://github.com/displague/dynamic-model-loading/issues/14",
       "title": "Evaluate quantization, residual representations, and storage paging as separate branches",
       "state": "open"
+    },
+    "causal_control": {
+      "number": 15,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/15",
+      "title": "Deliver the first causal selector experiment at the frozen Qwen operating point",
+      "state": "closed"
     }
   },
-  "last_refreshed_utc": "2026-09-11T16:36:17.226617+00:00"
+  "last_refreshed_utc": "2026-09-11T18:55:57.290011+00:00"
 }

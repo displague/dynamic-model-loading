@@ -1,0 +1,80 @@
+{
+  "started_utc": "2026-09-11T18:06:10.788657+00:00",
+  "environment": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cuda",
+    "torch": "2.10.0+cu130",
+    "cuda_build": "13.0",
+    "versions": {
+      "transformers": "5.13.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.19.0",
+      "numpy": "2.3.5"
+    },
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "bf16_reduced_precision_reduction": true,
+    "fp16_reduced_precision_reduction": true,
+    "cpu_threads": 4,
+    "process_id": 26872,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "total_bytes": 17066033152,
+      "compute_capability": [
+        12,
+        0
+      ]
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 5080 Laptop GPU, 616.64, 16303 MiB, 24 MiB, 38, 5.96 W"
+  },
+  "config_sha256": "ecbd301cc057264222db37e3881488dc9ca4c9aeea74f61eb5f686ef04902687",
+  "protocol_sha256": "dfbc0e8d033ac39d50df4bb1da59a80d7646fdbbd3f409a1522154d48345b677",
+  "sources": {
+    "adapters.py": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc",
+    "analysis.py": "ba578312bb18e3af8104fd50f6bcf30a02d887fcf6224b4bb56434f5fb1fb086",
+    "cache.py": "b8de5501e47e2b357f46309306b9277ccd4be953e239c19c9ad5b4b363221298",
+    "cache_analysis.py": "bdbb3b28320319c2a89bcf4b513cfc32ef5795450f38f7558f19d7da137c6f57",
+    "cache_plot.py": "dde8ac19e88b4de730d8c76efc0b4268d61135e12b47c540ef05e8baa9023a74",
+    "causal.py": "fd2c7e00a53bef988574122c9ac31a31d6b56ec043cbb87d59741052b76c943a",
+    "causal_analysis.py": "ead048becec0229e0e16a80141f2db9e634d8a5198b08ff04a1b4d40681264c9",
+    "causal_study.py": "32bdea4f0c726db198c97063b1b6a88a2d000c0866c766ef808cfe74ce3c0b12",
+    "corpus.py": "127735e3b9f13c040fc4fa99b5c38b4bb1d2f9c39205e38650211d3acc7d4567",
+    "environment_analysis.py": "66a45022834e01fe5ba0995cad7782aecba9db6dce54533d968e3e99f4e1a94e",
+    "experiment.py": "5fc3881995fb2318f954167971c3c4790b2b7c78470d02272f2dfa62cfcefe84",
+    "ffn.py": "4bc70ad070e0a68d5d7da7b34b5832d9a65a2a7f21d426ade988a63363e4da43",
+    "layer_plot.py": "eb9221c88e808700df2898aa69ea1f47f24220d93fba517d2ce4b4323220b651",
+    "layer_study.py": "cb5d76f0f9645d0c97b194f0cc2c87c9a7156eeedf638ec91e033652bfc5eef6",
+    "metrics.py": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53",
+    "packing.py": "b13c919d54ebc7e97669ee454a37b09732b3faa5cb78f697ee6a3a9f6297fe46",
+    "precision.py": "7ecd06ede79e646a50e116e72a143af3a7e7e14e578c80f85ee28e8462926b45",
+    "relu.py": "d0afe4f3c8cccbb496e5ccdfd6793f4ca79c1493bfdcaab31b756121d7add125",
+    "relu_study.py": "8b6efdcf1686bef37790e8d69559983b447f63489e804ac88a7684bc119d0a1a",
+    "trace.py": "02845555dec8869447dd32e3af63fd466b5cc792e3173d75416d4e1652490fda",
+    "__init__.py": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738"
+  },
+  "parent_hashes": {
+    "manifest.json": "bf253d16dcef390b0d11cb15bf50caa45f3f9dbec0dbb9803c4e776e669b3ff6",
+    "results.jsonl": "9e2313683fcbe1b1e8af0c604e0271eaf1ab93b2b9fe766ff5f43e0788e0e0e1",
+    "summary.json": "e915b6642720e354d0233f656244cc2efe9c391891de9163bfee90cd0b25c691",
+    "config.json": "03de1dc4dfd98ad7bd0313d2b96e56a92b7ff04448620ef9c9fad7f7ec360644",
+    "corpus.jsonl": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+    "layouts.json.gz": "ab0c2657c4c183aab5ff4f6c03ef4c27c877a5a262893164ddfa71ff581558fa",
+    "calibration-importance.safetensors.gz": "c80d3999af0c3012b95fc23ad4b93201f1b3d6d9dbc8e0723f647e5ac2d5a826",
+    "token-ids.json": "f26039f7ca013329da2aa2e6872bb80d878a872f159e17e8723d3339d2ede505"
+  },
+  "checkpoint_files": {
+    "config.json": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670",
+    "generation_config.json": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6",
+    "merges.txt": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3",
+    "model.safetensors": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee",
+    "tokenizer.json": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539",
+    "tokenizer_config.json": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583",
+    "vocab.json": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+  },
+  "model_parameter_bytes": 6174857216,
+  "groupable_ffn_bytes": 4624220160,
+  "diagnostic_backup_bytes": 4624220160,
+  "attention_implementation": "sdpa"
+}

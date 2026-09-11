@@ -1,0 +1,14 @@
+Loading Qwen for incremental controls
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<04:28,  1.25it/s]
+Loading weights:  54%|█████▍    | 183/338 [00:00<00:00, 276.53it/s]
+Loading weights:  85%|████████▌ | 288/338 [00:01<00:00, 280.07it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 238.88it/s]
+Calibration-only ridge fitting
+Incremental selector: static
+Incremental selector: recency
+Incremental selector: ema
+Incremental selector: learned
+Incremental selector: hindsight
+{"status": "causal_control_completed"}
