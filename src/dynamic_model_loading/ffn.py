@@ -112,11 +112,12 @@ class HindsightMask:
     with no cache or reuse. It is not actual transfer traffic or reduced residency.
     """
 
-    def __init__(self, mlp: nn.Module, group_width: int, keep: float):
+    def __init__(self, mlp: nn.Module, group_width: int, keep: float, observer=None):
         self.hidden, self.width = dimensions(mlp)
         if group_width <= 0 or not math.isfinite(keep) or not 0 < keep <= 1:
             raise ValueError("Invalid group selection settings")
         self.group_width, self.keep = group_width, keep
+        self.observer = observer
         self.norms = mlp.down_proj.weight.detach().float().norm(dim=0)
         self.bytes_per_neuron = group_bytes(self.hidden, 1, mlp.down_proj.weight.element_size())
         self.counts = torch.zeros(3, dtype=torch.float64, device=self.norms.device)
@@ -125,6 +126,8 @@ class HindsightMask:
         z = args[0]
         scores = z.float().abs() * self.norms
         mask = select_groups(scores, self.group_width, self.keep)
+        if self.observer is not None:
+            self.observer(scores, mask)
         self.counts[0] += mask.sum()
         self.counts[1] += z.numel() // self.width
         self.counts[2] += (scores * mask).double().sum()

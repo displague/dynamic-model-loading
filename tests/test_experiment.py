@@ -3,6 +3,7 @@ import json
 from pathlib import Path
 
 import pytest
+import torch
 from tokenizers import Tokenizer
 from tokenizers.models import WordLevel
 from tokenizers.pre_tokenizers import Whitespace
@@ -81,3 +82,40 @@ def test_coactivation_pilot_with_disk_references(tiny_run):
     assert (output / "source" / "packing.py").is_file()
     reservoir = json.loads((output / "reservoir.json").read_text())
     assert reservoir["samples_per_layer"] == [3, 3]
+
+
+def test_trace_capture_replay_and_missing_rows_fail_closed(tiny_run):
+    from dynamic_model_loading.cache_analysis import run as analyze
+    # Establish fixture-specific hashes independently, before enabling the trace mode.
+    experiment.run(tiny_run)
+    parent = Path(tiny_run.output)
+    manifest = json.loads((parent / "manifest.json").read_text())
+    path = Path(tiny_run.config)
+    config = json.loads(path.read_text())
+    config.update(capture_traces=True, expected_torch=str(torch.__version__),
+                  expected_corpus_sha256=experiment.digest(Path(tiny_run.corpus)),
+                  expected_token_ids_sha256=manifest["tokenization"]["token_ids_sha256"],
+                  expected_layouts_sha256=experiment.digest(parent / "layouts.json"),
+                  cache_budgets_bytes=[2048, 4096, 100000], screen_relative_ppl_max=1.01,
+                  screen_warm_savings_min=0.1)
+    path.write_text(json.dumps(config))
+    tiny_run.output = str(parent.parent / "trace-run")
+    experiment.run(tiny_run)
+    root = Path(tiny_run.output)
+    assert len(list((root / "traces").glob("*.npz"))) == 6
+    results = analyze(root, parent.parent / "analysis")
+    assert len(results) == 6 * 3 * 4 * 2
+    resident = [r for r in results if r["budget_bytes"] == 100000 and r["state"] == "warm"]
+    assert all(r["savings_vs_dense_static"] is None and not r["development_screen_passed"] for r in resident)
+    raw = root / "results.jsonl"
+    lines = raw.read_text().splitlines()
+    removed = False
+    kept = []
+    for line in lines:
+        if not removed and json.loads(line)["kind"] == "hindsight_document":
+            removed = True
+        else:
+            kept.append(line)
+    raw.write_text("\n".join(kept) + "\n")
+    with pytest.raises(ValueError, match="document conditions"):
+        analyze(root, parent.parent / "invalid-analysis")

@@ -25,6 +25,7 @@ from .adapters import extract_ffns
 from .ffn import HindsightMask, ImportanceCollector, dimensions, grouped_forward, repack_
 from .metrics import aggregate, compare_logits, relative_l2
 from .packing import CoactivationCollector
+from .trace import TraceRecorder, save_trace
 
 
 def digest(path: Path) -> str:
@@ -185,6 +186,13 @@ def run(args) -> dict:
     cfg = json.loads(config_path.read_text(encoding="utf-8"))
     validate_config(cfg)
     corpus = load_corpus(corpus_path)
+    if cfg.get("capture_traces"):
+        for key, actual in (("expected_corpus_sha256", digest(corpus_path)),
+                            ("expected_torch", str(torch.__version__))):
+            if cfg[key] != actual:
+                raise ValueError(f"Trace protocol input mismatch: {key}")
+        if cfg["dtype"] != "float32":
+            raise ValueError("Trace protocol requires FP32")
     device = torch.device(args.device)
     if device.type not in ("cpu", "cuda"):
         raise ValueError("Only CPU and CUDA are supported")
@@ -264,6 +272,13 @@ def run(args) -> dict:
         manifest["ffn_parameter_bytes"] = sum(p.numel() * p.element_size() for m in mlps for p in m.parameters())
         manifest["ffn_shapes"] = dims
         manifest["attention_implementation"] = model.config._attn_implementation
+        if cfg.get("capture_traces"):
+            if len(set(dims)) != 1:
+                raise ValueError("Trace protocol requires homogeneous FFN dimensions")
+            if manifest["tokenization"]["token_ids_sha256"] != cfg["expected_token_ids_sha256"]:
+                raise ValueError("Trace tokenization mismatch")
+            write_json(output / "token-ids.json", {key: ids.cpu().tolist() for key, ids in tokens.items()})
+            (output / "traces").mkdir()
         synchronize(device)
         record("load", seconds=time.perf_counter() - start, memory=cuda_memory(device))
         write_json(output / "manifest.json", manifest)
@@ -345,11 +360,18 @@ def run(args) -> dict:
                     cfg["coactivation_iterations"], cfg["seed"] + index))
             write_json(output / "reservoir.json", {"token_ordinals_per_layer": [c.ordinals.tolist() for c in collectors],
                                                    "samples_per_layer": [len(c.ordinals) for c in collectors]})
+        importance_receipt = {}
+        if cfg.get("capture_traces"):
+            save_file({str(i): (c.total / c.tokens).cpu().contiguous()
+                       for i, c in enumerate(collectors)}, output / "calibration-importance.safetensors")
+            importance_receipt["importance_sha256"] = digest(output / "calibration-importance.safetensors")
         del collectors
         write_json(output / "layouts.json", {key: [p.tolist() for p in value] for key, value in orders.items()})
+        if cfg.get("capture_traces") and digest(output / "layouts.json") != cfg["expected_layouts_sha256"]:
+            raise ValueError("Regenerated trace layouts mismatch")
         record("calibration", token_observations_per_layer=calibration_counts,
                documents=[r["id"] for r in calibration], layouts_sha256=digest(output / "layouts.json"),
-               seconds=time.perf_counter() - calibration_start)
+               seconds=time.perf_counter() - calibration_start, **importance_receipt)
 
         inputs = []
         handles = []
@@ -388,14 +410,24 @@ def run(args) -> dict:
                 with layout(mlps, orders[name]):
                     for width in cfg["group_widths"]:
                         for keep in cfg["keep_fractions"]:
-                            masks = [HindsightMask(m, width, keep) for m in mlps]
+                            observers = ([TraceRecorder(width, keep) for _ in mlps]
+                                         if cfg.get("capture_traces") else [None] * len(mlps))
+                            masks = [HindsightMask(m, width, keep, observer)
+                                     for m, observer in zip(mlps, observers, strict=True)]
                             measurements = []
                             with hooks(mlps, masks):
                                 for row in diagnostics:
                                     candidate = forward(tokens[row["id"]]).cpu()
                                     metrics = compare_logits(reference(row["id"]), candidate, tokens[row["id"]].cpu())
+                                    extra = {}
+                                    if cfg.get("capture_traces"):
+                                        trace_name = f"{name}-{width}-{keep}-{len(measurements):03d}.npz"
+                                        extra["trace"] = save_trace(output / "traces" / trace_name, observers,
+                                            {"document": row["id"], "layout": name, "group_width": width,
+                                             "keep_fraction": keep, "neurons": dims[0][1],
+                                             "bytes_per_neuron": masks[0].bytes_per_neuron})
                                     record("hindsight_document", layout=name, group_width=width, keep_fraction=keep,
-                                           document=row["id"], domain=row["domain"], **metrics)
+                                           document=row["id"], domain=row["domain"], **metrics, **extra)
                                     measurements.append(metrics)
                                     del candidate
                             accounts = [mask.accounting() for mask in masks]
@@ -417,7 +449,7 @@ def run(args) -> dict:
         with (output / "report.md").open("x", encoding="utf-8") as report:
             report.write(render_report(summary))
         return summary
-    except Exception as error:
+    except (Exception, KeyboardInterrupt) as error:
         record("error", error_type=type(error).__name__, message=str(error))
         write_json(output / "failure.json", {"error_type": type(error).__name__, "message": str(error)})
         raise
