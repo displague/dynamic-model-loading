@@ -111,3 +111,12 @@ The corpus builder selects distinct articles and records source hashes, titles, 
 licensing. The test split is unused. The larger run spills reference logits to disk
 (about 2.5 GB for the default slice); these are analytical reference files, not weight
 offload traffic. New runs snapshot their source and protocol as well as their inputs.
+
+The [per-layer study](docs/layer-study-protocol.md) reuses the archived pilot inputs
+and layout hashes. Its 66 conditions mask individual layers, all layers, and four
+fixed blocks while charging unmasked FFNs at full hypothetical weight volume:
+
+```powershell
+.\.venv\Scripts\python.exe -m dynamic_model_loading.layer_study --output runs/layer-study
+.\.venv\Scripts\python.exe -m dynamic_model_loading.layer_plot --run runs/layer-study --output runs/layer-figures
+```
