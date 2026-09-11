@@ -22,7 +22,10 @@ gain is established. See the [cache findings](docs/cache-trace-results.md),
 for the full curves and preserved negative results. The
 [initial BF16 numerical failure](docs/initial-results.md) remains unresolved by a
 practical execution policy. The [same-interpreter PyTorch 2.12 control](docs/torch212-results.md)
-also preserves the failure; the default BF16 command still reproduces it.
+also preserves the failure; the default BF16 command still reproduces it. The
+[OPT ReLU positive control](docs/relu-control-results.md) passes, with 96.04% exactly
+zero neuron activations; wider physical groups consume more selected volume. This
+architecture control does not establish equivalent sparsity in SwiGLU models.
 
 ## Run locally
 

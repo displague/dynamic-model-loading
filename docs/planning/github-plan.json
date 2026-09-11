@@ -5,7 +5,7 @@
     {
       "stage": "0",
       "title": "Stage 0 - Reproducible reference",
-      "description": "Validate dense versus physically repacked FFNs at declared tolerances, with immutable provenance and dense latency/memory baselines. FP32 currently passes; practical BF16 policy and positive controls remain open."
+      "description": "FP32 reference and the pinned OPT ReLU positive control pass original numerical gates. Torch 2.12 preserves the BF16 permutation failure; canonical down remains a costly diagnostic. Practical BF16 grouped execution and its cost evidence remain open."
     },
     {
       "stage": "1",
@@ -82,8 +82,9 @@
       "key": "relu_control",
       "stage": "0",
       "title": "Add the original plan's ReLU positive control",
-      "completed": false,
-      "body": "Instrument a pinned OPT-1.3B checkpoint as a ReLU positive control after implementing its architecture-specific adapter. Preserve native function and numerical gates. Compare its sparsity behavior with the modern SwiGLU baseline, while explicitly avoiding generalization from ReLU to gated models. Gate: real checkpoint provenance, reconstruction, and diagnostic receipts."
+      "completed": true,
+      "body": "Completed the pinned OPT-1.3B FP32 ReLU control: 80 calibration / 16 development articles, 19,054 calibration tokens and 3,828 scored predictions. All 72 local plus 48 full-layout checks and all 192 exact-zero checks pass under original limits. About 96.04% of neurons are exactly zero; popularity exact-zero selection requires 19.80/40.10/60.40% of FFN bytes at widths 8/32/128. Fixed 75% width-128 popularity retention has relative PPL 1.014112 versus native 1.074781. Preserve all 545 raw rows, 24 aggregates, biased-projection accounting, immutable source and inputs, and the first incomplete-checkpoint failure. No transfer, bounded residency, runtime or SwiGLU generalization claim. Validation: 89 tests and independent ledger/aggregate validation. Evidence: docs/relu-control-protocol.md, docs/relu-control-results.md, results/relu-control-20260911, docs/releases/v0.6.0.md.",
+      "release": "v0.6.0"
     },
     {
       "key": "layer_study",

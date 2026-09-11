@@ -15,7 +15,7 @@ silently damage quality without causing a residency miss.
 
 | Stage | Deliverable and exit gate | Current evidence / remaining work |
 |---|---|---|
-| 0. Reproducible reference | Dense and physically repacked outputs agree under declared tolerances; record timing, memory, and provenance. | FP32 passes. BF16 permutation fails in both torch 2.10 and 2.12; canonical down order is exact within each environment but costly. The 2.10 repeat reproduces all 60 historical rows. Practical BF16 policy and ReLU positive control remain open. |
+| 0. Reproducible reference | Dense and physically repacked outputs agree under declared tolerances; record timing, memory, and provenance. | FP32 passes. BF16 permutation fails in both torch 2.10 and 2.12; canonical down order is exact within each environment but costly. The 2.10 repeat reproduces all 60 historical rows. The OPT ReLU positive control passes: 96.04% exact-zero neurons; grouping increases selected volume. Practical BF16 policy remains open. |
 | 1. Hindsight sparsity envelope | Individual-neuron and per-layer/multi-layer omission curves on whole-document and domain splits; useful sparsity survives unseen inputs. | Smoke, a 16-article Wikipedia slice, and 66 per-layer/joint conditions exist. Sensitivity is distributed on this slice. Multi-domain held-out quality and task outcomes remain unmeasured. |
 | 2. Physical packing and cache traces | Quality versus transferred bytes and transfer amplification at 256/512 MiB and 1/2 GiB FFN-cache budgets. | All 72 declared conditions and 1,152 traces completed. Popularity/width 8/90% retention is the only condition passing the prospective development screen; best warm traffic saving is 15.54% at 2 GiB. This is reused-data simulation; held-out quality and physical transfers remain open. |
 | 3. Causal prediction | Static hot-set, recency, EMA, and learned-selector quality/bytes/cost curves; savings pay for prediction, including approximate closed-loop inference. | The frozen Stage 2 ordering nominates popularity/width 8/90%, with the 2 GiB equal-layer static cache. Predictor measurements have not started. Document feature availability and audit omitted computation independently. |
@@ -38,6 +38,7 @@ memory, and an always-on service remain deferred.
 | [v0.3.0](releases/v0.3.0.md) | Per-layer omission sensitivity and interaction diagnosis | Top-four layers account for 20.8% / 19.6% of single-layer KL sums; all-layer controls reproduce exactly. |
 | [v0.4.0](releases/v0.4.0.md) | Applied-mask traces, transfer amplification, and bounded-cache simulation | One of 72 conditions passes the development screen; best simulated warm saving 15.54%, relative PPL 1.008978. |
 | [v0.5.0](releases/v0.5.0.md) | Same-interpreter torch 2.12 arithmetic control | Four policies still fail; canonical down is exact within each environment; ordinary BF16 outputs drift across environments. |
+| [v0.6.0](releases/v0.6.0.md) | OPT ReLU positive control | 96.04% exact-zero neurons; popularity width-128 exact-zero selection needs 60.40% of FFN bytes. |
 
 No completed delivery establishes an inference speedup or achieved memory reduction.
 The stage milestones remain open where their full gates have not been met. The

@@ -1,0 +1,54 @@
+{
+  "model": "facebook/opt-1.3b",
+  "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62",
+  "files": [
+    {
+      "name": ".gitattributes",
+      "bytes": 1173
+    },
+    {
+      "name": "LICENSE.md",
+      "bytes": 11117
+    },
+    {
+      "name": "README.md",
+      "bytes": 8824
+    },
+    {
+      "name": "config.json",
+      "bytes": 653
+    },
+    {
+      "name": "flax_model.msgpack",
+      "bytes": 2631529671
+    },
+    {
+      "name": "generation_config.json",
+      "bytes": 137
+    },
+    {
+      "name": "merges.txt",
+      "bytes": 456318
+    },
+    {
+      "name": "pytorch_model.bin",
+      "bytes": 2631639353
+    },
+    {
+      "name": "special_tokens_map.json",
+      "bytes": 441
+    },
+    {
+      "name": "tf_model.h5",
+      "bytes": 2631925512
+    },
+    {
+      "name": "tokenizer_config.json",
+      "bytes": 685
+    },
+    {
+      "name": "vocab.json",
+      "bytes": 898822
+    }
+  ]
+}

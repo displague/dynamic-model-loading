@@ -1,0 +1,131 @@
+{
+  "purpose": "relu_architecture_control_not_runtime_or_modern_model_generalization",
+  "model": "facebook/opt-1.3b",
+  "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62",
+  "dtype": "float32",
+  "seed": 1729,
+  "max_tokens": 256,
+  "cpu_threads": 4,
+  "group_widths": [
+    1,
+    8,
+    32,
+    128
+  ],
+  "keep_fractions": [
+    0.75
+  ],
+  "layouts": [
+    "native",
+    "random",
+    "popularity"
+  ],
+  "reconstruction_group_width": 128,
+  "reconstruction_relative_l2_max": 0.01,
+  "logit_relative_l2_max": 0.01,
+  "logit_mean_kl_max": 0.001,
+  "timing_repeats": 3,
+  "decode_tokens": 16,
+  "expected_torch": "2.10.0+cu130",
+  "expected_corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "expected_weights_sha256": "cf7d5c970d6ddbd3b03009b397c0422e147edd5c8020d47a8d2fac0b11a3b08d",
+  "expected_shapes": [
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ],
+    [
+      2048,
+      8192
+    ]
+  ],
+  "protocol": "docs/relu-control-protocol.md"
+}

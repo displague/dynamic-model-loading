@@ -1,0 +1,43 @@
+Loading pinned OPT checkpoint
+
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]
+Loading weights:   6%|▌         | 23/389 [00:00<00:01, 213.24it/s]
+Loading weights:  14%|█▍        | 55/389 [00:00<00:01, 262.75it/s]
+Loading weights:  26%|██▋       | 103/389 [00:00<00:00, 287.75it/s]
+Loading weights:  39%|███▉      | 151/389 [00:00<00:00, 320.06it/s]
+Loading weights:  48%|████▊     | 185/389 [00:00<00:00, 318.77it/s]
+Loading weights:  59%|█████▉    | 231/389 [00:00<00:00, 329.43it/s]
+Loading weights:  72%|███████▏  | 279/389 [00:00<00:00, 336.85it/s]
+Loading weights:  80%|████████  | 313/389 [00:00<00:00, 334.83it/s]
+Loading weights:  92%|█████████▏| 359/389 [00:01<00:00, 337.33it/s]
+Loading weights: 100%|██████████| 389/389 [00:01<00:00, 335.36it/s]
+Dense reference
+Calibration-only popularity order
+Numerical gates: native
+Numerical gates: random
+Numerical gates: popularity
+exact_zero native width=1: fraction=0.039685 PPL=1.000000
+exact_zero native width=8: fraction=0.256226 PPL=1.000000
+exact_zero native width=32: fraction=0.591472 PPL=1.000000
+exact_zero native width=128: fraction=0.850444 PPL=1.000000
+exact_zero random width=1: fraction=0.039685 PPL=1.000000
+exact_zero random width=8: fraction=0.256475 PPL=1.000000
+exact_zero random width=32: fraction=0.591513 PPL=1.000000
+exact_zero random width=128: fraction=0.851267 PPL=1.000000
+exact_zero popularity width=1: fraction=0.039685 PPL=1.000000
+exact_zero popularity width=8: fraction=0.198017 PPL=1.000000
+exact_zero popularity width=32: fraction=0.400992 PPL=1.000000
+exact_zero popularity width=128: fraction=0.603959 PPL=1.000000
+approximate_75 native width=1: fraction=0.750015 PPL=1.000000
+approximate_75 native width=8: fraction=0.750015 PPL=1.000165
+approximate_75 native width=32: fraction=0.750015 PPL=1.006035
+approximate_75 native width=128: fraction=0.750015 PPL=1.074781
+approximate_75 random width=1: fraction=0.750015 PPL=1.000000
+approximate_75 random width=8: fraction=0.750015 PPL=0.999828
+approximate_75 random width=32: fraction=0.750015 PPL=1.006847
+approximate_75 random width=128: fraction=0.750015 PPL=1.069063
+approximate_75 popularity width=1: fraction=0.750015 PPL=1.000000
+approximate_75 popularity width=8: fraction=0.750015 PPL=0.999811
+approximate_75 popularity width=32: fraction=0.750015 PPL=1.001882
+approximate_75 popularity width=128: fraction=0.750015 PPL=1.014112
+{"status": "relu_control_completed"}
