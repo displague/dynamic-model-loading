@@ -1,3 +1,5 @@
 * text=auto eol=lf
 results/** -text whitespace=cr-at-eol
 results/**/*.svg -whitespace
+# Preserve whitespace in the verbatim model continuations.
+docs/balanced-development-generations.md -whitespace

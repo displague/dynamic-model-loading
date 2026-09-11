@@ -1,0 +1,1175 @@
+{
+  "protocol_commit": "59980363c2a5445242a2ab0f4e41e2bdd72fab5a",
+  "assets": [
+    {
+      "name": "balanced-logits-part1-v0.10.0.zip",
+      "bytes": 1057915857,
+      "sha256": "d8313589ad6398f243a04529e46058a442553c20b7e1e2f11d8f0b09a1a19204",
+      "payloads": [
+        {
+          "file": "references/opt-arithmetic-product-01.safetensors",
+          "bytes": 5831640,
+          "sha256": "147982e360dba8e1906b188878c065cbb043519102a1576ad3071c1027852e3d"
+        },
+        {
+          "file": "references/opt-arithmetic-sequence-02.safetensors",
+          "bytes": 6434904,
+          "sha256": "855ea5f668ee3d06f8199263c426e348dfd7c020f55d94121dd702388f9d351e"
+        },
+        {
+          "file": "references/opt-code-fix-02.safetensors",
+          "bytes": 14478424,
+          "sha256": "f6c89539a16f8964a823d350812073a78f698b3d67c56e77b8248efdbaa8b1e6"
+        },
+        {
+          "file": "references/opt-code-output-01.safetensors",
+          "bytes": 10858840,
+          "sha256": "4c8ecebebf64a50fc13615a03d9110b2309f776dc9a9095fe1291170895cb190"
+        },
+        {
+          "file": "references/opt-copy-case-01.safetensors",
+          "bytes": 9451224,
+          "sha256": "cc6a94e3a3a2b9751eedcc61ec76f638f1e0cd4b77c47b7ddd00d5cbae4be70e"
+        },
+        {
+          "file": "references/opt-copy-delimiters-02.safetensors",
+          "bytes": 11261016,
+          "sha256": "6f3a83ab568c3243843c759fafceedcc4abe9129c9a865ad909648fed878b9ac"
+        },
+        {
+          "file": "references/opt-extract-id-01.safetensors",
+          "bytes": 12065368,
+          "sha256": "959c178f2207e0380f88a40090818aa78135b919a2818e240af35972ed900471"
+        },
+        {
+          "file": "references/opt-extract-min-02.safetensors",
+          "bytes": 14679512,
+          "sha256": "744cb6195d817aadf438e251006fa1046d19dec45d862ee150cc832668efc4bc"
+        },
+        {
+          "file": "references/opt-group-0.safetensors",
+          "bytes": 32928,
+          "sha256": "e59f34361eb21c0bd227c4b676abea72664cfb5d77e48bc725f7e1691ba85e99"
+        },
+        {
+          "file": "references/opt-group-1.safetensors",
+          "bytes": 32928,
+          "sha256": "93ad28c59acbc894093347ed4aa05c4e98031bdadc3eaf9704c06414ce1ee493"
+        },
+        {
+          "file": "references/opt-group-10.safetensors",
+          "bytes": 32928,
+          "sha256": "8336d0901de3f9136e68acf09590ad2b47c5dbb63461b139ebd2ec891b294587"
+        },
+        {
+          "file": "references/opt-group-11.safetensors",
+          "bytes": 32928,
+          "sha256": "c839f2bcc6e4af20e234578bd86294bab133dd192971e64a9c170c333bc6e99e"
+        },
+        {
+          "file": "references/opt-group-12.safetensors",
+          "bytes": 32928,
+          "sha256": "5b1a2133519a268e30fcde847ec3f3c65f60df2da65089ad236d7fab6323bf87"
+        },
+        {
+          "file": "references/opt-group-13.safetensors",
+          "bytes": 32928,
+          "sha256": "37e23bec81e3049a86d412147f8d3e7da89558d7390808da3d1ffd45f29f036b"
+        },
+        {
+          "file": "references/opt-group-14.safetensors",
+          "bytes": 32928,
+          "sha256": "996745cf4532f480b32a5a2b60624441edd78f0ab6c21801e8956ac5493df2f8"
+        },
+        {
+          "file": "references/opt-group-15.safetensors",
+          "bytes": 32928,
+          "sha256": "e380b6b4affbced6c54a552f53a74bb4eca2ce58317237b77f497f3a956c4aee"
+        },
+        {
+          "file": "references/opt-group-16.safetensors",
+          "bytes": 32928,
+          "sha256": "588a0dee88a5bc607f8005d80862e0a34e0f45743b578be302d94223d0ae7167"
+        },
+        {
+          "file": "references/opt-group-17.safetensors",
+          "bytes": 32928,
+          "sha256": "2a3fd3e6c925e4e008dfbefddb63d2d3b54e0ef17676faa7da38a3ce0089affe"
+        },
+        {
+          "file": "references/opt-group-18.safetensors",
+          "bytes": 32928,
+          "sha256": "8775d3624968703091741b000a5ed7b27775a42206da22d3a289ca365f7e98b5"
+        },
+        {
+          "file": "references/opt-group-19.safetensors",
+          "bytes": 32928,
+          "sha256": "442d87417b0ef0c8d0e1d84de8ebf1bd4b7095916e8f0310c052f67ed1ca91c6"
+        },
+        {
+          "file": "references/opt-group-2.safetensors",
+          "bytes": 32928,
+          "sha256": "361b2bc3b4a07fc40a9f1844125d0c1e5a83a04aaa3ac8bf4e371694e3727afc"
+        },
+        {
+          "file": "references/opt-group-20.safetensors",
+          "bytes": 32928,
+          "sha256": "794871e45c0faf518e54d2c8131a7be8126a4450ba4dbd7f466dc057e1755c57"
+        },
+        {
+          "file": "references/opt-group-21.safetensors",
+          "bytes": 32928,
+          "sha256": "c2468d5b96dfdf37325213a84cf6e5444008a306fc55c17ffed3d97fe248e961"
+        },
+        {
+          "file": "references/opt-group-22.safetensors",
+          "bytes": 32928,
+          "sha256": "34e0543c4f607db3c3ebfc9070c42e8ad8a6752df27f0b159273f3726fcf16eb"
+        },
+        {
+          "file": "references/opt-group-23.safetensors",
+          "bytes": 32928,
+          "sha256": "3872109e30388fb552eef1c5bd8d7985ec24ea13ca9f32db270c9b8f87e3020a"
+        },
+        {
+          "file": "references/opt-group-3.safetensors",
+          "bytes": 32928,
+          "sha256": "8e80dbea1c6d1d5bd964bf5f870da77bcc506806ef49f5ed77a15fcf4dd09712"
+        },
+        {
+          "file": "references/opt-group-4.safetensors",
+          "bytes": 32928,
+          "sha256": "c78638894afe302e8c0dcdf3735bf278fca879d1ee05adf736c75783ba09dc73"
+        },
+        {
+          "file": "references/opt-group-5.safetensors",
+          "bytes": 32928,
+          "sha256": "4aa8973b7c1fbc7828569e1a5483578d92dc758c1ba58e499d13a80cf372ae87"
+        },
+        {
+          "file": "references/opt-group-6.safetensors",
+          "bytes": 32928,
+          "sha256": "35adab856734f2aea08fb769aec7c962e16c74fd74b4781e3f2cfc28a7d82335"
+        },
+        {
+          "file": "references/opt-group-7.safetensors",
+          "bytes": 32928,
+          "sha256": "25f1d15a18e1fc2e61548cda0fc3211c24d057f46f3e70d5acb3889a5f35216f"
+        },
+        {
+          "file": "references/opt-group-8.safetensors",
+          "bytes": 32928,
+          "sha256": "5abcbadc246f1f142f9503fc0e459c1c2d71e3105d90a57ce7a34bac15bd270d"
+        },
+        {
+          "file": "references/opt-group-9.safetensors",
+          "bytes": 32928,
+          "sha256": "7efb6889b57ed92be0a8b5d7f7b2e038bffc7447b04b75d0bb8b7fb6623832fa"
+        },
+        {
+          "file": "references/opt-hindsight-arithmetic-product-01.safetensors",
+          "bytes": 5831640,
+          "sha256": "7a0f660d2ff4503fa2c3e482e7cc760c0aae1c0a8674ec2f1df3d22d638f6f20"
+        },
+        {
+          "file": "references/opt-hindsight-arithmetic-sequence-02.safetensors",
+          "bytes": 6434904,
+          "sha256": "ed23245a7623c57ae3d0d2ba6c474cf9fd7278b96317c73a88cb831ea5286881"
+        },
+        {
+          "file": "references/opt-hindsight-code-fix-02.safetensors",
+          "bytes": 14478424,
+          "sha256": "07676268a723e42a3f7e61b9a7a23f2ecd918620e4532448d9e091103868f4dc"
+        },
+        {
+          "file": "references/opt-hindsight-code-output-01.safetensors",
+          "bytes": 10858840,
+          "sha256": "4e38f00914d4a3da049a963c68e04d03d034afb0b4b2475165d3b09f8132435d"
+        },
+        {
+          "file": "references/opt-hindsight-copy-case-01.safetensors",
+          "bytes": 9451224,
+          "sha256": "d0478272e8aa83992de89f6a3060cede6d3c8a4a8b3efd488880d0af1556b64b"
+        },
+        {
+          "file": "references/opt-hindsight-copy-delimiters-02.safetensors",
+          "bytes": 11261016,
+          "sha256": "83231fe0f004a202814b664083137a463b205b900e143c069d7ed68775273296"
+        },
+        {
+          "file": "references/opt-hindsight-extract-id-01.safetensors",
+          "bytes": 12065368,
+          "sha256": "2950cab0b90936aa3b81dd80b81261b62d0bdf496ce9a07a78ed6ba39227b0c7"
+        },
+        {
+          "file": "references/opt-hindsight-extract-min-02.safetensors",
+          "bytes": 14679512,
+          "sha256": "8341fb5cb5bd392ebecfefe3e57f14de28283d285c83f1a9133aba1d2cdec710"
+        },
+        {
+          "file": "references/opt-hindsight-switch-copy-01.safetensors",
+          "bytes": 10657752,
+          "sha256": "4c9abe736610032fba2ec0aefa0def1a24fe8249451561e2a6fb41d2d74069ed"
+        },
+        {
+          "file": "references/opt-hindsight-switch-extract-02.safetensors",
+          "bytes": 11864280,
+          "sha256": "c8531bf8277464bcec6f67e3d9dbeadab638ecfc831de3fdfdef3a9507436f55"
+        },
+        {
+          "file": "references/opt-layout-arithmetic-product-01.safetensors",
+          "bytes": 5831640,
+          "sha256": "d094bb40de1c50a82e7361c3af04d77abe9cdda0d5eb8f0a3ff84d2158e80db0"
+        },
+        {
+          "file": "references/opt-layout-arithmetic-sequence-02.safetensors",
+          "bytes": 6434904,
+          "sha256": "62d1d97c5a6b43d2f70fddb5bc4242f8a4da06d4f3cac520b9b06c36f54216f9"
+        },
+        {
+          "file": "references/opt-layout-code-fix-02.safetensors",
+          "bytes": 14478424,
+          "sha256": "98dd0793b1902409f1ca942a3f224340bc1281f7c53fc15c96d79a2be07a4579"
+        },
+        {
+          "file": "references/opt-layout-code-output-01.safetensors",
+          "bytes": 10858840,
+          "sha256": "e0471f2598cf15f86c62b9196260f324c8ba81009c6ef84c24705b47260e6e76"
+        },
+        {
+          "file": "references/opt-layout-copy-case-01.safetensors",
+          "bytes": 9451224,
+          "sha256": "782c34e58e6b838568af461855e89c538e18a9ca9720b998016ed202c8840d4a"
+        },
+        {
+          "file": "references/opt-layout-copy-delimiters-02.safetensors",
+          "bytes": 11261016,
+          "sha256": "35cc4174ca1f187370ace4c64d91f89093348b57f178f30a78b85958521c2af1"
+        },
+        {
+          "file": "references/opt-layout-extract-id-01.safetensors",
+          "bytes": 12065368,
+          "sha256": "9ffdd8a6233c9c3005e63a607d94908eb044d372d873de70ac93f040e37b4326"
+        },
+        {
+          "file": "references/opt-layout-extract-min-02.safetensors",
+          "bytes": 14679512,
+          "sha256": "b28006816b4cdd5d7274ad1025944264d78400d3528ee43b515a3e374fcd7e4a"
+        },
+        {
+          "file": "references/opt-layout-switch-copy-01.safetensors",
+          "bytes": 10657752,
+          "sha256": "4a72818d1d0fa29c9827738de00dec0785defce87b6470539f2e9202ba8dd2a0"
+        },
+        {
+          "file": "references/opt-layout-switch-extract-02.safetensors",
+          "bytes": 11864280,
+          "sha256": "bbe9e12adcb777cca4ceab12ea301aa97c7d4d1142256a5bbb35e5a3664dd6a8"
+        },
+        {
+          "file": "references/opt-static-arithmetic-product-01.safetensors",
+          "bytes": 5831640,
+          "sha256": "82fd0520137b07386835a36a6ba7b0be2cb817b24c33e553ee7094aaf825101e"
+        },
+        {
+          "file": "references/opt-static-arithmetic-sequence-02.safetensors",
+          "bytes": 6434904,
+          "sha256": "4e967e4fa748df2b96c017de942ab7caec07bc172c17ad84271578d28d5b08b6"
+        },
+        {
+          "file": "references/opt-static-code-fix-02.safetensors",
+          "bytes": 14478424,
+          "sha256": "14c4b95fd0c6baa3f78d598d055c0e71c6ee643fbfe1940fb5c62c322e566746"
+        },
+        {
+          "file": "references/opt-static-code-output-01.safetensors",
+          "bytes": 10858840,
+          "sha256": "aed50fbd4c95d56418faf480f905ac1820f1056a5b5b1aeba65a5f091be6f03b"
+        },
+        {
+          "file": "references/opt-static-copy-case-01.safetensors",
+          "bytes": 9451224,
+          "sha256": "4d39699c730d06a426dbd3836b8be2380ca4c7e224f12f8defdc940b7c3e5d51"
+        },
+        {
+          "file": "references/opt-static-copy-delimiters-02.safetensors",
+          "bytes": 11261016,
+          "sha256": "264cdae059ad3e9b1199fc19b5bf2e4556801f99bc028a981f285cd4cea108bb"
+        },
+        {
+          "file": "references/opt-static-extract-id-01.safetensors",
+          "bytes": 12065368,
+          "sha256": "db2a005aff35b318911eabf6e8301057d75c1914853a5db9fc492928acbdb11b"
+        },
+        {
+          "file": "references/opt-static-extract-min-02.safetensors",
+          "bytes": 14679512,
+          "sha256": "59db54c92ee4072f70b9834754911d01edb976d3f9f22b75679ded42baf0c688"
+        },
+        {
+          "file": "references/opt-static-switch-copy-01.safetensors",
+          "bytes": 10657752,
+          "sha256": "b37aec1a4d5df6e605ad248c9418ea73e8f5ebd2f92cc9678f364926859f5ac0"
+        },
+        {
+          "file": "references/opt-static-switch-extract-02.safetensors",
+          "bytes": 11864280,
+          "sha256": "82d1668d2c3e8ab4d30e628e71976f07ba7bc6e9984f982b922a7b99d73c1241"
+        },
+        {
+          "file": "references/opt-switch-copy-01.safetensors",
+          "bytes": 10657752,
+          "sha256": "42e06233599fed9ec3cd07c2c911d7479f0cdf42a89cf15a75f58c2db7912855"
+        },
+        {
+          "file": "references/opt-switch-extract-02.safetensors",
+          "bytes": 11864280,
+          "sha256": "d8580405952b38344a58e93dfa3f61f1a8d211efdf70194a25e52e6dd7ee6857"
+        },
+        {
+          "file": "references/qwen-arithmetic-product-01.safetensors",
+          "bytes": 18840152,
+          "sha256": "6845c1dded1f2184f14dce9f0155e08e6cf52390cc710adabd42310f3cd83dd1"
+        },
+        {
+          "file": "references/qwen-arithmetic-sequence-02.safetensors",
+          "bytes": 23094360,
+          "sha256": "7166cf543f427210deaf4295eaebdab5914d9a90056df4576a8a5c7bcd08b55d"
+        },
+        {
+          "file": "references/qwen-code-fix-02.safetensors",
+          "bytes": 38895704,
+          "sha256": "782dd933d618937821177a6e19d898ed7aa956ce922c0417378b94ece813bab5"
+        },
+        {
+          "file": "references/qwen-code-output-01.safetensors",
+          "bytes": 32818264,
+          "sha256": "3636a03f7b60eca192bb62c7345b4d46afe615b533ac2d349840268cd19ff8b0"
+        },
+        {
+          "file": "references/qwen-copy-case-01.safetensors",
+          "bytes": 27956312,
+          "sha256": "13cf12c2273f116ab143155d7368a42d26304a7a9dd7cc789a5f70dd3f02d34b"
+        },
+        {
+          "file": "references/qwen-copy-delimiters-02.safetensors",
+          "bytes": 31602776,
+          "sha256": "59aa6f71e95e334f20f978524bfa9cc9e402b5365cadf8c5cec8d931a55f759e"
+        },
+        {
+          "file": "references/qwen-extract-id-01.safetensors",
+          "bytes": 34033752,
+          "sha256": "c87f9f964e96107025401c6b87cd430817667149faccb6b0eef2a337cf005a8b"
+        },
+        {
+          "file": "references/qwen-extract-min-02.safetensors",
+          "bytes": 40111192,
+          "sha256": "8499d68dabceb4de8a1d0606bcc36845bb0ad69dae2f8ffa13389f2026f213ac"
+        },
+        {
+          "file": "references/qwen-group-0.safetensors",
+          "bytes": 24736,
+          "sha256": "7f007665fc8fa68012e93712e7d52ed28db667b01a3452dfd3b51262468e81c5"
+        },
+        {
+          "file": "references/qwen-group-1.safetensors",
+          "bytes": 24736,
+          "sha256": "91171cf43fa2352f30c80cefb3dddc33162fb5aa6b7e605c0c1e660c360422f4"
+        },
+        {
+          "file": "references/qwen-group-10.safetensors",
+          "bytes": 24736,
+          "sha256": "f48889c0d5f5467c40ad43975b6c86ab2df9dd41a2dc46f7165845c7828cae37"
+        },
+        {
+          "file": "references/qwen-group-11.safetensors",
+          "bytes": 24736,
+          "sha256": "a07d073c67e1a227bb045e141d7d77de38184a5f0d5a0f5443dffd85a2c07238"
+        },
+        {
+          "file": "references/qwen-group-12.safetensors",
+          "bytes": 24736,
+          "sha256": "ba0f37e8434b4e4fdd20df6f9072cf68ce7e544730492abe29ddd520b1ea4a5d"
+        },
+        {
+          "file": "references/qwen-group-13.safetensors",
+          "bytes": 24736,
+          "sha256": "e9572b4f5c13fa7844c6ef4f4c29608a947ae837b7eb86bc0a39999bebfa5c38"
+        },
+        {
+          "file": "references/qwen-group-14.safetensors",
+          "bytes": 24736,
+          "sha256": "308db958d3ad23d4fc612b8b50bd2a85d8ad6a3d193a43e0ad0301fdb12bf082"
+        },
+        {
+          "file": "references/qwen-group-15.safetensors",
+          "bytes": 24736,
+          "sha256": "16c7cffcf76a4429122bd087344a5cffdc693446d3e0799bfe0825fe03e4e727"
+        },
+        {
+          "file": "references/qwen-group-16.safetensors",
+          "bytes": 24736,
+          "sha256": "2c2fcd450556ced19b661ebd0aed11f5a2e71b6b00976a907e38cd41c1c4eb54"
+        },
+        {
+          "file": "references/qwen-group-17.safetensors",
+          "bytes": 24736,
+          "sha256": "3bc15894a10b6cfcd95fc9b85ff2e250ee3e7c1553c9d2522d28e51033f9ab35"
+        },
+        {
+          "file": "references/qwen-group-18.safetensors",
+          "bytes": 24736,
+          "sha256": "bb8f5efee984552fd40ec91e624e0f79a54f1a237f98b5083ad523f036b35471"
+        },
+        {
+          "file": "references/qwen-group-19.safetensors",
+          "bytes": 24736,
+          "sha256": "795f7e90c1389eb9bdbbe1f399aacd278ac6aea998210c45563ed722ddfac501"
+        },
+        {
+          "file": "references/qwen-group-2.safetensors",
+          "bytes": 24736,
+          "sha256": "1274933377e381a06832cf49e55f90025dc9bdb428b11616c4ec0da7ddf81472"
+        },
+        {
+          "file": "references/qwen-group-20.safetensors",
+          "bytes": 24736,
+          "sha256": "e5dac5a23613bec368b1f99b3c4513f5d0410677d3027fe9bbdb1146174b3bff"
+        },
+        {
+          "file": "references/qwen-group-21.safetensors",
+          "bytes": 24736,
+          "sha256": "0d228a5ed95a8dcff8aca4c1f02a2bc1e316f606769ab46c5a49c46159d1fc6e"
+        },
+        {
+          "file": "references/qwen-group-22.safetensors",
+          "bytes": 24736,
+          "sha256": "27b13b057462f8992ad1c63cdd82774226b1ff6d4ea8c111b15515d3feee0332"
+        },
+        {
+          "file": "references/qwen-group-23.safetensors",
+          "bytes": 24736,
+          "sha256": "96d8e72a556a2ef35297eac52b7404fdc1dbe6b4d2ddce926bde456148ce3547"
+        },
+        {
+          "file": "references/qwen-group-24.safetensors",
+          "bytes": 24736,
+          "sha256": "abd3805c2ca3d5f1a50d07d855cd5dabb33bc1e073f49e3e988e88c3ae3702ab"
+        },
+        {
+          "file": "references/qwen-group-25.safetensors",
+          "bytes": 24736,
+          "sha256": "f0ec7f2cc156ffcb9525529c1a94cf89f175e6c94122ac06f4308c3153814116"
+        },
+        {
+          "file": "references/qwen-group-26.safetensors",
+          "bytes": 24736,
+          "sha256": "2ccda67c9409cfad8d13fb649f7565682cf78c60817a5cf84a1b994e13c5c50a"
+        },
+        {
+          "file": "references/qwen-group-27.safetensors",
+          "bytes": 24736,
+          "sha256": "4ce7224cdec3ca67aea6121dddda1cfe29d3a6087b3179145e62430bc18c924a"
+        },
+        {
+          "file": "references/qwen-group-3.safetensors",
+          "bytes": 24736,
+          "sha256": "7434fca43ad517d181daa9ceaa0d33e2c0ee7707a2ca56f4f7adae810e66317f"
+        },
+        {
+          "file": "references/qwen-group-4.safetensors",
+          "bytes": 24736,
+          "sha256": "88b91547638939b00b09faae9db200f4844f11050b47799a6d6e24b15699783e"
+        },
+        {
+          "file": "references/qwen-group-5.safetensors",
+          "bytes": 24736,
+          "sha256": "9283e59e09b71f60bb72e5d780d2dde8a5e4bc2c23c4b7e130e943b1aebf824c"
+        },
+        {
+          "file": "references/qwen-group-6.safetensors",
+          "bytes": 24736,
+          "sha256": "21af41174bf2cbdcf6c3916f45f06ad3486e000400ed3df8aeab29a0c7a53952"
+        },
+        {
+          "file": "references/qwen-group-7.safetensors",
+          "bytes": 24736,
+          "sha256": "b08ca0c4aeb665c8414753844825a28f1b106bec35af2a932de6859164676fc3"
+        },
+        {
+          "file": "references/qwen-group-8.safetensors",
+          "bytes": 24736,
+          "sha256": "e086e568f1a82136de6255744833304ec0759a80795a349da324c7e79521ebec"
+        },
+        {
+          "file": "references/qwen-group-9.safetensors",
+          "bytes": 24736,
+          "sha256": "7e2705cc49f6d31bfdd673a60fc2c32f08202b388ad2a4972b4591a7ad3d473a"
+        },
+        {
+          "file": "references/qwen-hindsight-arithmetic-product-01.safetensors",
+          "bytes": 18840152,
+          "sha256": "279efd8203e97ae8fa64c6bc8ee6fb9a0ac3c63e4777aaf544465c73355d6552"
+        },
+        {
+          "file": "references/qwen-hindsight-arithmetic-sequence-02.safetensors",
+          "bytes": 23094360,
+          "sha256": "2877fcc2319ef1728cfda6f0e61af72611b28b7d499e1e4c71d6c43455ecd712"
+        },
+        {
+          "file": "references/qwen-hindsight-code-fix-02.safetensors",
+          "bytes": 38895704,
+          "sha256": "a8e4a5af8f507d976993eac5c218d5ddf946204c200902766f01524c723f91dd"
+        },
+        {
+          "file": "references/qwen-hindsight-code-output-01.safetensors",
+          "bytes": 32818264,
+          "sha256": "dcb024bb3f5d16148335a242c7c4454f9702528b9ed50accff46683e7e40d1c3"
+        },
+        {
+          "file": "references/qwen-hindsight-copy-case-01.safetensors",
+          "bytes": 27956312,
+          "sha256": "e5708a8fdf02831bfb6bea57005614c5a8f540ead75ce93c6e6550b645b4422a"
+        },
+        {
+          "file": "references/qwen-hindsight-copy-delimiters-02.safetensors",
+          "bytes": 31602776,
+          "sha256": "60027292c66e1e1d9e866f07485347025dc087e83dc89286595f6a05cdb079f6"
+        },
+        {
+          "file": "references/qwen-hindsight-extract-id-01.safetensors",
+          "bytes": 34033752,
+          "sha256": "3797e15cc50dd96bf3281fd2ca6f473c99b86ef62ff1cae2e2b6ad42b9a60f2e"
+        },
+        {
+          "file": "references/qwen-hindsight-extract-min-02.safetensors",
+          "bytes": 40111192,
+          "sha256": "191bc2d49b06f8f719f379a1ef9aa0e718069c10b314582da9e530eafcba2366"
+        },
+        {
+          "file": "references/qwen-hindsight-switch-copy-01.safetensors",
+          "bytes": 33426008,
+          "sha256": "7b8e3e02f731faa863483e724a10c51585baeb8e6aeee98e903697e61cfb4d83"
+        },
+        {
+          "file": "references/qwen-hindsight-switch-extract-02.safetensors",
+          "bytes": 33426008,
+          "sha256": "5ebe29067485a931d0ce0de3c6a1e50264cbda7a3d3a9e9b0e542285cc65f337"
+        },
+        {
+          "file": "references/qwen-layout-arithmetic-product-01.safetensors",
+          "bytes": 18840152,
+          "sha256": "938e6df9331df194be52d5657120d6e5a2c7cd6bb5692a1e9f0aaf0ccd30b037"
+        },
+        {
+          "file": "references/qwen-layout-arithmetic-sequence-02.safetensors",
+          "bytes": 23094360,
+          "sha256": "bfa909541576931a9e523f4412c0c0f1f0bbfa786c74b11b39a98902d2d535a7"
+        },
+        {
+          "file": "references/qwen-layout-code-fix-02.safetensors",
+          "bytes": 38895704,
+          "sha256": "3b53a201ae279c2046ad88d2c6a856f421cc32d45dee2e646a103eb7e6e9662c"
+        },
+        {
+          "file": "references/qwen-layout-code-output-01.safetensors",
+          "bytes": 32818264,
+          "sha256": "8aea32347290a7ffcbf36dc228934a0a7e68a2ce4ee75f5ede005f8c8b968a9f"
+        },
+        {
+          "file": "references/qwen-layout-copy-case-01.safetensors",
+          "bytes": 27956312,
+          "sha256": "7453f4e27dc89a3979f683d447c10570fc62398390337c76727550c7366ff5d8"
+        },
+        {
+          "file": "references/qwen-layout-copy-delimiters-02.safetensors",
+          "bytes": 31602776,
+          "sha256": "444896c140813977face3b0563c0fe7c25ef40c7a7963557f7f56045e267cbc4"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.10.0/balanced-logits-part1-v0.10.0.zip"
+    },
+    {
+      "name": "balanced-logits-part2-v0.10.0.zip",
+      "bytes": 474988655,
+      "sha256": "c7a934f7d7db5e89c416e5ed97b9a3863b56f5f84edf429dbef5d4159b631202",
+      "payloads": [
+        {
+          "file": "references/qwen-layout-extract-id-01.safetensors",
+          "bytes": 34033752,
+          "sha256": "939d0192129afaf56617ca1365417a5fa52c6a5b8e7330214400daf3190423dd"
+        },
+        {
+          "file": "references/qwen-layout-extract-min-02.safetensors",
+          "bytes": 40111192,
+          "sha256": "25ed7c971ea69b96f52343cecd93d54c44ad98a8622f018f7f1003ac36c0efd8"
+        },
+        {
+          "file": "references/qwen-layout-switch-copy-01.safetensors",
+          "bytes": 33426008,
+          "sha256": "a5d1bf303ab803b9718925ab4da31a53d507d00af9aff3d31ef272c69e0bdf0b"
+        },
+        {
+          "file": "references/qwen-layout-switch-extract-02.safetensors",
+          "bytes": 33426008,
+          "sha256": "ae2563ddae0161ceac359d9633fa2e1ad9e95d7dfdfb8fbcbf93bc464f56b3ce"
+        },
+        {
+          "file": "references/qwen-static-arithmetic-product-01.safetensors",
+          "bytes": 18840152,
+          "sha256": "c509b903065cf7f7147342af1836eb976f5e8defb978bebc85c1688eb968cf55"
+        },
+        {
+          "file": "references/qwen-static-arithmetic-sequence-02.safetensors",
+          "bytes": 23094360,
+          "sha256": "c1f2b1012f8ed4d2fddf51a5eca2eb6cf97692457238619125979cc6290a93fd"
+        },
+        {
+          "file": "references/qwen-static-code-fix-02.safetensors",
+          "bytes": 38895704,
+          "sha256": "e36c94e09d40a860a668d7fdfd4420d9e3fead2855525b2719f0891b0f067faf"
+        },
+        {
+          "file": "references/qwen-static-code-output-01.safetensors",
+          "bytes": 32818264,
+          "sha256": "2642ac11d5f825b6cbdf831594d104fabe66604637c52030891e3d4696e9b579"
+        },
+        {
+          "file": "references/qwen-static-copy-case-01.safetensors",
+          "bytes": 27956312,
+          "sha256": "9db71180efb505ce7f3c71cdff44660eebcf6f810ca868127e085e6a92250f7c"
+        },
+        {
+          "file": "references/qwen-static-copy-delimiters-02.safetensors",
+          "bytes": 31602776,
+          "sha256": "8791461649c1f8a5c6663905d57bf774f05346f5c3cc1b990c7bf6348a7d0276"
+        },
+        {
+          "file": "references/qwen-static-extract-id-01.safetensors",
+          "bytes": 34033752,
+          "sha256": "bb56a3d48ccd9633c343b2433effa40c425c67639712b76f7d7b7a08f1b624f1"
+        },
+        {
+          "file": "references/qwen-static-extract-min-02.safetensors",
+          "bytes": 40111192,
+          "sha256": "d94f8a7f1676e8b292c46f40af5413e9ceb13b553b9cb70ce9963e4b09580a3b"
+        },
+        {
+          "file": "references/qwen-static-switch-copy-01.safetensors",
+          "bytes": 33426008,
+          "sha256": "161b0a5ea03a83ba2154a7e5a1805c66b40fc7206da59194ae67e4347e9e1451"
+        },
+        {
+          "file": "references/qwen-static-switch-extract-02.safetensors",
+          "bytes": 33426008,
+          "sha256": "0bfd306161a61e612899469450bfc1157b06dcaa3a3a3cf41e35b1d5f7950dff"
+        },
+        {
+          "file": "references/qwen-switch-copy-01.safetensors",
+          "bytes": 33426008,
+          "sha256": "aa328b6e1272d29e79bf4c332b213d7e5541fee7599fd94d261e947aa09d2da4"
+        },
+        {
+          "file": "references/qwen-switch-extract-02.safetensors",
+          "bytes": 33426008,
+          "sha256": "7aec97f2aba92410724dede7d8c8e910c20e8ceed7bf2f9042366dc0a85a05ef"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.10.0/balanced-logits-part2-v0.10.0.zip"
+    }
+  ],
+  "files": {
+    "analysis/balanced_analysis.py": {
+      "bytes": 15521,
+      "sha256": "a52abceea0ed590b36680752648beedd2f1505a059a6ce7c6a0b9dede755a5d1"
+    },
+    "analysis/summary.json": {
+      "bytes": 14170,
+      "sha256": "f05312a22d8bcd19e2544faf650b4416770c0f7b08e2948eb6d1ce7798db7464"
+    },
+    "README.md": {
+      "bytes": 2428,
+      "sha256": "d393e1d2ed7f235d5ce4ddda24af2a4365d22eaa28a155d1e32842f020c912ce"
+    },
+    "restore.py": {
+      "bytes": 2213,
+      "sha256": "f6eda1494f6f30499b0adc0ac2caaaba94a8162b9d007832c038882ff7957c0f"
+    },
+    "run/config.json": {
+      "bytes": 3997,
+      "sha256": "5b47e6b9a9bf8a430909b217a044156764dfa9523adc339876f577dee6d4d923"
+    },
+    "run/corpus.jsonl": {
+      "bytes": 1940,
+      "sha256": "255416eb0b6f2562b1f656b04ba88a0f5cc845849d93cb931ccf87169a084b43"
+    },
+    "run/manifest.json": {
+      "bytes": 6856,
+      "sha256": "2f9415c7fdcd552f16902d0c7ebf3b8db87838c82a25874e50af07d19b2df66e"
+    },
+    "run/opt-token-ids.json": {
+      "bytes": 16091,
+      "sha256": "148efc518030e5936ab354a3f5a69fa0866d3b7b0ae478682e4b3724955f5c17"
+    },
+    "run/protocol.md": {
+      "bytes": 6023,
+      "sha256": "79a16a71336d8ea3fbe9ec13e9e32b0130f08287c96665bb30fe7b90e7b9a653"
+    },
+    "run/qwen-token-ids.json": {
+      "bytes": 15453,
+      "sha256": "4e8d8037973829bd4a454eefbb754e1d053a5241d7ce3119960abf19d75ed64f"
+    },
+    "run/results.jsonl": {
+      "bytes": 218993,
+      "sha256": "10e2a8c7540d166eb7617d2a9094e4b03e985ae31e565aa8106bf9a5880405e7"
+    },
+    "run/source/__init__.py": {
+      "bytes": 73,
+      "sha256": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738"
+    },
+    "run/source/adapters.py": {
+      "bytes": 1295,
+      "sha256": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc"
+    },
+    "run/source/analysis.py": {
+      "bytes": 4537,
+      "sha256": "ba578312bb18e3af8104fd50f6bcf30a02d887fcf6224b4bb56434f5fb1fb086"
+    },
+    "run/source/balanced_analysis.py": {
+      "bytes": 15521,
+      "sha256": "a52abceea0ed590b36680752648beedd2f1505a059a6ce7c6a0b9dede755a5d1"
+    },
+    "run/source/balanced_control.py": {
+      "bytes": 18612,
+      "sha256": "dea4a415b426c2bb8fc2a2c4adebab155f1982e60c5a11612fa747856747e965"
+    },
+    "run/source/cache.py": {
+      "bytes": 7027,
+      "sha256": "b8de5501e47e2b357f46309306b9277ccd4be953e239c19c9ad5b4b363221298"
+    },
+    "run/source/cache_analysis.py": {
+      "bytes": 12104,
+      "sha256": "bdbb3b28320319c2a89bcf4b513cfc32ef5795450f38f7558f19d7da137c6f57"
+    },
+    "run/source/cache_plot.py": {
+      "bytes": 3173,
+      "sha256": "dde8ac19e88b4de730d8c76efc0b4268d61135e12b47c540ef05e8baa9023a74"
+    },
+    "run/source/causal.py": {
+      "bytes": 7973,
+      "sha256": "fd2c7e00a53bef988574122c9ac31a31d6b56ec043cbb87d59741052b76c943a"
+    },
+    "run/source/causal_analysis.py": {
+      "bytes": 16877,
+      "sha256": "ead048becec0229e0e16a80141f2db9e634d8a5198b08ff04a1b4d40681264c9"
+    },
+    "run/source/causal_plot.py": {
+      "bytes": 4705,
+      "sha256": "18de19d95a2c35b33951e9fb76f318ed461782e873181babee088f0f295a03c9"
+    },
+    "run/source/causal_study.py": {
+      "bytes": 20353,
+      "sha256": "32bdea4f0c726db198c97063b1b6a88a2d000c0866c766ef808cfe74ce3c0b12"
+    },
+    "run/source/corpus.py": {
+      "bytes": 5245,
+      "sha256": "127735e3b9f13c040fc4fa99b5c38b4bb1d2f9c39205e38650211d3acc7d4567"
+    },
+    "run/source/environment_analysis.py": {
+      "bytes": 9147,
+      "sha256": "66a45022834e01fe5ba0995cad7782aecba9db6dce54533d968e3e99f4e1a94e"
+    },
+    "run/source/experiment.py": {
+      "bytes": 25825,
+      "sha256": "5fc3881995fb2318f954167971c3c4790b2b7c78470d02272f2dfa62cfcefe84"
+    },
+    "run/source/ffn.py": {
+      "bytes": 6451,
+      "sha256": "4bc70ad070e0a68d5d7da7b34b5832d9a65a2a7f21d426ade988a63363e4da43"
+    },
+    "run/source/layer_plot.py": {
+      "bytes": 5258,
+      "sha256": "eb9221c88e808700df2898aa69ea1f47f24220d93fba517d2ce4b4323220b651"
+    },
+    "run/source/layer_study.py": {
+      "bytes": 16906,
+      "sha256": "cb5d76f0f9645d0c97b194f0cc2c87c9a7156eeedf638ec91e033652bfc5eef6"
+    },
+    "run/source/metrics.py": {
+      "bytes": 3471,
+      "sha256": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53"
+    },
+    "run/source/packing.py": {
+      "bytes": 3910,
+      "sha256": "b13c919d54ebc7e97669ee454a37b09732b3faa5cb78f697ee6a3a9f6297fe46"
+    },
+    "run/source/precision.py": {
+      "bytes": 11271,
+      "sha256": "7ecd06ede79e646a50e116e72a143af3a7e7e14e578c80f85ee28e8462926b45"
+    },
+    "run/source/provenance.py": {
+      "bytes": 3666,
+      "sha256": "7a49031df1c6caa87c8c7cebba1d2005e62e77cedf78eb39b00e30c8b1ea8082"
+    },
+    "run/source/relu.py": {
+      "bytes": 7151,
+      "sha256": "d0afe4f3c8cccbb496e5ccdfd6793f4ca79c1493bfdcaab31b756121d7add125"
+    },
+    "run/source/relu_analysis.py": {
+      "bytes": 15583,
+      "sha256": "69bcc87724c9faff444764d9f807a7ead527f691ab7448580d7d8e55a3a5c8cf"
+    },
+    "run/source/relu_study.py": {
+      "bytes": 12733,
+      "sha256": "8b6efdcf1686bef37790e8d69559983b447f63489e804ac88a7684bc119d0a1a"
+    },
+    "run/source/repair.py": {
+      "bytes": 7119,
+      "sha256": "112074a192678c3f6748b57af416458abdab126470126a2f6069204b4546e24a"
+    },
+    "run/source/repair_analysis.py": {
+      "bytes": 13899,
+      "sha256": "24c396b0d4502941be8deb06ceb49b0986186fb05292147c4548e3611eb9c839"
+    },
+    "run/source/repair_study.py": {
+      "bytes": 19153,
+      "sha256": "a56f9692d5a58e928093c5eabcdbc727a90a8ac4c4c5dce67c348ba7bc2b6b21"
+    },
+    "run/source/trace.py": {
+      "bytes": 3533,
+      "sha256": "02845555dec8869447dd32e3af63fd466b5cc792e3173d75416d4e1652490fda"
+    },
+    "run/summary.json": {
+      "bytes": 4067,
+      "sha256": "f7519406c4f56e6d01429ca81133d7254a236b41c369d865496cd5fc65614d55"
+    },
+    "run/traces/opt-hindsight-arithmetic-product-01-generated.npz": {
+      "bytes": 15039,
+      "sha256": "defbafef0333e2bd19928949b52b69e7d0ef8b1bb33a1f2fbf47e15e80bb234c"
+    },
+    "run/traces/opt-hindsight-arithmetic-product-01-teacher.npz": {
+      "bytes": 8126,
+      "sha256": "786f5d373a748877c6f45f3f4eb94f5d65b38cc268b237b7ee7afadae7172587"
+    },
+    "run/traces/opt-hindsight-arithmetic-sequence-02-generated.npz": {
+      "bytes": 14690,
+      "sha256": "e34e5c1589f1bacd8342a462e16b638255bcc08e7e7a51acc024b2e54ec381b1"
+    },
+    "run/traces/opt-hindsight-arithmetic-sequence-02-teacher.npz": {
+      "bytes": 8736,
+      "sha256": "a68dc2b9983d8cb46d647ead5cb9699a883d9191420bcc6fb1bdd2fdfadfd946"
+    },
+    "run/traces/opt-hindsight-code-fix-02-generated.npz": {
+      "bytes": 23614,
+      "sha256": "03d0f8961e02c06d6fcb3ac8ea4c6f7528c026bb2973ff0ce654a56f716056cc"
+    },
+    "run/traces/opt-hindsight-code-fix-02-teacher.npz": {
+      "bytes": 17604,
+      "sha256": "838ac3d5b83058bc592733997a5ebf3ce1302cd3b732c79151ca3c4a17461388"
+    },
+    "run/traces/opt-hindsight-code-output-01-generated.npz": {
+      "bytes": 19976,
+      "sha256": "2e36cf848da0818a72311bed7286cfab8bc39f5cd3ad4bc2aec29fc3801a940b"
+    },
+    "run/traces/opt-hindsight-code-output-01-teacher.npz": {
+      "bytes": 13618,
+      "sha256": "5d2a7f5340464eae597eb257e569aad1989ad0146953b44ed826d2083aca8391"
+    },
+    "run/traces/opt-hindsight-copy-case-01-generated.npz": {
+      "bytes": 16160,
+      "sha256": "fdd5e5b01d2357026c29182e25948675f28110668abbd87923b3e2a00f9197c7"
+    },
+    "run/traces/opt-hindsight-copy-case-01-teacher.npz": {
+      "bytes": 11637,
+      "sha256": "0653645e11cf1694ae8bdca375344df655a4cf488c3bd49308f5b1efff7d85b6"
+    },
+    "run/traces/opt-hindsight-copy-delimiters-02-generated.npz": {
+      "bytes": 18477,
+      "sha256": "f5a3ddd971ffa4ade6983ddd1536eab242fd6ecf0981c44c8c4fd31a941a50d5"
+    },
+    "run/traces/opt-hindsight-copy-delimiters-02-teacher.npz": {
+      "bytes": 13983,
+      "sha256": "03b1f36d1c72b251933ad363d0fd068856fb901216d3f5a9f0e23eac7e0084a4"
+    },
+    "run/traces/opt-hindsight-extract-id-01-generated.npz": {
+      "bytes": 21022,
+      "sha256": "310d88b3fc99eafe5e8640562689afa26ba908d3a512e73aca15e0baa20337d4"
+    },
+    "run/traces/opt-hindsight-extract-id-01-teacher.npz": {
+      "bytes": 15473,
+      "sha256": "4bcc69674fe3d4180f5ead33ea3b4cee6a2fd24b44c20c53102a12db314889db"
+    },
+    "run/traces/opt-hindsight-extract-min-02-generated.npz": {
+      "bytes": 23210,
+      "sha256": "075d60951c91116880696e3cee670c44cf4ffdf3d47a0bc55918df9d6f5e0616"
+    },
+    "run/traces/opt-hindsight-extract-min-02-teacher.npz": {
+      "bytes": 17438,
+      "sha256": "25254c544ac340881d1b830b8270cd1d79dfb7c2047122932b7512bb21d7075e"
+    },
+    "run/traces/opt-hindsight-switch-copy-01-generated.npz": {
+      "bytes": 19079,
+      "sha256": "eb15397e6e8448dce7bd49444d505b99ed47fd9cb11f8d3457fd89a65f342996"
+    },
+    "run/traces/opt-hindsight-switch-copy-01-teacher.npz": {
+      "bytes": 13852,
+      "sha256": "91379423dd163c019292915d01000ecc6f5313de2d521823705122d355f435e5"
+    },
+    "run/traces/opt-hindsight-switch-extract-02-generated.npz": {
+      "bytes": 21784,
+      "sha256": "c5bc7f2d3471dab66501196122a7469ca625e39e98c22973f289cc2176fbc337"
+    },
+    "run/traces/opt-hindsight-switch-extract-02-teacher.npz": {
+      "bytes": 15683,
+      "sha256": "e0caa48f110e70e94af8671a32dc66a3574ea656e03c0298de515e54836ea1a2"
+    },
+    "run/traces/opt-static-arithmetic-product-01-generated.npz": {
+      "bytes": 1056,
+      "sha256": "03f2021b41584ef32f455fea5542edc45bbe23059ef7132121aba658ee045862"
+    },
+    "run/traces/opt-static-arithmetic-product-01-teacher.npz": {
+      "bytes": 742,
+      "sha256": "252388fda46c8da1822e79f0ab953153d188c3857bc539e7a062820da805b30f"
+    },
+    "run/traces/opt-static-arithmetic-sequence-02-generated.npz": {
+      "bytes": 1087,
+      "sha256": "fc454cf7f8c2ad2ff02ca81fcd5fa6e5ee7d405ddf9c3b54dc2659c02358a6b9"
+    },
+    "run/traces/opt-static-arithmetic-sequence-02-teacher.npz": {
+      "bytes": 773,
+      "sha256": "a66e1902c92a38a11f8460e166d28f91e5777511ae474318839953a748af6787"
+    },
+    "run/traces/opt-static-code-fix-02-generated.npz": {
+      "bytes": 1505,
+      "sha256": "2c97357f53d6a5c898d852a29b33921e44ba83318bba1db8f1b3bbfc40bb8b6f"
+    },
+    "run/traces/opt-static-code-fix-02-teacher.npz": {
+      "bytes": 1190,
+      "sha256": "625f5aa71fa2965e1cfb80d24fa824d201b6f9be7eda5f29658bbf55cc00b1c6"
+    },
+    "run/traces/opt-static-code-output-01-generated.npz": {
+      "bytes": 1316,
+      "sha256": "7a555beb4d552c6e40393b07d7e811000625b8ce5f765cf89189f26d9ae5a93a"
+    },
+    "run/traces/opt-static-code-output-01-teacher.npz": {
+      "bytes": 1003,
+      "sha256": "66576ca6f5568d1f672423065e0ec2249fdfa2896abf9070cd9c5ddba929e58c"
+    },
+    "run/traces/opt-static-copy-case-01-generated.npz": {
+      "bytes": 1160,
+      "sha256": "24c9b800ca6ae38ab4d6eda5ee4f4e640c235f74b6633bb8ae07d7399bc3c624"
+    },
+    "run/traces/opt-static-copy-case-01-teacher.npz": {
+      "bytes": 930,
+      "sha256": "3f7e2529681d87995d93ab66d5f72b9ec39c9f78935d8f2aac6118caa67eb772"
+    },
+    "run/traces/opt-static-copy-delimiters-02-generated.npz": {
+      "bytes": 1264,
+      "sha256": "5f87fae930f88c15b92a76dde9dc918c5eeade8a59b1892fa6bb47bc3dfc650d"
+    },
+    "run/traces/opt-static-copy-delimiters-02-teacher.npz": {
+      "bytes": 1024,
+      "sha256": "ac3d3c1242e588681749a0351a17d5faee1d68e11fc1a92d354c4ae929d3f155"
+    },
+    "run/traces/opt-static-extract-id-01-generated.npz": {
+      "bytes": 1347,
+      "sha256": "f8da4b1a3c414ecffdcbab9a27b33e6bd62b07412e09015df84e948bbf4615cb"
+    },
+    "run/traces/opt-static-extract-id-01-teacher.npz": {
+      "bytes": 1065,
+      "sha256": "952a081dd79b69b42cf198ca556b51279bbe7071a9ffe8fdc68aea0e2960b03a"
+    },
+    "run/traces/opt-static-extract-min-02-generated.npz": {
+      "bytes": 1505,
+      "sha256": "2c97357f53d6a5c898d852a29b33921e44ba83318bba1db8f1b3bbfc40bb8b6f"
+    },
+    "run/traces/opt-static-extract-min-02-teacher.npz": {
+      "bytes": 1202,
+      "sha256": "428ae593d754ee8a6f6cebae8d102c200e4dcf884b83fa5a845ff68c0c460198"
+    },
+    "run/traces/opt-static-switch-copy-01-generated.npz": {
+      "bytes": 1264,
+      "sha256": "5f87fae930f88c15b92a76dde9dc918c5eeade8a59b1892fa6bb47bc3dfc650d"
+    },
+    "run/traces/opt-static-switch-copy-01-teacher.npz": {
+      "bytes": 993,
+      "sha256": "a2293b7fbf21d9803d32b633f759d6fbaf13911a1c98d464210e5e8227348e8f"
+    },
+    "run/traces/opt-static-switch-extract-02-generated.npz": {
+      "bytes": 1357,
+      "sha256": "20b99455caf7fe2f99dbf3153e8a38bc79cf52303c114a9f2bacf181a97850c6"
+    },
+    "run/traces/opt-static-switch-extract-02-teacher.npz": {
+      "bytes": 1056,
+      "sha256": "03f2021b41584ef32f455fea5542edc45bbe23059ef7132121aba658ee045862"
+    },
+    "run/traces/qwen-hindsight-arithmetic-product-01-generated.npz": {
+      "bytes": 124138,
+      "sha256": "83b186d4fa96580588294b9af3bc614d8cd0be99f60e9be2dd8fbf91a17815e0"
+    },
+    "run/traces/qwen-hindsight-arithmetic-product-01-teacher.npz": {
+      "bytes": 65625,
+      "sha256": "b3bbe7a04c96d6fef86f9b8e157bca2cf9fb6bfea577658ab38b130e2944744c"
+    },
+    "run/traces/qwen-hindsight-arithmetic-sequence-02-generated.npz": {
+      "bytes": 138731,
+      "sha256": "162c2d76cb7c3ec42cc0203d49b0542c74730f6bb7f603c7b6c903d40efc18b5"
+    },
+    "run/traces/qwen-hindsight-arithmetic-sequence-02-teacher.npz": {
+      "bytes": 80163,
+      "sha256": "f8b46e6f9eec78e735a1c017fa1f9f7e14b34c61cdfebf9a18112889c2dd833d"
+    },
+    "run/traces/qwen-hindsight-code-fix-02-generated.npz": {
+      "bytes": 197712,
+      "sha256": "d72b339fc03aabeacb8e26687676fbea25bdabcf84f250d07dc3a06a4cbf3351"
+    },
+    "run/traces/qwen-hindsight-code-fix-02-teacher.npz": {
+      "bytes": 134894,
+      "sha256": "1557f18d1ca902422800153f56812649edc555e5843ebde1877504d0463d17b9"
+    },
+    "run/traces/qwen-hindsight-code-output-01-generated.npz": {
+      "bytes": 174909,
+      "sha256": "3846179e82fa9af0db3821ff504efd5c966215def1ae17a8fe9348340744f987"
+    },
+    "run/traces/qwen-hindsight-code-output-01-teacher.npz": {
+      "bytes": 114219,
+      "sha256": "73351c678c6cbd23cb9ed75dcc02642dcab5c59bc1a1fde205716021a9fab775"
+    },
+    "run/traces/qwen-hindsight-copy-case-01-generated.npz": {
+      "bytes": 140997,
+      "sha256": "ff00badc720802c1c9cd786720c9ef70c688204d5aed479c7acca6ec200d3ffa"
+    },
+    "run/traces/qwen-hindsight-copy-case-01-teacher.npz": {
+      "bytes": 97112,
+      "sha256": "46c4e5a72a784bb74094f9eebdc5420ce2f94ecb58241000a5e1204f2ae8cfd1"
+    },
+    "run/traces/qwen-hindsight-copy-delimiters-02-generated.npz": {
+      "bytes": 158106,
+      "sha256": "d182ba1afb68b46b7a6377a24bc855e98091bdb3642bf4eef3cf1e7c985048ef"
+    },
+    "run/traces/qwen-hindsight-copy-delimiters-02-teacher.npz": {
+      "bytes": 109896,
+      "sha256": "b09426089cf87a38333034531682f7c3033f7f48afbf7930d1df45ef59fc9161"
+    },
+    "run/traces/qwen-hindsight-extract-id-01-generated.npz": {
+      "bytes": 172875,
+      "sha256": "e9615ce66775394eb817def206779f7d21fec79fa30a15bdd2a0e6140a3cea0c"
+    },
+    "run/traces/qwen-hindsight-extract-id-01-teacher.npz": {
+      "bytes": 118177,
+      "sha256": "8185d808d51aab48cb6b14837172dbac955b05c8a88acf7b91da5768daf3fc9f"
+    },
+    "run/traces/qwen-hindsight-extract-min-02-generated.npz": {
+      "bytes": 199965,
+      "sha256": "c9e5693a048aee7775a9738e4fdf82f6f41ca886532c5d13c1cb6a999c2bd047"
+    },
+    "run/traces/qwen-hindsight-extract-min-02-teacher.npz": {
+      "bytes": 139259,
+      "sha256": "15982f9062adad6a838d6ba60ef40f8e6f435db0b43d57db11927b6834830acd"
+    },
+    "run/traces/qwen-hindsight-switch-copy-01-generated.npz": {
+      "bytes": 167715,
+      "sha256": "911e0067e7e8ec486fd1e1a67832748567259ce97e65b980e79d244982408484"
+    },
+    "run/traces/qwen-hindsight-switch-copy-01-teacher.npz": {
+      "bytes": 115682,
+      "sha256": "66e293f32f35651f21188cfd37b72cb8c8725dc7cee0a459cdae0add8db0c4e7"
+    },
+    "run/traces/qwen-hindsight-switch-extract-02-generated.npz": {
+      "bytes": 176602,
+      "sha256": "a025738c45631634c625656671c1cd2c34ba10bee510b66d067ce4609f234462"
+    },
+    "run/traces/qwen-hindsight-switch-extract-02-teacher.npz": {
+      "bytes": 115846,
+      "sha256": "71896ce6bfc5e2ac77ed700247eb259ecfa202f43060b32b9b3410451cbdbf81"
+    },
+    "run/traces/qwen-static-arithmetic-product-01-generated.npz": {
+      "bytes": 1337,
+      "sha256": "c10ea4272ffc1af7dc29ea27cfa0ee54a59f708f59c787597474b4d4db3a0b36"
+    },
+    "run/traces/qwen-static-arithmetic-product-01-teacher.npz": {
+      "bytes": 909,
+      "sha256": "ff196523ebc00f63047af2b983db4f20297737cd7099f18c19ebffbd3e53e57e"
+    },
+    "run/traces/qwen-static-arithmetic-sequence-02-generated.npz": {
+      "bytes": 1444,
+      "sha256": "ec2ffe5f18411e4f76b0481cea6d06fd37a075a7363881f071393786f373c5c8"
+    },
+    "run/traces/qwen-static-arithmetic-sequence-02-teacher.npz": {
+      "bytes": 1017,
+      "sha256": "996c75e8dee0c4c22a7d3e37881cfc1289fda811e0e9330ca5f36ca939864721"
+    },
+    "run/traces/qwen-static-code-fix-02-generated.npz": {
+      "bytes": 1869,
+      "sha256": "04a83682524e0b94f54f13da77f44010ec94f6e381b3aec156b7f4119af12956"
+    },
+    "run/traces/qwen-static-code-fix-02-teacher.npz": {
+      "bytes": 1413,
+      "sha256": "ec72c746d9199b241e8749d2a0af3ce75027ec43e777d84f13267827b4453939"
+    },
+    "run/traces/qwen-static-code-output-01-generated.npz": {
+      "bytes": 1702,
+      "sha256": "ea3ef38810714fec57590352bf1db1ae2c7c47ee92a8b5ae536d63312902b40b"
+    },
+    "run/traces/qwen-static-code-output-01-teacher.npz": {
+      "bytes": 1259,
+      "sha256": "cff557e0fa5462cfad2514f53c1eaaf698446831b5783700474df7c151024838"
+    },
+    "run/traces/qwen-static-copy-case-01-generated.npz": {
+      "bytes": 1458,
+      "sha256": "b276596ab2ce3c032d04764bc80db02c4c93e1e2862126c73d7be6c9a3f5148a"
+    },
+    "run/traces/qwen-static-copy-case-01-teacher.npz": {
+      "bytes": 1138,
+      "sha256": "ea51e5e37b1740f7bdb22ecb262f4f7f2391f6350daabfdf39c6b3f4a111c474"
+    },
+    "run/traces/qwen-static-copy-delimiters-02-generated.npz": {
+      "bytes": 1580,
+      "sha256": "f123e7929fe995ad1b209cde8095a5442b2d2abee6de7611777127a4b3d46912"
+    },
+    "run/traces/qwen-static-copy-delimiters-02-teacher.npz": {
+      "bytes": 1229,
+      "sha256": "93068532651d83abcc7f5d4a3ebd6f89b0f83b7e6e43b1e821cf452d384eb8c6"
+    },
+    "run/traces/qwen-static-extract-id-01-generated.npz": {
+      "bytes": 1687,
+      "sha256": "a516c1b0dbf98a20fb12c994c3be0c248ace88769252ac9e982f0de8059a2da0"
+    },
+    "run/traces/qwen-static-extract-id-01-teacher.npz": {
+      "bytes": 1290,
+      "sha256": "138b4fc6c3530e3d299ff1405933fbaef41fc7c9ea497003997f90d636bb907a"
+    },
+    "run/traces/qwen-static-extract-min-02-generated.npz": {
+      "bytes": 1884,
+      "sha256": "eb0556304090abaa6cbe7b19ffc2833ec17367b82dd01f0fde8b6ea640f2f4e4"
+    },
+    "run/traces/qwen-static-extract-min-02-teacher.npz": {
+      "bytes": 1444,
+      "sha256": "ec2ffe5f18411e4f76b0481cea6d06fd37a075a7363881f071393786f373c5c8"
+    },
+    "run/traces/qwen-static-switch-copy-01-generated.npz": {
+      "bytes": 1656,
+      "sha256": "fc0ff47d755331ea82276c12c758d622f0bab8486816b26da466f739818f9935"
+    },
+    "run/traces/qwen-static-switch-copy-01-teacher.npz": {
+      "bytes": 1275,
+      "sha256": "d13464079360a817921a604d36b9067e569b44cb4b7eb618cc710990e8686396"
+    },
+    "run/traces/qwen-static-switch-extract-02-generated.npz": {
+      "bytes": 1717,
+      "sha256": "b6bd1f4bfd94bff1a33f43b577171c2be482ad441eebfba2fa78fc5e2275a70e"
+    },
+    "run/traces/qwen-static-switch-extract-02-teacher.npz": {
+      "bytes": 1275,
+      "sha256": "d13464079360a817921a604d36b9067e569b44cb4b7eb618cc710990e8686396"
+    },
+    "run-console.log": {
+      "bytes": 1366,
+      "sha256": "ede4908d669155b335350d8d86406e7f72d1e5ae8cf1e08fdc5b6ad51d1c861e"
+    },
+    "validation.json": {
+      "bytes": 741,
+      "sha256": "8177aa063a625c89e94e5ab173445f9a0cb40a98c59d7af5ea35a1ae5c484117"
+    }
+  }
+}

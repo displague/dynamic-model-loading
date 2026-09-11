@@ -1,0 +1,22 @@
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<03:03,  1.83it/s]
+Loading weights:  44%|████▍     | 148/338 [00:00<00:00, 303.97it/s]
+Loading weights:  69%|██████▊   | 232/338 [00:00<00:00, 285.79it/s]
+Loading weights:  86%|████████▌ | 290/338 [00:01<00:00, 297.17it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 296.15it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 258.72it/s]
+Completed balanced control qwen static
+Completed balanced control qwen hindsight
+
+Loading weights:   0%|          | 0/389 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/389 [00:00<01:58,  3.28it/s]
+Loading weights:  26%|██▋       | 103/389 [00:00<00:00, 298.45it/s]
+Loading weights:  43%|████▎     | 167/389 [00:00<00:00, 384.02it/s]
+Loading weights:  59%|█████▉    | 231/389 [00:00<00:00, 431.50it/s]
+Loading weights:  76%|███████▌  | 295/389 [00:00<00:00, 463.95it/s]
+Loading weights:  89%|████████▉ | 348/389 [00:00<00:00, 474.16it/s]
+Loading weights: 100%|██████████| 389/389 [00:00<00:00, 417.65it/s]
+Completed balanced control opt static
+Completed balanced control opt hindsight
+balanced_control_finished

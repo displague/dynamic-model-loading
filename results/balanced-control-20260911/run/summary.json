@@ -1,0 +1,119 @@
+{
+  "status": "balanced_control_finished",
+  "models": [
+    {
+      "model": "qwen",
+      "status": "completed",
+      "aggregates": [
+        {
+          "model": "qwen",
+          "mode": "static",
+          "tasks": 10,
+          "exact_targets": 0,
+          "dense_exact_targets": 0,
+          "answer_metrics": {
+            "mean_kl_dense_to_candidate": 0.46737770670462,
+            "top1_agreement": 0.8095238095238095,
+            "dense_nll": 3.5801758832538617,
+            "candidate_nll": 4.228880559594818,
+            "predicted_tokens": 42,
+            "relative_perplexity": 1.9130611899724759
+          },
+          "full_metrics": {
+            "mean_kl_dense_to_candidate": 0.42368803350510204,
+            "top1_agreement": 0.7652859960552268,
+            "dense_nll": 3.471278464598467,
+            "candidate_nll": 3.8323928223550023,
+            "predicted_tokens": 507,
+            "relative_perplexity": 1.4349275465911588
+          },
+          "selected_ffn_fraction": 0.9
+        },
+        {
+          "model": "qwen",
+          "mode": "hindsight",
+          "tasks": 10,
+          "exact_targets": 0,
+          "dense_exact_targets": 0,
+          "answer_metrics": {
+            "mean_kl_dense_to_candidate": 0.06095243750081771,
+            "top1_agreement": 1.0,
+            "dense_nll": 3.5801758832538617,
+            "candidate_nll": 3.599974092626737,
+            "predicted_tokens": 42,
+            "relative_perplexity": 1.0199954937281837
+          },
+          "full_metrics": {
+            "mean_kl_dense_to_candidate": 0.04049336362719774,
+            "top1_agreement": 0.9211045364891519,
+            "dense_nll": 3.471278464598467,
+            "candidate_nll": 3.502290987488854,
+            "predicted_tokens": 507,
+            "relative_perplexity": 1.0314984211473042
+          },
+          "selected_ffn_fraction": 0.9
+        }
+      ],
+      "dense_exact_targets": 0,
+      "tasks": 10
+    },
+    {
+      "model": "opt",
+      "status": "completed",
+      "aggregates": [
+        {
+          "model": "opt",
+          "mode": "static",
+          "tasks": 10,
+          "exact_targets": 1,
+          "dense_exact_targets": 0,
+          "answer_metrics": {
+            "mean_kl_dense_to_candidate": 0.16817973597961314,
+            "top1_agreement": 0.9117647058823529,
+            "dense_nll": 2.9472044143031404,
+            "candidate_nll": 2.9874416324310005,
+            "predicted_tokens": 34,
+            "relative_perplexity": 1.0410577026624954
+          },
+          "full_metrics": {
+            "mean_kl_dense_to_candidate": 0.5259301740239192,
+            "top1_agreement": 0.6876190476190476,
+            "dense_nll": 3.5750255330682625,
+            "candidate_nll": 4.092248000550712,
+            "predicted_tokens": 525,
+            "relative_perplexity": 1.6773622453618995
+          },
+          "selected_ffn_fraction": 0.9003967028189639
+        },
+        {
+          "model": "opt",
+          "mode": "hindsight",
+          "tasks": 10,
+          "exact_targets": 0,
+          "dense_exact_targets": 0,
+          "answer_metrics": {
+            "mean_kl_dense_to_candidate": 4.767147555138335e-08,
+            "top1_agreement": 1.0,
+            "dense_nll": 2.9472044143031404,
+            "candidate_nll": 2.947203516782097,
+            "predicted_tokens": 34,
+            "relative_perplexity": 0.9999991024793595
+          },
+          "full_metrics": {
+            "mean_kl_dense_to_candidate": 6.392341186596738e-08,
+            "top1_agreement": 1.0,
+            "dense_nll": 3.5750255330682625,
+            "candidate_nll": 3.5750255099710193,
+            "predicted_tokens": 525,
+            "relative_perplexity": 0.999999976902757
+          },
+          "selected_ffn_fraction": 0.9003967028189639
+        }
+      ],
+      "dense_exact_targets": 0,
+      "tasks": 10
+    }
+  ],
+  "runtime_nomination": null,
+  "finished_utc": "2026-09-11T21:34:09.396620+00:00"
+}

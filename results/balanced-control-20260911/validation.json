@@ -1,0 +1,17 @@
+{
+  "status": "validated",
+  "raw_rows": 138,
+  "raw_sha256": "10e2a8c7540d166eb7617d2a9094e4b03e985ae31e565aa8106bf9a5880405e7",
+  "analysis_sha256": "f05312a22d8bcd19e2544faf650b4416770c0f7b08e2948eb6d1ce7798db7464",
+  "restored_analysis_sha256": "f05312a22d8bcd19e2544faf650b4416770c0f7b08e2948eb6d1ce7798db7464",
+  "restored_analysis_equal": true,
+  "restored_tensor_payloads": 132,
+  "mask_traces": 80,
+  "numerical_controls_passed": 72,
+  "premeasurement_tests": {
+    "torch_2.10.0_cu130": 171,
+    "torch_2.12.0_cu130": 171
+  },
+  "runtime_nomination": null,
+  "scope": "All recorded logits, generations, masks, corpus/provenance and complete metrics; no pretrained rescoring, physical transfer or runtime claim."
+}

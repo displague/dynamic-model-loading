@@ -1,0 +1,12 @@
+{
+  "status": "validated",
+  "raw_rows": 569,
+  "independent_archived_analysis_equal": true,
+  "raw_sha256": "af2e1a96c31491e7e6958bbd63b11114ac3cf8147acc104c8b399b3fbcd71e79",
+  "analysis_sha256": "5a957f0df23c14d536bf60aceab205fd6976cba5b8625be3a87d9fbab58922a0",
+  "premeasurement_tests": {
+    "torch_2.10.0_cu130": 158,
+    "torch_2.12.0_cu130": 158
+  },
+  "runtime_claim": false
+}

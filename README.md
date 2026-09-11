@@ -13,7 +13,23 @@ See the [research stages and delivery history](docs/plan.md),
 [GitHub milestones](https://github.com/displague/dynamic-model-loading/milestones)
 for the original plan, completed experiments, and remaining gates.
 
-**Current result:** all four initial causal selectors fail the frozen development
+**Current result:** the [fixed-mask repair diagnostic](docs/refinement-feasibility-results.md)
+finds five privileged repair settings that meet the aggregate quality/traffic lines
+on two reused article prefixes. One also passes the quality line on both individual
+prefixes; none of the 20 larger one-shot settings passes both aggregate lines. This
+supports testing causal correction, with no runtime nominee or achieved memory gain.
+
+The [hardware-cost characterization](docs/hardware-cost-results.md) separates transfer,
+staging, gathering and resident computation. At a full-layer payload, its serialized
+acquisition/packing/FFN path costs 15.924 ms wall time versus 0.566 ms for resident FFN
+execution; these synthetic primitives do not establish end-to-end speed.
+
+The [balanced development control](docs/balanced-development-results.md) records ten
+fixed code, extraction, arithmetic, copying and topic-change tasks on Qwen and OPT,
+with their dense baselines, exact target scores and every generated continuation.
+This small control does not establish held-out agent quality or persistent state.
+
+All four initial causal selectors fail the frozen development
 quality screen at the nominated popularity/width-8/90% condition. Relative PPL ranges
 from 1.089204 to 1.158203 against the 1.01 limit. All meet the simulated traffic
 screen, but recency, EMA and the learned selector also exceed the cost screen.
