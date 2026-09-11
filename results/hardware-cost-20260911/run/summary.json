@@ -1,0 +1,419 @@
+{
+  "status": "hardware_characterization_completed",
+  "aggregates": [
+    {
+      "groups": 1,
+      "workload": "pinned_aggregate",
+      "payload_bytes": 147456,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.011055999901145697,
+        "wall_ms": 0.10549998842179775
+      },
+      "gpu_peak_allocated_bytes": 301056
+    },
+    {
+      "groups": 1,
+      "workload": "pageable_staged",
+      "payload_bytes": 147456,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.013376000337302685,
+        "wall_ms": 0.12250000145286322
+      },
+      "gpu_peak_allocated_bytes": 301056
+    },
+    {
+      "groups": 1,
+      "workload": "gather_staged",
+      "payload_bytes": 147456,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.017632000613957644,
+        "wall_ms": 0.12589999823831022
+      },
+      "gpu_peak_allocated_bytes": 301056
+    },
+    {
+      "groups": 1,
+      "workload": "pinned_individual",
+      "payload_bytes": 147456,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.011152000166475773,
+        "wall_ms": 0.12105000496376306
+      },
+      "gpu_peak_allocated_bytes": 301056
+    },
+    {
+      "groups": 1,
+      "workload": "resident_ffn",
+      "payload_bytes": 147456,
+      "transfers": false,
+      "medians": {
+        "cuda_ms": 0.0319839995354414,
+        "wall_ms": 0.2723500074353069
+      },
+      "gpu_peak_allocated_bytes": 8833536
+    },
+    {
+      "groups": 1,
+      "workload": "gather_transfer_pack_ffn",
+      "payload_bytes": 147456,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.15726400166749954,
+        "wall_ms": 0.3688999859150499
+      },
+      "gpu_peak_allocated_bytes": 8833536
+    },
+    {
+      "groups": 8,
+      "workload": "pinned_aggregate",
+      "payload_bytes": 1179648,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.04715200141072273,
+        "wall_ms": 0.13395000132732093
+      },
+      "gpu_peak_allocated_bytes": 10885120
+    },
+    {
+      "groups": 8,
+      "workload": "pageable_staged",
+      "payload_bytes": 1179648,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.05726400017738342,
+        "wall_ms": 0.15419999544974416
+      },
+      "gpu_peak_allocated_bytes": 10885120
+    },
+    {
+      "groups": 8,
+      "workload": "gather_staged",
+      "payload_bytes": 1179648,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.08201600052416325,
+        "wall_ms": 0.1804999919841066
+      },
+      "gpu_peak_allocated_bytes": 10885120
+    },
+    {
+      "groups": 8,
+      "workload": "pinned_individual",
+      "payload_bytes": 1179648,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.07011200115084648,
+        "wall_ms": 0.21199998445808887
+      },
+      "gpu_peak_allocated_bytes": 10885120
+    },
+    {
+      "groups": 8,
+      "workload": "resident_ffn",
+      "payload_bytes": 1179648,
+      "transfers": false,
+      "medians": {
+        "cuda_ms": 0.02356800064444542,
+        "wall_ms": 0.2613500109873712
+      },
+      "gpu_peak_allocated_bytes": 10897920
+    },
+    {
+      "groups": 8,
+      "workload": "gather_transfer_pack_ffn",
+      "payload_bytes": 1179648,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.19699200242757797,
+        "wall_ms": 0.4334999975981191
+      },
+      "gpu_peak_allocated_bytes": 10897920
+    },
+    {
+      "groups": 32,
+      "workload": "pinned_aggregate",
+      "payload_bytes": 4718592,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.09211200103163719,
+        "wall_ms": 0.17690000822767615
+      },
+      "gpu_peak_allocated_bytes": 17963008
+    },
+    {
+      "groups": 32,
+      "workload": "pageable_staged",
+      "payload_bytes": 4718592,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.24092799425125122,
+        "wall_ms": 0.31870001112110913
+      },
+      "gpu_peak_allocated_bytes": 17963008
+    },
+    {
+      "groups": 32,
+      "workload": "gather_staged",
+      "payload_bytes": 4718592,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.31063999235630035,
+        "wall_ms": 0.39250000554602593
+      },
+      "gpu_peak_allocated_bytes": 17963008
+    },
+    {
+      "groups": 32,
+      "workload": "pinned_individual",
+      "payload_bytes": 4718592,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.2611519992351532,
+        "wall_ms": 0.44489999709185213
+      },
+      "gpu_peak_allocated_bytes": 17963008
+    },
+    {
+      "groups": 32,
+      "workload": "resident_ffn",
+      "payload_bytes": 4718592,
+      "transfers": false,
+      "medians": {
+        "cuda_ms": 0.025696000084280968,
+        "wall_ms": 0.26980000257026404
+      },
+      "gpu_peak_allocated_bytes": 17976320
+    },
+    {
+      "groups": 32,
+      "workload": "gather_transfer_pack_ffn",
+      "payload_bytes": 4718592,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.31777599453926086,
+        "wall_ms": 0.5405499978223816
+      },
+      "gpu_peak_allocated_bytes": 17976320
+    },
+    {
+      "groups": 128,
+      "workload": "pinned_aggregate",
+      "payload_bytes": 18874368,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.35756801068782806,
+        "wall_ms": 0.45065001177135855
+      },
+      "gpu_peak_allocated_bytes": 46274560
+    },
+    {
+      "groups": 128,
+      "workload": "pageable_staged",
+      "payload_bytes": 18874368,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 0.8726239800453186,
+        "wall_ms": 0.9481500019319355
+      },
+      "gpu_peak_allocated_bytes": 46274560
+    },
+    {
+      "groups": 128,
+      "workload": "gather_staged",
+      "payload_bytes": 18874368,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 1.191103994846344,
+        "wall_ms": 1.2767500011250377
+      },
+      "gpu_peak_allocated_bytes": 46274560
+    },
+    {
+      "groups": 128,
+      "workload": "pinned_individual",
+      "payload_bytes": 18874368,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 1.2210240364074707,
+        "wall_ms": 1.3480499910656363
+      },
+      "gpu_peak_allocated_bytes": 46274560
+    },
+    {
+      "groups": 128,
+      "workload": "resident_ffn",
+      "payload_bytes": 18874368,
+      "transfers": false,
+      "medians": {
+        "cuda_ms": 0.03457600064575672,
+        "wall_ms": 0.27045000751968473
+      },
+      "gpu_peak_allocated_bytes": 46292992
+    },
+    {
+      "groups": 128,
+      "workload": "gather_transfer_pack_ffn",
+      "payload_bytes": 18874368,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 1.313264012336731,
+        "wall_ms": 1.5776500076754019
+      },
+      "gpu_peak_allocated_bytes": 46292992
+    },
+    {
+      "groups": 512,
+      "workload": "pinned_aggregate",
+      "payload_bytes": 75497472,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 1.416640043258667,
+        "wall_ms": 1.5154499997152016
+      },
+      "gpu_peak_allocated_bytes": 159520768
+    },
+    {
+      "groups": 512,
+      "workload": "pageable_staged",
+      "payload_bytes": 75497472,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 4.7104480266571045,
+        "wall_ms": 4.790399980265647
+      },
+      "gpu_peak_allocated_bytes": 159520768
+    },
+    {
+      "groups": 512,
+      "workload": "gather_staged",
+      "payload_bytes": 75497472,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 6.206511974334717,
+        "wall_ms": 6.334949997835793
+      },
+      "gpu_peak_allocated_bytes": 159520768
+    },
+    {
+      "groups": 512,
+      "workload": "pinned_individual",
+      "payload_bytes": 75497472,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 5.007711887359619,
+        "wall_ms": 5.13749998935964
+      },
+      "gpu_peak_allocated_bytes": 159520768
+    },
+    {
+      "groups": 512,
+      "workload": "resident_ffn",
+      "payload_bytes": 75497472,
+      "transfers": false,
+      "medians": {
+        "cuda_ms": 0.16544000059366226,
+        "wall_ms": 0.40380000427830964
+      },
+      "gpu_peak_allocated_bytes": 159576064
+    },
+    {
+      "groups": 512,
+      "workload": "gather_transfer_pack_ffn",
+      "payload_bytes": 75497472,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 7.766064167022705,
+        "wall_ms": 7.924149991595186
+      },
+      "gpu_peak_allocated_bytes": 159576064
+    },
+    {
+      "groups": 1120,
+      "workload": "pinned_aggregate",
+      "payload_bytes": 165150720,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 3.077072024345398,
+        "wall_ms": 3.207250003470108
+      },
+      "gpu_peak_allocated_bytes": 339351552
+    },
+    {
+      "groups": 1120,
+      "workload": "pageable_staged",
+      "payload_bytes": 165150720,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 10.409600257873535,
+        "wall_ms": 10.543899988988414
+      },
+      "gpu_peak_allocated_bytes": 339351552
+    },
+    {
+      "groups": 1120,
+      "workload": "gather_staged",
+      "payload_bytes": 165150720,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 13.688767910003662,
+        "wall_ms": 13.81379998929333
+      },
+      "gpu_peak_allocated_bytes": 339351552
+    },
+    {
+      "groups": 1120,
+      "workload": "pinned_individual",
+      "payload_bytes": 165150720,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 11.196095943450928,
+        "wall_ms": 11.40480001049582
+      },
+      "gpu_peak_allocated_bytes": 339351552
+    },
+    {
+      "groups": 1120,
+      "workload": "resident_ffn",
+      "payload_bytes": 165150720,
+      "transfers": false,
+      "medians": {
+        "cuda_ms": 0.32756800949573517,
+        "wall_ms": 0.5664999916916713
+      },
+      "gpu_peak_allocated_bytes": 339465216
+    },
+    {
+      "groups": 1120,
+      "workload": "gather_transfer_pack_ffn",
+      "payload_bytes": 165150720,
+      "transfers": true,
+      "medians": {
+        "cuda_ms": 15.431056022644043,
+        "wall_ms": 15.92360001814086
+      },
+      "gpu_peak_allocated_bytes": 339465216
+    }
+  ],
+  "ranking": [
+    {
+      "method": "stable_argsort",
+      "medians": {
+        "cuda_ms": 62.41396713256836,
+        "wall_ms": 62.46120001014788
+      }
+    },
+    {
+      "method": "topk",
+      "medians": {
+        "cuda_ms": 24.917984008789062,
+        "wall_ms": 24.956599998404272
+      }
+    }
+  ],
+  "runtime_claim": false,
+  "finished_utc": "2026-09-11T20:55:31.996135+00:00"
+}

@@ -1,0 +1,29 @@
+{
+  "group_counts": [
+    1,
+    8,
+    32,
+    128,
+    512,
+    1120
+  ],
+  "workloads": [
+    "pinned_aggregate",
+    "pageable_staged",
+    "gather_staged",
+    "pinned_individual",
+    "resident_ffn",
+    "gather_transfer_pack_ffn"
+  ],
+  "width": 8,
+  "hidden": 1536,
+  "pool_groups": 1120,
+  "warmups": 3,
+  "measured_repetitions": 10,
+  "seed": 1729,
+  "dtype": "float32",
+  "rank_tokens": 32,
+  "rank_layers": 28,
+  "rank_groups": 1120,
+  "rank_keep": 1008
+}

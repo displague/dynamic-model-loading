@@ -1,0 +1,569 @@
+{"kind": "integrity", "groups": 1, "workload": "pinned_aggregate", "passed": true, "relative_l2": null, "payload_bytes": 147456, "cpu_persistent_payload_bytes": 330617600, "gpu_preallocated_payload_bytes": 301056}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 0, "warmup": true, "cuda_ms": 0.018144000321626663, "wall_ms": 0.10280002607032657}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 1, "warmup": true, "cuda_ms": 0.012864000163972378, "wall_ms": 0.15089998487383127}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 2, "warmup": true, "cuda_ms": 0.011136000044643879, "wall_ms": 0.13840000610798597}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 3, "warmup": false, "cuda_ms": 0.010944000445306301, "wall_ms": 0.1404999929945916}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 4, "warmup": false, "cuda_ms": 0.011103999800980091, "wall_ms": 0.13729999773204327}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 5, "warmup": false, "cuda_ms": 0.010912000201642513, "wall_ms": 0.11109997285529971}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 6, "warmup": false, "cuda_ms": 0.01104000024497509, "wall_ms": 0.08620001608505845}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 7, "warmup": false, "cuda_ms": 0.01119999960064888, "wall_ms": 0.0976000155787915}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 8, "warmup": false, "cuda_ms": 0.013344000093638897, "wall_ms": 0.06809999467805028}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 9, "warmup": false, "cuda_ms": 0.011071999557316303, "wall_ms": 0.07879998884163797}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 10, "warmup": false, "cuda_ms": 0.01104000024497509, "wall_ms": 0.1204000145662576}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 11, "warmup": false, "cuda_ms": 0.011168000288307667, "wall_ms": 0.0999000039882958}
+{"kind": "timing", "groups": 1, "workload": "pinned_aggregate", "repetition": 12, "warmup": false, "cuda_ms": 0.010304000228643417, "wall_ms": 0.11709998943842947}
+{"kind": "aggregate", "groups": 1, "workload": "pinned_aggregate", "payload_bytes": 147456, "transfers": true, "medians": {"cuda_ms": 0.011055999901145697, "wall_ms": 0.10549998842179775}, "gpu_peak_allocated_bytes": 301056}
+{"kind": "integrity", "groups": 1, "workload": "pageable_staged", "passed": true, "relative_l2": null, "payload_bytes": 147456, "cpu_persistent_payload_bytes": 330617600, "gpu_preallocated_payload_bytes": 301056}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 0, "warmup": true, "cuda_ms": 0.026176000013947487, "wall_ms": 0.07999999797903001}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 1, "warmup": true, "cuda_ms": 0.02175999991595745, "wall_ms": 0.11039999662898481}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 2, "warmup": true, "cuda_ms": 0.02848000079393387, "wall_ms": 0.07720000576227903}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 3, "warmup": false, "cuda_ms": 0.033215999603271484, "wall_ms": 0.0805000017862767}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 4, "warmup": false, "cuda_ms": 0.013088000006973743, "wall_ms": 0.12129999231547117}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 5, "warmup": false, "cuda_ms": 0.013632000423967838, "wall_ms": 0.12310000602155924}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 6, "warmup": false, "cuda_ms": 0.013088000006973743, "wall_ms": 0.14059999375604093}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 7, "warmup": false, "cuda_ms": 0.012703999876976013, "wall_ms": 0.11830002767965198}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 8, "warmup": false, "cuda_ms": 0.013024000450968742, "wall_ms": 0.12670000432990491}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 9, "warmup": false, "cuda_ms": 0.013120000250637531, "wall_ms": 0.14209997607395053}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 10, "warmup": false, "cuda_ms": 0.0671359971165657, "wall_ms": 0.12350000906735659}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 11, "warmup": false, "cuda_ms": 0.02783999964594841, "wall_ms": 0.08800000068731606}
+{"kind": "timing", "groups": 1, "workload": "pageable_staged", "repetition": 12, "warmup": false, "cuda_ms": 0.021407999098300934, "wall_ms": 0.1218999968841672}
+{"kind": "aggregate", "groups": 1, "workload": "pageable_staged", "payload_bytes": 147456, "transfers": true, "medians": {"cuda_ms": 0.013376000337302685, "wall_ms": 0.12250000145286322}, "gpu_peak_allocated_bytes": 301056}
+{"kind": "integrity", "groups": 1, "workload": "gather_staged", "passed": true, "relative_l2": null, "payload_bytes": 147456, "cpu_persistent_payload_bytes": 330617600, "gpu_preallocated_payload_bytes": 301056}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 0, "warmup": true, "cuda_ms": 0.020416000857949257, "wall_ms": 0.14359998749569058}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 1, "warmup": true, "cuda_ms": 0.013248000293970108, "wall_ms": 0.13110000872984529}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 2, "warmup": true, "cuda_ms": 0.013344000093638897, "wall_ms": 0.13729999773204327}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 3, "warmup": false, "cuda_ms": 0.013024000450968742, "wall_ms": 0.13539998326450586}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 4, "warmup": false, "cuda_ms": 0.013376000337302685, "wall_ms": 0.14119999832473695}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 5, "warmup": false, "cuda_ms": 0.030880000442266464, "wall_ms": 0.10999999358318746}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 6, "warmup": false, "cuda_ms": 0.021888000890612602, "wall_ms": 0.08149998029693961}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 7, "warmup": false, "cuda_ms": 0.07699199765920639, "wall_ms": 0.13610001769848168}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 8, "warmup": false, "cuda_ms": 0.028095999732613564, "wall_ms": 0.11399999493733048}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 9, "warmup": false, "cuda_ms": 0.012927999719977379, "wall_ms": 0.13299999409355223}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 10, "warmup": false, "cuda_ms": 0.025919999927282333, "wall_ms": 0.08690002141520381}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 11, "warmup": false, "cuda_ms": 0.013279999606311321, "wall_ms": 0.1472999865654856}
+{"kind": "timing", "groups": 1, "workload": "gather_staged", "repetition": 12, "warmup": false, "cuda_ms": 0.012608000077307224, "wall_ms": 0.1188000023830682}
+{"kind": "aggregate", "groups": 1, "workload": "gather_staged", "payload_bytes": 147456, "transfers": true, "medians": {"cuda_ms": 0.017632000613957644, "wall_ms": 0.12589999823831022}, "gpu_peak_allocated_bytes": 301056}
+{"kind": "integrity", "groups": 1, "workload": "pinned_individual", "passed": true, "relative_l2": null, "payload_bytes": 147456, "cpu_persistent_payload_bytes": 330617600, "gpu_preallocated_payload_bytes": 301056}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 0, "warmup": true, "cuda_ms": 0.01881599985063076, "wall_ms": 0.07910002022981644}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 1, "warmup": true, "cuda_ms": 0.010688000358641148, "wall_ms": 0.09879999561235309}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 2, "warmup": true, "cuda_ms": 0.01587199978530407, "wall_ms": 0.06560000474564731}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 3, "warmup": false, "cuda_ms": 0.011071999557316303, "wall_ms": 0.14180000289343297}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 4, "warmup": false, "cuda_ms": 0.011264000087976456, "wall_ms": 0.12270000297576189}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 5, "warmup": false, "cuda_ms": 0.01104000024497509, "wall_ms": 0.11930000619031489}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 6, "warmup": false, "cuda_ms": 0.011103999800980091, "wall_ms": 0.11940000695176423}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 7, "warmup": false, "cuda_ms": 0.011136000044643879, "wall_ms": 0.13380000018514693}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 8, "warmup": false, "cuda_ms": 0.011359999887645245, "wall_ms": 0.13150001177564263}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 9, "warmup": false, "cuda_ms": 0.011168000288307667, "wall_ms": 0.11600001016631722}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 10, "warmup": false, "cuda_ms": 0.030239999294281006, "wall_ms": 0.13760000001639128}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 11, "warmup": false, "cuda_ms": 0.025087999179959297, "wall_ms": 0.07989999721758068}
+{"kind": "timing", "groups": 1, "workload": "pinned_individual", "repetition": 12, "warmup": false, "cuda_ms": 0.01104000024497509, "wall_ms": 0.10029997793026268}
+{"kind": "aggregate", "groups": 1, "workload": "pinned_individual", "payload_bytes": 147456, "transfers": true, "medians": {"cuda_ms": 0.011152000166475773, "wall_ms": 0.12105000496376306}, "gpu_peak_allocated_bytes": 301056}
+{"kind": "integrity", "groups": 1, "workload": "resident_ffn", "passed": true, "relative_l2": 4.645560634189464e-07, "payload_bytes": 147456, "cpu_persistent_payload_bytes": 330617600, "gpu_preallocated_payload_bytes": 301056}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 0, "warmup": true, "cuda_ms": 2.3337600231170654, "wall_ms": 2.4080000002868474}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 1, "warmup": true, "cuda_ms": 0.0318400003015995, "wall_ms": 0.28890001703985035}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 2, "warmup": true, "cuda_ms": 0.031647998839616776, "wall_ms": 0.2589000214356929}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 3, "warmup": false, "cuda_ms": 0.03155200183391571, "wall_ms": 0.27979997685179114}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 4, "warmup": false, "cuda_ms": 0.03187200054526329, "wall_ms": 0.25770001229830086}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 5, "warmup": false, "cuda_ms": 0.03171199932694435, "wall_ms": 0.2908000024035573}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 6, "warmup": false, "cuda_ms": 0.03219199925661087, "wall_ms": 0.2533000078983605}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 7, "warmup": false, "cuda_ms": 0.033695999532938004, "wall_ms": 0.20030001178383827}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 8, "warmup": false, "cuda_ms": 0.03177599981427193, "wall_ms": 2.9966000001877546}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 9, "warmup": false, "cuda_ms": 0.03177599981427193, "wall_ms": 0.2660000172909349}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 10, "warmup": false, "cuda_ms": 0.03209599852561951, "wall_ms": 0.2786999975796789}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 11, "warmup": false, "cuda_ms": 0.03209599852561951, "wall_ms": 0.25889999233186245}
+{"kind": "timing", "groups": 1, "workload": "resident_ffn", "repetition": 12, "warmup": false, "cuda_ms": 7.253856182098389, "wall_ms": 7.4828999931924045}
+{"kind": "aggregate", "groups": 1, "workload": "resident_ffn", "payload_bytes": 147456, "transfers": false, "medians": {"cuda_ms": 0.0319839995354414, "wall_ms": 0.2723500074353069}, "gpu_peak_allocated_bytes": 8833536}
+{"kind": "integrity", "groups": 1, "workload": "gather_transfer_pack_ffn", "passed": true, "relative_l2": 4.645560634189464e-07, "payload_bytes": 147456, "cpu_persistent_payload_bytes": 330617600, "gpu_preallocated_payload_bytes": 301056}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 0, "warmup": true, "cuda_ms": 0.21171200275421143, "wall_ms": 0.3451999800745398}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 1, "warmup": true, "cuda_ms": 0.18595199286937714, "wall_ms": 0.41160002001561224}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 2, "warmup": true, "cuda_ms": 0.27910399436950684, "wall_ms": 0.4920999926980585}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 3, "warmup": false, "cuda_ms": 0.16156800091266632, "wall_ms": 0.3761999832931906}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 4, "warmup": false, "cuda_ms": 0.1793919950723648, "wall_ms": 0.39280002238228917}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 5, "warmup": false, "cuda_ms": 0.1475840061903, "wall_ms": 0.3418999840505421}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 6, "warmup": false, "cuda_ms": 0.13529600203037262, "wall_ms": 0.30330001027323306}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 7, "warmup": false, "cuda_ms": 0.15651200711727142, "wall_ms": 0.3243999963160604}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 8, "warmup": false, "cuda_ms": 0.13184000551700592, "wall_ms": 0.2841999812517315}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 9, "warmup": false, "cuda_ms": 0.13603200018405914, "wall_ms": 0.3615999885369092}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 10, "warmup": false, "cuda_ms": 0.17177599668502808, "wall_ms": 0.4015000013168901}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 11, "warmup": false, "cuda_ms": 0.15801599621772766, "wall_ms": 0.39099997957237065}
+{"kind": "timing", "groups": 1, "workload": "gather_transfer_pack_ffn", "repetition": 12, "warmup": false, "cuda_ms": 0.16195200383663177, "wall_ms": 0.39739999920129776}
+{"kind": "aggregate", "groups": 1, "workload": "gather_transfer_pack_ffn", "payload_bytes": 147456, "transfers": true, "medians": {"cuda_ms": 0.15726400166749954, "wall_ms": 0.3688999859150499}, "gpu_peak_allocated_bytes": 8833536}
+{"kind": "integrity", "groups": 8, "workload": "pinned_aggregate", "passed": true, "relative_l2": null, "payload_bytes": 1179648, "cpu_persistent_payload_bytes": 332681984, "gpu_preallocated_payload_bytes": 2365440}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 0, "warmup": true, "cuda_ms": 0.046879999339580536, "wall_ms": 0.10790000669658184}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 1, "warmup": true, "cuda_ms": 0.04729599878191948, "wall_ms": 0.17380001372657716}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 2, "warmup": true, "cuda_ms": 0.04700800031423569, "wall_ms": 0.15789997996762395}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 3, "warmup": false, "cuda_ms": 0.04710400104522705, "wall_ms": 0.1742000167723745}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 4, "warmup": false, "cuda_ms": 0.047200001776218414, "wall_ms": 0.16530000721104443}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 5, "warmup": false, "cuda_ms": 0.047168001532554626, "wall_ms": 0.15460001304745674}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 6, "warmup": false, "cuda_ms": 0.047040000557899475, "wall_ms": 0.1210999907925725}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 7, "warmup": false, "cuda_ms": 0.04700800031423569, "wall_ms": 0.11720001930370927}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 8, "warmup": false, "cuda_ms": 0.04745600000023842, "wall_ms": 0.11190000805072486}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 9, "warmup": false, "cuda_ms": 0.04694399982690811, "wall_ms": 0.12320000678300858}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 10, "warmup": false, "cuda_ms": 0.04713600128889084, "wall_ms": 0.1446999958716333}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 11, "warmup": false, "cuda_ms": 0.047168001532554626, "wall_ms": 0.1812000118661672}
+{"kind": "timing", "groups": 8, "workload": "pinned_aggregate", "repetition": 12, "warmup": false, "cuda_ms": 0.0506879985332489, "wall_ms": 0.11379999341443181}
+{"kind": "aggregate", "groups": 8, "workload": "pinned_aggregate", "payload_bytes": 1179648, "transfers": true, "medians": {"cuda_ms": 0.04715200141072273, "wall_ms": 0.13395000132732093}, "gpu_peak_allocated_bytes": 10885120}
+{"kind": "integrity", "groups": 8, "workload": "pageable_staged", "passed": true, "relative_l2": null, "payload_bytes": 1179648, "cpu_persistent_payload_bytes": 332681984, "gpu_preallocated_payload_bytes": 2365440}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 0, "warmup": true, "cuda_ms": 0.0570559985935688, "wall_ms": 0.1981999957934022}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 1, "warmup": true, "cuda_ms": 0.11955200135707855, "wall_ms": 0.1807000080589205}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 2, "warmup": true, "cuda_ms": 0.06435199826955795, "wall_ms": 0.12199999764561653}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 3, "warmup": false, "cuda_ms": 0.07542400062084198, "wall_ms": 0.12169999536126852}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 4, "warmup": false, "cuda_ms": 0.057312000542879105, "wall_ms": 0.15690000145696104}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 5, "warmup": false, "cuda_ms": 0.0570559985935688, "wall_ms": 0.18269999418407679}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 6, "warmup": false, "cuda_ms": 0.05721599981188774, "wall_ms": 0.17579999985173345}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 7, "warmup": false, "cuda_ms": 0.057440001517534256, "wall_ms": 0.18459997954778373}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 8, "warmup": false, "cuda_ms": 0.0570559985935688, "wall_ms": 0.20260000019334257}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 9, "warmup": false, "cuda_ms": 0.04899200052022934, "wall_ms": 0.1514999894425273}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 10, "warmup": false, "cuda_ms": 0.07318399846553802, "wall_ms": 0.11740002082660794}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 11, "warmup": false, "cuda_ms": 0.05628800019621849, "wall_ms": 0.13380000018514693}
+{"kind": "timing", "groups": 8, "workload": "pageable_staged", "repetition": 12, "warmup": false, "cuda_ms": 0.07315199822187424, "wall_ms": 0.11449999874457717}
+{"kind": "aggregate", "groups": 8, "workload": "pageable_staged", "payload_bytes": 1179648, "transfers": true, "medians": {"cuda_ms": 0.05726400017738342, "wall_ms": 0.15419999544974416}, "gpu_peak_allocated_bytes": 10885120}
+{"kind": "integrity", "groups": 8, "workload": "gather_staged", "passed": true, "relative_l2": null, "payload_bytes": 1179648, "cpu_persistent_payload_bytes": 332681984, "gpu_preallocated_payload_bytes": 2365440}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 0, "warmup": true, "cuda_ms": 0.06470400094985962, "wall_ms": 0.17210000078193843}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 1, "warmup": true, "cuda_ms": 0.055296000093221664, "wall_ms": 0.1626000157557428}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 2, "warmup": true, "cuda_ms": 0.12428800016641617, "wall_ms": 0.231999991228804}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 3, "warmup": false, "cuda_ms": 0.04927999898791313, "wall_ms": 0.1669999910518527}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 4, "warmup": false, "cuda_ms": 0.04931199923157692, "wall_ms": 0.17729998216964304}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 5, "warmup": false, "cuda_ms": 0.13036799430847168, "wall_ms": 0.19829999655485153}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 6, "warmup": false, "cuda_ms": 0.21526400744915009, "wall_ms": 0.27370001771487296}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 7, "warmup": false, "cuda_ms": 0.15782399475574493, "wall_ms": 0.2080000122077763}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 8, "warmup": false, "cuda_ms": 0.04899200052022934, "wall_ms": 0.15669999993406236}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 9, "warmup": false, "cuda_ms": 0.04934399947524071, "wall_ms": 0.16300001880154014}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 10, "warmup": false, "cuda_ms": 0.14588800072669983, "wall_ms": 0.21889997879043221}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 11, "warmup": false, "cuda_ms": 0.049215998500585556, "wall_ms": 0.17270000535063446}
+{"kind": "timing", "groups": 8, "workload": "gather_staged", "repetition": 12, "warmup": false, "cuda_ms": 0.11468800157308578, "wall_ms": 0.18370000179857016}
+{"kind": "aggregate", "groups": 8, "workload": "gather_staged", "payload_bytes": 1179648, "transfers": true, "medians": {"cuda_ms": 0.08201600052416325, "wall_ms": 0.1804999919841066}, "gpu_peak_allocated_bytes": 10885120}
+{"kind": "integrity", "groups": 8, "workload": "pinned_individual", "passed": true, "relative_l2": null, "payload_bytes": 1179648, "cpu_persistent_payload_bytes": 332681984, "gpu_preallocated_payload_bytes": 2365440}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 0, "warmup": true, "cuda_ms": 0.13574400544166565, "wall_ms": 0.20089998724870384}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 1, "warmup": true, "cuda_ms": 0.15936000645160675, "wall_ms": 0.23370000417344272}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 2, "warmup": true, "cuda_ms": 0.06380800157785416, "wall_ms": 0.20629999926313758}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 3, "warmup": false, "cuda_ms": 0.06377600133419037, "wall_ms": 0.21699999342672527}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 4, "warmup": false, "cuda_ms": 0.06339199841022491, "wall_ms": 0.21570001263171434}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 5, "warmup": false, "cuda_ms": 0.06390400230884552, "wall_ms": 0.20790001144632697}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 6, "warmup": false, "cuda_ms": 0.06371200084686279, "wall_ms": 0.23010000586509705}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 7, "warmup": false, "cuda_ms": 0.16687999665737152, "wall_ms": 0.22759998682886362}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 8, "warmup": false, "cuda_ms": 0.06454399973154068, "wall_ms": 0.1737999846227467}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 9, "warmup": false, "cuda_ms": 0.07897599786520004, "wall_ms": 0.1388999808114022}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 10, "warmup": false, "cuda_ms": 0.14652800559997559, "wall_ms": 0.20939999376423657}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 11, "warmup": false, "cuda_ms": 0.07689599692821503, "wall_ms": 0.21129997912794352}
+{"kind": "timing", "groups": 8, "workload": "pinned_individual", "repetition": 12, "warmup": false, "cuda_ms": 0.07568000257015228, "wall_ms": 0.21269998978823423}
+{"kind": "aggregate", "groups": 8, "workload": "pinned_individual", "payload_bytes": 1179648, "transfers": true, "medians": {"cuda_ms": 0.07011200115084648, "wall_ms": 0.21199998445808887}, "gpu_peak_allocated_bytes": 10885120}
+{"kind": "integrity", "groups": 8, "workload": "resident_ffn", "passed": true, "relative_l2": 5.957031403220525e-07, "payload_bytes": 1179648, "cpu_persistent_payload_bytes": 332681984, "gpu_preallocated_payload_bytes": 2365440}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 0, "warmup": true, "cuda_ms": 0.18627199530601501, "wall_ms": 0.31319999834522605}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 1, "warmup": true, "cuda_ms": 0.023296000435948372, "wall_ms": 0.2638000005390495}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 2, "warmup": true, "cuda_ms": 0.023711999878287315, "wall_ms": 0.26709999656304717}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 3, "warmup": false, "cuda_ms": 0.02332800067961216, "wall_ms": 3.906099998857826}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 4, "warmup": false, "cuda_ms": 0.023552000522613525, "wall_ms": 0.27809999301098287}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 5, "warmup": false, "cuda_ms": 0.023903999477624893, "wall_ms": 0.24200000916607678}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 6, "warmup": false, "cuda_ms": 0.023296000435948372, "wall_ms": 0.2714000002015382}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 7, "warmup": false, "cuda_ms": 0.02316799946129322, "wall_ms": 0.24920000578276813}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 8, "warmup": false, "cuda_ms": 0.023584000766277313, "wall_ms": 0.27210000553168356}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 9, "warmup": false, "cuda_ms": 0.023135999217629433, "wall_ms": 0.2463999844621867}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 10, "warmup": false, "cuda_ms": 0.023903999477624893, "wall_ms": 0.22929999977350235}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 11, "warmup": false, "cuda_ms": 0.024064000695943832, "wall_ms": 3.076699998928234}
+{"kind": "timing", "groups": 8, "workload": "resident_ffn", "repetition": 12, "warmup": false, "cuda_ms": 0.023615999147295952, "wall_ms": 0.2513000217732042}
+{"kind": "aggregate", "groups": 8, "workload": "resident_ffn", "payload_bytes": 1179648, "transfers": false, "medians": {"cuda_ms": 0.02356800064444542, "wall_ms": 0.2613500109873712}, "gpu_peak_allocated_bytes": 10897920}
+{"kind": "integrity", "groups": 8, "workload": "gather_transfer_pack_ffn", "passed": true, "relative_l2": 5.957031403220525e-07, "payload_bytes": 1179648, "cpu_persistent_payload_bytes": 332681984, "gpu_preallocated_payload_bytes": 2365440}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 0, "warmup": true, "cuda_ms": 0.3263680040836334, "wall_ms": 0.45200000749900937}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 1, "warmup": true, "cuda_ms": 0.19791999459266663, "wall_ms": 0.4301000153645873}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 2, "warmup": true, "cuda_ms": 0.1974720060825348, "wall_ms": 0.43280000681988895}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 3, "warmup": false, "cuda_ms": 0.19171200692653656, "wall_ms": 0.7107999990694225}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 4, "warmup": false, "cuda_ms": 0.15609599649906158, "wall_ms": 0.3206999972462654}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 5, "warmup": false, "cuda_ms": 0.19590400159358978, "wall_ms": 0.42100000428035855}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 6, "warmup": false, "cuda_ms": 0.20000000298023224, "wall_ms": 0.43629997526295483}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 7, "warmup": false, "cuda_ms": 0.29020801186561584, "wall_ms": 0.5065999866928905}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 8, "warmup": false, "cuda_ms": 0.20201599597930908, "wall_ms": 0.43070001993328333}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 9, "warmup": false, "cuda_ms": 0.19808000326156616, "wall_ms": 0.4301000153645873}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 10, "warmup": false, "cuda_ms": 0.27395200729370117, "wall_ms": 0.48909999895840883}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 11, "warmup": false, "cuda_ms": 0.16704000532627106, "wall_ms": 0.41179999243468046}
+{"kind": "timing", "groups": 8, "workload": "gather_transfer_pack_ffn", "repetition": 12, "warmup": false, "cuda_ms": 0.15612800419330597, "wall_ms": 2.9765000217594206}
+{"kind": "aggregate", "groups": 8, "workload": "gather_transfer_pack_ffn", "payload_bytes": 1179648, "transfers": true, "medians": {"cuda_ms": 0.19699200242757797, "wall_ms": 0.4334999975981191}, "gpu_peak_allocated_bytes": 10897920}
+{"kind": "integrity", "groups": 32, "workload": "pinned_aggregate", "passed": true, "relative_l2": null, "payload_bytes": 4718592, "cpu_persistent_payload_bytes": 339759872, "gpu_preallocated_payload_bytes": 9443328}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 0, "warmup": true, "cuda_ms": 0.09222400188446045, "wall_ms": 0.2133999951183796}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 1, "warmup": true, "cuda_ms": 0.09222400188446045, "wall_ms": 0.21490000654011965}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 2, "warmup": true, "cuda_ms": 0.10156799852848053, "wall_ms": 0.19269998301751912}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 3, "warmup": false, "cuda_ms": 0.09123200178146362, "wall_ms": 0.15259999781847}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 4, "warmup": false, "cuda_ms": 0.09136000275611877, "wall_ms": 0.16789999790489674}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 5, "warmup": false, "cuda_ms": 0.10025600343942642, "wall_ms": 0.1568000006955117}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 6, "warmup": false, "cuda_ms": 0.10451199859380722, "wall_ms": 0.1613000058569014}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 7, "warmup": false, "cuda_ms": 0.09187199920415878, "wall_ms": 0.20740000763908029}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 8, "warmup": false, "cuda_ms": 0.09212800115346909, "wall_ms": 0.20390001009218395}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 9, "warmup": false, "cuda_ms": 0.0920960009098053, "wall_ms": 0.1947999990079552}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 10, "warmup": false, "cuda_ms": 0.09967999905347824, "wall_ms": 0.2041999832727015}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 11, "warmup": false, "cuda_ms": 0.09065599739551544, "wall_ms": 0.18590001855045557}
+{"kind": "timing", "groups": 32, "workload": "pinned_aggregate", "repetition": 12, "warmup": false, "cuda_ms": 0.09891200065612793, "wall_ms": 0.15899998834356666}
+{"kind": "aggregate", "groups": 32, "workload": "pinned_aggregate", "payload_bytes": 4718592, "transfers": true, "medians": {"cuda_ms": 0.09211200103163719, "wall_ms": 0.17690000822767615}, "gpu_peak_allocated_bytes": 17963008}
+{"kind": "integrity", "groups": 32, "workload": "pageable_staged", "passed": true, "relative_l2": null, "payload_bytes": 4718592, "cpu_persistent_payload_bytes": 339759872, "gpu_preallocated_payload_bytes": 9443328}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 0, "warmup": true, "cuda_ms": 0.20441600680351257, "wall_ms": 0.3043999895453453}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 1, "warmup": true, "cuda_ms": 0.44703999161720276, "wall_ms": 0.5638000147882849}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 2, "warmup": true, "cuda_ms": 0.2157759964466095, "wall_ms": 0.3163999936077744}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 3, "warmup": false, "cuda_ms": 0.2061759978532791, "wall_ms": 0.30949999927543104}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 4, "warmup": false, "cuda_ms": 0.22102400660514832, "wall_ms": 0.33030001213774085}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 5, "warmup": false, "cuda_ms": 0.25596800446510315, "wall_ms": 0.3155000158585608}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 6, "warmup": false, "cuda_ms": 0.2560960054397583, "wall_ms": 0.3147000097669661}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 7, "warmup": false, "cuda_ms": 0.2645440101623535, "wall_ms": 0.32190000638365746}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 8, "warmup": false, "cuda_ms": 0.24767999351024628, "wall_ms": 0.3129999968223274}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 9, "warmup": false, "cuda_ms": 0.2584640085697174, "wall_ms": 0.35340001340955496}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 10, "warmup": false, "cuda_ms": 0.20416000485420227, "wall_ms": 0.29150000773370266}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 11, "warmup": false, "cuda_ms": 0.23417599499225616, "wall_ms": 0.3387999895494431}
+{"kind": "timing", "groups": 32, "workload": "pageable_staged", "repetition": 12, "warmup": false, "cuda_ms": 0.2321919947862625, "wall_ms": 0.3367000026628375}
+{"kind": "aggregate", "groups": 32, "workload": "pageable_staged", "payload_bytes": 4718592, "transfers": true, "medians": {"cuda_ms": 0.24092799425125122, "wall_ms": 0.31870001112110913}, "gpu_peak_allocated_bytes": 17963008}
+{"kind": "integrity", "groups": 32, "workload": "gather_staged", "passed": true, "relative_l2": null, "payload_bytes": 4718592, "cpu_persistent_payload_bytes": 339759872, "gpu_preallocated_payload_bytes": 9443328}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 0, "warmup": true, "cuda_ms": 0.4168959856033325, "wall_ms": 0.5124000017531216}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 1, "warmup": true, "cuda_ms": 0.3226560056209564, "wall_ms": 0.3921999887097627}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 2, "warmup": true, "cuda_ms": 0.2698560059070587, "wall_ms": 0.3893999964930117}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 3, "warmup": false, "cuda_ms": 0.29440000653266907, "wall_ms": 0.35650000791065395}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 4, "warmup": false, "cuda_ms": 0.3155199885368347, "wall_ms": 0.374099996406585}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 5, "warmup": false, "cuda_ms": 0.32342401146888733, "wall_ms": 0.38529999437741935}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 6, "warmup": false, "cuda_ms": 0.3194560110569, "wall_ms": 0.42070000199601054}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 7, "warmup": false, "cuda_ms": 0.26175999641418457, "wall_ms": 0.36040000850334764}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 8, "warmup": false, "cuda_ms": 0.305759996175766, "wall_ms": 0.3487000067252666}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 9, "warmup": false, "cuda_ms": 0.36588799953460693, "wall_ms": 0.4248999757692218}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 10, "warmup": false, "cuda_ms": 0.3585920035839081, "wall_ms": 0.4169000021647662}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 11, "warmup": false, "cuda_ms": 0.2916159927845001, "wall_ms": 0.3997000167146325}
+{"kind": "timing", "groups": 32, "workload": "gather_staged", "repetition": 12, "warmup": false, "cuda_ms": 0.3031040132045746, "wall_ms": 0.40759998955763876}
+{"kind": "aggregate", "groups": 32, "workload": "gather_staged", "payload_bytes": 4718592, "transfers": true, "medians": {"cuda_ms": 0.31063999235630035, "wall_ms": 0.39250000554602593}, "gpu_peak_allocated_bytes": 17963008}
+{"kind": "integrity", "groups": 32, "workload": "pinned_individual", "passed": true, "relative_l2": null, "payload_bytes": 4718592, "cpu_persistent_payload_bytes": 339759872, "gpu_preallocated_payload_bytes": 9443328}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 0, "warmup": true, "cuda_ms": 0.24624000489711761, "wall_ms": 0.4552000027615577}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 1, "warmup": true, "cuda_ms": 0.3685440123081207, "wall_ms": 0.42799999937415123}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 2, "warmup": true, "cuda_ms": 0.34249600768089294, "wall_ms": 0.40690001333132386}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 3, "warmup": false, "cuda_ms": 0.3778879940509796, "wall_ms": 0.43940002797171474}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 4, "warmup": false, "cuda_ms": 0.24358400702476501, "wall_ms": 0.4450999840628356}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 5, "warmup": false, "cuda_ms": 0.2617279887199402, "wall_ms": 0.4833000130020082}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 6, "warmup": false, "cuda_ms": 0.28278398513793945, "wall_ms": 0.4522999806795269}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 7, "warmup": false, "cuda_ms": 0.24636800587177277, "wall_ms": 0.4741000011563301}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 8, "warmup": false, "cuda_ms": 0.2314240038394928, "wall_ms": 0.4637999809347093}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 9, "warmup": false, "cuda_ms": 0.22966399788856506, "wall_ms": 0.4447000101208687}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 10, "warmup": false, "cuda_ms": 0.2605760097503662, "wall_ms": 0.4231999919284135}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 11, "warmup": false, "cuda_ms": 0.33228799700737, "wall_ms": 0.39579998701810837}
+{"kind": "timing", "groups": 32, "workload": "pinned_individual", "repetition": 12, "warmup": false, "cuda_ms": 0.36739200353622437, "wall_ms": 0.44010000419802964}
+{"kind": "aggregate", "groups": 32, "workload": "pinned_individual", "payload_bytes": 4718592, "transfers": true, "medians": {"cuda_ms": 0.2611519992351532, "wall_ms": 0.44489999709185213}, "gpu_peak_allocated_bytes": 17963008}
+{"kind": "integrity", "groups": 32, "workload": "resident_ffn", "passed": true, "relative_l2": 6.210328488627682e-07, "payload_bytes": 4718592, "cpu_persistent_payload_bytes": 339759872, "gpu_preallocated_payload_bytes": 9443328}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 0, "warmup": true, "cuda_ms": 0.18358400464057922, "wall_ms": 0.31670002499595284}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 1, "warmup": true, "cuda_ms": 0.02723200060427189, "wall_ms": 0.2556999970693141}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 2, "warmup": true, "cuda_ms": 0.023871999233961105, "wall_ms": 3.626799996709451}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 3, "warmup": false, "cuda_ms": 0.023552000522613525, "wall_ms": 0.27260000933893025}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 4, "warmup": false, "cuda_ms": 0.023264000192284584, "wall_ms": 0.24610001128166914}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 5, "warmup": false, "cuda_ms": 0.02707199938595295, "wall_ms": 0.26699999580159783}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 6, "warmup": false, "cuda_ms": 0.025599999353289604, "wall_ms": 0.25290000485256314}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 7, "warmup": false, "cuda_ms": 0.2513599991798401, "wall_ms": 0.5942000134382397}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 8, "warmup": false, "cuda_ms": 0.028095999732613564, "wall_ms": 0.2423000114504248}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 9, "warmup": false, "cuda_ms": 0.027168000116944313, "wall_ms": 0.3839000128209591}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 10, "warmup": false, "cuda_ms": 0.025439999997615814, "wall_ms": 2.470699982950464}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 11, "warmup": false, "cuda_ms": 0.025439999997615814, "wall_ms": 0.19890000112354755}
+{"kind": "timing", "groups": 32, "workload": "resident_ffn", "repetition": 12, "warmup": false, "cuda_ms": 0.02579200081527233, "wall_ms": 0.27940000290982425}
+{"kind": "aggregate", "groups": 32, "workload": "resident_ffn", "payload_bytes": 4718592, "transfers": false, "medians": {"cuda_ms": 0.025696000084280968, "wall_ms": 0.26980000257026404}, "gpu_peak_allocated_bytes": 17976320}
+{"kind": "integrity", "groups": 32, "workload": "gather_transfer_pack_ffn", "passed": true, "relative_l2": 6.210328488627682e-07, "payload_bytes": 4718592, "cpu_persistent_payload_bytes": 339759872, "gpu_preallocated_payload_bytes": 9443328}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 0, "warmup": true, "cuda_ms": 0.5486400127410889, "wall_ms": 0.6652000010944903}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 1, "warmup": true, "cuda_ms": 0.30723199248313904, "wall_ms": 0.5323999794200063}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 2, "warmup": true, "cuda_ms": 0.4368959963321686, "wall_ms": 4.021800006739795}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 3, "warmup": false, "cuda_ms": 0.3351359963417053, "wall_ms": 0.5579999997280538}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 4, "warmup": false, "cuda_ms": 0.28591999411582947, "wall_ms": 0.52299999515526}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 5, "warmup": false, "cuda_ms": 0.31593599915504456, "wall_ms": 0.48630000674165785}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 6, "warmup": false, "cuda_ms": 0.32230401039123535, "wall_ms": 0.5455999926198274}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 7, "warmup": false, "cuda_ms": 0.3112959861755371, "wall_ms": 0.5355000030249357}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 8, "warmup": false, "cuda_ms": 0.44627198576927185, "wall_ms": 0.6202000076882541}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 9, "warmup": false, "cuda_ms": 0.3196159899234772, "wall_ms": 2.018799976212904}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 10, "warmup": false, "cuda_ms": 0.2836480140686035, "wall_ms": 0.5197999998927116}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 11, "warmup": false, "cuda_ms": 0.3019520044326782, "wall_ms": 0.5295000155456364}
+{"kind": "timing", "groups": 32, "workload": "gather_transfer_pack_ffn", "repetition": 12, "warmup": false, "cuda_ms": 0.32207998633384705, "wall_ms": 0.5563999875448644}
+{"kind": "aggregate", "groups": 32, "workload": "gather_transfer_pack_ffn", "payload_bytes": 4718592, "transfers": true, "medians": {"cuda_ms": 0.31777599453926086, "wall_ms": 0.5405499978223816}, "gpu_peak_allocated_bytes": 17976320}
+{"kind": "integrity", "groups": 128, "workload": "pinned_aggregate", "passed": true, "relative_l2": null, "payload_bytes": 18874368, "cpu_persistent_payload_bytes": 368071424, "gpu_preallocated_payload_bytes": 37754880}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 0, "warmup": true, "cuda_ms": 0.35209599137306213, "wall_ms": 0.4656999954022467}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 1, "warmup": true, "cuda_ms": 0.3553279936313629, "wall_ms": 0.4951000155415386}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 2, "warmup": true, "cuda_ms": 0.35340800881385803, "wall_ms": 0.4321000014897436}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 3, "warmup": false, "cuda_ms": 0.35369598865509033, "wall_ms": 0.43050001841038465}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 4, "warmup": false, "cuda_ms": 0.36191999912261963, "wall_ms": 0.41840001358650625}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 5, "warmup": false, "cuda_ms": 0.3603839874267578, "wall_ms": 0.44960001832805574}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 6, "warmup": false, "cuda_ms": 0.39238399267196655, "wall_ms": 0.5114000232424587}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 7, "warmup": false, "cuda_ms": 0.3531840145587921, "wall_ms": 0.47599998652003706}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 8, "warmup": false, "cuda_ms": 0.35811200737953186, "wall_ms": 0.45170000521466136}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 9, "warmup": false, "cuda_ms": 0.35286399722099304, "wall_ms": 0.457499991171062}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 10, "warmup": false, "cuda_ms": 0.35702401399612427, "wall_ms": 0.43059999006800354}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 11, "warmup": false, "cuda_ms": 0.363647997379303, "wall_ms": 0.4386999935377389}
+{"kind": "timing", "groups": 128, "workload": "pinned_aggregate", "repetition": 12, "warmup": false, "cuda_ms": 0.35516801476478577, "wall_ms": 0.4721000150311738}
+{"kind": "aggregate", "groups": 128, "workload": "pinned_aggregate", "payload_bytes": 18874368, "transfers": true, "medians": {"cuda_ms": 0.35756801068782806, "wall_ms": 0.45065001177135855}, "gpu_peak_allocated_bytes": 46274560}
+{"kind": "integrity", "groups": 128, "workload": "pageable_staged", "passed": true, "relative_l2": null, "payload_bytes": 18874368, "cpu_persistent_payload_bytes": 368071424, "gpu_preallocated_payload_bytes": 37754880}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 0, "warmup": true, "cuda_ms": 0.9411519765853882, "wall_ms": 1.059500005794689}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 1, "warmup": true, "cuda_ms": 0.8886399865150452, "wall_ms": 0.9987999801523983}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 2, "warmup": true, "cuda_ms": 0.9562559723854065, "wall_ms": 1.0141000093426555}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 3, "warmup": false, "cuda_ms": 0.8752319812774658, "wall_ms": 0.9313999908044934}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 4, "warmup": false, "cuda_ms": 0.8700159788131714, "wall_ms": 0.9285999985877424}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 5, "warmup": false, "cuda_ms": 0.8126400113105774, "wall_ms": 0.9182999783661216}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 6, "warmup": false, "cuda_ms": 0.8301119804382324, "wall_ms": 0.9370000043418258}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 7, "warmup": false, "cuda_ms": 0.8613119721412659, "wall_ms": 0.9592999995220453}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 8, "warmup": false, "cuda_ms": 0.8331199884414673, "wall_ms": 0.9217000042553991}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 9, "warmup": false, "cuda_ms": 0.9047999978065491, "wall_ms": 0.9665999969001859}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 10, "warmup": false, "cuda_ms": 1.077631950378418, "wall_ms": 1.1560000129975379}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 11, "warmup": false, "cuda_ms": 0.9123200178146362, "wall_ms": 1.0140000085812062}
+{"kind": "timing", "groups": 128, "workload": "pageable_staged", "repetition": 12, "warmup": false, "cuda_ms": 1.172160029411316, "wall_ms": 1.2756999931298196}
+{"kind": "aggregate", "groups": 128, "workload": "pageable_staged", "payload_bytes": 18874368, "transfers": true, "medians": {"cuda_ms": 0.8726239800453186, "wall_ms": 0.9481500019319355}, "gpu_peak_allocated_bytes": 46274560}
+{"kind": "integrity", "groups": 128, "workload": "gather_staged", "passed": true, "relative_l2": null, "payload_bytes": 18874368, "cpu_persistent_payload_bytes": 368071424, "gpu_preallocated_payload_bytes": 37754880}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 0, "warmup": true, "cuda_ms": 1.5236159563064575, "wall_ms": 1.58680000458844}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 1, "warmup": true, "cuda_ms": 1.8952640295028687, "wall_ms": 1.9717999966815114}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 2, "warmup": true, "cuda_ms": 1.3152960538864136, "wall_ms": 1.439199986634776}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 3, "warmup": false, "cuda_ms": 1.1696319580078125, "wall_ms": 1.285000005736947}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 4, "warmup": false, "cuda_ms": 1.1537920236587524, "wall_ms": 1.2645000242628157}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 5, "warmup": false, "cuda_ms": 1.1785279512405396, "wall_ms": 1.2684999965131283}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 6, "warmup": false, "cuda_ms": 1.1911360025405884, "wall_ms": 1.2468999775592238}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 7, "warmup": false, "cuda_ms": 1.1527680158615112, "wall_ms": 1.2058000138495117}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 8, "warmup": false, "cuda_ms": 1.284224033355713, "wall_ms": 1.3804000045638531}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 9, "warmup": false, "cuda_ms": 1.2791680097579956, "wall_ms": 1.3450999977067113}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 10, "warmup": false, "cuda_ms": 1.1948800086975098, "wall_ms": 1.3097000191919506}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 11, "warmup": false, "cuda_ms": 1.2783360481262207, "wall_ms": 1.3852000120095909}
+{"kind": "timing", "groups": 128, "workload": "gather_staged", "repetition": 12, "warmup": false, "cuda_ms": 1.1910719871520996, "wall_ms": 1.2402000138536096}
+{"kind": "aggregate", "groups": 128, "workload": "gather_staged", "payload_bytes": 18874368, "transfers": true, "medians": {"cuda_ms": 1.191103994846344, "wall_ms": 1.2767500011250377}, "gpu_peak_allocated_bytes": 46274560}
+{"kind": "integrity", "groups": 128, "workload": "pinned_individual", "passed": true, "relative_l2": null, "payload_bytes": 18874368, "cpu_persistent_payload_bytes": 368071424, "gpu_preallocated_payload_bytes": 37754880}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 0, "warmup": true, "cuda_ms": 1.1072959899902344, "wall_ms": 1.2876999971922487}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 1, "warmup": true, "cuda_ms": 1.4335039854049683, "wall_ms": 1.4993999793659896}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 2, "warmup": true, "cuda_ms": 1.3768960237503052, "wall_ms": 1.5669000276830047}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 3, "warmup": false, "cuda_ms": 1.1123839616775513, "wall_ms": 1.367199991364032}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 4, "warmup": false, "cuda_ms": 1.1393280029296875, "wall_ms": 1.3378000003285706}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 5, "warmup": false, "cuda_ms": 1.3065279722213745, "wall_ms": 1.3509999844245613}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 6, "warmup": false, "cuda_ms": 1.2425600290298462, "wall_ms": 1.2888999772258103}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 7, "warmup": false, "cuda_ms": 1.2935680150985718, "wall_ms": 1.3450999977067113}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 8, "warmup": false, "cuda_ms": 1.1994880437850952, "wall_ms": 1.368700002785772}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 9, "warmup": false, "cuda_ms": 1.1414719820022583, "wall_ms": 1.3365999911911786}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 10, "warmup": false, "cuda_ms": 1.132383942604065, "wall_ms": 1.3181999966036528}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 11, "warmup": false, "cuda_ms": 1.3964159488677979, "wall_ms": 1.4587999903596938}
+{"kind": "timing", "groups": 128, "workload": "pinned_individual", "repetition": 12, "warmup": false, "cuda_ms": 1.3081920146942139, "wall_ms": 1.3939999917056412}
+{"kind": "aggregate", "groups": 128, "workload": "pinned_individual", "payload_bytes": 18874368, "transfers": true, "medians": {"cuda_ms": 1.2210240364074707, "wall_ms": 1.3480499910656363}, "gpu_peak_allocated_bytes": 46274560}
+{"kind": "integrity", "groups": 128, "workload": "resident_ffn", "passed": true, "relative_l2": 5.96671936606775e-07, "payload_bytes": 18874368, "cpu_persistent_payload_bytes": 368071424, "gpu_preallocated_payload_bytes": 37754880}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 0, "warmup": true, "cuda_ms": 0.19206400215625763, "wall_ms": 0.32469999860040843}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 1, "warmup": true, "cuda_ms": 0.03404799848794937, "wall_ms": 0.2599999716039747}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 2, "warmup": true, "cuda_ms": 0.03404799848794937, "wall_ms": 0.26069997693412006}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 3, "warmup": false, "cuda_ms": 0.03488000109791756, "wall_ms": 0.25859999004751444}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 4, "warmup": false, "cuda_ms": 0.03436800092458725, "wall_ms": 0.30460002017207444}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 5, "warmup": false, "cuda_ms": 0.03385600075125694, "wall_ms": 2.9421999934129417}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 6, "warmup": false, "cuda_ms": 0.03372799977660179, "wall_ms": 0.21009999909438193}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 7, "warmup": false, "cuda_ms": 0.03244800120592117, "wall_ms": 0.2967999898828566}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 8, "warmup": false, "cuda_ms": 0.034272000193595886, "wall_ms": 0.2572000084910542}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 9, "warmup": false, "cuda_ms": 0.03526400029659271, "wall_ms": 0.27630000840872526}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 10, "warmup": false, "cuda_ms": 0.03484800085425377, "wall_ms": 0.2646000066306442}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 11, "warmup": false, "cuda_ms": 0.03478400036692619, "wall_ms": 0.2776999899651855}
+{"kind": "timing", "groups": 128, "workload": "resident_ffn", "repetition": 12, "warmup": false, "cuda_ms": 0.03478400036692619, "wall_ms": 0.21019999985583127}
+{"kind": "aggregate", "groups": 128, "workload": "resident_ffn", "payload_bytes": 18874368, "transfers": false, "medians": {"cuda_ms": 0.03457600064575672, "wall_ms": 0.27045000751968473}, "gpu_peak_allocated_bytes": 46292992}
+{"kind": "integrity", "groups": 128, "workload": "gather_transfer_pack_ffn", "passed": true, "relative_l2": 5.96671936606775e-07, "payload_bytes": 18874368, "cpu_persistent_payload_bytes": 368071424, "gpu_preallocated_payload_bytes": 37754880}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 0, "warmup": true, "cuda_ms": 1.7273600101470947, "wall_ms": 1.8503000028431416}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 1, "warmup": true, "cuda_ms": 0.6082559823989868, "wall_ms": 1.4796999748796225}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 2, "warmup": true, "cuda_ms": 1.1828800439834595, "wall_ms": 1.4054999919608235}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 3, "warmup": false, "cuda_ms": 4.682528018951416, "wall_ms": 4.95889998273924}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 4, "warmup": false, "cuda_ms": 1.6820160150527954, "wall_ms": 1.9329999922774732}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 5, "warmup": false, "cuda_ms": 1.4915839433670044, "wall_ms": 1.7090000037569553}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 6, "warmup": false, "cuda_ms": 1.2674560546875, "wall_ms": 1.4835999754723161}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 7, "warmup": false, "cuda_ms": 1.2644799947738647, "wall_ms": 1.4830000000074506}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 8, "warmup": false, "cuda_ms": 0.5965120196342468, "wall_ms": 4.2289000120945275}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 9, "warmup": false, "cuda_ms": 1.2073919773101807, "wall_ms": 1.442899985704571}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 10, "warmup": false, "cuda_ms": 1.291648030281067, "wall_ms": 1.4506000152323395}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 11, "warmup": false, "cuda_ms": 1.334879994392395, "wall_ms": 1.5610000118613243}
+{"kind": "timing", "groups": 128, "workload": "gather_transfer_pack_ffn", "repetition": 12, "warmup": false, "cuda_ms": 1.3651520013809204, "wall_ms": 1.5943000034894794}
+{"kind": "aggregate", "groups": 128, "workload": "gather_transfer_pack_ffn", "payload_bytes": 18874368, "transfers": true, "medians": {"cuda_ms": 1.313264012336731, "wall_ms": 1.5776500076754019}, "gpu_peak_allocated_bytes": 46292992}
+{"kind": "integrity", "groups": 512, "workload": "pinned_aggregate", "passed": true, "relative_l2": null, "payload_bytes": 75497472, "cpu_persistent_payload_bytes": 481317632, "gpu_preallocated_payload_bytes": 151001088}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 0, "warmup": true, "cuda_ms": 1.496127963066101, "wall_ms": 1.5696999907959253}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 1, "warmup": true, "cuda_ms": 1.4203840494155884, "wall_ms": 1.5389999898616225}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 2, "warmup": true, "cuda_ms": 1.4107520580291748, "wall_ms": 1.5355999930761755}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 3, "warmup": false, "cuda_ms": 1.3997759819030762, "wall_ms": 1.4789999986533076}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 4, "warmup": false, "cuda_ms": 1.403167963027954, "wall_ms": 1.512099988758564}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 5, "warmup": false, "cuda_ms": 1.4103679656982422, "wall_ms": 1.4690000098198652}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 6, "warmup": false, "cuda_ms": 1.7711679935455322, "wall_ms": 1.8268999992869794}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 7, "warmup": false, "cuda_ms": 1.4113279581069946, "wall_ms": 1.514500007033348}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 8, "warmup": false, "cuda_ms": 1.4119360446929932, "wall_ms": 1.516399992397055}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 9, "warmup": false, "cuda_ms": 1.4213440418243408, "wall_ms": 1.562100020237267}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 10, "warmup": false, "cuda_ms": 1.4232640266418457, "wall_ms": 1.576999988174066}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 11, "warmup": false, "cuda_ms": 1.422976016998291, "wall_ms": 1.5208999975584447}
+{"kind": "timing", "groups": 512, "workload": "pinned_aggregate", "repetition": 12, "warmup": false, "cuda_ms": 1.4351359605789185, "wall_ms": 1.4999000122770667}
+{"kind": "aggregate", "groups": 512, "workload": "pinned_aggregate", "payload_bytes": 75497472, "transfers": true, "medians": {"cuda_ms": 1.416640043258667, "wall_ms": 1.5154499997152016}, "gpu_peak_allocated_bytes": 159520768}
+{"kind": "integrity", "groups": 512, "workload": "pageable_staged", "passed": true, "relative_l2": null, "payload_bytes": 75497472, "cpu_persistent_payload_bytes": 481317632, "gpu_preallocated_payload_bytes": 151001088}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 0, "warmup": true, "cuda_ms": 5.094240188598633, "wall_ms": 5.180699983611703}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 1, "warmup": true, "cuda_ms": 4.63804817199707, "wall_ms": 4.78260000818409}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 2, "warmup": true, "cuda_ms": 4.71065616607666, "wall_ms": 4.791799990925938}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 3, "warmup": false, "cuda_ms": 4.8106560707092285, "wall_ms": 4.90999998874031}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 4, "warmup": false, "cuda_ms": 5.435455799102783, "wall_ms": 5.573000002186745}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 5, "warmup": false, "cuda_ms": 4.748447895050049, "wall_ms": 4.832299979170784}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 6, "warmup": false, "cuda_ms": 4.590240001678467, "wall_ms": 4.737100010970607}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 7, "warmup": false, "cuda_ms": 4.575808048248291, "wall_ms": 4.7104999830480665}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 8, "warmup": false, "cuda_ms": 4.736991882324219, "wall_ms": 4.847700009122491}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 9, "warmup": false, "cuda_ms": 4.557472229003906, "wall_ms": 4.68029998592101}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 10, "warmup": false, "cuda_ms": 4.520031929016113, "wall_ms": 4.649899987271056}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 11, "warmup": false, "cuda_ms": 4.68390417098999, "wall_ms": 4.74849998136051}
+{"kind": "timing", "groups": 512, "workload": "pageable_staged", "repetition": 12, "warmup": false, "cuda_ms": 4.857151985168457, "wall_ms": 4.976199998054653}
+{"kind": "aggregate", "groups": 512, "workload": "pageable_staged", "payload_bytes": 75497472, "transfers": true, "medians": {"cuda_ms": 4.7104480266571045, "wall_ms": 4.790399980265647}, "gpu_peak_allocated_bytes": 159520768}
+{"kind": "integrity", "groups": 512, "workload": "gather_staged", "passed": true, "relative_l2": null, "payload_bytes": 75497472, "cpu_persistent_payload_bytes": 481317632, "gpu_preallocated_payload_bytes": 151001088}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 0, "warmup": true, "cuda_ms": 6.602047920227051, "wall_ms": 6.7235000024084}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 1, "warmup": true, "cuda_ms": 6.183167934417725, "wall_ms": 6.279599998379126}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 2, "warmup": true, "cuda_ms": 6.3321919441223145, "wall_ms": 6.477199989603832}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 3, "warmup": false, "cuda_ms": 6.128640174865723, "wall_ms": 6.218800001079217}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 4, "warmup": false, "cuda_ms": 6.253087997436523, "wall_ms": 6.405899999663234}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 5, "warmup": false, "cuda_ms": 6.158175945281982, "wall_ms": 6.2769000069238245}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 6, "warmup": false, "cuda_ms": 6.300159931182861, "wall_ms": 6.402300001354888}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 7, "warmup": false, "cuda_ms": 6.132607936859131, "wall_ms": 6.258900015382096}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 8, "warmup": false, "cuda_ms": 6.282303810119629, "wall_ms": 6.370599992806092}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 9, "warmup": false, "cuda_ms": 5.935743808746338, "wall_ms": 6.04350000503473}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 10, "warmup": false, "cuda_ms": 6.324639797210693, "wall_ms": 6.46570001845248}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 11, "warmup": false, "cuda_ms": 6.500351905822754, "wall_ms": 6.5565000113565475}
+{"kind": "timing", "groups": 512, "workload": "gather_staged", "repetition": 12, "warmup": false, "cuda_ms": 6.15993595123291, "wall_ms": 6.299300002865493}
+{"kind": "aggregate", "groups": 512, "workload": "gather_staged", "payload_bytes": 75497472, "transfers": true, "medians": {"cuda_ms": 6.206511974334717, "wall_ms": 6.334949997835793}, "gpu_peak_allocated_bytes": 159520768}
+{"kind": "integrity", "groups": 512, "workload": "pinned_individual", "passed": true, "relative_l2": null, "payload_bytes": 75497472, "cpu_persistent_payload_bytes": 481317632, "gpu_preallocated_payload_bytes": 151001088}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 0, "warmup": true, "cuda_ms": 5.652927875518799, "wall_ms": 5.737500003306195}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 1, "warmup": true, "cuda_ms": 5.364416122436523, "wall_ms": 5.580199998803437}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 2, "warmup": true, "cuda_ms": 4.820511817932129, "wall_ms": 4.970999987563118}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 3, "warmup": false, "cuda_ms": 5.106207847595215, "wall_ms": 5.168799980310723}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 4, "warmup": false, "cuda_ms": 5.324927806854248, "wall_ms": 5.5305999994743615}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 5, "warmup": false, "cuda_ms": 4.4871039390563965, "wall_ms": 4.703900020103902}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 6, "warmup": false, "cuda_ms": 5.14035177230835, "wall_ms": 5.188099981751293}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 7, "warmup": false, "cuda_ms": 4.682720184326172, "wall_ms": 4.89380001090467}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 8, "warmup": false, "cuda_ms": 4.808703899383545, "wall_ms": 4.999700002372265}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 9, "warmup": false, "cuda_ms": 6.401120185852051, "wall_ms": 6.500300019979477}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 10, "warmup": false, "cuda_ms": 4.909215927124023, "wall_ms": 5.106199998408556}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 11, "warmup": false, "cuda_ms": 5.2691521644592285, "wall_ms": 5.32339999335818}
+{"kind": "timing", "groups": 512, "workload": "pinned_individual", "repetition": 12, "warmup": false, "cuda_ms": 4.761312007904053, "wall_ms": 4.945000022416934}
+{"kind": "aggregate", "groups": 512, "workload": "pinned_individual", "payload_bytes": 75497472, "transfers": true, "medians": {"cuda_ms": 5.007711887359619, "wall_ms": 5.13749998935964}, "gpu_peak_allocated_bytes": 159520768}
+{"kind": "integrity", "groups": 512, "workload": "resident_ffn", "passed": true, "relative_l2": 6.302366286366988e-07, "payload_bytes": 75497472, "cpu_persistent_payload_bytes": 481317632, "gpu_preallocated_payload_bytes": 151001088}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 0, "warmup": true, "cuda_ms": 0.33907198905944824, "wall_ms": 0.45280001359060407}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 1, "warmup": true, "cuda_ms": 0.16451199352741241, "wall_ms": 0.3389999910723418}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 2, "warmup": true, "cuda_ms": 0.1645440012216568, "wall_ms": 0.3336000081617385}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 3, "warmup": false, "cuda_ms": 0.1653439998626709, "wall_ms": 0.40669998270459473}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 4, "warmup": false, "cuda_ms": 0.16476799547672272, "wall_ms": 0.4264000162947923}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 5, "warmup": false, "cuda_ms": 0.1624639928340912, "wall_ms": 0.3242999955546111}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 6, "warmup": false, "cuda_ms": 0.1629440039396286, "wall_ms": 0.3601000062189996}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 7, "warmup": false, "cuda_ms": 0.1679999977350235, "wall_ms": 0.40630000876262784}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 8, "warmup": false, "cuda_ms": 0.16579200327396393, "wall_ms": 0.39080000715330243}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 9, "warmup": false, "cuda_ms": 0.16595199704170227, "wall_ms": 0.39640002069063485}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 10, "warmup": false, "cuda_ms": 0.16646400094032288, "wall_ms": 2.9255000117700547}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 11, "warmup": false, "cuda_ms": 0.16467200219631195, "wall_ms": 0.4030000127386302}
+{"kind": "timing", "groups": 512, "workload": "resident_ffn", "repetition": 12, "warmup": false, "cuda_ms": 0.16553600132465363, "wall_ms": 0.4045999958179891}
+{"kind": "aggregate", "groups": 512, "workload": "resident_ffn", "payload_bytes": 75497472, "transfers": false, "medians": {"cuda_ms": 0.16544000059366226, "wall_ms": 0.40380000427830964}, "gpu_peak_allocated_bytes": 159576064}
+{"kind": "integrity", "groups": 512, "workload": "gather_transfer_pack_ffn", "passed": true, "relative_l2": 6.302366286366988e-07, "payload_bytes": 75497472, "cpu_persistent_payload_bytes": 481317632, "gpu_preallocated_payload_bytes": 151001088}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 0, "warmup": true, "cuda_ms": 6.6854400634765625, "wall_ms": 6.806899997172877}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 1, "warmup": true, "cuda_ms": 8.840703964233398, "wall_ms": 9.072700020624325}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 2, "warmup": true, "cuda_ms": 6.613311767578125, "wall_ms": 6.858799984911457}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 3, "warmup": false, "cuda_ms": 8.788543701171875, "wall_ms": 9.041099983733147}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 4, "warmup": false, "cuda_ms": 8.580384254455566, "wall_ms": 8.751099987421185}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 5, "warmup": false, "cuda_ms": 7.048384189605713, "wall_ms": 7.189800002379343}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 6, "warmup": false, "cuda_ms": 6.441279888153076, "wall_ms": 6.681099999696016}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 7, "warmup": false, "cuda_ms": 8.843711853027344, "wall_ms": 9.054599999217317}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 8, "warmup": false, "cuda_ms": 6.498496055603027, "wall_ms": 6.759400013834238}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 9, "warmup": false, "cuda_ms": 8.400959968566895, "wall_ms": 8.641299995360896}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 10, "warmup": false, "cuda_ms": 8.391584396362305, "wall_ms": 8.579099987400696}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 11, "warmup": false, "cuda_ms": 7.1405439376831055, "wall_ms": 7.269199995789677}
+{"kind": "timing", "groups": 512, "workload": "gather_transfer_pack_ffn", "repetition": 12, "warmup": false, "cuda_ms": 7.022528171539307, "wall_ms": 7.21250000060536}
+{"kind": "aggregate", "groups": 512, "workload": "gather_transfer_pack_ffn", "payload_bytes": 75497472, "transfers": true, "medians": {"cuda_ms": 7.766064167022705, "wall_ms": 7.924149991595186}, "gpu_peak_allocated_bytes": 159576064}
+{"kind": "integrity", "groups": 1120, "workload": "pinned_aggregate", "passed": true, "relative_l2": null, "payload_bytes": 165150720, "cpu_persistent_payload_bytes": 660624128, "gpu_preallocated_payload_bytes": 330307584}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 0, "warmup": true, "cuda_ms": 3.636415958404541, "wall_ms": 3.7632999883498996}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 1, "warmup": true, "cuda_ms": 3.4704320430755615, "wall_ms": 3.5293000109959394}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 2, "warmup": true, "cuda_ms": 3.0133440494537354, "wall_ms": 3.1544000084977597}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 3, "warmup": false, "cuda_ms": 3.2235519886016846, "wall_ms": 3.3059000270441175}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 4, "warmup": false, "cuda_ms": 3.112799882888794, "wall_ms": 3.2278999860864133}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 5, "warmup": false, "cuda_ms": 3.070688009262085, "wall_ms": 3.174700017552823}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 6, "warmup": false, "cuda_ms": 3.0578880310058594, "wall_ms": 3.189300012309104}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 7, "warmup": false, "cuda_ms": 3.0703039169311523, "wall_ms": 3.1484999926760793}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 8, "warmup": false, "cuda_ms": 3.0708799362182617, "wall_ms": 3.2251999946311116}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 9, "warmup": false, "cuda_ms": 3.0648961067199707, "wall_ms": 3.199099999619648}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 10, "warmup": false, "cuda_ms": 3.413055896759033, "wall_ms": 3.5140999825671315}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 11, "warmup": false, "cuda_ms": 3.088320016860962, "wall_ms": 3.1784999882802367}
+{"kind": "timing", "groups": 1120, "workload": "pinned_aggregate", "repetition": 12, "warmup": false, "cuda_ms": 3.083264112472534, "wall_ms": 3.215400007320568}
+{"kind": "aggregate", "groups": 1120, "workload": "pinned_aggregate", "payload_bytes": 165150720, "transfers": true, "medians": {"cuda_ms": 3.077072024345398, "wall_ms": 3.207250003470108}, "gpu_peak_allocated_bytes": 339351552}
+{"kind": "integrity", "groups": 1120, "workload": "pageable_staged", "passed": true, "relative_l2": null, "payload_bytes": 165150720, "cpu_persistent_payload_bytes": 660624128, "gpu_preallocated_payload_bytes": 330307584}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 0, "warmup": true, "cuda_ms": 10.961695671081543, "wall_ms": 11.048100015614182}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 1, "warmup": true, "cuda_ms": 10.575551986694336, "wall_ms": 10.714800009736791}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 2, "warmup": true, "cuda_ms": 11.137375831604004, "wall_ms": 11.291600007098168}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 3, "warmup": false, "cuda_ms": 10.682496070861816, "wall_ms": 10.780700016766787}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 4, "warmup": false, "cuda_ms": 10.273823738098145, "wall_ms": 10.403099993709475}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 5, "warmup": false, "cuda_ms": 10.286463737487793, "wall_ms": 10.383299988461658}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 6, "warmup": false, "cuda_ms": 10.414239883422852, "wall_ms": 10.535999987041578}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 7, "warmup": false, "cuda_ms": 10.47920036315918, "wall_ms": 10.61569998273626}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 8, "warmup": false, "cuda_ms": 10.406335830688477, "wall_ms": 10.502800025278702}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 9, "warmup": false, "cuda_ms": 10.407072067260742, "wall_ms": 10.571699996944517}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 10, "warmup": false, "cuda_ms": 10.412128448486328, "wall_ms": 10.551799990935251}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 11, "warmup": false, "cuda_ms": 10.342687606811523, "wall_ms": 10.448999993968755}
+{"kind": "timing", "groups": 1120, "workload": "pageable_staged", "repetition": 12, "warmup": false, "cuda_ms": 10.825728416442871, "wall_ms": 10.934000019915402}
+{"kind": "aggregate", "groups": 1120, "workload": "pageable_staged", "payload_bytes": 165150720, "transfers": true, "medians": {"cuda_ms": 10.409600257873535, "wall_ms": 10.543899988988414}, "gpu_peak_allocated_bytes": 339351552}
+{"kind": "integrity", "groups": 1120, "workload": "gather_staged", "passed": true, "relative_l2": null, "payload_bytes": 165150720, "cpu_persistent_payload_bytes": 660624128, "gpu_preallocated_payload_bytes": 330307584}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 0, "warmup": true, "cuda_ms": 14.72704029083252, "wall_ms": 14.847700018435717}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 1, "warmup": true, "cuda_ms": 13.593791961669922, "wall_ms": 13.747299992246553}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 2, "warmup": true, "cuda_ms": 13.746848106384277, "wall_ms": 13.843199994880706}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 3, "warmup": false, "cuda_ms": 14.108511924743652, "wall_ms": 14.179899997543544}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 4, "warmup": false, "cuda_ms": 13.693887710571289, "wall_ms": 13.835399993695319}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 5, "warmup": false, "cuda_ms": 15.421600341796875, "wall_ms": 15.794500010088086}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 6, "warmup": false, "cuda_ms": 14.102944374084473, "wall_ms": 14.264500001445413}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 7, "warmup": false, "cuda_ms": 13.69968032836914, "wall_ms": 13.838799990480766}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 8, "warmup": false, "cuda_ms": 13.683648109436035, "wall_ms": 13.79219998489134}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 9, "warmup": false, "cuda_ms": 13.237919807434082, "wall_ms": 13.34489998407662}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 10, "warmup": false, "cuda_ms": 13.319680213928223, "wall_ms": 13.466900010826066}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 11, "warmup": false, "cuda_ms": 13.578911781311035, "wall_ms": 13.70770001085475}
+{"kind": "timing", "groups": 1120, "workload": "gather_staged", "repetition": 12, "warmup": false, "cuda_ms": 13.390656471252441, "wall_ms": 13.46770001691766}
+{"kind": "aggregate", "groups": 1120, "workload": "gather_staged", "payload_bytes": 165150720, "transfers": true, "medians": {"cuda_ms": 13.688767910003662, "wall_ms": 13.81379998929333}, "gpu_peak_allocated_bytes": 339351552}
+{"kind": "integrity", "groups": 1120, "workload": "pinned_individual", "passed": true, "relative_l2": null, "payload_bytes": 165150720, "cpu_persistent_payload_bytes": 660624128, "gpu_preallocated_payload_bytes": 330307584}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 0, "warmup": true, "cuda_ms": 11.329119682312012, "wall_ms": 11.406200006604195}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 1, "warmup": true, "cuda_ms": 10.579903602600098, "wall_ms": 10.799699986819178}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 2, "warmup": true, "cuda_ms": 11.007007598876953, "wall_ms": 11.061400000471622}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 3, "warmup": false, "cuda_ms": 11.132448196411133, "wall_ms": 11.334100010572001}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 4, "warmup": false, "cuda_ms": 11.051039695739746, "wall_ms": 11.266799992881715}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 5, "warmup": false, "cuda_ms": 10.953344345092773, "wall_ms": 11.024000006727874}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 6, "warmup": false, "cuda_ms": 11.259743690490723, "wall_ms": 11.475500010419637}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 7, "warmup": false, "cuda_ms": 11.517151832580566, "wall_ms": 11.672199994791299}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 8, "warmup": false, "cuda_ms": 10.526528358459473, "wall_ms": 10.66749999881722}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 9, "warmup": false, "cuda_ms": 11.386303901672363, "wall_ms": 11.571800016099587}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 10, "warmup": false, "cuda_ms": 11.511327743530273, "wall_ms": 11.569199996301904}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 11, "warmup": false, "cuda_ms": 10.126496315002441, "wall_ms": 10.191100009251386}
+{"kind": "timing", "groups": 1120, "workload": "pinned_individual", "repetition": 12, "warmup": false, "cuda_ms": 21.285663604736328, "wall_ms": 21.519500005524606}
+{"kind": "aggregate", "groups": 1120, "workload": "pinned_individual", "payload_bytes": 165150720, "transfers": true, "medians": {"cuda_ms": 11.196095943450928, "wall_ms": 11.40480001049582}, "gpu_peak_allocated_bytes": 339351552}
+{"kind": "integrity", "groups": 1120, "workload": "resident_ffn", "passed": true, "relative_l2": 9.284960777644326e-07, "payload_bytes": 165150720, "cpu_persistent_payload_bytes": 660624128, "gpu_preallocated_payload_bytes": 330307584}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 0, "warmup": true, "cuda_ms": 0.5184000134468079, "wall_ms": 0.6415000243578106}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 1, "warmup": true, "cuda_ms": 0.32652801275253296, "wall_ms": 0.4794999840669334}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 2, "warmup": true, "cuda_ms": 0.3287679851055145, "wall_ms": 0.5223000189289451}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 3, "warmup": false, "cuda_ms": 0.3301439881324768, "wall_ms": 0.5634000117424875}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 4, "warmup": false, "cuda_ms": 0.3275200128555298, "wall_ms": 0.5583000020124018}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 5, "warmup": false, "cuda_ms": 0.32784000039100647, "wall_ms": 0.6877999985590577}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 6, "warmup": false, "cuda_ms": 0.32784000039100647, "wall_ms": 2.592100005131215}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 7, "warmup": false, "cuda_ms": 0.328031986951828, "wall_ms": 0.5883999983780086}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 8, "warmup": false, "cuda_ms": 0.32761600613594055, "wall_ms": 0.5715999868698418}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 9, "warmup": false, "cuda_ms": 0.3270399868488312, "wall_ms": 0.5644999910145998}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 10, "warmup": false, "cuda_ms": 0.3264639973640442, "wall_ms": 0.5561999860219657}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 11, "warmup": false, "cuda_ms": 0.32684800028800964, "wall_ms": 0.5538999976124614}
+{"kind": "timing", "groups": 1120, "workload": "resident_ffn", "repetition": 12, "warmup": false, "cuda_ms": 0.3262079954147339, "wall_ms": 0.5684999923687428}
+{"kind": "aggregate", "groups": 1120, "workload": "resident_ffn", "payload_bytes": 165150720, "transfers": false, "medians": {"cuda_ms": 0.32756800949573517, "wall_ms": 0.5664999916916713}, "gpu_peak_allocated_bytes": 339465216}
+{"kind": "integrity", "groups": 1120, "workload": "gather_transfer_pack_ffn", "passed": true, "relative_l2": 9.284960777644326e-07, "payload_bytes": 165150720, "cpu_persistent_payload_bytes": 660624128, "gpu_preallocated_payload_bytes": 330307584}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 0, "warmup": true, "cuda_ms": 17.69878387451172, "wall_ms": 17.831700009992346}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 1, "warmup": true, "cuda_ms": 17.69820785522461, "wall_ms": 17.956199997570366}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 2, "warmup": true, "cuda_ms": 14.783295631408691, "wall_ms": 15.022999985376373}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 3, "warmup": false, "cuda_ms": 18.29542350769043, "wall_ms": 18.53059997665696}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 4, "warmup": false, "cuda_ms": 15.985759735107422, "wall_ms": 16.212399990763515}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 5, "warmup": false, "cuda_ms": 15.948479652404785, "wall_ms": 16.19990001199767}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 6, "warmup": false, "cuda_ms": 15.233216285705566, "wall_ms": 15.387299994472414}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 7, "warmup": false, "cuda_ms": 14.560383796691895, "wall_ms": 14.933900005416945}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 8, "warmup": false, "cuda_ms": 15.198431968688965, "wall_ms": 15.232000005198643}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 9, "warmup": false, "cuda_ms": 15.206239700317383, "wall_ms": 15.452799998456612}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 10, "warmup": false, "cuda_ms": 12.97107219696045, "wall_ms": 17.98060000874102}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 11, "warmup": false, "cuda_ms": 15.62889575958252, "wall_ms": 15.852500015171245}
+{"kind": "timing", "groups": 1120, "workload": "gather_transfer_pack_ffn", "repetition": 12, "warmup": false, "cuda_ms": 15.752608299255371, "wall_ms": 15.994700021110475}
+{"kind": "aggregate", "groups": 1120, "workload": "gather_transfer_pack_ffn", "payload_bytes": 165150720, "transfers": true, "medians": {"cuda_ms": 15.431056022644043, "wall_ms": 15.92360001814086}, "gpu_peak_allocated_bytes": 339465216}
+{"kind": "ranking_integrity", "unique_rows": 896, "unique_masks_equal": true, "equal_score_masks_equal": true, "stable_tie_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680, 681, 682, 683, 684, 685, 686, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748, 749, 750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858, 859, 860, 861, 862, 863, 864, 865, 866, 867, 868, 869, 870, 871, 872, 873, 874, 875, 876, 877, 878, 879, 880, 881, 882, 883, 884, 885, 886, 887, 888, 889, 890, 891, 892, 893, 894, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 907, 908, 909, 910, 911, 912, 913, 914, 915, 916, 917, 918, 919, 920, 921, 922, 923, 924, 925, 926, 927, 928, 929, 930, 931, 932, 933, 934, 935, 936, 937, 938, 939, 940, 941, 942, 943, 944, 945, 946, 947, 948, 949, 950, 951, 952, 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963, 964, 965, 966, 967, 968, 969, 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007], "topk_tie_indices": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184, 185, 186, 187, 188, 189, 190, 191, 192, 193, 194, 195, 196, 197, 198, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448, 449, 450, 451, 452, 453, 454, 455, 456, 457, 458, 459, 460, 461, 462, 463, 464, 465, 466, 467, 468, 469, 470, 471, 472, 473, 474, 475, 476, 477, 478, 479, 480, 481, 482, 483, 484, 485, 486, 487, 488, 489, 490, 491, 492, 493, 494, 495, 496, 497, 498, 499, 500, 501, 502, 503, 504, 505, 506, 507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548, 549, 550, 551, 552, 553, 554, 555, 556, 557, 558, 559, 560, 561, 562, 563, 564, 565, 566, 567, 568, 569, 570, 571, 572, 573, 574, 575, 576, 577, 578, 579, 580, 581, 582, 583, 584, 585, 586, 587, 588, 589, 590, 591, 592, 593, 594, 595, 596, 597, 598, 599, 600, 601, 602, 603, 604, 605, 606, 607, 608, 609, 610, 611, 612, 613, 614, 615, 616, 617, 618, 619, 620, 621, 622, 623, 624, 625, 626, 627, 628, 629, 630, 631, 632, 633, 634, 635, 636, 637, 638, 639, 640, 641, 642, 643, 644, 645, 646, 647, 648, 649, 650, 651, 652, 653, 654, 655, 656, 657, 658, 659, 660, 661, 662, 663, 664, 665, 666, 667, 668, 669, 670, 671, 672, 673, 674, 675, 676, 677, 678, 679, 680, 681, 682, 683, 684, 685, 686, 687, 688, 689, 690, 691, 692, 693, 694, 695, 696, 697, 698, 699, 700, 701, 702, 703, 704, 705, 706, 707, 708, 709, 710, 711, 712, 713, 714, 715, 716, 717, 718, 719, 720, 721, 722, 723, 724, 725, 726, 727, 728, 729, 730, 731, 732, 733, 734, 735, 736, 737, 738, 739, 740, 741, 742, 743, 744, 745, 746, 747, 748, 749, 750, 751, 752, 753, 754, 755, 756, 757, 758, 759, 760, 761, 762, 763, 764, 765, 766, 767, 768, 769, 770, 771, 772, 773, 774, 775, 776, 777, 778, 779, 780, 781, 782, 783, 784, 785, 786, 787, 788, 789, 790, 791, 792, 793, 794, 795, 796, 797, 798, 799, 800, 801, 802, 803, 804, 805, 806, 807, 808, 809, 810, 811, 812, 813, 814, 815, 816, 817, 818, 819, 820, 821, 822, 823, 824, 825, 826, 827, 828, 829, 830, 831, 832, 833, 834, 835, 836, 837, 838, 839, 840, 841, 842, 843, 844, 845, 846, 847, 848, 849, 850, 851, 852, 853, 854, 855, 856, 857, 858, 859, 860, 861, 862, 863, 864, 865, 866, 867, 868, 869, 870, 871, 872, 873, 874, 875, 876, 877, 878, 879, 880, 881, 882, 883, 884, 885, 886, 887, 888, 889, 890, 891, 892, 893, 894, 895, 896, 897, 898, 899, 900, 901, 902, 903, 904, 905, 906, 907, 908, 909, 910, 911, 912, 913, 914, 915, 916, 917, 918, 919, 920, 921, 922, 923, 924, 925, 926, 927, 928, 929, 930, 931, 932, 933, 934, 935, 936, 937, 938, 939, 940, 941, 942, 943, 944, 945, 946, 947, 948, 949, 950, 951, 952, 953, 954, 955, 956, 957, 958, 959, 960, 961, 962, 963, 964, 965, 966, 967, 968, 969, 970, 971, 972, 973, 974, 975, 976, 977, 978, 979, 980, 981, 982, 983, 984, 985, 986, 987, 988, 989, 990, 991, 992, 993, 994, 995, 996, 997, 998, 999, 1000, 1001, 1002, 1003, 1004, 1005, 1006, 1007]}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 0, "warmup": true, "cuda_ms": 58.83631896972656, "wall_ms": 58.93359999754466}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 1, "warmup": true, "cuda_ms": 49.78956985473633, "wall_ms": 49.8385000100825}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 2, "warmup": true, "cuda_ms": 62.65590286254883, "wall_ms": 62.696299981325865}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 3, "warmup": false, "cuda_ms": 61.97657775878906, "wall_ms": 62.03219998860732}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 4, "warmup": false, "cuda_ms": 62.37807846069336, "wall_ms": 62.42400000337511}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 5, "warmup": false, "cuda_ms": 54.938785552978516, "wall_ms": 54.993500001728535}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 6, "warmup": false, "cuda_ms": 63.71094512939453, "wall_ms": 63.75750000006519}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 7, "warmup": false, "cuda_ms": 73.77094268798828, "wall_ms": 73.82530000177212}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 8, "warmup": false, "cuda_ms": 63.692543029785156, "wall_ms": 63.73300001723692}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 9, "warmup": false, "cuda_ms": 51.7542724609375, "wall_ms": 51.82009999407455}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 10, "warmup": false, "cuda_ms": 62.44985580444336, "wall_ms": 62.49840001692064}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 11, "warmup": false, "cuda_ms": 64.64403533935547, "wall_ms": 64.69349999679253}
+{"kind": "ranking_timing", "method": "stable_argsort", "repetition": 12, "warmup": false, "cuda_ms": 51.53878402709961, "wall_ms": 51.599099999293685}
+{"kind": "ranking_aggregate", "method": "stable_argsort", "medians": {"cuda_ms": 62.41396713256836, "wall_ms": 62.46120001014788}}
+{"kind": "ranking_timing", "method": "topk", "repetition": 0, "warmup": true, "cuda_ms": 32.747039794921875, "wall_ms": 32.78330000466667}
+{"kind": "ranking_timing", "method": "topk", "repetition": 1, "warmup": true, "cuda_ms": 24.94108772277832, "wall_ms": 24.97979998588562}
+{"kind": "ranking_timing", "method": "topk", "repetition": 2, "warmup": true, "cuda_ms": 24.70467185974121, "wall_ms": 24.737200001254678}
+{"kind": "ranking_timing", "method": "topk", "repetition": 3, "warmup": false, "cuda_ms": 24.926591873168945, "wall_ms": 24.963100004242733}
+{"kind": "ranking_timing", "method": "topk", "repetition": 4, "warmup": false, "cuda_ms": 32.34163284301758, "wall_ms": 32.37739999894984}
+{"kind": "ranking_timing", "method": "topk", "repetition": 5, "warmup": false, "cuda_ms": 25.440895080566406, "wall_ms": 25.49260001978837}
+{"kind": "ranking_timing", "method": "topk", "repetition": 6, "warmup": false, "cuda_ms": 24.356447219848633, "wall_ms": 24.399899994023144}
+{"kind": "ranking_timing", "method": "topk", "repetition": 7, "warmup": false, "cuda_ms": 24.61008071899414, "wall_ms": 24.64509999845177}
+{"kind": "ranking_timing", "method": "topk", "repetition": 8, "warmup": false, "cuda_ms": 34.87315368652344, "wall_ms": 34.91099999519065}
+{"kind": "ranking_timing", "method": "topk", "repetition": 9, "warmup": false, "cuda_ms": 24.551807403564453, "wall_ms": 24.600100005045533}
+{"kind": "ranking_timing", "method": "topk", "repetition": 10, "warmup": false, "cuda_ms": 23.94304084777832, "wall_ms": 23.98579998407513}
+{"kind": "ranking_timing", "method": "topk", "repetition": 11, "warmup": false, "cuda_ms": 33.113792419433594, "wall_ms": 33.15129998372868}
+{"kind": "ranking_timing", "method": "topk", "repetition": 12, "warmup": false, "cuda_ms": 24.90937614440918, "wall_ms": 24.95009999256581}
+{"kind": "ranking_aggregate", "method": "topk", "medians": {"cuda_ms": 24.917984008789062, "wall_ms": 24.956599998404272}}

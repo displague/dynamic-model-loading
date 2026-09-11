@@ -1,0 +1,77 @@
+Loading pinned Qwen for bounded repair controls
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<03:41,  1.52it/s]
+Loading weights:  47%|████▋     | 160/338 [00:00<00:00, 282.67it/s]
+Loading weights:  74%|███████▍  | 250/338 [00:01<00:00, 286.53it/s]
+Loading weights:  93%|█████████▎| 313/338 [00:01<00:00, 287.02it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 247.42it/s]
+Completed static-hindsight-0
+Completed static-hindsight-8
+Completed static-hindsight-28
+Completed static-hindsight-56
+Completed static-hindsight-84
+Completed static-hindsight-112
+Completed static-resident_first-0
+Completed static-resident_first-8
+Completed static-resident_first-28
+Completed static-resident_first-56
+Completed static-resident_first-84
+Completed static-resident_first-112
+Completed static-one_shot-0.9
+Completed static-one_shot-0.925
+Completed static-one_shot-0.95
+Completed static-one_shot-0.975
+Completed static-one_shot-1
+Completed recency-hindsight-0
+Completed recency-hindsight-8
+Completed recency-hindsight-28
+Completed recency-hindsight-56
+Completed recency-hindsight-84
+Completed recency-hindsight-112
+Completed recency-resident_first-0
+Completed recency-resident_first-8
+Completed recency-resident_first-28
+Completed recency-resident_first-56
+Completed recency-resident_first-84
+Completed recency-resident_first-112
+Completed recency-one_shot-0.9
+Completed recency-one_shot-0.925
+Completed recency-one_shot-0.95
+Completed recency-one_shot-0.975
+Completed recency-one_shot-1
+Completed ema-hindsight-0
+Completed ema-hindsight-8
+Completed ema-hindsight-28
+Completed ema-hindsight-56
+Completed ema-hindsight-84
+Completed ema-hindsight-112
+Completed ema-resident_first-0
+Completed ema-resident_first-8
+Completed ema-resident_first-28
+Completed ema-resident_first-56
+Completed ema-resident_first-84
+Completed ema-resident_first-112
+Completed ema-one_shot-0.9
+Completed ema-one_shot-0.925
+Completed ema-one_shot-0.95
+Completed ema-one_shot-0.975
+Completed ema-one_shot-1
+Completed learned-hindsight-0
+Completed learned-hindsight-8
+Completed learned-hindsight-28
+Completed learned-hindsight-56
+Completed learned-hindsight-84
+Completed learned-hindsight-112
+Completed learned-resident_first-0
+Completed learned-resident_first-8
+Completed learned-resident_first-28
+Completed learned-resident_first-56
+Completed learned-resident_first-84
+Completed learned-resident_first-112
+Completed learned-one_shot-0.9
+Completed learned-one_shot-0.925
+Completed learned-one_shot-0.95
+Completed learned-one_shot-0.975
+Completed learned-one_shot-1
+repair_diagnostic_completed
