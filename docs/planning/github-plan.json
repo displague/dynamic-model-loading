@@ -20,22 +20,27 @@
     {
       "stage": "3",
       "title": "Stage 3 - Causal working-set prediction",
-      "description": "First causal experiment completed in v0.7: all four selectors fail quality; three also fail affordability. No nominee for runtime/refinement. Broader quality/bytes/cost curves and useful predictor feasibility remain open; preserve the frozen negative result."
+      "description": "One-shot v0.7 failures are preserved. Broader causal prediction may combine current input, execution history and residency; analytical refinement is independently open. A complete causal acquisition policy must qualify before runtime."
     },
     {
       "stage": "4",
       "title": "Stage 4 - Bounded RAM-to-VRAM execution",
-      "description": "Implement bounded GPU slots and staging with actual skipped reads/computation. Compare against strongest same-budget streaming, cache, and CPU/GPU baselines after charging every overhead. Still gated after v0.7: no causal selector passes the frozen development screen."
+      "description": "Bounded hardware-cost characterization may proceed independently. Physical paging stays gated on a useful complete causal acquisition policy and must beat the strongest same-budget baseline on the measured critical path."
     },
     {
       "stage": "5",
-      "title": "Stage 5 - Corrective refinement",
-      "description": "Define unsafe omission, detect it cheaply, add omitted contributions before downstream commitment, and measure silent-failure risk versus extra bytes/latency against a larger initial subset. Still gated after v0.7: no causal selector passes the frozen development screen."
+      "title": "Stage 5b - Corrective refinement runtime",
+      "description": "Runtime half split from analytical issue #12. Gate on complete-policy feasibility and bounded execution; preserve input, acquire and add missing contributions before downstream commitment, with charged detector cost and bounded fallback."
     },
     {
       "stage": "later",
       "title": "Later - Generalization and representation studies",
       "description": "After earlier gates, repeat on a 7B-class model and another family, then independently study quantization, group heterogeneity, lookahead, low-rank residuals, block-structured training, and verified storage paging."
+    },
+    {
+      "stage": "5a",
+      "title": "Repairability - Are failed causal selections cheaply repairable?",
+      "description": "Analytical refinement may start from failed one-shot masks. First measure privileged and resident-first repair opportunity; then test causally available repair signals with charged probes. The complete causal policy must qualify; first-pass quality need not pass. No privileged diagnostic qualifies physical paging."
     }
   ],
   "issues": [
@@ -68,7 +73,7 @@
       "stage": "0",
       "title": "Establish a practical BF16 grouped execution policy without relaxing numerical gates",
       "completed": false,
-      "body": "The canonical-order diagnostic is exact but materializes inverse gathers. Define and measure an execution policy that satisfies the original all-weight gates while supporting group-local execution. Charge precision conversion and temporary allocations; preserve original failures and compare all six documents plus a larger sample. Exit: passing function checks and explicit cost evidence, not a relaxed tolerance."
+      "body": "The canonical-order diagnostic is exact but materializes inverse gathers. Define and measure an execution policy that satisfies the original all-weight gates while supporting group-local execution. Charge precision conversion and temporary allocations; preserve original failures and compare all six documents plus a larger sample. Exit: passing function checks and explicit cost evidence, not a relaxed tolerance.\n\nBound this workstream after the v0.7 design review: retain FP32 mathematical/selection diagnostics and every original BF16 failure. Compare a limited set of grouped policies against a common higher-precision reference with predeclared downstream criteria. Do not launch successive library-version sweeps or replace reference-fidelity limits with task tolerances."
     },
     {
       "key": "torch_control",
@@ -114,21 +119,21 @@
       "stage": "3",
       "title": "Compare causally available working-set predictors and their charged cost",
       "completed": false,
-      "body": "Compare static popularity, last-token/window reuse, EMA and learned selectors with explicit feature availability, charged predictor storage and execution cost, independent omission audits, and approximate closed-loop evaluation. Measure quality/bytes/cost curves and topic transitions. Gate: useful proximity to hindsight at an affordable measured cost.\n\nThe first frozen-point experiment is complete in #15 / [v0.7.0](https://github.com/displague/dynamic-model-loading/releases/tag/v0.7.0). All four causal selectors fail quality at Qwen popularity/width 8/90% retention: aggregate relative PPL 1.089204-1.158203 versus <=1.01, and all 16 articles individually fail for each selector. All pass the >=10% simulated warm-traffic screen; recency/EMA/learned also fail the <=10% CUDA-and-wall cost screen at about 72-83%. Static is cheap but loses quality. Incremental hindsight reaches 1.009318 and is ineligible. The complete raw ledger, masks, transition, generation and timing evidence are published.\n\nThis issue remains open for the broader useful-predictor gate and curves. No selector is nominated for paging/refinement. The negative result applies to these initial eager implementations and one operating point; it is not a proof that all predictors fail. Faster execution alone does not change the measured mask quality. Any new predictor, retention sweep or scale control needs a separate prospective protocol with fresh immutable receipts. Preserve this failed experiment and the original thresholds; do not retune on final test. Held-out quality #8 and runtime/refinement #11/#12 retain their separate gates.\n"
+      "body": "Compare static popularity, last-token/window reuse, EMA and learned selectors with explicit feature availability, charged predictor storage and execution cost, independent omission audits, and approximate closed-loop evaluation. Measure quality/bytes/cost curves and topic transitions. Gate: useful proximity to hindsight at an affordable measured cost.\n\nThe first frozen-point experiment is complete in #15 / [v0.7.0](https://github.com/displague/dynamic-model-loading/releases/tag/v0.7.0). All four causal selectors fail quality at Qwen popularity/width 8/90% retention: aggregate relative PPL 1.089204-1.158203 versus <=1.01, and all 16 articles individually fail for each selector. All pass the >=10% simulated warm-traffic screen; recency/EMA/learned also fail the <=10% CUDA-and-wall cost screen at about 72-83%. Static is cheap but loses quality. Incremental hindsight reaches 1.009318 and is ineligible. The complete raw ledger, masks, transition, generation and timing evidence are published.\n\nThis issue remains open for the broader useful-predictor gate and curves. No selector is nominated for paging/refinement. The negative result applies to these initial eager implementations and one operating point; it is not a proof that all predictors fail. Faster execution alone does not change the measured mask quality. Any new predictor, retention sweep or scale control needs a separate prospective protocol with fresh immutable receipts. Preserve this failed experiment and the original thresholds; do not retune on final test. Held-out quality #8 and runtime/refinement #11/#12 retain their separate gates.\n\n\nProspective dependency revision after the design review: analytical refinement can start from these failed first passes under #12. Explicitly combine current-input evidence, execution history/change signals and resource state in a separate causal acquisition experiment. Runtime nomination concerns the complete policy; v0.7's original one-shot rule is preserved as historical evidence."
     },
     {
       "key": "pager",
       "stage": "4",
       "title": "Implement bounded FFN residency with measured RAM-to-VRAM traffic",
       "completed": false,
-      "body": "After prediction feasibility, implement CPU-backed groups, bounded pinned staging, bounded GPU slots, and kernels that avoid the claimed weight reads and work. Run dense reference separately without retaining a full GPU copy. Compare dense streaming, static/recency/activation-aware caches, and CPU execution alternatives at identical budgets. Charge scheduling, packing, transfers, synchronization, KV, and workspaces. Gate: measured end-to-end improvement over the strongest same-budget baseline.\n\nCurrent gate status after v0.7.0 / #15: no causal selector qualifies at the frozen Qwen operating point. This phase remains unstarted and gated; completing the negative selector experiment does not satisfy prediction feasibility. Broader predictor issue #10 remains open."
+      "body": "Physical paging remains gated on a qualifying complete causal acquisition policy, with or without refinement; its initial pass need not qualify alone. Implement bounded CPU-backed groups, pinned staging and GPU slots only after that gate. Compare against strongest same-budget streaming, static/recency/activation-aware caches and CPU execution, charging scheduling, packing, transfers, synchronization, KV and workspaces. Exit requires measured end-to-end benefit.\n\nThe bounded hardware-cost characterization can proceed independently without a model pager. The 10% resident-FFN cost screen remains v0.7's historical rule, not a universal necessary condition for transfer-bound workloads. Exposed transfer stalls must be measured on the actual critical path; isolated timings cannot establish a speedup."
     },
     {
       "key": "refinement",
-      "stage": "5",
-      "title": "Test omission detection and additive refinement against larger initial subsets",
+      "stage": "5a",
+      "title": "Establish analytical selection-and-refinement feasibility",
       "completed": false,
-      "body": "Define unsafe omission before scoring. Estimate omitted effects from cheap causally available signals, preserve the FFN input, add missing group contributions before downstream commitment, and provide a bounded dense fallback. Plot silent quality failures against added bytes and latency, including detector cost. Residency misses and silent selection errors must remain separate. Gate: refinement improves the risk/cost frontier over simply selecting more initially; otherwise remove it.\n\nCurrent gate status after v0.7.0 / #15: no causal selector qualifies at the frozen Qwen operating point. This phase remains unstarted and gated; completing the negative selector experiment does not satisfy prediction feasibility. Broader predictor issue #10 remains open."
+      "body": "Determine whether failed initial selections can be repaired economically and whether a causal signal can identify the additions. Start with bounded privileged and resident-first diagnostics; then compare a complete causal policy with larger initial subsets, resident cores and dense fallback. Preserve input and correct before downstream commitment. Define unsafe omission before scoring; local error norms are descriptive.\n\nDependency revision after v0.7: analytical feasibility is now open even though no first-pass selector qualified. The complete policy must qualify, not necessarily its first pass. Privileged repair is not an optimal oracle, not deployable and not a runtime nomination. The separate refinement-runtime issue remains gated on complete-policy feasibility and bounded execution. Published v0.7 failures, thresholds and issue #15 remain unchanged.\n\nSee the Repairability milestone, the bounded frozen-mask diagnostic, and docs/adr/0001-selection-and-refinement-gates.md."
     },
     {
       "key": "generalization",
@@ -151,6 +156,41 @@
       "completed": true,
       "body": "Completed the first causal selector experiment at the unchanged v0.4 Qwen popularity/width-8/90% condition and 2 GiB equal-layer static cache. None of the four causal selectors passes the frozen screen. Static, recency, EMA and learned relative PPL are 1.158203, 1.117159, 1.111589 and 1.089204; every causal selector exceeds 1% on all 16 development articles. All meet the simulated warm traffic screen (15.103-18.663% saving). Static costs 0.450% CUDA / 0.456% wall of paired resident dense FFNs; recency, EMA and learned cost about 72-83%, above the 10% affordability screen. Incremental hindsight reaches relative PPL 1.009318 and 15.539% warm saving, but is noncausal and cannot qualify.\n\nThe protocol/apparatus were pushed as [85efbc7](https://github.com/displague/dynamic-model-loading/commit/85efbc771b75487b7aecfe0c521c1d3e4fd5452e) before fitting/evaluation. All 28 local plus 17 incremental layout gates pass under original 0.01 relative-L2 / 0.001 KL limits. Retain 307 raw rows, 85 document masks/audits, 20 generated-path traces, four dense continuations, 17 dense reference episodes, calibration statistics and fitted weights. All modes complete every article, the fixed topic transition and four closed-loop continuations. Persistent selector tensors reduce simulated FFN-cache capacity; query and necessary update cost are measured separately from the dense diagnostic.\n\nValidation: 111 tests in both baseline torch 2.10 and separate torch 2.12 environments. The independent analyzer checks provenance, complete grids and ordering, numerical gates, actual reference NLL, charged mask replay, timing medians, generation receipts and every aggregate. Restoring all 124 payloads from three hashed release assets reproduces the validated analysis exactly.\n\nThis closes a bounded experiment, not the Stage 3 milestone or broader useful-predictor goal #10. Held-out quality #8 stays open. Physical paging #11 and refinement #12 remain gated. No physical transfer, bounded residency, task accuracy or speedup claim; full model and restoration copies remain resident. Predictor initialization traffic/time are excluded from replay, and the cost result covers the measured eager implementations. No final-test score or threshold/retention retuning follows from the failure.\n\nEvidence: [v0.7.0 release](https://github.com/displague/dynamic-model-loading/releases/tag/v0.7.0), [complete findings](https://github.com/displague/dynamic-model-loading/blob/v0.7.0/docs/causal-control-results.md), [protocol](https://github.com/displague/dynamic-model-loading/blob/v0.7.0/docs/causal-control-protocol.md), [archive and restoration](https://github.com/displague/dynamic-model-loading/tree/v0.7.0/results/causal-control-20260911).\n",
       "release": "v0.7.0"
+    },
+    {
+      "key": "refinement_runtime",
+      "stage": "5",
+      "title": "Implement bounded refinement runtime after complete-policy feasibility",
+      "body": "Preserve the FFN input, acquire missing disjoint group contributions, add them before downstream commitment, and provide bounded dense fallback. Compare silent quality failure against all additional bytes, execution and scheduling latency, including detector cost, versus selecting more initially. Residency misses and unsafe omissions remain distinct.\n\nThis is the runtime half split from #12 after the v0.7 design review. It remains gated on feasibility of the complete causal selection-and-refinement policy and bounded physical execution in #11. The first-pass selector does not need to pass alone. Privileged repair traces do not satisfy this gate. The v0.7 negative result and thresholds remain unchanged.",
+      "completed": false
+    },
+    {
+      "key": "repair_diagnostic",
+      "stage": "5a",
+      "title": "Measure privileged and resident-first repair of the frozen v0.7 masks",
+      "body": "Bounded prospective diagnostic: all four failed v0.7 selectors, first two archived development articles, first 128 tokens each. Keep the initial masks fixed. Compare hindsight-ranked additions and resident-first additions at limits 0/8/28/56/84/112, with actual disjoint addition before downstream commitment. Compare fresh one-shot retention 90/92.5/95/97.5/100%. Publish all 96 repair and 40 one-shot document rows, original numerical gates, reference and mask hashes, ranking receipts, quality, resident/cold additions, computation volume and cold/warm replay.\n\nSubtract original selector storage and 1,034,880 bytes of repair norms/resident maps from the 2 GiB FFN-cache allowance. A completed-output relative-PPL <=1.01 and >=10% warm-saving screen describes privileged opportunity only. All points remain runtime-ineligible; fixed old masks on changed repaired inputs are counterfactual. No fitting, final-test scoring, physical transfer or speedup claim.\n\nThe protocol/configuration/apparatus must be reviewed, committed and pushed before measurement. Evidence will be published as a bounded delivery regardless of outcome. See docs/refinement-feasibility-protocol.md and docs/adr/0001-selection-and-refinement-gates.md.",
+      "completed": false
+    },
+    {
+      "key": "hardware_costs",
+      "stage": "4",
+      "title": "Characterize grouped execution, staging and transfers without building a pager",
+      "body": "Freeze a small microbenchmark at the relevant width-8 Qwen group sizes. Measure pinned contiguous H2D, pageable-to-pinned staging, scattered group aggregation, individual group transfers, resident grouped execution and the combined staged path. Preserve warmups, every repetition, CUDA events and synchronized wall time; charge packing and allocation policy explicitly. Serialize GPU experiments. A separate ranking comparison may contrast stable argsort and top-k, including tie semantics.\n\nThese are hardware cost primitives, not an end-to-end model benchmark or proof that overhead is exposed on the critical path. Keep v0.7's 10% resident-FFN affordability rule unchanged as its historical screen, but do not apply it as a universal research gate. A runtime must beat the strongest same-budget baseline after actual prediction/refinement/scheduling/transfer costs.",
+      "completed": false
+    },
+    {
+      "key": "causal_refinement",
+      "stage": "5a",
+      "title": "Test complete causal acquisition from current input, history and residency",
+      "body": "Following the bounded repair diagnostic, freeze a small combined predictor using current normalized FFN input, previous selected execution state, an innovation/change signal and resource state. Probes must be explicitly selected, charged and observed causally; independent omitted-group audits cannot feed the policy. Include safe-to-omit abstention, a static resident core, larger initial subsets and bounded dense fallback.\n\nThe complete corrected policy must meet prospective quality, acquired-byte and measured-cost criteria; initial output quality need not pass. Evaluate within the policy's own approximate trajectory, including topic switches and closed-loop generation. Compare signal variants to isolate improvement from execution history and residency. A full Bayesian filter, rollback engine and production pager are deferred.",
+      "completed": false
+    },
+    {
+      "key": "development_control",
+      "stage": "later",
+      "title": "Run one small second-model control on separate balanced development tasks",
+      "body": "Use a bounded pinned Qwen/OPT model pair, not a model sweep, on a new frozen development set covering balanced code, extraction, arithmetic, copying and topic changes as selected by the project owner. Reuse calibration-only layouts; freeze inputs, answer-only and continuation scoring rules, masks/retention conditions and failure handling before either model is evaluated. Compare each model with its own dense reference and preserve all rows.\n\nThis is a small architecture/checkpoint control with tokenizer, training and base-vs-instruct confounds, not an architecture-only attribution or final assistant benchmark. Keep #8 open for broader held-out quality. Existing v0.7 Wikipedia measurements and failures remain intact. Physical runtime feasibility is not a prerequisite for this limited control.",
+      "completed": false
     }
   ]
 }

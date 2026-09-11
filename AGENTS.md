@@ -21,3 +21,10 @@ or release completed. Do not rewrite published history without explicit authoriz
 Keep `.venv` as the measured baseline unless an environment-change protocol calls for
 another interpreter. Record actual package versions and CUDA execution. Available
 LM Studio/Ollama formats are deployment comparisons, not interchangeable HF weights.
+
+After v0.7, analytical refinement may start from failed one-shot selections. Gate
+physical paging and refinement runtime on the complete causal acquisition policy,
+not necessarily its first pass. Privileged and frozen-mask repair diagnostics are
+explicitly ineligible for deployment. Follow docs/adr/0001-selection-and-refinement-gates.md;
+preserve historical protocols and keep hardware-cost and limited generalization
+controls separate from runtime claims.

@@ -19,8 +19,10 @@ from 1.089204 to 1.158203 against the 1.01 limit. All meet the simulated traffic
 screen, but recency, EMA and the learned selector also exceed the cost screen.
 Incremental hindsight reaches 1.009318 and remains ineligible because it uses current
 dense activations. The [causal findings](docs/causal-control-results.md) retain every
-article, transition, timing and generated path. Paging and refinement remain gated;
-no physical transfer or runtime gain is established.
+article, transition, timing and generated path. Physical paging and refinement runtime
+remain gated; the [revised dependency graph](docs/plan.md#revised-dependencies-after-the-v07-design-review)
+now permits analytical refinement from failed first passes. No physical transfer or
+runtime gain is established.
 
 The earlier [cache findings](docs/cache-trace-results.md) nominated one of 72
 conditions: relative PPL 1.008978 and 15.54% less simulated warm traffic at 2 GiB,
@@ -102,8 +104,10 @@ Hypothetical selected weight bytes are not measured PCIe transfers or memory sav
 
 The packing pilot additionally supports calibration-only co-activation signatures and
 capacity-constrained grouping. It still has no bounded-cache or transfer runtime.
-The first causal selector experiment is complete with no qualifying candidate;
-corrective refinement retains its separate gate. CUDA timing and memory reporting follow the distinctions in
+The first causal selector experiment is complete with no qualifying candidate.
+The [repair feasibility protocol](docs/refinement-feasibility-protocol.md) tests
+whether complete corrected outputs can recover within the traffic allowance; its
+privileged diagnostics cannot qualify a runtime. CUDA timing and memory reporting follow the distinctions in
 [PyTorch's CUDA notes](https://docs.pytorch.org/docs/2.14/notes/cuda.html).
 
 ## Continue the experiment

@@ -19,8 +19,9 @@ silently damage quality without causing a residency miss.
 | 1. Hindsight sparsity envelope | Individual-neuron and per-layer/multi-layer omission curves on whole-document and domain splits; useful sparsity survives unseen inputs. | Smoke, a 16-article Wikipedia slice, and 66 per-layer/joint conditions exist. Sensitivity is distributed on this slice. Multi-domain held-out quality and task outcomes remain unmeasured. |
 | 2. Physical packing and cache traces | Quality versus transferred bytes and transfer amplification at 256/512 MiB and 1/2 GiB FFN-cache budgets. | All 72 declared conditions and 1,152 traces completed. Popularity/width 8/90% retention is the only condition passing the prospective development screen; best warm traffic saving is 15.54% at 2 GiB. This is reused-data simulation; held-out quality and physical transfers remain open. |
 | 3. Causal prediction | Static hot-set, recency, EMA, and learned-selector quality/bytes/cost curves; savings pay for prediction, including approximate closed-loop inference. | The first frozen-point experiment is complete: all four causal selectors fail quality on all 16 articles. Aggregate relative PPL is 1.089204-1.158203; all meet the simulated traffic screen, but three adaptive selectors also fail cost. Incremental hindsight reaches 1.009318 and cannot qualify. Broader predictor curves and held-out feasibility remain open. |
-| 4. RAM-to-VRAM execution | Explicit bounded slots, pinned staging, actual skipped reads/computation; beat the strongest same-budget baseline after all costs. | Not started: no causal selector qualifies under v0.7's frozen screen. Retain comparisons with dense streaming, static/recency/activation-aware caches, and CPU/GPU execution splits if a subsequent prospective experiment establishes feasibility. |
-| 5. Corrective refinement | Silent-failure risk versus added bytes/latency; improve on choosing a larger initial subset. | Not started and still gated after v0.7. Define unsafe omission first, retain the FFN input, add missing contributions before downstream commitment, and include bounded dense fallback. Local audit norms alone are not a validated failure detector. |
+| 4. RAM-to-VRAM execution | Explicit bounded slots, pinned staging, actual skipped reads/computation; beat the strongest same-budget baseline after all costs. | Physical paging remains gated on a qualifying complete causal policy, which may include refinement. A bounded transfer/staging/grouped-execution characterization may proceed independently; it is not a model pager or an end-to-end result. |
+| 5a. Analytical refinement feasibility | Determine whether failed initial selections admit economical repair, then whether a causal signal can request it; compare complete policies with larger initial subsets. | Opened by the post-v0.7 design review. The first prospective diagnostic fixes old masks and tests privileged and resident-first additions. First-pass quality need not pass; only the complete causal policy can qualify for runtime. |
+| 5b. Refinement runtime | Preserve the FFN input, add acquired contributions before downstream commitment, and improve silent-failure risk versus total bytes/latency with bounded fallback. | Still gated on analytical feasibility of the complete causal policy and bounded execution. Define unsafe omission before scoring; local audit norms are not a validated detector. |
 
 The original longer-term milestone follows these stages: repeat on a 7B-class model
 and another family, then study quantization, heterogeneous groups, and limited
@@ -28,6 +29,52 @@ lookahead independently. Low-rank residuals and training for block structure are
 representation experiments, not assumed runtime improvements. SSD/NVMe experiments
 must measure actual storage reads and cache behavior. MTP, Bayesian state, conversational
 memory, and an always-on service remain deferred.
+
+## Revised dependencies after the v0.7 design review
+
+[ADR 0001](adr/0001-selection-and-refinement-gates.md) changes the dependency graph
+prospectively. The failed one-shot selectors can now be starting points for analytical
+repair. The published v0.7 decision remains intact. Its frozen 10% resident-FFN cost
+screen does not become a universal necessary condition for paged inference.
+
+```mermaid
+flowchart TD
+    A[Validated packing and frozen failed masks] --> B[Privileged repair feasibility]
+    B --> C[Causal selection plus refinement]
+    D[Bounded transfer and grouped execution costs] --> C
+    E[Separate development and second-model control] --> C
+    C --> F{Complete policy quality and cost qualify?}
+    F -->|Yes| G[Bounded physical paging]
+    G --> H[Refinement runtime]
+    F -->|No| I[Preserve failure and formulate a separate hypothesis]
+```
+
+The [first repair protocol](refinement-feasibility-protocol.md) uses all four v0.7
+starting masks on the first two development articles, 128 tokens each. It compares
+privileged and resident-first repairs with larger one-shot subsets, charging selector
+storage, added cold traffic and resident computation. Fixed old masks on corrected
+paths are counterfactual. No privileged point can nominate a runtime.
+
+The next causal experiment must test whether the repair signal is available from
+current FFN input, previous execution state, an innovation/change signal and residency,
+with explicitly charged probes. Include safe-to-omit abstention and dense fallback;
+judge the completed output rather than requiring the initial output to pass.
+
+In parallel as research workstreams, permit one small second-model/new-development
+control and a hardware microbenchmark. The separate development mix is balanced code,
+data extraction, arithmetic, copying and topic changes, as selected by the project
+owner. Freeze all inputs and scoring before either model runs; this does not close
+the broader held-out quality gate. Serialize GPU measurements to avoid contention.
+
+Keep BF16 bounded: compare candidate grouped policies against a common higher-precision
+reference and prospective downstream criteria, without replacing the original
+mathematical controls. Do not launch further library-version sweeps by default.
+
+Deferred branches now have explicit entry evidence: hierarchical acquisition requires
+cheap coarse rejection; persistent execution state requires measured benefit over
+current-input-only prediction; variable precision/residuals require a useful combined
+quality/byte frontier; MTP/lookahead requires affordable acquisition and causality
+checks; an always-on service requires a runtime that benefits from persistent residency.
 
 ## Releases are experiment deliveries
 
