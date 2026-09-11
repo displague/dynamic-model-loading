@@ -7,11 +7,14 @@ import json
 import os
 from pathlib import Path
 import shutil
+import sys
+import importlib.metadata
 
 import torch
 from torch.nn import functional as F
 from huggingface_hub import snapshot_download
 from transformers import AutoModelForCausalLM, AutoTokenizer
+from safetensors.torch import save_file
 
 from .adapters import extract_ffns
 from .experiment import digest, environment, layout, load_corpus, validate_config, write_json
@@ -20,6 +23,26 @@ from .metrics import compare_logits
 
 
 MODES = ("bf16", "reduction_off", "fp32_down", "fp32_ffn", "canonical_down")
+
+
+def inventory():
+    names = sorted({d.metadata["Name"].lower().replace("_", "-")
+                    for d in importlib.metadata.distributions() if d.metadata.get("Name")})
+    return {"python": sys.version, "executable": sys.executable,
+            "versions": {name: importlib.metadata.version(name) for name in names}}
+
+
+def validate_control(cfg, values, corpus_path):
+    if cfg.get("environment_control"):
+        if cfg["logit_relative_l2_max"] != 0.01 or cfg["logit_mean_kl_max"] != 0.001:
+            raise ValueError("Environment control requires the original numerical limits")
+        if values["python"] != cfg["expected_python"]:
+            raise ValueError("Environment control interpreter mismatch")
+        actual = hashlib.sha256(json.dumps(values["versions"], sort_keys=True).encode()).hexdigest()
+        if actual != cfg["expected_versions_sha256"]:
+            raise ValueError("Environment control distribution inventory mismatch")
+        if digest(Path(corpus_path)) != cfg["expected_corpus_sha256"]:
+            raise ValueError("Environment control corpus mismatch")
 
 
 def save_inputs(output, tokens, native, random_order):
@@ -75,8 +98,19 @@ def arithmetic(mlps, mode, orders):
         torch.backends.cuda.matmul.allow_bf16_reduced_precision_reduction = reduced
 
 
-@torch.inference_mode()
 def run_precision(config_path, corpus_path, output_path):
+    output = Path(output_path)
+    output.mkdir(parents=True, exist_ok=False)
+    try:
+        return _run_precision(config_path, corpus_path, output_path)
+    except (Exception, KeyboardInterrupt) as error:
+        if output.is_dir() and not (output / "failure.json").exists():
+            write_json(output / "failure.json", {"error_type": type(error).__name__, "message": str(error)})
+        raise
+
+
+@torch.inference_mode()
+def _run_precision(config_path, corpus_path, output_path):
     cfg = json.loads(Path(config_path).read_text())
     validate_config(cfg)
     if cfg["dtype"] != "bfloat16":
@@ -88,11 +122,13 @@ def run_precision(config_path, corpus_path, output_path):
     torch.backends.cuda.matmul.allow_tf32 = False
     torch.backends.cudnn.allow_tf32 = False
     output = Path(output_path)
-    output.mkdir(parents=True, exist_ok=False)
     shutil.copyfile(config_path, output / "config.json")
     shutil.copyfile(corpus_path, output / "corpus.jsonl")
-    shutil.copyfile("docs/packing-pilot-protocol.md", output / "protocol.md")
+    shutil.copyfile(cfg.get("protocol", "docs/packing-pilot-protocol.md"), output / "protocol.md")
     shutil.copytree(Path(__file__).parent, output / "source", ignore=shutil.ignore_patterns("__pycache__"))
+    values = inventory()
+    write_json(output / "environment-inventory.json", values)
+    validate_control(cfg, values, corpus_path)
     corpus = [r for r in load_corpus(Path(corpus_path)) if r["split"] == "diagnostic"]
     checkpoint = Path(snapshot_download(cfg["model"], revision=cfg["revision"], local_files_only=True))
     manifest = {"purpose": "numerical_diagnosis_not_sparse_quality_evaluation", "modes": MODES,
@@ -100,8 +136,11 @@ def run_precision(config_path, corpus_path, output_path):
                 "protocol_sha256": digest(output / "protocol.md"),
                 "model": cfg["model"], "revision": cfg["revision"],
                 "environment": environment(torch.device("cuda")),
+                "inventory_sha256": digest(output / "environment-inventory.json"),
                 "sources": {p.name: digest(p) for p in (output / "source").glob("*.py")},
                 "checkpoint_files": {p.name: digest(p) for p in checkpoint.iterdir() if p.is_file()}}
+    if cfg.get("environment_control") and manifest["checkpoint_files"] != cfg["expected_checkpoint_files"]:
+        raise ValueError("Environment control checkpoint mismatch")
     tokenizer = AutoTokenizer.from_pretrained(checkpoint, local_files_only=True, trust_remote_code=False)
     model = AutoModelForCausalLM.from_pretrained(checkpoint, dtype=torch.bfloat16,
         attn_implementation="sdpa", local_files_only=True, trust_remote_code=False).cuda().eval()
@@ -113,12 +152,21 @@ def run_precision(config_path, corpus_path, output_path):
     random_order = [torch.randperm(dimensions(m)[1], generator=generator) for m in mlps]
     manifest.update(save_inputs(output, tokens, native, random_order))
     write_json(output / "manifest.json", manifest)
+    if cfg.get("environment_control"):
+        if (manifest["tokenization"]["token_ids_sha256"] != cfg["expected_token_ids_sha256"] or
+                manifest["layouts_sha256"] != cfg["expected_layouts_sha256"]):
+            raise ValueError("Environment control token/layout mismatch")
 
     def logits(ids):
         return model(input_ids=ids, use_cache=False).logits.cpu()
 
     with arithmetic(mlps, "bf16", native):
         original = {key: logits(ids) for key, ids in tokens.items()}
+    if cfg.get("environment_control"):
+        save_file({key: value.contiguous() for key, value in original.items()}, output / "ordinary-logits.safetensors",
+                  metadata={"manifest_sha256": digest(output / "manifest.json"), "comparison": "ordinary_native_bf16"})
+        write_json(output / "ordinary-logits-receipt.json", {"sha256": digest(output / "ordinary-logits.safetensors"),
+                   "documents": list(original), "comparison": "ordinary_native_bf16"})
     results = []
     with (output / "results.jsonl").open("x", encoding="utf-8") as raw:
         for mode in MODES:
