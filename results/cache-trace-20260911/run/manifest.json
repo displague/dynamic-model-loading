@@ -1,0 +1,308 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-09-11T16:01:19.242040+00:00",
+  "purpose": "development_cache_trace_simulation_not_measured_transfers",
+  "mode": "diagnostics",
+  "config_sha256": "03de1dc4dfd98ad7bd0313d2b96e56a92b7ff04448620ef9c9fad7f7ec360644",
+  "corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "sources": {
+    "__init__.py": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738",
+    "adapters.py": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc",
+    "analysis.py": "ba578312bb18e3af8104fd50f6bcf30a02d887fcf6224b4bb56434f5fb1fb086",
+    "cache.py": "b8de5501e47e2b357f46309306b9277ccd4be953e239c19c9ad5b4b363221298",
+    "cache_analysis.py": "bdbb3b28320319c2a89bcf4b513cfc32ef5795450f38f7558f19d7da137c6f57",
+    "corpus.py": "127735e3b9f13c040fc4fa99b5c38b4bb1d2f9c39205e38650211d3acc7d4567",
+    "experiment.py": "5fc3881995fb2318f954167971c3c4790b2b7c78470d02272f2dfa62cfcefe84",
+    "ffn.py": "4bc70ad070e0a68d5d7da7b34b5832d9a65a2a7f21d426ade988a63363e4da43",
+    "layer_plot.py": "eb9221c88e808700df2898aa69ea1f47f24220d93fba517d2ce4b4323220b651",
+    "layer_study.py": "cb5d76f0f9645d0c97b194f0cc2c87c9a7156eeedf638ec91e033652bfc5eef6",
+    "metrics.py": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53",
+    "packing.py": "b13c919d54ebc7e97669ee454a37b09732b3faa5cb78f697ee6a3a9f6297fe46",
+    "precision.py": "38c236b12a3055693da9080c9f49fbea3619f7dac42349c4f4469f1467367367",
+    "trace.py": "02845555dec8869447dd32e3af63fd466b5cc792e3173d75416d4e1652490fda"
+  },
+  "environment": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cuda",
+    "torch": "2.10.0+cu130",
+    "cuda_build": "13.0",
+    "versions": {
+      "transformers": "5.13.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.19.0",
+      "numpy": "2.3.5"
+    },
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "bf16_reduced_precision_reduction": true,
+    "fp16_reduced_precision_reduction": true,
+    "cpu_threads": 4,
+    "process_id": 24172,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "total_bytes": 17066033152,
+      "compute_capability": [
+        12,
+        0
+      ]
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 5080 Laptop GPU, 616.64, 16303 MiB, 24 MiB, 39, 6.04 W"
+  },
+  "checkpoint": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "files": {
+      "config.json": {
+        "bytes": 660,
+        "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+      },
+      "generation_config.json": {
+        "bytes": 242,
+        "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+      },
+      "merges.txt": {
+        "bytes": 1671839,
+        "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+      },
+      "model.safetensors": {
+        "bytes": 3087467144,
+        "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+      },
+      "tokenizer.json": {
+        "bytes": 7031645,
+        "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+      },
+      "tokenizer_config.json": {
+        "bytes": 7305,
+        "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+      },
+      "vocab.json": {
+        "bytes": 2776833,
+        "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+      }
+    }
+  },
+  "protocol_sha256": "8c0d04553296280f920723560b918c0846557712c6b6881dc649da6afcbdb1a7",
+  "tokenization": {
+    "chat_template_applied": false,
+    "special_tokens_added": false,
+    "document_tokens": {
+      "wikitext-train-8e1c37980c3d3c28": 256,
+      "wikitext-train-850abe090d258c3c": 256,
+      "wikitext-train-957b54c84eddb069": 256,
+      "wikitext-train-86f97e1be8510bb0": 256,
+      "wikitext-train-3f55ee4b48a5d6dc": 256,
+      "wikitext-train-d0215dcb2d866b47": 256,
+      "wikitext-train-812ca8532e867424": 256,
+      "wikitext-train-b2ae0b90262d65d5": 256,
+      "wikitext-train-c755da18f6a10caf": 256,
+      "wikitext-train-e1e2d099ffa04d1f": 256,
+      "wikitext-train-aa16442b777b877f": 256,
+      "wikitext-train-73339a6861563b90": 256,
+      "wikitext-train-1c18fe4009737ace": 256,
+      "wikitext-train-e357d396871d1012": 256,
+      "wikitext-train-13a58d810c4db37e": 256,
+      "wikitext-train-a6bf0ecd12bf9ee0": 256,
+      "wikitext-train-bf37898842725980": 256,
+      "wikitext-train-bfb9fdd07f7ef86a": 256,
+      "wikitext-train-013e16bd610f13b9": 256,
+      "wikitext-train-012ceac920d909c3": 256,
+      "wikitext-train-8bb749a89f428954": 256,
+      "wikitext-train-6f81ef74fa7ec5a6": 256,
+      "wikitext-train-6c594f69c8c1b2aa": 256,
+      "wikitext-train-3506e505f17f7739": 256,
+      "wikitext-train-cbe17725afaee462": 256,
+      "wikitext-train-7fbe456bb71b5c73": 256,
+      "wikitext-train-13823dc4e7b6eef3": 256,
+      "wikitext-train-a8dcdc7e31d5c25d": 256,
+      "wikitext-train-2df3513b3b7bba1f": 256,
+      "wikitext-train-21c566a0b1196ce1": 256,
+      "wikitext-train-9a40f17202dc081b": 256,
+      "wikitext-train-d06dd63347ce015c": 256,
+      "wikitext-train-066c48cc7e28afd8": 256,
+      "wikitext-train-034afecf0c7fbfb2": 256,
+      "wikitext-train-6a10e702f61e8133": 256,
+      "wikitext-train-52e3398f942ab05b": 256,
+      "wikitext-train-d539be56c116ca0e": 256,
+      "wikitext-train-0df479d329688304": 256,
+      "wikitext-train-5fd855e460b496b7": 256,
+      "wikitext-train-02934e3e23cd70ad": 256,
+      "wikitext-train-24322df2cc3217d7": 256,
+      "wikitext-train-549e3ba337bb0738": 256,
+      "wikitext-train-8aab3b0b00dda495": 256,
+      "wikitext-train-073cfc2af0c7b544": 256,
+      "wikitext-train-f161d1f89e14c78d": 256,
+      "wikitext-train-5b30089ef32c8db2": 256,
+      "wikitext-train-0d534b2502e9a15c": 256,
+      "wikitext-train-7e00e4a37c5af021": 256,
+      "wikitext-train-3775ac6a3d0efd74": 256,
+      "wikitext-train-d0051849fb0a5466": 256,
+      "wikitext-train-6ef31b3f7d6f7950": 256,
+      "wikitext-train-2fd033e90393e155": 256,
+      "wikitext-train-d4001945c281b830": 256,
+      "wikitext-train-939b69ccded21d63": 256,
+      "wikitext-train-8c2b5d1d3c19e894": 256,
+      "wikitext-train-8bb3b5d34b673e09": 256,
+      "wikitext-train-67ee26c8d86fe869": 256,
+      "wikitext-train-19c0ae0826fe8304": 256,
+      "wikitext-train-c49205bcb5f5ea96": 256,
+      "wikitext-train-e55026f07ef2354b": 256,
+      "wikitext-train-a68c03660314cf45": 256,
+      "wikitext-train-9a768800f82c84ce": 256,
+      "wikitext-train-5e741101a00ea2a5": 256,
+      "wikitext-train-487f9b32ff6db8dd": 256,
+      "wikitext-train-7921f3b8ba3d5afc": 256,
+      "wikitext-train-a5c09313c3f59296": 256,
+      "wikitext-train-8c9658ecfc5714e7": 256,
+      "wikitext-train-8be3b61ce726842a": 256,
+      "wikitext-train-ad35f253e9e3a34d": 256,
+      "wikitext-train-011e6b3fb22621f4": 256,
+      "wikitext-train-ac9c5ee826c95d33": 256,
+      "wikitext-train-bbbb23fc5fe6c48e": 256,
+      "wikitext-train-11f0551b49d3b5c8": 256,
+      "wikitext-train-3e02c8ec17edee9e": 256,
+      "wikitext-train-1bf1be58f8268537": 256,
+      "wikitext-train-9b4a5ecca40134a1": 256,
+      "wikitext-train-a15481d84933cb31": 256,
+      "wikitext-train-e7f30990bafe7d7f": 256,
+      "wikitext-train-a86b5636edfdf2e1": 256,
+      "wikitext-train-47d61b99767b8633": 256,
+      "wikitext-validation-59a50d9ab4d0c84c": 256,
+      "wikitext-validation-2c7c602b5ac557ff": 256,
+      "wikitext-validation-9fb0c61a50d8cdb9": 256,
+      "wikitext-validation-b3e260a8369ed0d7": 256,
+      "wikitext-validation-b256338c76e256d6": 256,
+      "wikitext-validation-6c14437e5b969831": 256,
+      "wikitext-validation-14477f3a8cb2b173": 256,
+      "wikitext-validation-c0226c6dcf643123": 256,
+      "wikitext-validation-f1bac44e128c88f7": 256,
+      "wikitext-validation-41a33989abb2ac1e": 256,
+      "wikitext-validation-3b439644584a6d78": 256,
+      "wikitext-validation-ec90c700f7c05fdc": 256,
+      "wikitext-validation-feab27ae43cf2886": 256,
+      "wikitext-validation-76b494cf8075a5f3": 256,
+      "wikitext-validation-97b5f9a9c00917ff": 256,
+      "wikitext-validation-a2ef3dfbc1b9c5ca": 256
+    },
+    "token_ids_sha256": "e7f3074dd4d9d296c3656784721d1157db9bbd81b950a856a7df56d1727436ea"
+  },
+  "model_parameter_bytes": 6174857216,
+  "ffn_parameter_bytes": 4624220160,
+  "ffn_shapes": [
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ],
+    [
+      1536,
+      8960
+    ]
+  ],
+  "attention_implementation": "sdpa"
+}

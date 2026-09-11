@@ -1,0 +1,9 @@
+{
+  "trace_asset_hashes_checked": 1152,
+  "replay_rows": 36864,
+  "recomputed_aggregates": 2304,
+  "lru_rows_with_verified_zero_hit_bound": 9216,
+  "parent_document_rows_reproduced_exactly": 256,
+  "figure_visually_inspected": "v2, full frontier plus x/y detail, no measurement changes",
+  "validation": "59 tests pass; source and input hashes validated during replay; all archived file hashes and asset payloads checked"
+}

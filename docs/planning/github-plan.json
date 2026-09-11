@@ -15,7 +15,7 @@
     {
       "stage": "2",
       "title": "Stage 2 - Physical packing and cache traces",
-      "description": "Measure quality versus real group volume, transfer amplification, and bounded-cache trace traffic. Native/random/popularity/co-activation pilot exists; cache feasibility is not established."
+      "description": "Completed v0.4 development trace study: 72 conditions and four cache budgets. One grouped condition passes the prospective aggregate-PPL and simulated-traffic screen; strongest warm saving is 15.54%. Held-out quality and physical transfer/runtime gates remain open."
     },
     {
       "stage": "3",
@@ -103,8 +103,9 @@
       "key": "cache_traces",
       "stage": "2",
       "title": "Measure transfer amplification and bounded-cache traces at realistic group sizes",
-      "completed": false,
-      "body": "Extend widths to 8/32/128 and derive bytes from actual dimensions and precision. Save token/layer group accesses, distinguish independently selected weights from fetched groups, and simulate 256 MiB, 512 MiB, 1 GiB, and 2 GiB FFN budgets with fixed allocations accounted separately. Compare cold/warm, recency/static policies, and exact small-trace bounds where claimed. Label trace traffic as simulated, not physical transfer or optimal oracle."
+      "completed": true,
+      "body": "Completed all 72 declared layout/width/retention conditions, 1,152 applied-mask traces, 36,864 document replay rows and 2,304 aggregates. Original numerical gates pass and 256 overlapping parent quality rows reproduce exactly. Only popularity/width 8/90% retention passes the prospective development screen: relative PPL 1.008978 and best simulated warm saving 15.54% with the 2 GiB equal-layer static cache. Nine of 16 documents individually exceed 1% PPL increase. LRU has zero hits under the validated distinct-other-layer bound; cold static preload and incoming reserve are charged. Full trace payloads are a hashed release asset. This completes the bounded trace experiment, not held-out quality or actual transfer/runtime gates. The frozen ordering nominates this condition for causal prediction. Evidence: docs/cache-trace-protocol.md, docs/cache-trace-results.md, results/cache-trace-20260911, docs/releases/v0.4.0.md.",
+      "release": "v0.4.0"
     },
     {
       "key": "predictor",

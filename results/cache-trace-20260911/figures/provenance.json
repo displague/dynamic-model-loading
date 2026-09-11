@@ -1,0 +1,6 @@
+{
+  "summary_sha256": "47feb00ac4cf34040ac91591511fac359740742efdf551bd993871dc902ce762",
+  "plot_source_sha256": "dde8ac19e88b4de730d8c76efc0b4268d61135e12b47c540ef05e8baa9023a74",
+  "budget_bytes": 2147483648,
+  "note": "Per-condition lower traffic of two declared static policies; full grid at left, labeled quality zoom at right"
+}

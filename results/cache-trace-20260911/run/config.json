@@ -1,0 +1,53 @@
+{
+  "purpose": "development_cache_trace_simulation_not_measured_transfers",
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "dtype": "float32",
+  "seed": 1729,
+  "max_tokens": 256,
+  "cpu_threads": 4,
+  "group_widths": [
+    8,
+    32,
+    128
+  ],
+  "keep_fractions": [
+    0.5,
+    0.75,
+    0.85,
+    0.9,
+    0.95,
+    0.99
+  ],
+  "layouts": [
+    "native",
+    "random",
+    "popularity",
+    "coactivation"
+  ],
+  "coactivation_reservoir": 512,
+  "coactivation_sketch_dim": 64,
+  "coactivation_group_width": 32,
+  "coactivation_iterations": 5,
+  "reconstruction_group_width": 128,
+  "reconstruction_relative_l2_max": 0.01,
+  "logit_relative_l2_max": 0.01,
+  "logit_mean_kl_max": 0.001,
+  "timing_repeats": 3,
+  "decode_tokens": 16,
+  "spill_reference_logits": true,
+  "protocol": "docs/cache-trace-protocol.md",
+  "capture_traces": true,
+  "expected_torch": "2.10.0+cu130",
+  "expected_corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "expected_layouts_sha256": "1dcc3fcdfde75936bbeba16418cd6aa164e316becb30114f7761ee2a56123773",
+  "expected_token_ids_sha256": "e7f3074dd4d9d296c3656784721d1157db9bbd81b950a856a7df56d1727436ea",
+  "cache_budgets_bytes": [
+    268435456,
+    536870912,
+    1073741824,
+    2147483648
+  ],
+  "screen_relative_ppl_max": 1.01,
+  "screen_warm_savings_min": 0.1
+}

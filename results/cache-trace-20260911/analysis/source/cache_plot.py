@@ -3,7 +3,6 @@
 import argparse
 import json
 from pathlib import Path
-import shutil
 
 from .experiment import digest, write_json
 
@@ -41,13 +40,11 @@ def plot(root, output):
     axes[0].set_title(f"All {summary['conditions']} development conditions; best of two static caches")
     axes[1].set_title("Detail around the prospective development screen")
     axes[1].set_ylim(-.15, 2.5)
-    axes[1].set_xlim(75, 102)
     axes[0].legend(fontsize=7, ncol=2, loc="upper left")
     fig.suptitle(f"Qwen2.5-1.5B FP32, {budget/2**30:g} GiB FFN budget: analytical replay, no measured transfers", fontsize=11)
     fig.savefig(output / "cache-frontier.png", dpi=180)
     fig.savefig(output / "cache-frontier.svg")
     plt.close(fig)
-    shutil.copyfile(__file__, output / "cache_plot.py")
     write_json(output / "provenance.json", {"summary_sha256": digest(root / "summary.json"),
                "plot_source_sha256": digest(Path(__file__)), "budget_bytes": budget,
                "note": "Per-condition lower traffic of two declared static policies; full grid at left, labeled quality zoom at right"})

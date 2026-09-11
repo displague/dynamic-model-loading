@@ -13,12 +13,13 @@ See the [research stages and delivery history](docs/plan.md),
 [GitHub milestones](https://github.com/displague/dynamic-model-loading/milestones)
 for the original plan, completed experiments, and remaining gates.
 
-**Current result:** the FP32 layer study completed 66 conditions with all correctness
-checks passing. Omission sensitivity is distributed across layers on this slice;
-the four largest layer effects account for only 20.8% / 19.6% of the individual KL
-sums. See [layer findings](docs/layer-study-results.md) and the
-[packing pilot](docs/packing-pilot-results.md) for complete curves and preserved
-negative results. The
+**Current result:** one of 72 cache-trace conditions passes the prospective development
+screen: popularity packing, 8-neuron groups, 90% retention. Relative PPL is 1.008978,
+with 15.54% less simulated warm traffic at a 2 GiB equal-layer static cache. Nine of
+16 articles individually exceed 1% PPL increase, and no physical transfer or runtime
+gain is established. See the [cache findings](docs/cache-trace-results.md),
+[layer study](docs/layer-study-results.md), and [packing pilot](docs/packing-pilot-results.md)
+for the full curves and preserved negative results. The
 [initial BF16 numerical failure](docs/initial-results.md) remains unresolved by a
 practical execution policy; the default BF16 command still reproduces that failure.
 

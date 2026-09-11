@@ -1,0 +1,58 @@
+{
+  "schema_version": 1,
+  "started_utc": "2026-09-11T16:01:19.242040+00:00",
+  "purpose": "development_cache_trace_simulation_not_measured_transfers",
+  "mode": "diagnostics",
+  "config_sha256": "03de1dc4dfd98ad7bd0313d2b96e56a92b7ff04448620ef9c9fad7f7ec360644",
+  "corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "sources": {
+    "__init__.py": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738",
+    "adapters.py": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc",
+    "analysis.py": "ba578312bb18e3af8104fd50f6bcf30a02d887fcf6224b4bb56434f5fb1fb086",
+    "cache.py": "b8de5501e47e2b357f46309306b9277ccd4be953e239c19c9ad5b4b363221298",
+    "cache_analysis.py": "bdbb3b28320319c2a89bcf4b513cfc32ef5795450f38f7558f19d7da137c6f57",
+    "corpus.py": "127735e3b9f13c040fc4fa99b5c38b4bb1d2f9c39205e38650211d3acc7d4567",
+    "experiment.py": "5fc3881995fb2318f954167971c3c4790b2b7c78470d02272f2dfa62cfcefe84",
+    "ffn.py": "4bc70ad070e0a68d5d7da7b34b5832d9a65a2a7f21d426ade988a63363e4da43",
+    "layer_plot.py": "eb9221c88e808700df2898aa69ea1f47f24220d93fba517d2ce4b4323220b651",
+    "layer_study.py": "cb5d76f0f9645d0c97b194f0cc2c87c9a7156eeedf638ec91e033652bfc5eef6",
+    "metrics.py": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53",
+    "packing.py": "b13c919d54ebc7e97669ee454a37b09732b3faa5cb78f697ee6a3a9f6297fe46",
+    "precision.py": "38c236b12a3055693da9080c9f49fbea3619f7dac42349c4f4469f1467367367",
+    "trace.py": "02845555dec8869447dd32e3af63fd466b5cc792e3173d75416d4e1652490fda"
+  },
+  "environment": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cuda",
+    "torch": "2.10.0+cu130",
+    "cuda_build": "13.0",
+    "versions": {
+      "transformers": "5.13.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.19.0",
+      "numpy": "2.3.5"
+    },
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "bf16_reduced_precision_reduction": true,
+    "fp16_reduced_precision_reduction": true,
+    "cpu_threads": 4,
+    "process_id": 24172,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "total_bytes": 17066033152,
+      "compute_capability": [
+        12,
+        0
+      ]
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 5080 Laptop GPU, 616.64, 16303 MiB, 24 MiB, 39, 6.04 W"
+  },
+  "checkpoint": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306"
+  },
+  "protocol_sha256": "8c0d04553296280f920723560b918c0846557712c6b6881dc649da6afcbdb1a7"
+}
