@@ -78,7 +78,7 @@
       "number": 7,
       "url": "https://github.com/displague/dynamic-model-loading/issues/7",
       "title": "Measure per-layer omission sensitivity and joint-layer interaction",
-      "state": "open"
+      "state": "closed"
     },
     "heldout": {
       "number": 8,
@@ -122,5 +122,6 @@
       "title": "Evaluate quantization, residual representations, and storage paging as separate branches",
       "state": "open"
     }
-  }
+  },
+  "last_refreshed_utc": "2026-09-11T15:21:15.039126+00:00"
 }

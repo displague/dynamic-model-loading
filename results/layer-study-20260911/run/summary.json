@@ -1,0 +1,2613 @@
+{
+  "status": "layer_study_completed",
+  "correctness_passed": true,
+  "probes": [
+    {
+      "layout": "popularity",
+      "condition": "layer-00",
+      "condition_kind": "single",
+      "layers": [
+        0
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.00649800944047658,
+      "top1_agreement": 0.9693627450980392,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2121274965029665,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0035430840498405,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1564132.917398491
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-01",
+      "condition_kind": "single",
+      "layers": [
+        1
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.00225746154138908,
+      "top1_agreement": 0.9818627450980392,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2121739639501636,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0035897172185624,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1251436.8365585068
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-02",
+      "condition_kind": "single",
+      "layers": [
+        2
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.004082403391731287,
+      "top1_agreement": 0.9784313725490196,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2110818327917863,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0024942639163863,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1785482.5839221303
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-03",
+      "condition_kind": "single",
+      "layers": [
+        3
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.006069936844324148,
+      "top1_agreement": 0.9727941176470588,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2078153829551113,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 0.9992250090271273,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2260589.562832277
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-04",
+      "condition_kind": "single",
+      "layers": [
+        4
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.007351702729122513,
+      "top1_agreement": 0.970343137254902,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2134485360119016,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0048696801628025,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3065002.2199572185
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-05",
+      "condition_kind": "single",
+      "layers": [
+        5
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005733956540284921,
+      "top1_agreement": 0.9686274509803922,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.213382713442444,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.004803539235291,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2537522.94462245
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-06",
+      "condition_kind": "single",
+      "layers": [
+        6
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.00742753559712696,
+      "top1_agreement": 0.9639705882352941,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2129362918908178,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0043550733900832,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3351617.039854753
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-07",
+      "condition_kind": "single",
+      "layers": [
+        7
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.006608691491236032,
+      "top1_agreement": 0.961764705882353,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.214524700242058,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0059516670619382,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3270748.165158793
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-08",
+      "condition_kind": "single",
+      "layers": [
+        8
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0058931537765012695,
+      "top1_agreement": 0.9654411764705882,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.210736063479225,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0021476920843102,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3222439.2688347828
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-09",
+      "condition_kind": "single",
+      "layers": [
+        9
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.004703618520217536,
+      "top1_agreement": 0.9696078431372549,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2090406670449494,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.000450093918099,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3129799.0678950977
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-10",
+      "condition_kind": "single",
+      "layers": [
+        10
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.004771708863857782,
+      "top1_agreement": 0.967156862745098,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.209021193066397,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0004306113641293,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3069220.747274181
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-11",
+      "condition_kind": "single",
+      "layers": [
+        11
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.00433416599605388,
+      "top1_agreement": 0.9713235294117647,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2103524570536397,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0017633355157793,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2999461.977410109
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-12",
+      "condition_kind": "single",
+      "layers": [
+        12
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0038334652752849844,
+      "top1_agreement": 0.9691176470588235,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2073346435970724,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 0.9987447576848615,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2877397.9044342106
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-13",
+      "condition_kind": "single",
+      "layers": [
+        13
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.00316096257057349,
+      "top1_agreement": 0.9723039215686274,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2104872648046747,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.001898390081106,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2589257.391641482
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-14",
+      "condition_kind": "single",
+      "layers": [
+        14
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0027231213328677666,
+      "top1_agreement": 0.9779411764705882,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.210817878122292,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0022296857941357,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2662870.1298924075
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-15",
+      "condition_kind": "single",
+      "layers": [
+        15
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0031088412980814664,
+      "top1_agreement": 0.9715686274509804,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.209533058927902,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0009428287229973,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2578893.1355118644
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-16",
+      "condition_kind": "single",
+      "layers": [
+        16
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0030186041218563772,
+      "top1_agreement": 0.975,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.211180455606101,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0025931375975483,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2758406.930706662
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-17",
+      "condition_kind": "single",
+      "layers": [
+        17
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0032677954466592677,
+      "top1_agreement": 0.9730392156862745,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.211839845722497,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0032544556125664,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3066218.450744151
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-18",
+      "condition_kind": "single",
+      "layers": [
+        18
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.003405694620576804,
+      "top1_agreement": 0.9715686274509804,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2122443778380205,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0036603863603804,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3301155.8451778716
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-19",
+      "condition_kind": "single",
+      "layers": [
+        19
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.004265444553604897,
+      "top1_agreement": 0.967156862745098,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.211419340643163,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0028326707056798,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4228868.146252538
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-20",
+      "condition_kind": "single",
+      "layers": [
+        20
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0038566514033592835,
+      "top1_agreement": 0.975735294117647,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.211808907327929,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0032234170105112,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4282320.152329794
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-21",
+      "condition_kind": "single",
+      "layers": [
+        21
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.004824128898251303,
+      "top1_agreement": 0.9642156862745098,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2121274268640483,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0035430141641881,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 5469754.729448323
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-22",
+      "condition_kind": "single",
+      "layers": [
+        22
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.004919011769413985,
+      "top1_agreement": 0.967156862745098,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2138562395105263,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0052794525742135,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6121791.865032944
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-23",
+      "condition_kind": "single",
+      "layers": [
+        23
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005397512746630678,
+      "top1_agreement": 0.9713235294117647,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2138265902455823,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.005249647219237,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6803360.320287371
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-24",
+      "condition_kind": "single",
+      "layers": [
+        24
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005411163439648915,
+      "top1_agreement": 0.9696078431372549,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2144284612334326,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.005854859929161,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 7552353.810170709
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-25",
+      "condition_kind": "single",
+      "layers": [
+        25
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.006883870644011723,
+      "top1_agreement": 0.9727941176470588,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2142607495998163,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.005686180512567,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 8662301.365188656
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-26",
+      "condition_kind": "single",
+      "layers": [
+        26
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.006054153686876842,
+      "top1_agreement": 0.9713235294117647,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2129505894866552,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.004369433355656,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 10045089.98367315
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "layer-27",
+      "condition_kind": "single",
+      "layers": [
+        27
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.00593027097928344,
+      "top1_agreement": 0.9637254901960784,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.212884484232589,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0043030414535388,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 11213539.738157682
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "popularity",
+      "condition": "all",
+      "condition_kind": "all",
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.15411679213466736,
+      "top1_agreement": 0.8343137254901961,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.3296664186764064,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.1287104024950338,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1564132.917398491
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1224370.6761786935
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1794408.5942056738
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2256714.912564132
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3078020.684519891
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2555736.2154665394
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3425642.904788208
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3381528.971350401
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3355705.7370556733
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3284749.4447439746
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3232939.092419811
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3132899.3623111024
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3014385.842423811
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2719988.305015242
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2808594.6059295996
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2718023.3257814664
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2909266.3599656723
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3203371.0760269547
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3430740.638398671
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4335574.232628458
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4419273.956303185
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 5587767.846066951
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6230778.752090018
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6952513.379538366
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 7720260.612506138
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 8793913.520767182
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 10070212.69629896
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 11156352.53335971
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 14205604331520,
+      "unmasked_layer_weight_bytes": 0,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.75
+    },
+    {
+      "layout": "popularity",
+      "condition": "block-0",
+      "condition_kind": "block",
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.044246509459025196,
+      "top1_agreement": 0.9154411764705882,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2406019067197636,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0325291029486656,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1564132.917398491
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1224370.6761786935
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1794408.5942056738
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2256714.912564132
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3078020.684519891
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2555736.2154665394
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3425642.904788208
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 3551401082880,
+      "unmasked_layer_weight_bytes": 14205604331520,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9375
+    },
+    {
+      "layout": "popularity",
+      "condition": "block-1",
+      "condition_kind": "block",
+      "layers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.03533426099980732,
+      "top1_agreement": 0.9164215686274509,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2252824477718054,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0168318593749095,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3270748.165158793
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3262587.2419406115
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3224642.807462222
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3186735.206814484
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3102164.3588809795
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2990550.5601845267
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2699817.655968594
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 3551401082880,
+      "unmasked_layer_weight_bytes": 14205604331520,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9375
+    },
+    {
+      "layout": "popularity",
+      "condition": "block-2",
+      "condition_kind": "block",
+      "layers": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.026509366020596455,
+      "top1_agreement": 0.9284313725490196,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2285348659823065,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0201444058044524,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2662870.1298924075
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2578497.922121576
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2772689.519303562
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3077562.8571538115
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3313533.9909524727
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4223816.655822551
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4305493.930136807
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 3551401082880,
+      "unmasked_layer_weight_bytes": 14205604331520,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9375
+    },
+    {
+      "layout": "popularity",
+      "condition": "block-3",
+      "condition_kind": "block",
+      "layers": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.04122865980073138,
+      "top1_agreement": 0.9147058823529411,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2458104194236275,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.037921073783063,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 5469754.729448323
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6131393.733278707
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6844818.740401138
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 7604422.459477551
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 8687147.320399439
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 10010126.44401389
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 11146065.313545762
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 3551401082880,
+      "unmasked_layer_weight_bytes": 14205604331520,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9375
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-00",
+      "condition_kind": "single",
+      "layers": [
+        0
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.00675539497861844,
+      "top1_agreement": 0.9698529411764706,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.213865078264236,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0052883380309725,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1550033.3052585304
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-01",
+      "condition_kind": "single",
+      "layers": [
+        1
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0027488236459733495,
+      "top1_agreement": 0.9821078431372549,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2123372350626354,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0037535878054604,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1224561.9301685337
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-02",
+      "condition_kind": "single",
+      "layers": [
+        2
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0038691142408500707,
+      "top1_agreement": 0.9784313725490196,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.210410851215629,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.001821834354247,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1746615.2129973704
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-03",
+      "condition_kind": "single",
+      "layers": [
+        3
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.006518925223275672,
+      "top1_agreement": 0.9700980392156863,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2104891490995597,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0019002779548964,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2215617.5381728536
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-04",
+      "condition_kind": "single",
+      "layers": [
+        4
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.007304793300789693,
+      "top1_agreement": 0.966421568627451,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.217991017048361,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.009444664652464,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3022873.022733032
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-05",
+      "condition_kind": "single",
+      "layers": [
+        5
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005484256099854713,
+      "top1_agreement": 0.9691176470588235,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2113121403484435,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.002725172509848,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2471109.1866325573
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-06",
+      "condition_kind": "single",
+      "layers": [
+        6
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.007875012781307856,
+      "top1_agreement": 0.9575980392156863,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2163149290090005,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.007754163633669,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3312323.436973191
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-07",
+      "condition_kind": "single",
+      "layers": [
+        7
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.007229440273978356,
+      "top1_agreement": 0.961764705882353,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.21510389343289,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0065344761810504,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3226802.8199167186
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-08",
+      "condition_kind": "single",
+      "layers": [
+        8
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.006706263784658467,
+      "top1_agreement": 0.9637254901960784,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2112270276283765,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0026398314747915,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3170117.468029378
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-09",
+      "condition_kind": "single",
+      "layers": [
+        9
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005333997444562072,
+      "top1_agreement": 0.9651960784313726,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2118347314782927,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.003249324737402,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3075566.7227251236
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-10",
+      "condition_kind": "single",
+      "layers": [
+        10
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005343363364825501,
+      "top1_agreement": 0.9651960784313726,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2175734351430987,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.009023226824671,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2997403.2264066907
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-11",
+      "condition_kind": "single",
+      "layers": [
+        11
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005291609328208055,
+      "top1_agreement": 0.9678921568627451,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2091715442898923,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.000581038638749,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2911276.607558249
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-12",
+      "condition_kind": "single",
+      "layers": [
+        12
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.004524999513019232,
+      "top1_agreement": 0.9620098039215687,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2104393034521728,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.001850338831559,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2803039.3009668556
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-13",
+      "condition_kind": "single",
+      "layers": [
+        13
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.00328476728490998,
+      "top1_agreement": 0.9720588235294118,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2127934616738334,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.004211631381192,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2526486.823476438
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-14",
+      "condition_kind": "single",
+      "layers": [
+        14
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.003396076961693635,
+      "top1_agreement": 0.9715686274509804,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2101753186644095,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0015859004878778,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2592937.0690752496
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-15",
+      "condition_kind": "single",
+      "layers": [
+        15
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0038009202554314166,
+      "top1_agreement": 0.9708333333333333,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.206986569988902,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 0.9983971814879725,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2503711.694733072
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-16",
+      "condition_kind": "single",
+      "layers": [
+        16
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0037496188604625017,
+      "top1_agreement": 0.9713235294117647,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.211949881591273,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0033648556620647,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2673645.0453371084
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-17",
+      "condition_kind": "single",
+      "layers": [
+        17
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0039759034723001645,
+      "top1_agreement": 0.9647058823529412,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2148011983126437,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.006229849213625,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2970304.059705008
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-18",
+      "condition_kind": "single",
+      "layers": [
+        18
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0038724507174258383,
+      "top1_agreement": 0.9725490196078431,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.211768876875028,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.003183258326558,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3197709.7607362857
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-19",
+      "condition_kind": "single",
+      "layers": [
+        19
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005055480802186862,
+      "top1_agreement": 0.9642156862745098,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2123342807898028,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0037506224478856,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4100524.6428501885
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-20",
+      "condition_kind": "single",
+      "layers": [
+        20
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.004749248620299193,
+      "top1_agreement": 0.9659313725490196,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2103966384456837,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0018075957921742,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4179846.338273571
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-21",
+      "condition_kind": "single",
+      "layers": [
+        21
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005737893018880673,
+      "top1_agreement": 0.9661764705882353,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.212402029869084,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.003818627932013,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 5340286.871276842
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-22",
+      "condition_kind": "single",
+      "layers": [
+        22
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.006298504728431551,
+      "top1_agreement": 0.9674019607843137,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.21182433569367,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0032388952277107,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 5976130.791210773
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-23",
+      "condition_kind": "single",
+      "layers": [
+        23
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005896577921984017,
+      "top1_agreement": 0.9720588235294118,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.211181252838328,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0025939368974268,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6700056.078473811
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-24",
+      "condition_kind": "single",
+      "layers": [
+        24
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005865458402077971,
+      "top1_agreement": 0.9723039215686274,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.217563651281482,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0090133547293454,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 7467902.825871581
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-25",
+      "condition_kind": "single",
+      "layers": [
+        25
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.005827593102753864,
+      "top1_agreement": 0.971078431372549,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.214741012209051,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0061692899821129,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 8569368.945519896
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-26",
+      "condition_kind": "single",
+      "layers": [
+        26
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.0061915924831069565,
+      "top1_agreement": 0.9691176470588235,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2149617714702425,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0063914356906618,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 9942192.04931338
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "layer-27",
+      "condition_kind": "single",
+      "layers": [
+        27
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.006306079656657912,
+      "top1_agreement": 0.9669117647058824,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.21647723515731,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0079177416049074,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 11008334.04365503
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 507343011840,
+      "unmasked_layer_weight_bytes": 18264348426240,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9910714285714286
+    },
+    {
+      "layout": "coactivation",
+      "condition": "all",
+      "condition_kind": "all",
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.17935726515468903,
+      "top1_agreement": 0.8112745098039216,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.3634982197989856,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.1675500107576937,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1550033.3052585304
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1207116.153361362
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1756218.1159311906
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2197702.981404888
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3041462.941105255
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2552216.919669106
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3421513.102939372
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3387175.6598903756
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3343822.3987998012
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3275419.1032609087
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3200479.3706416213
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3074834.89761793
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2988053.0340484427
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2691042.4600715493
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2777411.873843535
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2659404.742352291
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2840427.3769954797
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3139833.24790903
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3361165.378956505
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4234598.808989711
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4328089.230573755
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 5476093.685947952
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6126779.472936707
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6868123.760031017
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 7632724.691948914
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 8685395.167145634
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 9919598.136056492
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 10860486.421860652
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 14205604331520,
+      "unmasked_layer_weight_bytes": 0,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.75
+    },
+    {
+      "layout": "coactivation",
+      "condition": "block-0",
+      "condition_kind": "block",
+      "layers": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.045297916078780226,
+      "top1_agreement": 0.9105392156862745,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.248976404853693,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0412123240562807,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1550033.3052585304
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1207116.153361362
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 1756218.1159311906
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2197702.981404888
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3041462.941105255
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2552216.919669106
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3421513.102939372
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 3551401082880,
+      "unmasked_layer_weight_bytes": 14205604331520,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9375
+    },
+    {
+      "layout": "coactivation",
+      "condition": "block-1",
+      "condition_kind": "block",
+      "layers": [
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.04048990523808816,
+      "top1_agreement": 0.9093137254901961,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2458276278351605,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.03793893490972,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3226802.8199167186
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3224452.853656212
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3189882.1480442034
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3137053.414441904
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3039029.490211441
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2955651.0284568123
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2663019.3657837966
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 3551401082880,
+      "unmasked_layer_weight_bytes": 14205604331520,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9375
+    },
+    {
+      "layout": "coactivation",
+      "condition": "block-2",
+      "condition_kind": "block",
+      "layers": [
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.03109024313398319,
+      "top1_agreement": 0.9122549019607843,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2241371537120838,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0156679545205138,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2592937.0690752496
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2521494.566031659
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 2718949.9691054323
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3034693.6209464543
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 3267438.7182673537
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4148772.1216967497
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 4251013.912410207
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 3551401082880,
+      "unmasked_layer_weight_bytes": 14205604331520,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9375
+    },
+    {
+      "layout": "coactivation",
+      "condition": "block-3",
+      "condition_kind": "block",
+      "layers": [
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27
+      ],
+      "group_width": 32,
+      "keep_fraction": 0.75,
+      "mean_kl_dense_to_candidate": 0.049414300096072734,
+      "top1_agreement": 0.9053921568627451,
+      "dense_nll": 2.2085906743887342,
+      "candidate_nll": 2.2558241205990854,
+      "predicted_tokens": 4080,
+      "relative_perplexity": 1.0483667177527058,
+      "layer_accounting": [
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 5340286.871276842
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6027723.07102474
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 6802858.6072959
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 7595719.882510884
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 8701944.053030007
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 10034225.987066336
+        },
+        {
+          "token_observations": 4096,
+          "hypothetical_selected_weight_bytes": 507343011840,
+          "full_weight_bytes_for_same_observations": 676457349120,
+          "selected_importance_sum": 11031072.62909103
+        }
+      ],
+      "hypothetical_masked_layer_selected_bytes": 3551401082880,
+      "unmasked_layer_weight_bytes": 14205604331520,
+      "full_ffn_weight_bytes_for_same_observations": 18940805775360,
+      "hypothetical_whole_ffn_weight_fraction": 0.9375
+    }
+  ],
+  "layer_analysis": {
+    "coactivation": {
+      "sum_single_layer_kl": 0.14899416026852402,
+      "joint_layer_kl": 0.17935726515468903,
+      "joint_to_sum_ratio": 1.2037872144213118,
+      "largest_four_layers": [
+        6,
+        4,
+        7,
+        0
+      ],
+      "largest_four_share_of_single_kl_sum": 0.1957435196260881,
+      "parent_joint_kl": 0.17935726515468903,
+      "joint_kl_minus_parent": 0.0
+    },
+    "popularity": {
+      "sum_single_layer_kl": 0.13579303751930322,
+      "joint_layer_kl": 0.15411679213466736,
+      "joint_to_sum_ratio": 1.1349388374404645,
+      "largest_four_layers": [
+        6,
+        4,
+        25,
+        7
+      ],
+      "largest_four_share_of_single_kl_sum": 0.20819771748222615,
+      "parent_joint_kl": 0.15411679213466736,
+      "joint_kl_minus_parent": 0.0
+    }
+  },
+  "all_layer_paired_comparison": {
+    "comparison": "coactivation_minus_popularity_mean_KL",
+    "group_width": 32,
+    "keep_fraction": 0.75,
+    "documents": 16,
+    "bootstrap_replicates": 2000,
+    "bootstrap_seed": 1729,
+    "delta": 0.025240473020021643,
+    "percentile_95_interval": [
+      0.01647865140423353,
+      0.03468115505017997
+    ],
+    "interpretation": "Exploratory paired whole-document interval, not confirmatory inference"
+  },
+  "raw_results_sha256": "2c854f37bac0173570c56087eb80cc215db95a877b7f44ba935142614fd773fd"
+}

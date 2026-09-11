@@ -13,10 +13,12 @@ See the [research stages and delivery history](docs/plan.md),
 [GitHub milestones](https://github.com/displague/dynamic-model-loading/milestones)
 for the original plan, completed experiments, and remaining gates.
 
-**Current result:** the larger FP32 pilot passed correctness checks and completed 24
-configurations. The tested co-activation packing heuristic lost to simple popularity
-packing in all four grouped settings. See [pilot findings](docs/packing-pilot-results.md)
-for results, precision controls, and preserved receipts. The
+**Current result:** the FP32 layer study completed 66 conditions with all correctness
+checks passing. Omission sensitivity is distributed across layers on this slice;
+the four largest layer effects account for only 20.8% / 19.6% of the individual KL
+sums. See [layer findings](docs/layer-study-results.md) and the
+[packing pilot](docs/packing-pilot-results.md) for complete curves and preserved
+negative results. The
 [initial BF16 numerical failure](docs/initial-results.md) remains unresolved by a
 practical execution policy; the default BF16 command still reproduces that failure.
 

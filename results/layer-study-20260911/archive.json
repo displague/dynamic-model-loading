@@ -1,0 +1,41 @@
+{
+  "source_run": "runs\\qwen15b-layer-study-20260911",
+  "protocol_commit": "45bfecb",
+  "raw_row_counts": {
+    "dense_reference": 16,
+    "group_reconstruction": 56,
+    "layout_correctness": 32,
+    "omission_document": 1056,
+    "omission_aggregate": 66
+  },
+  "validated": "Every planned condition/document; all aggregate metrics and metadata; source/input/token/layout hashes; layer analysis and bootstrap; full unmasked-layer accounting; local dense reference hashes; all-layer parent quality metrics exactly reproduced",
+  "omitted": "reference_logits: reproducible dense outputs retained locally; hashes in dense_reference rows. Model weights are external pinned inputs.",
+  "files": {
+    "figures/layers.png": "8a839a33fa74d780df03af63189539b27ecc7f0efb4749a6b77b198475d93a23",
+    "figures/layers.svg": "03a77a6d0e738ba9ee172aef1b78d8e98c157d1fef8142505f4cbf069a9c7ac9",
+    "figures/provenance.json": "f9651b349dd55570f62f6244f14968b9b5c210ebc2e1673c0ed953ab6e0d79cf",
+    "run/config.json": "b0e8704462af7ae76e6508ea714ec8cf172fb9f30b0a137735e79df382681d11",
+    "run/corpus-provenance.json": "48058d59eb0e647410c30c932620c21f2433b08c9e0cb5db80bd13845f5fb92a",
+    "run/corpus.jsonl": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+    "run/layouts.json.gz": "ab0c2657c4c183aab5ff4f6c03ef4c27c877a5a262893164ddfa71ff581558fa",
+    "run/manifest.json": "373e28bcbce0fd8e0e6cd88c4338843016b7228ff94e4cf1b839a06e06bec9df",
+    "run/parent-manifest.json": "74349fb6fdbed4f0591add5f6d901d59787b09a9f4a776c79f316b6743de160a",
+    "run/parent-summary.json": "9292c18dd113b2539354c997339cb114986130c6ef694b5aae6cce8805f13acf",
+    "run/protocol.md": "4a9f654d63ff4c53845b6961fcf4dc0f6260547837d6706005bcb1249ae72766",
+    "run/report.md": "05ff1e12b4cc63b9d6489fd4146f2e6ad4de9a00ccb682de5be5a73c6b654c94",
+    "run/results.jsonl": "2c854f37bac0173570c56087eb80cc215db95a877b7f44ba935142614fd773fd",
+    "run/source/__init__.py": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738",
+    "run/source/adapters.py": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc",
+    "run/source/analysis.py": "ba578312bb18e3af8104fd50f6bcf30a02d887fcf6224b4bb56434f5fb1fb086",
+    "run/source/corpus.py": "127735e3b9f13c040fc4fa99b5c38b4bb1d2f9c39205e38650211d3acc7d4567",
+    "run/source/experiment.py": "0e22f87b911521a55700b9079f5c2f4d014fe5b1d5f48b11d689ea29d7a5c391",
+    "run/source/ffn.py": "5f99973e1d9779023a06f64cccc084dea90a143b74116ca40b58bfa6ffc26e55",
+    "run/source/layer_plot.py": "eb9221c88e808700df2898aa69ea1f47f24220d93fba517d2ce4b4323220b651",
+    "run/source/layer_study.py": "cb5d76f0f9645d0c97b194f0cc2c87c9a7156eeedf638ec91e033652bfc5eef6",
+    "run/source/metrics.py": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53",
+    "run/source/packing.py": "b13c919d54ebc7e97669ee454a37b09732b3faa5cb78f697ee6a3a9f6297fe46",
+    "run/source/precision.py": "38c236b12a3055693da9080c9f49fbea3619f7dac42349c4f4469f1467367367",
+    "run/summary.json": "dfbfad4618db38d221b5f0cc40d092079a82c17b42a8dcb4e8d4e402a03910cf",
+    "run/token-ids.json": "f26039f7ca013329da2aa2e6872bb80d878a872f159e17e8723d3339d2ede505"
+  }
+}

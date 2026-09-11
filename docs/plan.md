@@ -16,7 +16,7 @@ silently damage quality without causing a residency miss.
 | Stage | Deliverable and exit gate | Current evidence / remaining work |
 |---|---|---|
 | 0. Reproducible reference | Dense and physically repacked outputs agree under declared tolerances; record timing, memory, and provenance. | FP32 passes. BF16 permutation fails; canonical down-projection order is exact but costly. Practical BF16 policy and proposed ReLU positive control remain open. |
-| 1. Hindsight sparsity envelope | Individual-neuron and per-layer/multi-layer omission curves on whole-document and domain splits; useful sparsity survives unseen inputs. | Smoke and a 16-article Wikipedia development slice exist. Per-layer study is next. Multi-domain held-out quality and task outcomes remain unmeasured. |
+| 1. Hindsight sparsity envelope | Individual-neuron and per-layer/multi-layer omission curves on whole-document and domain splits; useful sparsity survives unseen inputs. | Smoke, a 16-article Wikipedia slice, and 66 per-layer/joint conditions exist. Sensitivity is distributed on this slice. Multi-domain held-out quality and task outcomes remain unmeasured. |
 | 2. Physical packing and cache traces | Quality versus transferred bytes and transfer amplification at 256/512 MiB and 1/2 GiB FFN-cache budgets. | Native, random, popularity, and co-activation layouts tested. Co-activation loses to popularity here. Width 8, cache traces, physical transfers, and the exit gate remain open. |
 | 3. Causal prediction | Static hot-set, recency, EMA, and learned-selector quality/bytes/cost curves; savings pay for prediction, including approximate closed-loop inference. | Not started; dependent on a useful grouped frontier. Document feature availability and audit omitted computation independently. |
 | 4. RAM-to-VRAM execution | Explicit bounded slots, pinned staging, actual skipped reads/computation; beat the strongest same-budget baseline after all costs. | Not started. Compare dense streaming, static/recency/activation-aware caches, and CPU/GPU execution splits. |
@@ -35,7 +35,7 @@ memory, and an always-on service remain deferred.
 |---|---|---|
 | [v0.1.0](releases/v0.1.0.md) | Reference apparatus, original BF16 failure, separate FP32 control | Correct paired packing in FP32; grouping loses much of individual-neuron quality. |
 | [v0.2.0](releases/v0.2.0.md) | Larger packing pilot and arithmetic diagnosis | Tested co-activation heuristic loses in every grouped setting; canonical BF16 order is exact. |
-| v0.3.0 (planned) | Per-layer omission sensitivity and interaction diagnosis | Protocol will be published before measurement; no result is assumed. |
+| [v0.3.0](releases/v0.3.0.md) | Per-layer omission sensitivity and interaction diagnosis | Top-four layers account for 20.8% / 19.6% of single-layer KL sums; all-layer controls reproduce exactly. |
 
 No completed delivery establishes an inference speedup or achieved memory reduction.
 The stage milestones remain open where their full gates have not been met. The
