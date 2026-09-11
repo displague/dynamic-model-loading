@@ -139,10 +139,12 @@ def tiny_relu(tmp_path, monkeypatch):
 
 
 def test_real_opt_fixture_exact_zero_and_approximate_receipts(tiny_relu):
+    from dynamic_model_loading.relu_analysis import analyze
     result = relu_study.run(*tiny_relu, device="cpu")
     assert result['status'] == 'relu_control_completed'
     assert result['exact_zero_passed']
     assert len(result['probes']) == 12
+    assert analyze(tiny_relu[2])['status'] == 'validated'
     zero = [r for r in result['probes'] if r['mode']=='exact_zero']
     assert all(r['relative_perplexity'] == pytest.approx(1.0, abs=1e-6) for r in zero)
     for r in result['probes']:
@@ -151,6 +153,96 @@ def test_real_opt_fixture_exact_zero_and_approximate_receipts(tiny_relu):
         assert a['hypothetical_selected_ffn_bytes']==a['selected_group_weight_bytes']+a['fixed_output_bias_bytes']
     with pytest.raises(FileExistsError):
         relu_study.run(*tiny_relu, device="cpu")
+
+
+@pytest.mark.parametrize('corrupt', ['missing_gate', 'output_bias', 'early_approximate', 'source', 'summary'])
+def test_relu_analysis_rejects_corrupt_receipts(tiny_relu, corrupt):
+    from dynamic_model_loading.relu_analysis import analyze
+    relu_study.run(*tiny_relu, device='cpu')
+    run = tiny_relu[2]
+    if corrupt == 'source':
+        (run/'source'/'relu.py').write_text('changed')
+    elif corrupt == 'summary':
+        summary = json.loads((run/'summary.json').read_text())
+        summary['probes'][0]['accounting']['full_ffn_bytes'] += 1
+        (run/'summary.json').write_text(json.dumps(summary))
+    else:
+        rows = [json.loads(line) for line in (run/'results.jsonl').read_text().splitlines()]
+        if corrupt == 'missing_gate':
+            rows.pop(next(i for i,r in enumerate(rows) if r['kind']=='layout_correctness'))
+        elif corrupt == 'output_bias':
+            row = next(r for r in rows if r['kind']=='relu_document')
+            row['layer_accounting'][0]['fixed_output_bias_bytes'] = 0
+        else:
+            first = next(i for i,r in enumerate(rows) if r['kind']=='relu_document')
+            approximate = next(i for i,r in enumerate(rows) if r.get('mode')=='approximate_75')
+            rows[first], rows[approximate] = rows[approximate], rows[first]
+        (run/'results.jsonl').write_text('\n'.join(json.dumps(r) for r in rows))
+    with pytest.raises(ValueError):
+        analyze(run)
+
+
+@pytest.mark.parametrize('corrupt,match', [
+    ('startup','startup receipt'), ('sources','source inventory'), ('environment','Execution policy'),
+    ('widths','duplicated group_widths'), ('ppl','perplexity'), ('nonfinite','document metrics'),
+    ('zero_counts','Zero neuron/group'), ('tail_count','short-tail'), ('dense','Dense reference'),
+    ('dependencies','source inventory'), ('missing_environment','environment inventory'),
+    ('versions','baseline version'), ('dense_nll','Dense NLL'), ('zero_tail_ties','short-tail'),
+    ('active_tail_capacity','short-tail capacity')])
+def test_relu_analysis_rejects_review_counterexamples(tiny_relu, corrupt, match):
+    from dynamic_model_loading.relu_analysis import analyze
+    relu_study.run(*tiny_relu,device='cpu')
+    run=tiny_relu[2]
+    def read(name): return json.loads((run/name).read_text())
+    def write(name,value): (run/name).write_text(json.dumps(value))
+    if corrupt == 'startup':
+        write('started.json',{})
+    elif corrupt in ('sources','environment','widths','dependencies','missing_environment','versions'):
+        if corrupt == 'widths':
+            cfg=read('config.json'); cfg['group_widths']=[1,1,7]; write('config.json',cfg)
+        for name in ('started.json','manifest.json'):
+            data=read(name)
+            if corrupt == 'sources': data['sources']={}
+            elif corrupt == 'dependencies': data['sources'].pop('adapters.py')
+            elif corrupt == 'missing_environment': data['environment'].pop('versions')
+            elif corrupt == 'versions': data['environment']['versions']['transformers']='0.0.fake'
+            elif corrupt == 'environment':
+                data['environment']['torch']='0.0.fake'; data['environment']['tf32_matmul']=True
+            else: data['config_sha256']=digest(run/'config.json')
+            write(name,data)
+    elif corrupt == 'dense':
+        (run/'reference_logits/000.safetensors').write_bytes(b'corrupt')
+    else:
+        rows=[json.loads(line) for line in (run/'results.jsonl').read_text().splitlines()]
+        row=next(r for r in rows if r['kind']=='relu_document' and r['mode']=='approximate_75'
+                 and r['group_width']==(7 if corrupt in ('tail_count','zero_tail_ties','active_tail_capacity') else 1))
+        if corrupt=='ppl': row['relative_perplexity']=1e100
+        elif corrupt=='nonfinite': row['logit_relative_l2']=float('nan')
+        elif corrupt=='dense_nll':
+            import math
+            row['dense_nll']+=10
+            row['relative_perplexity']=math.exp(row['candidate_nll']-row['dense_nll'])
+        else:
+            a=row['layer_accounting'][0]
+            if corrupt=='zero_counts': a['zero_neurons']=a['neuron_observations']
+            elif corrupt=='zero_tail_ties':
+                a.update(zero_neurons=96,zero_groups=16,selected_neurons=68,
+                         selected_group_weight_bytes=68*33*4,hypothetical_selected_ffn_bytes=68*33*4+4*16*4)
+            elif corrupt=='active_tail_capacity':
+                a.update(zero_neurons=68,zero_groups=12,selected_neurons=68,
+                         selected_group_weight_bytes=68*33*4,hypothetical_selected_ffn_bytes=68*33*4+4*16*4)
+            else:
+                a['selected_neurons']-=1
+                a['selected_group_weight_bytes']-=33*4
+                a['hypothetical_selected_ffn_bytes']-=33*4
+        (run/'results.jsonl').write_text('\n'.join(json.dumps(r) for r in rows))
+    with pytest.raises(ValueError,match=match): analyze(run)
+
+
+def test_relu_analysis_accepts_producer_indexed_cpu_device(tiny_relu):
+    from dynamic_model_loading.relu_analysis import analyze
+    relu_study.run(*tiny_relu,device='cpu:0')
+    assert analyze(tiny_relu[2])['status']=='validated'
 
 
 def test_relu_gate_failure_blocks_every_probe(tiny_relu, monkeypatch):
