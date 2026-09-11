@@ -1,0 +1,46 @@
+{
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+  "expected_torch": "2.10.0+cu130",
+  "documents": 2,
+  "tokens": 128,
+  "layers": 28,
+  "hidden": 1536,
+  "neurons": 8960,
+  "groups": 1120,
+  "initial_groups": 1008,
+  "width": 8,
+  "budget_bytes": 2147483648,
+  "repair_metadata_bytes": 1034880,
+  "cpu_threads": 4,
+  "seed": 1729,
+  "limits": [
+    0,
+    8,
+    28,
+    56,
+    84,
+    112
+  ],
+  "schedules": [
+    "hindsight",
+    "resident_first"
+  ],
+  "modes": [
+    "static",
+    "recency",
+    "ema",
+    "learned"
+  ],
+  "one_shot": [
+    0.9,
+    0.925,
+    0.95,
+    0.975,
+    1.0
+  ],
+  "ppl_limit": 1.01,
+  "warm_saving_min": 0.1,
+  "protocol": "docs/refinement-feasibility-protocol.md",
+  "parent_index_sha256": "058311cee063b5751e651df923e071ae750dc274f8fc03f82dd99155bbbbf4aa"
+}

@@ -1,0 +1,16 @@
+{
+  "status": "validated",
+  "raw_rows": 260,
+  "raw_sha256": "a2ad86ae2aa3e90edb9e3724b6f8107238a75220ee7652b1ed71f3e61490d1ba",
+  "analysis_sha256": "246d789b84cdbdb0402dbad6ba0c4d0c9756f595c8278f840ed6808c3b1032eb",
+  "restored_analysis_sha256": "246d789b84cdbdb0402dbad6ba0c4d0c9756f595c8278f840ed6808c3b1032eb",
+  "restored_analysis_equal": true,
+  "assets": 2,
+  "restored_payloads": 154,
+  "premeasurement_tests": {
+    "torch_2.10.0_cu130": 147,
+    "torch_2.12.0_cu130": 147
+  },
+  "runtime_nomination": null,
+  "scope": "Archived masks, privileged ranking receipts, reference-side quality, charged replay and complete grid; no candidate-logit recomputation or causal runtime claim."
+}
