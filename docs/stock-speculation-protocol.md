@@ -47,6 +47,30 @@ This changes the loading substrate prospectively, without lowering a resource
 threshold or rescoring a completed workload. A failure of mmap startup on this
 busy 32 GiB host does not establish that the target itself cannot run here.
 
+Calibration continuation amendment (2026-09-12, before evaluation): at source
+`4f115ae`, the seven-target-layer IQ2_XS control aborts inside stock CUDA loading
+before the first request. A separate verbosity-5 startup-only diagnostic reproduces
+exit 3221226505 and the generic `ggml-cuda.cu:108: CUDA error` without exposing its
+cause. Preserve this as a native startup failure; it is not an established OOM.
+Continue the two unvisited thread points in that fixed grid, treating this exact
+reproduced startup signature at seven layers as an unusable native configuration.
+Other unclassified errors still stop the driver. Do not change loading, resource
+limits, generation, the placement/thread grid or the minimum-time selection rule.
+
+The continuation uses a fresh directory, retains the original aborted ledger/log,
+and copies every prior case with byte hashes. Completed cases are not rerun or
+replaced. Changed orchestration is reviewed and pushed; measurement-script,
+artifact-catalogue, workload and smoke-fixture hashes must remain identical, and
+all imported source commits must be ancestors of the continuation source. This
+narrows the earlier same-revision requirement to identical measurement code/data
+with explicit orchestration ancestry. The final selection binds the continuation
+receipt and full ledger; evaluation checks the retained copied-file hashes.
+The continuation inventory is pinned by the original 39-case ledger's SHA-256 in
+`configs/stock-calibration-continuation.json`; only `draft32-ngl7-t16` and
+`draft32-ngl7-t24` may launch. The copied environment and driver logs are hashed
+alongside the case files. The original 21 completed cases cannot be omitted from
+the imported inventory or rerun through this continuation.
+
 ## Question and fixed substrate
 
 Does a draft with GPU-resident transformer/output layers improve committed-token throughput for an offloaded

@@ -1,0 +1,9 @@
+{
+  "schema": 1,
+  "prior_ledger_sha256": "4af2c1c287491b0416bf52f3fca2970118b12055c7336f33476a31c7e03004c0",
+  "prior_cases": 39,
+  "prior_completed_cases": 21,
+  "terminal_case": "draft32-ngl7-t8",
+  "allowed_new_cases": ["draft32-ngl7-t16", "draft32-ngl7-t24"],
+  "reason": "Complete only the two unvisited fixed-grid points after the reproduced native startup abort; retain every prior measurement."
+}

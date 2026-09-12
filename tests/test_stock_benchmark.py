@@ -202,13 +202,16 @@ def test_partial_http_body_and_status_survive_disconnect(tmp_path,monkeypatch):
 def test_selection_must_match_configuration_in_ledger(tmp_path,monkeypatch):
     sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'scripts'))
     import stock_study as study
-    root=tmp_path/'source';(root/'configs').mkdir(parents=True);(root/'data').mkdir()
-    for relative in ['configs/stock-speculation-artifacts.json','data/stock-speculation-workloads.json']:
+    root=tmp_path/'source';(root/'configs').mkdir(parents=True);(root/'data').mkdir();(root/'scripts').mkdir()
+    for relative in ['configs/stock-speculation-artifacts.json','data/stock-speculation-workloads.json',
+                     'data/dense-interface-fresh.jsonl','scripts/stock_benchmark.py']:
         (root/relative).write_text('{}',encoding='utf-8')
     evidence=tmp_path/'evidence';run=evidence/'target';run.mkdir(parents=True)
     manifest={'head':'current','mode':'calibration','ngl':40,'threads':8,'draft':None,'k':None,
               'catalog_sha256':bench.digest(root/'configs/stock-speculation-artifacts.json'),
-              'workloads_sha256':bench.digest(root/'data/stock-speculation-workloads.json')}
+              'workloads_sha256':bench.digest(root/'data/stock-speculation-workloads.json'),
+              'smoke_sha256':bench.digest(root/'data/dense-interface-fresh.jsonl'),
+              'runner_sha256':bench.digest(root/'scripts/stock_benchmark.py')}
     bench.write_json(run/'manifest.json',manifest);bench.write_json(run/'completion.json',{})
     rows=[{'resource_pass':True,'warmup':i==0,'sampled_gpu_peak':1000,
            'response':{'timings':{'predicted_ms':10}}} for i in range(3)]
