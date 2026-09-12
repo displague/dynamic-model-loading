@@ -4,7 +4,9 @@ import argparse
 import gc
 import json
 from pathlib import Path
+import shutil
 import statistics
+import subprocess
 import time
 
 import numpy as np
@@ -26,6 +28,16 @@ from .cache import cache_shape,hot_mask
 from .provenance import committed_inputs,frozen_environment,verify_snapshot
 
 TIMING_WORKLOADS=('dense_ffn','down_products','controller','output_additions')
+TIMING_PROTOCOL='docs/causal-evidence-timing-correction.md'
+
+
+def restore_fitted_layout(data,stored):
+    """Recover the original solve layout without changing a fitted coefficient."""
+    fitted=ce.fit_models(data)
+    actual=ce.flatten_models(fitted)
+    if set(actual)!=set(stored) or any(not torch.equal(actual[k],stored[k]) for k in actual):
+        raise ValueError('Timing refit differs from the frozen coefficients')
+    return fitted
 
 
 def rounded_cost(count,workload,hardware):
@@ -110,16 +122,18 @@ def measure_batches(parent,cfg,output):
 @torch.inference_mode()
 def run(config_path, run_path, output_path):
     cfg_path=Path(config_path).resolve();root=cfg_path.parent.parent;cfg=read(cfg_path)
-    source,_=committed_inputs(__file__,cfg_path,cfg['protocol'])
+    source,timing_protocol=committed_inputs(__file__,cfg_path,TIMING_PROTOCOL)
     run=Path(run_path);manifest=read(run/'manifest.json')
     verify_snapshot(run,manifest,'configs/causal-evidence.json',cfg['protocol'],__file__)
-    if source['source_commit']!=manifest['source_commit']:raise ValueError('Timing must use the same frozen source')
+    subprocess.run(['git','-C',str(root),'merge-base','--is-ancestor',manifest['source_commit'],source['source_commit']],check=True)
     parent=load_inputs(root,cfg);rows=[json.loads(s) for s in (run/'results.jsonl').read_text().splitlines()]
     if len([r for r in rows if r['kind']=='wiki'])!=40:raise ValueError('Complete quality grid required before timing')
     torch.set_num_threads(4);torch.backends.cuda.matmul.allow_tf32=False;torch.backends.cudnn.allow_tf32=False
     env=environment(torch.device('cuda'));frozen_environment(env)
     output=Path(output_path);output.mkdir(parents=True,exist_ok=False)
-    write_json(output/'manifest.json',{'environment':env,'source_commit':source['source_commit'],
+    shutil.copyfile(cfg_path,output/'config.json');shutil.copyfile(timing_protocol,output/'protocol.md')
+    shutil.copytree(Path(__file__).parent,output/'source',ignore=shutil.ignore_patterns('__pycache__'))
+    write_json(output/'manifest.json',{'environment':env,**source,'measurement_source_commit':manifest['source_commit'],
         'results_sha256':digest(run/'results.jsonl'),'hardware_sha256':cfg['hardware_sha256']})
     checkpoint=Path(snapshot_download(cfg['model']['model'],revision=cfg['model']['revision'],local_files_only=True))
     if {p.name:digest(p) for p in checkpoint.iterdir() if p.is_file()}!=read(run/'model.json')['checkpoint_files']:
@@ -127,7 +141,17 @@ def run(config_path, run_path, output_path):
     model=AutoModelForCausalLM.from_pretrained(checkpoint,dtype=torch.float32,attn_implementation='sdpa',local_files_only=True,
         trust_remote_code=False).cuda().eval();mlps=extract_ffns(model)
     fit_row=next(r for r in rows if r['kind']=='fit' and r['pass_index']==2)
-    models=ce.unflatten_models(load_file(run/fit_row['tensors']['file']),28,'cuda')
+    def verified_tensor(receipt):
+        path=run/receipt['file']
+        if digest(path)!=receipt['sha256']:raise ValueError('Timing tensor receipt mismatch')
+        return load_file(path)
+    examples=[verified_tensor(r['examples']) for r in rows if r['kind']=='calibration' and r['pass_index']==2]
+    fitted=restore_fitted_layout({key:torch.cat([d[key] for d in examples]) for key in examples[0]},
+                                verified_tensor(fit_row['tensors']))
+    write_json(output/'fit-layout.json',{'coefficient_bitwise_equal':True,'fit_sha256':fit_row['tensors']['sha256'],
+        'strides':{k:list(v.stride()) for k,v in ce.flatten_models(fitted).items()}})
+    models=ce.unflatten_models(ce.flatten_models(fitted),28,'cuda')
+    del examples,fitted
     first_doc=parent['development'][0];measurements=[]
     stream=(output/'results.jsonl').open('x',encoding='utf-8')
     try:

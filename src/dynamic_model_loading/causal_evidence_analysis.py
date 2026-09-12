@@ -15,7 +15,7 @@ from huggingface_hub import snapshot_download
 from . import causal_evidence as ce
 from .balanced_control import quality_metrics
 from .causal_study import numerical_pass
-from .causal_evidence_cost import action_cost,rounded_cost,batch_counts,TIMING_WORKLOADS
+from .causal_evidence_cost import action_cost,rounded_cost,batch_counts,TIMING_WORKLOADS,TIMING_PROTOCOL
 from .causal_evidence_study import load_inputs,model_bytes,policy_summary,read
 from .dense_interface import aligned_metrics,prepare,score,decoding
 from .experiment import digest,write_json
@@ -214,7 +214,16 @@ def analyze(run_path,cost_path,output_path):
     conditions=policy_summary(rows,parent['baseline']['total_bytes'])
     same(read(run/'summary.json')['conditions'],conditions,'quality summary')
     cost_manifest=read(cost/'manifest.json')
-    same(cost_manifest['source_commit'],manifest['source_commit'],'timing source')
+    same(cost_manifest['measurement_source_commit'],manifest['source_commit'],'timed measurement source')
+    verify_snapshot(cost,cost_manifest,'configs/causal-evidence.json',TIMING_PROTOCOL,__file__)
+    same(read(cost/'config.json'),cfg,'timing configuration')
+    fit_row=next(r for r in rows if r['kind']=='fit' and r['pass_index']==2)
+    stored=tensors(fit_row['tensors'])
+    fitted_values=ce.flatten_models(fitted)
+    if any(not torch.equal(stored[k],v) for k,v in fitted_values.items()):
+        raise ValueError('Timing coefficients do not reproduce bitwise')
+    same(read(cost/'fit-layout.json'),{'coefficient_bitwise_equal':True,'fit_sha256':fit_row['tensors']['sha256'],
+         'strides':{k:list(v.stride()) for k,v in fitted_values.items()}},'original fit layout')
     same(cost_manifest['results_sha256'],digest(run/'results.jsonl'),'timed result identity');frozen_environment(cost_manifest['environment'])
     samples=[json.loads(s) for s in (cost/'results.jsonl').read_text().splitlines()]
     same(len(samples),len(ce.CONDITIONS)*len(TIMING_WORKLOADS)*13,'timing rows')
@@ -282,7 +291,8 @@ def analyze(run_path,cost_path,output_path):
                 limitation='Serialized synthetic primitive sensitivity is not exposed runtime latency; broader held-out gates remain open.')
     output=Path(output_path);output.mkdir(parents=True,exist_ok=False);write_json(output/'summary.json',result)
     write_json(output/'verification.json',{'source_commit':manifest['source_commit'],'results_sha256':digest(run/'results.jsonl'),
-        'timing_results_sha256':digest(cost/'results.jsonl'),'analysis_source_sha256':digest(Path(__file__)),'status':'verified'})
+        'timing_results_sha256':digest(cost/'results.jsonl'),'timing_source_commit':cost_manifest['source_commit'],
+        'analysis_source_sha256':digest(Path(__file__)),'status':'verified'})
     return result
 
 

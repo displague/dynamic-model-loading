@@ -8,7 +8,7 @@ from torch.nn import functional as F
 
 from dynamic_model_loading.adapters import FFNView
 from dynamic_model_loading import causal_evidence as ce
-from dynamic_model_loading.causal_evidence_cost import rounded_cost,action_cost
+from dynamic_model_loading.causal_evidence_cost import rounded_cost,action_cost,restore_fitted_layout
 from dynamic_model_loading.causal_evidence_analysis import generation_alignment,verify_logit_shape,verify_trace
 from dynamic_model_loading import causal_evidence_study as study
 
@@ -156,3 +156,16 @@ def test_logit_shapes_follow_pinned_vocabulary_not_an_architecture_guess():
         verify_logit_shape(torch.zeros(1,2,152064),(1,2),config)
     with pytest.raises(ValueError,match='dtype'):
         verify_logit_shape(torch.zeros(3,151936,dtype=torch.float64),(3,),config)
+
+
+def test_timing_restores_fit_layout_and_rejects_changed_coefficients():
+    generator=torch.Generator().manual_seed(24)
+    data={key:torch.randn(20,1,width,generator=generator) for key,width in
+          [('base',18),('repair',21),('labels',8),('error',1)]}
+    original=ce.fit_models(data);flat=ce.flatten_models(original)
+    saved={key:value.contiguous().clone() for key,value in flat.items()}
+    assert saved['0.base.weight'].stride()!=flat['0.base.weight'].stride()
+    restored=ce.flatten_models(restore_fitted_layout(data,saved))
+    assert all(torch.equal(restored[k],flat[k]) and restored[k].stride()==flat[k].stride() for k in flat)
+    saved['0.base.weight'][0,0]+=1
+    with pytest.raises(ValueError,match='frozen coefficients'):restore_fitted_layout(data,saved)
