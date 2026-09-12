@@ -8,6 +8,7 @@ import pytest
 SCRIPTS = Path(__file__).resolve().parents[1]/'scripts'
 sys.path.insert(0, str(SCRIPTS))
 import verification_offload as study
+from analyze_verification_offload import summarize_requests
 
 
 def test_child_settings_replace_case_insensitive_inherited_overrides_without_mutating_parent():
@@ -83,3 +84,14 @@ def test_setup_failure_is_retained_without_touching_an_older_attempt(tmp_path, m
     with pytest.raises(FileExistsError):
         study.run(SimpleNamespace(output=out))
     assert (out/'failure.json').read_bytes() == receipt
+
+
+def test_rate_uses_total_emitted_output_over_total_request_time():
+    def row(n, seconds):
+        return {'seconds': seconds, 'response': {'tokens': list(range(n)),
+                'timings': {'prompt_ms': 100, 'predicted_ms': seconds*1000-100}},
+                'acceptance': [], 'acceptance_summary': {'consistent': True}}
+    result = summarize_requests([row(10, 1), row(20, 4)])
+    assert result['emitted_per_request_second'] == 6
+    assert result['emitted_per_native_decode_second'] == 30/4.8
+    assert result['survival'] is None and result['request_ms_per_recorded_cycle'] is None
