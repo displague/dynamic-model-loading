@@ -46,8 +46,11 @@ Current work: [stock benchmark #23](https://github.com/displague/dynamic-model-l
 [optional representations #25](https://github.com/displague/dynamic-model-loading/issues/25),
 and [optional adaptive speculation #26](https://github.com/displague/dynamic-model-loading/issues/26).
 The [v0.13.0 preparation delivery](releases/v0.13.0.md) records the decision and
-pinned substrate. Model acquisition and the benchmark remain blocked on storage;
-no target-scale performance has been measured.
+pinned substrate. The project owner resolved the storage constraint on 2026-09-12;
+all target/draft GGUF files are now acquired and verified. The
+[native runner](stock-speculation-runner.md) receives a clean pushed preregistration
+before calibration and evaluation. No target-scale performance has been measured
+at this preparation point.
 
 ## Historical roadmap
 

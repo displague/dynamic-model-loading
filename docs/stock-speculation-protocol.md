@@ -6,9 +6,27 @@ downloads, source inspection and binary help are preparation, not scoring.
 Placement and thread calibration are explicitly separate from evaluation and are
 retained. Follow [ADR 0003](adr/0003-verified-speculation-boundary.md).
 
+Implementation clarification before any target inference (2026-09-12): the stock
+server's decode interval excludes the first generated token, which comes from
+prefill. Report both the declared emitted-token/decode-time ratio and the stock
+decode-step rate using `predicted_n - 1`, plus total request output/time. Never
+attribute the prefill token to a verification cycle. The smoke user message keeps
+the v0.11 one-line-answer prefix; all new runs use the authored workload system
+message and the target's embedded chat template. This is a target-relative smoke
+comparison, not a cross-release 1.5B utility rescore. No measurements preceded
+these clarifications.
+
+Stock-placement clarification before inference: `--spec-draft-ngl all` places the
+draft transformer and output layers on the GPU; the stock loader keeps input
+embeddings on the CPU. Charge and report that actual split. Here, resident drafting
+means resident draft transformer/output computation, not zero CPU allocations or
+an entirely GPU-resident model file. Explicit CUDA device arguments and parsed
+offload counts must confirm the requested placement; CPU backend fallback cannot
+qualify as a feasible GPU configuration.
+
 ## Question and fixed substrate
 
-Does a fully GPU-resident draft improve committed-token throughput for an offloaded
+Does a draft with GPU-resident transformer/output layers improve committed-token throughput for an offloaded
 Qwen2.5-32B-Instruct Q4_K_M target, after charging target residency displaced by the
 draft? The primary comparison is each best complete measured configuration under
 the same total resource allowance. This is a bounded configuration frontier, not

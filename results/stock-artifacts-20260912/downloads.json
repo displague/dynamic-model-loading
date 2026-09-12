@@ -1,0 +1,71 @@
+{
+  "method": "public HTTP range requests; HF CLI stalled before data transfer",
+  "files": [
+    {
+      "key": "target",
+      "repo": "Qwen/Qwen2.5-32B-Instruct-GGUF",
+      "revision": "a15e3cc10f8bbb2c0af6f8f1f34a32e3b060c09d",
+      "path": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-models\\target\\qwen2.5-32b-instruct-q4_k_m-00004-of-00005.gguf",
+      "bytes": 3950347744,
+      "sha256": "05fe76d941454390cd7aa0de3b342f83a1d1226a959479af85bbfae7cd93e771"
+    },
+    {
+      "key": "target",
+      "repo": "Qwen/Qwen2.5-32B-Instruct-GGUF",
+      "revision": "a15e3cc10f8bbb2c0af6f8f1f34a32e3b060c09d",
+      "path": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-models\\target\\qwen2.5-32b-instruct-q4_k_m-00002-of-00005.gguf",
+      "bytes": 3948996064,
+      "sha256": "7371e5c5d717a8c20f526dbfce5d3f201dc3f02140d1c836314cd0756e02e8d7"
+    },
+    {
+      "key": "target",
+      "repo": "Qwen/Qwen2.5-32B-Instruct-GGUF",
+      "revision": "a15e3cc10f8bbb2c0af6f8f1f34a32e3b060c09d",
+      "path": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-models\\target\\qwen2.5-32b-instruct-q4_k_m-00001-of-00005.gguf",
+      "bytes": 3961498272,
+      "sha256": "403434e5c845452c013661d586b97d5a53cf207462d180a07c301eafa9390d05"
+    },
+    {
+      "key": "target",
+      "repo": "Qwen/Qwen2.5-32B-Instruct-GGUF",
+      "revision": "a15e3cc10f8bbb2c0af6f8f1f34a32e3b060c09d",
+      "path": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-models\\target\\qwen2.5-32b-instruct-q4_k_m-00003-of-00005.gguf",
+      "bytes": 3993478688,
+      "sha256": "f023ccc294c3bd3b2eac5b2dd40dea3aa4ca1d06c7460ead67c36386cd62e8fc"
+    },
+    {
+      "key": "draft05",
+      "repo": "Qwen/Qwen2.5-0.5B-Instruct-GGUF",
+      "revision": "9217f5db79a29953eb74d5343926648285ec7e67",
+      "path": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-models\\draft05\\qwen2.5-0.5b-instruct-q8_0.gguf",
+      "bytes": 675710816,
+      "sha256": "ca59ca7f13d0e15a8cfa77bd17e65d24f6844b554a7b6c12e07a5f89ff76844e"
+    },
+    {
+      "key": "target",
+      "repo": "Qwen/Qwen2.5-32B-Instruct-GGUF",
+      "revision": "a15e3cc10f8bbb2c0af6f8f1f34a32e3b060c09d",
+      "path": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-models\\target\\qwen2.5-32b-instruct-q4_k_m-00005-of-00005.gguf",
+      "bytes": 3997015616,
+      "sha256": "8c2e8ecc686129c37821bd9f3b3e251e6ae80deadd3d3348f7e3e84492a63c24"
+    },
+    {
+      "key": "draft15",
+      "repo": "Qwen/Qwen2.5-1.5B-Instruct-GGUF",
+      "revision": "91cad51170dc346986eccefdc2dd33a9da36ead9",
+      "path": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-models\\draft15\\qwen2.5-1.5b-instruct-q8_0.gguf",
+      "bytes": 1894532128,
+      "sha256": "d7efb072e7724d25048a4fda0a3e10b04bdef5d06b1403a1c93bd9f1240a63c8"
+    },
+    {
+      "key": "draft32",
+      "repo": "bartowski/Qwen2.5-32B-Instruct-GGUF",
+      "revision": "2116cbb385b8ce3a4d28cf3bf1cd2039a55821a6",
+      "path": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-models\\draft32\\Qwen2.5-32B-Instruct-IQ2_XS.gguf",
+      "bytes": 9957550976,
+      "sha256": "2823e23d67f78a70566b619ded48ece723b1f7d5d9ef5f1a61aeed100aaba364"
+    }
+  ],
+  "started_utc": "2026-09-12T11:53:20.213296+00:00",
+  "completed_utc": "2026-09-12T12:00:04.136400+00:00"
+}
