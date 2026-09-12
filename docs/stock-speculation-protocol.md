@@ -32,6 +32,21 @@ equally to all configurations. Preserve `runs/stock-calibration-20260912` as a
 zero-row harness failure and restart calibration in a fresh directory. This
 correction changes observable logging, not placement, workload or selection rules.
 
+Loading amendment (2026-09-12, before target generation): the restarted mmap search
+at `a4ff1a6` repeatedly failed the host-available floor during startup. The search
+was interrupted without a selected configuration or evaluation results; preserve
+its attempted points and interruption receipt in `runs/stock-calibration-20260912-v2`.
+Do not call untested placements infeasible. The pinned Windows mmap implementation
+prefetches file ranges, and `unmap_fragment` does nothing on Windows, including for
+offloaded regions. This is a plausible source of unnecessary physical-memory
+pressure, not an isolated causal attribution from the startup samples. Use the
+stock `--load-mode none` for the target and drafts in a new complete calibration;
+keep lazy reads off, the same artifacts, both memory limits and every other
+selection/evaluation rule. Record loading overhead separately as already declared.
+This changes the loading substrate prospectively, without lowering a resource
+threshold or rescoring a completed workload. A failure of mmap startup on this
+busy 32 GiB host does not establish that the target itself cannot run here.
+
 ## Question and fixed substrate
 
 Does a draft with GPU-resident transformer/output layers improve committed-token throughput for an offloaded
@@ -58,7 +73,7 @@ seeing acceptance. Small-draft measurements remain independently useful.
 ## Resource and placement calibration
 
 One request, context 4,096, batch 256, microbatch 256, flash attention on, F16 KV for
-both models, CPU target sampling, default quantized kernels, mmap loading and lazy
+both models, CPU target sampling, default quantized kernels, non-mmap loading and lazy
 tensor reads off. Set fitting off and record explicit GPU layer counts. Disable
 prompt caching across requests and reset each request's logical context. Do not
 alter unrelated services or power settings. Record GPU driver, CPU topology,

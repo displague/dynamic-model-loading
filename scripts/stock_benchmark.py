@@ -236,7 +236,7 @@ def server_command(executable, target, draft, ngl, threads, k, port):
     args = [str(executable), '-m', str(target), '--host', '127.0.0.1', '--port', str(port),
             '-c', '4096', '-b', '256', '-ub', '256', '-np', '1', '-fa', 'on',
             '-ctk', 'f16', '-ctv', 'f16', '-ngl', str(ngl), '--fit', 'off',
-            '--load-mode', 'mmap', '--lazy-mode', 'off', '--cache-ram', '0',
+            '--load-mode', 'none', '--lazy-mode', 'off', '--cache-ram', '0',
             '--no-context-shift', '-t', str(threads), '-tb', '24',
             '--metrics', '--log-colors', 'off', '--log-timestamps', '--verbosity', '4',
             '--perf', '--device', 'CUDA0']
