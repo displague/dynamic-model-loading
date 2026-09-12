@@ -61,19 +61,22 @@
       "number": 1,
       "url": "https://github.com/displague/dynamic-model-loading/issues/1",
       "title": "Deliver the reference apparatus and preserve the BF16 numerical failure",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "packing": {
       "number": 2,
       "url": "https://github.com/displague/dynamic-model-loading/issues/2",
       "title": "Compare calibration-only co-activation packing with native, random, and popularity layouts",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "precision_diagnosis": {
       "number": 3,
       "url": "https://github.com/displague/dynamic-model-loading/issues/3",
       "title": "Isolate BF16 permutation sensitivity with explicit arithmetic controls",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "bf16_policy": {
       "number": 4,
@@ -85,19 +88,22 @@
       "number": 5,
       "url": "https://github.com/displague/dynamic-model-loading/issues/5",
       "title": "Validate PyTorch 2.12 CUDA as a separate environment control",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "relu_control": {
       "number": 6,
       "url": "https://github.com/displague/dynamic-model-loading/issues/6",
       "title": "Add the original plan's ReLU positive control",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "layer_study": {
       "number": 7,
       "url": "https://github.com/displague/dynamic-model-loading/issues/7",
       "title": "Measure per-layer omission sensitivity and joint-layer interaction",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "heldout": {
       "number": 8,
@@ -109,7 +115,8 @@
       "number": 9,
       "url": "https://github.com/displague/dynamic-model-loading/issues/9",
       "title": "Measure transfer amplification and bounded-cache traces at realistic group sizes",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "predictor": {
       "number": 10,
@@ -146,7 +153,8 @@
       "number": 15,
       "url": "https://github.com/displague/dynamic-model-loading/issues/15",
       "title": "Deliver the first causal selector experiment at the frozen Qwen operating point",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "refinement_runtime": {
       "number": 16,
@@ -159,13 +167,15 @@
       "number": 17,
       "url": "https://github.com/displague/dynamic-model-loading/issues/17",
       "title": "Measure privileged and resident-first repair of the frozen v0.7 masks",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "hardware_costs": {
       "number": 18,
       "url": "https://github.com/displague/dynamic-model-loading/issues/18",
       "title": "Characterize grouped execution, staging and transfers without building a pager",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "causal_refinement": {
       "number": 19,
@@ -178,31 +188,36 @@
       "number": 20,
       "url": "https://github.com/displague/dynamic-model-loading/issues/20",
       "title": "Run one small second-model control on separate balanced development tasks",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "dense_interface": {
       "number": 21,
       "url": "https://github.com/displague/dynamic-model-loading/issues/21",
       "title": "Qualify the dense chat interface and fresh balanced task baseline",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "causal_evidence": {
       "number": 22,
       "url": "https://github.com/displague/dynamic-model-loading/issues/22",
       "title": "Test one-round partial evidence against matched acquisition controls",
-      "state": "closed"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "stock_speculation": {
       "number": 23,
       "url": "https://github.com/displague/dynamic-model-loading/issues/23",
       "title": "Measure stock target-scale offload and resident-draft configurations",
-      "state": "open"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "speculation_costs": {
       "number": 24,
       "url": "https://github.com/displague/dynamic-model-loading/issues/24",
       "title": "Model cycle cost and displaced target residency from stock measurements",
-      "state": "open"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "draft_representations": {
       "number": 25,
@@ -215,7 +230,13 @@
       "url": "https://github.com/displague/dynamic-model-loading/issues/26",
       "title": "Evaluate adaptive draft termination against fixed-length stock baselines",
       "state": "open"
+    },
+    "target_path_fidelity": {
+      "number": 27,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/27",
+      "title": "Isolate target execution-path differences before claiming identical-output speculation",
+      "state": "open"
     }
   },
-  "last_refreshed_utc": "2026-09-12T03:46:36.950200+00:00"
+  "last_refreshed_utc": "2026-09-12T17:41:27.162214+00:00"
 }

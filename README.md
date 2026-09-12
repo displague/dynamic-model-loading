@@ -15,11 +15,14 @@ for the original plan, completed experiments, and remaining gates.
 
 **Current direction:** [ADR 0003](docs/adr/0003-verified-speculation-boundary.md)
 retires the tested per-token selective-execution path as the primary implementation.
-The next experiment compares stock target-only offload and resident drafting on a
-pinned Qwen2.5-32B-Instruct Q4_K_M target, accounting jointly for draft memory,
-target residency, verification and committed output. See the
-[prospective stock protocol](docs/stock-speculation-protocol.md). The benchmark is
-not yet measured; no speculative speedup or identical-output result is claimed.
+The [completed stock comparison](docs/stock-speculation-results.md) measures an
+observed 18.10 emitted tokens/s with a 0.5B draft at length four versus 8.52 for
+target-only Qwen2.5-32B-Instruct Q4_K_M. Every nonbaseline configuration differs
+from the fixed reference on sustained generation, including placement/thread
+controls; all 260 scalar-smoke comparisons match. This does not yet establish
+identical-output acceleration. [Execution-path fidelity #27](https://github.com/displague/dynamic-model-loading/issues/27)
+is the next bounded investigation; a custom runtime remains deferred. See
+[v0.14.0](docs/releases/v0.14.0.md) and the [frozen protocol](docs/stock-speculation-protocol.md).
 
 **Preserved v0.12 result:** the [complete causal-repair experiment](docs/causal-evidence-results.md)
 finds a mixed quality improvement from partial evidence at matched bytes: relative

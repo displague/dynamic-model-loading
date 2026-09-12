@@ -41,16 +41,23 @@ Keep physical pager #11, refinement runtime #16 and old-scope #19 closed as not
 planned under the superseded design; completed v0.12 issue #22 stays completed.
 Other unfinished old-stage investigations are deferred, with hypotheses unresolved.
 
-Current work: [stock benchmark #23](https://github.com/displague/dynamic-model-loading/issues/23),
-[measured cycle/resource model #24](https://github.com/displague/dynamic-model-loading/issues/24),
-[optional representations #25](https://github.com/displague/dynamic-model-loading/issues/25),
-and [optional adaptive speculation #26](https://github.com/displague/dynamic-model-loading/issues/26).
-The [v0.13.0 preparation delivery](releases/v0.13.0.md) records the decision and
-pinned substrate. The project owner resolved the storage constraint on 2026-09-12;
-all target/draft GGUF files are now acquired and verified. The
-[native runner](stock-speculation-runner.md) receives a clean pushed preregistration
-before calibration and evaluation. No target-scale performance has been measured
-at this preparation point.
+The [v0.14.0 stock measurement delivery](releases/v0.14.0.md) completes bounded
+[benchmark #23](https://github.com/displague/dynamic-model-loading/issues/23) and
+[aggregate cost/resource analysis #24](https://github.com/displague/dynamic-model-loading/issues/24).
+The fastest observed rate is 18.10 emitted tokens/s versus 8.52 for target-only,
+but every nonbaseline configuration fails sustained target-relative identity.
+All 260 scalar-smoke comparisons match. Rebuilt-prefix diagnostics agree across
+configurations yet differ from four original baseline decisions; the cause is
+unresolved. See the [detailed result](stock-speculation-results.md).
+
+The next bounded task is [execution-path fidelity #27](https://github.com/displague/dynamic-model-loading/issues/27),
+with a protocol frozen before new inference. The stock milestone remains open;
+[representations #25](https://github.com/displague/dynamic-model-loading/issues/25)
+and [adaptive speculation #26](https://github.com/displague/dynamic-model-loading/issues/26)
+remain optional and deferred. No shared-resident runtime is selected by this result.
+The [v0.13.0 preparation](releases/v0.13.0.md), acquisition block and subsequent
+startup amendments remain historical records. Freed storage enabled acquisition
+of all pinned artifacts, and only 13 merged artifact-free worktrees were removed.
 
 ## Historical roadmap
 
@@ -139,6 +146,8 @@ checks; an always-on service requires a runtime that benefits from persistent re
 | [v0.10.0](releases/v0.10.0.md) | Separate balanced development tasks on Qwen and OPT | Ten fixed tasks cover five domains, with exact targets, answer-only metrics and retained generations. Model-specific numerical controls and every result are reported; no held-out or runtime nomination. |
 | [v0.11.0](releases/v0.11.0.md) | Dense chat-interface and path qualification | 7/10 debug, 12/20 fresh successes; all dense paths agree, but Gate A fails. |
 | [v0.12.0](releases/v0.12.0.md) | Own-trajectory causal repair and complete action costs | Partial evidence improves aggregate quality at matched bytes, but individual-prefix advantage and combined quality/economics gates fail. |
+| [v0.13.0](releases/v0.13.0.md) | Retire the tested paging implementation; prepare stock target-scale speculation | Accepted ADR 0003, pinned native substrate and new issues. Storage blocks acquisition at this historical preparation point. |
+| [v0.14.0](releases/v0.14.0.md) | Complete stock comparison and aggregate resource/cost analysis | 18.10 vs 8.52 observed emitted tokens/s; strict sustained identity fails for every nonbaseline configuration. All 260 scalar-smoke comparisons match. Execution-path fidelity remains unresolved. |
 
 
 No completed delivery establishes an inference speedup or achieved memory reduction.

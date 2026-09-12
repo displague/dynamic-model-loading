@@ -1,0 +1,11 @@
+{
+  "archive": "stock-calibration-interrupted-20260912.zip",
+  "bytes": 4658996,
+  "sha256": "5710bcbd6912c83f2f699dd1a3f7fd636786f47363ed0302282d553ab91adc59",
+  "measurement_source": "4f115ae",
+  "cases": 39,
+  "completed_cases": 21,
+  "evaluation_requests": 0,
+  "generation_requests": 63,
+  "ledger_sha256": "4af2c1c287491b0416bf52f3fca2970118b12055c7336f33476a31c7e03004c0"
+}

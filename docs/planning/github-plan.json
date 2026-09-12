@@ -49,7 +49,7 @@
     {
       "stage": "speculation",
       "title": "Stock speculation - Verified output under joint memory budgets",
-      "description": "Measure stock llama.cpp on Qwen2.5-32B-Instruct Q4_K_M under actual offload. Compare best measured target-only, 0.5B/1.5B drafts and feasible non-sharing IQ2_XS control, with matched-placement controls, stable greedy reference, sustained workloads, accepted-prefix receipts and complete resource accounting. Follow ADR 0003; subsequent experiments depend on observed bottlenecks, not the former 1.5B gates."
+      "description": "Measure stock llama.cpp on Qwen2.5-32B-Instruct Q4_K_M under actual offload. Compare best measured target-only, 0.5B/1.5B drafts and feasible non-sharing IQ2_XS control, with matched-placement controls, stable greedy reference, sustained workloads, accepted-prefix receipts and complete resource accounting. Follow ADR 0003; subsequent experiments depend on observed bottlenecks, not the former 1.5B gates. v0.14 completes bounded benchmark #23 and aggregate model #24: fastest observed emitted rate 18.10 vs 8.52 tokens/s, but every nonbaseline configuration fails sustained greedy identity; all 260 smoke comparisons match. Rebuilt-prefix diagnostics leave incremental execution-path differences unresolved. Keep this milestone open for #27; representation #25 and adaptive control #26 remain optional and deferred."
     }
   ],
   "issues": [
@@ -240,14 +240,14 @@
       "stage": "speculation",
       "title": "Measure stock target-scale offload and resident-draft configurations",
       "body": "Execute docs/stock-speculation-protocol.md after its clean pushed preregistration. Pin runtime and all GGUF artifacts. Calibrate placements and CPU threads separately; compare best complete configurations under the same total memory budget and include placement-matched target-only controls. Sweep fixed draft maxima 4/8/16 with 0.5B and 1.5B Q8_0 drafts, plus feasible non-sharing IQ2_XS 32B. Preserve sustained-output and scalar-smoke results separately, generated IDs, EOS/cap reasons, all failures, sampled resource peaks and actual accepted-prefix events. Benchmark pending; preparation is not a speedup result.\n\nDecision: https://github.com/displague/dynamic-model-loading/blob/main/docs/adr/0003-verified-speculation-boundary.md\n",
-      "completed": false
+      "completed": true
     },
     {
       "key": "speculation_costs",
       "stage": "speculation",
       "title": "Model cycle cost and displaced target residency from stock measurements",
       "body": "After stock measurements, use actual time and committed-output totals, including discarded drafting, verification, coordination, each KV/workspace and displaced target residency. Report unmeasured components explicitly. Compute sensitivity hurdles against best stock speculation as well as plain offload; do not import v0.12 reconstructed timings or extrapolate 1.5B acceptance to 32B. No mandatory multiplier threshold and no automatic custom-runtime commitment.\n\nDecision: https://github.com/displague/dynamic-model-loading/blob/main/docs/adr/0003-verified-speculation-boundary.md\n",
-      "completed": false
+      "completed": true
     },
     {
       "key": "draft_representations",
@@ -261,6 +261,13 @@
       "stage": "speculation",
       "title": "Evaluate adaptive draft termination against fixed-length stock baselines",
       "body": "Optional continuation of instrumentation ideas from old-scope #19, which remains historical causal FFN acquisition. Train new labels for accepted-prefix survival and incremental committed output/cycle cost if fixed lengths reveal worthwhile headroom. Reuse interfaces and receipts, not fitted local-error coefficients or thresholds. A false continue decision may waste draft work but must not change verifier-owned output. Charge changes in verification batch cost as well as the extra draft token; compare with the best fixed-length configuration.\n\nDecision: https://github.com/displague/dynamic-model-loading/blob/main/docs/adr/0003-verified-speculation-boundary.md\n",
+      "completed": false
+    },
+    {
+      "key": "target_path_fidelity",
+      "stage": "speculation",
+      "title": "Isolate target execution-path differences before claiming identical-output speculation",
+      "body": "The completed stock benchmark reports a fastest observed emitted rate of 18.10 tokens/s versus 8.52 for the fixed target-only reference, but no nonbaseline configuration preserves all sustained greedy continuations. All 260 scalar-smoke comparisons match. There are 114 differing sustained observations, representing 38 configuration/prompt situations repeated three times; target-only placement/thread controls also differ.\n\nThe planned common-prefix diagnostic completes 58 one-token requests in 13 configurations. All 38 baseline/matched/candidate comparisons return the same rebuilt next token. However, the rebuilt baseline matches its original incremental decision on only 7 of 11 unique prefixes. Its 11 repeated diagnostic tokens and top-ten probability records exactly match the preserved first diagnostic attempt. Rebuilding the prefix does not reproduce the historical KV state, verification batch, or original request shape. The cause remains unresolved.\n\nFreeze a bounded execution-path protocol before further inference:\n\n- Keep the Qwen2.5-32B-Instruct Q4_K_M artifacts, token IDs, decoding transformations, original greedy reference, and all existing failures fixed.\n- First isolate full-prefix prefill versus incrementally populated target KV at the same placement and thread setting. Compare next-token decisions on identical prefixes before diverged contexts can confound the comparison.\n- Separately control verification batch shape, requested generation length, probability reporting, placement, and thread setting. Do not change several factors and label the difference numerical drift.\n- Capture enough target decision evidence and state provenance to distinguish execution-shape effects from speculative rollback/cache errors. Top-ten records cannot establish full-vocabulary KL.\n- Check generated IDs and stopping against the original no-speculation reference. Any revised numerical contract must be prospective; do not redefine the reference to make existing divergences pass.\n- Preserve failed attempts and use fresh output directories. Report a narrowed causal diagnosis or explicit remaining ambiguity, with a concrete next action.\n\nThis is the next measured bottleneck under ADR 0003. It does not authorize a custom shared-resident runtime or make another repair controller a prerequisite. Optional representation #25 and adaptive-control #26 remain deferred. The observed rate advantage remains unqualified as identical-output acceleration until this discrepancy is resolved.\n\nEvidence: https://github.com/displague/dynamic-model-loading/blob/main/docs/stock-speculation-results.md\n\nDecision: https://github.com/displague/dynamic-model-loading/blob/main/docs/adr/0003-verified-speculation-boundary.md\n",
       "completed": false
     }
   ],

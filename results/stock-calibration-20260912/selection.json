@@ -1,0 +1,45 @@
+{
+  "source": "5b4a902b0ccff26c5313aeb5eef7a5a35a46e49a",
+  "created_utc": "2026-09-12T14:23:26.251913+00:00",
+  "selected": {
+    "target": {
+      "feasible": true,
+      "draft": null,
+      "ngl": 45,
+      "threads": 16,
+      "maximum_feasible_ngl": 45,
+      "calibration_result": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-calibration-20260912-v4\\target-ngl45-t16",
+      "median_decode_ms": 14897.133
+    },
+    "draft05": {
+      "feasible": true,
+      "draft": "draft05",
+      "ngl": 44,
+      "threads": 24,
+      "maximum_feasible_ngl": 44,
+      "calibration_result": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-calibration-20260912-v4\\draft05-ngl44-t24",
+      "median_decode_ms": 23635.6115
+    },
+    "draft15": {
+      "feasible": true,
+      "draft": "draft15",
+      "ngl": 41,
+      "threads": 8,
+      "maximum_feasible_ngl": 41,
+      "calibration_result": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-calibration-20260912-v4\\draft15-ngl41-t8",
+      "median_decode_ms": 26298.266
+    },
+    "draft32": {
+      "feasible": true,
+      "draft": "draft32",
+      "ngl": 11,
+      "threads": 8,
+      "maximum_feasible_ngl": 11,
+      "calibration_result": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\stock-calibration-20260912-v4\\draft32-ngl11-t8",
+      "median_decode_ms": 39558.834
+    }
+  },
+  "driver_ledger_sha256": "0010c43dcee60166aecb36eb7ae067a41630c1d11989660a7461339f30e6c466",
+  "evaluation_started": false,
+  "continuation_sha256": "193499e17041a128af0fbc9b9f4aa5d5db8d7cea3c424dfb55ec6dde1e265662"
+}

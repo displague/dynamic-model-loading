@@ -1,0 +1,1072 @@
+{
+  "schema": 1,
+  "scope": "completed calibration only; no evaluation outcomes",
+  "selection_source": "5b4a902b0ccff26c5313aeb5eef7a5a35a46e49a",
+  "attempted": 41,
+  "classifications": {
+    "resource_failure": 19,
+    "complete": 21,
+    "native_startup_failure": 1
+  },
+  "generation_requests": 63,
+  "measured_calibration_requests": 42,
+  "configuration_receipts": [
+    {
+      "name": "target-ngl48-t8",
+      "draft": null,
+      "ngl": 48,
+      "threads": 8,
+      "k": null,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "85b34c48e6c8d8ac4f132e4b91c4989a589cd06b1b8ddd49188b32bc02dd2480",
+        "rows.jsonl": null,
+        "startup.json": "fab1272887511d7b917388031d6a3722046e21bbb464e7f8efec1006ae7d23b1",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "95035f2cfb2c9100838419de7906c3c6999a8aa1e17a4b721056bbb5d9e422b3",
+        "resources.jsonl": "af47be48240d6615ab3a3b9aad30dc6b051644c25fb4da2ea3f8fe4c686c28ef"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "target-ngl47-t8",
+      "draft": null,
+      "ngl": 47,
+      "threads": 8,
+      "k": null,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "a484648a806c51fc0266d89bfdd3898ae9be47615eaaccef02b0617c761b4d4a",
+        "rows.jsonl": null,
+        "startup.json": "2e48d0ed534989f352a80f877f9a6b9fff8eb21b122ca91e345cda19a30f15de",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "bde7ed06fd86904c74c14741a11b7543333cd0efd8cbf0d66d5612f432521d93",
+        "resources.jsonl": "63cf7a327f5fa7a25c67c759af1872c00dd5f0e9240b6a4564006bab6406fa45"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "target-ngl46-t8",
+      "draft": null,
+      "ngl": 46,
+      "threads": 8,
+      "k": null,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "1de49e5317868708885f559162b683a25f98992e68602b1f0080dc0caa07e9a7",
+        "rows.jsonl": null,
+        "startup.json": "a146d45a937bbe3999a244d1d8837bcb655c183d40db2010c15498d72f2ee8ab",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "05247584c0eb0b709f459821d01f8ebf4ecba622ba1dc383569a66220ddb24a7",
+        "resources.jsonl": "026b27c61541162318affa8352d608976ef811de4b3dec8362f78c801840a5ab"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "target-ngl45-t8",
+      "draft": null,
+      "ngl": 45,
+      "threads": 8,
+      "k": null,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 16657.4575,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "ed602efdafbab336be8fb90ad592036d444a642e2765dc48d21d9aff6850e964",
+        "rows.jsonl": "7d6d25b2d537b6221506f56f3a3b4c983d14159937e33087323604176f6d49fb",
+        "startup.json": "c66b29a144abc790986023f2e33e9228d8a9c6b231db23d5285a34a618fff99f",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "f60b8c3ab340ea0aa6333d2aee3f23b5ba1b6cf20bd14752976ba07f77a316c8",
+        "resources.jsonl": "15dbecd4384aab29525e2af6bc3c52d7badb1a9b475951f0576ad5773ced30a0"
+      }
+    },
+    {
+      "name": "target-ngl45-t16",
+      "draft": null,
+      "ngl": 45,
+      "threads": 16,
+      "k": null,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 14897.133,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "e740e8cbe73596fa18118aa03df8e88c69b750ff905ec0a184dcdffbe7e0ccde",
+        "rows.jsonl": "196e21cfa1d17a8ec54d8d713f8f63ca74cb0e067b2ce5707970aa814e01ead6",
+        "startup.json": "faf1c4dfc9704b0cc599c048f3477e76e1a283476933ee0d596ba0c7d7377e10",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "c1e835feb035fed4b3a045a868cf01a010fd33e521e221e8ad19e82ef2e1d573",
+        "resources.jsonl": "65fa346c427da94a52ff5721275348995343dbda7e4dd435100e5a14de935682"
+      }
+    },
+    {
+      "name": "target-ngl45-t24",
+      "draft": null,
+      "ngl": 45,
+      "threads": 24,
+      "k": null,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 16634.428,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "49a5cb8c3267b4fd3a2a80b614156ec10153720ae28c1bb9c3531d73d9a42255",
+        "rows.jsonl": "06adb8616025aab6ff22e83ae85205c601ad729f0544a030419b1d27d1b3a852",
+        "startup.json": "2395d1b0432a05d346951fc3f154c0b35272fc850831d15920c87d9c851ba6ae",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "ec5497ad607971b86c5b404bf98200eeb8f63914d60af56e12c0c82d0203ce1a",
+        "resources.jsonl": "8eeb24a1f94319a1d7a06b58c4ee1b4aeb83b589ede828ced3c21bd2dab19184"
+      }
+    },
+    {
+      "name": "target-ngl41-t8",
+      "draft": null,
+      "ngl": 41,
+      "threads": 8,
+      "k": null,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 19045.838499999998,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "183f722046c8be57c453fb9b85f7285c464a95e2a3cd1d4ee85ac5b2fd987c02",
+        "rows.jsonl": "2a7fd133a957f31aa4e07acad3be9996f6fc7913630bf283502fb3693647ffcf",
+        "startup.json": "61e715120a96d52eeafeac1d997b454f59da578b4a8d920718ed1fcfe6ef38cc",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "431517409529129e7700ddfab9a69dd3fb9be409271b33aec420b95e8e9f6eaf",
+        "resources.jsonl": "efdedfeebb04039bbbc092c67d00b832b6cceb04623b2784575905b26d1fecbe"
+      }
+    },
+    {
+      "name": "target-ngl41-t16",
+      "draft": null,
+      "ngl": 41,
+      "threads": 16,
+      "k": null,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 16912.0665,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "87f5ef04d3be3113b9781f0b234e5c1c1dd43b974642b24ad00e607ddc8fb8fd",
+        "rows.jsonl": "2ce5b5c83ca946c7e9af62fb18337dfab7c949598bc8baab8bd630a2ec2478e3",
+        "startup.json": "74267e0f235269dd6ba81ae7d2f6dbd6ee54811d0e5189950652cef8b2649983",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "b1077e9dc98f26dcc34ba24352143f3c101fa2eaa35b0c72fc067ca73647241b",
+        "resources.jsonl": "a4a6938bbd8110164f0a0b93c134dc68aea00b26e525883a466d89d3cebe9324"
+      }
+    },
+    {
+      "name": "target-ngl41-t24",
+      "draft": null,
+      "ngl": 41,
+      "threads": 24,
+      "k": null,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 17871.2605,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "a220acbea52f2740c302b42b54d0260626c8e3a9b911fc9e2523a05f1296ddba",
+        "rows.jsonl": "3a2d4c600d20d9fc0510b5bd8208c29e73f0fa5723cd3774ac371c3aeabef2be",
+        "startup.json": "d9b3f79bdb805f8d61cdedda50df23d4bb4a2903b6b1842bf62ef0befa316c0d",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "e760fd38e477a8a8ec4002d23f2c0e68f8341fcad4addcc30c56d4898496d1e8",
+        "resources.jsonl": "580deb18b18d609a34b78e23a6ce49e2cda98af5243a50e27138536deaface86"
+      }
+    },
+    {
+      "name": "draft05-ngl48-t8",
+      "draft": "draft05",
+      "ngl": 48,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "0e34083d3bc069c9eb0556ba3d3c476e4c179facf95097aa4f744694a124f8ce",
+        "rows.jsonl": null,
+        "startup.json": "3de43994b8254ed95ea5cc055426bf0c900063006af930bee1d48f12a87808a7",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "52d6f881ac76be82da4d50f2bb4379bec380b750fd8f7371302f8389f73bfdbd",
+        "resources.jsonl": "2ddf7ba7c5c42a5b63354de4d42c58afcdc691cd282be9cc5fdc87271b8545df"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft05-ngl47-t8",
+      "draft": "draft05",
+      "ngl": 47,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "e5595b84d1a09fe7c6059af7710e638f46ffa4ab5cc72676f0db3094bf60dd81",
+        "rows.jsonl": null,
+        "startup.json": "204b8371818838abe744e7373301edb4c1ed46870601f47b1d66c5245238662e",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "967cc3874456d92813975cd6a7d8aa930c3f8b289691c9de1ccea2f18b83da19",
+        "resources.jsonl": "fa92f4bde5c9e2e2c5c8a5fbf01487bd1ce9cf9930e0648b0c8e40867f459e30"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft05-ngl46-t8",
+      "draft": "draft05",
+      "ngl": 46,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "cac0c6bb5d4915fa79196fd90746e6bb0d21f23891273bcca7dbe8c5329b9daf",
+        "rows.jsonl": null,
+        "startup.json": "9bc374d71da4ccf7a3a5a71043f2e1d1be188f4907c0553c6d9ee8becce13deb",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "6328b3932d0bf5841b6857984a72f334fa11c3142212c9a5a61dc438fa0712f9",
+        "resources.jsonl": "834aaf1404f1d9aa688766f8e2f2a505ebbb69431895086127294b4c6998d713"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft05-ngl45-t8",
+      "draft": "draft05",
+      "ngl": 45,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "2f147237102d9ba42872d19509b1dc3dcdecc231221fc70bb53dec9bae07bb62",
+        "rows.jsonl": null,
+        "startup.json": "d587d1eeca70b8a92e78badc191eaec0fd9e9f95b3438179b92e6d8bb6d81209",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "22b48ef6db88df944458f6c9260426d718b33324f8ed4fc38040be2286f5f143",
+        "resources.jsonl": "d4e22a01a319794cdf701ae821dd2cb2671d86283c18c1f135d8ea5ba78d1514"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft05-ngl44-t8",
+      "draft": "draft05",
+      "ngl": 44,
+      "threads": 8,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 24992.5305,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "b652b4c2b7e99ee94ae171dd6710097df8e738d130dfcf52cc8c5c6788a2c6e6",
+        "rows.jsonl": "800020b501e643ac91048db472c34a1482a1bf584036007289ca67c3c080877d",
+        "startup.json": "8771091d1402630263b61f42902e49bf5ecd2acd09d67ef58af65397c95c4474",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "231075233917318f824d4fb930da6250741b1bf5a68b02a6b80485c7559b2870",
+        "resources.jsonl": "a8f6ffcaed1e4263b05f894ab5786ec0c9a61d063a85507a758499eec11fe05b"
+      }
+    },
+    {
+      "name": "draft05-ngl44-t16",
+      "draft": "draft05",
+      "ngl": 44,
+      "threads": 16,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 23920.5015,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "6f650a1c1f6ca5bf021d315ce1251eb16c0effdd48d56c8518c62214d7f38bb3",
+        "rows.jsonl": "c38ab9709c9923bee495ec32c52bc5af5ef040c99122ae1f3626ede0111ec953",
+        "startup.json": "a50b170b62ba8a69444324112ee08ec7dc4215c60bbe187170d7a3d33d6e5c48",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "ab6e26b04f83f94cf03e227c7dd8f30e80e01c2eb7a3404136755225c340cd35",
+        "resources.jsonl": "3236c46b968407192cc6a3eacbd12e675155f8ead4cc06ac4dee90b8a17ff4fa"
+      }
+    },
+    {
+      "name": "draft05-ngl44-t24",
+      "draft": "draft05",
+      "ngl": 44,
+      "threads": 24,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 23635.6115,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "505a77b6425a38db975f9ba41eb07ac7f8fb1d52785173cdaf09968172c46a08",
+        "rows.jsonl": "486248529fa07ceea6048212f92b5c3b20c3fc4702b132fea95159fb2d41ca00",
+        "startup.json": "fc47221a8aefc216e54b755644a240b3fe02bf330426c6b707edcc585eddde37",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "e4fcaf406930ac70c8acb06b2dc1aad97fc5ac85254de767a8f3ffcd2aa401b9",
+        "resources.jsonl": "f812afbf4ec35258ac593100d3a688a8df09c51079d5ed0dd358fc37da6a6772"
+      }
+    },
+    {
+      "name": "draft05-ngl40-t8",
+      "draft": "draft05",
+      "ngl": 40,
+      "threads": 8,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 39044.43,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "e17d4bf85816fbd4d293e098e18193eb48bfb4383e2d570bed5d0c8dad5db902",
+        "rows.jsonl": "5dfd8fac15c41d494a50a36a047a5d15c703cd3f4bf3333903abe5d871fc664a",
+        "startup.json": "b3f6c95021451b511a31f5c72e8c9230e8ae4d4266910397584cbde1425cc64e",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "9337a43aba70f391427cfddce24d3c459beafff33f54c397b00bb2ea83cc6b01",
+        "resources.jsonl": "aa3258b4f98c46b1567606d3a88ee23601b1fff287db75e1d11ffa632482d4f9"
+      }
+    },
+    {
+      "name": "draft05-ngl40-t16",
+      "draft": "draft05",
+      "ngl": 40,
+      "threads": 16,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 34990.254,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "826b8268747824fb28ddac2c19b530d183231908051c9193f94099bf64424190",
+        "rows.jsonl": "8c103b62df09af2271a61bf6256dabc8b52d62c97ec6f03a140969c4552c946b",
+        "startup.json": "4f529202388908f14d4335422438534bb91d386599b2de10249cef8d04ebb6d4",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "149a77b64816b9512fdedfed72f15702890bc6c845c598b1f4688d846598e2e9",
+        "resources.jsonl": "842da4f82307e76460ca8dd5fc877fa2cb4b683647aaeea9ead0555e524cc566"
+      }
+    },
+    {
+      "name": "draft05-ngl40-t24",
+      "draft": "draft05",
+      "ngl": 40,
+      "threads": 24,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 37087.767,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "61dc62f574ffad70b29cc33f2f3bf0baffbd71b2cde425afff73073ac2b1977e",
+        "rows.jsonl": "6035cee8b53c177a1f83276fa48d9bbadbff90340f1d1ed50015105683217176",
+        "startup.json": "304cfcee32845373c42930c5470e64ffd870a1391553c9418dea5b1ebd738847",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "af1581c6eaa8c5caa3cb8203bd2f9f9a080f7d3eb04e87c0f28127ea92599438",
+        "resources.jsonl": "dc11a143cb600a0c3209b0dea7da0e382e01421b5dda01922ec43e95f3feaee6"
+      }
+    },
+    {
+      "name": "draft15-ngl48-t8",
+      "draft": "draft15",
+      "ngl": 48,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "d8ab1a01d12a9674da5f2b35967231239b1b8739f142091b6d79de6c0fc6bb2c",
+        "rows.jsonl": null,
+        "startup.json": "1631480bf9eb6b1b8643ecc96ff18aa3eaf1b6e4844be19c24e16135cf786458",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "df1605447f50298bb4fff0824f6159dd84c8b9963d8eb9b5afb218cfb452ff4c",
+        "resources.jsonl": "e219ae6947b049d8e4953d39cdc45ccffd11510f2cd5e7ed13d62df51a874970"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft15-ngl47-t8",
+      "draft": "draft15",
+      "ngl": 47,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "e249857c034f9e829bb7c8020cc594996fd0b0cb2cc1c1ccc1836f162265301c",
+        "rows.jsonl": null,
+        "startup.json": "cae681e5aef60afcee3c58937b671abeeb230c63d4f8177bce27421241d89708",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "01894439de01572ce0bd7bf2ead3c6c52f6b70c307be3584eb322a113c71a6c3",
+        "resources.jsonl": "05699d635be938f5b470b1aa1bde1d58790679059e3757a0397e01e5985e8dd6"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft15-ngl46-t8",
+      "draft": "draft15",
+      "ngl": 46,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "c45537563e531d68e54bc0f5b1d654d17a57bbf07f7c0c863bbd2c874ee12001",
+        "rows.jsonl": null,
+        "startup.json": "b2e60c7f0beb7ef24837e55186508cea625ac6361e012bdda0bf602b0b2bf2d1",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "22af8d94e874ae860e2d5918405f02de96f88c030db6cd052510cd3a399541b3",
+        "resources.jsonl": "3f0bfcafa29163023f9dda727e07791dfbab301813d0fa677e9e2b6923a2343e"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft15-ngl45-t8",
+      "draft": "draft15",
+      "ngl": 45,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "6e366147dc4634d3acdd7a3f3973468fbea005af059b7edb84a0e88003a83581",
+        "rows.jsonl": null,
+        "startup.json": "0a84d44b8df891e8aeb08e0c8f68702245676fe607a07bc8bf91ec5f650aca32",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "66b3eb14c3c17327c4b80d7f90170515335ced94f389e05de8cdc1835404b15e",
+        "resources.jsonl": "3163143a48929442540bd2c78eb1fea8f27ecabe66d11d71c61316729152b350"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft15-ngl44-t8",
+      "draft": "draft15",
+      "ngl": 44,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "4b6a99483623fef4faf34c2ad0e6bfd53dd74679060ac2044e9b254516b459af",
+        "rows.jsonl": null,
+        "startup.json": "2dbb86b851f2489fd08374131fca0d3e139704c2b8e9b18104664c6a6be225ff",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "7bef934ede7bb2405f9289710b1fdc77226026d36e32bf75b060ef93d9f2d471",
+        "resources.jsonl": "713a383b83426b17c8ac46ef4719feb94a9e57e4f020871032ef8db07b3b8d2e"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft15-ngl43-t8",
+      "draft": "draft15",
+      "ngl": 43,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "415c431fd0a5ba8a014300ec45c7eb4bb90144f534de9a2e2ee979856c33606a",
+        "rows.jsonl": null,
+        "startup.json": "956c24cc58246ef356658658830f08e1c8beb235e7be631327c71642afbe1a38",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "a3e95440a75049d379225bc274c4c4e9d7c316a5ea2429af2f8b630309ee77fc",
+        "resources.jsonl": "06cde3d89a621fabaf1aa4cef813d1a53d7eeab14c9b0a9b68e05205af80491c"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft15-ngl42-t8",
+      "draft": "draft15",
+      "ngl": 42,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "462d86031baa938683702155164f0469a294d96e3c80d0e497000ddf4ca1633a",
+        "rows.jsonl": null,
+        "startup.json": "757bee7e73f1be9a9a79f098695b9964a9b0a72f3b6c71cd7ccf409d8508cb99",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "89a55430e4b211da99e7cb0c0671c1b48f8887724f58a31efa57e95bc9906c55",
+        "resources.jsonl": "6732dcac67da2e1d1d84531df3844b187aebc938c206e18c65516e917b397fb7"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft15-ngl41-t8",
+      "draft": "draft15",
+      "ngl": 41,
+      "threads": 8,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 26298.266,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "21ec1365964b840c3749662ca3119bb3f40f26f41e3a7da991c1722d8b83116e",
+        "rows.jsonl": "3a1dd336e8447197fae3d2e98795d9b8b14e85a8237b44f726cffb0b68dd77de",
+        "startup.json": "1cfa210a50c461ff41ac42c6c41c95474dfe9d50db7f1b587a478e4b17884847",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "2d74a8cb1780bfd92b3091a5e46d87957402d97da9efa49d8f60d901d80f5623",
+        "resources.jsonl": "00bded81d61fc92b01789f372c5948f3e91aec52e5ebbaa6083338894ef97a8f"
+      }
+    },
+    {
+      "name": "draft15-ngl41-t16",
+      "draft": "draft15",
+      "ngl": 41,
+      "threads": 16,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 27711.766499999998,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "1b1006b305d33aa5c267a3f0e430c88aeb1648bb128c75086dfc4bf3e180f9ee",
+        "rows.jsonl": "d4bf6cda29d324d4f2ace2234a1a953cf673c156dce7f4841e3145fe3141173a",
+        "startup.json": "b93c7f0fadff5b64229299af552d9cc10a36369c358544fe35692f291957008a",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "a937ea1fe97a16b45e74b76458b5af8389b6d516b930dd89533c14514b685ad0",
+        "resources.jsonl": "99279a2736c2220d6607e17bf8f2cec8a23e9edc5f8a8c5114b37f001856b0e8"
+      }
+    },
+    {
+      "name": "draft15-ngl41-t24",
+      "draft": "draft15",
+      "ngl": 41,
+      "threads": 24,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 27129.33,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "c93527cda5e1c56bd4f615f8203251b16728c2f44faa974dbedf361a1ceea97c",
+        "rows.jsonl": "cdc021ce474f662e66a065cc6920bc65e903536bffb01e7cfce99c506fb5dd93",
+        "startup.json": "852effa066c041fe774d9f1b2f888f21efa5b30de901e39b992d1a8e530ca79d",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "5768ebf60e3c16a65fab25042eeac05d9d31e9d71819c02e85f4646292588f3a",
+        "resources.jsonl": "6b459a39e02bf888efd8999209e9c3d641b77b88321e78fc4f80c21f208f190c"
+      }
+    },
+    {
+      "name": "draft15-ngl37-t8",
+      "draft": "draft15",
+      "ngl": 37,
+      "threads": 8,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 29048.4005,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "fcf0cf2e2a05dd1a3d88cf764b1ae41d5292350bd8e7edab1894e75e5bfe0d73",
+        "rows.jsonl": "1b8b6ab9556aba0d139a634603d1379d29ab6f4355dee4f445df06ad016fcc0d",
+        "startup.json": "795a4c903f99399776e778fa9e9f4fc7bc11bb840b5aaa52b2823e2460cc7712",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "b33aec8a123b245d475a249ee13c616f7fd3f961ca5485831adec867a6870bbe",
+        "resources.jsonl": "4ee8404f74d51606a9110ab4b6e6dfef60ea6bb671ca3724982f9b1e6602cbbb"
+      }
+    },
+    {
+      "name": "draft15-ngl37-t16",
+      "draft": "draft15",
+      "ngl": 37,
+      "threads": 16,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 29043.9425,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "d377486049e6ff4a803d9955b1512a0873926ef24d85f13f26d96f2664b62b29",
+        "rows.jsonl": "231ebb91db252041d6d48e92613cf08a3f2905d4df37f145446f5ffe4505c949",
+        "startup.json": "6a19f226884f4487ede317942a09e12ea70581c4e31e77a1a798c524177cc4ab",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "d6cdb5c1d87c5d8c549473c6b526a35e91311cd7731afbacb00fc4907d728a27",
+        "resources.jsonl": "2d1854d61426e8fb2f3c9431ac451a2d3be6c0d02bf1e57a03f3be6448fa98d9"
+      }
+    },
+    {
+      "name": "draft15-ngl37-t24",
+      "draft": "draft15",
+      "ngl": 37,
+      "threads": 24,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 28485.98,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "361ab79140c07b13c6c7d0ce851c059305a289188d85d2413350b1bcae315127",
+        "rows.jsonl": "84125acd0a197f73e96d7d94f27b973a45e4912f56f049344ec285d1c7740da8",
+        "startup.json": "8f6ce3454376b41072bcf879d4e9de78ac9a8747e28dc4357e3c41c0d1f7a991",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "57a146f5a1d94c508b778c1e2551e17b29f5193fbd032b93f3cc2ab0303c6de6",
+        "resources.jsonl": "3b049ac527cee54e82b2746109604eb80340f91c9925cd49502a0aa55d57eb69"
+      }
+    },
+    {
+      "name": "draft32-ngl14-t8",
+      "draft": "draft32",
+      "ngl": 14,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "e1a9ab8f5ce04af6ece9d5264fdbc77c2cae1a882d9f48a90cbbe4c76f3b30d9",
+        "rows.jsonl": null,
+        "startup.json": "dd2329f0609bb1ecb7e850cb91e2d0258f15357a500013e32b50c0cf1835bb77",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "9c2cc6b1851ec246d889b0aaca2b387f2dc95eb678fcf2718dadfd8d2ab29bdd",
+        "resources.jsonl": "4f66c10f5391dae4a7e25c3ad2b3fa7f9329f398f4dfe1f04eddd692c8757d11"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft32-ngl13-t8",
+      "draft": "draft32",
+      "ngl": 13,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "268a98e1a1eb6c3e322c27c4db80af5fd4eb540680819f0351aba784061424b4",
+        "rows.jsonl": null,
+        "startup.json": "859aca1d949fc4051985f9620aea0dd90492d906d1d52593ad39f8655d86158f",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "229824ab506d17d218e9de7fb8d5bb70cce317c1b8a173121cf6bc5a72817adc",
+        "resources.jsonl": "97280aa76b125357a49f7254924532e2e7f6239ea6fbd5fcc03adc075fa6f78a"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft32-ngl12-t8",
+      "draft": "draft32",
+      "ngl": 12,
+      "threads": 8,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "1ef6870d2ef712a0902e61db58dd354ee9ff5571cfad0e01f20d4b886cc75e78",
+        "rows.jsonl": null,
+        "startup.json": "ff9be5253ed3bc886d1b62e2940b0ebd895061f95fe9992dc5e0b9cbea2f432b",
+        "completion.json": null,
+        "failure.json": "0c8985ac417219b70b0ea8474d342743b06fc5011c1c4bc946ddbb1503d2e99f",
+        "server.log": "e3a305aa5dd2ba844e36d55be7e5b9f81482add0a29d137c1084db97656462e5",
+        "resources.jsonl": "dc44a270b33178dfcdbe99ed3366184e50bf27708ad07a3a90d3fed272f33dae"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "resource bound or telemetry failure during startup"
+      }
+    },
+    {
+      "name": "draft32-ngl11-t8",
+      "draft": "draft32",
+      "ngl": 11,
+      "threads": 8,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 39558.834,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "cf59a86cff2260abab073bc07814f2a7927e980b7d0bd271307ed57fa1124282",
+        "rows.jsonl": "ca5718fc5204f70025b98c9c3bb0bd1778e741e56761d1c371e594b2e6687f57",
+        "startup.json": "627abb2692ed052ba7f5161d0111da0ec4167852bdf60e9bebc6a4372dff5444",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "5a1aaf824e3fc18d32a21c04c14a215a7e7e9ce047f36b14caa43317edb352f6",
+        "resources.jsonl": "b67a996316dcb53c8f18a8c3cddc1ec5cac628cf206b9aba345356df9c9fd375"
+      }
+    },
+    {
+      "name": "draft32-ngl11-t16",
+      "draft": "draft32",
+      "ngl": 11,
+      "threads": 16,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 40412.782,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "cdaf610f0f7095cacf2c3c638cc109d2f922241a2a6b28a8738ce14ef187249e",
+        "rows.jsonl": "900cea66175d07e3a5735966cfc1fdb23f692f0c0c882d1f8330e2ba67e74f04",
+        "startup.json": "7c60f2c886e412ed901bd469d9dc07a825822375bfb91024ea0fdd331e116751",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "25cea3aef0e70c493192e887d86fd423cdb7f232899f2d8c706c833162fdcb1d",
+        "resources.jsonl": "ce455c1e723f2e25f870d8c5fa59e50e3eae614a066a3bbe8163555d03b18b7a"
+      }
+    },
+    {
+      "name": "draft32-ngl11-t24",
+      "draft": "draft32",
+      "ngl": 11,
+      "threads": 24,
+      "k": 16,
+      "classification": "complete",
+      "complete": true,
+      "rows": 3,
+      "median_decode_ms": 39974.998999999996,
+      "returncode": 0,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "e14674f4c5df8f25ad6434630b061464a20fed213864cfc2cbc36cd8e8873219",
+        "rows.jsonl": "6e04747ca8b2948ef4ce04d4ca61543bda334e7fdcdd38f539c108c07d4e76ab",
+        "startup.json": "84207d6b6af6fe67c229655d06ee25f634a2d3918d12eb269d0b0deb128d20e6",
+        "completion.json": "df7f49256faa01bfcf1bf305fc08fdc2009ad474df4e6be8090538611820fd10",
+        "failure.json": null,
+        "server.log": "3006a04eb68839563f896892fd0bca03ecf334c8e066e94835e25dd7e547642e",
+        "resources.jsonl": "781caa58119c6e8ef1e736c354197322fbb5baf7b4fa68216746aafc8dbd355c"
+      }
+    },
+    {
+      "name": "draft32-ngl7-t8",
+      "draft": "draft32",
+      "ngl": 7,
+      "threads": 8,
+      "k": 16,
+      "classification": "native_startup_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "4f115aee3b6b54f2506019107634658f8f5d18fa",
+      "files": {
+        "manifest.json": "2a07d74bbb70227e9f22859eb41ff50062ef7872d3c46a691e6c64fd25627a50",
+        "rows.jsonl": null,
+        "startup.json": null,
+        "completion.json": null,
+        "failure.json": "f20df77e1a9416bf7e2a0f56ad8eb5fe762f089ed1c259d673c525e5505ca541",
+        "server.log": "e2be7daececfa0fc835bc5f4e30a1b12bc3bae858570aaec9f9824f25f604592",
+        "resources.jsonl": "f1af3dedb2dd38f4f626b1402011efccbfddd49b50dbd28ec5b6aa3918706aca"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "server exited 3221226505"
+      }
+    },
+    {
+      "name": "draft32-ngl7-t16",
+      "draft": "draft32",
+      "ngl": 7,
+      "threads": 16,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "5b4a902b0ccff26c5313aeb5eef7a5a35a46e49a",
+      "files": {
+        "manifest.json": "dc42003ce9a7083019c643cfedddcbc74f35ab7cbfd6a2fb21404a0913516181",
+        "rows.jsonl": null,
+        "startup.json": null,
+        "completion.json": null,
+        "failure.json": "f20df77e1a9416bf7e2a0f56ad8eb5fe762f089ed1c259d673c525e5505ca541",
+        "server.log": "9426ff34cbba1a186c2d0d085659fc84ad38453e285d832b9149a2652935446c",
+        "resources.jsonl": "41f7756179b1f48896e05eabaeb853ffc3eb0f55951a19ea7c45bfc942a370f1"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "server exited 3221226505"
+      }
+    },
+    {
+      "name": "draft32-ngl7-t24",
+      "draft": "draft32",
+      "ngl": 7,
+      "threads": 24,
+      "k": 16,
+      "classification": "resource_failure",
+      "complete": false,
+      "rows": 0,
+      "median_decode_ms": null,
+      "returncode": 1,
+      "source": "5b4a902b0ccff26c5313aeb5eef7a5a35a46e49a",
+      "files": {
+        "manifest.json": "9283a9e6f04dd927c09b0a54f3eff06733dd6774d3db9c5578915270c3aa6436",
+        "rows.jsonl": null,
+        "startup.json": null,
+        "completion.json": null,
+        "failure.json": "f20df77e1a9416bf7e2a0f56ad8eb5fe762f089ed1c259d673c525e5505ca541",
+        "server.log": "40f0c56574de5d25021accc26ef1cf0c54776eeea4530ffb028f82c144a2b2c1",
+        "resources.jsonl": "6fa77b0dc46220bcdd8e61af55710a3cbc2412680743f6a3d18dfc8f9d6156b2"
+      },
+      "failure": {
+        "type": "RuntimeError",
+        "message": "server exited 3221226505"
+      }
+    }
+  ],
+  "selected": {
+    "target": {
+      "ngl": 45,
+      "threads": 16,
+      "maximum_feasible_ngl": 45,
+      "median_decode_ms": 14897.133,
+      "case": "target-ngl45-t16",
+      "cuda_model_buffers_mib": [
+        12842.65
+      ],
+      "host_model_buffers_mib": [
+        6083.36
+      ],
+      "sampled_gpu_peak": 15401930752,
+      "sampled_host_available_min": 14048092160
+    },
+    "draft05": {
+      "ngl": 44,
+      "threads": 24,
+      "maximum_feasible_ngl": 44,
+      "median_decode_ms": 23635.6115,
+      "case": "draft05-ngl44-t24",
+      "cuda_model_buffers_mib": [
+        12581.02,
+        500.84
+      ],
+      "host_model_buffers_mib": [
+        6344.99,
+        137.94
+      ],
+      "sampled_gpu_peak": 15558365184,
+      "sampled_host_available_min": 13234847744
+    },
+    "draft15": {
+      "ngl": 41,
+      "threads": 8,
+      "maximum_feasible_ngl": 41,
+      "median_decode_ms": 26298.266,
+      "case": "draft15-ngl41-t8",
+      "cuda_model_buffers_mib": [
+        11760.04,
+        1564.63
+      ],
+      "host_model_buffers_mib": [
+        7165.97,
+        236.47
+      ],
+      "sampled_gpu_peak": 15685767168,
+      "sampled_host_available_min": 12036345856
+    },
+    "draft32": {
+      "ngl": 11,
+      "threads": 8,
+      "maximum_feasible_ngl": 11,
+      "median_decode_ms": 39558.834,
+      "case": "draft32-ngl11-t8",
+      "cuda_model_buffers_mib": [
+        3550.23,
+        9246.93
+      ],
+      "host_model_buffers_mib": [
+        15375.77,
+        243.63
+      ],
+      "sampled_gpu_peak": 15654309888,
+      "sampled_host_available_min": 3844747264
+    }
+  },
+  "source_files": {
+    "selection.json": "e3dbf3301d13e77ff4edb39ffa53bc2cf809671560eaddc84491784c8c55d7b3",
+    "driver-ledger.jsonl": "0010c43dcee60166aecb36eb7ae067a41630c1d11989660a7461339f30e6c466",
+    "driver-complete.json": "fd43d115f049cb4fbc0913fd5095ad704a7f8ac3b96858e6977f59c6ba4fdfe8",
+    "continuation.json": "193499e17041a128af0fbc9b9f4aa5d5db8d7cea3c424dfb55ec6dde1e265662",
+    "prior-driver-ledger.jsonl": "4af2c1c287491b0416bf52f3fca2970118b12055c7336f33476a31c7e03004c0"
+  }
+}
