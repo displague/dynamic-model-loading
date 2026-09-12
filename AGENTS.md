@@ -22,9 +22,17 @@ Keep `.venv` as the measured baseline unless an environment-change protocol call
 another interpreter. Record actual package versions and CUDA execution. Available
 LM Studio/Ollama formats are deployment comparisons, not interchangeable HF weights.
 
-After v0.7, analytical refinement may start from failed one-shot selections. Gate
-physical paging and refinement runtime on the complete causal acquisition policy,
-not necessarily its first pass. Privileged and frozen-mask repair diagnostics are
-explicitly ineligible for deployment. Follow docs/adr/0001-selection-and-refinement-gates.md;
-preserve historical protocols and keep hardware-cost and limited generalization
-controls separate from runtime claims.
+The primary program after v0.12 is stock target-scale heterogeneous speculative
+decoding under docs/adr/0003-verified-speculation-boundary.md. Retire the tested
+1.5B FP32 per-token paging/repair path as an engineering priority decision; preserve
+its protocols and failures without implying impossibility. Historical Gate A/B/C
+contracts remain reproduction rules, not entrance gates for the new program.
+
+Freeze target artifacts, workloads, selection rules and harness before inference.
+Charge draft memory and displaced target residency together. Compare against the
+best measured target-only and stock small-draft configurations. Keep a stable
+target-only greedy reference, actual accepted-prefix records and compact receipts.
+Model-dependent acceptance and runtime economics must be measured on the target.
+No custom shared-resident runtime follows automatically from the pivot; measured
+bottlenecks choose the next experiment. Close superseded tasks as not planned,
+keeping historical issue bodies and completed experimental deliveries intact.

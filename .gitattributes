@@ -1,6 +1,8 @@
 * text=auto eol=lf
 results/** -text whitespace=cr-at-eol
 results/**/*.svg -whitespace
+# Preserve the stock binary's verbatim help output, including blank padded lines.
+results/stock-speculation-preparation/llama-server-help.txt -whitespace
 docs/figures/causal-evidence-quality-cost.svg -whitespace
 # Preserve whitespace in the verbatim model continuations.
 docs/balanced-development-generations.md -whitespace

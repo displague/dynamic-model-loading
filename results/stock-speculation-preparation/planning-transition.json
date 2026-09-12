@@ -1,0 +1,106 @@
+{
+  "issues": {
+    "pager": {
+      "number": 11,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/11",
+      "title": "Implement bounded FFN residency with measured RAM-to-VRAM traffic",
+      "state": "closed",
+      "state_reason": "not_planned"
+    },
+    "refinement_runtime": {
+      "number": 16,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/16",
+      "title": "Implement bounded refinement runtime after complete-policy feasibility",
+      "state": "closed",
+      "state_reason": "not_planned"
+    },
+    "causal_refinement": {
+      "number": 19,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/19",
+      "title": "Test complete causal acquisition from current input, history and residency",
+      "state": "closed",
+      "state_reason": "not_planned"
+    },
+    "stock_speculation": {
+      "number": 23,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/23",
+      "title": "Measure stock target-scale offload and resident-draft configurations",
+      "state": "open"
+    },
+    "speculation_costs": {
+      "number": 24,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/24",
+      "title": "Model cycle cost and displaced target residency from stock measurements",
+      "state": "open"
+    },
+    "draft_representations": {
+      "number": 25,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/25",
+      "title": "Evaluate draft representations only where the measured frontier leaves headroom",
+      "state": "open"
+    },
+    "speculative_control": {
+      "number": 26,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/26",
+      "title": "Evaluate adaptive draft termination against fixed-length stock baselines",
+      "state": "open"
+    }
+  },
+  "milestones": {
+    "0": {
+      "number": 1,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/1",
+      "title": "Stage 0 - Reproducible reference",
+      "state": "open"
+    },
+    "1": {
+      "number": 2,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/2",
+      "title": "Stage 1 - Hindsight sparsity envelope",
+      "state": "open"
+    },
+    "2": {
+      "number": 3,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/3",
+      "title": "Stage 2 - Physical packing and cache traces",
+      "state": "open"
+    },
+    "3": {
+      "number": 4,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/4",
+      "title": "Stage 3 - Causal working-set prediction",
+      "state": "open"
+    },
+    "4": {
+      "number": 5,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/5",
+      "title": "Stage 4 - Bounded RAM-to-VRAM execution",
+      "state": "closed"
+    },
+    "5": {
+      "number": 6,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/6",
+      "title": "Stage 5b - Corrective refinement runtime",
+      "state": "closed"
+    },
+    "later": {
+      "number": 7,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/7",
+      "title": "Later - Generalization and representation studies",
+      "state": "open"
+    },
+    "5a": {
+      "number": 8,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/8",
+      "title": "Repairability - Are failed causal selections cheaply repairable?",
+      "state": "open"
+    },
+    "speculation": {
+      "number": 9,
+      "url": "https://github.com/displague/dynamic-model-loading/milestone/9",
+      "title": "Stock speculation - Verified output under joint memory budgets",
+      "state": "open"
+    }
+  },
+  "verified_utc": "2026-09-12T03:46:36.950200+00:00"
+}

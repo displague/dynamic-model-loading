@@ -1,0 +1,27 @@
+{
+  "captured_utc": "2026-09-12T03:43:42.6659308Z",
+  "disk": {
+    "Name": "C",
+    "Free": 8371347456,
+    "Used": 2038808662016
+  },
+  "host": {
+    "TotalVisibleMemorySize": 32947252,
+    "FreePhysicalMemory": 18391060
+  },
+  "cpu": {
+    "Name": "Intel(R) Core(TM) Ultra 9 275HX",
+    "NumberOfCores": 24,
+    "NumberOfLogicalProcessors": 24
+  },
+  "gpu": [
+    "name, memory.total [MiB], memory.used [MiB], driver_version",
+    "NVIDIA GeForce RTX 5080 Laptop GPU, 16303 MiB, 470 MiB, 616.64"
+  ],
+  "runtime_devices": "Available devices:\r\n  CUDA0: NVIDIA GeForce RTX 5080 Laptop GPU (16275 MiB, 15067 MiB free)\r\n",
+  "model_downloads_performed": false,
+  "target_inference_performed": false,
+  "storage_required_model_bytes": 32379130304,
+  "deletion_attempt": "automatic approval review blocked deletion of two redundant restoration directories; neither was deleted",
+  "compression": "\r\n417 files within 4 directories were compressed.\r\n20,195,641,969 total bytes of data are stored in 18,072,969,499 bytes.\r\nThe compression ratio is 1.1 to 1.\r\n"
+}

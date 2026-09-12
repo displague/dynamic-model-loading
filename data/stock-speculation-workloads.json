@@ -1,0 +1,18 @@
+{
+  "schema": 1,
+  "system": "You are a helpful assistant.",
+  "calibration": {
+    "id": "calibration-explanation",
+    "domain": "calibration",
+    "text": "Write a detailed practical explanation of how a library can organize returned books. Cover sorting, identifying missing labels, checking damaged books, recording inventory changes, and scheduling work. Use complete paragraphs and concrete examples.",
+    "max_tokens": 128
+  },
+  "sustained": [
+    {"id":"code-parser","domain":"code","max_tokens":256,"text":"Write a complete Python function parse_records(lines) that accepts an iterable of strings in name,integer format. Ignore blank lines and lines starting with #. Strip whitespace, report malformed records with their line numbers, and return valid records plus errors. Explain your design and provide several tests including negative integers and extra commas."},
+    {"id":"code-cache","domain":"code","max_tokens":256,"text":"Implement a small least-recently-used cache in Python using only the standard library. It needs get and put operations, a positive capacity, and deterministic eviction. Show an example with updates and evictions, explain the invariant, and include unit tests for the boundary cases."},
+    {"id":"code-sql","domain":"code","max_tokens":256,"text":"A SQLite database contains customers(id, name) and orders(id, customer_id, amount, created_at). Write a query returning every customer and their total order amount during 2025, including customers without orders. Explain placement of date conditions, NULL handling, indexing choices, and demonstrate the result on a small example dataset."},
+    {"id":"prose-debug","domain":"general","max_tokens":256,"text":"Write a detailed troubleshooting guide for a fictional data pipeline where input records arrive correctly but the daily totals are intermittently too high. Organize the investigation around duplicated messages, retry behavior, time boundaries, and aggregation keys. Include examples and a concrete order of checks; do not assume a particular vendor."},
+    {"id":"data-audit","domain":"data","max_tokens":256,"text":"Audit this inventory ledger: opening stock 120; received 35; shipped 48; returned by customers 7; damaged 4; received 19; shipped 31. First calculate the closing stock with explicit intermediate totals. Then propose a compact JSON schema for the events and explain how to detect duplicate events, invalid quantities, and mismatched daily balances. Include one example JSON event."},
+    {"id":"topic-transition","domain":"general","max_tokens":256,"text":"Write two connected sections for an engineering handbook. First explain how to copy a directory tree while preserving file contents and detecting incomplete copies. Then switch to planning a small team's weekly work: explain how to separate urgent incidents from planned improvements. Give practical examples in both sections and make the topic transition explicit."}
+  ]
+}

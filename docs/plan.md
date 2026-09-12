@@ -11,7 +11,51 @@ less real data movement under a bounded memory budget. Corrective refinement is 
 separate hypothesis. A residency miss is observable; an omitted important group can
 silently damage quality without causing a residency miss.
 
-## Original stages and present evidence
+## Primary program after v0.12
+
+[ADR 0003](adr/0003-verified-speculation-boundary.md) retires the tested Qwen 1.5B
+FP32 grouped per-token execution/repair path as the primary engineering strategy.
+This is an opportunity-cost decision, not an impossibility result. All historical
+measurements, failed gates and issue descriptions remain available.
+
+The immediate commitment is a [stock llama.cpp comparison](stock-speculation-protocol.md)
+on an actually offloaded Qwen2.5-32B-Instruct Q4_K_M target. Compare target-only,
+small resident drafts and a feasible non-sharing low-bit target draft; optimize
+target residency and draft memory together. Measure sustained generation alongside
+the old scalar correctness fixtures. Preserve a fixed target-only greedy reference.
+
+```mermaid
+flowchart TD
+    A[Stock target-scale configuration frontier] --> B[Measured cycle and resource analysis]
+    B --> C{Which bottleneck has evidence?}
+    C --> D[Use the best stock configuration]
+    C --> E[Optional draft representation study]
+    C --> F[Optional adaptive draft length]
+    C --> G[Optional native scheduling or state sharing]
+```
+
+The branches are alternatives, not mandatory sequential gates. Small-model utility
+Gate A does not gate exact-runtime research. CPU selected-row kernels, further
+repair-estimator tuning and shared-resident implementation are not prerequisites.
+Keep physical pager #11, refinement runtime #16 and old-scope #19 closed as not
+planned under the superseded design; completed v0.12 issue #22 stays completed.
+Other unfinished old-stage investigations are deferred, with hypotheses unresolved.
+
+Current work: [stock benchmark #23](https://github.com/displague/dynamic-model-loading/issues/23),
+[measured cycle/resource model #24](https://github.com/displague/dynamic-model-loading/issues/24),
+[optional representations #25](https://github.com/displague/dynamic-model-loading/issues/25),
+and [optional adaptive speculation #26](https://github.com/displague/dynamic-model-loading/issues/26).
+The [v0.13.0 preparation delivery](releases/v0.13.0.md) records the decision and
+pinned substrate. Model acquisition and the benchmark remain blocked on storage;
+no target-scale performance has been measured.
+
+## Historical roadmap
+
+The following stage table, dependencies and release narratives describe the earlier
+program. Statements of remaining work below are historical research questions,
+not prerequisites for the new stock benchmark. ADR 0003 governs current priorities.
+
+## Original stages and recorded evidence
 
 | Stage | Deliverable and exit gate | Current evidence / remaining work |
 |---|---|---|

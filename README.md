@@ -1,7 +1,7 @@
 # Dynamic model loading
 
-An experimental apparatus for testing whether dense FFN computation can be grouped
-and selectively executed at useful quality and memory costs.
+Research into executing models under GPU memory pressure, with preserved FFN
+sparsity experiments and a new target-scale stock speculative-decoding comparison.
 
 The starting point is the final critical review in the
 [shared research conversation](https://chatgpt.com/share/6aa40208-727c-83e9-a91b-b2ce031c96eb).
@@ -13,23 +13,30 @@ See the [research stages and delivery history](docs/plan.md),
 [GitHub milestones](https://github.com/displague/dynamic-model-loading/milestones)
 for the original plan, completed experiments, and remaining gates.
 
-**Current result:** the [complete causal-repair experiment](docs/causal-evidence-results.md)
+**Current direction:** [ADR 0003](docs/adr/0003-verified-speculation-boundary.md)
+retires the tested per-token selective-execution path as the primary implementation.
+The next experiment compares stock target-only offload and resident drafting on a
+pinned Qwen2.5-32B-Instruct Q4_K_M target, accounting jointly for draft memory,
+target residency, verification and committed output. See the
+[prospective stock protocol](docs/stock-speculation-protocol.md). The benchmark is
+not yet measured; no speculative speedup or identical-output result is claimed.
+
+**Preserved v0.12 result:** the [complete causal-repair experiment](docs/causal-evidence-results.md)
 finds a mixed quality improvement from partial evidence at matched bytes: relative
 PPL 1.089487, versus 1.112546 for a larger one-shot
 decision and 1.107101 for predetermined repair. Individual-prefix
-advantage and the combined quality/economics gate fail. Physical paging stays gated.
+advantage and the combined quality/economics gate fail. The old pager is not pursued under ADR 0003.
 See [v0.12.0](docs/releases/v0.12.0.md) for complete costs and retained failures.
 
 The [dense chat-interface study](docs/dense-interface-results.md) recovers 7/10 debug
 and 12/20 fresh balanced successes, with all native/incremental/repacked comparisons
-passing. Its frozen balanced Gate A still fails. Utility qualification remains
-separate from analytical repair.
+passing. Its frozen balanced Gate A still fails. This historical qualification does not gate the new target-scale runtime study.
 
 **Earlier privileged repair:** the [fixed-mask repair diagnostic](docs/refinement-feasibility-results.md)
 finds five privileged repair settings that meet the aggregate quality/traffic lines
 on two reused article prefixes. One also passes the quality line on both individual
 prefixes; none of the 20 larger one-shot settings passes both aggregate lines. This
-supports testing causal correction, with no runtime nominee or achieved memory gain.
+motivated the completed v0.12 causal test, with no runtime nominee or achieved memory gain.
 
 The [hardware-cost characterization](docs/hardware-cost-results.md) separates transfer,
 staging, gathering and resident computation. At a full-layer payload, its serialized
@@ -47,10 +54,9 @@ from 1.089204 to 1.158203 against the 1.01 limit. All meet the simulated traffic
 screen, but recency, EMA and the learned selector also exceed the cost screen.
 Incremental hindsight reaches 1.009318 and remains ineligible because it uses current
 dense activations. The [causal findings](docs/causal-control-results.md) retain every
-article, transition, timing and generated path. Physical paging and refinement runtime
-remain gated; the [revised dependency graph](docs/plan.md#revised-dependencies-after-the-v07-design-review)
-now permits analytical refinement from failed first passes. No physical transfer or
-runtime gain is established.
+article, transition, timing and generated path. The [historical dependency graph](docs/plan.md#revised-dependencies-after-the-v07-design-review)
+permitted analytical refinement from failed first passes. ADR 0003 supersedes that
+implementation priority; no physical transfer or runtime gain was established.
 
 The earlier [cache findings](docs/cache-trace-results.md) nominated one of 72
 conditions: relative PPL 1.008978 and 15.54% less simulated warm traffic at 2 GiB,
