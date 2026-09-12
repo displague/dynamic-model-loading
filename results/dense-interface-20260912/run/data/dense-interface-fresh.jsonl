@@ -1,0 +1,20 @@
+{"id":"fresh-code-01","domain":"code","task":"What integer does this Python code print?\nvalues = [4, 9, 6, 1]\nprint(sum(x for x in values if x % 2 == 0))","answer":"10","syntax":"integer"}
+{"id":"fresh-code-02","domain":"code","task":"What integer does this Python code print?\nitems = [2, 5, 8, 11]\nprint(items[-2])","answer":"8","syntax":"integer"}
+{"id":"fresh-code-03","domain":"code","task":"Which Python expression returns the length of a list named xs? Answer A, B or C.\nA: xs.length\nB: count(xs)\nC: len(xs)","answer":"C","syntax":"choice"}
+{"id":"fresh-code-04","domain":"code","task":"What integer does this Python code print?\nvalue = 3\nfor _ in range(4):\n    value += 2\nprint(value)","answer":"11","syntax":"integer"}
+{"id":"fresh-extraction-01","domain":"extraction","task":"Extract only order_id from {\"user_id\":\"u-812\",\"order_id\":\"ord-264\",\"state\":\"ready\"}.","answer":"ord-264","syntax":"identifier"}
+{"id":"fresh-extraction-02","domain":"extraction","task":"Return the name with the greatest score: [{\"name\":\"maple\",\"score\":31},{\"name\":\"ash\",\"score\":54},{\"name\":\"oak\",\"score\":22}].","answer":"ash","syntax":"identifier"}
+{"id":"fresh-extraction-03","domain":"extraction","task":"Extract only city from {\"person\":{\"name\":\"Lee\",\"city\":\"Oslo\"},\"status\":\"active\"}.","answer":"Oslo","syntax":"identifier"}
+{"id":"fresh-extraction-04","domain":"extraction","task":"Return the service with the smallest latency_ms: [{\"name\":\"north\",\"latency_ms\":26},{\"name\":\"south\",\"latency_ms\":41},{\"name\":\"east\",\"latency_ms\":12}].","answer":"east","syntax":"identifier"}
+{"id":"fresh-arithmetic-01","domain":"arithmetic","task":"Calculate 24 * 13. Return the integer result.","answer":"312","syntax":"integer"}
+{"id":"fresh-arithmetic-02","domain":"arithmetic","task":"Divide 540 by 9, then add 16. Return the integer result.","answer":"76","syntax":"integer"}
+{"id":"fresh-arithmetic-03","domain":"arithmetic","task":"Calculate 125 - 48. Return the integer result.","answer":"77","syntax":"integer"}
+{"id":"fresh-arithmetic-04","domain":"arithmetic","task":"Calculate (18 + 7) * 4. Return the integer result.","answer":"100","syntax":"integer"}
+{"id":"fresh-copying-01","domain":"copying","task":"Copy exactly, preserving case and punctuation:\nr8T-6nY_43","answer":"r8T-6nY_43","syntax":"identifier"}
+{"id":"fresh-copying-02","domain":"copying","task":"Copy only the text between the markers:\n<start>D4|e5|F6<end>","answer":"D4|e5|F6","syntax":"identifier"}
+{"id":"fresh-copying-03","domain":"copying","task":"Copy this label exactly:\nGAMMA-472","answer":"GAMMA-472","syntax":"identifier"}
+{"id":"fresh-copying-04","domain":"copying","task":"Copy exactly the string on the next line:\nQz09_aB","answer":"Qz09_aB","syntax":"identifier"}
+{"id":"fresh-topic_changes-01","domain":"topic_changes","task":"Previous task, now finished: multiply 8 by 6.\nNew current task: copy DELTA-618 exactly.\nAnswer only the new current task.","answer":"DELTA-618","syntax":"identifier"}
+{"id":"fresh-topic_changes-02","domain":"topic_changes","task":"Previous task, now finished: explain a Python loop.\nNew current task: extract tag from {\"zone\":\"red\",\"tag\":\"M4\"}.\nAnswer only the new current task.","answer":"M4","syntax":"identifier"}
+{"id":"fresh-topic_changes-03","domain":"topic_changes","task":"Previous task, now finished: copy ALPHA-215.\nNew current task: calculate 14 + 19.\nAnswer only the new current task.","answer":"33","syntax":"integer"}
+{"id":"fresh-topic_changes-04","domain":"topic_changes","task":"Previous task, now finished: return the largest number in [9, 2, 5].\nNew current task: copy the text between markers <s>H7|j8</s>.\nAnswer only the new current task.","answer":"H7|j8","syntax":"identifier"}

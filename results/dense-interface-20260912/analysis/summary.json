@@ -1,0 +1,125 @@
+{
+  "conditions": {
+    "debug-plain-native": {
+      "tasks": 10,
+      "answer_correct": 2,
+      "format_compliant": 0,
+      "success": 0,
+      "domain_success": {
+        "code": 0,
+        "extraction": 0,
+        "arithmetic": 0,
+        "copying": 0,
+        "topic_changes": 0
+      }
+    },
+    "debug-plain-incremental": {
+      "tasks": 10,
+      "answer_correct": 2,
+      "format_compliant": 0,
+      "success": 0,
+      "domain_success": {
+        "code": 0,
+        "extraction": 0,
+        "arithmetic": 0,
+        "copying": 0,
+        "topic_changes": 0
+      }
+    },
+    "debug-plain-packed": {
+      "tasks": 10,
+      "answer_correct": 2,
+      "format_compliant": 0,
+      "success": 0,
+      "domain_success": {
+        "code": 0,
+        "extraction": 0,
+        "arithmetic": 0,
+        "copying": 0,
+        "topic_changes": 0
+      }
+    },
+    "debug-chat-native": {
+      "tasks": 10,
+      "answer_correct": 7,
+      "format_compliant": 9,
+      "success": 7,
+      "domain_success": {
+        "code": 1,
+        "extraction": 2,
+        "arithmetic": 1,
+        "copying": 2,
+        "topic_changes": 1
+      }
+    },
+    "debug-chat-incremental": {
+      "tasks": 10,
+      "answer_correct": 7,
+      "format_compliant": 9,
+      "success": 7,
+      "domain_success": {
+        "code": 1,
+        "extraction": 2,
+        "arithmetic": 1,
+        "copying": 2,
+        "topic_changes": 1
+      }
+    },
+    "debug-chat-packed": {
+      "tasks": 10,
+      "answer_correct": 7,
+      "format_compliant": 9,
+      "success": 7,
+      "domain_success": {
+        "code": 1,
+        "extraction": 2,
+        "arithmetic": 1,
+        "copying": 2,
+        "topic_changes": 1
+      }
+    },
+    "fresh-chat-native": {
+      "tasks": 20,
+      "answer_correct": 12,
+      "format_compliant": 16,
+      "success": 12,
+      "domain_success": {
+        "code": 2,
+        "extraction": 4,
+        "arithmetic": 3,
+        "copying": 2,
+        "topic_changes": 1
+      }
+    },
+    "fresh-chat-incremental": {
+      "tasks": 20,
+      "answer_correct": 12,
+      "format_compliant": 16,
+      "success": 12,
+      "domain_success": {
+        "code": 2,
+        "extraction": 4,
+        "arithmetic": 3,
+        "copying": 2,
+        "topic_changes": 1
+      }
+    },
+    "fresh-chat-packed": {
+      "tasks": 20,
+      "answer_correct": 12,
+      "format_compliant": 16,
+      "success": 12,
+      "domain_success": {
+        "code": 2,
+        "extraction": 4,
+        "arithmetic": 3,
+        "copying": 2,
+        "topic_changes": 1
+      }
+    }
+  },
+  "utility_qualified": false,
+  "reference_fidelity": true,
+  "gate_a": false,
+  "runtime_nomination": null
+}

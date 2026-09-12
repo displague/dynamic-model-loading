@@ -134,3 +134,13 @@ all other effective package versions are aligned. Four arithmetic policies still
 fail and ordinary native BF16 outputs drift across environments. Retain the baseline
 and record future environments separately. Both project suites pass; optional shared
 audio packages are outside this text-model validation.
+
+
+## Post-v0.10 interface qualification
+
+The v0.11.0 prospective chat-interface experiment recovers 7/10 debug and 12/20
+fresh successes, with complete native/incremental/repacked fidelity, but fails its
+frozen balanced Gate A. See [the results](dense-interface-results.md) and
+[the three-gate decision](adr/0002-qualified-utility-and-causal-evidence.md).
+The original v0.10 result is preserved. Analytical repair #19 continues under
+Gates B/C; useful balanced behavior and physical runtime remain separate open gates.

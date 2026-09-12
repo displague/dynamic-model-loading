@@ -1,0 +1,811 @@
+{
+  "protocol_commit": "805ed348b271a34b20c2364a9127ceaa975f14af",
+  "assets": [
+    {
+      "name": "dense-interface-part1-v0.11.0.zip",
+      "bytes": 993459905,
+      "sha256": "1e6215389acf5938a7b44fca244197cbe0bc0269b6e8bce2c64fe35a9bd816a7",
+      "payloads": [
+        {
+          "file": "tensors/arithmetic-product-01-chat-incremental.safetensors",
+          "bytes": 4862128,
+          "sha256": "c171b7ba3feac44b4c064c617c6971bdb823923f9f45e1c02852679da3ac0142"
+        },
+        {
+          "file": "tensors/arithmetic-product-01-chat-native.safetensors",
+          "bytes": 4862128,
+          "sha256": "1598f675ae589dba2b42365bcd8d4547c99339376a8daf2bdce5075c15a4ba88"
+        },
+        {
+          "file": "tensors/arithmetic-product-01-chat-packed.safetensors",
+          "bytes": 4862128,
+          "sha256": "bab72ac7109041b5866aa51d8ae257554c75bb2d1de5001ddd9bf7fce7fa3479"
+        },
+        {
+          "file": "tensors/arithmetic-product-01-plain-incremental.safetensors",
+          "bytes": 7293104,
+          "sha256": "5cd97329d6ed15b9b439c5889dfe12d3916f72c4d9656194d5af429e4b9918a2"
+        },
+        {
+          "file": "tensors/arithmetic-product-01-plain-native.safetensors",
+          "bytes": 7293104,
+          "sha256": "b2e455ae09232eef37b58cfe1171bd2dfba6eb496f1218877ac17e1da4bdad76"
+        },
+        {
+          "file": "tensors/arithmetic-product-01-plain-packed.safetensors",
+          "bytes": 7293104,
+          "sha256": "e8b2fc34b1a8739ce31fb233629855a1fe04d8e864fd81f7ddbc7907f66bf869"
+        },
+        {
+          "file": "tensors/arithmetic-sequence-02-chat-incremental.safetensors",
+          "bytes": 3646640,
+          "sha256": "aed5c122f04f5956baf6247dfee6e9c8a6317d80b5d2e0e7375521a880e512cd"
+        },
+        {
+          "file": "tensors/arithmetic-sequence-02-chat-native.safetensors",
+          "bytes": 3646640,
+          "sha256": "ca4ef1b56761dc04bab9109c4144e07509d1cb39c48afe374ec5e2cc6f98faf9"
+        },
+        {
+          "file": "tensors/arithmetic-sequence-02-chat-packed.safetensors",
+          "bytes": 3646640,
+          "sha256": "a7a860446b3156e5cd4fca74dc0bbfa7f0fa1060239d06000afa982b71d689c2"
+        },
+        {
+          "file": "tensors/arithmetic-sequence-02-plain-incremental.safetensors",
+          "bytes": 77791408,
+          "sha256": "b03337f7abeb4afa6845c48181b985bf79ae9ac3985a22b2da575769faeac017"
+        },
+        {
+          "file": "tensors/arithmetic-sequence-02-plain-native.safetensors",
+          "bytes": 77791408,
+          "sha256": "3518d33e87912db332fdd821e5c40279109d1271e001259c194a468efa0c68b2"
+        },
+        {
+          "file": "tensors/arithmetic-sequence-02-plain-packed.safetensors",
+          "bytes": 77791408,
+          "sha256": "913edcc18179ef48110654d2e9e8c939f3fb0dc36cccef53409717b7fd1861d4"
+        },
+        {
+          "file": "tensors/code-fix-02-chat-incremental.safetensors",
+          "bytes": 2431152,
+          "sha256": "f29f303b5261852c190cb7595f9b9c58c941a4b5dc46071fd0252cac56d63df3"
+        },
+        {
+          "file": "tensors/code-fix-02-chat-native.safetensors",
+          "bytes": 2431152,
+          "sha256": "a1cbd342083137605301622e83c144fb35d88d2286d5b6bed141f30d57f07200"
+        },
+        {
+          "file": "tensors/code-fix-02-chat-packed.safetensors",
+          "bytes": 2431152,
+          "sha256": "7d3ac2952a848cf121c320a63c5ecfe094c60488bebeacf2f556443a5cc3f096"
+        },
+        {
+          "file": "tensors/code-fix-02-plain-incremental.safetensors",
+          "bytes": 77791408,
+          "sha256": "ff50be7033acc22fff5fc745983158ac07a55d459db7eb3b364f95046b955e20"
+        },
+        {
+          "file": "tensors/code-fix-02-plain-native.safetensors",
+          "bytes": 77791408,
+          "sha256": "63f32fc00cc495350dc8827118a3627f3acf38ec694a58668144779d1f88eb8a"
+        },
+        {
+          "file": "tensors/code-fix-02-plain-packed.safetensors",
+          "bytes": 77791408,
+          "sha256": "da785f14a76acc96e24ef556c550814263a02ad36579ab253ce205ceb2277d29"
+        },
+        {
+          "file": "tensors/code-output-01-chat-incremental.safetensors",
+          "bytes": 3646640,
+          "sha256": "99aee502757a34bc2d6329e98182ed6510f5ca00c80c363f7b7c6a29ea2f8d7e"
+        },
+        {
+          "file": "tensors/code-output-01-chat-native.safetensors",
+          "bytes": 3646640,
+          "sha256": "6929773aed765cd580bdc5c79162e87a2918870b833ca2060bc294a024596c9d"
+        },
+        {
+          "file": "tensors/code-output-01-chat-packed.safetensors",
+          "bytes": 3646640,
+          "sha256": "bbb1deb7fb16e7ad5751a29ac97fdc21304e8379e7615730043f648785ff214a"
+        },
+        {
+          "file": "tensors/code-output-01-plain-incremental.safetensors",
+          "bytes": 75360432,
+          "sha256": "7f276008be5d3554f61084124061f72be3faaff6bc101fd314c1d902d96d6e2e"
+        },
+        {
+          "file": "tensors/code-output-01-plain-native.safetensors",
+          "bytes": 75360432,
+          "sha256": "8f2dc6ac161eb76e3ba45b31790b8b5f75e20b2fac80deb8224cc9ca591c9536"
+        },
+        {
+          "file": "tensors/code-output-01-plain-packed.safetensors",
+          "bytes": 75360432,
+          "sha256": "6cbcfacc9ff9a5e8d3041630aa93b0b5ce600af393716a0628aa78c6a10bb43c"
+        },
+        {
+          "file": "tensors/copy-case-01-chat-incremental.safetensors",
+          "bytes": 13370544,
+          "sha256": "06d82f49bb0240676cd7778b19dbcadae22e7978c3c4c6fe0ccf7706ee0ca707"
+        },
+        {
+          "file": "tensors/copy-case-01-chat-native.safetensors",
+          "bytes": 13370544,
+          "sha256": "718e913e61a8c9da4d0086c86ea6ceaaab88ce59e7f71af97cba0000ea5dc5ac"
+        },
+        {
+          "file": "tensors/copy-case-01-chat-packed.safetensors",
+          "bytes": 13370544,
+          "sha256": "8f632157727c5c025106f17c723808878e72c0bceb6b5924265962ee958cbc50"
+        },
+        {
+          "file": "tensors/copy-case-01-plain-incremental.safetensors",
+          "bytes": 77791408,
+          "sha256": "9a5a52f032587ce14f5fc68231939dd944e7001082f3fe8eb0890d9abec53c68"
+        },
+        {
+          "file": "tensors/copy-case-01-plain-native.safetensors",
+          "bytes": 77791408,
+          "sha256": "d0cfe162d0033eaa799d5852779febb027c38c57b03b2e055f827d24dd826ac7"
+        },
+        {
+          "file": "tensors/copy-case-01-plain-packed.safetensors",
+          "bytes": 77791408,
+          "sha256": "fac6ef87501f3bfea1bab1c6df55d5e651f86f2fddfb2d1b6c1809afaf865e93"
+        },
+        {
+          "file": "tensors/copy-delimiters-02-chat-incremental.safetensors",
+          "bytes": 10939568,
+          "sha256": "19f68b6c9dfba708f3a7a483010d20cabe835632a1d27731b8ffced980536676"
+        },
+        {
+          "file": "tensors/copy-delimiters-02-chat-native.safetensors",
+          "bytes": 10939568,
+          "sha256": "8b9698ab6a0e46c216c235b8f7f50d0b18c19d2cfab740e9a570ba9c8321dfab"
+        },
+        {
+          "file": "tensors/copy-delimiters-02-chat-packed.safetensors",
+          "bytes": 10939568,
+          "sha256": "d2bf86f1ee04254192f570cfc3b6c567772daa74eb05b5244e230aa8cd8e8ba6"
+        },
+        {
+          "file": "tensors/copy-delimiters-02-plain-incremental.safetensors",
+          "bytes": 21878960,
+          "sha256": "a7315206a7b0d6447992d46fec813a21d577737cf882e33b7ff1677cf7a3b92c"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.11.0/dense-interface-part1-v0.11.0.zip"
+    },
+    {
+      "name": "dense-interface-part2-v0.11.0.zip",
+      "bytes": 1001769560,
+      "sha256": "07739ca390fab9a03abe16edf259b6aad183d972d2deeb063bbcc9e79ae26bd5",
+      "payloads": [
+        {
+          "file": "tensors/copy-delimiters-02-plain-native.safetensors",
+          "bytes": 21878960,
+          "sha256": "5f42c293d32eeb5e6a306b2bcbedc3026d3fc96f79344bcc375c7f456ca60b5b"
+        },
+        {
+          "file": "tensors/copy-delimiters-02-plain-packed.safetensors",
+          "bytes": 21878960,
+          "sha256": "1a1d1b6ca0dd1c9a6e86cc22e52da99e1683ddefc2aed46e277888add3f59b04"
+        },
+        {
+          "file": "tensors/extract-id-01-chat-incremental.safetensors",
+          "bytes": 7293104,
+          "sha256": "d7d9387ee1afa25de93b79a3895b7b7e1277f7f72469cc5bc14cb8981b1cc513"
+        },
+        {
+          "file": "tensors/extract-id-01-chat-native.safetensors",
+          "bytes": 7293104,
+          "sha256": "4fd0ccfd24c59371eb2704dc64184408cd89e0f0693c99a9385e74aad2412fe6"
+        },
+        {
+          "file": "tensors/extract-id-01-chat-packed.safetensors",
+          "bytes": 7293104,
+          "sha256": "1cfd48cc1fb42073df7408d29aed1f062e2f3ce199b6602c5170499659078dfe"
+        },
+        {
+          "file": "tensors/extract-id-01-plain-incremental.safetensors",
+          "bytes": 77791408,
+          "sha256": "8249511a52ffda9280d0289fc06333ead94a1bbecf0968aab3233c30b89faf61"
+        },
+        {
+          "file": "tensors/extract-id-01-plain-native.safetensors",
+          "bytes": 77791408,
+          "sha256": "c1aee90d8e81d91db4dc54bbab0690ed148b0685b559f8d718b261551e75d332"
+        },
+        {
+          "file": "tensors/extract-id-01-plain-packed.safetensors",
+          "bytes": 77791408,
+          "sha256": "f856ad81df4f7702b7335691a94d802cbe3345d23b553844b694736ccfa4ec92"
+        },
+        {
+          "file": "tensors/extract-min-02-chat-incremental.safetensors",
+          "bytes": 3646640,
+          "sha256": "f2ef3b6e5bebede6d04aa3099cdcdea877f45c50cabd290b5e38cb3871d561ff"
+        },
+        {
+          "file": "tensors/extract-min-02-chat-native.safetensors",
+          "bytes": 3646640,
+          "sha256": "71e3c318549dc247040308de83039f077106b495fb118d856c59ca214fe39147"
+        },
+        {
+          "file": "tensors/extract-min-02-chat-packed.safetensors",
+          "bytes": 3646640,
+          "sha256": "2486eabcdc09bd3b545dd219be9e330b7e95be8eadf2634e0b8d0aee20a4b377"
+        },
+        {
+          "file": "tensors/extract-min-02-plain-incremental.safetensors",
+          "bytes": 77791408,
+          "sha256": "5b0fef331ebac5c270758b5ac38020f933ce44cf77aff731a92b2256bfa8c42e"
+        },
+        {
+          "file": "tensors/extract-min-02-plain-native.safetensors",
+          "bytes": 77791408,
+          "sha256": "9c56e991427b07a6b9c9ad02dc932ec4f5dd1de3c52533eea0340edb055e0b4d"
+        },
+        {
+          "file": "tensors/extract-min-02-plain-packed.safetensors",
+          "bytes": 77791408,
+          "sha256": "5bf314f272a0b4571e2a9e1bfcf17264a9a1240ee16d32a5ceac034b1b21cc8b"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-01-chat-incremental.safetensors",
+          "bytes": 4862128,
+          "sha256": "4cb0cbbecbfe5dbb69c8b11d94135b944558bc25395c8389c9cb67538f416383"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-01-chat-native.safetensors",
+          "bytes": 4862128,
+          "sha256": "90361df958bd4beb463ea8f3685ba7c411f9751590b7cbdb6a34a1d7375b3d75"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-01-chat-packed.safetensors",
+          "bytes": 4862128,
+          "sha256": "bb3db21ce972907f3bf797986231b4f9422fbd0d176199aa95a20e1ab00dbe1e"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-02-chat-incremental.safetensors",
+          "bytes": 3646640,
+          "sha256": "e032b235f170a349d3d67327200e89218791c9457a06e6a1d2977bb3246a544e"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-02-chat-native.safetensors",
+          "bytes": 3646640,
+          "sha256": "344b9a68afbeef1c6950f743dc20c6033ec128aa649987f6882318404d26d131"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-02-chat-packed.safetensors",
+          "bytes": 3646640,
+          "sha256": "decfcba1774d32f6d9ea36a2b3d36a82346850e138be4a2bec4a46c9f316640c"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-03-chat-incremental.safetensors",
+          "bytes": 3646640,
+          "sha256": "936d29038fba8924d5ed608539e846f5f255fec2bc28b59253e2ed130443eb53"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-03-chat-native.safetensors",
+          "bytes": 3646640,
+          "sha256": "361651d66ab58b3dab7485f378c8e2e7ecdfebfece450913ead8587a39e9e133"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-03-chat-packed.safetensors",
+          "bytes": 3646640,
+          "sha256": "15c6c92b244a17ef093a9d1fe24f93c284e75caca757837bfd62c340f7133673"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-04-chat-incremental.safetensors",
+          "bytes": 4862128,
+          "sha256": "9b4b59eb4d2ff05de798971803428cf23d0b2fd104eed5e1a348529b8ccdd270"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-04-chat-native.safetensors",
+          "bytes": 4862128,
+          "sha256": "3c93438e3c13d1ccd6b66861fad52640914be9e0079e57f7c38d033372d72459"
+        },
+        {
+          "file": "tensors/fresh-arithmetic-04-chat-packed.safetensors",
+          "bytes": 4862128,
+          "sha256": "883fe945b38b2bcd6f97b7ab431a2b45ca9de77700ad9e61fc1c49d49abcd625"
+        },
+        {
+          "file": "tensors/fresh-code-01-chat-incremental.safetensors",
+          "bytes": 2431152,
+          "sha256": "e967ee1febc1f94ae310f0e60740985df9916ae0725fb9b2eb25229c3c2125b7"
+        },
+        {
+          "file": "tensors/fresh-code-01-chat-native.safetensors",
+          "bytes": 2431152,
+          "sha256": "9b90aa1af676d73985bda83b8eaf26e93cd42eda7651fe18932e77e165975ac6"
+        },
+        {
+          "file": "tensors/fresh-code-01-chat-packed.safetensors",
+          "bytes": 2431152,
+          "sha256": "e7bb44116d4d9f08967ca88a5919d890a857b6be93efe8cc62e96ab35d197680"
+        },
+        {
+          "file": "tensors/fresh-code-02-chat-incremental.safetensors",
+          "bytes": 2431152,
+          "sha256": "b8fcbb52ee4e3986a30e98478cbbfec5b58ce82cb563b3d0a8a1f90d5cd815ae"
+        },
+        {
+          "file": "tensors/fresh-code-02-chat-native.safetensors",
+          "bytes": 2431152,
+          "sha256": "d178b526d5fea9543c123cf70423be8289dc39d44025fcff0ab3a7f5e6d5f9e6"
+        },
+        {
+          "file": "tensors/fresh-code-02-chat-packed.safetensors",
+          "bytes": 2431152,
+          "sha256": "30ae813b131fd8bb24e6c7e53a72af0848d35be5a51f6ae2549648cbe7bb978e"
+        },
+        {
+          "file": "tensors/fresh-code-03-chat-incremental.safetensors",
+          "bytes": 7293104,
+          "sha256": "dbc6915debf0cdb45d029a0ad7e02902861416fff53502013b77f5b7db0672c6"
+        },
+        {
+          "file": "tensors/fresh-code-03-chat-native.safetensors",
+          "bytes": 7293104,
+          "sha256": "2aa682d6e842ba5196438c31c744a995ec5ddc9505d076845a9b280d0c004aaa"
+        },
+        {
+          "file": "tensors/fresh-code-03-chat-packed.safetensors",
+          "bytes": 7293104,
+          "sha256": "c9e781c43dd6537a3c8b3a794d093389d92fcc7960b922e20c1950826e9e0492"
+        },
+        {
+          "file": "tensors/fresh-code-04-chat-incremental.safetensors",
+          "bytes": 3646640,
+          "sha256": "071785df0270897e09b340111dcd31c457f1f93ed117e20468637b50eb8ae778"
+        },
+        {
+          "file": "tensors/fresh-code-04-chat-native.safetensors",
+          "bytes": 3646640,
+          "sha256": "b114bfbd48c814a578fc2ad7fa36f899c9d1c4b2fab3658e3cd80c60eeb78a37"
+        },
+        {
+          "file": "tensors/fresh-code-04-chat-packed.safetensors",
+          "bytes": 3646640,
+          "sha256": "30699e38d86152834fe47c5cd14f17e39b8ad8ffd1524607876f81773467450d"
+        },
+        {
+          "file": "tensors/fresh-copying-01-chat-incremental.safetensors",
+          "bytes": 13370544,
+          "sha256": "f16c1054a22774c4c662eb1c4f80e8fc8861defe75d7ad9bf4c27acc6bc2020a"
+        },
+        {
+          "file": "tensors/fresh-copying-01-chat-native.safetensors",
+          "bytes": 13370544,
+          "sha256": "e44e73c4c8f98d86420ae9828d54a0fe88722f4a54c90fbfe7bd789b7ff7e62a"
+        },
+        {
+          "file": "tensors/fresh-copying-01-chat-packed.safetensors",
+          "bytes": 13370544,
+          "sha256": "743f6cdd585865e017feb89982d741c5f611576412c0902446550026c48eb94b"
+        },
+        {
+          "file": "tensors/fresh-copying-02-chat-incremental.safetensors",
+          "bytes": 3646640,
+          "sha256": "a4ff5b4c77c1630674b7384e460a83aabdf1db9214dc54bac069872a05921e74"
+        },
+        {
+          "file": "tensors/fresh-copying-02-chat-native.safetensors",
+          "bytes": 3646640,
+          "sha256": "71243c4258e55b19070accc39a0a742a3ba5959292fd27acc83a506d6eecfe2c"
+        },
+        {
+          "file": "tensors/fresh-copying-02-chat-packed.safetensors",
+          "bytes": 3646640,
+          "sha256": "2ab1f438c15e509d9a50fbbfa8e5d8d10cdd80bc2bc0bc4885589661bc87c86f"
+        },
+        {
+          "file": "tensors/fresh-copying-03-chat-incremental.safetensors",
+          "bytes": 9724080,
+          "sha256": "d75ca7792c7f3cc3eac4f1e2cfe69e8c807a84d9da43ef0e00a941f4072eb059"
+        },
+        {
+          "file": "tensors/fresh-copying-03-chat-native.safetensors",
+          "bytes": 9724080,
+          "sha256": "bee8aa52ce24bb828a903507174f3de8619a95ed3faf4e5baf7c75b9c1881bf5"
+        },
+        {
+          "file": "tensors/fresh-copying-03-chat-packed.safetensors",
+          "bytes": 9724080,
+          "sha256": "3cf34807948f572c454a8b4b7d123183a56eb51defb8e8e41f1e839b7c66b871"
+        },
+        {
+          "file": "tensors/fresh-copying-04-chat-incremental.safetensors",
+          "bytes": 14586032,
+          "sha256": "8edd02fa4a14520c2846e650938abaf08cf7ae6ebe4f1f1ff34f0d91d7468c7e"
+        },
+        {
+          "file": "tensors/fresh-copying-04-chat-native.safetensors",
+          "bytes": 14586032,
+          "sha256": "ebafb00ab6deeb1994ef0b51eeaf15b9adbde439a75e0dd98971fef2890e937f"
+        },
+        {
+          "file": "tensors/fresh-copying-04-chat-packed.safetensors",
+          "bytes": 14586032,
+          "sha256": "f620854f14167e24c0b870552589a260e906e6ab2b4d5549f113fe737e8dfc81"
+        },
+        {
+          "file": "tensors/fresh-extraction-01-chat-incremental.safetensors",
+          "bytes": 7293104,
+          "sha256": "1c559f6e6512846d404cde02bfcbeb233f469338da8be9e2c81e402944640a11"
+        },
+        {
+          "file": "tensors/fresh-extraction-01-chat-native.safetensors",
+          "bytes": 7293104,
+          "sha256": "e2966583fafacaa3f17e6273c1fdfc8c0678e3aaecc386c8fdc8d7c870beec80"
+        },
+        {
+          "file": "tensors/fresh-extraction-01-chat-packed.safetensors",
+          "bytes": 7293104,
+          "sha256": "b1fd0871afc6031c2827df148371ec0133d86992d05f9cf84c90734e2ef1071d"
+        },
+        {
+          "file": "tensors/fresh-extraction-02-chat-incremental.safetensors",
+          "bytes": 2431152,
+          "sha256": "c8b95a668d00556159a3d2f36692c19a06ab28f6e2424cbd34e1dbfbdcb3d460"
+        },
+        {
+          "file": "tensors/fresh-extraction-02-chat-native.safetensors",
+          "bytes": 2431152,
+          "sha256": "a7f583c144eedca3fdf3893f21364b2c1b4f0c4dadf79e39ec18fde5a8c25bb0"
+        },
+        {
+          "file": "tensors/fresh-extraction-02-chat-packed.safetensors",
+          "bytes": 2431152,
+          "sha256": "ac90e69d873186e2c453a0451b918bf2ad4b03432c76140f013e1eecb54a34ef"
+        },
+        {
+          "file": "tensors/fresh-extraction-03-chat-incremental.safetensors",
+          "bytes": 3646640,
+          "sha256": "9c384b20e17247d96e16d1722e1ae5f36ffd8096b1fad2e15f987392d421c8e6"
+        },
+        {
+          "file": "tensors/fresh-extraction-03-chat-native.safetensors",
+          "bytes": 3646640,
+          "sha256": "627c053f74b6c04995c5a4ec920e6d0be7c3cdbfb4f639b59b82f4be0c83a311"
+        },
+        {
+          "file": "tensors/fresh-extraction-03-chat-packed.safetensors",
+          "bytes": 3646640,
+          "sha256": "c76be4d673faa6a436ea50e548692938e5301e4ea33ea9789ddb03f7cca24daa"
+        },
+        {
+          "file": "tensors/fresh-extraction-04-chat-incremental.safetensors",
+          "bytes": 2431152,
+          "sha256": "0de14143695b81d2de88f150eede501376a1bce8d056b36da890f8acdc01c164"
+        },
+        {
+          "file": "tensors/fresh-extraction-04-chat-native.safetensors",
+          "bytes": 2431152,
+          "sha256": "ac117683f7d0b048ac7f52acc7d092ac06312e51ca795c5d6b6f5990f39b3ee8"
+        },
+        {
+          "file": "tensors/fresh-extraction-04-chat-packed.safetensors",
+          "bytes": 2431152,
+          "sha256": "72454d9e39f1cec297db115dd28be144b935b87d7d2e048b6ba42b380338062c"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-01-chat-incremental.safetensors",
+          "bytes": 8508592,
+          "sha256": "0672ab25647a467f53ff8fdddabd645bfbd203823d45b4cbf6a05c0aaa5bd150"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-01-chat-native.safetensors",
+          "bytes": 8508592,
+          "sha256": "1ee70a60b644eb931f1be89d6c17bb3f1720bf4a81c53d19075207219e0d8adc"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-01-chat-packed.safetensors",
+          "bytes": 8508592,
+          "sha256": "aa41ba91a32a4e9ba8babb9a794d6418abf9afeb525a868f802ab2365d4fd441"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-02-chat-incremental.safetensors",
+          "bytes": 14586032,
+          "sha256": "95a22dc014b3e59439919d27d1147e8c38bf146b8c5d380ed36666bcca4817ce"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-02-chat-native.safetensors",
+          "bytes": 14586032,
+          "sha256": "882423d2e85656128735337a6a0446832d819cfbfea95e0fc3a8843f2b7a87b9"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-02-chat-packed.safetensors",
+          "bytes": 14586032,
+          "sha256": "6a615e8c15cf6f1f771fbd698ad08b7031bc49741a741502d58b2d8854a8c029"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-03-chat-incremental.safetensors",
+          "bytes": 7293104,
+          "sha256": "e9023155151fab7266aa970f3e7e3eeb9bc9f429bfa38996c5c32a68e4bc0202"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-03-chat-native.safetensors",
+          "bytes": 7293104,
+          "sha256": "7f556033858aec086fd59d84e375c06af70e876ee1eae9b0edae8e6ad9dcc357"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-03-chat-packed.safetensors",
+          "bytes": 7293104,
+          "sha256": "9da0b458a69140d9f3909a1a0e4cf325ea5684ad551296a78ef1847070c07327"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-04-chat-incremental.safetensors",
+          "bytes": 2431152,
+          "sha256": "8ab5caa4329c89308742390668672228c0441d6c047ce6d64c332994c7024972"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-04-chat-native.safetensors",
+          "bytes": 2431152,
+          "sha256": "1d351b1331ee13657649de5a323743251fadfeb493406132e3cd3af6bfe4115a"
+        },
+        {
+          "file": "tensors/fresh-topic_changes-04-chat-packed.safetensors",
+          "bytes": 2431152,
+          "sha256": "20d0e9b208051cdd34cbb6b3effc44a40f31b7eb7c60a836a843a9a25e705d73"
+        },
+        {
+          "file": "tensors/switch-copy-01-chat-incremental.safetensors",
+          "bytes": 8508592,
+          "sha256": "170fc72a507af47497171a5c6f37fb92f967547dac2f37d1ff0b2374aeff110f"
+        },
+        {
+          "file": "tensors/switch-copy-01-chat-native.safetensors",
+          "bytes": 8508592,
+          "sha256": "6c2777b76df1f2cb4a735b261700b31248457e497b3f01ad4320fc15cfa240cf"
+        },
+        {
+          "file": "tensors/switch-copy-01-chat-packed.safetensors",
+          "bytes": 8508592,
+          "sha256": "a90ec32a5bd1d73200de8fca89ceeb8c84115dd699230c10dfd55f2c7f0ee0fb"
+        },
+        {
+          "file": "tensors/switch-copy-01-plain-incremental.safetensors",
+          "bytes": 9724080,
+          "sha256": "f9e65bbd057f474c4ba671686b51e74db49f0ad8047824127ada29ddf2ec6318"
+        },
+        {
+          "file": "tensors/switch-copy-01-plain-native.safetensors",
+          "bytes": 9724080,
+          "sha256": "33287a5cb08f1df99ad7a2806002ab194cc1b7836524d550557912477c8ba0f0"
+        },
+        {
+          "file": "tensors/switch-copy-01-plain-packed.safetensors",
+          "bytes": 9724080,
+          "sha256": "18fa607544b8bd7c8aab9fcb0708c50ffe858b96e6e74b2a2c13512e5cfe8746"
+        },
+        {
+          "file": "tensors/switch-extract-02-chat-incremental.safetensors",
+          "bytes": 18232496,
+          "sha256": "84211fb914b5e870616bbb8981c0d1e1bb8f09d7bb6a08e5dce07477f4817853"
+        },
+        {
+          "file": "tensors/switch-extract-02-chat-native.safetensors",
+          "bytes": 18232496,
+          "sha256": "a7b7baef86cb59ac50df32fa6a1c371050d9c435c9c9905de264adb500627c22"
+        },
+        {
+          "file": "tensors/switch-extract-02-chat-packed.safetensors",
+          "bytes": 18232496,
+          "sha256": "2192aae407993b1df51c03cbc6b2c7699a931858c680c7d48ca9b19e18b56935"
+        },
+        {
+          "file": "tensors/switch-extract-02-plain-incremental.safetensors",
+          "bytes": 77791408,
+          "sha256": "57d51465a8976bcb1560a1113dd52ce475146ada9c9c27fc8f0768f21db0a83a"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.11.0/dense-interface-part2-v0.11.0.zip"
+    },
+    {
+      "name": "dense-interface-part3-v0.11.0.zip",
+      "bytes": 142309657,
+      "sha256": "68f3d9b02aa7ffa2e463fcb2c1d9fb2e212fad4daaf5a774e6d792cb60c1fdd9",
+      "payloads": [
+        {
+          "file": "tensors/switch-extract-02-plain-native.safetensors",
+          "bytes": 77791408,
+          "sha256": "837c45579adf0637163226925dcaa310432a54f193984882d44ac5593461687e"
+        },
+        {
+          "file": "tensors/switch-extract-02-plain-packed.safetensors",
+          "bytes": 77791408,
+          "sha256": "8d5983f7a7ec8e2bf3662b8de7fe694f0b52892d73a5f4ae8f53d80f5a25ab1e"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.11.0/dense-interface-part3-v0.11.0.zip"
+    }
+  ],
+  "files": {
+    "analysis/summary.json": {
+      "bytes": 2815,
+      "sha256": "037253e92b240853ec6049ff3e09ed6358074cc5407e168506bb2a344a837751"
+    },
+    "analysis/verification.json": {
+      "bytes": 110,
+      "sha256": "1704e264cad518f0af2464733a0690ddd59b7c7691dd9ad6f67b21ba88b53b27"
+    },
+    "restore.py": {
+      "bytes": 2213,
+      "sha256": "f6eda1494f6f30499b0adc0ac2caaaba94a8162b9d007832c038882ff7957c0f"
+    },
+    "run/config.json": {
+      "bytes": 2022,
+      "sha256": "761faba026c9800fbad1f8d8567ee2be25ca05cd5d9c4f5cdb95c2f36f3c5f98"
+    },
+    "run/data/dense-interface-debug.jsonl": {
+      "bytes": 2147,
+      "sha256": "18d4cc731ca6b5a3a7a5bbdcc3b688ac242ac453a70eb764e94138dd3152e6a4"
+    },
+    "run/data/dense-interface-fresh.jsonl": {
+      "bytes": 3786,
+      "sha256": "5af12791c9b79b96bc0edcd2f9036006c94c7cc1ef49ea0d09a617735e98c4d1"
+    },
+    "run/manifest.json": {
+      "bytes": 4336,
+      "sha256": "45ccbc927dc48b0f5fe052fd321654f051ac7f05bbca32e65d11c19a77e71adb"
+    },
+    "run/model.json": {
+      "bytes": 5626,
+      "sha256": "8ab0292f4a61a5f8de3ff05997dbe398ff6d2c456a33c625a031f83076f6dc4f"
+    },
+    "run/protocol.md": {
+      "bytes": 4626,
+      "sha256": "ef5f24a0e960b5f70fb5ecb64a252af6e22cece9d507fa1dbe61c20f935d0532"
+    },
+    "run/results.jsonl": {
+      "bytes": 222033,
+      "sha256": "9716a3e1f4d375bf271fb261d35041c031e1d2bd3b13c9854447eeaf6256a0f4"
+    },
+    "run/source/__init__.py": {
+      "bytes": 73,
+      "sha256": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738"
+    },
+    "run/source/adapters.py": {
+      "bytes": 1295,
+      "sha256": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc"
+    },
+    "run/source/analysis.py": {
+      "bytes": 4537,
+      "sha256": "ba578312bb18e3af8104fd50f6bcf30a02d887fcf6224b4bb56434f5fb1fb086"
+    },
+    "run/source/balanced_analysis.py": {
+      "bytes": 15521,
+      "sha256": "a52abceea0ed590b36680752648beedd2f1505a059a6ce7c6a0b9dede755a5d1"
+    },
+    "run/source/balanced_control.py": {
+      "bytes": 18612,
+      "sha256": "dea4a415b426c2bb8fc2a2c4adebab155f1982e60c5a11612fa747856747e965"
+    },
+    "run/source/cache.py": {
+      "bytes": 7027,
+      "sha256": "b8de5501e47e2b357f46309306b9277ccd4be953e239c19c9ad5b4b363221298"
+    },
+    "run/source/cache_analysis.py": {
+      "bytes": 12104,
+      "sha256": "bdbb3b28320319c2a89bcf4b513cfc32ef5795450f38f7558f19d7da137c6f57"
+    },
+    "run/source/cache_plot.py": {
+      "bytes": 3173,
+      "sha256": "dde8ac19e88b4de730d8c76efc0b4268d61135e12b47c540ef05e8baa9023a74"
+    },
+    "run/source/causal.py": {
+      "bytes": 7973,
+      "sha256": "fd2c7e00a53bef988574122c9ac31a31d6b56ec043cbb87d59741052b76c943a"
+    },
+    "run/source/causal_analysis.py": {
+      "bytes": 16877,
+      "sha256": "ead048becec0229e0e16a80141f2db9e634d8a5198b08ff04a1b4d40681264c9"
+    },
+    "run/source/causal_plot.py": {
+      "bytes": 4705,
+      "sha256": "18de19d95a2c35b33951e9fb76f318ed461782e873181babee088f0f295a03c9"
+    },
+    "run/source/causal_study.py": {
+      "bytes": 20353,
+      "sha256": "32bdea4f0c726db198c97063b1b6a88a2d000c0866c766ef808cfe74ce3c0b12"
+    },
+    "run/source/corpus.py": {
+      "bytes": 5245,
+      "sha256": "127735e3b9f13c040fc4fa99b5c38b4bb1d2f9c39205e38650211d3acc7d4567"
+    },
+    "run/source/dense_interface.py": {
+      "bytes": 20247,
+      "sha256": "3a1bb926d56a428f7ca4706d892a68b035cacc5effaa76f7292d0ec96325bb86"
+    },
+    "run/source/environment_analysis.py": {
+      "bytes": 9147,
+      "sha256": "66a45022834e01fe5ba0995cad7782aecba9db6dce54533d968e3e99f4e1a94e"
+    },
+    "run/source/experiment.py": {
+      "bytes": 25825,
+      "sha256": "5fc3881995fb2318f954167971c3c4790b2b7c78470d02272f2dfa62cfcefe84"
+    },
+    "run/source/ffn.py": {
+      "bytes": 6451,
+      "sha256": "4bc70ad070e0a68d5d7da7b34b5832d9a65a2a7f21d426ade988a63363e4da43"
+    },
+    "run/source/hardware_analysis.py": {
+      "bytes": 6478,
+      "sha256": "20aa86c4614229361095c8d31dff4bb4c08ade7834556d4f562cf23a1fadd395"
+    },
+    "run/source/hardware_cost.py": {
+      "bytes": 10511,
+      "sha256": "027e9195914b0a56d6ce0ba3fa2ef0c56d0995a2af80d770189d045b57c04d9b"
+    },
+    "run/source/layer_plot.py": {
+      "bytes": 5258,
+      "sha256": "eb9221c88e808700df2898aa69ea1f47f24220d93fba517d2ce4b4323220b651"
+    },
+    "run/source/layer_study.py": {
+      "bytes": 16906,
+      "sha256": "cb5d76f0f9645d0c97b194f0cc2c87c9a7156eeedf638ec91e033652bfc5eef6"
+    },
+    "run/source/metrics.py": {
+      "bytes": 3471,
+      "sha256": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53"
+    },
+    "run/source/packing.py": {
+      "bytes": 3910,
+      "sha256": "b13c919d54ebc7e97669ee454a37b09732b3faa5cb78f697ee6a3a9f6297fe46"
+    },
+    "run/source/precision.py": {
+      "bytes": 11271,
+      "sha256": "7ecd06ede79e646a50e116e72a143af3a7e7e14e578c80f85ee28e8462926b45"
+    },
+    "run/source/provenance.py": {
+      "bytes": 3666,
+      "sha256": "7a49031df1c6caa87c8c7cebba1d2005e62e77cedf78eb39b00e30c8b1ea8082"
+    },
+    "run/source/relu.py": {
+      "bytes": 7151,
+      "sha256": "d0afe4f3c8cccbb496e5ccdfd6793f4ca79c1493bfdcaab31b756121d7add125"
+    },
+    "run/source/relu_analysis.py": {
+      "bytes": 15583,
+      "sha256": "69bcc87724c9faff444764d9f807a7ead527f691ab7448580d7d8e55a3a5c8cf"
+    },
+    "run/source/relu_study.py": {
+      "bytes": 12733,
+      "sha256": "8b6efdcf1686bef37790e8d69559983b447f63489e804ac88a7684bc119d0a1a"
+    },
+    "run/source/repair.py": {
+      "bytes": 7119,
+      "sha256": "112074a192678c3f6748b57af416458abdab126470126a2f6069204b4546e24a"
+    },
+    "run/source/repair_analysis.py": {
+      "bytes": 13899,
+      "sha256": "24c396b0d4502941be8deb06ceb49b0986186fb05292147c4548e3611eb9c839"
+    },
+    "run/source/repair_plot.py": {
+      "bytes": 3623,
+      "sha256": "1f3ab5d91fad1ff9fcb94d8b331912d0b8a68dd0863a353193b2a6ae4d32e03e"
+    },
+    "run/source/repair_study.py": {
+      "bytes": 19153,
+      "sha256": "a56f9692d5a58e928093c5eabcdbc727a90a8ac4c4c5dce67c348ba7bc2b6b21"
+    },
+    "run/source/trace.py": {
+      "bytes": 3533,
+      "sha256": "02845555dec8869447dd32e3af63fd466b5cc792e3173d75416d4e1652490fda"
+    },
+    "run/summary.json": {
+      "bytes": 2815,
+      "sha256": "037253e92b240853ec6049ff3e09ed6358074cc5407e168506bb2a344a837751"
+    },
+    "run-console.log": {
+      "bytes": 13965,
+      "sha256": "098c6bed68805aff2ed338382ef1bd45e41c0a891b90fa47e765106e2981530b"
+    }
+  }
+}
