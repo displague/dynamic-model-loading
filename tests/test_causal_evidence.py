@@ -9,7 +9,7 @@ from torch.nn import functional as F
 from dynamic_model_loading.adapters import FFNView
 from dynamic_model_loading import causal_evidence as ce
 from dynamic_model_loading.causal_evidence_cost import rounded_cost,action_cost
-from dynamic_model_loading.causal_evidence_analysis import generation_alignment,verify_trace
+from dynamic_model_loading.causal_evidence_analysis import generation_alignment,verify_logit_shape,verify_trace
 from dynamic_model_loading import causal_evidence_study as study
 
 
@@ -146,3 +146,13 @@ def test_matching_tokens_do_not_hide_changed_generation_logits():
         generation_alignment(reference,own,reference.clone(),[1],[1])
     result=generation_alignment(reference,own,own.clone(),[1],[1])
     assert result['relative_l2']>.01 and result['mean_kl']>.001
+
+
+def test_logit_shapes_follow_pinned_vocabulary_not_an_architecture_guess():
+    config={'vocab_size':151936}
+    verify_logit_shape(torch.zeros(1,2,151936),(1,2),config)
+    verify_logit_shape(torch.zeros(3,151936),(3,),config)
+    with pytest.raises(ValueError,match='pinned model'):
+        verify_logit_shape(torch.zeros(1,2,152064),(1,2),config)
+    with pytest.raises(ValueError,match='dtype'):
+        verify_logit_shape(torch.zeros(3,151936,dtype=torch.float64),(3,),config)

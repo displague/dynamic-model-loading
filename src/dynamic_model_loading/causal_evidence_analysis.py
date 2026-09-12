@@ -39,6 +39,11 @@ def generation_alignment(reference,own,aligned,generated,reference_ids):
     return aligned_metrics(reference,aligned)
 
 
+def verify_logit_shape(logits,leading_shape,model_config):
+    if logits.shape!=(*leading_shape,model_config['vocab_size']) or logits.dtype!=torch.float32:
+        raise ValueError('Logit dimensions or dtype differ from pinned model configuration')
+
+
 def verify_trace(data,parent,models,mode,extra,visits):
     expected_shapes={'x':(visits,28,1536),'input_projection':(visits,28,8),
         'observed':(visits,28,1120),'initial':(visits,28,1120),'additions':(visits,28,1120),
@@ -120,6 +125,7 @@ def analyze(run_path,cost_path,output_path):
     catalog={p.name:digest(p) for p in checkpoint.iterdir() if p.is_file()}
     same(catalog,read(run/'model.json')['checkpoint_files'],'checkpoint receipt')
     same(catalog,read(root/cfg['model']['parent']/'manifest.json')['checkpoint_files'],'pinned checkpoint')
+    model_config=read(checkpoint/'config.json')
     tokenizer=AutoTokenizer.from_pretrained(checkpoint,local_files_only=True,trust_remote_code=False)
     config=decoding(checkpoint);same(config.to_dict(),read(run/'model.json')['generation_config'],'decoding')
     eos=config.eos_token_id if isinstance(config.eos_token_id,list) else [config.eos_token_id]
@@ -154,7 +160,7 @@ def analyze(run_path,cost_path,output_path):
             answer=tokenizer(task['answer'],add_special_tokens=False,return_tensors='pt')['input_ids']
             ids=torch.cat((prompt,answer),1)
         else:ids=parent['ids'][name]
-        if value['logits'].shape!=(1,ids.shape[1],152064):raise ValueError('Logit dimensions mismatch')
+        verify_logit_shape(value['logits'],(1,ids.shape[1]),model_config)
         if kind.startswith('native_'):
             native[name]=row
             if not torch.isfinite(value['logits']).all():raise ValueError('Invalid native reference')
@@ -184,7 +190,7 @@ def analyze(run_path,cost_path,output_path):
             if kind=='task':same(row['answer_quality'],quality_metrics(ref[:,prompt.shape[1]-1:],value['logits'][:,prompt.shape[1]-1:],ids[:,prompt.shape[1]-1:]),'answer quality')
         if is_task:
             generated=row['token_ids'];gen=value['generation_logits']
-            if gen.shape!=(len(generated),152064) or gen.dtype!=torch.float32:raise ValueError('Generated-logit shape mismatch')
+            verify_logit_shape(gen,(len(generated),),model_config)
             if not 1<=len(generated)<=64 or any(t in eos for t in generated[:-1]) or (len(generated)<64 and generated[-1] not in eos):raise ValueError('Invalid EOS stop')
             same(generated,gen.argmax(-1).tolist(),'greedy generation')
             generation=row['generation'];same(len(generation['calls']),prompt.shape[1]+len(generated)-1,'generation calls')
@@ -276,7 +282,7 @@ def analyze(run_path,cost_path,output_path):
                 limitation='Serialized synthetic primitive sensitivity is not exposed runtime latency; broader held-out gates remain open.')
     output=Path(output_path);output.mkdir(parents=True,exist_ok=False);write_json(output/'summary.json',result)
     write_json(output/'verification.json',{'source_commit':manifest['source_commit'],'results_sha256':digest(run/'results.jsonl'),
-        'timing_results_sha256':digest(cost/'results.jsonl'),'status':'verified'})
+        'timing_results_sha256':digest(cost/'results.jsonl'),'analysis_source_sha256':digest(Path(__file__)),'status':'verified'})
     return result
 
 
