@@ -55,13 +55,30 @@ def replay_plan(analysis, selection):
     return groups
 
 
-def execute(group, args, out, checked, head):
+def replay_ports(groups, first):
+    if not 1 <= first <= 65535 or first+len(groups)-1 > 65535:
+        raise ValueError('diagnostic port range must stay within 1..65535')
+    return {label: first+index for index, label in enumerate(groups)}
+
+
+def check_port(port, out):
+    try:
+        with socket.socket() as probe:
+            probe.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+            probe.bind(('127.0.0.1', port))
+    except OSError as exc:
+        bench.write_json(out/'failure.json', {'type': type(exc).__name__, 'message': str(exc),
+                                              'phase': 'port-probe', 'port': port})
+        raise
+
+
+def execute(group, args, out, checked, head, port):
     out.mkdir(exist_ok=False)
     config = group['configuration']
     draft = config['draft']
     command = bench.server_command(args.binary/'llama-server.exe', checked['target'][0],
                                     checked[draft][0] if draft else None,
-                                    config['ngl'], config['threads'], config['k'], args.port)
+                                    config['ngl'], config['threads'], config['k'], port)
     bench.write_json(out/'manifest.json', {'head': head, 'configuration': config, 'command': command,
                                           'analysis_sha256': bench.digest(args.analysis),
                                           'measurement_head': read(args.analysis)['source'],
@@ -69,10 +86,8 @@ def execute(group, args, out, checked, head):
                                           'mode': 'untimed-common-prefix-replay', 'cases': group['cases']})
     environment = {k: v for k, v in os.environ.items() if not k.startswith(('LLAMA_', 'GGML_', 'CUDA_'))}
     environment['LLAMA_TRACE'] = '1'
-    base = f'http://127.0.0.1:{args.port}'
-    with socket.socket() as probe:
-        probe.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
-        probe.bind(('127.0.0.1', args.port))
+    base = f'http://127.0.0.1:{port}'
+    check_port(port, out)
     begin = time.perf_counter()
     with (out/'server.log').open('xb') as log, bench.managed_process(
             command, stdout=log, stderr=subprocess.STDOUT, env=environment, cwd=args.binary) as proc:
@@ -136,6 +151,7 @@ def main():
     if analysis['source'] != selection['source'] or analysis['schedule_sha256'] != bench.digest(args.evaluation/'schedule.json'):
         raise ValueError('analysis and measurement provenance differ')
     groups = replay_plan(analysis, selection)
+    ports = replay_ports(groups, args.port)
     catalogue = read(root/'configs/stock-speculation-artifacts.json')
     reference_manifest = read(args.evaluation/'reference-sustained/manifest.json')
     if bench.digest(root/'configs/stock-speculation-artifacts.json') != reference_manifest['catalog_sha256']:
@@ -144,9 +160,10 @@ def main():
     checked = bench.verify_catalog(catalogue, args.models, args.binary, keys)
     args.output.mkdir(exist_ok=False)
     bench.write_json(args.output/'plan.json', groups)
+    bench.write_json(args.output/'ports.json', ports)
     for label, group in groups.items():
         print('REPLAY', label, len(group['cases']), flush=True)
-        execute(group, args, args.output/label, checked, head)
+        execute(group, args, args.output/label, checked, head, ports[label])
     bench.write_json(args.output/'complete.json', {'groups': len(groups)})
 
 

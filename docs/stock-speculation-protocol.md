@@ -203,6 +203,22 @@ small diagnostic reservoirs. Do not spill full vocabulary logits by default or
 claim exact KL from top-k records. No stochastic distribution-preservation result
 is claimed by a greedy test.
 
+## Diagnostic port amendment after the frozen evaluation
+
+The first common-prefix diagnostic completed its eleven baseline-prefix requests,
+then the next model setup failed its exclusive bind of the same local port with
+Windows error 10048. Both the completed prefix responses and the failed attempt's
+manifest/log are preserved. No process remained listening when inspected afterward;
+the bind error does not establish a model or numerical failure.
+
+The corrected diagnostic assigns each sequential model setup a distinct local port
+and records the port map. A bind failure receives its own failure receipt and stops
+the diagnostic. Model artifacts, prefix plan, greedy decoding, one-token cap and
+top-ten probability request remain unchanged. The fresh run executes the original
+58 planned prefix/configuration cases. Its eleven baseline cases are also compared
+with the retained first attempt as a replication check. Neither attempt changes or
+replaces any timed evaluation request, output-fidelity comparison or resource gate.
+
 ## Analysis and decision
 
 Publish all cases, failures and resource exclusions. Compute aggregate committed

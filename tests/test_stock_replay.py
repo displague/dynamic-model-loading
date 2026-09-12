@@ -1,6 +1,8 @@
 import importlib.util
 from pathlib import Path
 import sys
+import json
+import socket
 from types import SimpleNamespace
 
 import pytest
@@ -49,3 +51,25 @@ def test_changed_candidate_or_reference_receipt_rejects_stale_analysis(tmp_path)
         with pytest.raises(ValueError, match='receipt changed'):
             replay.validate_analysis_receipts(data, tmp_path)
         (tmp_path/name).write_text('original', encoding='utf-8')
+
+
+def test_diagnostic_groups_never_reuse_a_port_or_wrap_the_range():
+    groups = dict.fromkeys(['target', 'matched', 'draft'])
+    ports = replay.replay_ports(groups, 65533)
+    assert list(ports) == list(groups)
+    assert len(set(ports.values())) == len(groups)
+    assert min(ports.values()) == 65533 and max(ports.values()) == 65535
+    for first in [0, -1, 65534, 65536]:
+        with pytest.raises(ValueError, match='port range'):
+            replay.replay_ports(groups, first)
+
+
+def test_occupied_port_preserves_failure_receipt(tmp_path):
+    with socket.socket() as held:
+        held.setsockopt(socket.SOL_SOCKET, socket.SO_EXCLUSIVEADDRUSE, 1)
+        held.bind(('127.0.0.1', 0))
+        port = held.getsockname()[1]
+        with pytest.raises(OSError):
+            replay.check_port(port, tmp_path)
+    receipt = json.loads((tmp_path/'failure.json').read_text())
+    assert receipt['phase'] == 'port-probe' and receipt['port'] == port
