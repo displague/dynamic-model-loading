@@ -226,3 +226,8 @@ flowchart TD
 Gate A failure blocks qualified utility claims without cancelling analytical repair.
 Passing the synthetic cost screen would justify an experiment, not an achieved
 runtime gain. At v0.12 no policy satisfies the combined B/C gate.
+
+
+## Existing operation-offload setting after v0.14
+
+The next bounded experiment is [stock verification operation offload](verification-offload-protocol.md): explicit fresh-process thresholds, fixed placement controls, backend assignment evidence, and a populated 16K/q8_0-KV sensitivity study. Numerical/state fidelity #27 proceeds separately; it does not block measuring the existing scheduling knob. Counter consistency is not independent argmax/KV proof. Draft representations #25 remain deferred and adaptive control #26 depends on the measured draft-length/backend frontier. No new runtime or model download is required.
