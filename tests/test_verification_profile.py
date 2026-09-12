@@ -2,9 +2,12 @@ import json
 from pathlib import Path
 import sqlite3
 import sys
+import psutil
+import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 from analyze_verification_profile import analyze
+from profile_verification import finish_owned_target
 
 
 def test_cuda_bytes_are_windowed_and_boundary_copies_are_explicit(tmp_path):
@@ -47,3 +50,24 @@ def test_export_without_cuda_activity_is_not_zero_work(tmp_path):
     result = analyze(tmp_path)
     assert not result['cuda_capture_verified']
     assert 'missing' in result['reason']
+
+
+def test_owned_target_exit_between_wait_and_terminate_is_successful_cleanup():
+    class Target:
+        pid = 123
+        def wait(self, timeout):
+            raise psutil.TimeoutExpired(timeout, pid=self.pid)
+        def terminate(self):
+            raise psutil.NoSuchProcess(self.pid)
+    assert finish_owned_target(Target())['mode'] == 'verified_target_exited_during_cleanup'
+
+
+def test_other_owned_target_cleanup_errors_remain_failures():
+    class Target:
+        pid = 123
+        def wait(self, timeout):
+            raise psutil.TimeoutExpired(timeout, pid=self.pid)
+        def terminate(self):
+            raise psutil.AccessDenied(self.pid)
+    with pytest.raises(psutil.AccessDenied):
+        finish_owned_target(Target())

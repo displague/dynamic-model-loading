@@ -16,6 +16,24 @@ import stock_benchmark as stock
 import verification_offload as study
 
 
+def finish_owned_target(target):
+    """Finish the process object already verified as our descendant at startup."""
+    cleanup = {'target_pid': target.pid}
+    try:
+        target.wait(timeout=2)
+        cleanup['mode'] = 'exited_after_session_shutdown'
+    except psutil.NoSuchProcess:
+        cleanup['mode'] = 'verified_target_already_gone'
+    except psutil.TimeoutExpired:
+        try:
+            target.terminate()
+            cleanup['target_exit_code'] = target.wait(timeout=20)
+            cleanup['mode'] = 'terminated_verified_owned_descendant_after_export'
+        except psutil.NoSuchProcess:
+            cleanup['mode'] = 'verified_target_exited_during_cleanup'
+    return cleanup
+
+
 def _run(args):
     root = Path(__file__).resolve().parents[1]
     cfg = study.configuration('short', args.condition)
@@ -37,6 +55,8 @@ def _run(args):
     out.mkdir(parents=True, exist_ok=False)
     session = 'dml-' + args.condition + '-' + datetime.now(timezone.utc).strftime('%Y%m%d%H%M%S')
     child = study.command(args.binary, checked, cfg, args.port)
+    native_log = out/'native-server.log'
+    child += ['--log-file', str(native_log)]
     # Profiling is a separate diagnostic. INFO/TRACE logging preserves ordinary
     # acceptance events without scheduler dumps or extra debug acceptance messages.
     command = [str(args.profiler), 'profile', '--sample=none', '--cpuctxsw=none',
@@ -93,7 +113,7 @@ def _run(args):
                     for key in ('calibration-explanation', 'code-cache'):
                         entry = frozen[key]
                         payload = stock.completion_payload(entry['tokens'], 32)
-                        log_begin = (out/'profiler-server.log').stat().st_size
+                        log_begin = native_log.stat().st_size
                         begin_unix_ns = time.time_ns()
                         begin_counter_ns = time.perf_counter_ns()
                         response = stock.request(base, '/completion', payload, timeout=600,
@@ -102,7 +122,7 @@ def _run(args):
                         end_unix_ns = time.time_ns()
                         stock.write_json(out/f'response-{key}.json', response)
                         time.sleep(0.05)
-                        with (out/'profiler-server.log').open('rb') as source:
+                        with native_log.open('rb') as source:
                             source.seek(log_begin)
                             segment = source.read().decode('utf-8', errors='replace')
                             log_end = source.tell()
@@ -139,8 +159,13 @@ def _run(args):
                         raise RuntimeError('profiler session did not shut down cleanly')
                 # Wait for SQLite export and process completion before reporting success.
                 proc.wait(timeout=120)
-                if target.is_running():
-                    raise RuntimeError('profiler left its owned target running')
+                # Nsight can acknowledge session shutdown before the target exits,
+                # or leave it running with --kill=false. Data export is complete;
+                # explicitly finish only the descendant verified at startup.
+                cleanup = finish_owned_target(target)
+                cleanup.update(profiler_exit_code=proc.returncode,
+                               phase='after successful requests and stop/export')
+                stock.write_json(out/'target-cleanup.json', cleanup)
                 files = list(out.glob('cuda-trace*'))
                 stock.write_json(out/'completion.json', {'profiler_exit_code': proc.returncode,
                                  'files': [{'name': p.name, 'bytes': p.stat().st_size,

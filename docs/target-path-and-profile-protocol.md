@@ -5,6 +5,23 @@ under ADR 0003 and issues #27/#28. Commit and push the fixture, harness and anal
 before these additional diagnostic requests. The short timing matrix already uses
 its frozen source at `3f44ac2`; no new diagnostic is inserted into those timings.
 
+### Prospective correction after the first profiler attempt
+
+The first threshold32 capture under `f884517` completed both HTTP requests and
+exported CUDA activities, then failed because the owned target still appeared
+running immediately after the profiler acknowledged shutdown. The kill-on-close
+job cleaned up the target. Nsight also did not forward native logs into the wrapper's
+redirected stream. Preserve that failed attempt and its partial CUDA evidence.
+
+Permit one corrected fresh pair, threshold32 then threshold8, with identical model,
+placement, thread, threshold and request settings. Route native logging explicitly
+through the stock `--log-file` option. After successful capture/export, wait for
+owned-target exit and, if needed, terminate the exact descendant verified at startup;
+record this intentional post-capture cleanup separately from profiler/request
+failure. This fixes apparatus lifecycle and logging, not a measured configuration.
+Do not rewrite the first attempt as a completed capture. No new runtime version or
+third capture series is included in this correction.
+
 ## CUDA-copy capture
 
 Use the installed Nsight Systems 2025.5.2 CLI on the unchanged stock b10919 server,
