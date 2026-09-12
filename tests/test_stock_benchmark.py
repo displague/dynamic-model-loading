@@ -55,6 +55,7 @@ def test_stock_command_uses_fixed_residency_and_maximum_draft():
     assert cmd[cmd.index('--spec-draft-ngl')+1]=='all'
     assert cmd[cmd.index('--spec-draft-n-max')+1]=='8'
     assert cmd[cmd.index('--fit')+1]=='off'
+    assert cmd[cmd.index('--verbosity')+1]=='4'  # Stock loader placement logs are trace-level.
     assert '--spec-synth-len' not in cmd and '--ignore-eos' not in cmd
 
 

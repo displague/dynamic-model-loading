@@ -238,7 +238,8 @@ def server_command(executable, target, draft, ngl, threads, k, port):
             '-ctk', 'f16', '-ctv', 'f16', '-ngl', str(ngl), '--fit', 'off',
             '--load-mode', 'mmap', '--lazy-mode', 'off', '--cache-ram', '0',
             '--no-context-shift', '-t', str(threads), '-tb', '24',
-            '--metrics', '--log-colors', 'off', '--log-timestamps', '--perf', '--device', 'CUDA0']
+            '--metrics', '--log-colors', 'off', '--log-timestamps', '--verbosity', '4',
+            '--perf', '--device', 'CUDA0']
     if draft:
         args += ['--spec-type', 'draft-simple', '-md', str(draft), '--spec-draft-ngl', 'all',
                  '--spec-draft-n-max', str(k), '--spec-draft-n-min', '0',

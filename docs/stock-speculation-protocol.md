@@ -24,6 +24,14 @@ an entirely GPU-resident model file. Explicit CUDA device arguments and parsed
 offload counts must confirm the requested placement; CPU backend fallback cannot
 qualify as a feasible GPU configuration.
 
+Startup correction (2026-09-12): the first attempt at source `2d4d7fc` loaded the
+target, then stopped with no generation requests because default verbosity 3
+suppressed the loader's offload records. In b10919, GGML info maps to trace level 4;
+`LLAMA_TRACE=1` alone does not raise that threshold. Explicit verbosity 4 now applies
+equally to all configurations. Preserve `runs/stock-calibration-20260912` as a
+zero-row harness failure and restart calibration in a fresh directory. This
+correction changes observable logging, not placement, workload or selection rules.
+
 ## Question and fixed substrate
 
 Does a draft with GPU-resident transformer/output layers improve committed-token throughput for an offloaded
@@ -126,7 +134,7 @@ storage-cold because the OS file cache is not forcibly evicted.
 
 ## Telemetry and correctness
 
-Set stock `LLAMA_TRACE=1`, timestamps and plain logs to retain each accepted/attempted
+Set stock `LLAMA_TRACE=1`, verbosity 4, timestamps and plain logs to retain each accepted/attempted
 draft count. Capture every HTTP request/response, return tokens, timings and metrics,
 server log ranges, resource samples and source/config/artifact fingerprints.
 Keep the same telemetry enabled in target-only and draft runs; its cost is included.
