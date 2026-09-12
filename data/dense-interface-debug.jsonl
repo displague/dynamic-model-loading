@@ -1,0 +1,10 @@
+{"id":"code-output-01","domain":"code","task":"What integer does this Python code print?\nvalues = [3, 8, 5, 2]\nprint(sum(x for x in values if x % 2 == 0))","answer":"10","syntax":"integer"}
+{"id":"code-fix-02","domain":"code","task":"A function should return the last item of a nonempty Python list named items. Which replacement is correct? Answer A, B or C.\nA: return items[len(items)]\nB: return items[-1]\nC: return items[0]","answer":"B","syntax":"choice"}
+{"id":"extract-id-01","domain":"extraction","task":"Extract only the user_id from this record:\n{\"request_id\": \"r-508\", \"user_id\": \"u-731\", \"status\": \"queued\"}","answer":"u-731","syntax":"identifier"}
+{"id":"extract-min-02","domain":"extraction","task":"Return only the name of the service with the smallest latency_ms:\n[{\"name\":\"birch\",\"latency_ms\":42},{\"name\":\"cedar\",\"latency_ms\":17},{\"name\":\"elm\",\"latency_ms\":29}]","answer":"cedar","syntax":"identifier"}
+{"id":"arithmetic-product-01","domain":"arithmetic","task":"Calculate 17 * 23. Return the integer result.","answer":"391","syntax":"integer"}
+{"id":"arithmetic-sequence-02","domain":"arithmetic","task":"Divide 680 by 8, then add 27. Return the integer result.","answer":"112","syntax":"integer"}
+{"id":"copy-case-01","domain":"copying","task":"Copy the following identifier exactly, preserving case and punctuation:\np7Q-4mX_29","answer":"p7Q-4mX_29","syntax":"identifier"}
+{"id":"copy-delimiters-02","domain":"copying","task":"Copy exactly the text between the opening and closing markers. Do not include the markers.\n<start>A1|b2|C3<end>","answer":"A1|b2|C3","syntax":"identifier"}
+{"id":"switch-copy-01","domain":"topic_changes","task":"Previous task, now finished: calculate 12 + 10.\nNew current task: copy BETA-903 exactly.\nAnswer only the new current task.","answer":"BETA-903","syntax":"identifier"}
+{"id":"switch-extract-02","domain":"topic_changes","task":"Previous task, now finished: explain how a Python dictionary works.\nNew current task: extract only code from {\"region\":\"west\",\"code\":\"K8\"}.\nAnswer only the new current task.","answer":"K8","syntax":"identifier"}

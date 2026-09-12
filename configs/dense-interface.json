@@ -1,0 +1,136 @@
+{
+  "protocol": "docs/dense-interface-protocol.md",
+  "model": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "parent": "results/causal-control-20260911/run",
+    "parent_hashes": {
+      "manifest.json": "cf26683c3bbfd9e3770fcc8b3cc374a5dc833b2f99e53abf973afd3c6a344b09",
+      "layouts.json.gz": "ab0c2657c4c183aab5ff4f6c03ef4c27c877a5a262893164ddfa71ff581558fa"
+    },
+    "shapes": [
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ]
+    ]
+  },
+  "corpora": {
+    "debug": {
+      "path": "data/dense-interface-debug.jsonl",
+      "sha256": "18d4cc731ca6b5a3a7a5bbdcc3b688ac242ac453a70eb764e94138dd3152e6a4"
+    },
+    "fresh": {
+      "path": "data/dense-interface-fresh.jsonl",
+      "sha256": "5af12791c9b79b96bc0edcd2f9036006c94c7cc1ef49ea0d09a617735e98c4d1"
+    }
+  }
+}

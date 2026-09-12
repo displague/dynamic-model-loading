@@ -162,6 +162,12 @@
       "url": "https://github.com/displague/dynamic-model-loading/issues/20",
       "title": "Run one small second-model control on separate balanced development tasks",
       "state": "closed"
+    },
+    "dense_interface": {
+      "number": 21,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/21",
+      "title": "Qualify the dense chat interface and fresh balanced task baseline",
+      "state": "open"
     }
   },
   "last_refreshed_utc": "2026-09-11T21:40:34.740199+00:00"
