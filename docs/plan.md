@@ -19,8 +19,8 @@ silently damage quality without causing a residency miss.
 | 1. Hindsight sparsity envelope | Individual-neuron and per-layer/multi-layer omission curves on whole-document and domain splits; useful sparsity survives unseen inputs. | Smoke, a 16-article Wikipedia slice, and 66 per-layer/joint conditions exist. Sensitivity is distributed on this slice. A separate ten-task balanced development control on Qwen and OPT is recorded in v0.10; multi-domain held-out quality remains open. |
 | 2. Physical packing and cache traces | Quality versus transferred bytes and transfer amplification at 256/512 MiB and 1/2 GiB FFN-cache budgets. | All 72 declared conditions and 1,152 traces completed. Popularity/width 8/90% retention is the only condition passing the prospective development screen; best warm traffic saving is 15.54% at 2 GiB. This is reused-data simulation; held-out quality and physical transfers remain open. |
 | 3. Causal prediction | Static hot-set, recency, EMA, and learned-selector quality/bytes/cost curves; savings pay for prediction, including approximate closed-loop inference. | The first frozen-point experiment is complete: all four causal selectors fail quality on all 16 articles. Aggregate relative PPL is 1.089204-1.158203; all meet the simulated traffic screen, but three adaptive selectors also fail cost. Incremental hindsight reaches 1.009318 and cannot qualify. Broader predictor curves and held-out feasibility remain open. |
-| 4. RAM-to-VRAM execution | Explicit bounded slots, pinned staging, actual skipped reads/computation; beat the strongest same-budget baseline after all costs. | Physical paging remains gated on a qualifying complete causal policy, which may include refinement. The v0.9 transfer/staging/grouped-execution characterization is complete; it is not a model pager or an end-to-end result. |
-| 5a. Analytical refinement feasibility | Determine whether failed initial selections admit economical repair, then whether a causal signal can request it; compare complete policies with larger initial subsets. | v0.8 completes the first fixed-mask diagnostic: five privileged repair settings pass aggregate quality/traffic on two reused prefixes, one also passes both individual quality lines. No larger one-shot setting passes both. Causal repair signals and the complete-policy gate remain open. |
+| 4. RAM-to-VRAM execution | Explicit bounded slots, pinned staging, actual skipped reads/computation; beat the strongest same-budget baseline after all costs. | Physical paging remains gated on a qualifying complete causal policy, which may include refinement. v0.9 primitive characterization and v0.12 exact-size complete-action costs are recorded; neither is a model pager or an end-to-end result. |
+| 5a. Analytical refinement feasibility | Determine whether failed initial selections admit economical repair, then whether a causal signal can request it; compare complete policies with larger initial subsets. | v0.8 completes the first fixed-mask diagnostic: five privileged repair settings pass aggregate quality/traffic on two reused prefixes, one also passes both individual quality lines. No larger one-shot setting passes both. v0.12 tests causal repair on its own corrected trajectories: aggregate quality improves at matched bytes, but the individual-prefix advantage and combined quality/economics gates fail. Complete-policy feasibility remains open. |
 | 5b. Refinement runtime | Preserve the FFN input, add acquired contributions before downstream commitment, and improve silent-failure risk versus total bytes/latency with bounded fallback. | Still gated on analytical feasibility of the complete causal policy and bounded execution. Define unsafe omission before scoring; local audit norms are not a validated detector. |
 
 The original longer-term milestone follows these stages: repeat on a 7B-class model
@@ -90,6 +90,9 @@ checks; an always-on service requires a runtime that benefits from persistent re
 | [v0.8.0](releases/v0.8.0.md) | Privileged and resident-first correction from failed initial masks | Five of 48 repair settings pass aggregate quality/traffic; one also passes both prefixes. None of 20 larger one-shot settings passes both. No causal or runtime nominee. |
 | [v0.9.0](releases/v0.9.0.md) | Synthetic transfer, staging, grouped FFN and ranking costs | All 36 primitive conditions pass integrity; full-layer wall transfer ranges from 3.207 ms preaggregated to 13.814 ms gathered, combined path 15.924 ms. No model runtime claim. |
 | [v0.10.0](releases/v0.10.0.md) | Separate balanced development tasks on Qwen and OPT | Ten fixed tasks cover five domains, with exact targets, answer-only metrics and retained generations. Model-specific numerical controls and every result are reported; no held-out or runtime nomination. |
+| [v0.11.0](releases/v0.11.0.md) | Dense chat-interface and path qualification | 7/10 debug, 12/20 fresh successes; all dense paths agree, but Gate A fails. |
+| [v0.12.0](releases/v0.12.0.md) | Own-trajectory causal repair and complete action costs | Partial evidence improves aggregate quality at matched bytes, but individual-prefix advantage and combined quality/economics gates fail. |
+
 
 No completed delivery establishes an inference speedup or achieved memory reduction.
 The stage milestones remain open where their full gates have not been met. The
@@ -144,3 +147,26 @@ frozen balanced Gate A. See [the results](dense-interface-results.md) and
 [the three-gate decision](adr/0002-qualified-utility-and-causal-evidence.md).
 The original v0.10 result is preserved. Analytical repair #19 continues under
 Gates B/C; useful balanced behavior and physical runtime remain separate open gates.
+
+## Complete causal-policy evidence after v0.12
+
+v0.12.0 / #22 completes the ten-policy own-trajectory diagnostic. At 28 additions, partial evidence gives relative PPL 1.089487, versus 1.112546 one-shot and 1.107101 predetermined; the individual-prefix advantage rule fails. No policy passes both completed quality and fully charged traffic/cost gates. All raw rows, task continuations and primitive timings are retained. Broader complete-policy feasibility and physical runtime remain open.
+
+See [all findings](causal-evidence-results.md) and [all curves and individual failures](causal-evidence-tables.md). Gate A remains independent; physical paging remains gated.
+
+The three-gate interpretation after ADR 0002 is:
+
+~~~mermaid
+flowchart TD
+    A[Dense interface and task qualification] --> U{Gate A passes?}
+    U -->|Yes| V[Qualified utility preservation evaluation]
+    U -->|No| W[New prospective baseline study]
+    B[Complete causal policy on its own trajectory] --> G{Gates B and C both pass?}
+    C[Fully charged acquisition actions] --> G
+    G -->|Yes| P[Bounded physical-runtime experiment]
+    G -->|No| N[Preserve result and formulate a new hypothesis]
+~~~
+
+Gate A failure blocks qualified utility claims without cancelling analytical repair.
+Passing the synthetic cost screen would justify an experiment, not an achieved
+runtime gain. At v0.12 no policy satisfies the combined B/C gate.

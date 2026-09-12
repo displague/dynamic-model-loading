@@ -1,0 +1,2421 @@
+{
+  "protocol_commit": "113d4bf2bef946bb1db4e09c9423b2cccf201723",
+  "assets": [
+    {
+      "name": "causal-evidence-part1-v0.12.0.zip",
+      "bytes": 897711310,
+      "sha256": "a334336c5902dc7b249cc3c5e39ced8b2491c8616474ebedd99bfd92eb8038ab",
+      "payloads": [
+        {
+          "file": "tensors/calibration-1-wikitext-train-850abe090d258c3c.safetensors",
+          "bytes": 39180680,
+          "sha256": "ed7140ac69a804bbeb5ccad0549f83bc7121536a2a426c7d297e292fffbc0172"
+        },
+        {
+          "file": "tensors/calibration-1-wikitext-train-86f97e1be8510bb0.safetensors",
+          "bytes": 39180680,
+          "sha256": "7b70ebcb5cd860ec1b950899133e3e1b7f568a3be73594c42e7e27bb74038e86"
+        },
+        {
+          "file": "tensors/calibration-1-wikitext-train-8e1c37980c3d3c28.safetensors",
+          "bytes": 39180680,
+          "sha256": "84b736363789bdd1de5c2fcd7f5dcde51cd89a4a5b79353e4943f749395af2ac"
+        },
+        {
+          "file": "tensors/calibration-1-wikitext-train-957b54c84eddb069.safetensors",
+          "bytes": 39180680,
+          "sha256": "9caa6028d0239b45a26f9f703c4009ed166dfef42a8065c2390cba1dbdc36789"
+        },
+        {
+          "file": "tensors/calibration-2-wikitext-train-850abe090d258c3c.safetensors",
+          "bytes": 39180680,
+          "sha256": "2ad943e8a9a5997062207ce5a2e3287b28d94414894524e6620cf079ae504813"
+        },
+        {
+          "file": "tensors/calibration-2-wikitext-train-86f97e1be8510bb0.safetensors",
+          "bytes": 39180680,
+          "sha256": "65c16a52f61f788d45b8ba0ad4f8c0db65f282c7fc4431c509b055393ff37da8"
+        },
+        {
+          "file": "tensors/calibration-2-wikitext-train-8e1c37980c3d3c28.safetensors",
+          "bytes": 39180680,
+          "sha256": "b2d5b01ff63d1e22002833daa88bbeda5ab3bf912e40353624a6c0268e48abf1"
+        },
+        {
+          "file": "tensors/calibration-2-wikitext-train-957b54c84eddb069.safetensors",
+          "bytes": 39180680,
+          "sha256": "db4add0be3ae3c034509f94b9aae657889ffcc600f141d1a11113a6e35c993c8"
+        },
+        {
+          "file": "tensors/calibration-trace-1-wikitext-train-850abe090d258c3c.safetensors",
+          "bytes": 79483472,
+          "sha256": "32541716ac7d7bce51b50b6c5a812ab49b5e6002ed847aac05146e01226cb77e"
+        },
+        {
+          "file": "tensors/calibration-trace-1-wikitext-train-86f97e1be8510bb0.safetensors",
+          "bytes": 79483472,
+          "sha256": "f23f7f34b4527d7c031766984bbb07ef16bb65711e563e0d38c0830e3c5fd629"
+        },
+        {
+          "file": "tensors/calibration-trace-1-wikitext-train-8e1c37980c3d3c28.safetensors",
+          "bytes": 79483472,
+          "sha256": "059cf5e79ee11494e8b36bd841862fb7227ba99e7b12b14009d3fc675ff235b0"
+        },
+        {
+          "file": "tensors/calibration-trace-1-wikitext-train-957b54c84eddb069.safetensors",
+          "bytes": 79483472,
+          "sha256": "861cc3d98988cbad0a1ae6441f7fca8b22b348371d4ccbd3582f172105a7d03f"
+        },
+        {
+          "file": "tensors/calibration-trace-2-wikitext-train-850abe090d258c3c.safetensors",
+          "bytes": 79483472,
+          "sha256": "8709f9fe5531312d149f24086073d711a6e341e2f0ecfb9af89947e278fccaa2"
+        },
+        {
+          "file": "tensors/calibration-trace-2-wikitext-train-86f97e1be8510bb0.safetensors",
+          "bytes": 79483472,
+          "sha256": "0ce78271a56b6e75aad19879486010f9d18d4740e7ef14149f5a339a0f8db192"
+        },
+        {
+          "file": "tensors/calibration-trace-2-wikitext-train-8e1c37980c3d3c28.safetensors",
+          "bytes": 79483472,
+          "sha256": "285bf61461500de8459f501b014eaf27b3260f9a877f8accfd0e489744214f40"
+        },
+        {
+          "file": "tensors/calibration-trace-2-wikitext-train-957b54c84eddb069.safetensors",
+          "bytes": 79483472,
+          "sha256": "f76653fb67b89db66d993d61f0476cc40d58bf195f2a3253eb3602be1de9d224"
+        },
+        {
+          "file": "tensors/completion-fresh-arithmetic-01.safetensors",
+          "bytes": 40111376,
+          "sha256": "36ad7c57e3f03beb3f72d74114a7b5fe434b0a70e305f411824d6dbd0b39558d"
+        },
+        {
+          "file": "tensors/completion-fresh-arithmetic-02.safetensors",
+          "bytes": 42542352,
+          "sha256": "54bb1878c19292ed58f4d65dd20e4871f7719484d7d6151c2df8a3ddde66af9f"
+        },
+        {
+          "file": "tensors/completion-fresh-arithmetic-03.safetensors",
+          "bytes": 38895888,
+          "sha256": "bcb640dd190c11e60f5d1e71749b6c0e6d32e1f35c22d4d1cc8ccda5705a4f77"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part1-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part2-v0.12.0.zip",
+      "bytes": 919603358,
+      "sha256": "d2382bec3b9d38018b488f496664dc62a43d490e1b7900c12eb83c959d867c0b",
+      "payloads": [
+        {
+          "file": "tensors/completion-fresh-arithmetic-04.safetensors",
+          "bytes": 41934608,
+          "sha256": "bb7fbe1eb49697c2ebaf45a0c18be4bbddd372d9c941099900ebdf67949c8767"
+        },
+        {
+          "file": "tensors/completion-fresh-code-01.safetensors",
+          "bytes": 51658512,
+          "sha256": "a3f5493418ba0ff147ca2971c93bf5986ea9357769233d4b7d56b16fa3fb9937"
+        },
+        {
+          "file": "tensors/completion-fresh-code-02.safetensors",
+          "bytes": 44973328,
+          "sha256": "264b4de959cc4f4676f0da37bbec47af7566e95d48618f8a0ed31271f03aaeeb"
+        },
+        {
+          "file": "tensors/completion-fresh-code-03.safetensors",
+          "bytes": 53481744,
+          "sha256": "08b703adc56ca8d53437ac88624fd38ca290f83d6f0600d4d8a255ab50cd2a99"
+        },
+        {
+          "file": "tensors/completion-fresh-code-04.safetensors",
+          "bytes": 47404304,
+          "sha256": "d012c43e036c20bdceaf34368e17fb91cdaadfda66367d8c369d62ca01482db5"
+        },
+        {
+          "file": "tensors/completion-fresh-copying-01.safetensors",
+          "bytes": 55304976,
+          "sha256": "f91b2982d68a7106b7cdccaabdf9e8bc54dca3f9b7057c10ee070ea7e8b2417e"
+        },
+        {
+          "file": "tensors/completion-fresh-copying-02.safetensors",
+          "bytes": 46188816,
+          "sha256": "88f7860e339f8b80ef3e12fd74f015a788b7ea15968ae3647f9af2a435f9e43f"
+        },
+        {
+          "file": "tensors/completion-fresh-copying-03.safetensors",
+          "bytes": 46188816,
+          "sha256": "5be3c68eeb871e8f4a48fdaf5de43216bd491e2555dd7016c9ce7104bfe9b1a2"
+        },
+        {
+          "file": "tensors/completion-fresh-copying-04.safetensors",
+          "bytes": 52266256,
+          "sha256": "7c51c25ea264d26ae9e47fa50129f0f3236b7efb9813ac75727dafe3b0f684b6"
+        },
+        {
+          "file": "tensors/completion-fresh-extraction-01.safetensors",
+          "bytes": 52874000,
+          "sha256": "d9aaa09695c508ba6116832c8a7370f27e57b187856e801e9c0bc94300a8e20a"
+        },
+        {
+          "file": "tensors/completion-fresh-extraction-02.safetensors",
+          "bytes": 51658512,
+          "sha256": "f58ed26305666d685d2ac303bb481c92462659af4e38bf46d9ceea6d13db4db4"
+        },
+        {
+          "file": "tensors/completion-fresh-extraction-03.safetensors",
+          "bytes": 42542352,
+          "sha256": "2bd9a65e9da2321eff6b13660707aec27101076ba3b60af0b54c1da54a4c5f1b"
+        },
+        {
+          "file": "tensors/completion-fresh-extraction-04.safetensors",
+          "bytes": 54697232,
+          "sha256": "34d6bc6899ae0972c5e05f8b4cb6753f29b88d8137c1a76adb5f507a0c4f1f61"
+        },
+        {
+          "file": "tensors/completion-fresh-topic_changes-01.safetensors",
+          "bytes": 57128208,
+          "sha256": "7893828501aaa01062208d9d468bef02089967298ac8218d81eca3cd8947445a"
+        },
+        {
+          "file": "tensors/completion-fresh-topic_changes-02.safetensors",
+          "bytes": 62597904,
+          "sha256": "feb89b8e1b2ccb7c28177e06eb21f29d00ae3e880ccc0792429f66caa0addb6b"
+        },
+        {
+          "file": "tensors/completion-fresh-topic_changes-03.safetensors",
+          "bytes": 53481744,
+          "sha256": "ecb2e5978e76b5f047b038f4a50e1d21161291ff39ee8f003b7a1631249a3f47"
+        },
+        {
+          "file": "tensors/completion-fresh-topic_changes-04.safetensors",
+          "bytes": 58343696,
+          "sha256": "09df147e0e43de0a8cf6a374f5f524db154d420405141b5d8563db36c26b0b82"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-arithmetic-01.safetensors",
+          "bytes": 36016528,
+          "sha256": "3b9ba9bcdd309f6a72b3598c35a7f69d02e2cb99a80d726372d21d949a0c3c28"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-arithmetic-02.safetensors",
+          "bytes": 39742264,
+          "sha256": "ad44484bbf39b3c365eacadfa8a387725c2bd6e18fa21d7592f457e099d93841"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-arithmetic-03.safetensors",
+          "bytes": 36016528,
+          "sha256": "e72cdc797c03af84fa2a2c9c5b2eda84d99ca00f116ff0e46f16e9cfe338dc3f"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-arithmetic-04.safetensors",
+          "bytes": 37879396,
+          "sha256": "7b160bfaa4341b8efd8b2af1099fabd514045e4541a8c00c90e1d73e11c9acd3"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-code-01.safetensors",
+          "bytes": 49677576,
+          "sha256": "04f6342449e5331f52c27470404634a1161d81f192722c244a79821b1c25c307"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part2-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part3-v0.12.0.zip",
+      "bytes": 675353198,
+      "sha256": "be5a2c69c62a744b752df3a5d75a0a55e6f0ad678a6edf93de22f08808f4363a",
+      "payloads": [
+        {
+          "file": "tensors/completion-gen-trace-fresh-code-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "6467c27e9951c6e09eb5fd8faac25ea72525326dca78df55a5a56bb6eba7951a"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-code-03.safetensors",
+          "bytes": 49677576,
+          "sha256": "53404ad97e02efc530da0593c929f4527e92a0b0796ed73ecc91992f4d15c5e9"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-code-04.safetensors",
+          "bytes": 44709912,
+          "sha256": "cc6e28e5dbc0f2375de09f366d92e18765809dd40cef0037a2f433755d5546c1"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-copying-01.safetensors",
+          "bytes": 42847044,
+          "sha256": "2f51d12d0dd5cffa52e89725723889cf837b999b13134f02ecc32e98b1e1bd1f"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-copying-02.safetensors",
+          "bytes": 39742264,
+          "sha256": "2fa9d1c48b1f0ac2547d90571915a74dd055ede942d773670cd2a06d14ec358b"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-copying-03.safetensors",
+          "bytes": 37258440,
+          "sha256": "d4b17c494554d592704c614db491060540a1feb697bc5cdd25ca644e6b26dc56"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-copying-04.safetensors",
+          "bytes": 41605132,
+          "sha256": "93595e7e4f377f1bdd82dcda545f380e0e19bc5069c7bf6f1146bb531d2a9e2c"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-extraction-01.safetensors",
+          "bytes": 46572780,
+          "sha256": "142fe8dabba05c76ec5ba861013ce66d9e3ec6e9ee5079d5ab273e7322e639bc"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-extraction-02.safetensors",
+          "bytes": 50298532,
+          "sha256": "d5a51e2b651ae51e32be74f310455b9d3fc9fa1240a06697dbf4d8a30b194f3e"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-extraction-03.safetensors",
+          "bytes": 39742264,
+          "sha256": "514eb7d35dece8fdf5244c0352a1fadd7a37c8121acffb81ddb15936cf881526"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-extraction-04.safetensors",
+          "bytes": 53403312,
+          "sha256": "4a41510425e5996a7d6533e5e1b77c19d68523dbdc599ffc72fd7a9f412ab7ed"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-topic_changes-01.safetensors",
+          "bytes": 49677576,
+          "sha256": "6aa50da5011c410d011b92016cbb6f028f82fb338b66cba7450f7ee41a9169d1"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-topic_changes-02.safetensors",
+          "bytes": 54645224,
+          "sha256": "459b71dbd05832a1b2d39f38491764d1ad6336bd891ce71ddf49c18d0d5b0311"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-topic_changes-03.safetensors",
+          "bytes": 49056612,
+          "sha256": "2384d4543192db2035ab1288f9de0848873357260c6bb3184a1895d8d5d036f7"
+        },
+        {
+          "file": "tensors/completion-gen-trace-fresh-topic_changes-04.safetensors",
+          "bytes": 54645224,
+          "sha256": "debfa4b2da69aad2af4efbcd74afdf889d97f7a441f2bccd4299936b7722f9a4"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-arithmetic-01.safetensors",
+          "bytes": 36016528,
+          "sha256": "3b9ba9bcdd309f6a72b3598c35a7f69d02e2cb99a80d726372d21d949a0c3c28"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-arithmetic-02.safetensors",
+          "bytes": 39742264,
+          "sha256": "d99adec7da6258331a90d2eb6a1290b8ebefaa12e0bde04b3fe2c871dd86a641"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-arithmetic-03.safetensors",
+          "bytes": 36016528,
+          "sha256": "e72cdc797c03af84fa2a2c9c5b2eda84d99ca00f116ff0e46f16e9cfe338dc3f"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-arithmetic-04.safetensors",
+          "bytes": 37879396,
+          "sha256": "7b160bfaa4341b8efd8b2af1099fabd514045e4541a8c00c90e1d73e11c9acd3"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-code-01.safetensors",
+          "bytes": 50298532,
+          "sha256": "32603ae2a626446df0dd1de5a94a8ace693069e27bb65aeee173c2bd23dbed9b"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-code-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "6467c27e9951c6e09eb5fd8faac25ea72525326dca78df55a5a56bb6eba7951a"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-code-03.safetensors",
+          "bytes": 47193736,
+          "sha256": "53b4cca48f449ccedf051fb24d9bfc4a4fb5163a08e63ad505eecc37cc0d8b97"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-code-04.safetensors",
+          "bytes": 44709912,
+          "sha256": "cc6e28e5dbc0f2375de09f366d92e18765809dd40cef0037a2f433755d5546c1"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-copying-01.safetensors",
+          "bytes": 42847044,
+          "sha256": "2f51d12d0dd5cffa52e89725723889cf837b999b13134f02ecc32e98b1e1bd1f"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part3-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part4-v0.12.0.zip",
+      "bytes": 733956590,
+      "sha256": "bc6b17e654e4e513c2398a47cf939cb58fb25e3ebbbb7e015993a4a9e20a3b52",
+      "payloads": [
+        {
+          "file": "tensors/completion-trace-fresh-copying-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "4a00d79f9c48475b46c890e6f9957436b1cc0b828a3587ae17dea48cbbdc3902"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-copying-03.safetensors",
+          "bytes": 37258440,
+          "sha256": "d4b17c494554d592704c614db491060540a1feb697bc5cdd25ca644e6b26dc56"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-copying-04.safetensors",
+          "bytes": 38500352,
+          "sha256": "7bda07ffcff0ab08e4875aa7e22a4cf4496d702b22b9692b0e61e87bfe91da85"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-extraction-01.safetensors",
+          "bytes": 46572780,
+          "sha256": "142fe8dabba05c76ec5ba861013ce66d9e3ec6e9ee5079d5ab273e7322e639bc"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-extraction-02.safetensors",
+          "bytes": 50298532,
+          "sha256": "d5a51e2b651ae51e32be74f310455b9d3fc9fa1240a06697dbf4d8a30b194f3e"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-extraction-03.safetensors",
+          "bytes": 39742264,
+          "sha256": "514eb7d35dece8fdf5244c0352a1fadd7a37c8121acffb81ddb15936cf881526"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-extraction-04.safetensors",
+          "bytes": 53403312,
+          "sha256": "4a41510425e5996a7d6533e5e1b77c19d68523dbdc599ffc72fd7a9f412ab7ed"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-topic_changes-01.safetensors",
+          "bytes": 49677576,
+          "sha256": "6aa50da5011c410d011b92016cbb6f028f82fb338b66cba7450f7ee41a9169d1"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-topic_changes-02.safetensors",
+          "bytes": 49056612,
+          "sha256": "36003c49c90864575deb166a12f3d213ac621aa5ac20cbf715e929a44d294c44"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-topic_changes-03.safetensors",
+          "bytes": 47193736,
+          "sha256": "4ed87c31c6ae8f0ff8c8d8b73ce23e57aab73766e1bcd5d27c1a7e2e30cb1a36"
+        },
+        {
+          "file": "tensors/completion-trace-fresh-topic_changes-04.safetensors",
+          "bytes": 57129048,
+          "sha256": "25024370c0d8ab58c677e5f538bab5d7487c100870692f666eed5ad463af10b9"
+        },
+        {
+          "file": "tensors/completion-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "9d863e5bb29b284f996343323554717f9f7359c643fa655a6aed57dcd613b3bf"
+        },
+        {
+          "file": "tensors/completion-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "85c81a51776ddd2a451a8cc40a39ad37f0139babf0c9981822a89a4ccbf90239"
+        },
+        {
+          "file": "tensors/completion-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "1b1d4022cda543d3ce60f4f9d8679e26e42d5b1159853af8fc2676420a7ab29f"
+        },
+        {
+          "file": "tensors/completion-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "8c5063414f0dfc1ee9a04ef4df0536ea2c69cec8ef811def3225d8b526026402"
+        },
+        {
+          "file": "tensors/completion-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "5a976fc6896dfa79df68048ecd574dcf96d59363e929e3c985ba6a595ac61bb5"
+        },
+        {
+          "file": "tensors/completion-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "92a71b8461740c896ccd560922051a8730a30486aae56176ebb720ee71481e6c"
+        },
+        {
+          "file": "tensors/completion-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "bb386c7ced0800915d863ba388f3fc5621e71f05ff81203a26b4bd412d04dca7"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part4-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part5-v0.12.0.zip",
+      "bytes": 777669099,
+      "sha256": "3644c1ab2423f37b3db56faa3f266cc3f9783a3e9f23516c45428859d65515f7",
+      "payloads": [
+        {
+          "file": "tensors/completion-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "b2d209f428239954b6484d89e48cf950316acf5af06b928fe35d9363170463f3"
+        },
+        {
+          "file": "tensors/fallback-28-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "16c5abdde504a0765d09af3f246559be63f2bdd9621188a31874f872beedaec2"
+        },
+        {
+          "file": "tensors/fallback-28-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "8867d0012d834e049990926696f178458476caa10343040f9c34d9209b938f40"
+        },
+        {
+          "file": "tensors/fallback-28-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "3bf39164c99a1bacca5987aa620f4f5891259af9ae58346eca4122dbfe05b754"
+        },
+        {
+          "file": "tensors/fallback-28-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "1dbc89c6ce5b517354d98b9a959522c1d5dbe51d88e457933d66447afce6d00d"
+        },
+        {
+          "file": "tensors/fallback-28-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "a686baef848de7a62773ce8774477ea8c48c964d9aee0c3ba0c6443fdcc2978e"
+        },
+        {
+          "file": "tensors/fallback-28-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "7b0ee9387143f8a8b349132f76c210a3434e2baf807285906f9b0d66c3bcd35b"
+        },
+        {
+          "file": "tensors/fallback-28-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "b9e8f88102fbf3cefe5658f1ba78f4381e6b688c6e44560c552e0e0add40da8a"
+        },
+        {
+          "file": "tensors/fallback-28-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "2b19bf412dc30c61f84bc5dd43dd2b076ac3022b5c63f56ae723d2f8faa60955"
+        },
+        {
+          "file": "tensors/fitted-1.safetensors",
+          "bytes": 11988664,
+          "sha256": "afca03d28fbf66459186da5430c925e3b47615156230aac7a7de3bde0ea839cf"
+        },
+        {
+          "file": "tensors/fitted-2.safetensors",
+          "bytes": 11988664,
+          "sha256": "635db8df197b6f907adc1226461e3b764255f0109423a9ddb808ef4cad7ff52b"
+        },
+        {
+          "file": "tensors/full-112-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "9d863e5bb29b284f996343323554717f9f7359c643fa655a6aed57dcd613b3bf"
+        },
+        {
+          "file": "tensors/full-112-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "85c81a51776ddd2a451a8cc40a39ad37f0139babf0c9981822a89a4ccbf90239"
+        },
+        {
+          "file": "tensors/full-112-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "1b1d4022cda543d3ce60f4f9d8679e26e42d5b1159853af8fc2676420a7ab29f"
+        },
+        {
+          "file": "tensors/full-112-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "8c5063414f0dfc1ee9a04ef4df0536ea2c69cec8ef811def3225d8b526026402"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part5-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part6-v0.12.0.zip",
+      "bytes": 860805991,
+      "sha256": "67a9b14c53281949674d829ca89426807d87a74cc7528f80e64e434836f07c33",
+      "payloads": [
+        {
+          "file": "tensors/full-112-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "5a976fc6896dfa79df68048ecd574dcf96d59363e929e3c985ba6a595ac61bb5"
+        },
+        {
+          "file": "tensors/full-112-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "92a71b8461740c896ccd560922051a8730a30486aae56176ebb720ee71481e6c"
+        },
+        {
+          "file": "tensors/full-112-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "bb386c7ced0800915d863ba388f3fc5621e71f05ff81203a26b4bd412d04dca7"
+        },
+        {
+          "file": "tensors/full-112-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "b2d209f428239954b6484d89e48cf950316acf5af06b928fe35d9363170463f3"
+        },
+        {
+          "file": "tensors/initial-0-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "29a36d973cfc29d4ee15f437b2bf9286f3c02ed9eda07f2763458ee54f478584"
+        },
+        {
+          "file": "tensors/initial-0-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "1b4a458b004acbf467486fd7b557e71adb44e2cfa5f27a0c4e770ceadb873f43"
+        },
+        {
+          "file": "tensors/initial-0-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "d6df0cf213e4277aa278d5fedf27b545754721a2440c1c47128ed016f9ea95b9"
+        },
+        {
+          "file": "tensors/initial-0-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "bd9124c3cfc82290db3addbd8085807f9310f7c0073c44c65f2ae31f0997eb94"
+        },
+        {
+          "file": "tensors/initial-0-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "bffc232aa407a524cfa58acaf54b4692d6c477e242bc60fd80c3ce237421f534"
+        },
+        {
+          "file": "tensors/initial-0-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "ae1c60ab05f7de3fab425cfbdd5dff2caf8f5ea6705c277dc131d2b7d4f155b8"
+        },
+        {
+          "file": "tensors/initial-0-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "fe3364d7d4cb887e14bef2f91d2af208562bb3aab1f7c0ad5cc16beea97030e1"
+        },
+        {
+          "file": "tensors/initial-0-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "b1f3f593382c016a2b8be97b328c00790a673528067a2c1ca69563397596850f"
+        },
+        {
+          "file": "tensors/input_only-28-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "c30a5a5b98c60d028e0ef86718ab6833069c2a3709ae2fd05c7c15f6f1ed45cf"
+        },
+        {
+          "file": "tensors/input_only-28-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "7cba065796e49f18fb9281fb0fb6ec1986f84b6955ef1a7c55da76a094ef440a"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part6-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part7-v0.12.0.zip",
+      "bytes": 949084703,
+      "sha256": "f01dea063a22635883535982f54eca8531376eb10c75b2c9064c6b9519c6deab",
+      "payloads": [
+        {
+          "file": "tensors/input_only-28-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "4e40751d866b1396c36ca00d4aad7a3c7ebfa085bd4639b78cacd20dd384d197"
+        },
+        {
+          "file": "tensors/input_only-28-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "df56d76c0c557f37c09d0e26d4a3a63a983ff2421c81ff8b36ea3df1e2f953a4"
+        },
+        {
+          "file": "tensors/input_only-28-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "87703b4e2671239203b0ee90dfcd4c8734456e9c0a834d82b291056bcd22a3d2"
+        },
+        {
+          "file": "tensors/input_only-28-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "defd4eb81c4eb150996093074564b129dfe3fb6d21f96aa57812a7964d47e4a7"
+        },
+        {
+          "file": "tensors/input_only-28-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "9aa70b5ed0983bce3e41e2d24ca997018eeff045395f52e8985bf2f3faba3884"
+        },
+        {
+          "file": "tensors/input_only-28-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "95d628f3f20b92df6826855efb0dec60d8d078e58f5870a704de0c4922785d9a"
+        },
+        {
+          "file": "tensors/native-fresh-arithmetic-01.safetensors",
+          "bytes": 37680304,
+          "sha256": "8cf070dcc0e0fa4b16adbc4096b46fa2fbe87b8481eedb5b97b9ef250a03ebaf"
+        },
+        {
+          "file": "tensors/native-fresh-arithmetic-02.safetensors",
+          "bytes": 40719024,
+          "sha256": "4c2c51fa255ca916af428d3a12c3add53e9ede8c6748be393b0e4aebb73dfa90"
+        },
+        {
+          "file": "tensors/native-fresh-arithmetic-03.safetensors",
+          "bytes": 37072560,
+          "sha256": "536ed0c2a055b1f4ea5169305053aa547938c51ab3563d1c2c2ffb327e4a3115"
+        },
+        {
+          "file": "tensors/native-fresh-arithmetic-04.safetensors",
+          "bytes": 39503536,
+          "sha256": "0db72e6ffc1d24bbad32e6f93fa2e43dd26b6b2d2d577e97022d8f2b4abb80ee"
+        },
+        {
+          "file": "tensors/native-fresh-code-01.safetensors",
+          "bytes": 50442928,
+          "sha256": "f2996f3300a3bd81d538cad074f95af98042c284f322610f19bde4ac1994be2f"
+        },
+        {
+          "file": "tensors/native-fresh-code-02.safetensors",
+          "bytes": 43757744,
+          "sha256": "feac04acb902de0f8db8c283373efe7c99ae28915e899ac7f6a252ff5fa1bb9a"
+        },
+        {
+          "file": "tensors/native-fresh-code-03.safetensors",
+          "bytes": 49835184,
+          "sha256": "f8734fef83b2d9e455b0057bc3d3c1584d2ca94e44caca0aaac4ebb9e6eb3372"
+        },
+        {
+          "file": "tensors/native-fresh-code-04.safetensors",
+          "bytes": 45580976,
+          "sha256": "3d57a7105f1c058567086e5b7280d3b33b904c58b41971954cf8395bd034bd6b"
+        },
+        {
+          "file": "tensors/native-fresh-copying-01.safetensors",
+          "bytes": 48619696,
+          "sha256": "d8f06905def34bf5bdf1f16a8a2397525d19b8b440e134630e90bb6dc6f1b300"
+        },
+        {
+          "file": "tensors/native-fresh-copying-02.safetensors",
+          "bytes": 44365488,
+          "sha256": "99cde86f3ab68792e3c3cb23fb8db6722d4e8261a241eb98e0260a365dc5b951"
+        },
+        {
+          "file": "tensors/native-fresh-copying-03.safetensors",
+          "bytes": 41326768,
+          "sha256": "4419758370fae06bf120b18071c44acd1201cc0b87880abc335a062c20635e57"
+        },
+        {
+          "file": "tensors/native-fresh-copying-04.safetensors",
+          "bytes": 44973232,
+          "sha256": "7891465df95d723628159e0cd57fc031d617d01b03bc218d494ac7cabe22dea0"
+        },
+        {
+          "file": "tensors/native-fresh-extraction-01.safetensors",
+          "bytes": 49227440,
+          "sha256": "025d6eddb6ff028a67bcd97cb7ddeebb12f2fac1a536251b714aca0c11e999c6"
+        },
+        {
+          "file": "tensors/native-fresh-extraction-02.safetensors",
+          "bytes": 50442928,
+          "sha256": "35c3e35eed6e0465d26669886e10567ca4ea0c73511467b8e3c9ea32ca850362"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part7-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part8-v0.12.0.zip",
+      "bytes": 966204369,
+      "sha256": "4b96fa21bcb4725d8ad44fc2d67ed5d26dcfcb922eb2ac3561f015f75657cc13",
+      "payloads": [
+        {
+          "file": "tensors/native-fresh-extraction-03.safetensors",
+          "bytes": 40719024,
+          "sha256": "8e66b9d10da9ad7020d790ace6cade943e6738d8306acebb6ac16e650c1c00ed"
+        },
+        {
+          "file": "tensors/native-fresh-extraction-04.safetensors",
+          "bytes": 53481648,
+          "sha256": "784acf12c483fc6c22565c7257f5d28c0afceb07d44589537dcef7f7c917fb93"
+        },
+        {
+          "file": "tensors/native-fresh-topic_changes-01.safetensors",
+          "bytes": 52873904,
+          "sha256": "0e73be8775c92bc637f051147bb90bd9043ff58f8ca7fa6be24e341cab5c1ac2"
+        },
+        {
+          "file": "tensors/native-fresh-topic_changes-02.safetensors",
+          "bytes": 55304880,
+          "sha256": "766fa99a932cd1cd32ebfaa6d515f23505e0ae5d5aa86caf2063158c819e2ea1"
+        },
+        {
+          "file": "tensors/native-fresh-topic_changes-03.safetensors",
+          "bytes": 49835184,
+          "sha256": "f2ed531ede1922d74825782d459ae0db55e9b198eea6c7dc84788d6f1c1c67b6"
+        },
+        {
+          "file": "tensors/native-fresh-topic_changes-04.safetensors",
+          "bytes": 57128112,
+          "sha256": "3a7a864ccc2738b69038b1a8cb3b77d4ef0ef0559ec26c31d3c05dd6b762844f"
+        },
+        {
+          "file": "tensors/native-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "7178593eb17a9a55216e8142b1f18b26d25bf86256c29f03ecee6d218ba7501e"
+        },
+        {
+          "file": "tensors/native-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "b5463885b7a3246ebd2ccea78227d16c887722293201b27954d02611c5eefbf5"
+        },
+        {
+          "file": "tensors/native-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "7cc61dced22e8362ada6e0abb64bad27cdfb65254577a75e75f0b2f188014cbb"
+        },
+        {
+          "file": "tensors/native-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "3883948a404e2044f6e7658a8f37de813593d7370096aa4851ae8c6963af63c5"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-arithmetic-01.safetensors",
+          "bytes": 37680304,
+          "sha256": "11f65f91544a2393a7fb02f3b6081714905d3c57e24feeddb1a3d1512aa51a1a"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-arithmetic-02.safetensors",
+          "bytes": 40719024,
+          "sha256": "74414761ef5e2b665236e92eb3c293e4a9d1cd392e4fd79998e9250b21372a44"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-arithmetic-03.safetensors",
+          "bytes": 37072560,
+          "sha256": "cd6aebe03d7c3af1625814003b056337e2c37702b02d2af380adeb2298d4744c"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-arithmetic-04.safetensors",
+          "bytes": 39503536,
+          "sha256": "52af35d559fe107448a11b85ca31b438b5fbf9bf8a6cf3c3a9130844f79082e4"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-code-01.safetensors",
+          "bytes": 50442928,
+          "sha256": "ab3e5d9947a7263906a08896d26d12a89efaede032a8f876db69873a58f48abc"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-code-02.safetensors",
+          "bytes": 43757744,
+          "sha256": "fa09fb5911ee64b17eb4ce632b3ed8b6355a5f085f04e17a856adccef5278fef"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-code-03.safetensors",
+          "bytes": 49835184,
+          "sha256": "7f9a8585257f77b90923e7d981602a069d11d27483a3adec9135552d81423d0b"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-code-04.safetensors",
+          "bytes": 44973232,
+          "sha256": "a50d660e694129b60fdcf47d437cb4d579f9f23a3be23fa74ef1f9ae121ff4a0"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-copying-01.safetensors",
+          "bytes": 48619696,
+          "sha256": "fd0eafcfa56084761b0f50c0cbff92b0aaf657b756a3c8149813ddbf6efc526e"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-copying-02.safetensors",
+          "bytes": 48011952,
+          "sha256": "40e4f717b557e1f677684c926a374062eaa8309c8d96e7cb018e242af5a065db"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part8-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part9-v0.12.0.zip",
+      "bytes": 824265894,
+      "sha256": "9ed5b176bd315e8052352630fc4d8f4c988f741123231662ea339f527e79abfd",
+      "payloads": [
+        {
+          "file": "tensors/one_shot-28-fresh-copying-03.safetensors",
+          "bytes": 41326768,
+          "sha256": "fbb2aaebbfbfe92e222a127809466cf5928e65e3d6d5d387962c088655be38eb"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-copying-04.safetensors",
+          "bytes": 41934512,
+          "sha256": "2b4040b2674e08f3c3f2c74208ad7f01eb22c88fa11696c95270fa62ba5569da"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-extraction-01.safetensors",
+          "bytes": 49227440,
+          "sha256": "392fdc9df2e24d98c312d5be4285ea5f234c4cae942278262109bb9608c3658b"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-extraction-02.safetensors",
+          "bytes": 50442928,
+          "sha256": "6e9c750c6ff694f9aab13adf17d9255feabefec7cee82c4e9e9c600420038e9e"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-extraction-03.safetensors",
+          "bytes": 40719024,
+          "sha256": "1e4c9b048b433fc48e701252653179f6e784a09ebb258bb01fce61ad40fa105a"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-extraction-04.safetensors",
+          "bytes": 53481648,
+          "sha256": "e3cd02a73189ad263e5d4d20aad3d61a8840d48faf5d0ae53b8601a885eca6a2"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-topic_changes-01.safetensors",
+          "bytes": 54697136,
+          "sha256": "636c0828e9eff7451081d1de2d501e5e92ce25dc76488c44275520600e24f578"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-topic_changes-02.safetensors",
+          "bytes": 61990064,
+          "sha256": "aa984c005f4629f7f8927d7bd496f0192fef5038c68e9fe654ead79da750e8e1"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-topic_changes-03.safetensors",
+          "bytes": 49835184,
+          "sha256": "ca0a4953b09c812ade81ad99b62b2d16ee00405bc56fad285b131aed4b962845"
+        },
+        {
+          "file": "tensors/one_shot-28-fresh-topic_changes-04.safetensors",
+          "bytes": 57128112,
+          "sha256": "75d9fca79a72fb93d3741c7084b588c63e74b8cf580432115fd90509a4a7a133"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-arithmetic-01.safetensors",
+          "bytes": 36016528,
+          "sha256": "0a207729c84288ccdb6781b007c0892c572f93dbe701a94b26e5a42bbe8effa4"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-arithmetic-02.safetensors",
+          "bytes": 39742264,
+          "sha256": "842cc35cb6c185e47892c30926e9a18decad7594df601f38286369d93fe5fc42"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-arithmetic-03.safetensors",
+          "bytes": 36016528,
+          "sha256": "da1add6d066f25d9815efecdec5036352755f90581e7e6783bb8ad6674e93022"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-arithmetic-04.safetensors",
+          "bytes": 37879396,
+          "sha256": "8be8c2eb5f3244c4a96ea89532237626bf854d9079bab7199c669d0fb919e95b"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-code-01.safetensors",
+          "bytes": 49677576,
+          "sha256": "faa5e0fb10253ea87ebebb9c184150cb8a5a787f1d1a8dd73d8ad09334b729ee"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-code-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "eece00f0f1a44cd8f29dc69447022835dcef9ff559ffb75116838567e7cf0fef"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-code-03.safetensors",
+          "bytes": 49677576,
+          "sha256": "55391cb640beb00d86f02f563d0a57a5519ebb9626edc7cc64e39a000ce07e18"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-code-04.safetensors",
+          "bytes": 44088956,
+          "sha256": "9922e5912655e57094672d92b71a80e2da749a18253d0226056bfe30e10e8bc6"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-copying-01.safetensors",
+          "bytes": 42847044,
+          "sha256": "c6b730a5ca4ace46dae817fffbec74785ebe6031e1c6f1dab7be4bdbb0646833"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-copying-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "0551dbd10fc94254aab05f1be4d4e9cc784714711b3cb44d345b037b5942025d"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-copying-03.safetensors",
+          "bytes": 37258440,
+          "sha256": "8658afaa369ba4e0944e0bc7b648a13601d6b32df1c76dd2fe82ac8e27c3a2c0"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-copying-04.safetensors",
+          "bytes": 38500352,
+          "sha256": "5cceb34105eeb36f38fd52b73091e2b24e430953326f83bb080c4d3076d682dc"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-extraction-01.safetensors",
+          "bytes": 46572780,
+          "sha256": "44c8fd65f77b558a107e6f4920ff8dbd7858f6ac021ce861fe0bd8b08b8bb58c"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-extraction-02.safetensors",
+          "bytes": 50298532,
+          "sha256": "aca3e95ead090e62bce7ece4aaf3d3c1017d239dbd3063a03bd9e1e280c705d7"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part9-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part10-v0.12.0.zip",
+      "bytes": 678271265,
+      "sha256": "53830c34aa92a3aa45bb1a07d985323d278bb0fa7f0bab452989936a5eb3300f",
+      "payloads": [
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-extraction-03.safetensors",
+          "bytes": 39742264,
+          "sha256": "0655c1b5e33256869e150aa481a5ad9caa9d68f9e69ca964bf9a3962d41cb86e"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-extraction-04.safetensors",
+          "bytes": 53403312,
+          "sha256": "63424e2309d4f6f5ec4ee0e7c5e0de4670a87acec2f7b5b4ff0978234659ba2b"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-topic_changes-01.safetensors",
+          "bytes": 51540444,
+          "sha256": "16e75742225a264877c0af3b36311154bfd3fb2c31eae90a45a313a93e78dc5f"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-topic_changes-02.safetensors",
+          "bytes": 61475740,
+          "sha256": "e80cf3c3458700beb1403d9f6b4ae1d9025c2c64a8f82f22e62fcdb97ae12f58"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-topic_changes-03.safetensors",
+          "bytes": 49056612,
+          "sha256": "eadbe4d4cfec7b3bafdc864eb682a0109ce4f1a6056110e1c9df64a9f7cd7ecc"
+        },
+        {
+          "file": "tensors/one_shot-28-gen-trace-fresh-topic_changes-04.safetensors",
+          "bytes": 54645224,
+          "sha256": "831b8f663bb84e85dab2c166f5f42c136ee7e00b61257a926bb3a236f2ee8210"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-arithmetic-01.safetensors",
+          "bytes": 36016528,
+          "sha256": "0a207729c84288ccdb6781b007c0892c572f93dbe701a94b26e5a42bbe8effa4"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-arithmetic-02.safetensors",
+          "bytes": 39742264,
+          "sha256": "a52aa7ac0ecde671660daa7fc813206496f9f321ee8a28a94aae37fea6fed16c"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-arithmetic-03.safetensors",
+          "bytes": 36016528,
+          "sha256": "e5b17c964d4de0e776ad0d341600fc6219ab6a93656fda2563b2520c1eb71f47"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-arithmetic-04.safetensors",
+          "bytes": 37879396,
+          "sha256": "8d0bfd8793c5f22ab1d1cf7089d92bb79708431b95552a468786247ed3ee97d2"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-code-01.safetensors",
+          "bytes": 50298532,
+          "sha256": "4ee4c74f144221a7ba4eb3735e9a381b6825298aebf84043519bf85e83083aaf"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-code-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "128c896ae3a8b5911deb8dbaf8e52ad4a47553c9be4b0e972ec5d15c27f68675"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-code-03.safetensors",
+          "bytes": 47193736,
+          "sha256": "b96808fa2c7de6950dfed6b06e3aad00a244275e562fc63825337b93c6e402e0"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-code-04.safetensors",
+          "bytes": 44709912,
+          "sha256": "3d7fc967cbcdcb21968849e4f2cd1ec39844ce60e262f6d25722c2a0431d6d3a"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-copying-01.safetensors",
+          "bytes": 42847044,
+          "sha256": "c6b730a5ca4ace46dae817fffbec74785ebe6031e1c6f1dab7be4bdbb0646833"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-copying-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "df1db29b049a143c39c97be53e17883c2d453058ce422a23cd280deb8546565c"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-copying-03.safetensors",
+          "bytes": 37258440,
+          "sha256": "8658afaa369ba4e0944e0bc7b648a13601d6b32df1c76dd2fe82ac8e27c3a2c0"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-copying-04.safetensors",
+          "bytes": 38500352,
+          "sha256": "5cceb34105eeb36f38fd52b73091e2b24e430953326f83bb080c4d3076d682dc"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-extraction-01.safetensors",
+          "bytes": 46572780,
+          "sha256": "44c8fd65f77b558a107e6f4920ff8dbd7858f6ac021ce861fe0bd8b08b8bb58c"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-extraction-02.safetensors",
+          "bytes": 50298532,
+          "sha256": "aca3e95ead090e62bce7ece4aaf3d3c1017d239dbd3063a03bd9e1e280c705d7"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-extraction-03.safetensors",
+          "bytes": 39742264,
+          "sha256": "0655c1b5e33256869e150aa481a5ad9caa9d68f9e69ca964bf9a3962d41cb86e"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-extraction-04.safetensors",
+          "bytes": 53403312,
+          "sha256": "63424e2309d4f6f5ec4ee0e7c5e0de4670a87acec2f7b5b4ff0978234659ba2b"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-topic_changes-01.safetensors",
+          "bytes": 49677576,
+          "sha256": "ca1fc66a00f24fb2ca699f1d9bbc77ad20ca4dbd83e34ff1d93264b4c33a571e"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-topic_changes-02.safetensors",
+          "bytes": 49056612,
+          "sha256": "1c0fc5b48ed641119cf5b4e1dda1c8cc5967ea01277efb2e0d0305850679dc7b"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part10-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part11-v0.12.0.zip",
+      "bytes": 742137420,
+      "sha256": "dc2bd400b4b83665d013f936f7b418b6d12fbe0951e3db998984709ffa9b48fd",
+      "payloads": [
+        {
+          "file": "tensors/one_shot-28-trace-fresh-topic_changes-03.safetensors",
+          "bytes": 47193736,
+          "sha256": "0c02df312db5efe7c52550ed6aa43d92069091045b8285a78226c881fa043301"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-fresh-topic_changes-04.safetensors",
+          "bytes": 57129048,
+          "sha256": "8108bb342aad9f1b49ba0d262fb2ea8435c34c7ec643e5c70f7189471482b924"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "e9fd1a77a0c1d5d7b81fe21b7fdebaf853d1e2648ae770e6aed074e18cf9fe1b"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "cda746a6167551ea7937eaf7eaa3d8e45a2b59b2b4d9c23ea8518c4cee7a4cda"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "3a05da85a014853055f0d2ce83f358133fd695bc89fd94eaf14d9acfd8da2b2a"
+        },
+        {
+          "file": "tensors/one_shot-28-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "c21d90d9bc1431ca874c69731cc36261175c6b6050a91fff073f1b821dfcad38"
+        },
+        {
+          "file": "tensors/one_shot-28-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "56f93714094c690cb3c8132a4ba5f41c0d227ddc104c6760b9ed3a50d1fba661"
+        },
+        {
+          "file": "tensors/one_shot-28-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "ea294b735163f4372ba82ca4e07743d09e6997775ee85d9a59bdb675924c755e"
+        },
+        {
+          "file": "tensors/one_shot-28-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "01e0e986b153dd81ed201de435a320bb8c956163c8105f505cb33a81415c9510"
+        },
+        {
+          "file": "tensors/one_shot-28-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "003b1f6616debd15008531b546d6bdb4ad03db520922af4e327df877d2ef6c50"
+        },
+        {
+          "file": "tensors/one_shot-56-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "cebdb3dcc3d27b3320dc1a3f59f7b820f95e7a65fa7173505ce13fedd215315c"
+        },
+        {
+          "file": "tensors/one_shot-56-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "3802045d9ff80d6f7c69e2ed8eca83858b16965f3c229e6aa45b18cb6eb572a0"
+        },
+        {
+          "file": "tensors/one_shot-56-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "a4370837764009e16fdd01df51176a5b1741f4dc6a3cae2baa8b6097e332e7ed"
+        },
+        {
+          "file": "tensors/one_shot-56-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "8d85c1f544449d9bf59dd7e89ff2648d6d8b8ceca65771b3d2b4d2eecbbbd38c"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part11-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part12-v0.12.0.zip",
+      "bytes": 987540090,
+      "sha256": "91560f641954bf4b09e5ea85f5fc3218b8ba6ff8115db2f5a30deb86d04c0aef",
+      "payloads": [
+        {
+          "file": "tensors/one_shot-56-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "279fce24d4af7a88020f9a8ebbb1953b8b879b2e845265842be6d0906da05349"
+        },
+        {
+          "file": "tensors/one_shot-56-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "24cbcf53b6bcc9961fedaf81a7af3de199218811f6c42d9240a322582630dd6c"
+        },
+        {
+          "file": "tensors/one_shot-56-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "31dde1699d74d294a17d40845b1fcbd95b7434584307fc2e74ef7639552a3c78"
+        },
+        {
+          "file": "tensors/one_shot-56-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "19d3f21e8abfcfe06fde95d44e974b6655bf1b87ade6e6ce63881c1d1f84e54e"
+        },
+        {
+          "file": "tensors/partial-28-fresh-arithmetic-01.safetensors",
+          "bytes": 37680304,
+          "sha256": "a4aad08740976e0bdfb654816b9d82e32f41caa2529a5e1a98dd280a3560a2ab"
+        },
+        {
+          "file": "tensors/partial-28-fresh-arithmetic-02.safetensors",
+          "bytes": 41326768,
+          "sha256": "33a5b82edd9f69ee6c420563f1d8fd00afb71c437019953c28cd6b8aaeee3fab"
+        },
+        {
+          "file": "tensors/partial-28-fresh-arithmetic-03.safetensors",
+          "bytes": 37072560,
+          "sha256": "5838b5c9f79ee7c13196b240b7c3cb1ceef66ee3dea35f6dca5b97791c0b9a89"
+        },
+        {
+          "file": "tensors/partial-28-fresh-arithmetic-04.safetensors",
+          "bytes": 39503536,
+          "sha256": "b4d147c2d6a9bd787f44b8828889ae6f51aa40d2d0fbf3566f622b63326de32c"
+        },
+        {
+          "file": "tensors/partial-28-fresh-code-01.safetensors",
+          "bytes": 50442928,
+          "sha256": "0c880842c3ff6a8f507c63c15d5582b1262b9e77909b0d22721c086ffaeeaa2a"
+        },
+        {
+          "file": "tensors/partial-28-fresh-code-02.safetensors",
+          "bytes": 43757744,
+          "sha256": "2f08b35c5b9cdc8707803ca56b5b5de693117c9a7e24d41e0c85eaaf5cb66af9"
+        },
+        {
+          "file": "tensors/partial-28-fresh-code-03.safetensors",
+          "bytes": 49835184,
+          "sha256": "8f4a15a444a507356156ebe799357b87f4b42dae8302a16288c68ed5206ca098"
+        },
+        {
+          "file": "tensors/partial-28-fresh-code-04.safetensors",
+          "bytes": 44973232,
+          "sha256": "eb14768114d12ffd1fabdcc2a50ec84963724fa3414f5fc3d620a13252324ae4"
+        },
+        {
+          "file": "tensors/partial-28-fresh-copying-01.safetensors",
+          "bytes": 51658416,
+          "sha256": "3d2dc2529c51c50fc914b77d863eafe8cf8206a21364f88c56461dfdd310d831"
+        },
+        {
+          "file": "tensors/partial-28-fresh-copying-02.safetensors",
+          "bytes": 45580976,
+          "sha256": "236741326ec52deb0c71561326c7a499c4336272a17d1d2a685f996b511ea4b6"
+        },
+        {
+          "file": "tensors/partial-28-fresh-copying-03.safetensors",
+          "bytes": 41326768,
+          "sha256": "6813a5b794bdcd545f9b6bfc50d734272ab49ca9cc439b66919df90246f29371"
+        },
+        {
+          "file": "tensors/partial-28-fresh-copying-04.safetensors",
+          "bytes": 41934512,
+          "sha256": "26902ae2e97c2be3b212157f72337aeaf199e9f2dbb4d75c1b2f623101adeeb2"
+        },
+        {
+          "file": "tensors/partial-28-fresh-extraction-01.safetensors",
+          "bytes": 49227440,
+          "sha256": "27b3d1db24ba3d6250837b77417f7c2e06b81d47137d6a803190cf5986837180"
+        },
+        {
+          "file": "tensors/partial-28-fresh-extraction-02.safetensors",
+          "bytes": 50442928,
+          "sha256": "b10c6c077ceaa4b03bf918a01c97b69f81a63d43029d93460f220adb06815316"
+        },
+        {
+          "file": "tensors/partial-28-fresh-extraction-03.safetensors",
+          "bytes": 40719024,
+          "sha256": "acbbc45a5bb251e3e0de2cfa024984eb475e955608071f8fead68a24cd92ad75"
+        },
+        {
+          "file": "tensors/partial-28-fresh-extraction-04.safetensors",
+          "bytes": 53481648,
+          "sha256": "21867d35d4c7e10e7a39a2f3d5d389bd83d0e7b9dced33d9a09bc90218b5ee38"
+        },
+        {
+          "file": "tensors/partial-28-fresh-topic_changes-01.safetensors",
+          "bytes": 54089392,
+          "sha256": "302ea3692ca1955c58d93d76004c33a1e759df67725483721dc6d0f87d915f9f"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part12-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part13-v0.12.0.zip",
+      "bytes": 894640567,
+      "sha256": "d14435a75b08b8b24362c0129c734c697256f5b50483a317ae7a5ee5153fc6b5",
+      "payloads": [
+        {
+          "file": "tensors/partial-28-fresh-topic_changes-02.safetensors",
+          "bytes": 69890736,
+          "sha256": "d7d287958d890b73be166e3b2b934da231b2fb04de9e9627cd478fb85b415285"
+        },
+        {
+          "file": "tensors/partial-28-fresh-topic_changes-03.safetensors",
+          "bytes": 52873904,
+          "sha256": "d2202958552f5b871a4fb86d7f1af68621f66a3139f65df6f5acdffc55abb0be"
+        },
+        {
+          "file": "tensors/partial-28-fresh-topic_changes-04.safetensors",
+          "bytes": 57128112,
+          "sha256": "c97916acbba9e1684f13c9244229d33c633fcc777bff0e2de3ce979e23b48a3c"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-arithmetic-01.safetensors",
+          "bytes": 36016528,
+          "sha256": "41be4ef56ef1ada7ad9cd942eaa56a98581b3827aa584bc089730ac2a70616e6"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-arithmetic-02.safetensors",
+          "bytes": 40363220,
+          "sha256": "ccf8ed2d1e65a919d090ddca5b16a6e57d6d80d41296d5d02b19b9bc85f5fb71"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-arithmetic-03.safetensors",
+          "bytes": 36016528,
+          "sha256": "1334afbdb827f0443de8b673b687d5f143e8e07b0fe6a4ee9df89ba5d63f722a"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-arithmetic-04.safetensors",
+          "bytes": 37879396,
+          "sha256": "c79d7799c9d1febaaa57c1a4b739a0d4f02c96017d91842c4de0083300889a65"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-code-01.safetensors",
+          "bytes": 49677576,
+          "sha256": "17d27b447242db748dfb2bf67090ec4184bf26d7fbdd82f907470129d7ab3d7b"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-code-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "81fc9b070293d3ae90460eb66f6ada146e16bfb7f81b4470caf19efeb27eeb6c"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-code-03.safetensors",
+          "bytes": 49677576,
+          "sha256": "ca653b766660c8241559176835328d55cbc60866fcf2271a5c40f5b307036c67"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-code-04.safetensors",
+          "bytes": 44088956,
+          "sha256": "61122a6dd7076a52bb6893a4a6cd056ef2fce6871bab6d62f0e32bbabf1ecff9"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-copying-01.safetensors",
+          "bytes": 45951824,
+          "sha256": "5ac5f305ae9e95e57522c5f2955986e9f6fb5aec31d28ebb58f0c710301d54fb"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-copying-02.safetensors",
+          "bytes": 40984176,
+          "sha256": "c39bd0650d90ead73a0b36897ea02be22e4f907bfac53aefa8e1f7caacab150a"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-copying-03.safetensors",
+          "bytes": 37258440,
+          "sha256": "fa3603aca1537414e2f3586db4969b9397305c41d7827e0c827667394bac850e"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-copying-04.safetensors",
+          "bytes": 38500352,
+          "sha256": "831bdf30b5f6273f45209a1b36b30aba5d6c3d1e18f3624787f94f337d465541"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-extraction-01.safetensors",
+          "bytes": 46572780,
+          "sha256": "c20993e2f42c2937b49b52c8bc95faceaa8718a25fc52a2bf6118daf789a0556"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-extraction-02.safetensors",
+          "bytes": 50298532,
+          "sha256": "e3941fcfb365bf45ec7b0ff63232fae4a40d416d80559e2eae4f18e425721890"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-extraction-03.safetensors",
+          "bytes": 39742264,
+          "sha256": "e568dd816ead14c49561c31cac86883219d291400ab14965e52055824c799bf2"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-extraction-04.safetensors",
+          "bytes": 53403312,
+          "sha256": "82a8ceb7022bc3eb1604f85e838bc324dbacd391ee2282860a544fb920265c15"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-topic_changes-01.safetensors",
+          "bytes": 50919488,
+          "sha256": "ad941e1c0ba40fc5d4f2fa730c3eeedb3ab7abaf3c8346a11c4df39468757bfb"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-topic_changes-02.safetensors",
+          "bytes": 69548176,
+          "sha256": "babd82ca4a03846dccc32636b859129b4b27a4578d6b46d6bae80e029e87bd90"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-topic_changes-03.safetensors",
+          "bytes": 52161400,
+          "sha256": "c36144864fb1a3916b0a65daf1b04db4e310bf6869f790cc7978b1204a24fff2"
+        },
+        {
+          "file": "tensors/partial-28-gen-trace-fresh-topic_changes-04.safetensors",
+          "bytes": 54645224,
+          "sha256": "9e7caa8cbc6ec0cd6f63df6ccffa0aec3e07e96b3d3baa0090e912b10063b951"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part13-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part14-v0.12.0.zip",
+      "bytes": 836210660,
+      "sha256": "57c80ac7a50d0948bd83894e4542329cc9a04ff3e005b7ec2e2d02468ebea994",
+      "payloads": [
+        {
+          "file": "tensors/partial-28-trace-fresh-arithmetic-01.safetensors",
+          "bytes": 36016528,
+          "sha256": "41be4ef56ef1ada7ad9cd942eaa56a98581b3827aa584bc089730ac2a70616e6"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-arithmetic-02.safetensors",
+          "bytes": 39742264,
+          "sha256": "a32578380d7cb2fae098420f9b6332223f055af24c613640a3aa0a5068112049"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-arithmetic-03.safetensors",
+          "bytes": 36016528,
+          "sha256": "1334afbdb827f0443de8b673b687d5f143e8e07b0fe6a4ee9df89ba5d63f722a"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-arithmetic-04.safetensors",
+          "bytes": 37879396,
+          "sha256": "c79d7799c9d1febaaa57c1a4b739a0d4f02c96017d91842c4de0083300889a65"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-code-01.safetensors",
+          "bytes": 50298532,
+          "sha256": "009a6adf7eb8a4dafa6c2a6f9ac494f4fa208933db26ad3cbad1875c463ad909"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-code-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "0d7410e31af61c6007ddcc684199ffc19036cfa1c51495adfd7b30e9fbd79d03"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-code-03.safetensors",
+          "bytes": 47193736,
+          "sha256": "14869849d19f9d910fc62ee8e0c1a54d4da1445ac76ea00136f81236171b5359"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-code-04.safetensors",
+          "bytes": 44709912,
+          "sha256": "65f1ca2f378303f2f0d7682d2090011454542f9e2314f2f3d848daa2e12f8108"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-copying-01.safetensors",
+          "bytes": 42847044,
+          "sha256": "ee85ba51afc0ff9c20f401f5f97df698e93e3552c27ee4e7e56f206210ed3541"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-copying-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "bae550433f34f3018863c32cc9f527a84c1215c3d60b78e34c90592381535872"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-copying-03.safetensors",
+          "bytes": 37258440,
+          "sha256": "fa3603aca1537414e2f3586db4969b9397305c41d7827e0c827667394bac850e"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-copying-04.safetensors",
+          "bytes": 38500352,
+          "sha256": "831bdf30b5f6273f45209a1b36b30aba5d6c3d1e18f3624787f94f337d465541"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-extraction-01.safetensors",
+          "bytes": 46572780,
+          "sha256": "c20993e2f42c2937b49b52c8bc95faceaa8718a25fc52a2bf6118daf789a0556"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-extraction-02.safetensors",
+          "bytes": 50298532,
+          "sha256": "e3941fcfb365bf45ec7b0ff63232fae4a40d416d80559e2eae4f18e425721890"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-extraction-03.safetensors",
+          "bytes": 39742264,
+          "sha256": "e568dd816ead14c49561c31cac86883219d291400ab14965e52055824c799bf2"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-extraction-04.safetensors",
+          "bytes": 53403312,
+          "sha256": "82a8ceb7022bc3eb1604f85e838bc324dbacd391ee2282860a544fb920265c15"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-topic_changes-01.safetensors",
+          "bytes": 49677576,
+          "sha256": "40532013d3af92e53d3d1877392ea62f38700508de71795c864d7e83687caf85"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-topic_changes-02.safetensors",
+          "bytes": 49056612,
+          "sha256": "7c8e4ae1eaaa624190979371db0535804800ac42d3dc5c5e7827ff1e1c5a1c42"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-topic_changes-03.safetensors",
+          "bytes": 47193736,
+          "sha256": "080265df7e7f80622fa57abe5723e4c23774e33ca53a6628f11f78c264b7e6c2"
+        },
+        {
+          "file": "tensors/partial-28-trace-fresh-topic_changes-04.safetensors",
+          "bytes": 57129048,
+          "sha256": "6c9993335e84435c8125a486165aee5115be9db934d60a31eddc119da95c110f"
+        },
+        {
+          "file": "tensors/partial-28-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "97e780ccaffb7ed6357ee8f7b8f9e74372468a6f7496eecc0b6576eb6c0ab70b"
+        },
+        {
+          "file": "tensors/partial-28-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "118828c3cb936606899f556afa0968905854ee0deada1190a2fb4838b270764c"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part14-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part15-v0.12.0.zip",
+      "bytes": 947861005,
+      "sha256": "2847b52a59ac09e6a246a2a926082b910277ea1f49412b92dcc3cea31e151808",
+      "payloads": [
+        {
+          "file": "tensors/partial-28-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "6af8deb7d13a01f9c3406dfe77167dae523e2fd308f8a115ae898c3c85d26746"
+        },
+        {
+          "file": "tensors/partial-28-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "f428964b61005a279600221d7bb5072538fc146b0d5ad0b0fb5cb1563fa82f9e"
+        },
+        {
+          "file": "tensors/partial-28-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "8a6ba7f5ba27d8f95724b397ef07ed52a52d5d4e0d3e7ea78c478686193bcdd4"
+        },
+        {
+          "file": "tensors/partial-28-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "861053f6b38772449b17498ebe41b91ad4260f9f4c6c848a29e6ad2c574694a4"
+        },
+        {
+          "file": "tensors/partial-28-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "8a06d845083fa599dc51649248a33d21f11f0dd55dacb136127c3cdf66ae73fb"
+        },
+        {
+          "file": "tensors/partial-28-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "12f66327fde84947eb07e1c2af8d62f8a5d65e99a5a164bac85967772f3c7e2e"
+        },
+        {
+          "file": "tensors/partial-56-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "89ac55fc61fcb5f2e714eea9309240e76fc548fc45da2d7289680421dcce1254"
+        },
+        {
+          "file": "tensors/partial-56-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "491d03b8557eb212eb2743d2171d09371f632a6b2be075b78f6cbdd99acca310"
+        },
+        {
+          "file": "tensors/partial-56-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "6987be5232cb0ec5f44944d051f7f1701c2415af61923f629859f95c2b1acf63"
+        },
+        {
+          "file": "tensors/partial-56-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "682b0d0802b9787d111755cef55b5fbdf53bd20fcec0e0ee3129063969d775de"
+        },
+        {
+          "file": "tensors/partial-56-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "092082bef7fcf4cf3dee0b37a05660ba55ffd280bb2a7a11542594ee42845666"
+        },
+        {
+          "file": "tensors/partial-56-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "87c356ebeef45f3a120c5b8581785943a3371413184f6f9e27e5a07dab8ab48a"
+        },
+        {
+          "file": "tensors/partial-56-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "5dd3c8220ee8ca1d15797ecdc4409e4ca2f2774eb47f69ef2e5424a252cb94b6"
+        },
+        {
+          "file": "tensors/partial-56-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "b741949ab80621349bfeff5c09e05181c24be0b12676e93bc241afb9c87fff33"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part15-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part16-v0.12.0.zip",
+      "bytes": 963867706,
+      "sha256": "a5f7bd7008d315e39e05929b6e5765ad859f6254d8e55c04d3c0db6995ec5447",
+      "payloads": [
+        {
+          "file": "tensors/predetermined-28-fresh-arithmetic-01.safetensors",
+          "bytes": 37680304,
+          "sha256": "13a2e50371a1dc7c72d31750bd59fa7747be1bb565ff6a0612ec8fd7e8e99742"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-arithmetic-02.safetensors",
+          "bytes": 40719024,
+          "sha256": "42b260648165192d07ca0200473473080fb5ebf2af3a7f3da7d5487b5ea8b8e7"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-arithmetic-03.safetensors",
+          "bytes": 37072560,
+          "sha256": "3d964062e3417a3e8e13b7e593f940849c4f6932baad2b480e54ef46732f8f01"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-arithmetic-04.safetensors",
+          "bytes": 39503536,
+          "sha256": "f133e1c128f06e20dae4f55d2827dfad8fd2df475d69ef35161ffcefad0c5dc3"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-code-01.safetensors",
+          "bytes": 50442928,
+          "sha256": "7490064ec142464fea15f52b9132696dbf1a1dd51dd407b77927bcf361ce7a26"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-code-02.safetensors",
+          "bytes": 43757744,
+          "sha256": "3b80b25af5a162f300e957842d601e762e3677cf72af2cdc145ec7587e40ee5a"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-code-03.safetensors",
+          "bytes": 49835184,
+          "sha256": "33ffe9e3e9a6fdec915f0438427fb232b4dfbdc538e19312a2095625640f21e4"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-code-04.safetensors",
+          "bytes": 45580976,
+          "sha256": "6af94ebdcaba963c8317859070ec8db36bf3481c38706780b7a42c257309fd10"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-copying-01.safetensors",
+          "bytes": 48011952,
+          "sha256": "d850b12edcf443adddd8b2e10634ac6039324c782f4d83066b8ee3ca578f479a"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-copying-02.safetensors",
+          "bytes": 46188720,
+          "sha256": "ea36958ac66eda910ff93ff81f1e1a98544c265b3712280af9f71df5e429ddc5"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-copying-03.safetensors",
+          "bytes": 41326768,
+          "sha256": "5b1a7ec0d802376a08ca671157c682bb41b6d135a08fe8f00831975263be2238"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-copying-04.safetensors",
+          "bytes": 46796464,
+          "sha256": "4bdf1b099b85d193b44ebff28ac3b3023a3b0cc636b6b43259face9a4d115ff5"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-extraction-01.safetensors",
+          "bytes": 49227440,
+          "sha256": "3fc27131d635181ab1013ed00751971fb3b80c04672a45a689772dd32510ae59"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-extraction-02.safetensors",
+          "bytes": 50442928,
+          "sha256": "e6750b389a64b96336019d0d8e2c06caace6455827f08178421ade04c945208f"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-extraction-03.safetensors",
+          "bytes": 40719024,
+          "sha256": "4a32e0c109d45187ebb62785dd5d5bceae7b467aefc7da9c030f14db8e1bdca8"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-extraction-04.safetensors",
+          "bytes": 55304880,
+          "sha256": "d985a378be89eb20877e37d968b6a358d3ac6a3e74b5779abe833d9b9e5b8423"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-topic_changes-01.safetensors",
+          "bytes": 54089392,
+          "sha256": "7c8305db9ccf9e213cb70451320e36dfff5eec2b86f7d36b39a3641b6b0a87ca"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-topic_changes-02.safetensors",
+          "bytes": 75360432,
+          "sha256": "cbbb1d14c64aa822b8692a33b4885765914169f1ea339fcfb79a6d41c0f5ec20"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-topic_changes-03.safetensors",
+          "bytes": 52266160,
+          "sha256": "2818cc611712654e683661de460eb277161e3cd841cd48531ea6d1ecf7026dd9"
+        },
+        {
+          "file": "tensors/predetermined-28-fresh-topic_changes-04.safetensors",
+          "bytes": 57128112,
+          "sha256": "424285d11b37dc733765394f28afb96508a96d33391db75b550b6acbd650824d"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-arithmetic-01.safetensors",
+          "bytes": 36016528,
+          "sha256": "cd6b471a8312d31f404904a19240bf3b402a94fb7dc4ea70209d273c804182ad"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-arithmetic-02.safetensors",
+          "bytes": 39742264,
+          "sha256": "3860244fa1085c66d44372dd4601def564870feff4ef85cd79dc847b844e7463"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-arithmetic-03.safetensors",
+          "bytes": 36016528,
+          "sha256": "656b0c5fee51ba807dedc57c7ae0ae2d026d2996f82a5b98884b0fcbf31f4284"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part16-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part17-v0.12.0.zip",
+      "bytes": 838576023,
+      "sha256": "2df57590b53581382971d9d20aa1813b5317a016ae92e526f3557de811c78e6c",
+      "payloads": [
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-arithmetic-04.safetensors",
+          "bytes": 37879396,
+          "sha256": "fbc589d55b9c9625f553eb58b948af60b57d1ce564dd9d728e2e214081e26748"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-code-01.safetensors",
+          "bytes": 49677576,
+          "sha256": "85376fa05f3f6c09073d02743af4a07bcbd4fddc3a502b34870b58176731f64e"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-code-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "260e348cc422fa6c00ef97bf15ef4dc17e358adae9fa281d217fc836bfe34493"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-code-03.safetensors",
+          "bytes": 49677576,
+          "sha256": "0a4fb722fcb742e43b30a8b61fcd269f57b4f761ef3bb3bd323ca1317bb0770b"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-code-04.safetensors",
+          "bytes": 44709912,
+          "sha256": "25549b35dc79c72f83b3191fd0c7ba70f1c4cbb275b8f55add1b7130d5c482f3"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-copying-01.safetensors",
+          "bytes": 42226088,
+          "sha256": "857fb8d441a2adb1a1a37a74800667953fe01b1c9de39b1e8e18b13117f42845"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-copying-02.safetensors",
+          "bytes": 41605132,
+          "sha256": "e97f0736d6c2707553de9873dabd6b8a82a427595d056ec319d52d885d0e12ae"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-copying-03.safetensors",
+          "bytes": 37258440,
+          "sha256": "70a9d64ffa64cd97fa17bc832c5bdced0e5600ec0eeaffc2d818169f2d9ed2e5"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-copying-04.safetensors",
+          "bytes": 43468000,
+          "sha256": "6594f884bf4026b416ae4577d6aba4b131e405c1f353014cda04bbf15581d3b4"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-extraction-01.safetensors",
+          "bytes": 46572780,
+          "sha256": "f18ade0d4851493075691a8aac98882b3db3f26baeaba0eaccdb427578eba59e"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-extraction-02.safetensors",
+          "bytes": 50298532,
+          "sha256": "33ba55668ccad44aec9fccd2132afd76c4d17ed180729880c02b30a3fb292c37"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-extraction-03.safetensors",
+          "bytes": 39742264,
+          "sha256": "68f7105ac95e3d320c0bf8be63bcf0afdd38d8d553ebb40857f4b9b52da9b532"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-extraction-04.safetensors",
+          "bytes": 55266180,
+          "sha256": "d495a1808fcaaaa5671146840e80b6d89742e1a2d4d3cdb40c91a0ce718be278"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-topic_changes-01.safetensors",
+          "bytes": 50919488,
+          "sha256": "e88d8728ccc4d0d399d24e255766a9d6846d9ebf1551f1f7bdf24c026d92eb68"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-topic_changes-02.safetensors",
+          "bytes": 75136780,
+          "sha256": "4fada0a7e9f648cbd7fe27faf68bef1c78d4674c84e60ab6e751312da1ce703a"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-topic_changes-03.safetensors",
+          "bytes": 51540444,
+          "sha256": "9d2e481e00dbb39f4e7e39193d5b581697d0ce97efd94ead34c87f2a00a183c3"
+        },
+        {
+          "file": "tensors/predetermined-28-gen-trace-fresh-topic_changes-04.safetensors",
+          "bytes": 54645224,
+          "sha256": "280bc0ed71104cb57b274df7a9655b8c3d2cbcbf81e1a32b13d159ddb585fbf0"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-arithmetic-01.safetensors",
+          "bytes": 36016528,
+          "sha256": "cd6b471a8312d31f404904a19240bf3b402a94fb7dc4ea70209d273c804182ad"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-arithmetic-02.safetensors",
+          "bytes": 39742264,
+          "sha256": "1163a144b49c18b0250c56687864761b2cda102840b0b1db9b2c3675d89a7337"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-arithmetic-03.safetensors",
+          "bytes": 36016528,
+          "sha256": "656b0c5fee51ba807dedc57c7ae0ae2d026d2996f82a5b98884b0fcbf31f4284"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-arithmetic-04.safetensors",
+          "bytes": 37879396,
+          "sha256": "a8c74141d4d6b68dfa3838cfaa1dc61048aace36132896f2409213728bbae0ab"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-code-01.safetensors",
+          "bytes": 50298532,
+          "sha256": "c9a813633b608b1c350d25b89bd9921446ed1032906c294ff366e2b73352538b"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-code-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "43f684da88f8e0ba3c5bbef7ddcb7be28bf1e5765b7e876034d4d5750ac06c0d"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part17-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part18-v0.12.0.zip",
+      "bytes": 835978425,
+      "sha256": "6fbe88a34eefbfc0d777b7d721c59a3e402c2cbcc1bc6bddce7fab247abff980",
+      "payloads": [
+        {
+          "file": "tensors/predetermined-28-trace-fresh-code-03.safetensors",
+          "bytes": 47193736,
+          "sha256": "66a5033eef4a42a9f4ade1bdd7c957871a52581606544a4b54f77abfda28310c"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-code-04.safetensors",
+          "bytes": 44709912,
+          "sha256": "25549b35dc79c72f83b3191fd0c7ba70f1c4cbb275b8f55add1b7130d5c482f3"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-copying-01.safetensors",
+          "bytes": 42847044,
+          "sha256": "7f2d9b929028ddb326b24707b01a68c26da802a83cfe8ae64fcd1ae88ef6d280"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-copying-02.safetensors",
+          "bytes": 43468000,
+          "sha256": "3732688a9c6f4beb5800493d20c6cc9d513f574bd5aad243d85de699be805379"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-copying-03.safetensors",
+          "bytes": 37258440,
+          "sha256": "70a9d64ffa64cd97fa17bc832c5bdced0e5600ec0eeaffc2d818169f2d9ed2e5"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-copying-04.safetensors",
+          "bytes": 38500352,
+          "sha256": "5ddef302add684eb2d93adcb19d1d2d6ed00aa86da96bb24c74323341dfb2312"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-extraction-01.safetensors",
+          "bytes": 46572780,
+          "sha256": "f18ade0d4851493075691a8aac98882b3db3f26baeaba0eaccdb427578eba59e"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-extraction-02.safetensors",
+          "bytes": 50298532,
+          "sha256": "d7a89c09fe132dfc480f8d2e0f5bba17b95240af266e1ca0e045e75672572ec5"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-extraction-03.safetensors",
+          "bytes": 39742264,
+          "sha256": "68f7105ac95e3d320c0bf8be63bcf0afdd38d8d553ebb40857f4b9b52da9b532"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-extraction-04.safetensors",
+          "bytes": 53403312,
+          "sha256": "084c0d6ea7600e18cfdac543851adc7e8af8a8f95cddc9b716ec188d6c900f16"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-topic_changes-01.safetensors",
+          "bytes": 49677576,
+          "sha256": "b563b6932b474cc2a840c1fb22adccee7c5d3fe55c4eabece92ec7099c212cd6"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-topic_changes-02.safetensors",
+          "bytes": 49056612,
+          "sha256": "e64a59c6f100b11d23225ff93e480784e8f37bd881bbb7177649695a8e7bc26a"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-topic_changes-03.safetensors",
+          "bytes": 47193736,
+          "sha256": "52c83f982ed2d5d19a16203ea03ba1251f8fbd97812d04ec1a2d9f041eae727e"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-fresh-topic_changes-04.safetensors",
+          "bytes": 57129048,
+          "sha256": "8923655e2c16e15ac9e127499d8006a88d819133c09a71b5b0f15755156e9fe5"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "fe2577f1ba284863a05f80a9360b3d751208ffa1c0de9cf12a17cff182c57dd4"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "59f044ca0382d6d8c6b1a58a04d32ca1ca630269b1bb3a517b280c0ce045eee7"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "df7c449a528853e3a0e208d1e13e0f6e504c5f70016cb5fdad865a85fffe538e"
+        },
+        {
+          "file": "tensors/predetermined-28-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "322a7fd35cf2092f3ebea95019a2f6b88f96124aba1e36adceb7b82d5cd70899"
+        },
+        {
+          "file": "tensors/predetermined-28-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "4a79160775e8d6c868bb6c2643e151881b4cc8661fada907d5cfeeb3639eee74"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part18-v0.12.0.zip"
+    },
+    {
+      "name": "causal-evidence-part19-v0.12.0.zip",
+      "bytes": 749536419,
+      "sha256": "159b0c168d02f717008d5198958d46a065e1dacb0291e6b15166d4422b7a7862",
+      "payloads": [
+        {
+          "file": "tensors/predetermined-28-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "56e5a6673666de713998da203afddd6bc08214955c9fcbf0c38af61561958c70"
+        },
+        {
+          "file": "tensors/predetermined-28-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "0e1c52aa635a558ac64a51b39c579e1aca7c2d309fd3f152fd115a267dbe842f"
+        },
+        {
+          "file": "tensors/predetermined-28-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "73283a95036fa71283dbea7a8a9b2dcb4a9dbdbaad9ddd272159b64ed3020f4a"
+        },
+        {
+          "file": "tensors/predetermined-56-trace-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 79483472,
+          "sha256": "2435af848b801aea401179547447c5273befc3a6e48c284961a9cad90d7e14c9"
+        },
+        {
+          "file": "tensors/predetermined-56-trace-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 79483472,
+          "sha256": "d90f0eda4e57552785e11c03e94587548c7a7ff0afd6dfa3100730e064a7e614"
+        },
+        {
+          "file": "tensors/predetermined-56-trace-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 79483472,
+          "sha256": "274525556d33df9f471a6a1e71d4b2f8cd95969516dbedff37ef563f11896ff9"
+        },
+        {
+          "file": "tensors/predetermined-56-trace-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 79483472,
+          "sha256": "de990f2d8b231c6e1f82e9bf61cd4cbe54339c59436ad25936ef5f8c53effdbf"
+        },
+        {
+          "file": "tensors/predetermined-56-wikitext-validation-2c7c602b5ac557ff.safetensors",
+          "bytes": 77791320,
+          "sha256": "68e18e591209ccd3b7546cc17c470c259eef11222901a9fa87eba70e096c22e7"
+        },
+        {
+          "file": "tensors/predetermined-56-wikitext-validation-59a50d9ab4d0c84c.safetensors",
+          "bytes": 77791320,
+          "sha256": "0991fea05d9b70a1ae9a5eb9051c1ba6850187148a2b9bc3e45b74be2b5cf60e"
+        },
+        {
+          "file": "tensors/predetermined-56-wikitext-validation-9fb0c61a50d8cdb9.safetensors",
+          "bytes": 77791320,
+          "sha256": "e65c6fd3d3539a239bd66ccb2f15346ca629c060b5f471dc90b1ad65546444b0"
+        },
+        {
+          "file": "tensors/predetermined-56-wikitext-validation-b3e260a8369ed0d7.safetensors",
+          "bytes": 77791320,
+          "sha256": "e582bc0fa7be373e3ce7b890294258050d8b637e8588cd18c36b3919e1ae594e"
+        }
+      ],
+      "url": "https://github.com/displague/dynamic-model-loading/releases/download/v0.12.0/causal-evidence-part19-v0.12.0.zip"
+    }
+  ],
+  "files": {
+    "analysis/summary.json": {
+      "bytes": 25254,
+      "sha256": "ede2ad19b3ee3b7926ffc5f5b80cedae4c6370bd295829466885158dbe36c800"
+    },
+    "analysis/verification.json": {
+      "bytes": 447,
+      "sha256": "eac163a8c4ade80ffc1ef9925376e05e0becb20f2f0213ba054a4b8d0001db26"
+    },
+    "causal-evidence-20260912.log": {
+      "bytes": 7146,
+      "sha256": "8af7006811c39b6853e9451aee053534eda658e63434575b5cd3933cdea00d09"
+    },
+    "causal-evidence-cost-20260912.log": {
+      "bytes": 1851,
+      "sha256": "24a122be94757fa6925717c42ac77da12d9177ffdabe3d2a5b55374bad840b94"
+    },
+    "causal-evidence-cost-corrected-20260912.log": {
+      "bytes": 753,
+      "sha256": "d7534c9d4bf090a59932e4c6de6def6692198e9d27d583346732437c331c8f70"
+    },
+    "cost/batch-inputs.json": {
+      "bytes": 53880,
+      "sha256": "ec54f1a0caaf254e30b4cc2742252729c6897f95aa2b473ad84b1a2d542e98e2"
+    },
+    "cost/batch-results.jsonl": {
+      "bytes": 68007,
+      "sha256": "425a5d382f8dd5c6eb0dfe79e3231f36b78d03d053f6212f43493609767baf40"
+    },
+    "cost/batch-summary.json": {
+      "bytes": 5768,
+      "sha256": "80c4eab4050c91344f97888060f0a4ee5aaeed25e55bea8bd1d8419ce1825c95"
+    },
+    "cost/config.json": {
+      "bytes": 2901,
+      "sha256": "721bed17e5a0bcb6f87c74c9b51815f4af18c80fd91100b8f28ae84812db1ad2"
+    },
+    "cost/fit-layout.json": {
+      "bytes": 20821,
+      "sha256": "1dca5b9adf19fb1c432ce3cd9d65be7091e6da7b3320de50a5fc5bc26483f953"
+    },
+    "cost/manifest.json": {
+      "bytes": 4954,
+      "sha256": "d1e873be63385718a0511263d5f1b003b157a097629febe9febfbc01abbe49bf"
+    },
+    "cost/protocol.md": {
+      "bytes": 2087,
+      "sha256": "52cbb25f9ccdf29c9d2a8bfa7fe9be4c2cde44354121045ca17e2569480f31ad"
+    },
+    "cost/results.jsonl": {
+      "bytes": 89965,
+      "sha256": "bdb35158612d882ff8422a5737ff5efcec43997fa600e732fe0ba8251348fa09"
+    },
+    "cost/source/__init__.py": {
+      "bytes": 73,
+      "sha256": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738"
+    },
+    "cost/source/adapters.py": {
+      "bytes": 1295,
+      "sha256": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc"
+    },
+    "cost/source/analysis.py": {
+      "bytes": 4537,
+      "sha256": "ba578312bb18e3af8104fd50f6bcf30a02d887fcf6224b4bb56434f5fb1fb086"
+    },
+    "cost/source/balanced_analysis.py": {
+      "bytes": 15521,
+      "sha256": "a52abceea0ed590b36680752648beedd2f1505a059a6ce7c6a0b9dede755a5d1"
+    },
+    "cost/source/balanced_control.py": {
+      "bytes": 18612,
+      "sha256": "dea4a415b426c2bb8fc2a2c4adebab155f1982e60c5a11612fa747856747e965"
+    },
+    "cost/source/cache.py": {
+      "bytes": 7027,
+      "sha256": "b8de5501e47e2b357f46309306b9277ccd4be953e239c19c9ad5b4b363221298"
+    },
+    "cost/source/cache_analysis.py": {
+      "bytes": 12104,
+      "sha256": "bdbb3b28320319c2a89bcf4b513cfc32ef5795450f38f7558f19d7da137c6f57"
+    },
+    "cost/source/cache_plot.py": {
+      "bytes": 3173,
+      "sha256": "dde8ac19e88b4de730d8c76efc0b4268d61135e12b47c540ef05e8baa9023a74"
+    },
+    "cost/source/causal.py": {
+      "bytes": 7973,
+      "sha256": "fd2c7e00a53bef988574122c9ac31a31d6b56ec043cbb87d59741052b76c943a"
+    },
+    "cost/source/causal_analysis.py": {
+      "bytes": 16877,
+      "sha256": "ead048becec0229e0e16a80141f2db9e634d8a5198b08ff04a1b4d40681264c9"
+    },
+    "cost/source/causal_evidence.py": {
+      "bytes": 13183,
+      "sha256": "1c7be9915f1c5df6c6b589cbc8a8db5e7a62b6e675ab9133b9a81465171929fd"
+    },
+    "cost/source/causal_evidence_analysis.py": {
+      "bytes": 22522,
+      "sha256": "730555f4f969cd916d40850cea0e641b9a60dbb8400d81706dfe8910b851ccea"
+    },
+    "cost/source/causal_evidence_cost.py": {
+      "bytes": 16325,
+      "sha256": "400844262f39134b6b41faaa63b3e0729a2ccf30ee777beb61d70dac13de4591"
+    },
+    "cost/source/causal_evidence_study.py": {
+      "bytes": 19333,
+      "sha256": "341cc2eb2a25827310dbd776ed13f8040a6bc2e678e1378838237448fcbb84f3"
+    },
+    "cost/source/causal_plot.py": {
+      "bytes": 4705,
+      "sha256": "18de19d95a2c35b33951e9fb76f318ed461782e873181babee088f0f295a03c9"
+    },
+    "cost/source/causal_study.py": {
+      "bytes": 20353,
+      "sha256": "32bdea4f0c726db198c97063b1b6a88a2d000c0866c766ef808cfe74ce3c0b12"
+    },
+    "cost/source/corpus.py": {
+      "bytes": 5245,
+      "sha256": "127735e3b9f13c040fc4fa99b5c38b4bb1d2f9c39205e38650211d3acc7d4567"
+    },
+    "cost/source/dense_interface.py": {
+      "bytes": 20247,
+      "sha256": "3a1bb926d56a428f7ca4706d892a68b035cacc5effaa76f7292d0ec96325bb86"
+    },
+    "cost/source/environment_analysis.py": {
+      "bytes": 9147,
+      "sha256": "66a45022834e01fe5ba0995cad7782aecba9db6dce54533d968e3e99f4e1a94e"
+    },
+    "cost/source/experiment.py": {
+      "bytes": 25825,
+      "sha256": "5fc3881995fb2318f954167971c3c4790b2b7c78470d02272f2dfa62cfcefe84"
+    },
+    "cost/source/ffn.py": {
+      "bytes": 6451,
+      "sha256": "4bc70ad070e0a68d5d7da7b34b5832d9a65a2a7f21d426ade988a63363e4da43"
+    },
+    "cost/source/hardware_analysis.py": {
+      "bytes": 6478,
+      "sha256": "20aa86c4614229361095c8d31dff4bb4c08ade7834556d4f562cf23a1fadd395"
+    },
+    "cost/source/hardware_cost.py": {
+      "bytes": 10511,
+      "sha256": "027e9195914b0a56d6ce0ba3fa2ef0c56d0995a2af80d770189d045b57c04d9b"
+    },
+    "cost/source/layer_plot.py": {
+      "bytes": 5258,
+      "sha256": "eb9221c88e808700df2898aa69ea1f47f24220d93fba517d2ce4b4323220b651"
+    },
+    "cost/source/layer_study.py": {
+      "bytes": 16906,
+      "sha256": "cb5d76f0f9645d0c97b194f0cc2c87c9a7156eeedf638ec91e033652bfc5eef6"
+    },
+    "cost/source/metrics.py": {
+      "bytes": 3471,
+      "sha256": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53"
+    },
+    "cost/source/packing.py": {
+      "bytes": 3910,
+      "sha256": "b13c919d54ebc7e97669ee454a37b09732b3faa5cb78f697ee6a3a9f6297fe46"
+    },
+    "cost/source/precision.py": {
+      "bytes": 11271,
+      "sha256": "7ecd06ede79e646a50e116e72a143af3a7e7e14e578c80f85ee28e8462926b45"
+    },
+    "cost/source/provenance.py": {
+      "bytes": 3666,
+      "sha256": "7a49031df1c6caa87c8c7cebba1d2005e62e77cedf78eb39b00e30c8b1ea8082"
+    },
+    "cost/source/relu.py": {
+      "bytes": 7151,
+      "sha256": "d0afe4f3c8cccbb496e5ccdfd6793f4ca79c1493bfdcaab31b756121d7add125"
+    },
+    "cost/source/relu_analysis.py": {
+      "bytes": 15583,
+      "sha256": "69bcc87724c9faff444764d9f807a7ead527f691ab7448580d7d8e55a3a5c8cf"
+    },
+    "cost/source/relu_study.py": {
+      "bytes": 12733,
+      "sha256": "8b6efdcf1686bef37790e8d69559983b447f63489e804ac88a7684bc119d0a1a"
+    },
+    "cost/source/repair.py": {
+      "bytes": 7119,
+      "sha256": "112074a192678c3f6748b57af416458abdab126470126a2f6069204b4546e24a"
+    },
+    "cost/source/repair_analysis.py": {
+      "bytes": 13899,
+      "sha256": "24c396b0d4502941be8deb06ceb49b0986186fb05292147c4548e3611eb9c839"
+    },
+    "cost/source/repair_plot.py": {
+      "bytes": 3623,
+      "sha256": "1f3ab5d91fad1ff9fcb94d8b331912d0b8a68dd0863a353193b2a6ae4d32e03e"
+    },
+    "cost/source/repair_study.py": {
+      "bytes": 19153,
+      "sha256": "a56f9692d5a58e928093c5eabcdbc727a90a8ac4c4c5dce67c348ba7bc2b6b21"
+    },
+    "cost/source/trace.py": {
+      "bytes": 3533,
+      "sha256": "02845555dec8869447dd32e3af63fd466b5cc792e3173d75416d4e1652490fda"
+    },
+    "cost/summary.json": {
+      "bytes": 7849,
+      "sha256": "3ed3087e424e713f7a4f160f37036a7967c2af1dc83de2ac2a010d06e5cd6040"
+    },
+    "diagnose-causal-replay-full.log": {
+      "bytes": 446,
+      "sha256": "d9ec96fa145c63fd598e1206a97bb3ba8ed9dac40945a58480bb9727cce32c26"
+    },
+    "diagnose-causal-replay-full.py": {
+      "bytes": 2515,
+      "sha256": "642ff53284aa3c384a6d6130450d96f8ec15ee3cf3399f80b3444be676f26b86"
+    },
+    "diagnose-causal-replay.log": {
+      "bytes": 257,
+      "sha256": "d0fe11f36d6275f620cc898864f8160571057a63f827a5d3a134562665430ffa"
+    },
+    "diagnose-causal-replay.py": {
+      "bytes": 2522,
+      "sha256": "3e6801a872a311e0e872ce153dd302ded04b72330290bd878457cf0bb1901a04"
+    },
+    "failed-cost/manifest.json": {
+      "bytes": 1216,
+      "sha256": "dc7bbe77324972a30aeb94894064583cafbdb3b686f28508cad166da30a819fb"
+    },
+    "failed-cost/results.jsonl": {
+      "bytes": 81175,
+      "sha256": "05ba0bfd594693da296094528d3511f81b32990c3ed603336352a7ba6d33b6c9"
+    },
+    "README.md": {
+      "bytes": 3898,
+      "sha256": "afebee15b382ae0a1f528bb6d3afd4519614f472a94c5909825e21dc53b06a9a"
+    },
+    "restore.py": {
+      "bytes": 2213,
+      "sha256": "f6eda1494f6f30499b0adc0ac2caaaba94a8162b9d007832c038882ff7957c0f"
+    },
+    "run/config.json": {
+      "bytes": 2901,
+      "sha256": "721bed17e5a0bcb6f87c74c9b51815f4af18c80fd91100b8f28ae84812db1ad2"
+    },
+    "run/inputs.json": {
+      "bytes": 448261,
+      "sha256": "e133e0aecb0817284658c4532bb3824894210ee2afb8a491f1355a37b58cf76b"
+    },
+    "run/manifest.json": {
+      "bytes": 4745,
+      "sha256": "323e72f7f92d5ec6ab6f2387edbbd7d58035102816f296701f911789b9d0551a"
+    },
+    "run/model.json": {
+      "bytes": 2950,
+      "sha256": "3c863963546d20d94155ec8ed486a63589579329553403a8248bb52363b33271"
+    },
+    "run/protocol.md": {
+      "bytes": 11761,
+      "sha256": "e1b840208113b22ab355120ed0912e0695bb5499dfe6020d7e906e3f3e87603a"
+    },
+    "run/results.jsonl": {
+      "bytes": 272327,
+      "sha256": "bd031c279e391e73b487cc633279afb85c0d1f5c46de959205091254749ca1d9"
+    },
+    "run/source/__init__.py": {
+      "bytes": 73,
+      "sha256": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738"
+    },
+    "run/source/adapters.py": {
+      "bytes": 1295,
+      "sha256": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc"
+    },
+    "run/source/analysis.py": {
+      "bytes": 4537,
+      "sha256": "ba578312bb18e3af8104fd50f6bcf30a02d887fcf6224b4bb56434f5fb1fb086"
+    },
+    "run/source/balanced_analysis.py": {
+      "bytes": 15521,
+      "sha256": "a52abceea0ed590b36680752648beedd2f1505a059a6ce7c6a0b9dede755a5d1"
+    },
+    "run/source/balanced_control.py": {
+      "bytes": 18612,
+      "sha256": "dea4a415b426c2bb8fc2a2c4adebab155f1982e60c5a11612fa747856747e965"
+    },
+    "run/source/cache.py": {
+      "bytes": 7027,
+      "sha256": "b8de5501e47e2b357f46309306b9277ccd4be953e239c19c9ad5b4b363221298"
+    },
+    "run/source/cache_analysis.py": {
+      "bytes": 12104,
+      "sha256": "bdbb3b28320319c2a89bcf4b513cfc32ef5795450f38f7558f19d7da137c6f57"
+    },
+    "run/source/cache_plot.py": {
+      "bytes": 3173,
+      "sha256": "dde8ac19e88b4de730d8c76efc0b4268d61135e12b47c540ef05e8baa9023a74"
+    },
+    "run/source/causal.py": {
+      "bytes": 7973,
+      "sha256": "fd2c7e00a53bef988574122c9ac31a31d6b56ec043cbb87d59741052b76c943a"
+    },
+    "run/source/causal_analysis.py": {
+      "bytes": 16877,
+      "sha256": "ead048becec0229e0e16a80141f2db9e634d8a5198b08ff04a1b4d40681264c9"
+    },
+    "run/source/causal_evidence.py": {
+      "bytes": 13183,
+      "sha256": "1c7be9915f1c5df6c6b589cbc8a8db5e7a62b6e675ab9133b9a81465171929fd"
+    },
+    "run/source/causal_evidence_analysis.py": {
+      "bytes": 21487,
+      "sha256": "e632a8cc4a9548b7ec87baf0979057179c1e6a9a6bb5d8029823e1736ffd5678"
+    },
+    "run/source/causal_evidence_cost.py": {
+      "bytes": 14904,
+      "sha256": "71cf904036bf514f44fa6e0b1eabd2c0942c212668399aa4d42e79133fad1f72"
+    },
+    "run/source/causal_evidence_study.py": {
+      "bytes": 19333,
+      "sha256": "341cc2eb2a25827310dbd776ed13f8040a6bc2e678e1378838237448fcbb84f3"
+    },
+    "run/source/causal_plot.py": {
+      "bytes": 4705,
+      "sha256": "18de19d95a2c35b33951e9fb76f318ed461782e873181babee088f0f295a03c9"
+    },
+    "run/source/causal_study.py": {
+      "bytes": 20353,
+      "sha256": "32bdea4f0c726db198c97063b1b6a88a2d000c0866c766ef808cfe74ce3c0b12"
+    },
+    "run/source/corpus.py": {
+      "bytes": 5245,
+      "sha256": "127735e3b9f13c040fc4fa99b5c38b4bb1d2f9c39205e38650211d3acc7d4567"
+    },
+    "run/source/dense_interface.py": {
+      "bytes": 20247,
+      "sha256": "3a1bb926d56a428f7ca4706d892a68b035cacc5effaa76f7292d0ec96325bb86"
+    },
+    "run/source/environment_analysis.py": {
+      "bytes": 9147,
+      "sha256": "66a45022834e01fe5ba0995cad7782aecba9db6dce54533d968e3e99f4e1a94e"
+    },
+    "run/source/experiment.py": {
+      "bytes": 25825,
+      "sha256": "5fc3881995fb2318f954167971c3c4790b2b7c78470d02272f2dfa62cfcefe84"
+    },
+    "run/source/ffn.py": {
+      "bytes": 6451,
+      "sha256": "4bc70ad070e0a68d5d7da7b34b5832d9a65a2a7f21d426ade988a63363e4da43"
+    },
+    "run/source/hardware_analysis.py": {
+      "bytes": 6478,
+      "sha256": "20aa86c4614229361095c8d31dff4bb4c08ade7834556d4f562cf23a1fadd395"
+    },
+    "run/source/hardware_cost.py": {
+      "bytes": 10511,
+      "sha256": "027e9195914b0a56d6ce0ba3fa2ef0c56d0995a2af80d770189d045b57c04d9b"
+    },
+    "run/source/layer_plot.py": {
+      "bytes": 5258,
+      "sha256": "eb9221c88e808700df2898aa69ea1f47f24220d93fba517d2ce4b4323220b651"
+    },
+    "run/source/layer_study.py": {
+      "bytes": 16906,
+      "sha256": "cb5d76f0f9645d0c97b194f0cc2c87c9a7156eeedf638ec91e033652bfc5eef6"
+    },
+    "run/source/metrics.py": {
+      "bytes": 3471,
+      "sha256": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53"
+    },
+    "run/source/packing.py": {
+      "bytes": 3910,
+      "sha256": "b13c919d54ebc7e97669ee454a37b09732b3faa5cb78f697ee6a3a9f6297fe46"
+    },
+    "run/source/precision.py": {
+      "bytes": 11271,
+      "sha256": "7ecd06ede79e646a50e116e72a143af3a7e7e14e578c80f85ee28e8462926b45"
+    },
+    "run/source/provenance.py": {
+      "bytes": 3666,
+      "sha256": "7a49031df1c6caa87c8c7cebba1d2005e62e77cedf78eb39b00e30c8b1ea8082"
+    },
+    "run/source/relu.py": {
+      "bytes": 7151,
+      "sha256": "d0afe4f3c8cccbb496e5ccdfd6793f4ca79c1493bfdcaab31b756121d7add125"
+    },
+    "run/source/relu_analysis.py": {
+      "bytes": 15583,
+      "sha256": "69bcc87724c9faff444764d9f807a7ead527f691ab7448580d7d8e55a3a5c8cf"
+    },
+    "run/source/relu_study.py": {
+      "bytes": 12733,
+      "sha256": "8b6efdcf1686bef37790e8d69559983b447f63489e804ac88a7684bc119d0a1a"
+    },
+    "run/source/repair.py": {
+      "bytes": 7119,
+      "sha256": "112074a192678c3f6748b57af416458abdab126470126a2f6069204b4546e24a"
+    },
+    "run/source/repair_analysis.py": {
+      "bytes": 13899,
+      "sha256": "24c396b0d4502941be8deb06ceb49b0986186fb05292147c4548e3611eb9c839"
+    },
+    "run/source/repair_plot.py": {
+      "bytes": 3623,
+      "sha256": "1f3ab5d91fad1ff9fcb94d8b331912d0b8a68dd0863a353193b2a6ae4d32e03e"
+    },
+    "run/source/repair_study.py": {
+      "bytes": 19153,
+      "sha256": "a56f9692d5a58e928093c5eabcdbc727a90a8ac4c4c5dce67c348ba7bc2b6b21"
+    },
+    "run/source/trace.py": {
+      "bytes": 3533,
+      "sha256": "02845555dec8869447dd32e3af63fd466b5cc792e3173d75416d4e1652490fda"
+    },
+    "run/summary.json": {
+      "bytes": 6215,
+      "sha256": "2d859fa0613233ea4fc8de502cdc063d402bf3f81004842295c04d8d793d0d04"
+    }
+  }
+}

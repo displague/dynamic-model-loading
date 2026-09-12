@@ -1,0 +1,4 @@
+Fits bitwise equal: True
+First weights: [('0.base.weight', (1120, 1), (1, 33)), ('0.detector.weight', (1, 1), (1, 43)), ('0.input.weight', (1120, 1), (1, 16)), ('0.repair.weight', (1120, 1), (1, 43))]
+saved_contiguous {"step": 4, "layer": 7, "initial_difference": [943, 975], "addition_difference": [943, 975], "detection": 0.0, "recorded_detection": 0.0, "initial_score_max_difference": 1.1920928955078125e-07}
+refitted_original_layout null

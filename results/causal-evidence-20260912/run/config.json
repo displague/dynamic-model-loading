@@ -1,0 +1,147 @@
+{
+  "protocol": "docs/causal-evidence-protocol.md",
+  "model": {
+    "model": "Qwen/Qwen2.5-1.5B-Instruct",
+    "revision": "989aa7980e4cf806f80c7fef2b1adb7bc71aa306",
+    "parent": "results/causal-control-20260911/run",
+    "parent_hashes": {
+      "manifest.json": "cf26683c3bbfd9e3770fcc8b3cc374a5dc833b2f99e53abf973afd3c6a344b09",
+      "layouts.json.gz": "ab0c2657c4c183aab5ff4f6c03ef4c27c877a5a262893164ddfa71ff581558fa"
+    },
+    "shapes": [
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ],
+      [
+        1536,
+        8960
+      ]
+    ]
+  },
+  "parent": "results/causal-control-20260911/run",
+  "parent_hashes": {
+    "manifest.json": "cf26683c3bbfd9e3770fcc8b3cc374a5dc833b2f99e53abf973afd3c6a344b09",
+    "layouts.json.gz": "ab0c2657c4c183aab5ff4f6c03ef4c27c877a5a262893164ddfa71ff581558fa",
+    "calibration-importance.safetensors.gz": "c80d3999af0c3012b95fc23ad4b93201f1b3d6d9dbc8e0723f647e5ac2d5a826",
+    "corpus.jsonl": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+    "token-ids.json": "f26039f7ca013329da2aa2e6872bb80d878a872f159e17e8723d3339d2ede505"
+  },
+  "calibration_documents": 4,
+  "development_documents": 4,
+  "tokens": 128,
+  "controller_reservation_bytes": 33554432,
+  "acquisition_workspace_bytes": 268435456,
+  "budget_bytes": 2147483648,
+  "group_bytes": 147456,
+  "hardware": "results/hardware-cost-20260911/analysis/summary.json",
+  "interface_config": "configs/dense-interface.json",
+  "interface_sha256": "761faba026c9800fbad1f8d8567ee2be25ca05cd5d9c4f5cdb95c2f36f3c5f98",
+  "task_corpus": "data/dense-interface-fresh.jsonl",
+  "task_sha256": "5af12791c9b79b96bc0edcd2f9036006c94c7cc1ef49ea0d09a617735e98c4d1",
+  "hardware_sha256": "5a957f0df23c14d536bf60aceab205fd6976cba5b8625be3a87d9fbab58922a0"
+}

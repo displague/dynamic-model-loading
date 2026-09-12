@@ -1,0 +1,261 @@
+{
+  "aggregates": [
+    {
+      "groups": 28,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.5021999968448654,
+        "cuda_ms": 0.42399999499320984
+      }
+    },
+    {
+      "groups": 28,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 1.0220999974990264,
+        "cuda_ms": 0.9984799921512604
+      }
+    },
+    {
+      "groups": 56,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.09714999760035425,
+        "cuda_ms": 0.08473599702119827
+      }
+    },
+    {
+      "groups": 56,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 0.7691999926464632,
+        "cuda_ms": 0.7453120052814484
+      }
+    },
+    {
+      "groups": 112,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.09435000538360327,
+        "cuda_ms": 0.08275199681520462
+      }
+    },
+    {
+      "groups": 112,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 1.3236000086180866,
+        "cuda_ms": 1.3032479882240295
+      }
+    },
+    {
+      "groups": 446,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.2895500074373558,
+        "cuda_ms": 0.2404320016503334
+      }
+    },
+    {
+      "groups": 446,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 6.149950000690296,
+        "cuda_ms": 6.115952014923096
+      }
+    },
+    {
+      "groups": 447,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.15279999934136868,
+        "cuda_ms": 0.1334879994392395
+      }
+    },
+    {
+      "groups": 447,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 6.357249993016012,
+        "cuda_ms": 6.321808099746704
+      }
+    },
+    {
+      "groups": 455,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.15279998478945345,
+        "cuda_ms": 0.1335040032863617
+      }
+    },
+    {
+      "groups": 455,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 6.469949992606416,
+        "cuda_ms": 6.437680006027222
+      }
+    },
+    {
+      "groups": 456,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.14119999832473695,
+        "cuda_ms": 0.12649599462747574
+      }
+    },
+    {
+      "groups": 456,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 6.347850023303181,
+        "cuda_ms": 6.32372784614563
+      }
+    },
+    {
+      "groups": 561,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.1728999923216179,
+        "cuda_ms": 0.157663993537426
+      }
+    },
+    {
+      "groups": 561,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 8.258000001660548,
+        "cuda_ms": 8.195695877075195
+      }
+    },
+    {
+      "groups": 562,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 1.2641499924939126,
+        "cuda_ms": 0.9387359917163849
+      }
+    },
+    {
+      "groups": 562,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 15.71819998207502,
+        "cuda_ms": 15.349552631378174
+      }
+    },
+    {
+      "groups": 589,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.17485000716987997,
+        "cuda_ms": 0.16024000197649002
+      }
+    },
+    {
+      "groups": 589,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 9.127549987169914,
+        "cuda_ms": 9.098112106323242
+      }
+    },
+    {
+      "groups": 590,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.1882499927887693,
+        "cuda_ms": 0.1690239980816841
+      }
+    },
+    {
+      "groups": 590,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 8.717050004634075,
+        "cuda_ms": 8.682784080505371
+      }
+    },
+    {
+      "groups": 617,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.2674999996088445,
+        "cuda_ms": 0.21934399753808975
+      }
+    },
+    {
+      "groups": 617,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 8.586250012740493,
+        "cuda_ms": 8.552063941955566
+      }
+    },
+    {
+      "groups": 618,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.18200001795776188,
+        "cuda_ms": 0.16969599574804306
+      }
+    },
+    {
+      "groups": 618,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 20.470399991609156,
+        "cuda_ms": 20.232239723205566
+      }
+    },
+    {
+      "groups": 664,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.1993000041693449,
+        "cuda_ms": 0.18519999831914902
+      }
+    },
+    {
+      "groups": 664,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 19.517999986419454,
+        "cuda_ms": 19.290480613708496
+      }
+    },
+    {
+      "groups": 665,
+      "workload": "resident_ffn",
+      "medians": {
+        "wall_ms": 0.3040000010514632,
+        "cuda_ms": 0.2500640004873276
+      }
+    },
+    {
+      "groups": 665,
+      "workload": "gather_transfer_pack_ffn",
+      "medians": {
+        "wall_ms": 20.55445000587497,
+        "cuda_ms": 20.502415657043457
+      }
+    }
+  ],
+  "groups": [
+    28,
+    56,
+    112,
+    446,
+    447,
+    455,
+    456,
+    561,
+    562,
+    589,
+    590,
+    617,
+    618,
+    664,
+    665
+  ]
+}

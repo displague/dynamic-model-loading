@@ -1,0 +1,16 @@
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<00:37,  9.06it/s]
+Loading weights:  61%|██████    | 207/338 [00:00<00:00, 1139.14it/s]
+Loading weights:  96%|█████████▌| 324/338 [00:00<00:00, 1081.84it/s]
+Loading weights: 100%|██████████| 338/338 [00:00<00:00, 909.10it/s] 
+Completed cost fixture initial 0
+Completed cost fixture one_shot 28
+Completed cost fixture one_shot 56
+Completed cost fixture predetermined 28
+Completed cost fixture predetermined 56
+Completed cost fixture partial 28
+Completed cost fixture partial 56
+Completed cost fixture input_only 28
+Completed cost fixture fallback 28
+Completed cost fixture full 112

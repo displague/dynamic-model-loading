@@ -1,0 +1,4 @@
+Fits bitwise equal: True
+First weights: [('0.base.weight', (1120, 1), (1, 33)), ('0.detector.weight', (1, 1), (1, 43)), ('0.input.weight', (1120, 1), (1, 16)), ('0.repair.weight', (1120, 1), (1, 43))]
+saved_contiguous null
+refitted_original_layout null

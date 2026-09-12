@@ -1,0 +1,216 @@
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<02:59,  1.87it/s]
+Loading weights:  47%|████▋     | 160/338 [00:00<00:00, 326.63it/s]
+Loading weights:  72%|███████▏  | 242/338 [00:00<00:00, 318.99it/s]
+Loading weights:  89%|████████▉ | 301/338 [00:01<00:00, 286.47it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 253.93it/s]
+Completed calibration pass 1
+Completed calibration pass 2
+Completed causal condition initial-0
+Completed causal condition one_shot-28
+Completed causal condition one_shot-56
+Completed causal condition predetermined-28
+Completed causal condition predetermined-56
+Completed causal condition partial-28
+Completed causal condition partial-56
+Completed causal condition input_only-28
+Completed causal condition fallback-28
+Completed causal condition full-112
+{
+  "status": "causal_evidence_measured",
+  "conditions": [
+    {
+      "mode": "initial",
+      "extra": 0,
+      "quality": {
+        "mean_kl_dense_to_candidate": 0.3169423089663782,
+        "top1_agreement": 0.8031496062992126,
+        "dense_nll": 2.05746962131889,
+        "candidate_nll": 2.263740944232192,
+        "predicted_tokens": 508,
+        "relative_perplexity": 1.2290866381264636
+      },
+      "warm_bytes": 1186129633280,
+      "warm_saving": 0.15614715210824948,
+      "individual_quality_passes": 0,
+      "gate_b_wiki": false,
+      "traffic_pass": true,
+      "round_fraction": 0.0,
+      "fallback_fraction": 0.0
+    },
+    {
+      "mode": "one_shot",
+      "extra": 28,
+      "quality": {
+        "mean_kl_dense_to_candidate": 0.20688617540213117,
+        "top1_agreement": 0.8228346456692913,
+        "dense_nll": 2.05746962131889,
+        "candidate_nll": 2.1641208044215303,
+        "predicted_tokens": 508,
+        "relative_perplexity": 1.1125461119049926
+      },
+      "warm_bytes": 1245322862592,
+      "warm_saving": 0.11403508127775097,
+      "individual_quality_passes": 0,
+      "gate_b_wiki": false,
+      "traffic_pass": true,
+      "round_fraction": 0.0,
+      "fallback_fraction": 0.0
+    },
+    {
+      "mode": "one_shot",
+      "extra": 56,
+      "quality": {
+        "mean_kl_dense_to_candidate": 0.12556446138548874,
+        "top1_agreement": 0.860236220472441,
+        "dense_nll": 2.05746962131889,
+        "candidate_nll": 2.1100570014836943,
+        "predicted_tokens": 508,
+        "relative_perplexity": 1.0539946562816442
+      },
+      "warm_bytes": 1304516091904,
+      "warm_saving": 0.07192301044725236,
+      "individual_quality_passes": 2,
+      "gate_b_wiki": false,
+      "traffic_pass": false,
+      "round_fraction": 0.0,
+      "fallback_fraction": 0.0
+    },
+    {
+      "mode": "predetermined",
+      "extra": 28,
+      "quality": {
+        "mean_kl_dense_to_candidate": 0.2128791751485643,
+        "top1_agreement": 0.8248031496062992,
+        "dense_nll": 2.05746962131889,
+        "candidate_nll": 2.1592143368676338,
+        "predicted_tokens": 508,
+        "relative_perplexity": 1.107100810027127
+      },
+      "warm_bytes": 1245322862592,
+      "warm_saving": 0.11403508127775097,
+      "individual_quality_passes": 0,
+      "gate_b_wiki": false,
+      "traffic_pass": true,
+      "round_fraction": 1.0,
+      "fallback_fraction": 0.0
+    },
+    {
+      "mode": "predetermined",
+      "extra": 56,
+      "quality": {
+        "mean_kl_dense_to_candidate": 0.15653332440452183,
+        "top1_agreement": 0.8385826771653543,
+        "dense_nll": 2.05746962131889,
+        "candidate_nll": 2.1217996230765963,
+        "predicted_tokens": 508,
+        "relative_perplexity": 1.0664442691827094
+      },
+      "warm_bytes": 1304516091904,
+      "warm_saving": 0.07192301044725236,
+      "individual_quality_passes": 1,
+      "gate_b_wiki": false,
+      "traffic_pass": false,
+      "round_fraction": 1.0,
+      "fallback_fraction": 0.0
+    },
+    {
+      "mode": "partial",
+      "extra": 28,
+      "quality": {
+        "mean_kl_dense_to_candidate": 0.18293496051699829,
+        "top1_agreement": 0.84251968503937,
+        "dense_nll": 2.05746962131889,
+        "candidate_nll": 2.1431768421871498,
+        "predicted_tokens": 508,
+        "relative_perplexity": 1.0894873024588967
+      },
+      "warm_bytes": 1245322862592,
+      "warm_saving": 0.11403508127775097,
+      "individual_quality_passes": 0,
+      "gate_b_wiki": false,
+      "traffic_pass": true,
+      "round_fraction": 1.0,
+      "fallback_fraction": 0.0
+    },
+    {
+      "mode": "partial",
+      "extra": 56,
+      "quality": {
+        "mean_kl_dense_to_candidate": 0.11704241829578994,
+        "top1_agreement": 0.8661417322834646,
+        "dense_nll": 2.05746962131889,
+        "candidate_nll": 2.0787919346570085,
+        "predicted_tokens": 508,
+        "relative_perplexity": 1.0215512581769317
+      },
+      "warm_bytes": 1304516091904,
+      "warm_saving": 0.07192301044725236,
+      "individual_quality_passes": 2,
+      "gate_b_wiki": false,
+      "traffic_pass": false,
+      "round_fraction": 1.0,
+      "fallback_fraction": 0.0
+    },
+    {
+      "mode": "input_only",
+      "extra": 28,
+      "quality": {
+        "mean_kl_dense_to_candidate": 0.21366302867491258,
+        "top1_agreement": 0.8366141732283464,
+        "dense_nll": 2.05746962131889,
+        "candidate_nll": 2.1792864478920104,
+        "predicted_tokens": 508,
+        "relative_perplexity": 1.129547179801847
+      },
+      "warm_bytes": 1245322862592,
+      "warm_saving": 0.11403508127775097,
+      "individual_quality_passes": 0,
+      "gate_b_wiki": false,
+      "traffic_pass": true,
+      "round_fraction": 0.0,
+      "fallback_fraction": 0.0
+    },
+    {
+      "mode": "fallback",
+      "extra": 28,
+      "quality": {
+        "mean_kl_dense_to_candidate": 0.015085805420954291,
+        "top1_agreement": 0.9704724409448819,
+        "dense_nll": 2.05746962131889,
+        "candidate_nll": 2.0690161451646545,
+        "predicted_tokens": 508,
+        "relative_perplexity": 1.0116134422625742
+      },
+      "warm_bytes": 1416882480192,
+      "warm_saving": -0.00801824901014081,
+      "individual_quality_passes": 1,
+      "gate_b_wiki": false,
+      "traffic_pass": false,
+      "round_fraction": 1.0,
+      "fallback_fraction": 0.9660993303571429
+    },
+    {
+      "mode": "full",
+      "extra": 112,
+      "quality": {
+        "mean_kl_dense_to_candidate": 4.5210707610722735e-08,
+        "top1_agreement": 1.0,
+        "dense_nll": 2.05746962131889,
+        "candidate_nll": 2.057469529298651,
+        "predicted_tokens": 508,
+        "relative_perplexity": 0.9999999079797652
+      },
+      "warm_bytes": 1422902550528,
+      "warm_saving": -0.012301131213744654,
+      "individual_quality_passes": 4,
+      "gate_b_wiki": true,
+      "traffic_pass": false,
+      "round_fraction": 1.0,
+      "fallback_fraction": 0.0
+    }
+  ],
+  "runtime_nomination": null,
+  "timing_pending": true
+}

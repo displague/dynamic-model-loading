@@ -1,0 +1,326 @@
+{
+  "aggregates": [
+    {
+      "mode": "initial",
+      "extra": 0,
+      "workload": "dense_ffn",
+      "wall_ms": 314.72754999413155,
+      "cuda_ms": 314.64137268066406,
+      "visits": 896
+    },
+    {
+      "mode": "initial",
+      "extra": 0,
+      "workload": "down_products",
+      "wall_ms": 95.72850001859479,
+      "cuda_ms": 95.66835021972656,
+      "visits": 896
+    },
+    {
+      "mode": "initial",
+      "extra": 0,
+      "workload": "controller",
+      "wall_ms": 1127.4829000030877,
+      "cuda_ms": 1127.3843383789062,
+      "visits": 896
+    },
+    {
+      "mode": "initial",
+      "extra": 0,
+      "workload": "output_additions",
+      "wall_ms": 18.188599991844967,
+      "cuda_ms": 18.143728256225586,
+      "visits": 896
+    },
+    {
+      "mode": "one_shot",
+      "extra": 28,
+      "workload": "dense_ffn",
+      "wall_ms": 295.73560001153965,
+      "cuda_ms": 295.6460418701172,
+      "visits": 896
+    },
+    {
+      "mode": "one_shot",
+      "extra": 28,
+      "workload": "down_products",
+      "wall_ms": 108.14729999401607,
+      "cuda_ms": 108.09179306030273,
+      "visits": 896
+    },
+    {
+      "mode": "one_shot",
+      "extra": 28,
+      "workload": "controller",
+      "wall_ms": 1105.4302499978803,
+      "cuda_ms": 1105.3676147460938,
+      "visits": 896
+    },
+    {
+      "mode": "one_shot",
+      "extra": 28,
+      "workload": "output_additions",
+      "wall_ms": 22.036249996745028,
+      "cuda_ms": 21.999967575073242,
+      "visits": 896
+    },
+    {
+      "mode": "one_shot",
+      "extra": 56,
+      "workload": "dense_ffn",
+      "wall_ms": 324.559450004017,
+      "cuda_ms": 324.47320556640625,
+      "visits": 896
+    },
+    {
+      "mode": "one_shot",
+      "extra": 56,
+      "workload": "down_products",
+      "wall_ms": 104.68175000278279,
+      "cuda_ms": 104.5943374633789,
+      "visits": 896
+    },
+    {
+      "mode": "one_shot",
+      "extra": 56,
+      "workload": "controller",
+      "wall_ms": 1084.3830999947386,
+      "cuda_ms": 1084.3223876953125,
+      "visits": 896
+    },
+    {
+      "mode": "one_shot",
+      "extra": 56,
+      "workload": "output_additions",
+      "wall_ms": 43.19329999270849,
+      "cuda_ms": 43.12404823303223,
+      "visits": 896
+    },
+    {
+      "mode": "predetermined",
+      "extra": 28,
+      "workload": "dense_ffn",
+      "wall_ms": 309.15359999926295,
+      "cuda_ms": 309.06687927246094,
+      "visits": 896
+    },
+    {
+      "mode": "predetermined",
+      "extra": 28,
+      "workload": "down_products",
+      "wall_ms": 212.81974998419173,
+      "cuda_ms": 212.74276733398438,
+      "visits": 896
+    },
+    {
+      "mode": "predetermined",
+      "extra": 28,
+      "workload": "controller",
+      "wall_ms": 1364.2962500161957,
+      "cuda_ms": 1364.1813354492188,
+      "visits": 896
+    },
+    {
+      "mode": "predetermined",
+      "extra": 28,
+      "workload": "output_additions",
+      "wall_ms": 33.71144999982789,
+      "cuda_ms": 33.670400619506836,
+      "visits": 896
+    },
+    {
+      "mode": "predetermined",
+      "extra": 56,
+      "workload": "dense_ffn",
+      "wall_ms": 306.15445000876207,
+      "cuda_ms": 306.0621643066406,
+      "visits": 896
+    },
+    {
+      "mode": "predetermined",
+      "extra": 56,
+      "workload": "down_products",
+      "wall_ms": 221.9691999925999,
+      "cuda_ms": 221.88046264648438,
+      "visits": 896
+    },
+    {
+      "mode": "predetermined",
+      "extra": 56,
+      "workload": "controller",
+      "wall_ms": 1568.1433499994455,
+      "cuda_ms": 1568.0775146484375,
+      "visits": 896
+    },
+    {
+      "mode": "predetermined",
+      "extra": 56,
+      "workload": "output_additions",
+      "wall_ms": 38.73645000567194,
+      "cuda_ms": 38.68081474304199,
+      "visits": 896
+    },
+    {
+      "mode": "partial",
+      "extra": 28,
+      "workload": "dense_ffn",
+      "wall_ms": 314.67560000601225,
+      "cuda_ms": 314.56361389160156,
+      "visits": 896
+    },
+    {
+      "mode": "partial",
+      "extra": 28,
+      "workload": "down_products",
+      "wall_ms": 217.30990000651218,
+      "cuda_ms": 217.19078063964844,
+      "visits": 896
+    },
+    {
+      "mode": "partial",
+      "extra": 28,
+      "workload": "controller",
+      "wall_ms": 2300.0331000075676,
+      "cuda_ms": 2299.95703125,
+      "visits": 896
+    },
+    {
+      "mode": "partial",
+      "extra": 28,
+      "workload": "output_additions",
+      "wall_ms": 42.18400000536349,
+      "cuda_ms": 42.08006286621094,
+      "visits": 896
+    },
+    {
+      "mode": "partial",
+      "extra": 56,
+      "workload": "dense_ffn",
+      "wall_ms": 328.28769998741336,
+      "cuda_ms": 328.20375061035156,
+      "visits": 896
+    },
+    {
+      "mode": "partial",
+      "extra": 56,
+      "workload": "down_products",
+      "wall_ms": 232.5913499953458,
+      "cuda_ms": 232.45606231689453,
+      "visits": 896
+    },
+    {
+      "mode": "partial",
+      "extra": 56,
+      "workload": "controller",
+      "wall_ms": 2294.3620500009274,
+      "cuda_ms": 2294.2938232421875,
+      "visits": 896
+    },
+    {
+      "mode": "partial",
+      "extra": 56,
+      "workload": "output_additions",
+      "wall_ms": 33.17354997852817,
+      "cuda_ms": 33.1374397277832,
+      "visits": 896
+    },
+    {
+      "mode": "input_only",
+      "extra": 28,
+      "workload": "dense_ffn",
+      "wall_ms": 286.17010000743903,
+      "cuda_ms": 285.99171447753906,
+      "visits": 896
+    },
+    {
+      "mode": "input_only",
+      "extra": 28,
+      "workload": "down_products",
+      "wall_ms": 110.81075000402052,
+      "cuda_ms": 110.73716735839844,
+      "visits": 896
+    },
+    {
+      "mode": "input_only",
+      "extra": 28,
+      "workload": "controller",
+      "wall_ms": 1445.425800004159,
+      "cuda_ms": 1445.3637084960938,
+      "visits": 896
+    },
+    {
+      "mode": "input_only",
+      "extra": 28,
+      "workload": "output_additions",
+      "wall_ms": 16.49530000577215,
+      "cuda_ms": 16.457311630249023,
+      "visits": 896
+    },
+    {
+      "mode": "fallback",
+      "extra": 28,
+      "workload": "dense_ffn",
+      "wall_ms": 287.9526500037173,
+      "cuda_ms": 287.8419494628906,
+      "visits": 896
+    },
+    {
+      "mode": "fallback",
+      "extra": 28,
+      "workload": "down_products",
+      "wall_ms": 237.95619999873452,
+      "cuda_ms": 237.8544464111328,
+      "visits": 896
+    },
+    {
+      "mode": "fallback",
+      "extra": 28,
+      "workload": "controller",
+      "wall_ms": 2220.4486499977065,
+      "cuda_ms": 2220.3424072265625,
+      "visits": 896
+    },
+    {
+      "mode": "fallback",
+      "extra": 28,
+      "workload": "output_additions",
+      "wall_ms": 48.50905000057537,
+      "cuda_ms": 48.44808006286621,
+      "visits": 896
+    },
+    {
+      "mode": "full",
+      "extra": 112,
+      "workload": "dense_ffn",
+      "wall_ms": 314.46814999799244,
+      "cuda_ms": 314.34326171875,
+      "visits": 896
+    },
+    {
+      "mode": "full",
+      "extra": 112,
+      "workload": "down_products",
+      "wall_ms": 222.49589998682495,
+      "cuda_ms": 222.37471771240234,
+      "visits": 896
+    },
+    {
+      "mode": "full",
+      "extra": 112,
+      "workload": "controller",
+      "wall_ms": 1737.1301499952096,
+      "cuda_ms": 1737.0678100585938,
+      "visits": 896
+    },
+    {
+      "mode": "full",
+      "extra": 112,
+      "workload": "output_additions",
+      "wall_ms": 33.390099997632205,
+      "cuda_ms": 33.34777641296387,
+      "visits": 896
+    }
+  ],
+  "status": "primitive_timings_completed",
+  "runtime_nomination": null
+}

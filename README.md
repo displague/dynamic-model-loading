@@ -13,7 +13,19 @@ See the [research stages and delivery history](docs/plan.md),
 [GitHub milestones](https://github.com/displague/dynamic-model-loading/milestones)
 for the original plan, completed experiments, and remaining gates.
 
-**Current result:** the [fixed-mask repair diagnostic](docs/refinement-feasibility-results.md)
+**Current result:** the [complete causal-repair experiment](docs/causal-evidence-results.md)
+finds a mixed quality improvement from partial evidence at matched bytes: relative
+PPL 1.089487, versus 1.112546 for a larger one-shot
+decision and 1.107101 for predetermined repair. Individual-prefix
+advantage and the combined quality/economics gate fail. Physical paging stays gated.
+See [v0.12.0](docs/releases/v0.12.0.md) for complete costs and retained failures.
+
+The [dense chat-interface study](docs/dense-interface-results.md) recovers 7/10 debug
+and 12/20 fresh balanced successes, with all native/incremental/repacked comparisons
+passing. Its frozen balanced Gate A still fails. Utility qualification remains
+separate from analytical repair.
+
+**Earlier privileged repair:** the [fixed-mask repair diagnostic](docs/refinement-feasibility-results.md)
 finds five privileged repair settings that meet the aggregate quality/traffic lines
 on two reused article prefixes. One also passes the quality line on both individual
 prefixes; none of the 20 larger one-shot settings passes both aggregate lines. This

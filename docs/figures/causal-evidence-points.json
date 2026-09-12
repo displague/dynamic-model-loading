@@ -1,0 +1,107 @@
+{
+  "points": [
+    {
+      "mode": "initial",
+      "extra": 0,
+      "relative_ppl": 1.2290866381264636,
+      "warm_gib_per_input": 2.1575572341680527,
+      "serialized_ms_per_input": 286.49853437991624,
+      "prefix_passes": 0,
+      "gate_b": false,
+      "gate_c": true
+    },
+    {
+      "mode": "one_shot",
+      "extra": 28,
+      "relative_ppl": 1.1125461119049926,
+      "warm_gib_per_input": 2.2652290910482407,
+      "serialized_ms_per_input": 294.53562779826825,
+      "prefix_passes": 0,
+      "gate_b": false,
+      "gate_c": true
+    },
+    {
+      "mode": "one_shot",
+      "extra": 56,
+      "relative_ppl": 1.0539946562816442,
+      "warm_gib_per_input": 2.3729009479284286,
+      "serialized_ms_per_input": 303.97196281182914,
+      "prefix_passes": 2,
+      "gate_b": false,
+      "gate_c": false
+    },
+    {
+      "mode": "predetermined",
+      "extra": 28,
+      "relative_ppl": 1.107100810027127,
+      "warm_gib_per_input": 2.2652290910482407,
+      "serialized_ms_per_input": 323.00284056054807,
+      "prefix_passes": 0,
+      "gate_b": false,
+      "gate_c": true
+    },
+    {
+      "mode": "predetermined",
+      "extra": 56,
+      "relative_ppl": 1.0664442691827094,
+      "warm_gib_per_input": 2.3729009479284286,
+      "serialized_ms_per_input": 322.4488935493355,
+      "prefix_passes": 1,
+      "gate_b": false,
+      "gate_c": false
+    },
+    {
+      "mode": "partial",
+      "extra": 28,
+      "relative_ppl": 1.0894873024588967,
+      "warm_gib_per_input": 2.2652290910482407,
+      "serialized_ms_per_input": 352.5093843104514,
+      "prefix_passes": 0,
+      "gate_b": false,
+      "gate_c": true
+    },
+    {
+      "mode": "partial",
+      "extra": 56,
+      "relative_ppl": 1.0215512581769317,
+      "warm_gib_per_input": 2.3729009479284286,
+      "serialized_ms_per_input": 344.96938729853355,
+      "prefix_passes": 2,
+      "gate_b": false,
+      "gate_c": false
+    },
+    {
+      "mode": "input_only",
+      "extra": 28,
+      "relative_ppl": 1.129547179801847,
+      "warm_gib_per_input": 2.2652290910482407,
+      "serialized_ms_per_input": 304.98733404874656,
+      "prefix_passes": 0,
+      "gate_b": false,
+      "gate_c": true
+    },
+    {
+      "mode": "fallback",
+      "extra": 28,
+      "relative_ppl": 1.0116134422625742,
+      "warm_gib_per_input": 2.57729421753902,
+      "serialized_ms_per_input": 358.3758389076479,
+      "prefix_passes": 1,
+      "gate_b": false,
+      "gate_c": false
+    },
+    {
+      "mode": "full",
+      "extra": 112,
+      "relative_ppl": 0.9999999079797652,
+      "warm_gib_per_input": 2.5882446616888046,
+      "serialized_ms_per_input": 343.0858580586573,
+      "prefix_passes": 4,
+      "gate_b": true,
+      "gate_c": false
+    }
+  ],
+  "dense_gib_per_input": 2.556793212890625,
+  "dense_serialized_ms_per_input": 578.2223778519437,
+  "note": "Synthetic serialized costs are not measured inference latency."
+}

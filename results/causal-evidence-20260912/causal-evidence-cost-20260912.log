@@ -1,0 +1,29 @@
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<04:11,  1.34it/s]
+Loading weights:  51%|█████     | 173/338 [00:00<00:00, 276.85it/s]
+Loading weights:  80%|████████  | 272/338 [00:01<00:00, 284.17it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 242.35it/s]
+Completed cost fixture initial 0
+Completed cost fixture one_shot 28
+Completed cost fixture one_shot 56
+Completed cost fixture predetermined 28
+Completed cost fixture predetermined 56
+Completed cost fixture partial 28
+Completed cost fixture partial 56
+Completed cost fixture input_only 28
+Completed cost fixture fallback 28
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\displ\Documents\dynamic-model-loading\runs\causal-evidence-worktree\src\dynamic_model_loading\causal_evidence_cost.py", line 226, in <module>
+    if __name__=='__main__':main()
+                            ~~~~^^
+  File "C:\Users\displ\Documents\dynamic-model-loading\runs\causal-evidence-worktree\src\dynamic_model_loading\causal_evidence_cost.py", line 223, in main
+    args=parser.parse_args();run(args.config,args.run,args.output)
+                             ~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\displ\AppData\Roaming\Python\Python314\site-packages\torch\utils\_contextlib.py", line 124, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\displ\Documents\dynamic-model-loading\runs\causal-evidence-worktree\src\dynamic_model_loading\causal_evidence_cost.py", line 163, in run
+    raise ValueError('Timing fixture differs from the measured causal decisions')
+ValueError: Timing fixture differs from the measured causal decisions
