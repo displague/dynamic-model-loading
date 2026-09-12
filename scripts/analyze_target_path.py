@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 import argparse
+from collections import defaultdict
+import hashlib
 import json
 from pathlib import Path
 
@@ -26,6 +28,28 @@ def compare(left, right, left_token, right_token):
             'candidate_top_two_logprob_gap': float(np.sort(right)[-1])-float(np.sort(right)[-2]),
             'raw_logit_linf': None,
             'representation': 'Reconstructed probabilities from float32 serialized log-softmax; not raw logits.'}
+
+
+def historical_summary(observations):
+    """Descriptive audit of frozen historical prefixes, counting duplicates explicitly."""
+    unique = defaultdict(list)
+    for prefix, expected, actual in observations:
+        unique[tuple(prefix)].append((expected, actual))
+    details = []
+    for prefix, values in unique.items():
+        expected = {v[0] for v in values}
+        if len(expected) != 1:
+            raise ValueError('conflicting historical labels for an identical prefix')
+        details.append({'prefix_sha256': hashlib.sha256(json.dumps(prefix).encode('utf-8')).hexdigest(),
+                        'tokens': len(prefix), 'observations': len(values),
+                        'historical_next': values[0][0], 'observed_next_ids': sorted({v[1] for v in values}),
+                        'all_match': all(a == b for a, b in values)})
+    return {'observations': len(observations),
+            'matching_observations': sum(a == b for _, a, b in observations),
+            'unique_prefixes': len(details), 'matching_unique_prefixes': sum(r['all_match'] for r in details),
+            'inconsistent_repeated_prefixes': sum(len(r['observed_next_ids']) > 1 for r in details),
+            'prefixes': details,
+            'limit': 'Frozen supplied historical paths; duplicates removed by complete token prefix. Not a population flip rate or a new closed-loop generation test.'}
 
 
 def analyze(run_root, fixture_path):
@@ -56,6 +80,7 @@ def analyze(run_root, fixture_path):
             expected.extend((key, length, step) for step, length in enumerate(lengths))
         if [(r['case'], r['prefix_length'], r['step']) for r in requests] != expected:
             raise ValueError('request/prefix sequence coverage mismatch')
+        historical = []
         for r in requests:
             key, length, step = r['case'], r['prefix_length'], r['step']
             case = fixture['cases'][key]
@@ -73,6 +98,10 @@ def analyze(run_root, fixture_path):
             if http['status'] != 200 or not http['complete'] or http['bytes'] != raw_path.stat().st_size:
                 raise ValueError('incomplete intermediate HTTP receipt')
             response = read(raw_path)
+            if len(response['tokens']) != 1 or response['tokens_predicted'] != 1:
+                raise ValueError('intermediate response must contain exactly one predicted token')
+            expected_next = case['historical_next'] if final else case['tokens'][length]
+            historical.append((case['tokens'][:length], expected_next, response['tokens'][0]))
             cache, evaluated = response['timings']['cache_n'], response['timings']['prompt_n']
             expected_cache, expected_evaluated = (length-1, 1) if step > 0 else (0, length)
             if (cache, evaluated) != (expected_cache, expected_evaluated) or (
@@ -88,11 +117,12 @@ def analyze(run_root, fixture_path):
                 raise ValueError('raw probability response changed')
             from_raw, raw_summary = diagnostic.distribution(read(raw))
             value = np.load(file, allow_pickle=False)
-            if not np.array_equal(value, from_raw) or raw_summary['token'] != r['token']:
+            if not np.array_equal(value, from_raw) or any(r[k] != v for k, v in raw_summary.items()):
                 raise ValueError('compact probability evidence does not reproduce')
             vectors[factor, case] = value
             summaries[factor, case] = r
         groups[factor] = {'resources': audit, 'request_count': len(requests),
+                          'historical_prefix_audit': historical_summary(historical),
                           'final_case_count': len(records),
                           'historical_next_matches': sum(r['token'] == r['historical_next'] for r in records),
                           'encoded_argmax_matches': sum(r['encoded_argmax_matches'] for r in records),

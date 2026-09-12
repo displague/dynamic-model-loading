@@ -8,7 +8,7 @@ from pathlib import Path
 import sqlite3
 
 import stock_benchmark as stock
-from analyze_verification_offload import audit_trace
+from analyze_verification_offload import audit_trace, audit_acceptance
 
 
 def read_rows(path):
@@ -31,6 +31,11 @@ def analyze(path):
                      and completion.get('resources', {}).get('pass') and stopped and stopped.get('exit_code') == 0)
     result.update(lifecycle_complete=lifecycle, completion=completion, stop=stopped,
                   resource_audit=resource_audit, expected_request_coverage=coverage)
+    # The first preserved failed attempt has no native logfile. Keep its CUDA
+    # evidence partial instead of requiring receipts only added by the correction.
+    if lifecycle and coverage:
+        native_log = (path/'native-server.log').read_bytes()
+        result['acceptance_from_native_log'] = [audit_acceptance(native_log, r) for r in requests]
     files = list(path.glob('*.sqlite'))
     if len(files) != 1:
         result['reason'] = 'expected exactly one SQLite export'

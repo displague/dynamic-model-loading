@@ -59,6 +59,18 @@ The [v0.13.0 preparation](releases/v0.13.0.md), acquisition block and subsequent
 startup amendments remain historical records. Freed storage enabled acquisition
 of all pinned artifacts, and only 13 merged artifact-free worktrees were removed.
 
+The [v0.15.0 existing-knob delivery](releases/v0.15.0.md) completes the stock
+operation-offload and populated-context study #28. Lowering the threshold to 8
+with K16 raises short-context request throughput to 19.74 emitted tokens/s,
+11.8% above the newly repeated default K4 row. Actual CUDA captures confirm
+repeated host-weight movement. The bounded target-only diagnostic reproduces
+the four selected historical rebuild reversals through prefix construction;
+it does not independently validate every speculative KV/mask state. #27 and the
+stock milestone remain open. See [complete findings](verification-offload-results.md)
+and [all measured contexts, requests and acceptance records](verification-offload-tables.md).
+The next optional controller must charge context and backend along with draft
+length. No custom shared-resident runtime follows automatically from this gain.
+
 ## Historical roadmap
 
 The following stage table, dependencies and release narratives describe the earlier
@@ -148,6 +160,7 @@ checks; an always-on service requires a runtime that benefits from persistent re
 | [v0.12.0](releases/v0.12.0.md) | Own-trajectory causal repair and complete action costs | Partial evidence improves aggregate quality at matched bytes, but individual-prefix advantage and combined quality/economics gates fail. |
 | [v0.13.0](releases/v0.13.0.md) | Retire the tested paging implementation; prepare stock target-scale speculation | Accepted ADR 0003, pinned native substrate and new issues. Storage blocks acquisition at this historical preparation point. |
 | [v0.14.0](releases/v0.14.0.md) | Complete stock comparison and aggregate resource/cost analysis | 18.10 vs 8.52 observed emitted tokens/s; strict sustained identity fails for every nonbaseline configuration. All 260 scalar-smoke comparisons match. Execution-path fidelity remains unresolved. |
+| [v0.15.0](releases/v0.15.0.md) | Stock operation offload, populated 16K control and bounded target-path characterization | 19.74 short-context emitted tokens/s, 11.8% above the repeated default K4 row. CUDA captures establish repeated weight movement; four selected rebuild reversals reproduce through prefix construction. Independent speculative-state fidelity remains open. |
 
 
 No completed delivery establishes an inference speedup or achieved memory reduction.
@@ -230,6 +243,6 @@ runtime gain. At v0.12 no policy satisfies the combined B/C gate.
 
 ## Existing operation-offload setting after v0.14
 
-The next bounded experiment is [stock verification operation offload](verification-offload-protocol.md): explicit fresh-process thresholds, fixed placement controls, backend assignment evidence, and a populated 16K/q8_0-KV sensitivity study. Numerical/state fidelity #27 proceeds separately; it does not block measuring the existing scheduling knob. Counter consistency is not independent argmax/KV proof. Draft representations #25 remain deferred and adaptive control #26 depends on the measured draft-length/backend frontier. No new runtime or model download is required.
+The bounded experiment is [stock verification operation offload](verification-offload-protocol.md): explicit fresh-process thresholds, fixed placement controls, backend assignment evidence, and a populated 16K/q8_0-KV sensitivity study. Its [v0.15 findings](verification-offload-results.md) preserve the completed measurements and limitations. Numerical/state fidelity #27 proceeds separately; counter consistency is not independent argmax/KV proof. Draft representations #25 remain deferred and adaptive control #26 depends on the measured draft-length/backend/context frontier. No new runtime or model download was required.
 
 The [bounded target-path and CUDA-capture supplement](target-path-and-profile-protocol.md) separates full encoded probability comparisons and incremental prefix accounting from the unresolved independent speculative-state audit. It also attempts actual CUDA-copy measurements without mixing profiler overhead into the stock timing frontier.

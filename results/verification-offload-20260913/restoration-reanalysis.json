@@ -1,0 +1,88 @@
+{
+  "archive": "verification-v0150-raw",
+  "analysis_source": "verification-final-analysis-v1",
+  "restored_root": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw",
+  "runner_sha256": "740816e8e0478d542088da6ad02a0bf2487c7ca7b3e1b367bef2ebf8713e3825",
+  "comparisons": [
+    {
+      "file": "timing.json",
+      "command": [
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\verification-final-analysis-v1\\scripts\\analyze_verification_offload.py",
+        "--runs",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\verification-offload-20260913",
+        "--reference",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\stock-evaluation-20260912\\reference-sustained",
+        "--output",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\verification-v0150-raw-reanalysis\\timing.json"
+      ],
+      "sha256": "0708d505711766e3c8a91d285f4ce944b50ad9cdbe27dd4c79b333bfe255010e",
+      "restored_original_sha256": "0708d505711766e3c8a91d285f4ce944b50ad9cdbe27dd4c79b333bfe255010e",
+      "live_original_sha256": "0708d505711766e3c8a91d285f4ce944b50ad9cdbe27dd4c79b333bfe255010e",
+      "byte_identical": true
+    },
+    {
+      "file": "numerical.json",
+      "command": [
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\verification-final-analysis-v1\\scripts\\analyze_target_path.py",
+        "--runs",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\target-path-diagnostic-20260913",
+        "--fixture",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\verification-final-analysis-v1\\target-path-fixture.json",
+        "--output",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\verification-v0150-raw-reanalysis\\numerical.json"
+      ],
+      "sha256": "ddeb856aa5e1a602a9d4de019f311cc9572d57a22d52e4550cc87608b8af87b5",
+      "restored_original_sha256": "ddeb856aa5e1a602a9d4de019f311cc9572d57a22d52e4550cc87608b8af87b5",
+      "live_original_sha256": "ddeb856aa5e1a602a9d4de019f311cc9572d57a22d52e4550cc87608b8af87b5",
+      "byte_identical": true
+    },
+    {
+      "file": "profile-failed.json",
+      "command": [
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\verification-final-analysis-v1\\scripts\\analyze_verification_profile.py",
+        "--run",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\verification-profile-20260913\\cpu-k16",
+        "--output",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\verification-v0150-raw-reanalysis\\profile-failed.json"
+      ],
+      "sha256": "d1d2c03d7d692fb2fee7ddacb0ee7a5545e83c7a1ca59cca8f3d4a7c6cce53cf",
+      "restored_original_sha256": "d1d2c03d7d692fb2fee7ddacb0ee7a5545e83c7a1ca59cca8f3d4a7c6cce53cf",
+      "live_original_sha256": "d1d2c03d7d692fb2fee7ddacb0ee7a5545e83c7a1ca59cca8f3d4a7c6cce53cf",
+      "byte_identical": true
+    },
+    {
+      "file": "profile-cpu.json",
+      "command": [
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\verification-final-analysis-v1\\scripts\\analyze_verification_profile.py",
+        "--run",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\verification-profile-corrected-20260913\\cpu-k16",
+        "--output",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\verification-v0150-raw-reanalysis\\profile-cpu.json"
+      ],
+      "sha256": "b1c388da02b753041ae84e52fa0411d8a7e4c78353138d70f105329466310cf1",
+      "restored_original_sha256": "b1c388da02b753041ae84e52fa0411d8a7e4c78353138d70f105329466310cf1",
+      "live_original_sha256": "b1c388da02b753041ae84e52fa0411d8a7e4c78353138d70f105329466310cf1",
+      "byte_identical": true
+    },
+    {
+      "file": "profile-offload.json",
+      "command": [
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\verification-final-analysis-v1\\scripts\\analyze_verification_profile.py",
+        "--run",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-verification-v0150-raw\\runs\\verification-profile-corrected-20260913\\offload-k16",
+        "--output",
+        "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\verification-v0150-raw-reanalysis\\profile-offload.json"
+      ],
+      "sha256": "71374fc14102c91394ad647ce9e0b86e1220ae1e6736f73f84f8a6df2b8838b2",
+      "restored_original_sha256": "71374fc14102c91394ad647ce9e0b86e1220ae1e6736f73f84f8a6df2b8838b2",
+      "live_original_sha256": "71374fc14102c91394ad647ce9e0b86e1220ae1e6736f73f84f8a6df2b8838b2",
+      "byte_identical": true
+    }
+  ],
+  "all_byte_identical": true
+}

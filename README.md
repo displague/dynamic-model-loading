@@ -15,14 +15,18 @@ for the original plan, completed experiments, and remaining gates.
 
 **Current direction:** [ADR 0003](docs/adr/0003-verified-speculation-boundary.md)
 retires the tested per-token selective-execution path as the primary implementation.
-The [completed stock comparison](docs/stock-speculation-results.md) measures an
-observed 18.10 emitted tokens/s with a 0.5B draft at length four versus 8.52 for
-target-only Qwen2.5-32B-Instruct Q4_K_M. Every nonbaseline configuration differs
-from the fixed reference on sustained generation, including placement/thread
-controls; all 260 scalar-smoke comparisons match. This does not yet establish
-identical-output acceleration. [Execution-path fidelity #27](https://github.com/displague/dynamic-model-loading/issues/27)
-is the next bounded investigation; a custom runtime remains deferred. See
-[v0.14.0](docs/releases/v0.14.0.md) and the [frozen protocol](docs/stock-speculation-protocol.md).
+The [stock verification-offload experiment](docs/verification-offload-results.md)
+raises short-context throughput to **19.74 emitted tokens/s**, 11.8% above the
+newly repeated default-threshold K4 draft configuration. The unchanged b10919
+binary uses `GGML_OP_OFFLOAD_MIN_BATCH=8` and K16 with the existing 0.5B draft.
+Actual CUDA copies establish cold-weight movement; a populated 16K/q8_0-KV
+control measures context sensitivity. A target-only diagnostic reproduces four
+historical rebuild reversals through prefix construction, while independent
+[speculative-state fidelity #27](https://github.com/displague/dynamic-model-loading/issues/27)
+remains open. Cross-path output identity is not claimed. See
+[v0.15.0](docs/releases/v0.15.0.md), [all measured tables](docs/verification-offload-tables.md),
+and the preserved [v0.14 stock comparison](docs/stock-speculation-results.md).
+A custom runtime and new draft representation remain deferred.
 
 **Preserved v0.12 result:** the [complete causal-repair experiment](docs/causal-evidence-results.md)
 finds a mixed quality improvement from partial evidence at matched bytes: relative

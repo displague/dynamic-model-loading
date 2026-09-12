@@ -8,7 +8,7 @@ import pytest
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 import target_path_diagnostic as diagnostic
-from analyze_target_path import compare, analyze
+from analyze_target_path import compare, analyze, historical_summary
 
 
 def response(entries, chosen=1):
@@ -69,3 +69,12 @@ def test_missing_intermediate_requests_cannot_pass_on_final_case_flags(tmp_path,
     (run/'requests.jsonl').write_text('', encoding='utf-8')
     with pytest.raises(ValueError, match='sequence coverage'):
         analyze(tmp_path, fixture)
+
+
+def test_historical_audit_counts_duplicates_and_exposes_inconsistent_replays():
+    result = historical_summary([([1, 2], 3, 3), ([1, 2], 3, 4), ([1, 2, 3], 4, 4)])
+    assert result['observations'] == 3 and result['matching_observations'] == 2
+    assert result['unique_prefixes'] == 2 and result['matching_unique_prefixes'] == 1
+    assert result['inconsistent_repeated_prefixes'] == 1
+    with pytest.raises(ValueError, match='conflicting historical'):
+        historical_summary([([1], 2, 2), ([1], 3, 3)])

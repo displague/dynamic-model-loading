@@ -1,0 +1,1300 @@
+{
+  "profile-failed.json": {
+    "run_label": "cpu-k16",
+    "cuda_capture_verified": false,
+    "failure": {
+      "type": "RuntimeError",
+      "message": "profiler left its owned target running"
+    },
+    "lifecycle_complete": false,
+    "completion": null,
+    "stop": {
+      "command": [
+        "C:\\Program Files\\NVIDIA Corporation\\Nsight Systems 2025.5.2\\target-windows-x64\\nsys.exe",
+        "stop",
+        "--session=dml-cpu-k16-20260912214848"
+      ],
+      "exit_code": 0
+    },
+    "resource_audit": {
+      "samples": 104,
+      "errors": [],
+      "gpu_peak": 15436214272,
+      "host_available_min": 11811639296,
+      "pass": true
+    },
+    "expected_request_coverage": true,
+    "sqlite_sha256": "3aea0eea13c75dc2be86e7718465234eb73bce02adc798ac0b3cf251d04799e1",
+    "tables": [
+      "ANALYSIS_DETAILS",
+      "ANALYSIS_FILE",
+      "CUDA_GRAPH_NODE_EVENTS",
+      "CUPTI_ACTIVITY_KIND_CUDA_EVENT",
+      "CUPTI_ACTIVITY_KIND_KERNEL",
+      "CUPTI_ACTIVITY_KIND_MEMCPY",
+      "CUPTI_ACTIVITY_KIND_MEMSET",
+      "CUPTI_ACTIVITY_KIND_OVERHEAD",
+      "CUPTI_ACTIVITY_KIND_RUNTIME",
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION",
+      "DIAGNOSTIC_EVENT",
+      "ENUM_CUDA_DEV_MEM_EVENT_OPER",
+      "ENUM_CUDA_FUNC_CACHE_CONFIG",
+      "ENUM_CUDA_KERNEL_LAUNCH_TYPE",
+      "ENUM_CUDA_MEMCPY_OPER",
+      "ENUM_CUDA_MEMPOOL_OPER",
+      "ENUM_CUDA_MEMPOOL_TYPE",
+      "ENUM_CUDA_MEM_KIND",
+      "ENUM_CUDA_SHARED_MEM_LIMIT_CONFIG",
+      "ENUM_CUDA_UNIF_MEM_ACCESS_TYPE",
+      "ENUM_CUDA_UNIF_MEM_MIGRATION",
+      "ENUM_CUPTI_OVERHEAD_TYPE",
+      "ENUM_CUPTI_STREAM_TYPE",
+      "ENUM_CUPTI_SYNC_TYPE",
+      "ENUM_DIAGNOSTIC_SEVERITY_LEVEL",
+      "ENUM_DIAGNOSTIC_SOURCE_TYPE",
+      "ENUM_DIAGNOSTIC_TIMESTAMP_SOURCE",
+      "ENUM_NSYS_EVENT_CLASS",
+      "ENUM_NSYS_EVENT_TYPE",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_FLAGS",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_PROPERTY",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_TYPE",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_TYPE",
+      "ENUM_NSYS_GENERIC_EVENT_GROUP",
+      "ENUM_NSYS_GENERIC_EVENT_SOURCE",
+      "META_DATA_CAPTURE",
+      "META_DATA_EXPORT",
+      "PROFILER_OVERHEAD",
+      "ProcessStreams",
+      "StringIds",
+      "TARGET_INFO_CUDA_CONTEXT_INFO",
+      "TARGET_INFO_CUDA_DEVICE",
+      "TARGET_INFO_CUDA_STREAM",
+      "TARGET_INFO_GPU",
+      "TARGET_INFO_SESSION_START_TIME",
+      "TARGET_INFO_SYSTEM_ENV",
+      "ThreadNames"
+    ],
+    "session_utc_epoch_ns": 1789249729605105400,
+    "all_capture_copy_count": 16083,
+    "all_capture_kernel_count": 143177,
+    "enum_labels": {
+      "ENUM_CUDA_MEMCPY_OPER": [
+        {
+          "id": 0,
+          "name": "CUDA_MEMCPY_KIND_UNKNOWN",
+          "label": "Unknown"
+        },
+        {
+          "id": 1,
+          "name": "CUDA_MEMCPY_KIND_HTOD",
+          "label": "Host-to-Device"
+        },
+        {
+          "id": 2,
+          "name": "CUDA_MEMCPY_KIND_DTOH",
+          "label": "Device-to-Host"
+        },
+        {
+          "id": 3,
+          "name": "CUDA_MEMCPY_KIND_HTOA",
+          "label": "Host-to-Array"
+        },
+        {
+          "id": 4,
+          "name": "CUDA_MEMCPY_KIND_ATOH",
+          "label": "Array-to-Host"
+        },
+        {
+          "id": 5,
+          "name": "CUDA_MEMCPY_KIND_ATOA",
+          "label": "Array-to-Array"
+        },
+        {
+          "id": 6,
+          "name": "CUDA_MEMCPY_KIND_ATOD",
+          "label": "Array-to-Device"
+        },
+        {
+          "id": 7,
+          "name": "CUDA_MEMCPY_KIND_DTOA",
+          "label": "Device-to-Array"
+        },
+        {
+          "id": 8,
+          "name": "CUDA_MEMCPY_KIND_DTOD",
+          "label": "Device-to-Device"
+        },
+        {
+          "id": 9,
+          "name": "CUDA_MEMCPY_KIND_HTOH",
+          "label": "Host-to-Host"
+        },
+        {
+          "id": 10,
+          "name": "CUDA_MEMCPY_KIND_PTOP",
+          "label": "Peer-to-Peer"
+        },
+        {
+          "id": 11,
+          "name": "CUDA_MEMCPY_KIND_UVM_HTOD",
+          "label": "Unified Host-to-Device"
+        },
+        {
+          "id": 12,
+          "name": "CUDA_MEMCPY_KIND_UVM_DTOH",
+          "label": "Unified Device-to-Host"
+        },
+        {
+          "id": 13,
+          "name": "CUDA_MEMCPY_KIND_UVM_DTOD",
+          "label": "Unified Device-to-Device"
+        }
+      ],
+      "ENUM_CUDA_MEM_KIND": [
+        {
+          "id": 0,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_PAGEABLE",
+          "label": "Pageable"
+        },
+        {
+          "id": 1,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_PINNED",
+          "label": "Pinned"
+        },
+        {
+          "id": 2,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_DEVICE",
+          "label": "Device"
+        },
+        {
+          "id": 3,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_ARRAY",
+          "label": "Array"
+        },
+        {
+          "id": 4,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_MANAGED",
+          "label": "Managed"
+        },
+        {
+          "id": 5,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_DEVICE_STATIC",
+          "label": "Device Static"
+        },
+        {
+          "id": 6,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_MANAGED_STATIC",
+          "label": "Managed Static"
+        },
+        {
+          "id": 7,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_UNKNOWN",
+          "label": "Unknown"
+        }
+      ]
+    },
+    "windows": [
+      {
+        "id": "calibration-explanation",
+        "warmup": true,
+        "relative_start_ns": 12598034800,
+        "relative_end_ns": 17390297400,
+        "clock_duration_difference_seconds": 2.099999999671809e-06,
+        "copy_types": [
+          {
+            "copy_kind": 1,
+            "src_kind": 1,
+            "dst_kind": 2,
+            "count": 1309,
+            "bytes": 6224594552,
+            "summed_duration_ns": 123834277
+          },
+          {
+            "copy_kind": 2,
+            "src_kind": 2,
+            "dst_kind": 1,
+            "count": 216,
+            "bytes": 204709888,
+            "summed_duration_ns": 10166174
+          },
+          {
+            "copy_kind": 1,
+            "src_kind": 0,
+            "dst_kind": 2,
+            "count": 42,
+            "bytes": 22020096,
+            "summed_duration_ns": 556070
+          }
+        ],
+        "kernel_count": 97388,
+        "summed_kernel_duration_ns": 883162920,
+        "boundary_crossing_copies_excluded": 0,
+        "copy_size_histogram": {
+          "4": 310,
+          "8": 296,
+          "12": 3,
+          "24": 7,
+          "40": 3,
+          "44": 3,
+          "48": 7,
+          "56": 3,
+          "68": 18,
+          "80": 4,
+          "88": 4,
+          "96": 4,
+          "112": 4,
+          "136": 24,
+          "236": 2,
+          "472": 4,
+          "512": 148,
+          "1536": 2,
+          "3072": 2,
+          "3584": 147,
+          "4096": 42,
+          "5120": 2,
+          "5632": 2,
+          "6144": 2,
+          "7168": 2,
+          "8704": 12,
+          "10752": 1,
+          "20480": 65,
+          "21504": 1,
+          "30208": 2,
+          "35840": 1,
+          "39424": 1,
+          "43008": 1,
+          "50176": 1,
+          "60928": 6,
+          "61440": 2,
+          "122880": 2,
+          "204800": 2,
+          "211456": 1,
+          "225280": 2,
+          "241664": 42,
+          "245760": 2,
+          "286720": 2,
+          "348160": 12,
+          "524288": 42,
+          "607744": 160,
+          "608256": 2,
+          "1208320": 1,
+          "1824768": 1,
+          "2949120": 30,
+          "3649536": 1,
+          "4300800": 12,
+          "6082560": 1,
+          "6690816": 1,
+          "7299072": 1,
+          "8515584": 1,
+          "10340352": 6,
+          "14745600": 42,
+          "79626240": 51,
+          "116121600": 12
+        }
+      },
+      {
+        "id": "code-cache",
+        "warmup": false,
+        "relative_start_ns": 17441741300,
+        "relative_end_ns": 19738658100,
+        "clock_duration_difference_seconds": 2.100000000115898e-06,
+        "copy_types": [
+          {
+            "copy_kind": 1,
+            "src_kind": 1,
+            "dst_kind": 2,
+            "count": 702,
+            "bytes": 6220350080,
+            "summed_duration_ns": 121115418
+          },
+          {
+            "copy_kind": 2,
+            "src_kind": 2,
+            "dst_kind": 1,
+            "count": 116,
+            "bytes": 94030336,
+            "summed_duration_ns": 4621029
+          },
+          {
+            "copy_kind": 1,
+            "src_kind": 0,
+            "dst_kind": 2,
+            "count": 42,
+            "bytes": 22020096,
+            "summed_duration_ns": 541060
+          }
+        ],
+        "kernel_count": 42814,
+        "summed_kernel_duration_ns": 449857047,
+        "boundary_crossing_copies_excluded": 0,
+        "copy_size_histogram": {
+          "4": 128,
+          "8": 120,
+          "16": 3,
+          "20": 3,
+          "24": 3,
+          "32": 4,
+          "40": 4,
+          "48": 4,
+          "68": 9,
+          "136": 12,
+          "292": 2,
+          "512": 60,
+          "584": 4,
+          "2048": 2,
+          "2560": 2,
+          "3072": 2,
+          "3584": 60,
+          "4096": 42,
+          "8704": 6,
+          "14336": 1,
+          "17920": 1,
+          "20480": 63,
+          "21504": 1,
+          "37376": 2,
+          "60928": 3,
+          "81920": 2,
+          "102400": 2,
+          "122880": 2,
+          "261632": 1,
+          "299008": 42,
+          "348160": 6,
+          "524288": 42,
+          "607744": 67,
+          "608256": 1,
+          "1495040": 1,
+          "2433024": 1,
+          "2949120": 30,
+          "3041280": 1,
+          "3649536": 1,
+          "4300800": 12,
+          "10340352": 3,
+          "14745600": 42,
+          "79626240": 51,
+          "116121600": 12
+        }
+      }
+    ],
+    "aligned_cuda_activity_available": true,
+    "limits": [
+      "Windows include prefill, drafting and target verification; startup is excluded.",
+      "Only fully contained copy/kernel activities are summed.",
+      "Summed activity durations may overlap and are not critical-path time.",
+      "Profiled times do not enter stock throughput rankings."
+    ]
+  },
+  "profile-cpu.json": {
+    "run_label": "cpu-k16",
+    "cuda_capture_verified": true,
+    "lifecycle_complete": true,
+    "completion": {
+      "profiler_exit_code": 0,
+      "files": [
+        {
+          "name": "cuda-trace.nsys-rep",
+          "bytes": 7549524,
+          "sha256": "e55363030639cc80976e42622dd2fbe7e7d029975ab40c0feb4a429dd365d7f1"
+        },
+        {
+          "name": "cuda-trace.sqlite",
+          "bytes": 22044672,
+          "sha256": "1989bb7f72ee5ec3d6b64c07c394dcfbf107481e0fba4fa385c29762ac3d6740"
+        }
+      ],
+      "resources": {
+        "pass": true,
+        "samples": 107,
+        "errors": [],
+        "gpu_peak": 15436214272,
+        "host_available_min": 11659837440
+      },
+      "cuda_capture_verified": false
+    },
+    "stop": {
+      "command": [
+        "C:\\Program Files\\NVIDIA Corporation\\Nsight Systems 2025.5.2\\target-windows-x64\\nsys.exe",
+        "stop",
+        "--session=dml-cpu-k16-20260912220503"
+      ],
+      "exit_code": 0
+    },
+    "resource_audit": {
+      "samples": 107,
+      "errors": [],
+      "gpu_peak": 15436214272,
+      "host_available_min": 11659837440,
+      "pass": true
+    },
+    "expected_request_coverage": true,
+    "acceptance_from_native_log": [
+      {
+        "consistent": true,
+        "checkpoint_replay_present": false,
+        "cycles": 12,
+        "accepted": 18,
+        "attempted": 146,
+        "survival": [
+          0.6666666666666666,
+          0.5,
+          0.25,
+          0.08333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "consistent": true,
+        "checkpoint_replay_present": false,
+        "cycles": 6,
+        "accepted": 25,
+        "attempted": 60,
+        "survival": [
+          0.6666666666666666,
+          0.6666666666666666,
+          0.6666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666
+        ]
+      }
+    ],
+    "sqlite_sha256": "1989bb7f72ee5ec3d6b64c07c394dcfbf107481e0fba4fa385c29762ac3d6740",
+    "tables": [
+      "ANALYSIS_DETAILS",
+      "ANALYSIS_FILE",
+      "CUDA_GRAPH_NODE_EVENTS",
+      "CUPTI_ACTIVITY_KIND_CUDA_EVENT",
+      "CUPTI_ACTIVITY_KIND_KERNEL",
+      "CUPTI_ACTIVITY_KIND_MEMCPY",
+      "CUPTI_ACTIVITY_KIND_MEMSET",
+      "CUPTI_ACTIVITY_KIND_OVERHEAD",
+      "CUPTI_ACTIVITY_KIND_RUNTIME",
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION",
+      "DIAGNOSTIC_EVENT",
+      "ENUM_CUDA_DEV_MEM_EVENT_OPER",
+      "ENUM_CUDA_FUNC_CACHE_CONFIG",
+      "ENUM_CUDA_KERNEL_LAUNCH_TYPE",
+      "ENUM_CUDA_MEMCPY_OPER",
+      "ENUM_CUDA_MEMPOOL_OPER",
+      "ENUM_CUDA_MEMPOOL_TYPE",
+      "ENUM_CUDA_MEM_KIND",
+      "ENUM_CUDA_SHARED_MEM_LIMIT_CONFIG",
+      "ENUM_CUDA_UNIF_MEM_ACCESS_TYPE",
+      "ENUM_CUDA_UNIF_MEM_MIGRATION",
+      "ENUM_CUPTI_OVERHEAD_TYPE",
+      "ENUM_CUPTI_STREAM_TYPE",
+      "ENUM_CUPTI_SYNC_TYPE",
+      "ENUM_DIAGNOSTIC_SEVERITY_LEVEL",
+      "ENUM_DIAGNOSTIC_SOURCE_TYPE",
+      "ENUM_DIAGNOSTIC_TIMESTAMP_SOURCE",
+      "ENUM_NSYS_EVENT_CLASS",
+      "ENUM_NSYS_EVENT_TYPE",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_FLAGS",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_PROPERTY",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_TYPE",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_TYPE",
+      "ENUM_NSYS_GENERIC_EVENT_GROUP",
+      "ENUM_NSYS_GENERIC_EVENT_SOURCE",
+      "META_DATA_CAPTURE",
+      "META_DATA_EXPORT",
+      "PROFILER_OVERHEAD",
+      "ProcessStreams",
+      "StringIds",
+      "TARGET_INFO_CUDA_CONTEXT_INFO",
+      "TARGET_INFO_CUDA_DEVICE",
+      "TARGET_INFO_CUDA_STREAM",
+      "TARGET_INFO_GPU",
+      "TARGET_INFO_SESSION_START_TIME",
+      "TARGET_INFO_SYSTEM_ENV",
+      "ThreadNames"
+    ],
+    "session_utc_epoch_ns": 1789250705252303450,
+    "all_capture_copy_count": 16083,
+    "all_capture_kernel_count": 143177,
+    "enum_labels": {
+      "ENUM_CUDA_MEMCPY_OPER": [
+        {
+          "id": 0,
+          "name": "CUDA_MEMCPY_KIND_UNKNOWN",
+          "label": "Unknown"
+        },
+        {
+          "id": 1,
+          "name": "CUDA_MEMCPY_KIND_HTOD",
+          "label": "Host-to-Device"
+        },
+        {
+          "id": 2,
+          "name": "CUDA_MEMCPY_KIND_DTOH",
+          "label": "Device-to-Host"
+        },
+        {
+          "id": 3,
+          "name": "CUDA_MEMCPY_KIND_HTOA",
+          "label": "Host-to-Array"
+        },
+        {
+          "id": 4,
+          "name": "CUDA_MEMCPY_KIND_ATOH",
+          "label": "Array-to-Host"
+        },
+        {
+          "id": 5,
+          "name": "CUDA_MEMCPY_KIND_ATOA",
+          "label": "Array-to-Array"
+        },
+        {
+          "id": 6,
+          "name": "CUDA_MEMCPY_KIND_ATOD",
+          "label": "Array-to-Device"
+        },
+        {
+          "id": 7,
+          "name": "CUDA_MEMCPY_KIND_DTOA",
+          "label": "Device-to-Array"
+        },
+        {
+          "id": 8,
+          "name": "CUDA_MEMCPY_KIND_DTOD",
+          "label": "Device-to-Device"
+        },
+        {
+          "id": 9,
+          "name": "CUDA_MEMCPY_KIND_HTOH",
+          "label": "Host-to-Host"
+        },
+        {
+          "id": 10,
+          "name": "CUDA_MEMCPY_KIND_PTOP",
+          "label": "Peer-to-Peer"
+        },
+        {
+          "id": 11,
+          "name": "CUDA_MEMCPY_KIND_UVM_HTOD",
+          "label": "Unified Host-to-Device"
+        },
+        {
+          "id": 12,
+          "name": "CUDA_MEMCPY_KIND_UVM_DTOH",
+          "label": "Unified Device-to-Host"
+        },
+        {
+          "id": 13,
+          "name": "CUDA_MEMCPY_KIND_UVM_DTOD",
+          "label": "Unified Device-to-Device"
+        }
+      ],
+      "ENUM_CUDA_MEM_KIND": [
+        {
+          "id": 0,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_PAGEABLE",
+          "label": "Pageable"
+        },
+        {
+          "id": 1,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_PINNED",
+          "label": "Pinned"
+        },
+        {
+          "id": 2,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_DEVICE",
+          "label": "Device"
+        },
+        {
+          "id": 3,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_ARRAY",
+          "label": "Array"
+        },
+        {
+          "id": 4,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_MANAGED",
+          "label": "Managed"
+        },
+        {
+          "id": 5,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_DEVICE_STATIC",
+          "label": "Device Static"
+        },
+        {
+          "id": 6,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_MANAGED_STATIC",
+          "label": "Managed Static"
+        },
+        {
+          "id": 7,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_UNKNOWN",
+          "label": "Unknown"
+        }
+      ]
+    },
+    "windows": [
+      {
+        "id": "calibration-explanation",
+        "warmup": true,
+        "relative_start_ns": 12918696750,
+        "relative_end_ns": 17488629550,
+        "clock_duration_difference_seconds": 2.1000000005599873e-06,
+        "copy_types": [
+          {
+            "copy_kind": 1,
+            "src_kind": 1,
+            "dst_kind": 2,
+            "count": 1309,
+            "bytes": 6224594552,
+            "summed_duration_ns": 122894743
+          },
+          {
+            "copy_kind": 2,
+            "src_kind": 2,
+            "dst_kind": 1,
+            "count": 216,
+            "bytes": 204709888,
+            "summed_duration_ns": 10264375
+          },
+          {
+            "copy_kind": 1,
+            "src_kind": 0,
+            "dst_kind": 2,
+            "count": 42,
+            "bytes": 22020096,
+            "summed_duration_ns": 536711
+          }
+        ],
+        "kernel_count": 97388,
+        "summed_kernel_duration_ns": 815604652,
+        "boundary_crossing_copies_excluded": 0,
+        "copy_size_histogram": {
+          "4": 310,
+          "8": 296,
+          "12": 3,
+          "24": 7,
+          "40": 3,
+          "44": 3,
+          "48": 7,
+          "56": 3,
+          "68": 18,
+          "80": 4,
+          "88": 4,
+          "96": 4,
+          "112": 4,
+          "136": 24,
+          "236": 2,
+          "472": 4,
+          "512": 148,
+          "1536": 2,
+          "3072": 2,
+          "3584": 147,
+          "4096": 42,
+          "5120": 2,
+          "5632": 2,
+          "6144": 2,
+          "7168": 2,
+          "8704": 12,
+          "10752": 1,
+          "20480": 65,
+          "21504": 1,
+          "30208": 2,
+          "35840": 1,
+          "39424": 1,
+          "43008": 1,
+          "50176": 1,
+          "60928": 6,
+          "61440": 2,
+          "122880": 2,
+          "204800": 2,
+          "211456": 1,
+          "225280": 2,
+          "241664": 42,
+          "245760": 2,
+          "286720": 2,
+          "348160": 12,
+          "524288": 42,
+          "607744": 160,
+          "608256": 2,
+          "1208320": 1,
+          "1824768": 1,
+          "2949120": 30,
+          "3649536": 1,
+          "4300800": 12,
+          "6082560": 1,
+          "6690816": 1,
+          "7299072": 1,
+          "8515584": 1,
+          "10340352": 6,
+          "14745600": 42,
+          "79626240": 51,
+          "116121600": 12
+        }
+      },
+      {
+        "id": "code-cache",
+        "warmup": false,
+        "relative_start_ns": 17563777950,
+        "relative_end_ns": 20375583650,
+        "clock_duration_difference_seconds": 2.2999999997885823e-06,
+        "copy_types": [
+          {
+            "copy_kind": 1,
+            "src_kind": 1,
+            "dst_kind": 2,
+            "count": 702,
+            "bytes": 6220350080,
+            "summed_duration_ns": 122024932
+          },
+          {
+            "copy_kind": 2,
+            "src_kind": 2,
+            "dst_kind": 1,
+            "count": 116,
+            "bytes": 94030336,
+            "summed_duration_ns": 4751301
+          },
+          {
+            "copy_kind": 1,
+            "src_kind": 0,
+            "dst_kind": 2,
+            "count": 42,
+            "bytes": 22020096,
+            "summed_duration_ns": 534566
+          }
+        ],
+        "kernel_count": 42814,
+        "summed_kernel_duration_ns": 434493085,
+        "boundary_crossing_copies_excluded": 0,
+        "copy_size_histogram": {
+          "4": 128,
+          "8": 120,
+          "16": 3,
+          "20": 3,
+          "24": 3,
+          "32": 4,
+          "40": 4,
+          "48": 4,
+          "68": 9,
+          "136": 12,
+          "292": 2,
+          "512": 60,
+          "584": 4,
+          "2048": 2,
+          "2560": 2,
+          "3072": 2,
+          "3584": 60,
+          "4096": 42,
+          "8704": 6,
+          "14336": 1,
+          "17920": 1,
+          "20480": 63,
+          "21504": 1,
+          "37376": 2,
+          "60928": 3,
+          "81920": 2,
+          "102400": 2,
+          "122880": 2,
+          "261632": 1,
+          "299008": 42,
+          "348160": 6,
+          "524288": 42,
+          "607744": 67,
+          "608256": 1,
+          "1495040": 1,
+          "2433024": 1,
+          "2949120": 30,
+          "3041280": 1,
+          "3649536": 1,
+          "4300800": 12,
+          "10340352": 3,
+          "14745600": 42,
+          "79626240": 51,
+          "116121600": 12
+        }
+      }
+    ],
+    "aligned_cuda_activity_available": true,
+    "limits": [
+      "Windows include prefill, drafting and target verification; startup is excluded.",
+      "Only fully contained copy/kernel activities are summed.",
+      "Summed activity durations may overlap and are not critical-path time.",
+      "Profiled times do not enter stock throughput rankings."
+    ]
+  },
+  "profile-offload.json": {
+    "run_label": "offload-k16",
+    "cuda_capture_verified": true,
+    "lifecycle_complete": true,
+    "completion": {
+      "profiler_exit_code": 0,
+      "files": [
+        {
+          "name": "cuda-trace.nsys-rep",
+          "bytes": 8902386,
+          "sha256": "5e4d2c69eb95e15133bbf7b361c92a01c3a0af68d71179126a684b482303c1f2"
+        },
+        {
+          "name": "cuda-trace.sqlite",
+          "bytes": 25444352,
+          "sha256": "2899024122189a87c16acccc6c1c27af1d36cf0bf3b333e2365f80c11fded5e6"
+        }
+      ],
+      "resources": {
+        "pass": true,
+        "samples": 101,
+        "errors": [],
+        "gpu_peak": 15467671552,
+        "host_available_min": 11602075648
+      },
+      "cuda_capture_verified": false
+    },
+    "stop": {
+      "command": [
+        "C:\\Program Files\\NVIDIA Corporation\\Nsight Systems 2025.5.2\\target-windows-x64\\nsys.exe",
+        "stop",
+        "--session=dml-offload-k16-20260912220542"
+      ],
+      "exit_code": 0
+    },
+    "resource_audit": {
+      "samples": 101,
+      "errors": [],
+      "gpu_peak": 15467671552,
+      "host_available_min": 11602075648,
+      "pass": true
+    },
+    "expected_request_coverage": true,
+    "acceptance_from_native_log": [
+      {
+        "consistent": true,
+        "checkpoint_replay_present": false,
+        "cycles": 12,
+        "accepted": 18,
+        "attempted": 146,
+        "survival": [
+          0.6666666666666666,
+          0.5,
+          0.25,
+          0.08333333333333333,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      },
+      {
+        "consistent": true,
+        "checkpoint_replay_present": false,
+        "cycles": 6,
+        "accepted": 25,
+        "attempted": 60,
+        "survival": [
+          0.6666666666666666,
+          0.6666666666666666,
+          0.6666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666,
+          0.16666666666666666
+        ]
+      }
+    ],
+    "sqlite_sha256": "2899024122189a87c16acccc6c1c27af1d36cf0bf3b333e2365f80c11fded5e6",
+    "tables": [
+      "ANALYSIS_DETAILS",
+      "ANALYSIS_FILE",
+      "CUDA_GRAPH_NODE_EVENTS",
+      "CUPTI_ACTIVITY_KIND_CUDA_EVENT",
+      "CUPTI_ACTIVITY_KIND_KERNEL",
+      "CUPTI_ACTIVITY_KIND_MEMCPY",
+      "CUPTI_ACTIVITY_KIND_MEMSET",
+      "CUPTI_ACTIVITY_KIND_OVERHEAD",
+      "CUPTI_ACTIVITY_KIND_RUNTIME",
+      "CUPTI_ACTIVITY_KIND_SYNCHRONIZATION",
+      "DIAGNOSTIC_EVENT",
+      "ENUM_CUDA_DEV_MEM_EVENT_OPER",
+      "ENUM_CUDA_FUNC_CACHE_CONFIG",
+      "ENUM_CUDA_KERNEL_LAUNCH_TYPE",
+      "ENUM_CUDA_MEMCPY_OPER",
+      "ENUM_CUDA_MEMPOOL_OPER",
+      "ENUM_CUDA_MEMPOOL_TYPE",
+      "ENUM_CUDA_MEM_KIND",
+      "ENUM_CUDA_SHARED_MEM_LIMIT_CONFIG",
+      "ENUM_CUDA_UNIF_MEM_ACCESS_TYPE",
+      "ENUM_CUDA_UNIF_MEM_MIGRATION",
+      "ENUM_CUPTI_OVERHEAD_TYPE",
+      "ENUM_CUPTI_STREAM_TYPE",
+      "ENUM_CUPTI_SYNC_TYPE",
+      "ENUM_DIAGNOSTIC_SEVERITY_LEVEL",
+      "ENUM_DIAGNOSTIC_SOURCE_TYPE",
+      "ENUM_DIAGNOSTIC_TIMESTAMP_SOURCE",
+      "ENUM_NSYS_EVENT_CLASS",
+      "ENUM_NSYS_EVENT_TYPE",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_FLAGS",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_PROPERTY",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_ETW_TYPE",
+      "ENUM_NSYS_GENERIC_EVENT_FIELD_TYPE",
+      "ENUM_NSYS_GENERIC_EVENT_GROUP",
+      "ENUM_NSYS_GENERIC_EVENT_SOURCE",
+      "META_DATA_CAPTURE",
+      "META_DATA_EXPORT",
+      "PROFILER_OVERHEAD",
+      "ProcessStreams",
+      "StringIds",
+      "TARGET_INFO_CUDA_CONTEXT_INFO",
+      "TARGET_INFO_CUDA_DEVICE",
+      "TARGET_INFO_CUDA_STREAM",
+      "TARGET_INFO_GPU",
+      "TARGET_INFO_SESSION_START_TIME",
+      "TARGET_INFO_SYSTEM_ENV",
+      "ThreadNames"
+    ],
+    "session_utc_epoch_ns": 1789250744256438650,
+    "all_capture_copy_count": 21517,
+    "all_capture_kernel_count": 151627,
+    "enum_labels": {
+      "ENUM_CUDA_MEMCPY_OPER": [
+        {
+          "id": 0,
+          "name": "CUDA_MEMCPY_KIND_UNKNOWN",
+          "label": "Unknown"
+        },
+        {
+          "id": 1,
+          "name": "CUDA_MEMCPY_KIND_HTOD",
+          "label": "Host-to-Device"
+        },
+        {
+          "id": 2,
+          "name": "CUDA_MEMCPY_KIND_DTOH",
+          "label": "Device-to-Host"
+        },
+        {
+          "id": 3,
+          "name": "CUDA_MEMCPY_KIND_HTOA",
+          "label": "Host-to-Array"
+        },
+        {
+          "id": 4,
+          "name": "CUDA_MEMCPY_KIND_ATOH",
+          "label": "Array-to-Host"
+        },
+        {
+          "id": 5,
+          "name": "CUDA_MEMCPY_KIND_ATOA",
+          "label": "Array-to-Array"
+        },
+        {
+          "id": 6,
+          "name": "CUDA_MEMCPY_KIND_ATOD",
+          "label": "Array-to-Device"
+        },
+        {
+          "id": 7,
+          "name": "CUDA_MEMCPY_KIND_DTOA",
+          "label": "Device-to-Array"
+        },
+        {
+          "id": 8,
+          "name": "CUDA_MEMCPY_KIND_DTOD",
+          "label": "Device-to-Device"
+        },
+        {
+          "id": 9,
+          "name": "CUDA_MEMCPY_KIND_HTOH",
+          "label": "Host-to-Host"
+        },
+        {
+          "id": 10,
+          "name": "CUDA_MEMCPY_KIND_PTOP",
+          "label": "Peer-to-Peer"
+        },
+        {
+          "id": 11,
+          "name": "CUDA_MEMCPY_KIND_UVM_HTOD",
+          "label": "Unified Host-to-Device"
+        },
+        {
+          "id": 12,
+          "name": "CUDA_MEMCPY_KIND_UVM_DTOH",
+          "label": "Unified Device-to-Host"
+        },
+        {
+          "id": 13,
+          "name": "CUDA_MEMCPY_KIND_UVM_DTOD",
+          "label": "Unified Device-to-Device"
+        }
+      ],
+      "ENUM_CUDA_MEM_KIND": [
+        {
+          "id": 0,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_PAGEABLE",
+          "label": "Pageable"
+        },
+        {
+          "id": 1,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_PINNED",
+          "label": "Pinned"
+        },
+        {
+          "id": 2,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_DEVICE",
+          "label": "Device"
+        },
+        {
+          "id": 3,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_ARRAY",
+          "label": "Array"
+        },
+        {
+          "id": 4,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_MANAGED",
+          "label": "Managed"
+        },
+        {
+          "id": 5,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_DEVICE_STATIC",
+          "label": "Device Static"
+        },
+        {
+          "id": 6,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_MANAGED_STATIC",
+          "label": "Managed Static"
+        },
+        {
+          "id": 7,
+          "name": "CUDA_MEMOPR_MEMORY_KIND_UNKNOWN",
+          "label": "Unknown"
+        }
+      ]
+    },
+    "windows": [
+      {
+        "id": "calibration-explanation",
+        "warmup": true,
+        "relative_start_ns": 12592354050,
+        "relative_end_ns": 16445941450,
+        "clock_duration_difference_seconds": 1.9999999998354667e-06,
+        "copy_types": [
+          {
+            "copy_kind": 1,
+            "src_kind": 1,
+            "dst_kind": 2,
+            "count": 4239,
+            "bytes": 68502287992,
+            "summed_duration_ns": 1350078513
+          },
+          {
+            "copy_kind": 2,
+            "src_kind": 2,
+            "dst_kind": 1,
+            "count": 1046,
+            "bytes": 355454976,
+            "summed_duration_ns": 16464873
+          },
+          {
+            "copy_kind": 1,
+            "src_kind": 0,
+            "dst_kind": 2,
+            "count": 462,
+            "bytes": 242221056,
+            "summed_duration_ns": 6070223
+          }
+        ],
+        "kernel_count": 103888,
+        "summed_kernel_duration_ns": 878769373,
+        "boundary_crossing_copies_excluded": 0,
+        "copy_size_histogram": {
+          "4": 310,
+          "8": 296,
+          "12": 3,
+          "24": 7,
+          "40": 3,
+          "44": 3,
+          "48": 7,
+          "56": 3,
+          "68": 18,
+          "80": 4,
+          "88": 4,
+          "96": 4,
+          "112": 4,
+          "136": 24,
+          "236": 2,
+          "472": 4,
+          "512": 148,
+          "1536": 2,
+          "3072": 2,
+          "3584": 147,
+          "4096": 462,
+          "5120": 2,
+          "5632": 2,
+          "6144": 2,
+          "7168": 2,
+          "8704": 12,
+          "10752": 1,
+          "20480": 695,
+          "21504": 1,
+          "30208": 2,
+          "35840": 1,
+          "39424": 1,
+          "40960": 42,
+          "43008": 1,
+          "45056": 42,
+          "49152": 42,
+          "50176": 1,
+          "57344": 42,
+          "60928": 6,
+          "61440": 2,
+          "69632": 252,
+          "122880": 2,
+          "204800": 84,
+          "211456": 1,
+          "225280": 84,
+          "241664": 42,
+          "245760": 84,
+          "286720": 84,
+          "348160": 504,
+          "524288": 462,
+          "607744": 160,
+          "608256": 2,
+          "1208320": 1,
+          "1824768": 1,
+          "2949120": 330,
+          "3649536": 1,
+          "4300800": 132,
+          "6082560": 1,
+          "6690816": 1,
+          "7299072": 1,
+          "8515584": 1,
+          "10340352": 6,
+          "14745600": 462,
+          "79626240": 561,
+          "116121600": 132
+        }
+      },
+      {
+        "id": "code-cache",
+        "warmup": false,
+        "relative_start_ns": 16519393050,
+        "relative_end_ns": 19138331850,
+        "clock_duration_difference_seconds": 2.19999999995224e-06,
+        "copy_types": [
+          {
+            "copy_kind": 1,
+            "src_kind": 1,
+            "dst_kind": 2,
+            "count": 1581,
+            "bytes": 24908948096,
+            "summed_duration_ns": 489302394
+          },
+          {
+            "copy_kind": 2,
+            "src_kind": 2,
+            "dst_kind": 1,
+            "count": 365,
+            "bytes": 145627648,
+            "summed_duration_ns": 6715569
+          },
+          {
+            "copy_kind": 1,
+            "src_kind": 0,
+            "dst_kind": 2,
+            "count": 168,
+            "bytes": 88080384,
+            "summed_duration_ns": 2107890
+          }
+        ],
+        "kernel_count": 44764,
+        "summed_kernel_duration_ns": 431774559,
+        "boundary_crossing_copies_excluded": 0,
+        "copy_size_histogram": {
+          "4": 128,
+          "8": 120,
+          "16": 3,
+          "20": 3,
+          "24": 3,
+          "32": 4,
+          "40": 4,
+          "48": 4,
+          "68": 9,
+          "136": 12,
+          "292": 2,
+          "512": 60,
+          "584": 4,
+          "2048": 2,
+          "2560": 2,
+          "3072": 2,
+          "3584": 60,
+          "4096": 168,
+          "8704": 6,
+          "14336": 1,
+          "17920": 1,
+          "20480": 252,
+          "21504": 1,
+          "37376": 2,
+          "60928": 3,
+          "69632": 126,
+          "81920": 2,
+          "102400": 2,
+          "122880": 2,
+          "261632": 1,
+          "299008": 42,
+          "348160": 252,
+          "524288": 168,
+          "607744": 67,
+          "608256": 1,
+          "1495040": 1,
+          "2433024": 1,
+          "2949120": 120,
+          "3041280": 1,
+          "3649536": 1,
+          "4300800": 48,
+          "10340352": 3,
+          "14745600": 168,
+          "79626240": 204,
+          "116121600": 48
+        }
+      }
+    ],
+    "aligned_cuda_activity_available": true,
+    "limits": [
+      "Windows include prefill, drafting and target verification; startup is excluded.",
+      "Only fully contained copy/kernel activities are summed.",
+      "Summed activity durations may overlap and are not critical-path time.",
+      "Profiled times do not enter stock throughput rankings."
+    ]
+  }
+}

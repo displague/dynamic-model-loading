@@ -36,11 +36,27 @@ def first_difference(a, b):
     return None if len(a) == len(b) else min(len(a), len(b))
 
 
+def audit_acceptance(log, request):
+    start, end = request['log_start'], request['log_end']
+    if not 0 <= start <= end <= len(log):
+        raise ValueError('invalid native log byte interval')
+    segment = log[start:end].decode('utf-8', errors='replace')
+    canonical = '\n'.join(line for line in segment.splitlines() if 'new n_tokens =' not in line)
+    events = stock.parse_acceptance(canonical)
+    summary = stock.acceptance_summary(events, request['response']['timings'])
+    if events != request['acceptance'] or summary != request['acceptance_summary'] or not summary['consistent']:
+        raise ValueError('acceptance does not reproduce from native log bytes and counters')
+    return summary
+
+
 def summarize_requests(data):
     emitted = sum(len(r['response']['tokens']) for r in data)
     seconds = sum(r['seconds'] for r in data)
     prompt_ms = sum(r['response']['timings']['prompt_ms'] for r in data)
     decode_ms = sum(r['response']['timings']['predicted_ms'] for r in data)
+    prompt_tokens = sum(r['response']['timings'].get('prompt_n', 0) for r in data)
+    decode_steps = sum(max(r['response']['timings'].get('predicted_n', len(r['response']['tokens']))-1, 0)
+                       for r in data)
     events = [e for r in data for e in r['acceptance'] if not e['checkpoint_replay']]
     consistent = all(r['acceptance_summary']['consistent'] for r in data)
     cycles = len(events)
@@ -48,9 +64,14 @@ def summarize_requests(data):
     return {'requests': len(data), 'emitted_tokens': emitted, 'request_seconds': seconds,
             'emitted_per_request_second': emitted/seconds if seconds else None,
             'native_prompt_seconds': prompt_ms/1000, 'native_decode_seconds': decode_ms/1000,
+            'native_prompt_tokens': prompt_tokens,
+            'native_prompt_tokens_per_second': prompt_tokens/(prompt_ms/1000) if prompt_ms else None,
+            'native_decode_steps': decode_steps,
+            'native_decode_steps_per_second': decode_steps/(decode_ms/1000) if decode_ms else None,
             'emitted_per_native_decode_second': emitted/(decode_ms/1000) if decode_ms else None,
             'acceptance_consistent': consistent, 'cycles': cycles,
             'accepted': sum(e['accepted'] for e in events), 'attempted': sum(e['attempted'] for e in events),
+            'attempted_length_histogram': dict(sorted(Counter(e['attempted'] for e in events).items())),
             'accepted_prefix_histogram': dict(sorted(Counter(e['accepted'] for e in events).items())) if consistent else None,
             'survival': [sum(e['accepted'] >= i for e in events)/cycles for i in range(1, maximum+1)]
                         if consistent and cycles else None,
@@ -123,7 +144,35 @@ def analyze(root, reference):
             continue
         if not audit['pass']:
             raise ValueError(f'successful group has failing raw resource trace: {path.name}')
-        native_log = (path/'server.log').read_text(encoding='utf-8', errors='replace')
+        native_bytes = (path/'server.log').read_bytes()
+        native_log = native_bytes.decode('utf-8', errors='replace')
+        frozen = read(path/'inputs.json')
+        reference_inputs = read(first_long_inputs if stage == 'long' else reference/'inputs.json')
+        if frozen != reference_inputs:
+            raise ValueError('stored token inputs differ from the frozen reference')
+        expected_ids = (['code-cache'] if stage == 'mechanism' else list(frozen) if stage == 'long'
+                        else [key for key in frozen if key != 'calibration-explanation'])
+        if sorted(r['id'] for r in raw) != sorted(['warmup', *expected_ids]) or (
+                [r['id'] for r in raw] != read(path/'case-order.json')):
+            raise ValueError('request case coverage/order differs from the frozen inputs')
+        for request in raw:
+            audit_acceptance(native_bytes, request)
+            key = request['id']
+            warmup = key == 'warmup'
+            if request['warmup'] != warmup:
+                raise ValueError('warmup classification differs from case identity')
+            tokens = (read(path/'http-warmup-tokens.body')['tokens'] if warmup and stage == 'long'
+                      else frozen['calibration-explanation' if warmup else key]['tokens'])
+            cap = 32 if warmup or stage == 'mechanism' else 128 if stage == 'long' else 256
+            payload = json.loads(read(path/f'http-completion-{key}.request.json')['body_utf8'])
+            if payload != stock.completion_payload(tokens, cap) or request['prompt_tokens'] != len(tokens):
+                raise ValueError('raw completion request differs from the declared tokens/decoding')
+            raw_body = path/f'http-completion-{key}.body'
+            http = read(path/f'http-completion-{key}.http.json')
+            if http['status'] != 200 or not http['complete'] or http['bytes'] != raw_body.stat().st_size:
+                raise ValueError('incomplete completion HTTP receipt')
+            if read(raw_body) != request['response']:
+                raise ValueError('compact response differs from raw HTTP body')
         native_kv = re.findall(r'size =\s*([\d.]+) MiB \(\s*(\d+) cells,\s*(\d+) layers[^\n]*?'
                                r'K \(([^)]+)\):[^\n]*?V \(([^)]+)\):', native_log)
         expected_layers = [64, 24] if cfg['k'] else [64]

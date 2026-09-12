@@ -234,9 +234,16 @@
     "target_path_fidelity": {
       "number": 27,
       "url": "https://github.com/displague/dynamic-model-loading/issues/27",
-      "title": "Isolate target execution-path differences before claiming identical-output speculation",
+      "title": "Validate speculative target state after bounded numerical characterization",
       "state": "open"
+    },
+    "verification_offload": {
+      "number": 28,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/28",
+      "title": "Measure stock block-verification operation offload and populated long context",
+      "state": "closed",
+      "state_reason": "completed"
     }
   },
-  "last_refreshed_utc": "2026-09-12T17:41:27.162214+00:00"
+  "last_refreshed_utc": "2026-09-12T22:37:25.431044+00:00"
 }

@@ -8,7 +8,8 @@ import pytest
 SCRIPTS = Path(__file__).resolve().parents[1]/'scripts'
 sys.path.insert(0, str(SCRIPTS))
 import verification_offload as study
-from analyze_verification_offload import summarize_requests
+from analyze_verification_offload import summarize_requests, audit_acceptance
+import stock_benchmark as stock
 
 
 def test_child_settings_replace_case_insensitive_inherited_overrides_without_mutating_parent():
@@ -95,3 +96,18 @@ def test_rate_uses_total_emitted_output_over_total_request_time():
     assert result['emitted_per_request_second'] == 6
     assert result['emitted_per_native_decode_second'] == 30/4.8
     assert result['survival'] is None and result['request_ms_per_recorded_cycle'] is None
+
+
+def test_acceptance_audit_rejects_edited_compact_events_and_bad_log_interval():
+    native = b'slot: accepted 1/ 2 draft tokens\n'
+    events = stock.parse_acceptance(native.decode())
+    timings = {'draft_n': 2, 'draft_n_accepted': 1}
+    row = {'log_start': 0, 'log_end': len(native), 'response': {'timings': timings},
+           'acceptance': events, 'acceptance_summary': stock.acceptance_summary(events, timings)}
+    assert audit_acceptance(native, row)['consistent']
+    row['acceptance'] = []
+    with pytest.raises(ValueError, match='does not reproduce'):
+        audit_acceptance(native, row)
+    row['log_end'] += 1
+    with pytest.raises(ValueError, match='byte interval'):
+        audit_acceptance(native, row)

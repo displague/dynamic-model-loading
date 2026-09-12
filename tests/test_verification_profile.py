@@ -8,6 +8,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
 from analyze_verification_profile import analyze
 from profile_verification import finish_owned_target
+import stock_benchmark as stock
 
 
 def test_cuda_bytes_are_windowed_and_boundary_copies_are_explicit(tmp_path):
@@ -26,6 +27,13 @@ def test_cuda_bytes_are_windowed_and_boundary_copies_are_explicit(tmp_path):
         'begin_unix_ns': 1000001000, 'end_unix_ns': 1000002000, 'seconds': 0.000001},
         {'id': 'code-cache', 'warmup': False,
         'begin_unix_ns': 1000003000, 'end_unix_ns': 1000004000, 'seconds': 0.000001}]
+    native = b'slot: accepted 1/ 2 draft tokens\n'
+    for request in requests:
+        events = stock.parse_acceptance(native.decode())
+        timings = {'draft_n': 2, 'draft_n_accepted': 1}
+        request.update(log_start=0, log_end=len(native), response={'timings': timings},
+                       acceptance=events, acceptance_summary=stock.acceptance_summary(events, timings))
+    (tmp_path/'native-server.log').write_bytes(native)
     (tmp_path/'rows.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in requests), encoding='utf-8')
     (tmp_path/'resources.jsonl').write_text(json.dumps({'gpu': {'used': 100}, 'host': {'available': 3*2**30}})+'\n', encoding='utf-8')
     (tmp_path/'completion.json').write_text(json.dumps({'profiler_exit_code': 0, 'resources': {'pass': True}}), encoding='utf-8')
