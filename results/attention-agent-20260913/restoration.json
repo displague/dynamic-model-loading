@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "1a297d72a74eb253f4c6bbf66dec5d67786caf333cbd0a2be84968ff43a9bd21",
+  "inventory_sha256": "6f64b66c92e144716cd5529e7a2f4f2da0fc9bb2c76b322bc939e86b40539eb5",
+  "restored_members": 1418,
+  "restored_bytes": 32621641,
+  "analysis_sha256": "56263be853457fe51e2ed7f3909f0d3f06e644d646b7e26d7cefc3c5e67d542d",
+  "reproduced_analysis_sha256": "56263be853457fe51e2ed7f3909f0d3f06e644d646b7e26d7cefc3c5e67d542d",
+  "analysis_byte_identical": true,
+  "command": [
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-attention-agent-v0180\\source\\scripts\\analyze_attention_agent.py",
+    "--runs",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-attention-agent-v0180\\runs\\attention-agent-20260913",
+    "--output",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-attention-agent-v0180\\reproduced-analysis.json"
+  ]
+}

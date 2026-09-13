@@ -262,8 +262,9 @@
       "number": 31,
       "url": "https://github.com/displague/dynamic-model-loading/issues/31",
       "title": "Test stock attention-resident placement with host-backed FFN tensors",
-      "state": "open"
+      "state": "closed",
+      "state_reason": "completed"
     }
   },
-  "last_refreshed_utc": "2026-09-13T06:56:50.771549+00:00"
+  "last_refreshed_utc": "2026-09-13T13:34:24.168795+00:00"
 }

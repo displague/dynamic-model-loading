@@ -13,20 +13,28 @@ See the [research stages and delivery history](docs/plan.md),
 [GitHub milestones](https://github.com/displague/dynamic-model-loading/milestones)
 for the original plan, completed experiments, and remaining gates.
 
-**Current direction:** [ADR 0003](docs/adr/0003-verified-speculation-boundary.md)
-retires the tested per-token selective-execution path as the primary implementation.
-The [stock verification-offload experiment](docs/verification-offload-results.md)
-raises short-context throughput to **19.74 emitted tokens/s**, 11.8% above the
-newly repeated default-threshold K4 draft configuration. The unchanged b10919
-binary uses `GGML_OP_OFFLOAD_MIN_BATCH=8` and K16 with the existing 0.5B draft.
-Actual CUDA copies establish cold-weight movement; a populated 16K/q8_0-KV
-control measures context sensitivity. A target-only diagnostic reproduces four
-historical rebuild reversals through prefix construction, while independent
-[speculative-state fidelity #27](https://github.com/displague/dynamic-model-loading/issues/27)
-remains open. Cross-path output identity is not claimed. See
-[v0.15.0](docs/releases/v0.15.0.md), [all measured tables](docs/verification-offload-tables.md),
-and the preserved [v0.14 stock comparison](docs/stock-speculation-results.md).
-A custom runtime and new draft representation remain deferred.
+**Current measured configuration:** stock b10919, Qwen2.5-32B-Instruct Q4_K_M
+with a 0.5B Q8_0 draft, resident attention/KV and 32 host-backed FFNs. Use
+threshold 2, K16/p_min0 and q8_0 KV under the recorded 15,000 MiB GPU allowance.
+The [continuing-turn study](docs/attention-agent-results.md) measures **23.98 seconds
+for five retained turns and 0.623-second mean token-bearing TTFT**, versus 33.11
+seconds and 0.776 seconds for whole-layer offload. Exact-prompt attention resets
+take 172.97 seconds. Four of five answers hit the 64-token cap, and histories differ
+after extraction; this is a bounded latency result, not task completion or universal
+output equivalence. [v0.18.0](docs/releases/v0.18.0.md) completes the agreed queue.
+
+The separate [v0.17 cold-request study](docs/stock-placement-results.md) measures
+20.57 native decode steps/s after a populated 16K prefix, versus 15.29 for its fresh
+whole-layer control. See the [configuration guide](docs/stock-long-context-configuration.md)
+for complete settings and distinctions between these workloads. In-process prefix
+retention is measured; complete target/draft disk restart and 32K are unqualified.
+
+[ADR 0003](docs/adr/0003-verified-speculation-boundary.md) preserves and retires the
+tested per-token selective-execution path as the primary implementation strategy.
+[#27](https://github.com/displague/dynamic-model-loading/issues/27) remains open:
+the earlier independent replay agrees on 256/256 long IDs and 1,527/1,536 short IDs.
+No margin waiver or new numerical campaign changes those results. New drafts,
+controllers, physical pagers and custom overlap remain deferred.
 
 **Preserved v0.12 result:** the [complete causal-repair experiment](docs/causal-evidence-results.md)
 finds a mixed quality improvement from partial evidence at matched bytes: relative

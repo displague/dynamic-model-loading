@@ -51,11 +51,23 @@ on all four paired long outputs. All64 target attention/KV layers stay on CUDA;
 not a new runtime. The original allocation stop and the first follow-up's byte-hash
 failure remain separate from its freshly registered corrected measurements.
 
-The immediate next measurement is #31's retained-prefix comparison on the changed
-layout. The known-layout conversation win does not automatically transfer to it.
-Both cold-request layouts satisfy a common total resource allowance, but their
-actual allocations differ and whole-layer residency was not globally reoptimized.
-Do not replace that practical check with another draft/controller or overlap patch.
+The [v0.18 retained-layout delivery](releases/v0.18.0.md) completes #31's remaining
+bounded scope. At unchanged original caps and threshold2/K16, attention-resident
+continuing turns take23.985s versus33.110s whole-layer; mean TTFT is0.623s versus
+0.776s. Exact-prompt attention resets take172.973s. Extraction outputs diverge,
+so three later prompts per repeat differ across layouts; the38.0% emitted/request
+increase is a conversation-level result, not identical-input acceleration throughout.
+Four of five retained answers hit64 tokens. [Detailed receipts](attention-agent-results.md)
+preserve that limit and every output difference.
+
+The bounded queue is complete. Use the measured stock configuration with its scope;
+no immediate32K/high-cap/draft/controller/overlap/pager expansion is queued. #27
+remains open with the prior nine short replay discrepancies; #25/#26 stay deferred,
+and the broader milestone stays open. In-process retention is measured, while
+complete target/draft disk restoration is unqualified: pinned slot handlers save
+and load ctx_tgt only. Future work should follow a concrete workload bottleneck,
+not an obligation to add knobs. The specified layouts share a15000MiB allowance;
+this does not establish a globally optimal memory allocation.
 
 [ADR 0003](adr/0003-verified-speculation-boundary.md) retires the tested Qwen 1.5B
 FP32 grouped per-token execution/repair path as the primary engineering strategy.

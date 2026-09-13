@@ -1,0 +1,15 @@
+{
+  "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+  "executable": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+  "packages": {
+    "torch": "2.10.0+cu130",
+    "numpy": "2.3.5",
+    "psutil": "7.2.2",
+    "transformers": "5.13.1"
+  },
+  "gpu": "NVIDIA GeForce RTX 5080 Laptop GPU, 616.92, 16303 MiB, 0 MiB",
+  "host_total_bytes": 33737986048,
+  "disk_free_bytes": 231275274240,
+  "native_head": "d3146f2b56c2db4711ac8391871c9e529d1946d7",
+  "native_clean": true
+}

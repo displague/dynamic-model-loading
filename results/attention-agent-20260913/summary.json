@@ -1,0 +1,417 @@
+{
+  "measured_source": "5b7dcbd8ace3357b263536f0a38b88badfec1050",
+  "processes": 8,
+  "scored_requests": 48,
+  "warmups": 8,
+  "failed_attempts": 0,
+  "pooled": {
+    "whole-retained": {
+      "continuing_requests": 10,
+      "mean_five_turn_s": 33.10970439999801,
+      "mean_ttft_s": 0.7761603099999774,
+      "emitted": 570,
+      "emitted_per_request_s": 8.607748246765293,
+      "limit_stops": 8,
+      "native_steps_per_s": 9.583875321449169,
+      "mean_initial_request_s": 40.59607160000087,
+      "target_reused": 171844,
+      "target_evaluated": 1988,
+      "gpu_peak_bytes": 14427459584
+    },
+    "whole-reset": {
+      "continuing_requests": 10,
+      "mean_five_turn_s": 201.51365070000247,
+      "mean_ttft_s": 34.601414809999554,
+      "emitted": 570,
+      "emitted_per_request_s": 1.414296247474993,
+      "limit_stops": 8,
+      "native_steps_per_s": 9.824963537542686,
+      "mean_initial_request_s": 40.51816735000102,
+      "target_reused": 0,
+      "target_evaluated": 173832,
+      "gpu_peak_bytes": 14427459584
+    },
+    "attention-retained": {
+      "continuing_requests": 10,
+      "mean_five_turn_s": 23.984744450008293,
+      "mean_ttft_s": 0.622588980000728,
+      "emitted": 570,
+      "emitted_per_request_s": 11.882553120131387,
+      "limit_stops": 8,
+      "native_steps_per_s": 13.417555328127992,
+      "mean_initial_request_s": 34.57427925000229,
+      "target_reused": 171844,
+      "target_evaluated": 1988,
+      "gpu_peak_bytes": 15148879872
+    },
+    "attention-reset": {
+      "continuing_requests": 10,
+      "mean_five_turn_s": 172.9734725999988,
+      "mean_ttft_s": 30.568819740001345,
+      "emitted": 562,
+      "emitted_per_request_s": 1.6245265576058163,
+      "limit_stops": 6,
+      "native_steps_per_s": 13.71753770794557,
+      "mean_initial_request_s": 34.567210749999504,
+      "target_reused": 0,
+      "target_evaluated": 173832,
+      "gpu_peak_bytes": 15148879872
+    }
+  },
+  "retained_rate_ratio": 1.3804484958765764,
+  "retained_time_reduction": 0.27559774740816667,
+  "cross_layout": [
+    {
+      "repeat": 1,
+      "mode": "retained",
+      "turn": 0,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "repeat": 1,
+      "mode": "retained",
+      "turn": 1,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "repeat": 1,
+      "mode": "retained",
+      "turn": 2,
+      "same_prompt": true,
+      "same_output": false
+    },
+    {
+      "repeat": 1,
+      "mode": "retained",
+      "turn": 3,
+      "same_prompt": false,
+      "same_output": false
+    },
+    {
+      "repeat": 1,
+      "mode": "retained",
+      "turn": 4,
+      "same_prompt": false,
+      "same_output": true
+    },
+    {
+      "repeat": 1,
+      "mode": "retained",
+      "turn": 5,
+      "same_prompt": false,
+      "same_output": false
+    },
+    {
+      "repeat": 1,
+      "mode": "reset",
+      "turn": 0,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "repeat": 1,
+      "mode": "reset",
+      "turn": 1,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "repeat": 1,
+      "mode": "reset",
+      "turn": 2,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "repeat": 1,
+      "mode": "reset",
+      "turn": 3,
+      "same_prompt": false,
+      "same_output": true
+    },
+    {
+      "repeat": 1,
+      "mode": "reset",
+      "turn": 4,
+      "same_prompt": false,
+      "same_output": true
+    },
+    {
+      "repeat": 1,
+      "mode": "reset",
+      "turn": 5,
+      "same_prompt": false,
+      "same_output": false
+    },
+    {
+      "repeat": 2,
+      "mode": "retained",
+      "turn": 0,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "repeat": 2,
+      "mode": "retained",
+      "turn": 1,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "repeat": 2,
+      "mode": "retained",
+      "turn": 2,
+      "same_prompt": true,
+      "same_output": false
+    },
+    {
+      "repeat": 2,
+      "mode": "retained",
+      "turn": 3,
+      "same_prompt": false,
+      "same_output": false
+    },
+    {
+      "repeat": 2,
+      "mode": "retained",
+      "turn": 4,
+      "same_prompt": false,
+      "same_output": true
+    },
+    {
+      "repeat": 2,
+      "mode": "retained",
+      "turn": 5,
+      "same_prompt": false,
+      "same_output": false
+    },
+    {
+      "repeat": 2,
+      "mode": "reset",
+      "turn": 0,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "repeat": 2,
+      "mode": "reset",
+      "turn": 1,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "repeat": 2,
+      "mode": "reset",
+      "turn": 2,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "repeat": 2,
+      "mode": "reset",
+      "turn": 3,
+      "same_prompt": false,
+      "same_output": true
+    },
+    {
+      "repeat": 2,
+      "mode": "reset",
+      "turn": 4,
+      "same_prompt": false,
+      "same_output": true
+    },
+    {
+      "repeat": 2,
+      "mode": "reset",
+      "turn": 5,
+      "same_prompt": false,
+      "same_output": false
+    }
+  ],
+  "repeat_agreement": [
+    {
+      "condition": "whole",
+      "mode": "retained",
+      "turn": 0,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "retained",
+      "turn": 1,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "retained",
+      "turn": 2,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "retained",
+      "turn": 3,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "retained",
+      "turn": 4,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "retained",
+      "turn": 5,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "reset",
+      "turn": 0,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "reset",
+      "turn": 1,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "reset",
+      "turn": 2,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "reset",
+      "turn": 3,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "reset",
+      "turn": 4,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "whole",
+      "mode": "reset",
+      "turn": 5,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "retained",
+      "turn": 0,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "retained",
+      "turn": 1,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "retained",
+      "turn": 2,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "retained",
+      "turn": 3,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "retained",
+      "turn": 4,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "retained",
+      "turn": 5,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "reset",
+      "turn": 0,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "reset",
+      "turn": 1,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "reset",
+      "turn": 2,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "reset",
+      "turn": 3,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "reset",
+      "turn": 4,
+      "same_prompt": true,
+      "same_output": true
+    },
+    {
+      "condition": "attention",
+      "mode": "reset",
+      "turn": 5,
+      "same_prompt": true,
+      "same_output": true
+    }
+  ],
+  "paired_reset_matches": {
+    "whole": 8,
+    "attention": 10
+  },
+  "minimum_host_available_bytes": 13580099584,
+  "limitations": [
+    "One scripted conversation, two repeats, 128/64 output caps; latency is not task completion.",
+    "Each reset uses its paired retained exact prompts; reset always follows retained.",
+    "Cross-layout histories may differ; compare prompt identity before describing acceleration.",
+    "Draft forwarded prompt positions are source-derived, not an independent draft cache counter.",
+    "In-process retention only; target-only disk persistence does not qualify target/draft restart.",
+    "No new independent replay; v0.16 nine short discrepancies remain open.",
+    "Sampled resources and allocation receipts are not component timers or executed copy counts."
+  ]
+}
