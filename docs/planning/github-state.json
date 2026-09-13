@@ -264,7 +264,13 @@
       "title": "Test stock attention-resident placement with host-backed FFN tensors",
       "state": "closed",
       "state_reason": "completed"
+    },
+    "local_interactive": {
+      "number": 32,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/32",
+      "title": "Prepare local interactive profiles and qualify coding-harness API compatibility",
+      "state": "open"
     }
   },
-  "last_refreshed_utc": "2026-09-13T13:34:24.168795+00:00"
+  "last_refreshed_utc": "2026-09-13T18:32:07.542104+00:00"
 }
