@@ -243,7 +243,25 @@
       "title": "Measure stock block-verification operation offload and populated long context",
       "state": "closed",
       "state_reason": "completed"
+    },
+    "continuing_agent": {
+      "number": 29,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/29",
+      "title": "Measure retained-prefix agent turns against identical-input reset controls",
+      "state": "open"
+    },
+    "long_thresholds": {
+      "number": 30,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/30",
+      "title": "Bound the populated16K stock threshold frontier at fixed draft settings",
+      "state": "open"
+    },
+    "attention_resident": {
+      "number": 31,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/31",
+      "title": "Test stock attention-resident placement with host-backed FFN tensors",
+      "state": "open"
     }
   },
-  "last_refreshed_utc": "2026-09-12T22:37:25.431044+00:00"
+  "last_refreshed_utc": "2026-09-13T04:11:11.484128+00:00"
 }

@@ -5,13 +5,34 @@ This roadmap reconstructs the staged course in the final critical review of the
 It was recorded retrospectively on 2026-09-11. The original experiment protocols were
 written before their measurements; this roadmap is not a retroactive preregistration.
 
-The question is whether a dense FFN's useful computation survives physical grouping,
+The original question was whether a dense FFN's useful computation survives physical grouping,
 can be selected cheaply from causally available information, and can be executed with
 less real data movement under a bounded memory budget. Corrective refinement is a
 separate hypothesis. A residency miss is observable; an omitted important group can
 silently damage quality without causing a residency miss.
 
 ## Primary program after v0.12
+
+The current queue after v0.15 is deliberately small: [independent committed-token
+replay](continuing-agent-protocol.md) under [#27](https://github.com/displague/dynamic-model-loading/issues/27)
+and a [retained-prefix conversation fixture #29](https://github.com/displague/dynamic-model-loading/issues/29)
+on the known configuration; then a fixed-K16 [threshold2/4/8 comparison #30](https://github.com/displague/dynamic-model-loading/issues/30)
+and an [attention-resident / host-FFN placement experiment #31](https://github.com/displague/dynamic-model-loading/issues/31).
+Each new measurement requires its own pushed protocol and fresh run directory.
+These are bounded experiments, not another gate ladder. The
+[practical v0.15 configuration](stock-long-context-configuration.md) is already published.
+
+Keep `p_min=0`: the proposed 0.75 default is contradicted by the pinned source.
+The main short K16 run attempted15.58 proposals/cycle; the ten-proposal average
+belongs to the separate32-output profiler fixture. Measured copies run near51GB/s;
+the unexplained cycle residual is not a CPU-attention measurement. Existing captures
+include prefill. No overlap multiplier is established. The next placement test must
+verify host-buffer eligibility and pay for extra resident attention/KV.
+
+The [ideation inventory](ideation-status.md) distinguishes analytical tests from
+physical implementations and deferred hypotheses. Optional mask-union analysis on
+1.5B cannot prove exact omission or settle32B sparsity. New drafts, learned adaptiveK
+and custom overlap remain deferred until the practical measurements identify a need.
 
 [ADR 0003](adr/0003-verified-speculation-boundary.md) retires the tested Qwen 1.5B
 FP32 grouped per-token execution/repair path as the primary engineering strategy.

@@ -1,0 +1,30 @@
+{
+  "initial_case": "long-code-cache",
+  "turns": [
+    {
+      "id": "code",
+      "text": "Continue the engineering session. Write a Python function sum_even(values) that sums only even integers. Include two assert examples and no unrelated code.",
+      "cap": 64
+    },
+    {
+      "id": "extraction",
+      "text": "A tool returned these records. Extract the service with minimum latency, as JSON with service and latency_ms only.\n<tool_response>\n{\"service\":\"worker-00\",\"latency_ms\":100}\n{\"service\":\"worker-01\",\"latency_ms\":101}\n{\"service\":\"worker-02\",\"latency_ms\":102}\n{\"service\":\"worker-03\",\"latency_ms\":103}\n{\"service\":\"worker-04\",\"latency_ms\":104}\n{\"service\":\"worker-05\",\"latency_ms\":105}\n{\"service\":\"worker-06\",\"latency_ms\":106}\n{\"service\":\"worker-07\",\"latency_ms\":107}\n{\"service\":\"worker-08\",\"latency_ms\":108}\n{\"service\":\"worker-09\",\"latency_ms\":109}\n{\"service\":\"worker-10\",\"latency_ms\":110}\n{\"service\":\"worker-11\",\"latency_ms\":111}\n{\"service\":\"worker-12\",\"latency_ms\":112}\n{\"service\":\"worker-13\",\"latency_ms\":113}\n{\"service\":\"worker-14\",\"latency_ms\":114}\n{\"service\":\"worker-15\",\"latency_ms\":115}\n{\"service\":\"worker-16\",\"latency_ms\":116}\n{\"service\":\"worker-17\",\"latency_ms\":117}\n{\"service\":\"worker-18\",\"latency_ms\":118}\n{\"service\":\"worker-19\",\"latency_ms\":119}\n{\"service\":\"worker-20\",\"latency_ms\":120}\n{\"service\":\"worker-21\",\"latency_ms\":121}\n{\"service\":\"worker-22\",\"latency_ms\":122}\n{\"service\":\"worker-23\",\"latency_ms\":123}\n{\"service\":\"worker-24\",\"latency_ms\":124}\n{\"service\":\"worker-25\",\"latency_ms\":125}\n{\"service\":\"worker-26\",\"latency_ms\":126}\n{\"service\":\"worker-27\",\"latency_ms\":127}\n{\"service\":\"worker-28\",\"latency_ms\":128}\n{\"service\":\"worker-29\",\"latency_ms\":129}\n{\"service\":\"worker-30\",\"latency_ms\":130}\n{\"service\":\"worker-31\",\"latency_ms\":131}\n{\"service\":\"worker-32\",\"latency_ms\":132}\n{\"service\":\"worker-33\",\"latency_ms\":133}\n{\"service\":\"worker-34\",\"latency_ms\":134}\n{\"service\":\"worker-35\",\"latency_ms\":135}\n{\"service\":\"worker-36\",\"latency_ms\":136}\n{\"service\":\"worker-37\",\"latency_ms\":137}\n{\"service\":\"worker-38\",\"latency_ms\":138}\n{\"service\":\"worker-39\",\"latency_ms\":139}\n{\"service\":\"worker-40\",\"latency_ms\":140}\n{\"service\":\"worker-41\",\"latency_ms\":141}\n{\"service\":\"worker-42\",\"latency_ms\":142}\n{\"service\":\"worker-43\",\"latency_ms\":143}\n{\"service\":\"worker-44\",\"latency_ms\":144}\n{\"service\":\"worker-45\",\"latency_ms\":145}\n{\"service\":\"worker-46\",\"latency_ms\":146}\n{\"service\":\"worker-47\",\"latency_ms\":147}\n{\"service\":\"fast-lane\",\"latency_ms\":7}\n</tool_response>",
+      "cap": 64
+    },
+    {
+      "id": "arithmetic",
+      "text": "Switch to arithmetic. An inventory starts at 147 items, receives 38, and ships 59. Return the final item count and one line showing the arithmetic.",
+      "cap": 64
+    },
+    {
+      "id": "copying",
+      "text": "Copy the following identifiers exactly, one per line, without commentary:\nQZ-1842\nblue_73-X\nITEM-00091\nT9:r2:END",
+      "cap": 64
+    },
+    {
+      "id": "topic-change",
+      "text": "Now leave the engineering topic. Explain how to store basil leaves for two days without freezing, in three short practical bullet points.",
+      "cap": 64
+    }
+  ]
+}
