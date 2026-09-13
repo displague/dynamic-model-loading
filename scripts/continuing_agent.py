@@ -204,8 +204,10 @@ def suffix_text(turn, stopped_eos):
     return ('' if stopped_eos else '<|im_end|>')+'\n<|im_start|>user\n'+turn['text']+'<|im_end|>\n<|im_start|>assistant\n'
 
 
-def agent(args):
-    cfg=settings(args.kind,args.condition)
+def agent(args, *, configuration=None, server_factory=None):
+    """Reuse the frozen conversation construction with an explicitly supplied server."""
+    cfg=settings(args.kind,args.condition) if configuration is None else configuration
+    launch=server if server_factory is None else server_factory
     fixture=read(ROOT/'data/committed-replay.json')
     turns=read(ROOT/'data/continuing-agent-turns.json')
     initial=fixture['cases'][turns['initial_case']]
@@ -219,7 +221,7 @@ def agent(args):
             raise ValueError('reset source does not match its declared pair')
         retained=[json.loads(x) for x in (args.retained/'rows.jsonl').read_text(encoding='utf-8').splitlines()]
         if len(retained)!=6: raise ValueError('retained turn coverage')
-    with server(args,cfg) as (base,resources), (args.output/'rows.jsonl').open('x',encoding='utf-8') as ledger:
+    with launch(args,cfg) as (base,resources), (args.output/'rows.jsonl').open('x',encoding='utf-8') as ledger:
         # Same untimed short calibration before every fresh process's conversation.
         warm=fixture['cases']['short-code-cache']['prompt']
         stock.request(base,'/completion',stock.completion_payload(warm,32),receipt=args.output/'warmup')

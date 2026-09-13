@@ -119,8 +119,8 @@ def sse_from_raw(path):
     return events
 
 
-def agent(run,retained=None):
-    manifest,resources=audit_run(run)
+def agent(run,retained=None,*,audit=None):
+    manifest,resources=(audit_run if audit is None else audit)(run)
     reset=manifest['kind']=='agent-reset'
     ledger=lines(run/'rows.jsonl')
     require([r['turn'] for r in ledger]==list(range(6)),'agent sequence coverage')
