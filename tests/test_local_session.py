@@ -143,7 +143,9 @@ def test_small_context_manual_mode_keeps_true_window_and_manual_recovery(tmp_pat
     parent = {'DISABLE_COMPACT': '1', 'disable_auto_compact': '1',
               'CLAUDE_CODE_MAX_CONTEXT_TOKENS': '200000',
               'CLAUDE_CODE_BLOCKING_LIMIT_OVERRIDE': '200000'}
-    _, env, _ = local.client_settings('claude', 'http://127.0.0.1:8080', tmp_path, tmp_path, parent)
+    cmd, env, _ = local.client_settings('claude', 'http://127.0.0.1:8080', tmp_path, tmp_path, parent)
+    assert '--disable-slash-commands' not in cmd
+    assert '--bare' in cmd and '--restricted' in cmd
     assert env['DISABLE_AUTO_COMPACT'] == '1'
     assert 'DISABLE_COMPACT' not in env and 'disable_auto_compact' not in env
     assert env['CLAUDE_CODE_MAX_CONTEXT_TOKENS'] == '18432'
@@ -169,3 +171,17 @@ def test_scripted_read_evidence_rejects_denials_and_deduplicates_history():
     assert successful_fixture_reads([req(denied)]) == set()
     assert successful_fixture_reads([req(good), req(good)]) == {'tool_1'}
     assert successful_fixture_reads([req(dict(good, content='unrelated text'))]) == set()
+
+
+def test_trimmed_full_read_cannot_substitute_for_denied_targeted_read():
+    from claude_context_check import read_budget_evidence
+    full = {'type': 'tool_result', 'tool_use_id': 'tool_1', 'content': 'row 0: a\nrow 1: b'}
+    target = dict(full, tool_use_id='tool_2', is_error=True, content='Permission denied')
+    rows = [{'type': 'user', 'message': {'content': [full]}, 'tool_use_result':
+             {'file': {'truncatedByTokenCap': True, 'numLines': 2, 'totalLines': 1501}}}]
+    def requests(t):
+        return [{'body': {'messages': [{'content': [full, t]}]}}]
+    _, trimmed, bounded = read_budget_evidence(rows, requests(target))
+    assert trimmed and not bounded
+    _, _, bounded = read_budget_evidence(rows, requests(dict(full, tool_use_id='tool_2')))
+    assert bounded

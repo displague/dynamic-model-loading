@@ -122,7 +122,8 @@ def client_settings(client, base, state, workspace, parent, *, prompt=None, resu
         if claude_compaction == 'manual':
             effective['DISABLE_AUTO_COMPACT'] = '1'
         env.update(effective)
-        cmd = [executable('claude'), '--bare', '--restricted', '--disable-slash-commands',
+        # Bare mode suppresses skill/plugin discovery while leaving recovery commands usable.
+        cmd = [executable('claude'), '--bare', '--restricted',
                '--strict-mcp-config', '--model', ALIAS, '--tools', 'Read,Edit,Write',
                '--system-prompt', 'You are a local coding assistant on Windows. '
                f'The working directory is {workspace}. Resolve file paths against this exact directory; never use placeholder paths. '

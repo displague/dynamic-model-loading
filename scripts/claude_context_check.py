@@ -37,6 +37,28 @@ def successful_fixture_reads(requests):
             and not b.get('is_error') and 'A small fixture.' in content_text(b)}
 
 
+def read_budget_evidence(rows, requests):
+    results = [b for r in requests for m in r['body'].get('messages', [])
+               for b in (m.get('content') if isinstance(m.get('content'), list) else [])
+               if b.get('type') == 'tool_result']
+    errors = [b for b in results if b.get('tool_use_id') == 'tool_1' and b.get('is_error')
+              and 'maximum allowed tokens (2048)' in content_text(b)]
+    trimmed = []
+    for row in rows:
+        if row.get('type') != 'user' or not isinstance(row.get('tool_use_result'), dict):
+            continue
+        blocks = row.get('message', {}).get('content', [])
+        if not isinstance(blocks, list) or not any(b.get('type') == 'tool_result'
+                and b.get('tool_use_id') == 'tool_1' and not b.get('is_error') for b in blocks):
+            continue
+        f = row['tool_use_result'].get('file', {})
+        if f.get('truncatedByTokenCap') and 0 < f.get('numLines', 0) < f.get('totalLines', 0):
+            trimmed.append(f)
+    bounded = [b for b in results if b.get('tool_use_id') == 'tool_2' and not b.get('is_error')
+               and 'row 0:' in content_text(b) and 'row 1:' in content_text(b) and 'row 2:' not in content_text(b)]
+    return errors, trimmed, bounded
+
+
 class Fixture:
     def __init__(self, directory, kind):
         self.directory, self.kind = directory, kind
@@ -58,7 +80,7 @@ class Fixture:
             elif self.kind == 'manual-command' and n > 1 or self.kind == 'read-budget' and n > 2 or n > 5:
                 inp = None
             else:
-                inp = {'file_path': str(self.directory/'fixture.txt'), 'offset': 1, 'limit': 1}
+                inp = {'file_path': str(self.directory/f'fixture-{n}.txt'), 'offset': 1, 'limit': 1}
             block = ({'type': 'tool_use', 'id': f'tool_{n}', 'name': 'Read', 'input': inp}
                      if inp else {'type': 'text', 'text': 'FIXTURE_DONE'})
         tokens = 6000 if self.kind == 'loop' else 1000
@@ -88,7 +110,8 @@ class Fixture:
 def case(root, name, mode, kind):
     directory = root/name
     directory.mkdir()
-    (directory/'fixture.txt').write_text('A small fixture.\n', encoding='utf-8')
+    for n in range(1, 6):
+        (directory/f'fixture-{n}.txt').write_text(f'A small fixture. Number {n}.\n', encoding='utf-8')
     (directory/'large.txt').write_text(''.join(f'row {i}: a b c d e f g h i j k l m n o p\n' for i in range(1500)), encoding='utf-8')
     fixture = Fixture(directory, kind)
 
@@ -132,6 +155,9 @@ def case(root, name, mode, kind):
         # Test-only config isolation: do not archive a real user's device ID or preferences.
         (directory/'state').mkdir()
         effective['CLAUDE_CONFIG_DIR'] = str(directory/'state')
+        # This accepted minimum is capped by the truthful model window (18432).
+        # Name a window explicitly so fresh installations exercise the proactive path.
+        effective['CLAUDE_CODE_AUTO_COMPACT_WINDOW'] = '100000'
         env.update(effective)
         # Stream one user turn, then an explicit command on the same live session.
         cmd.remove('Read the fixture.')
@@ -188,22 +214,19 @@ def case(root, name, mode, kind):
     boundaries = [r for r in rows if r.get('subtype') == 'compact_boundary']
     diagnostics = content_text([r.get('message', '') for r in rows])+' '+json.dumps(rows)
     done = any(r.get('type') == 'result' and r.get('result') == 'FIXTURE_DONE' and not r.get('is_error') for r in rows)
-    tool_results = [b for r in fixture.requests for m in r['body'].get('messages', [])
-                    for b in (m.get('content') if isinstance(m.get('content'), list) else [])
-                    if b.get('type') == 'tool_result']
-    read_errors = [r for r in tool_results if r.get('is_error') and 'maximum allowed tokens (2048)' in content_text(r)]
-    bounded_reads = [r for r in tool_results if not r.get('is_error') and 'row 0:' in content_text(r) and 'row 2:' not in content_text(r)]
+    read_errors, trimmed, bounded_reads = read_budget_evidence(rows, fixture.requests)
     good_reads = successful_fixture_reads(fixture.requests)
     common = error is None and exit_code == 0
     if kind == 'loop':
         passed = common and (bool(boundaries) or 'Autocompact is thrashing' in diagnostics) if mode == 'auto' else common and done and fixture.main_calls == 6 and good_reads == {f'tool_{n}' for n in range(1, 6)} and not boundaries
     elif kind == 'read-budget':
-        passed = common and done and bool(read_errors) and bool(bounded_reads)
+        passed = common and done and bool(read_errors or trimmed) and bool(bounded_reads)
     else:
         passed = common and done and any(r.get('compact_metadata', {}).get('trigger') == 'manual' for r in boundaries)
     result = {'case': name, 'passed': bool(passed), 'error': error, 'exit_code': exit_code,
               'main_requests': fixture.main_calls, 'summary_requests': fixture.compactions,
               'boundaries': boundaries, 'done': done, 'successful_fixture_reads': sorted(good_reads), 'read_budget_rejected': bool(read_errors),
+              'read_budget_trimmed': [{'num_lines': f['numLines'], 'total_lines': f['totalLines']} for f in trimmed],
               'bounded_read_succeeded': bool(bounded_reads), 'seconds': time.monotonic()-started}
     write(directory/'result.json', result)
     print(json.dumps(result), flush=True)
