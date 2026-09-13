@@ -49,3 +49,14 @@ changed layout earns a separately frozen conversation comparison if its measured
 benefit warrants it. K24, other drafts,32K contexts and custom kernels remain out
 of this delivery. Archive both the aborted original stage and this follow-up,
 keeping their source commits, protocols and outcomes distinct.
+
+## Byte-preserving corrected run
+
+The first follow-up, source1cb43bd in `runs/fixed-attention-20260913`, completed
+both native mechanism processes but stopped before timed comparisons: serializing
+the LF candidate JSON through a Windows text writer produced CRLF, violating its
+declared byte hash. Preserve that attempt as a receipt-integrity failure. Copy
+candidate bytes exactly, with an LF/CRLF regression test, and rerun the **entire
+fixed comparison** in `runs/fixed-attention-corrected-20260913` from a new reviewed,
+pushed source commit. Do not waive the old hash check or overwrite its receipts.
+All artifacts, settings, candidate and selection/analysis rules remain frozen.

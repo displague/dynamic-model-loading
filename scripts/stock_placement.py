@@ -29,6 +29,11 @@ SOURCES=['scripts/stock_placement.py','scripts/stock_benchmark.py','scripts/veri
 def read(path): return json.loads(path.read_text(encoding='utf-8'))
 
 
+def snapshot_decision(source,target):
+    """Preserve the caller's byte identity, including source-controlled LF."""
+    target.write_bytes(source.read_bytes())
+
+
 def configuration(kind,threshold,cold_ffns):
     if threshold not in THRESHOLDS or cold_ffns not in [0,*ALLOCATIONS]:
         raise ValueError('outside registered setting grid')
@@ -89,7 +94,7 @@ def server(args,cfg):
     stock.write_json(out/'attempt.json',{'head':head,'kind':args.kind,'repeat':args.repeat,'configuration':cfg,
         'started_monotonic':time.perf_counter(),'source_sha256':{p:stock.digest(ROOT/p) for p in SOURCES},
         'decision_sha256':stock.digest(args.decision) if args.decision else None})
-    if args.decision: stock.write_json(out/'decision.json',read(args.decision))
+    if args.decision: snapshot_decision(args.decision,out/'decision.json')
     phase='preflight'
     try:
         checked=stock.verify_catalog(read(ROOT/'configs/stock-speculation-artifacts.json'),args.models,args.binary,['target','draft05'])
@@ -101,7 +106,6 @@ def server(args,cfg):
             'python':os.sys.version,'packages':{p:importlib.metadata.version(p) for p in ['torch','numpy','psutil']},
             'decision_sha256':stock.digest(args.decision) if args.decision else None,
             'study':'stock-placement-v1'})
-        if args.decision: stock.write_json(out/'decision.json',read(args.decision))
         phase='port'
         with socket.socket() as probe:
             probe.setsockopt(socket.SOL_SOCKET,socket.SO_EXCLUSIVEADDRUSE,1)

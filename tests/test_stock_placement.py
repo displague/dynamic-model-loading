@@ -94,3 +94,10 @@ def test_process_bounds_reject_contradictory_request_and_resource_times():
     for bounds,requests,samples in [([1,2],[(100,101)],[]),([1,10],[(5,6),(2,3)],[]),([1,2],[],[3])]:
         with pytest.raises(ValueError): audit.process_bounds(bounds,requests,samples)
 
+
+def test_decision_snapshot_preserves_lf_and_crlf_byte_identity(tmp_path):
+    for data in [b'{\n  "threshold": 2\n}\n',b'{\r\n  "threshold": 2\r\n}\r\n']:
+        source=tmp_path/'source.json'; target=tmp_path/'decision.json'
+        source.write_bytes(data); study.snapshot_decision(source,target)
+        assert target.read_bytes()==data
+        assert study.stock.digest(target)==study.stock.digest(source)
