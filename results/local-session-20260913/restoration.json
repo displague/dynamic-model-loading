@@ -1,0 +1,8 @@
+{
+  "archive_sha256": "cd45343eee8d3a8895b28f821f87ee8b3ecb10bf2746f29f6b465d95f1b82b4c",
+  "inventory_sha256": "9862dd93a47e1a4499bb85ff7de00be45073c0bb23f3aeafbb68d43c42cb0bd8",
+  "restored_members": 210,
+  "analysis_sha256": "c94309fb5792c42d5362cfce92700bfda33a06b3ccb5b8b36cb7b37ec36c21d7",
+  "reproduced_analysis_sha256": "c94309fb5792c42d5362cfce92700bfda33a06b3ccb5b8b36cb7b37ec36c21d7",
+  "analysis_byte_identical": true
+}

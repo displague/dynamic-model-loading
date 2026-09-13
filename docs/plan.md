@@ -69,6 +69,15 @@ and load ctx_tgt only. Future work should follow a concrete workload bottleneck,
 not an obligation to add knobs. The specified layouts share a15000MiB allowance;
 this does not establish a globally optimal memory allocation.
 
+The owner-requested [v0.19 local-use delivery](releases/v0.19.0.md) completes#32
+without reopening optimization. Four named stock profiles start; all three API
+streaming/function-result checks pass. A corrected Claude Read/Edit loop changes
+the one-file fixture correctly. Codex connects but its file-read command is rejected
+by client policy, so the combined compatibility verdict remains failed. The
+[interactive guide](local-interactive.md) provides commands and that limitation.
+This is bounded integration, not a new throughput or general-agent benchmark.
+Upstream proposals and a coordinating blog are later work.
+
 [ADR 0003](adr/0003-verified-speculation-boundary.md) retires the tested Qwen 1.5B
 FP32 grouped per-token execution/repair path as the primary engineering strategy.
 This is an opportunity-cost decision, not an impossibility result. All historical

@@ -23,6 +23,13 @@ take 172.97 seconds. Four of five answers hit the 64-token cap, and histories di
 after extraction; this is a bounded latency result, not task completion or universal
 output equivalence. [v0.18.0](docs/releases/v0.18.0.md) completes the agreed queue.
 
+**Try it locally:** run `.\local.ps1 serve`, then
+`.\local.ps1 claude -Workspace C:\path\to\project` in another terminal.
+The [interactive guide](docs/local-interactive.md) provides the local binary,
+complete arguments and four stock comparison profiles. Claude's limited Read/Edit
+loop passed the [integration check](docs/local-session-results.md); Codex's
+Responses connection works but its coding check remains blocked by client policy.
+
 The separate [v0.17 cold-request study](docs/stock-placement-results.md) measures
 20.57 native decode steps/s after a populated 16K prefix, versus 15.29 for its fresh
 whole-layer control. See the [configuration guide](docs/stock-long-context-configuration.md)

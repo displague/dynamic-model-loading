@@ -1,6 +1,11 @@
 # Run the measured configuration locally
 
-Integration checks are pending under [the prospective protocol](local-session-protocol.md).
+**Start with Claude Code for file editing.** Its Read/Edit tool loop passed the
+[local integration check](local-session-results.md) on the measured profile.
+Codex connects through Responses, but its file-read command was rejected by CLI
+policy in both noninteractive trials; that coding path remains unqualified.
+The [protocol](local-session-protocol.md) and [setup correction](local-session-amendment-1.md)
+precede their respective runs.
 The native runtime is the already-installed stock Windows CUDA13.3 b10919 build:
 `runs/llama-b10919/llama-server.exe`. No patched build or new model download is needed.
 Exact artifact hashes are in [the catalog](../configs/stock-speculation-artifacts.json).
@@ -11,8 +16,10 @@ From the main checkout, use two PowerShell terminals:
 # Terminal 1: keep this server alive across turns. Ctrl+C stops it.
 .\local.ps1 serve
 
-# Terminal 2: choose a coding client and the directory it may work in.
+# Terminal 2: verified limited Claude file-editing configuration.
 .\local.ps1 claude -Workspace C:\path\to\project
+
+# Optional Codex configuration; coding-tool qualification did not pass.
 .\local.ps1 codex -Workspace C:\path\to\project
 ```
 
@@ -52,15 +59,25 @@ The launcher uses a dedicated local Codex configuration home under
 `runs/local-client-state/codex`, without copying cloud authentication. Codex uses
 the custom Responses provider at `http://127.0.0.1:8080/v1`. Claude uses Messages
 with `ANTHROPIC_BASE_URL=http://127.0.0.1:8080`, a local placeholder key, thinking
-disabled, a2048 output budget, bare/restricted mode and Read/Edit/Write tools.
+disabled, a2048 output-budget environment setting, bare/restricted mode and requested
+Read/Edit/Write tools. The installed Claude2.1.260 advertises **Read and Edit** in
+the actual init event, and those are the two tools exercised. Its metadata still
+reports the unknown-model32000 default output limit; this short check does not
+establish enforcement of the2048 environment setting. Keep requested turns small
+enough for the server's18432 capacity.
 These are deliberately small local client configurations, not full default
 plugins, MCP integrations or arbitrary command execution. Interactive permission
-prompts remain enabled. No user-wide client configuration is edited.
+prompts remain enabled. The smoke used print mode with scoped edit permission;
+interactive UI behavior and arbitrary coding tasks are not a separate qualification.
+No user-wide client configuration is edited. Claude's displayed dollar estimate is
+client bookkeeping, not measured local inference cost or a cloud API charge.
 
 The pinned Responses conversion is a compatibility wrapper: it rejects
 `previous_response_id`, and skips non-function tool definitions. A route responding
-does not qualify every coding harness tool. Complete compatibility results will
-be recorded here after the declared checks; do not infer support from the route list.
+does not qualify every coding harness tool. All three API routes passed the declared
+streaming/function-result checks in both runs. The Codex failure is a client-policy
+observation, not proof that one of these API limitations caused it. Its unknown-model
+metadata and inherited host-skill warnings are also retained in the receipts.
 
 The measured16K configuration reaches20.57 native decode steps/s on v0.17's
 sustained fixture; v0.18's five retained capped turns take23.985s with0.623s mean

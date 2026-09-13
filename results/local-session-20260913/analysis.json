@@ -1,0 +1,587 @@
+{
+  "schema": 1,
+  "runs": {
+    "v1": {
+      "source": {
+        "head": "db262c0be119698ea20b374036b931037b184b9c",
+        "files": {
+          "scripts/local_session.py": "ecabd1baaa7beb6224e7a1bf606c64cad39efc140fb5fc9a3424811decc553cb",
+          "scripts/local_session_smoke.py": "059a9842fe157ae58693170ad9dcfe8aed5fef981248cd4ee857c0860ddac6e5",
+          "docs/local-session-protocol.md": "482c1800afee3be32c4a832e846adc5a0b96f307e5567696b7c71abbf71a803f",
+          "configs/stock-speculation-artifacts.json": "429984aa4de2a91aada142a065d416ffff2d3c9e22fd756ec72d596186e693ee"
+        }
+      },
+      "recorded_all_passed": false,
+      "profiles": {
+        "measured": {
+          "configuration": {
+            "threshold": 2,
+            "k": 16,
+            "op_offload": true,
+            "context": 18432,
+            "kv": "q8_0",
+            "ngl": 65,
+            "threads": 24,
+            "scheduler_debug": 0,
+            "cold_ffns": 32,
+            "verbosity": 4
+          },
+          "api": {
+            "chat": {
+              "text_stream": true,
+              "tool_call": true,
+              "tool_result": true
+            },
+            "responses": {
+              "text_stream": true,
+              "tool_call": true,
+              "tool_result": true
+            },
+            "messages": {
+              "text_stream": true,
+              "tool_call": true,
+              "tool_result": true
+            }
+          },
+          "placement": {
+            "kv_allocations_mib": [
+              [
+                "CUDA0",
+                2448.0
+              ],
+              [
+                "CUDA0",
+                114.77
+              ]
+            ],
+            "kv_pass": true,
+            "overrides": [],
+            "host_override_pass": null,
+            "model_buffers_mib": [
+              [
+                "CUDA0",
+                10661.48
+              ],
+              [
+                "CUDA_Host",
+                8264.53
+              ],
+              [
+                "CUDA0",
+                500.84
+              ],
+              [
+                "CUDA_Host",
+                137.94
+              ]
+            ],
+            "actual_host_pass": true,
+            "intended_attention_layers_gpu": 64
+          },
+          "resources": {
+            "pass": true,
+            "samples": 320,
+            "errors": [],
+            "gpu_peak": 15146782720,
+            "host_available_min": 12069269504
+          },
+          "requested_stop": true
+        },
+        "whole-layer": {
+          "configuration": {
+            "threshold": 2,
+            "k": 16,
+            "op_offload": true,
+            "context": 18432,
+            "kv": "q8_0",
+            "ngl": 38,
+            "threads": 24,
+            "scheduler_debug": 0,
+            "cold_ffns": 0,
+            "verbosity": 4
+          },
+          "api": {
+            "chat": {
+              "text_stream": true
+            }
+          },
+          "placement": {
+            "kv_allocations_mib": [
+              [
+                "CPU",
+                1032.75
+              ],
+              [
+                "CUDA0",
+                1415.25
+              ],
+              [
+                "CUDA0",
+                114.77
+              ]
+            ],
+            "kv_pass": true,
+            "overrides": [],
+            "host_override_pass": null,
+            "model_buffers_mib": [
+              [
+                "CUDA0",
+                10939.06
+              ],
+              [
+                "CUDA_Host",
+                7986.95
+              ],
+              [
+                "CUDA0",
+                500.84
+              ],
+              [
+                "CUDA_Host",
+                137.94
+              ]
+            ],
+            "actual_host_pass": true,
+            "intended_attention_layers_gpu": 37
+          },
+          "resources": {
+            "pass": true,
+            "samples": 58,
+            "errors": [],
+            "gpu_peak": 14410682368,
+            "host_available_min": 11531710464
+          },
+          "requested_stop": true
+        },
+        "stock-speculative": {
+          "configuration": {
+            "threshold": 32,
+            "k": 4,
+            "op_offload": true,
+            "context": 18432,
+            "kv": "q8_0",
+            "ngl": 38,
+            "threads": 24,
+            "scheduler_debug": 0,
+            "cold_ffns": 0,
+            "verbosity": 4
+          },
+          "api": {
+            "chat": {
+              "text_stream": true
+            }
+          },
+          "placement": {
+            "kv_allocations_mib": [
+              [
+                "CPU",
+                1032.75
+              ],
+              [
+                "CUDA0",
+                1415.25
+              ],
+              [
+                "CUDA0",
+                114.77
+              ]
+            ],
+            "kv_pass": true,
+            "overrides": [],
+            "host_override_pass": null,
+            "model_buffers_mib": [
+              [
+                "CUDA0",
+                10939.06
+              ],
+              [
+                "CUDA_Host",
+                7986.95
+              ],
+              [
+                "CUDA0",
+                500.84
+              ],
+              [
+                "CUDA_Host",
+                137.94
+              ]
+            ],
+            "actual_host_pass": true,
+            "intended_attention_layers_gpu": 37
+          },
+          "resources": {
+            "pass": true,
+            "samples": 58,
+            "errors": [],
+            "gpu_peak": 14375030784,
+            "host_available_min": 11579801600
+          },
+          "requested_stop": true
+        },
+        "target-only": {
+          "configuration": {
+            "threshold": 32,
+            "k": null,
+            "op_offload": true,
+            "context": 18432,
+            "kv": "q8_0",
+            "ngl": 38,
+            "threads": 24,
+            "scheduler_debug": 0,
+            "cold_ffns": 0,
+            "verbosity": 4
+          },
+          "api": {
+            "chat": {
+              "text_stream": true
+            }
+          },
+          "placement": {
+            "target_only": true
+          },
+          "resources": {
+            "pass": true,
+            "samples": 56,
+            "errors": [],
+            "gpu_peak": 13697650688,
+            "host_available_min": 11746971648
+          },
+          "requested_stop": true
+        }
+      },
+      "clients": {
+        "codex": {
+          "version": "codex-cli 0.154.0",
+          "correct_ast": false,
+          "tool_events": 0,
+          "files": [
+            "calculator.py"
+          ],
+          "recorded_result": {
+            "passed": false,
+            "exit_code": 0,
+            "timeout": false,
+            "correct_ast": false,
+            "tool_events": 0,
+            "files": [
+              "calculator.py"
+            ]
+          },
+          "passed": false,
+          "tool_names": null
+        },
+        "claude": {
+          "version": "2.1.260 (Claude Code)",
+          "correct_ast": false,
+          "tool_events": 1,
+          "files": [
+            "calculator.py"
+          ],
+          "recorded_result": null,
+          "passed": false,
+          "tool_names": [
+            "Read"
+          ]
+        }
+      }
+    },
+    "v2": {
+      "source": {
+        "head": "2916eeada0970c6d517db609ab43f75f73081477",
+        "files": {
+          "scripts/local_session.py": "7dd94adc7d7d8c1bab1e84f987264cad6d39beb07f6000bf63abeffd508fe522",
+          "scripts/local_session_smoke.py": "571c53f7d4d03bab90476afc42840141cb56a90579649d3968b698eb031ce473",
+          "docs/local-session-protocol.md": "482c1800afee3be32c4a832e846adc5a0b96f307e5567696b7c71abbf71a803f",
+          "docs/local-session-amendment-1.md": "6a08cad2f42ca3f602d4679d6752ef0d5f2a1b7b7cdfbce49c335d7861555f88",
+          "configs/stock-speculation-artifacts.json": "429984aa4de2a91aada142a065d416ffff2d3c9e22fd756ec72d596186e693ee"
+        }
+      },
+      "recorded_all_passed": false,
+      "profiles": {
+        "measured": {
+          "configuration": {
+            "threshold": 2,
+            "k": 16,
+            "op_offload": true,
+            "context": 18432,
+            "kv": "q8_0",
+            "ngl": 65,
+            "threads": 24,
+            "scheduler_debug": 0,
+            "cold_ffns": 32,
+            "verbosity": 4
+          },
+          "api": {
+            "chat": {
+              "text_stream": true,
+              "tool_call": true,
+              "tool_result": true
+            },
+            "responses": {
+              "text_stream": true,
+              "tool_call": true,
+              "tool_result": true
+            },
+            "messages": {
+              "text_stream": true,
+              "tool_call": true,
+              "tool_result": true
+            }
+          },
+          "placement": {
+            "kv_allocations_mib": [
+              [
+                "CUDA0",
+                2448.0
+              ],
+              [
+                "CUDA0",
+                114.77
+              ]
+            ],
+            "kv_pass": true,
+            "overrides": [],
+            "host_override_pass": null,
+            "model_buffers_mib": [
+              [
+                "CUDA0",
+                10661.48
+              ],
+              [
+                "CUDA_Host",
+                8264.53
+              ],
+              [
+                "CUDA0",
+                500.84
+              ],
+              [
+                "CUDA_Host",
+                137.94
+              ]
+            ],
+            "actual_host_pass": true,
+            "intended_attention_layers_gpu": 64
+          },
+          "resources": {
+            "pass": true,
+            "samples": 246,
+            "errors": [],
+            "gpu_peak": 15148879872,
+            "host_available_min": 12198395904
+          },
+          "requested_stop": true
+        },
+        "whole-layer": {
+          "configuration": {
+            "threshold": 2,
+            "k": 16,
+            "op_offload": true,
+            "context": 18432,
+            "kv": "q8_0",
+            "ngl": 38,
+            "threads": 24,
+            "scheduler_debug": 0,
+            "cold_ffns": 0,
+            "verbosity": 4
+          },
+          "api": {
+            "chat": {
+              "text_stream": true
+            }
+          },
+          "placement": {
+            "kv_allocations_mib": [
+              [
+                "CPU",
+                1032.75
+              ],
+              [
+                "CUDA0",
+                1415.25
+              ],
+              [
+                "CUDA0",
+                114.77
+              ]
+            ],
+            "kv_pass": true,
+            "overrides": [],
+            "host_override_pass": null,
+            "model_buffers_mib": [
+              [
+                "CUDA0",
+                10939.06
+              ],
+              [
+                "CUDA_Host",
+                7986.95
+              ],
+              [
+                "CUDA0",
+                500.84
+              ],
+              [
+                "CUDA_Host",
+                137.94
+              ]
+            ],
+            "actual_host_pass": true,
+            "intended_attention_layers_gpu": 37
+          },
+          "resources": {
+            "pass": true,
+            "samples": 63,
+            "errors": [],
+            "gpu_peak": 14410682368,
+            "host_available_min": 11625209856
+          },
+          "requested_stop": true
+        },
+        "stock-speculative": {
+          "configuration": {
+            "threshold": 32,
+            "k": 4,
+            "op_offload": true,
+            "context": 18432,
+            "kv": "q8_0",
+            "ngl": 38,
+            "threads": 24,
+            "scheduler_debug": 0,
+            "cold_ffns": 0,
+            "verbosity": 4
+          },
+          "api": {
+            "chat": {
+              "text_stream": true
+            }
+          },
+          "placement": {
+            "kv_allocations_mib": [
+              [
+                "CPU",
+                1032.75
+              ],
+              [
+                "CUDA0",
+                1415.25
+              ],
+              [
+                "CUDA0",
+                114.77
+              ]
+            ],
+            "kv_pass": true,
+            "overrides": [],
+            "host_override_pass": null,
+            "model_buffers_mib": [
+              [
+                "CUDA0",
+                10939.06
+              ],
+              [
+                "CUDA_Host",
+                7986.95
+              ],
+              [
+                "CUDA0",
+                500.84
+              ],
+              [
+                "CUDA_Host",
+                137.94
+              ]
+            ],
+            "actual_host_pass": true,
+            "intended_attention_layers_gpu": 37
+          },
+          "resources": {
+            "pass": true,
+            "samples": 58,
+            "errors": [],
+            "gpu_peak": 14375030784,
+            "host_available_min": 11661422592
+          },
+          "requested_stop": true
+        },
+        "target-only": {
+          "configuration": {
+            "threshold": 32,
+            "k": null,
+            "op_offload": true,
+            "context": 18432,
+            "kv": "q8_0",
+            "ngl": 38,
+            "threads": 24,
+            "scheduler_debug": 0,
+            "cold_ffns": 0,
+            "verbosity": 4
+          },
+          "api": {
+            "chat": {
+              "text_stream": true
+            }
+          },
+          "placement": {
+            "target_only": true
+          },
+          "resources": {
+            "pass": true,
+            "samples": 56,
+            "errors": [],
+            "gpu_peak": 13697650688,
+            "host_available_min": 11841368064
+          },
+          "requested_stop": true
+        }
+      },
+      "clients": {
+        "codex": {
+          "version": "codex-cli 0.154.0",
+          "correct_ast": false,
+          "tool_events": 0,
+          "files": [
+            "calculator.py"
+          ],
+          "recorded_result": {
+            "passed": false,
+            "exit_code": 0,
+            "timeout": false,
+            "correct_ast": false,
+            "tool_events": 0,
+            "files": [
+              "calculator.py"
+            ]
+          },
+          "passed": false,
+          "tool_names": null
+        },
+        "claude": {
+          "version": "2.1.260 (Claude Code)",
+          "correct_ast": true,
+          "tool_events": 2,
+          "files": [
+            "calculator.py"
+          ],
+          "recorded_result": {
+            "passed": true,
+            "exit_code": 0,
+            "timeout": false,
+            "correct_ast": true,
+            "tool_events": 2,
+            "files": [
+              "calculator.py"
+            ]
+          },
+          "passed": true,
+          "tool_names": [
+            "Read",
+            "Edit"
+          ]
+        }
+      }
+    }
+  },
+  "scope": "API and one-file integration checks; no throughput, broad agent quality or independent target-fidelity claim."
+}
