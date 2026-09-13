@@ -1,0 +1,14 @@
+{
+  "stage": "fixed-candidate",
+  "threshold": 2,
+  "cold_ffns": 32,
+  "prior_completed_trial": "runs/stock-placement-20260913/allocation-t2-f32-r1",
+  "prior_files_sha256": {
+    "attempt.json": "5c3ecee98c7009c764f5d649e1c9c3004be5b19bc026d277d078da4334c7dc65",
+    "manifest.json": "acd3f656ac12f49fdac014a32cd1b0f537fdf674a6a612f815a18987b629ce9b",
+    "startup.json": "23fbdabdb322b9d8091a82e9c174fc7ac03bedf675d8860d425bc037c5aa9d6a",
+    "completion.json": "397a4f3d6a5167c42d9b8be8d175c0479559a26338595437d26ad6569914e379",
+    "rows.jsonl": "18b809d95700bba390d0f65e59dc69f92c88bdace1a5dc9ef3b35d75848abbb8"
+  },
+  "basis": "Fixed candidate from the completed 32-host-FFN trial. Original allocation stage aborted; no original allocation selection or infeasibility conclusion is claimed."
+}
