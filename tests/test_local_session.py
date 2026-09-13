@@ -121,3 +121,18 @@ def test_real_httpresponse_premature_content_length_eof_is_not_a_pass(tmp_path, 
         smoke.http('http://127.0.0.1:8080', '/v1/responses', {'stream': True}, prefix)
     assert prefix.with_suffix('.response.txt').read_bytes() == payload
     assert json.loads(prefix.with_suffix('.transport-error.json').read_text())['type'] == 'IncompleteRead'
+
+
+def test_claude_diagnostic_string_is_not_an_assistant_message():
+    rows = [{'type': 'system', 'message': 'permission denied'},
+            {'type': 'assistant', 'message': {'content': [{'type': 'tool_use', 'name': 'Read'}]}},
+            {'type': 'result', 'result': 'not a tool'}]
+    assert smoke.tool_events('claude', rows) == [{'type': 'tool_use', 'name': 'Read'}]
+
+
+def test_exec_sandbox_flag_belongs_to_the_exec_subcommand(tmp_path, monkeypatch):
+    monkeypatch.setattr(local, 'executable', lambda name: name+'.exe')
+    cmd, _, _ = local.client_settings('codex', 'http://127.0.0.1:8080', tmp_path, tmp_path, {},
+                                     prompt='edit the fixture', result=tmp_path/'result.txt')
+    assert cmd[cmd.index('exec')+1:cmd.index('exec')+3] == ['-s', 'workspace-write']
+    assert '-s' not in cmd[:cmd.index('exec')]

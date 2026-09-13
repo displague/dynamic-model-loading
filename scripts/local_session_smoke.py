@@ -163,16 +163,29 @@ def correct_file(path):
         return False
 
 
+def tool_events(client, parsed):
+    if client == 'claude':
+        messages = [row['message'] for row in parsed if isinstance(row.get('message'), dict)]
+        return [block for message in messages for block in message.get('content', [])
+                if isinstance(block, dict) and block.get('type') == 'tool_use']
+    return [row for row in parsed if isinstance(row.get('item'), dict) and row['item'].get('type') in
+            ('command_execution', 'file_change', 'mcp_tool_call')]
+
+
 def client_check(base, out, client):
     work = out/client/'workspace'
     work.mkdir(parents=True, exist_ok=False)
     (work/'calculator.py').write_text(ORIGINAL, encoding='utf-8')
+    task = TASK+f'\nThe exact file is {work / "calculator.py"}. '
+    if client == 'codex':
+        task += ('Use PowerShell code directly in exec_command, for example Get-Content -LiteralPath calculator.py; '
+                 'do not wrap it in another powershell.exe or pwsh.exe invocation. Omit the sandbox_permissions argument entirely.')
     cmd, env, effective = local.client_settings(client, base, out/client/'state', work, os.environ,
-        prompt=TASK, result=out/client/'last-message.txt')
+        prompt=task, result=out/client/'last-message.txt')
     if client == 'codex':
         Path(env['CODEX_HOME']).mkdir(parents=True)
     stock.write_json(out/client/'invocation.json', {'command': cmd, 'child_environment': effective,
-                                                  'cwd': str(work), 'task': TASK})
+                                                  'cwd': str(work), 'task': task})
     version = subprocess.check_output([local.executable(client), '--version'], text=True)
     (out/client/'version.txt').write_text(version, encoding='utf-8')
     if version.strip() != VERSIONS[client]:
@@ -192,17 +205,12 @@ def client_check(base, out, client):
             parsed.append(json.loads(line))
         except json.JSONDecodeError:
             pass
-    if client == 'claude':
-        tool_events = [block for row in parsed for block in row.get('message', {}).get('content', [])
-                       if isinstance(block, dict) and block.get('type') == 'tool_use']
-    else:
-        tool_events = [row for row in parsed if row.get('item', {}).get('type') in
-                       ('command_execution', 'file_change', 'mcp_tool_call')]
+    observed_tools = tool_events(client, parsed)
     files = sorted(str(p.relative_to(work)) for p in work.rglob('*') if p.is_file())
-    passed = (code == 0 and not timeout and correct_file(work/'calculator.py') and bool(tool_events)
+    passed = (code == 0 and not timeout and correct_file(work/'calculator.py') and bool(observed_tools)
               and files == ['calculator.py'])
     result = {'passed': passed, 'exit_code': code, 'timeout': timeout,
-              'correct_ast': correct_file(work/'calculator.py'), 'tool_events': len(tool_events),
+              'correct_ast': correct_file(work/'calculator.py'), 'tool_events': len(observed_tools),
               'files': files}
     stock.write_json(out/client/'result.json', result)
     return result
@@ -255,7 +263,8 @@ def run(args):
     args.output.mkdir(parents=True, exist_ok=False)
     stock.write_json(args.output/'source.json', {'head': git('rev-parse', 'HEAD'),
         'files': {p: stock.digest(ROOT/p) for p in ['scripts/local_session.py', 'scripts/local_session_smoke.py',
-                  'docs/local-session-protocol.md', 'configs/stock-speculation-artifacts.json']}})
+                  'docs/local-session-protocol.md', 'docs/local-session-amendment-1.md',
+                  'configs/stock-speculation-artifacts.json']}})
     results = {}
     for profile in local.PROFILES:
         out = args.output/profile

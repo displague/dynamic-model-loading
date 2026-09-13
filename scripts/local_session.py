@@ -88,12 +88,12 @@ def client_settings(client, base, state, workspace, parent, *, prompt=None, resu
         cmd = [executable('codex')]
         for key, value in config.items():
             cmd += ['-c', key+'='+json.dumps(value)]
-        cmd += ['-a', 'never' if prompt is not None else 'on-request', '-s', 'workspace-write']
+        cmd += ['-a', 'never' if prompt is not None else 'on-request']
         if prompt is None:
-            cmd += ['-C', str(workspace), '--no-alt-screen']
+            cmd += ['-s', 'workspace-write', '-C', str(workspace), '--no-alt-screen']
         else:
             cmd += ['-c', 'project_doc_max_bytes=0']
-            cmd += ['exec', '--ignore-user-config', '--ignore-rules', '--ephemeral',
+            cmd += ['exec', '-s', 'workspace-write', '--ignore-user-config', '--ignore-rules', '--ephemeral',
                     '--skip-git-repo-check', '--json', '-C', str(workspace),
                     '-o', str(result), prompt]
         effective = {'CODEX_HOME': env['CODEX_HOME']}
@@ -109,7 +109,9 @@ def client_settings(client, base, state, workspace, parent, *, prompt=None, resu
         env.update(effective)
         cmd = [executable('claude'), '--bare', '--restricted', '--disable-slash-commands',
                '--strict-mcp-config', '--model', ALIAS, '--tools', 'Read,Edit,Write',
-               '--system-prompt', 'You are a local coding assistant. Inspect files with tools before editing. Make only the requested changes. Be concise.']
+               '--system-prompt', 'You are a local coding assistant on Windows. '
+               f'The working directory is {workspace}. Resolve file paths against this exact directory; never use placeholder paths. '
+               'Inspect files with tools before editing. Make only the requested changes. Be concise.']
         if prompt is not None:
             cmd += ['-p', prompt, '--output-format', 'stream-json', '--verbose',
                     '--no-session-persistence', '--permission-mode', 'acceptEdits',
