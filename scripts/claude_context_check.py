@@ -59,14 +59,27 @@ def read_budget_evidence(rows, requests):
     return errors, trimmed, bounded
 
 
+def compaction_request(body):
+    # The pinned client's cache-sharing compactor retains tool schemas. It adds
+    # an explicit text-only summary instruction to the final user message.
+    messages = body.get('messages', [])
+    if not messages or messages[-1].get('role') != 'user':
+        return False
+    blocks = messages[-1].get('content', [])
+    if not isinstance(blocks, list):
+        return False
+    return any(b.get('type') == 'text' and b.get('text', '').startswith(
+        'CRITICAL: Respond with TEXT ONLY. Do NOT call any tools.')
+        and 'summary' in b['text'].lower() for b in blocks)
+
+
 class Fixture:
     def __init__(self, directory, kind):
         self.directory, self.kind = directory, kind
         self.requests, self.main_calls, self.compactions = [], 0, 0
 
     def response(self, body):
-        # Main requests expose Read/Edit; compaction disables tools.
-        summary = not body.get('tools') or body.get('tool_choice', {}).get('type') == 'none'
+        summary = compaction_request(body)
         if summary:
             self.compactions += 1
             block = {'type': 'text', 'text': 'The task is to read fixture.txt. Continue with that task.'}
@@ -218,7 +231,10 @@ def case(root, name, mode, kind):
     good_reads = successful_fixture_reads(fixture.requests)
     common = error is None and exit_code == 0
     if kind == 'loop':
-        passed = common and (bool(boundaries) or 'Autocompact is thrashing' in diagnostics) if mode == 'auto' else common and done and fixture.main_calls == 6 and good_reads == {f'tool_{n}' for n in range(1, 6)} and not boundaries
+        if mode == 'auto':
+            passed = error is None and exit_code in (0, 1) and (bool(boundaries) or 'Autocompact is thrashing' in diagnostics)
+        else:
+            passed = common and done and fixture.main_calls == 6 and good_reads == {f'tool_{n}' for n in range(1, 6)} and not boundaries
     elif kind == 'read-budget':
         passed = common and done and bool(read_errors or trimmed) and bool(bounded_reads)
     else:

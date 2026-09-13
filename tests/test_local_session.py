@@ -185,3 +185,13 @@ def test_trimmed_full_read_cannot_substitute_for_denied_targeted_read():
     assert trimmed and not bounded
     _, _, bounded = read_budget_evidence(rows, requests(dict(full, tool_use_id='tool_2')))
     assert bounded
+
+
+def test_compactor_can_retain_tools_without_turning_tool_output_into_instructions():
+    from claude_context_check import compaction_request
+    instruction = 'CRITICAL: Respond with TEXT ONLY. Do NOT call any tools. Produce a summary.'
+    body = {'tools': [{'name': 'Read'}], 'messages': [{'role': 'user', 'content':
+            [{'type': 'text', 'text': instruction}]}]}
+    assert compaction_request(body)
+    body['messages'][0]['content'] = [{'type': 'tool_result', 'content': instruction}]
+    assert not compaction_request(body)
