@@ -145,7 +145,7 @@ def test_small_context_manual_mode_keeps_true_window_and_manual_recovery(tmp_pat
               'CLAUDE_CODE_BLOCKING_LIMIT_OVERRIDE': '200000'}
     cmd, env, _ = local.client_settings('claude', 'http://127.0.0.1:8080', tmp_path, tmp_path, parent)
     assert '--disable-slash-commands' not in cmd
-    assert '--bare' in cmd and '--restricted' in cmd
+    assert '--safe-mode' in cmd and '--bare' not in cmd and '--restricted' in cmd
     assert env['DISABLE_AUTO_COMPACT'] == '1'
     assert 'DISABLE_COMPACT' not in env and 'disable_auto_compact' not in env
     assert env['CLAUDE_CODE_MAX_CONTEXT_TOKENS'] == '18432'
@@ -195,3 +195,36 @@ def test_compactor_can_retain_tools_without_turning_tool_output_into_instruction
     assert compaction_request(body)
     body['messages'][0]['content'] = [{'type': 'tool_result', 'content': instruction}]
     assert not compaction_request(body)
+
+
+def test_file_tool_verdict_rejects_denied_reads_and_missing_write():
+    from claude_tools_check import verdict, ORIGINAL, EXPECTED
+    import copy
+    blocks = [{'type': 'tool_result', 'tool_use_id': f'tool_{n}', 'content': 'ok'} for n in range(1, 9)]
+    blocks[0]['content'] = ORIGINAL
+    blocks[6]['content'] = '1: created\n'
+    for n, text in [(2, 'file already exists'), (3, 'Found 2 matches'), (4, 'String to replace not found')]:
+        blocks[n-1].update(is_error=True, content=text)
+    requests = [{'body': {'tools': [{'name': name} for name in ['Read', 'Edit', 'Write']],
+                         'messages': [{'content': blocks}]}, 'files': {'existing.txt': ORIGINAL}} for _ in range(9)]
+    requests[6]['files'] = {'existing.txt': EXPECTED, 'new.txt': 'created\n'}
+    final = {'existing.txt': EXPECTED, 'new.txt': 'updated\n'}
+    assert verdict(requests, False, final, 0)['passed']
+    bad = copy.deepcopy(requests)
+    for r in bad:
+        r['body']['messages'][0]['content'][0]['is_error'] = True
+    assert not verdict(bad, False, final, 0)['passed']
+    bad = copy.deepcopy(requests)
+    bad[0]['body']['tools'].pop()
+    assert not verdict(bad, False, final, 0)['passed']
+    bad = copy.deepcopy(requests)
+    bad[3]['files']['existing.txt'] = 'damaged'
+    assert not verdict(bad, False, final, 0)['passed']
+    assert not verdict([], False, final, 0)['passed']
+    bad = copy.deepcopy(requests)
+    bad[6]['files']['new.txt'] = ''
+    assert not verdict(bad, False, final, 0)['passed']
+    bad = copy.deepcopy(requests)
+    for r in bad:
+        r['body']['messages'][0]['content'][6]['content'] = 'Empty file'
+    assert not verdict(bad, False, final, 0)['passed']

@@ -122,14 +122,21 @@ def client_settings(client, base, state, workspace, parent, *, prompt=None, resu
         if claude_compaction == 'manual':
             effective['DISABLE_AUTO_COMPACT'] = '1'
         env.update(effective)
-        # Bare mode suppresses skill/plugin discovery while leaving recovery commands usable.
-        cmd = [executable('claude'), '--bare', '--restricted',
+        # Safe mode suppresses customization discovery without bare mode's removal of Write.
+        cmd = [executable('claude'), '--safe-mode', '--restricted',
                '--strict-mcp-config', '--model', ALIAS, '--tools', 'Read,Edit,Write',
                '--system-prompt', 'You are a local coding assistant on Windows. '
                f'The working directory is {workspace}. Resolve file paths against this exact directory; never use placeholder paths. '
                'Inspect files with tools before editing. Read targeted ranges using offset and limit, '
                'starting with at most 80 lines; narrow the range if a read exceeds the token limit. '
-               'Do not repeatedly reread unchanged files. Make only the requested changes. Be concise.']
+               'Use Write to create a file. Before overwriting an existing file, read its complete contents; '
+               'prefer a small Edit when only part must change. For Edit, copy old_string exactly from a Read, '
+               'including enough surrounding text to match once. An empty old_string creates a new file; '
+               'it cannot append to or overwrite an existing file. After a missing or ambiguous match, '
+               'read the relevant range and correct the match; never repeat the same rejected edit or '
+               'set replace_all unless every occurrence should change. After two failed corrections, '
+               'stop and explain the obstacle. Keep each tool call small enough to finish within the output budget. '
+               'Make only the requested changes. Be concise.']
         if prompt is not None:
             cmd += ['-p', prompt, '--output-format', 'stream-json', '--verbose',
                     '--no-session-persistence', '--permission-mode', 'acceptEdits',
