@@ -75,9 +75,12 @@ The launcher uses a dedicated local Codex configuration home under
 `runs/local-client-state/codex`, without copying cloud authentication. Codex uses
 the custom Responses provider at `http://127.0.0.1:8080/v1`. Claude uses Messages
 with `ANTHROPIC_BASE_URL=http://127.0.0.1:8080`, a local placeholder key, thinking
-disabled, a2048 output-budget environment setting, bare/restricted mode and requested
-Read/Edit/Write tools. The installed Claude2.1.260 advertises **Read and Edit** in
-the actual init event, and those are the two tools exercised. Its metadata still
+disabled, a2048 output-budget environment setting, safe/restricted mode and explicit
+Read/Edit/Write tools. v0.19.2 restores **Write**: the installed Claude2.1.260 now
+advertises all three tools in the native scripted check. Earlier bare mode exposed
+only Read/Edit despite requesting Write. The earlier live-model task exercised
+Read/Edit; the new creation/overwrite checks use scripted arguments, not model
+inference. Its metadata still
 reports the unknown-model32000 default output limit. The later scripted client
 check verifies that normal requests carry max_tokens2048; metadata is not the
 request budget. Keep turns small enough for the server's18432 capacity.
@@ -87,6 +90,23 @@ prompts remain enabled. The smoke used print mode with scoped edit permission;
 interactive UI behavior and arbitrary coding tasks are not a separate qualification.
 No user-wide client configuration is edited. Claude's displayed dollar estimate is
 client bookkeeping, not measured local inference cost or a cloud API charge.
+
+If edits keep failing, distinguish tool availability from argument rejection:
+
+| Error | Recovery |
+|---|---|
+| Cannot create new file: file already exists | Empty `old_string` means creation in Edit. Use an exact Edit for an existing file; use Write for an intended complete overwrite only after reading the complete file. |
+| String to replace not found | Read the relevant range and copy the current text exactly. Do not invent a placeholder or use stale text. |
+| Found multiple matches | Include surrounding text that identifies the intended occurrence. Use `replace_all` only when every match should change. |
+| Tool input could not be parsed as JSON | Submit a smaller complete call with correctly escaped strings. Large multi-file responses can exhaust the output budget. |
+
+The launcher instructs the model to stop after two failed corrections rather than
+repeat the same rejected edit. This is prompt guidance, not a hard retry limit.
+The reported session already contained seven successful Edit results; its25
+rejections do not establish missing Edit permission. See the
+[file-tool diagnosis and checks](claude-tools-results.md). Restart only the Claude
+client to pick up v0.19.2; start a fresh conversation and inspect the existing files
+instead of continuing the old failed-edit loop. The model server can stay alive.
 
 The pinned Responses conversion is a compatibility wrapper: it rejects
 `previous_response_id`, and skips non-function tool definitions. A route responding

@@ -1,0 +1,8 @@
+{
+  "archive_sha256": "2147574e92ad81a6acf7b31863bc64bdfe63a92ff376e74956328ec182ee8805",
+  "restored_members": 276,
+  "analysis_sha256": "aa7cf3c464abc103025e4129931c598db481293dcc29ab187ba5bec35fc129ba",
+  "analysis_byte_identical": true,
+  "native_tool_verdicts_reproduced": true,
+  "recomputation_output": "Both native file-tool verdicts reproduce from restored requests."
+}

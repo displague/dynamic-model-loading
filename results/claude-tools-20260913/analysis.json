@@ -1,0 +1,370 @@
+{
+  "claude-tools-20260913-v1": [
+    {
+      "passed": true,
+      "advertised_tools": [
+        "Edit",
+        "Read"
+      ],
+      "tools_ok": true,
+      "steps": {
+        "1": true,
+        "2": true,
+        "3": true
+      },
+      "rejections_preserve_bytes": true,
+      "creation_contents_ok": true,
+      "read_contents_ok": true,
+      "final_files_ok": true,
+      "exit_code": 0,
+      "error": null,
+      "final": {
+        "existing.txt": "first();\nrepeat();\nsecond();\nfixed();\n",
+        "new.txt": "created\n"
+      }
+    },
+    {
+      "passed": true,
+      "advertised_tools": [
+        "Edit",
+        "Read",
+        "Write"
+      ],
+      "tools_ok": true,
+      "steps": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": true
+      },
+      "rejections_preserve_bytes": true,
+      "creation_contents_ok": true,
+      "read_contents_ok": true,
+      "final_files_ok": true,
+      "exit_code": 0,
+      "error": null,
+      "final": {
+        "existing.txt": "first();\nrepeat();\nsecond();\nfixed();\n",
+        "new.txt": "updated\n"
+      }
+    }
+  ],
+  "claude-tools-context-20260913-v1": [
+    {
+      "case": "auto-loop",
+      "passed": false,
+      "error": null,
+      "exit_code": 0,
+      "main_requests": 6,
+      "summary_requests": 0,
+      "boundaries": [],
+      "done": true,
+      "successful_fixture_reads": [
+        "tool_1",
+        "tool_2",
+        "tool_4"
+      ],
+      "read_budget_rejected": false,
+      "read_budget_trimmed": [],
+      "bounded_read_succeeded": false,
+      "seconds": 1.3412824999977602
+    },
+    {
+      "case": "manual-loop",
+      "passed": true,
+      "error": null,
+      "exit_code": 0,
+      "main_requests": 6,
+      "summary_requests": 0,
+      "boundaries": [],
+      "done": true,
+      "successful_fixture_reads": [
+        "tool_1",
+        "tool_2",
+        "tool_3",
+        "tool_4",
+        "tool_5"
+      ],
+      "read_budget_rejected": false,
+      "read_budget_trimmed": [],
+      "bounded_read_succeeded": false,
+      "seconds": 1.2741822999960277
+    },
+    {
+      "case": "read-budget",
+      "passed": true,
+      "error": null,
+      "exit_code": 0,
+      "main_requests": 3,
+      "summary_requests": 0,
+      "boundaries": [],
+      "done": true,
+      "successful_fixture_reads": [],
+      "read_budget_rejected": false,
+      "read_budget_trimmed": [
+        {
+          "num_lines": 168,
+          "total_lines": 1501
+        }
+      ],
+      "bounded_read_succeeded": true,
+      "seconds": 1.352707099998952
+    },
+    {
+      "case": "manual-command",
+      "passed": true,
+      "error": null,
+      "exit_code": 0,
+      "main_requests": 3,
+      "summary_requests": 0,
+      "boundaries": [
+        {
+          "type": "system",
+          "subtype": "compact_boundary",
+          "session_id": "1af8da46-0078-4a66-8972-0e49f3d91b5e",
+          "uuid": "5edf1534-a55d-4198-b4fc-c4a398e09eba",
+          "compact_metadata": {
+            "trigger": "manual",
+            "pre_tokens": 1012,
+            "post_tokens": 297,
+            "cumulative_dropped_tokens": 715,
+            "duration_ms": 7,
+            "preserved_segment": {
+              "head_uuid": "77ffe4bd-5ebb-47ce-a721-d0d0dda39a09",
+              "anchor_uuid": "f3574cda-0cfb-4ebd-b001-a7ee63452f91",
+              "tail_uuid": "77ffe4bd-5ebb-47ce-a721-d0d0dda39a09"
+            },
+            "preserved_messages": {
+              "anchor_uuid": "f3574cda-0cfb-4ebd-b001-a7ee63452f91",
+              "uuids": [
+                "77ffe4bd-5ebb-47ce-a721-d0d0dda39a09"
+              ],
+              "all_uuids": [
+                "77ffe4bd-5ebb-47ce-a721-d0d0dda39a09"
+              ]
+            }
+          },
+          "logical_parent_uuid": "77ffe4bd-5ebb-47ce-a721-d0d0dda39a09"
+        }
+      ],
+      "done": true,
+      "successful_fixture_reads": [
+        "tool_1"
+      ],
+      "read_budget_rejected": false,
+      "read_budget_trimmed": [],
+      "bounded_read_succeeded": false,
+      "seconds": 1.2581583999999566
+    }
+  ],
+  "claude-tools-context-20260913-v2": [
+    {
+      "case": "auto-loop",
+      "passed": true,
+      "error": null,
+      "exit_code": 1,
+      "main_requests": 5,
+      "summary_requests": 3,
+      "boundaries": [
+        {
+          "type": "system",
+          "subtype": "compact_boundary",
+          "uuid": "a6d75193-2864-4c6d-8975-b69dbc2ad033",
+          "compact_metadata": {
+            "trigger": "auto",
+            "pre_tokens": 6041,
+            "post_tokens": 370,
+            "cumulative_dropped_tokens": 5671,
+            "duration_ms": 7,
+            "preserved_segment": {
+              "head_uuid": "16e5b7d6-7e62-401d-9606-194b625b5f12",
+              "anchor_uuid": "dc65c8a6-4b23-4076-a1d7-b5dc4a0eba0c",
+              "tail_uuid": "343fdf65-a057-4a42-9ff4-1b306958de49"
+            },
+            "preserved_messages": {
+              "anchor_uuid": "dc65c8a6-4b23-4076-a1d7-b5dc4a0eba0c",
+              "uuids": [
+                "16e5b7d6-7e62-401d-9606-194b625b5f12",
+                "c2703dde-f1c8-4611-9938-36acac45b1b9",
+                "343fdf65-a057-4a42-9ff4-1b306958de49"
+              ],
+              "all_uuids": [
+                "16e5b7d6-7e62-401d-9606-194b625b5f12",
+                "c2703dde-f1c8-4611-9938-36acac45b1b9",
+                "343fdf65-a057-4a42-9ff4-1b306958de49"
+              ]
+            }
+          },
+          "logical_parent_uuid": "343fdf65-a057-4a42-9ff4-1b306958de49",
+          "session_id": "bf48f6ee-03d2-459e-8cc7-92db5e4f2634"
+        },
+        {
+          "type": "system",
+          "subtype": "compact_boundary",
+          "uuid": "2e37927d-0454-48dc-9c4e-9ea1fc4e6077",
+          "compact_metadata": {
+            "trigger": "auto",
+            "pre_tokens": 6041,
+            "post_tokens": 370,
+            "cumulative_dropped_tokens": 11342,
+            "duration_ms": 5,
+            "preserved_segment": {
+              "head_uuid": "c83aae7d-7e20-4fbd-bbca-99eaf046af4f",
+              "anchor_uuid": "a07cdd9a-eab0-48a9-acfb-7ada1686f1d3",
+              "tail_uuid": "c1edd175-df40-4fc8-8759-2ffca1280015"
+            },
+            "preserved_messages": {
+              "anchor_uuid": "a07cdd9a-eab0-48a9-acfb-7ada1686f1d3",
+              "uuids": [
+                "c83aae7d-7e20-4fbd-bbca-99eaf046af4f",
+                "cc972d47-3875-4bf0-a54e-6ca1f13d308e",
+                "c1edd175-df40-4fc8-8759-2ffca1280015"
+              ],
+              "all_uuids": [
+                "c83aae7d-7e20-4fbd-bbca-99eaf046af4f",
+                "cc972d47-3875-4bf0-a54e-6ca1f13d308e",
+                "c1edd175-df40-4fc8-8759-2ffca1280015"
+              ]
+            }
+          },
+          "logical_parent_uuid": "c1edd175-df40-4fc8-8759-2ffca1280015",
+          "session_id": "bf48f6ee-03d2-459e-8cc7-92db5e4f2634"
+        },
+        {
+          "type": "system",
+          "subtype": "compact_boundary",
+          "uuid": "3130736a-59b6-414c-a17e-300d03a45aef",
+          "compact_metadata": {
+            "trigger": "auto",
+            "pre_tokens": 6041,
+            "post_tokens": 370,
+            "cumulative_dropped_tokens": 17013,
+            "duration_ms": 5,
+            "preserved_segment": {
+              "head_uuid": "7819946a-b12d-427a-bd67-8e014daeffc1",
+              "anchor_uuid": "c6f223ea-c0d1-41fd-8746-4dd80887392c",
+              "tail_uuid": "8cc27484-b909-42d1-9f2c-f74f59e06ad1"
+            },
+            "preserved_messages": {
+              "anchor_uuid": "c6f223ea-c0d1-41fd-8746-4dd80887392c",
+              "uuids": [
+                "7819946a-b12d-427a-bd67-8e014daeffc1",
+                "fa7560b6-5cc2-4bb0-8019-1d2b984198d8",
+                "8cc27484-b909-42d1-9f2c-f74f59e06ad1"
+              ],
+              "all_uuids": [
+                "7819946a-b12d-427a-bd67-8e014daeffc1",
+                "fa7560b6-5cc2-4bb0-8019-1d2b984198d8",
+                "8cc27484-b909-42d1-9f2c-f74f59e06ad1"
+              ]
+            }
+          },
+          "logical_parent_uuid": "8cc27484-b909-42d1-9f2c-f74f59e06ad1",
+          "session_id": "bf48f6ee-03d2-459e-8cc7-92db5e4f2634"
+        }
+      ],
+      "done": false,
+      "successful_fixture_reads": [
+        "tool_1",
+        "tool_2",
+        "tool_3",
+        "tool_4"
+      ],
+      "read_budget_rejected": false,
+      "read_budget_trimmed": [],
+      "bounded_read_succeeded": false,
+      "seconds": 1.247083800000837
+    },
+    {
+      "case": "manual-loop",
+      "passed": true,
+      "error": null,
+      "exit_code": 0,
+      "main_requests": 6,
+      "summary_requests": 0,
+      "boundaries": [],
+      "done": true,
+      "successful_fixture_reads": [
+        "tool_1",
+        "tool_2",
+        "tool_3",
+        "tool_4",
+        "tool_5"
+      ],
+      "read_budget_rejected": false,
+      "read_budget_trimmed": [],
+      "bounded_read_succeeded": false,
+      "seconds": 1.2738182000030065
+    },
+    {
+      "case": "read-budget",
+      "passed": true,
+      "error": null,
+      "exit_code": 0,
+      "main_requests": 3,
+      "summary_requests": 0,
+      "boundaries": [],
+      "done": true,
+      "successful_fixture_reads": [],
+      "read_budget_rejected": false,
+      "read_budget_trimmed": [
+        {
+          "num_lines": 168,
+          "total_lines": 1501
+        }
+      ],
+      "bounded_read_succeeded": true,
+      "seconds": 1.2232755000004545
+    },
+    {
+      "case": "manual-command",
+      "passed": true,
+      "error": null,
+      "exit_code": 0,
+      "main_requests": 2,
+      "summary_requests": 1,
+      "boundaries": [
+        {
+          "type": "system",
+          "subtype": "compact_boundary",
+          "session_id": "9942a5e1-5558-468d-b09c-e92484d6fbe1",
+          "uuid": "02b6f9f6-eeb9-4541-bba0-1af92424f2b0",
+          "compact_metadata": {
+            "trigger": "manual",
+            "pre_tokens": 1012,
+            "post_tokens": 308,
+            "cumulative_dropped_tokens": 704,
+            "duration_ms": 7,
+            "preserved_segment": {
+              "head_uuid": "65b6f220-d9a2-446b-9341-b42c9216a2cb",
+              "anchor_uuid": "9997ca23-7c73-41f7-82fd-4ae10960b8da",
+              "tail_uuid": "65b6f220-d9a2-446b-9341-b42c9216a2cb"
+            },
+            "preserved_messages": {
+              "anchor_uuid": "9997ca23-7c73-41f7-82fd-4ae10960b8da",
+              "uuids": [
+                "65b6f220-d9a2-446b-9341-b42c9216a2cb"
+              ],
+              "all_uuids": [
+                "65b6f220-d9a2-446b-9341-b42c9216a2cb"
+              ]
+            }
+          },
+          "logical_parent_uuid": "65b6f220-d9a2-446b-9341-b42c9216a2cb"
+        }
+      ],
+      "done": true,
+      "successful_fixture_reads": [
+        "tool_1"
+      ],
+      "read_budget_rejected": false,
+      "read_budget_trimmed": [],
+      "bounded_read_succeeded": false,
+      "seconds": 1.2675113000004785
+    }
+  ]
+}

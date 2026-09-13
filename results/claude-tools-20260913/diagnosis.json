@@ -1,0 +1,17 @@
+{
+  "tool_calls": {
+    "Edit": 32,
+    "Read": 1
+  },
+  "successful_tool_results": {
+    "Edit": 7,
+    "Read": 1
+  },
+  "rejection_categories": {
+    "invalid_json": 1,
+    "ambiguous_match": 13,
+    "missing_match": 7,
+    "create_existing": 4
+  },
+  "scope": "One reported local session; aggregate only, no private source, arguments or conversation exported. Successful results are native receipts, not a task-quality judgment."
+}

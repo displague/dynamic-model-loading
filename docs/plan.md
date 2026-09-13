@@ -322,3 +322,19 @@ preserve the two failed harness verdicts and final four passing control-flow che
 This is not a new model experiment or long-session task qualification. Keep #27 and
 the paused optimization queue unchanged; use [the recovery guide](local-interactive.md).
 
+
+
+## Local file-tool compatibility after v0.19.1
+
+The user-reported Edit/Write failures lead to [v0.19.2](releases/v0.19.2.md) and
+[#34](https://github.com/displague/dynamic-model-loading/issues/34). Safe mode
+restores the separate Write tool while preserving the small scoped client setup.
+The native file-tool checks pass; invalid edits preserve bytes. All four corrected
+context checks pass, with the original classifier failure retained. Manual
+compaction remains the default. These are scripted client checks, not new model
+inference or a claim that prompt instructions prevent all erroneous edits.
+
+[Protocol](claude-tools-protocol.md), [correction](claude-tools-amendment-1.md),
+[results](claude-tools-results.md). Complete only the bounded client issue; #27,
+the broader milestone and deferred work keep their existing status. No optimizer,
+new model, native runtime patch or user-project edit is included.

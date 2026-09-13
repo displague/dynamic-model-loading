@@ -331,6 +331,17 @@
       "release": "v0.19.1",
       "state": "closed",
       "state_reason": "completed"
+    },
+    {
+      "key": "claude_tools",
+      "stage": "speculation",
+      "title": "Restore Claude Write availability and document rejected-edit recovery",
+      "body": "Restore the local Claude launcher's separate Write tool and distinguish missing tools from rejected edit arguments. The reported session has successful Edit calls, alongside empty-old-string, ambiguous-match and missing-match failures. Bare mode advertises Read/Edit even when Write is requested.\n\nUse stock safe mode with existing restricted/explicit tool settings, manual context recovery and small budgets. Freeze and review the native scripted file-tool checks before running; retain all attempts and exclude private project data. Validate creation, exact edits, rejected edits preserving files, overwrite and prior compaction checks. Scripted arguments do not establish local-model reliability. No native model/runtime/optimization change, permission bypass or global client settings.\n\nProtocol: https://github.com/displague/dynamic-model-loading/blob/delivery/claude-tools/docs/claude-tools-protocol.md\n\nPublish v0.19.2 after review, validation and restored receipts; keep #27 and the broader milestone open.\n\n## v0.19.2 delivery\n\nSafe mode restores Read/Edit/Write while preserving restricted workspace access, manual context recovery and interactive permissions. The reported session had7 successful Edit results and25 argument rejections; tool access and valid edit arguments are separate concerns. Both native file-tool cases and all4 corrected context cases pass. Preserve the first failed context attempt, which misclassified summaries followed by system telemetry. The scripted automatic control reproduces thrashing; manual recovery remains the default.\n\nAll276 synthetic archive members restore exactly, with byte-identical aggregate ledgers and recomputed file-tool verdicts. No private source/session content, live-model inference, GPU timings, native patch or optimization expansion. Prompt recovery guidance is not an enforced retry limiter. Complete this bounded issue; keep #27 and milestone9 open.\n\nGuide: https://github.com/displague/dynamic-model-loading/blob/v0.19.2/docs/local-interactive.md\nFindings: https://github.com/displague/dynamic-model-loading/blob/v0.19.2/docs/claude-tools-results.md\n",
+      "completed": true,
+      "number": 34,
+      "release": "v0.19.2",
+      "state": "closed",
+      "state_reason": "completed"
     }
   ],
   "current_decision": "docs/adr/0003-verified-speculation-boundary.md"
