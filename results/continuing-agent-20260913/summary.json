@@ -1,0 +1,284 @@
+{
+  "analysis_sha256": "ee77016125b13506ea3d20e06dad56c892a1cef7ee4dfacac120a3b57ef56c8e",
+  "groups": [
+    {
+      "condition": "default",
+      "mode": "retained",
+      "turns": 10,
+      "mean_five_turn_seconds": 79.98440890000029,
+      "mean_ttft_seconds": 0.8021497600000658,
+      "emitted_tokens": 562,
+      "request_seconds": 159.96881780000058,
+      "emitted_per_request_second": 3.513184680170825,
+      "mean_prefill_ms": 789.3520000000001,
+      "mean_decode_ms": 15193.8035,
+      "reset_matching_turns": null,
+      "limit_stops": 6
+    },
+    {
+      "condition": "default",
+      "mode": "reset",
+      "turns": 10,
+      "mean_five_turn_seconds": 246.44947694999928,
+      "mean_ttft_seconds": 34.70841314999998,
+      "emitted_tokens": 544,
+      "request_seconds": 492.89895389999856,
+      "emitted_per_request_second": 1.1036744868206172,
+      "mean_prefill_ms": 34693.009399999995,
+      "mean_decode_ms": 14580.630799999999,
+      "reset_matching_turns": 8,
+      "limit_stops": 6
+    },
+    {
+      "condition": "offload",
+      "mode": "retained",
+      "turns": 10,
+      "mean_five_turn_seconds": 34.669313849998616,
+      "mean_ttft_seconds": 0.765902879999976,
+      "emitted_tokens": 570,
+      "request_seconds": 69.33862769999723,
+      "emitted_per_request_second": 8.22052611808501,
+      "mean_prefill_ms": 752.8898,
+      "mean_decode_ms": 6166.6788,
+      "reset_matching_turns": null,
+      "limit_stops": 8
+    },
+    {
+      "condition": "offload",
+      "mode": "reset",
+      "turns": 10,
+      "mean_five_turn_seconds": 199.09929779999948,
+      "mean_ttft_seconds": 34.08717858000027,
+      "emitted_tokens": 544,
+      "request_seconds": 398.19859559999895,
+      "emitted_per_request_second": 1.366152482733672,
+      "mean_prefill_ms": 34076.7002,
+      "mean_decode_ms": 5731.708799999999,
+      "reset_matching_turns": 6,
+      "limit_stops": 6
+    }
+  ],
+  "retained_cross_configuration": [
+    {
+      "repeat": 1,
+      "turn": 0,
+      "prompt_ids_equal": true,
+      "output_ids_equal": true
+    },
+    {
+      "repeat": 1,
+      "turn": 1,
+      "prompt_ids_equal": true,
+      "output_ids_equal": true
+    },
+    {
+      "repeat": 1,
+      "turn": 2,
+      "prompt_ids_equal": true,
+      "output_ids_equal": true
+    },
+    {
+      "repeat": 1,
+      "turn": 3,
+      "prompt_ids_equal": true,
+      "output_ids_equal": true
+    },
+    {
+      "repeat": 1,
+      "turn": 4,
+      "prompt_ids_equal": true,
+      "output_ids_equal": true
+    },
+    {
+      "repeat": 1,
+      "turn": 5,
+      "prompt_ids_equal": true,
+      "output_ids_equal": false
+    },
+    {
+      "repeat": 2,
+      "turn": 0,
+      "prompt_ids_equal": true,
+      "output_ids_equal": true
+    },
+    {
+      "repeat": 2,
+      "turn": 1,
+      "prompt_ids_equal": true,
+      "output_ids_equal": true
+    },
+    {
+      "repeat": 2,
+      "turn": 2,
+      "prompt_ids_equal": true,
+      "output_ids_equal": true
+    },
+    {
+      "repeat": 2,
+      "turn": 3,
+      "prompt_ids_equal": true,
+      "output_ids_equal": true
+    },
+    {
+      "repeat": 2,
+      "turn": 4,
+      "prompt_ids_equal": true,
+      "output_ids_equal": true
+    },
+    {
+      "repeat": 2,
+      "turn": 5,
+      "prompt_ids_equal": true,
+      "output_ids_equal": false
+    }
+  ],
+  "repeat_identity": [
+    {
+      "condition": "default",
+      "mode": "retained",
+      "turn": 0,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "retained",
+      "turn": 1,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "retained",
+      "turn": 2,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "retained",
+      "turn": 3,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "retained",
+      "turn": 4,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "retained",
+      "turn": 5,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "reset",
+      "turn": 0,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "reset",
+      "turn": 1,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "reset",
+      "turn": 2,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "reset",
+      "turn": 3,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "reset",
+      "turn": 4,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "default",
+      "mode": "reset",
+      "turn": 5,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "retained",
+      "turn": 0,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "retained",
+      "turn": 1,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "retained",
+      "turn": 2,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "retained",
+      "turn": 3,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "retained",
+      "turn": 4,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "retained",
+      "turn": 5,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "reset",
+      "turn": 0,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "reset",
+      "turn": 1,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "reset",
+      "turn": 2,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "reset",
+      "turn": 3,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "reset",
+      "turn": 4,
+      "output_ids_equal": true
+    },
+    {
+      "condition": "offload",
+      "mode": "reset",
+      "turn": 5,
+      "output_ids_equal": true
+    }
+  ],
+  "source_commit": "17859f7",
+  "inference_requests": 1848,
+  "native_processes": 10
+}

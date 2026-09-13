@@ -248,7 +248,8 @@
       "number": 29,
       "url": "https://github.com/displague/dynamic-model-loading/issues/29",
       "title": "Measure retained-prefix agent turns against identical-input reset controls",
-      "state": "open"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "long_thresholds": {
       "number": 30,
@@ -263,5 +264,5 @@
       "state": "open"
     }
   },
-  "last_refreshed_utc": "2026-09-13T04:11:11.484128+00:00"
+  "last_refreshed_utc": "2026-09-13T05:11:51.108824+00:00"
 }

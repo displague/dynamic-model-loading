@@ -34,12 +34,22 @@ physical implementations and deferred hypotheses. Optional mask-union analysis o
 1.5B cannot prove exact omission or settle32B sparsity. New drafts, learned adaptiveK
 and custom overlap remain deferred until the practical measurements identify a need.
 
+The [v0.16 continuing-conversation delivery](releases/v0.16.0.md) completes #29:
+retained threshold 8 / K16 takes 34.67 seconds for five continuing turns versus
+79.98 seconds for retained threshold 32 / K4. Its reset control takes 199.10 seconds;
+mean TTFT falls from 34.09 to 0.766 seconds with retention. Inputs match across
+configurations, but final topic-change outputs differ. The fixed 64-token cap leaves
+some answers incomplete, so this is a latency fixture rather than an agent-utility
+qualification. The independent replay agrees on 256/256 long IDs and 1527/1536
+short IDs; #27 remains open without a margin waiver. The bounded replay is complete.
+The immediate measurement queue is now #30 and #31, each with a new preregistration.
+
 [ADR 0003](adr/0003-verified-speculation-boundary.md) retires the tested Qwen 1.5B
 FP32 grouped per-token execution/repair path as the primary engineering strategy.
 This is an opportunity-cost decision, not an impossibility result. All historical
 measurements, failed gates and issue descriptions remain available.
 
-The immediate commitment is a [stock llama.cpp comparison](stock-speculation-protocol.md)
+The first commitment was a [stock llama.cpp comparison](stock-speculation-protocol.md)
 on an actually offloaded Qwen2.5-32B-Instruct Q4_K_M target. Compare target-only,
 small resident drafts and a feasible non-sharing low-bit target draft; optimize
 target residency and draft memory together. Measure sustained generation alongside
@@ -71,7 +81,7 @@ All 260 scalar-smoke comparisons match. Rebuilt-prefix diagnostics agree across
 configurations yet differ from four original baseline decisions; the cause is
 unresolved. See the [detailed result](stock-speculation-results.md).
 
-The next bounded task is [execution-path fidelity #27](https://github.com/displague/dynamic-model-loading/issues/27),
+That delivery opened [execution-path fidelity #27](https://github.com/displague/dynamic-model-loading/issues/27),
 with a protocol frozen before new inference. The stock milestone remains open;
 [representations #25](https://github.com/displague/dynamic-model-loading/issues/25)
 and [adaptive speculation #26](https://github.com/displague/dynamic-model-loading/issues/26)

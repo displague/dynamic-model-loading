@@ -1,0 +1,17 @@
+{
+  "archive_sha256": "82b08500fb57afaa6b003838dae659b20402e6bd138add28f21a31bef552412f",
+  "inventory_sha256": "534a6e26e21c4a6a15d699547f3041cfdcb572aee9222ef206f9873d4f9df26e",
+  "restored_members": 8775,
+  "restored_bytes": 83721309,
+  "analysis_sha256": "ee77016125b13506ea3d20e06dad56c892a1cef7ee4dfacac120a3b57ef56c8e",
+  "reproduced_analysis_sha256": "ee77016125b13506ea3d20e06dad56c892a1cef7ee4dfacac120a3b57ef56c8e",
+  "analysis_byte_identical": true,
+  "command": [
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-continuing-v0160\\source\\scripts\\analyze_continuing.py",
+    "--runs",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-continuing-v0160\\runs\\continuing-agent-20260913",
+    "--output",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-continuing-v0160\\reproduced-analysis.json"
+  ]
+}
