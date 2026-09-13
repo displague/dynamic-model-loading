@@ -255,7 +255,8 @@
       "number": 30,
       "url": "https://github.com/displague/dynamic-model-loading/issues/30",
       "title": "Bound the populated16K stock threshold frontier at fixed draft settings",
-      "state": "open"
+      "state": "closed",
+      "state_reason": "completed"
     },
     "attention_resident": {
       "number": 31,
@@ -264,5 +265,5 @@
       "state": "open"
     }
   },
-  "last_refreshed_utc": "2026-09-13T05:11:51.108824+00:00"
+  "last_refreshed_utc": "2026-09-13T06:56:50.771549+00:00"
 }

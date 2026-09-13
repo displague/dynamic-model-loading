@@ -13,7 +13,7 @@ silently damage quality without causing a residency miss.
 
 ## Primary program after v0.12
 
-The current queue after v0.15 is deliberately small: [independent committed-token
+The queue established after v0.15 was deliberately small: [independent committed-token
 replay](continuing-agent-protocol.md) under [#27](https://github.com/displague/dynamic-model-loading/issues/27)
 and a [retained-prefix conversation fixture #29](https://github.com/displague/dynamic-model-loading/issues/29)
 on the known configuration; then a fixed-K16 [threshold2/4/8 comparison #30](https://github.com/displague/dynamic-model-loading/issues/30)
@@ -42,7 +42,20 @@ configurations, but final topic-change outputs differ. The fixed 64-token cap le
 some answers incomplete, so this is a latency fixture rather than an agent-utility
 qualification. The independent replay agrees on 256/256 long IDs and 1527/1536
 short IDs; #27 remains open without a margin waiver. The bounded replay is complete.
-The immediate measurement queue is now #30 and #31, each with a new preregistration.
+The [v0.17 delivery](releases/v0.17.0.md) completes the bounded threshold comparison
+in #30: threshold2 gives15.40 native steps/s versus14.44 at8 on fresh controls.
+The [attention-resident fixed comparison](stock-placement-results.md) reaches20.57
+versus15.29 native steps/s, with15.6% more whole-request throughput and exact IDs
+on all four paired long outputs. All64 target attention/KV layers stay on CUDA;
+32 host-backed FFNs provide the adjustable weight storage. This is stock placement,
+not a new runtime. The original allocation stop and the first follow-up's byte-hash
+failure remain separate from its freshly registered corrected measurements.
+
+The immediate next measurement is #31's retained-prefix comparison on the changed
+layout. The known-layout conversation win does not automatically transfer to it.
+Both cold-request layouts satisfy a common total resource allowance, but their
+actual allocations differ and whole-layer residency was not globally reoptimized.
+Do not replace that practical check with another draft/controller or overlap patch.
 
 [ADR 0003](adr/0003-verified-speculation-boundary.md) retires the tested Qwen 1.5B
 FP32 grouped per-token execution/repair path as the primary engineering strategy.

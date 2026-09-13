@@ -1,0 +1,27 @@
+{
+  "archive_sha256": "e88a03c66c3e95b4728e98b4ea850cc1fb2b7ec1498831160907c9ba46996217",
+  "inventory_sha256": "044f543d45e2b8d8e58f22d32d5c6845bc4005f555ee2f8c3ec75fd6d1a64b4c",
+  "restored_members": 2603,
+  "restored_bytes": 239370936,
+  "analysis_sha256": "7d5dbc73c0f01cf15736827a13ed5dd3e7e3cdb310921ca5ddd775d91a538b53",
+  "reproduced_analysis_sha256": "7d5dbc73c0f01cf15736827a13ed5dd3e7e3cdb310921ca5ddd775d91a538b53",
+  "analysis_byte_identical": true,
+  "command": [
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-placement-v0170\\analysis-code\\analyze_attention_delivery.py",
+    "--source",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-placement-v0170\\original-source",
+    "--runs",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-placement-v0170\\runs\\stock-placement-20260913",
+    "--initial-source",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-placement-v0170\\fixed-initial-source",
+    "--initial-runs",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-placement-v0170\\runs\\fixed-attention-20260913",
+    "--fixed-source",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-placement-v0170\\fixed-source",
+    "--fixed-runs",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-placement-v0170\\runs\\fixed-attention-corrected-20260913",
+    "--output",
+    "C:\\Users\\displ\\Documents\\dynamic-model-loading\\runs\\restore-placement-v0170\\reproduced-analysis.json"
+  ]
+}
