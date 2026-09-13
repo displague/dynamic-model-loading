@@ -1,7 +1,7 @@
 # Run the measured configuration locally
 
 Claude Code 2.1.260 requires **manual compaction** with this small context window.
-The launcher now defaults to that workaround; see [context recovery](claude-context-protocol.md).
+The launcher now defaults to that workaround; see [context recovery](claude-context-results.md).
 Restart the Claude client to load the new settings; the existing model server can
 stay running. The old conversation is not automatically resumed or erased.
 
@@ -78,9 +78,9 @@ with `ANTHROPIC_BASE_URL=http://127.0.0.1:8080`, a local placeholder key, thinki
 disabled, a2048 output-budget environment setting, bare/restricted mode and requested
 Read/Edit/Write tools. The installed Claude2.1.260 advertises **Read and Edit** in
 the actual init event, and those are the two tools exercised. Its metadata still
-reports the unknown-model32000 default output limit; this short check does not
-establish enforcement of the2048 environment setting. Keep requested turns small
-enough for the server's18432 capacity.
+reports the unknown-model32000 default output limit. The later scripted client
+check verifies that normal requests carry max_tokens2048; metadata is not the
+request budget. Keep turns small enough for the server's18432 capacity.
 These are deliberately small local client configurations, not full default
 plugins, MCP integrations or arbitrary command execution. Interactive permission
 prompts remain enabled. The smoke used print mode with scoped edit permission;

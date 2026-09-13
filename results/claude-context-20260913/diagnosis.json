@@ -1,0 +1,56 @@
+{
+  "source": "read-only metadata of the reported private session; content excluded",
+  "client_version": "2.1.260",
+  "compactions": [
+    {
+      "trigger": "auto",
+      "pre_tokens": 6746,
+      "post_tokens": 2420,
+      "duration_ms": 91406
+    },
+    {
+      "trigger": "auto",
+      "pre_tokens": 3517,
+      "post_tokens": 3138,
+      "duration_ms": 43983
+    },
+    {
+      "trigger": "auto",
+      "pre_tokens": 4415,
+      "post_tokens": 3075,
+      "duration_ms": 37135
+    },
+    {
+      "trigger": "auto",
+      "pre_tokens": 5890,
+      "post_tokens": 3115,
+      "duration_ms": 31904
+    },
+    {
+      "trigger": "auto",
+      "pre_tokens": 4522,
+      "post_tokens": 3366,
+      "duration_ms": 38648
+    },
+    {
+      "trigger": "auto",
+      "pre_tokens": 4954,
+      "post_tokens": 3609,
+      "duration_ms": 31574
+    }
+  ],
+  "read_tool_calls": 0,
+  "max_tool_result_json_chars": 421,
+  "context_tokens": 18432,
+  "output_budget": 2048,
+  "fixed_reserve": 13000,
+  "derived_auto_threshold": 3384,
+  "native_block_threshold_with_manual_mode": 13384,
+  "client_sha256": "ab5fe6cb800a9faf3df1cc0f6bcb71f097296b302a16b576ca906446a22fea71",
+  "source_checks": {
+    "fixed_13000": true,
+    "pct_only_lowers": true,
+    "output_subtracted": true,
+    "native_guard": true
+  }
+}

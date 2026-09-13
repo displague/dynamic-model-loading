@@ -320,6 +320,17 @@
       "release": "v0.19.0",
       "state": "closed",
       "state_reason": "completed"
+    },
+    {
+      "key": "claude_context",
+      "stage": "speculation",
+      "title": "Prevent Claude small-context compaction thrashing in the local launcher",
+      "body": "The local Claude Code 2.1.260 session repeatedly auto-compacts at a few thousand tokens. Inspect the actual client budgeting and add a bounded small-context workaround without changing the model server or opening an optimization sweep.\n\nKeep true context limits, explicit manual recovery, scoped client settings and bounded reads. Validate the installed CLI against a synthetic loopback Messages endpoint, preserving failed checks and without sending private project content. Publish source diagnosis, actual compatibility limits and restart instructions.\n\nProtocol: https://github.com/displague/dynamic-model-loading/blob/delivery/claude-context/docs/claude-context-protocol.md\n\nKeep #27 and the broader milestone open. No upstream PR or native runtime patch in this delivery.\n\n## v0.19.1 delivery\n\nThe installed 2.1.260 client subtracts a fixed 13000 compaction reserve after the output budget, leaving a3384 trigger. The launcher defaults to manual recovery, preserves /compact and bounds Read output while keeping truthful18432 capacity and permissions. Three frozen synthetic attempts preserve two failed aggregate verdicts; the final four control-flow checks pass. Automatic mode emits two small-window boundaries; manual mode completes five reads with no automatic boundaries, explicit /compact works, and oversized Read output is trimmed before a successful targeted Read.\n\nThis is a client workaround, not live-model summary/task qualification. The full rapid-refill breaker was not reproduced by the bounded synthetic control. No model inference, server interruption or optimization experiment occurred. The230-member archive restores exactly; private project/conversation content is excluded. Keep #27 and milestone9 open.\n\nGuide: https://github.com/displague/dynamic-model-loading/blob/v0.19.1/docs/local-interactive.md\nFindings: https://github.com/displague/dynamic-model-loading/blob/v0.19.1/docs/claude-context-results.md\n",
+      "completed": true,
+      "number": 33,
+      "release": "v0.19.1",
+      "state": "closed",
+      "state_reason": "completed"
     }
   ],
   "current_decision": "docs/adr/0003-verified-speculation-boundary.md"

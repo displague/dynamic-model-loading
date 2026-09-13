@@ -271,7 +271,14 @@
       "title": "Prepare local interactive profiles and qualify coding-harness API compatibility",
       "state": "closed",
       "state_reason": "completed"
+    },
+    "claude_context": {
+      "number": 33,
+      "url": "https://github.com/displague/dynamic-model-loading/issues/33",
+      "title": "Prevent Claude small-context compaction thrashing in the local launcher",
+      "state": "closed",
+      "state_reason": "completed"
     }
   },
-  "last_refreshed_utc": "2026-09-13T19:04:46.811035+00:00"
+  "last_refreshed_utc": "2026-09-13T20:58:07.250415+00:00"
 }

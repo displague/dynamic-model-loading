@@ -311,3 +311,14 @@ runtime gain. At v0.12 no policy satisfies the combined B/C gate.
 The bounded experiment is [stock verification operation offload](verification-offload-protocol.md): explicit fresh-process thresholds, fixed placement controls, backend assignment evidence, and a populated 16K/q8_0-KV sensitivity study. Its [v0.15 findings](verification-offload-results.md) preserve the completed measurements and limitations. Numerical/state fidelity #27 proceeds separately; counter consistency is not independent argmax/KV proof. Draft representations #25 remain deferred and adaptive control #26 depends on the measured draft-length/backend/context frontier. No new runtime or model download was required.
 
 The [bounded target-path and CUDA-capture supplement](target-path-and-profile-protocol.md) separates full encoded probability comparisons and incremental prefix accounting from the unresolved independent speculative-state audit. It also attempts actual CUDA-copy measurements without mixing profiler overhead into the stock timing frontier.
+
+## Local client context recovery
+
+The reported Claude autocompact loop led to bounded client issue
+[#33](https://github.com/displague/dynamic-model-loading/issues/33), delivered in
+[v0.19.1](releases/v0.19.1.md). The launcher uses explicit manual compaction and
+bounded Read output at the same truthful18432 capacity. Three synthetic CLI attempts
+preserve the two failed harness verdicts and final four passing control-flow checks.
+This is not a new model experiment or long-session task qualification. Keep #27 and
+the paused optimization queue unchanged; use [the recovery guide](local-interactive.md).
+

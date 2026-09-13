@@ -1,0 +1,270 @@
+{
+  "inference": false,
+  "private_content_included": false,
+  "attempts": [
+    {
+      "attempt": 1,
+      "source": {
+        "commit": "e5142b71fe671084b8edcfc97686045f3318f6f8",
+        "claude_version": "2.1.260 (Claude Code)",
+        "claude_sha256": "ab5fe6cb800a9faf3df1cc0f6bcb71f097296b302a16b576ca906446a22fea71",
+        "inference": false
+      },
+      "all_passed": false,
+      "cases": [
+        {
+          "case": "auto-loop",
+          "passed": false,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 6,
+          "summary_requests": 0,
+          "done": true,
+          "successful_fixture_reads": [
+            "tool_1"
+          ],
+          "read_budget_rejected": false,
+          "bounded_read_succeeded": false,
+          "boundaries": []
+        },
+        {
+          "case": "manual-loop",
+          "passed": false,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 6,
+          "summary_requests": 0,
+          "done": true,
+          "successful_fixture_reads": [
+            "tool_1"
+          ],
+          "read_budget_rejected": false,
+          "bounded_read_succeeded": false,
+          "boundaries": []
+        },
+        {
+          "case": "read-budget",
+          "passed": false,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 3,
+          "summary_requests": 0,
+          "done": true,
+          "successful_fixture_reads": [],
+          "read_budget_rejected": false,
+          "bounded_read_succeeded": true,
+          "boundaries": []
+        },
+        {
+          "case": "manual-command",
+          "passed": false,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 2,
+          "summary_requests": 0,
+          "done": true,
+          "successful_fixture_reads": [
+            "tool_1"
+          ],
+          "read_budget_rejected": false,
+          "bounded_read_succeeded": false,
+          "boundaries": []
+        }
+      ]
+    },
+    {
+      "attempt": 2,
+      "source": {
+        "commit": "3983a3e7f49371617a600a64aadb10058a3c9d6c",
+        "claude_version": "2.1.260 (Claude Code)",
+        "claude_sha256": "ab5fe6cb800a9faf3df1cc0f6bcb71f097296b302a16b576ca906446a22fea71",
+        "inference": false
+      },
+      "all_passed": false,
+      "cases": [
+        {
+          "case": "auto-loop",
+          "passed": false,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 6,
+          "summary_requests": 0,
+          "done": true,
+          "successful_fixture_reads": [
+            "tool_1",
+            "tool_2",
+            "tool_4"
+          ],
+          "read_budget_rejected": false,
+          "read_budget_trimmed": [],
+          "bounded_read_succeeded": false,
+          "boundaries": []
+        },
+        {
+          "case": "manual-loop",
+          "passed": true,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 6,
+          "summary_requests": 0,
+          "done": true,
+          "successful_fixture_reads": [
+            "tool_1",
+            "tool_2",
+            "tool_3",
+            "tool_4",
+            "tool_5"
+          ],
+          "read_budget_rejected": false,
+          "read_budget_trimmed": [],
+          "bounded_read_succeeded": false,
+          "boundaries": []
+        },
+        {
+          "case": "read-budget",
+          "passed": true,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 3,
+          "summary_requests": 0,
+          "done": true,
+          "successful_fixture_reads": [],
+          "read_budget_rejected": false,
+          "read_budget_trimmed": [
+            {
+              "num_lines": 168,
+              "total_lines": 1501
+            }
+          ],
+          "bounded_read_succeeded": true,
+          "boundaries": []
+        },
+        {
+          "case": "manual-command",
+          "passed": true,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 3,
+          "summary_requests": 0,
+          "done": true,
+          "successful_fixture_reads": [
+            "tool_1"
+          ],
+          "read_budget_rejected": false,
+          "read_budget_trimmed": [],
+          "bounded_read_succeeded": false,
+          "boundaries": [
+            {
+              "trigger": "manual",
+              "pre_tokens": 1012,
+              "post_tokens": 293
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "attempt": 3,
+      "source": {
+        "commit": "a2fb21c2aedae01d571f0eb0a1c9b0532c05a8c1",
+        "claude_version": "2.1.260 (Claude Code)",
+        "claude_sha256": "ab5fe6cb800a9faf3df1cc0f6bcb71f097296b302a16b576ca906446a22fea71",
+        "inference": false
+      },
+      "all_passed": true,
+      "cases": [
+        {
+          "case": "auto-loop",
+          "passed": true,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 6,
+          "summary_requests": 2,
+          "done": true,
+          "successful_fixture_reads": [
+            "tool_1",
+            "tool_2",
+            "tool_3",
+            "tool_5"
+          ],
+          "read_budget_rejected": false,
+          "read_budget_trimmed": [],
+          "bounded_read_succeeded": false,
+          "boundaries": [
+            {
+              "trigger": "auto",
+              "pre_tokens": 6019,
+              "post_tokens": 343
+            },
+            {
+              "trigger": "auto",
+              "pre_tokens": 6019,
+              "post_tokens": 421
+            }
+          ]
+        },
+        {
+          "case": "manual-loop",
+          "passed": true,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 6,
+          "summary_requests": 0,
+          "done": true,
+          "successful_fixture_reads": [
+            "tool_1",
+            "tool_2",
+            "tool_3",
+            "tool_4",
+            "tool_5"
+          ],
+          "read_budget_rejected": false,
+          "read_budget_trimmed": [],
+          "bounded_read_succeeded": false,
+          "boundaries": []
+        },
+        {
+          "case": "read-budget",
+          "passed": true,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 3,
+          "summary_requests": 0,
+          "done": true,
+          "successful_fixture_reads": [],
+          "read_budget_rejected": false,
+          "read_budget_trimmed": [
+            {
+              "num_lines": 168,
+              "total_lines": 1501
+            }
+          ],
+          "bounded_read_succeeded": true,
+          "boundaries": []
+        },
+        {
+          "case": "manual-command",
+          "passed": true,
+          "error": null,
+          "exit_code": 0,
+          "main_requests": 2,
+          "summary_requests": 1,
+          "done": true,
+          "successful_fixture_reads": [
+            "tool_1"
+          ],
+          "read_budget_rejected": false,
+          "read_budget_trimmed": [],
+          "bounded_read_succeeded": false,
+          "boundaries": [
+            {
+              "trigger": "manual",
+              "pre_tokens": 1012,
+              "post_tokens": 304
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
