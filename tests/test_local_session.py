@@ -193,6 +193,11 @@ def test_compactor_can_retain_tools_without_turning_tool_output_into_instruction
     body = {'tools': [{'name': 'Read'}], 'messages': [{'role': 'user', 'content':
             [{'type': 'text', 'text': instruction}]}]}
     assert compaction_request(body)
+    body['messages'].append({'role': 'system', 'content': [{'type': 'text', 'text': '<total_tokens>15000000 tokens left</total_tokens>'}]})
+    assert compaction_request(body)
+    body['messages'].append({'role': 'assistant', 'content': [{'type': 'text', 'text': 'A later reply'}]})
+    assert not compaction_request(body)
+    body['messages'] = body['messages'][:1]
     body['messages'][0]['content'] = [{'type': 'tool_result', 'content': instruction}]
     assert not compaction_request(body)
 

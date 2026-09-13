@@ -63,6 +63,10 @@ def compaction_request(body):
     # The pinned client's cache-sharing compactor retains tool schemas. It adds
     # an explicit text-only summary instruction to the final user message.
     messages = body.get('messages', [])
+    # Outside bare mode, the client appends system-role token-budget telemetry
+    # after that instruction. Do not mistake it for another conversational turn.
+    while messages and messages[-1].get('role') == 'system':
+        messages = messages[:-1]
     if not messages or messages[-1].get('role') != 'user':
         return False
     blocks = messages[-1].get('content', [])
