@@ -136,3 +136,36 @@ def test_exec_sandbox_flag_belongs_to_the_exec_subcommand(tmp_path, monkeypatch)
                                      prompt='edit the fixture', result=tmp_path/'result.txt')
     assert cmd[cmd.index('exec')+1:cmd.index('exec')+3] == ['-s', 'workspace-write']
     assert '-s' not in cmd[:cmd.index('exec')]
+
+
+def test_small_context_manual_mode_keeps_true_window_and_manual_recovery(tmp_path, monkeypatch):
+    monkeypatch.setattr(local, 'executable', lambda name: name+'.exe')
+    parent = {'DISABLE_COMPACT': '1', 'disable_auto_compact': '1',
+              'CLAUDE_CODE_MAX_CONTEXT_TOKENS': '200000',
+              'CLAUDE_CODE_BLOCKING_LIMIT_OVERRIDE': '200000'}
+    _, env, _ = local.client_settings('claude', 'http://127.0.0.1:8080', tmp_path, tmp_path, parent)
+    assert env['DISABLE_AUTO_COMPACT'] == '1'
+    assert 'DISABLE_COMPACT' not in env and 'disable_auto_compact' not in env
+    assert env['CLAUDE_CODE_MAX_CONTEXT_TOKENS'] == '18432'
+    assert env['CLAUDE_CODE_MAX_OUTPUT_TOKENS'] == '2048'
+    assert env['CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS'] == '2048'
+    assert 'CLAUDE_CODE_BLOCKING_LIMIT_OVERRIDE' not in env
+    _, auto, _ = local.client_settings('claude', 'http://127.0.0.1:8080', tmp_path, tmp_path, parent,
+                                       claude_compaction='auto')
+    assert 'DISABLE_AUTO_COMPACT' not in auto and 'DISABLE_COMPACT' not in auto
+    assert parent['DISABLE_COMPACT'] == '1'
+    with pytest.raises(ValueError):
+        local.client_settings('claude', 'http://127.0.0.1:8080', tmp_path, tmp_path, parent,
+                              claude_compaction='pretend-larger')
+
+
+def test_scripted_read_evidence_rejects_denials_and_deduplicates_history():
+    from claude_context_check import successful_fixture_reads
+    def req(*blocks):
+        return {'body': {'messages': [{'role': 'user', 'content': list(blocks)}]}}
+    denied = {'type': 'tool_result', 'tool_use_id': 'tool_1', 'is_error': True,
+              'content': 'Permission denied: A small fixture.'}
+    good = dict(denied, is_error=False, content='1: A small fixture.')
+    assert successful_fixture_reads([req(denied)]) == set()
+    assert successful_fixture_reads([req(good), req(good)]) == {'tool_1'}
+    assert successful_fixture_reads([req(dict(good, content='unrelated text'))]) == set()

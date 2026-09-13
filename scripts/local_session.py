@@ -9,6 +9,7 @@ from pathlib import Path
 import shutil
 import socket
 import subprocess
+import sys
 import time
 import urllib.error
 
@@ -62,7 +63,8 @@ def executable(name):
     return found
 
 
-def client_settings(client, base, state, workspace, parent, *, prompt=None, result=None):
+def client_settings(client, base, state, workspace, parent, *, prompt=None, result=None,
+                    claude_compaction='manual'):
     """All overrides belong to the child; never copy cloud credentials into local state."""
     if not base.startswith('http://127.0.0.1:'):
         raise ValueError('this launcher is restricted to the local loopback server')
@@ -98,20 +100,35 @@ def client_settings(client, base, state, workspace, parent, *, prompt=None, resu
                     '-o', str(result), prompt]
         effective = {'CODEX_HOME': env['CODEX_HOME']}
     elif client == 'claude':
+        if claude_compaction not in ('manual', 'auto'):
+            raise ValueError('unknown Claude compaction mode')
+        # Do not inherit a switch that disables the manual recovery command too.
+        env = {k: v for k, v in env.items()
+               if k.upper() not in ('DISABLE_COMPACT', 'DISABLE_AUTO_COMPACT')}
         effective = {
             'ANTHROPIC_BASE_URL': base, 'ANTHROPIC_API_KEY': 'local-only-placeholder',
             'ANTHROPIC_MODEL': ALIAS, 'ANTHROPIC_DEFAULT_HAIKU_MODEL': ALIAS,
             'ANTHROPIC_DEFAULT_SONNET_MODEL': ALIAS, 'ANTHROPIC_DEFAULT_OPUS_MODEL': ALIAS,
             'MAX_THINKING_TOKENS': '0', 'CLAUDE_CODE_MAX_CONTEXT_TOKENS': '18432',
             'CLAUDE_CODE_MAX_OUTPUT_TOKENS': '2048',
+            'CLAUDE_CODE_FILE_READ_MAX_OUTPUT_TOKENS': '2048',
+            'CLAUDE_CODE_MAX_TOOL_USE_CONCURRENCY': '1',
             'CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC': '1',
         }
+        # Claude 2.1.260 subtracts an additional fixed 13000-token reserve:
+        # 18432 - 2048 - 13000 = 3384. Its percent knob cannot raise this.
+        # Keep the true model window and native blocking guard; use /compact
+        # explicitly instead of repeatedly summarizing an already-small history.
+        if claude_compaction == 'manual':
+            effective['DISABLE_AUTO_COMPACT'] = '1'
         env.update(effective)
         cmd = [executable('claude'), '--bare', '--restricted', '--disable-slash-commands',
                '--strict-mcp-config', '--model', ALIAS, '--tools', 'Read,Edit,Write',
                '--system-prompt', 'You are a local coding assistant on Windows. '
                f'The working directory is {workspace}. Resolve file paths against this exact directory; never use placeholder paths. '
-               'Inspect files with tools before editing. Make only the requested changes. Be concise.']
+               'Inspect files with tools before editing. Read targeted ranges using offset and limit, '
+               'starting with at most 80 lines; narrow the range if a read exceeds the token limit. '
+               'Do not repeatedly reread unchanged files. Make only the requested changes. Be concise.']
         if prompt is not None:
             cmd += ['-p', prompt, '--output-format', 'stream-json', '--verbose',
                     '--no-session-persistence', '--permission-mode', 'acceptEdits',
@@ -196,6 +213,8 @@ def main():
     p.add_argument('--profile', choices=PROFILES, default='measured')
     p.add_argument('--port', type=int, default=8080)
     p.add_argument('--workspace', type=Path, default=Path.cwd())
+    p.add_argument('--claude-compaction', choices=['manual', 'auto'], default='manual',
+                   help='manual avoids Claude 2.1.260 small-context compaction thrashing')
     p.add_argument('--output', type=Path)
     p.add_argument('--stop-file', type=Path, help=argparse.SUPPRESS)
     p.add_argument('--print-command', action='store_true')
@@ -211,12 +230,17 @@ def main():
         serve(a)
         return
     state = a.root/'runs/local-client-state'
-    cmd, env, effective = client_settings(a.action, f'http://127.0.0.1:{a.port}', state, a.workspace, os.environ)
+    cmd, env, effective = client_settings(a.action, f'http://127.0.0.1:{a.port}', state,
+                                        a.workspace, os.environ, claude_compaction=a.claude_compaction)
     if a.print_command:
         print(json.dumps({'command': cmd, 'child_environment': effective, 'cwd': str(a.workspace)}, indent=2))
         return
     if a.action == 'codex':
         Path(env['CODEX_HOME']).mkdir(parents=True, exist_ok=True)
+    elif a.claude_compaction == 'manual':
+        print('Claude manual compaction: use /context to check usage and /compact near 8000 tokens. '
+              'If compaction fails, save a short handoff and start a new session with /clear. '
+              'The server remains limited to 18432 tokens.', file=sys.stderr, flush=True)
     raise SystemExit(subprocess.call(cmd, env=env, cwd=a.workspace))
 
 

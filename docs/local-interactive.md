@@ -1,5 +1,21 @@
 # Run the measured configuration locally
 
+Claude Code 2.1.260 requires **manual compaction** with this small context window.
+The launcher now defaults to that workaround; see [context recovery](claude-context-protocol.md).
+Restart the Claude client to load the new settings; the existing model server can
+stay running. The old conversation is not automatically resumed or erased.
+
+```powershell
+.\local.ps1 claude -Workspace C:\Users\displ\Documents\test-project
+```
+
+Use `/context` to check usage and `/compact` around 8000 tokens, before a large
+tool exchange. If the summary fails or remains too large, save a concise handoff
+and use `/clear` for a fresh conversation. Avoid repeated whole-file reads.
+This requires active context management; it does not increase server capacity or
+qualify unlimited coding sessions. `-ClaudeCompaction auto` explicitly restores
+automatic compaction for comparison, including its known small-window problem.
+
 **Start with Claude Code for file editing.** Its Read/Edit tool loop passed the
 [local integration check](local-session-results.md) on the measured profile.
 Codex connects through Responses, but its file-read command was rejected by CLI
