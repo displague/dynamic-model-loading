@@ -1,0 +1,3 @@
+- **P1 — Worker crashes before screening:** [fault_screen.py:251](/C:/Users/displ/Documents/dynamic-model-loading/src/dynamic_model_loading/fault_screen.py:251) calls `mlp.register_forward_hook()`, but `extract_ffns()` returns `FFNView` objects without that method. Every run raises `AttributeError` after loading both models. Register the hook on `mlp.source` or expose it through the adapter.
+
+**Block.** Confirmed with a CPU-only interface check. No files edited or GPU inference run.

@@ -1,0 +1,14 @@
+{
+  "protocol": "docs/fault-screen-protocol.md",
+  "parent": "runs/fault-pager-20260914-v1",
+  "index_sha256": "9c0db26e82225b835aaf442ede02a76c0ec23e1762c2057a4ffa8a1afcc4754c",
+  "tokens_sha256": "0ef8ea0ab583dd29f7645972623b75666c08cbf21b916e4957d186ce28727270",
+  "corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "prefix_tokens": 32,
+  "generation_tokens": 8,
+  "diagnostic_indices": [0, 1],
+  "repetitions": 1,
+  "budget_mib": 512,
+  "conditions_by_document": [["eager", "prefetch"], ["prefetch", "eager"]],
+  "worker_timeout_seconds": 300
+}

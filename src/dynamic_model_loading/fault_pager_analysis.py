@@ -27,7 +27,8 @@ def read_rows(path):
             yield json.loads(line)
 
 
-def audit_pages(path,budget,mode='lru'):
+def audit_pages(path,budget,mode='lru',*,selected_pages=27):
+    demand(type(selected_pages) is int and 0<selected_pages<=35,'invalid page audit selection')
     resident, prefetched, stats = OrderedDict(), set(), Counter()
     demands, evicted = [], []
     eager_release = None
@@ -88,8 +89,8 @@ def audit_pages(path,budget,mode='lru'):
             demand(row['used_bytes']==used-resident[key],'cancellation cache state')
         elif outcome=='layer':
             selections=row['selected_pages']
-            demand(len(selections)==1 and len(set(selections[0]))==27 and len(selections[0])==27,
-                   'draft selection did not execute 27 distinct pages')
+            demand(len(selections)==1 and len(set(selections[0]))==selected_pages and len(selections[0])==selected_pages,
+                   'draft selection did not execute the declared distinct pages')
             demand(demands==[(row['layer'],p) for p in sorted(selections[0])],
                    'selected pages do not reconcile with demand transactions')
             demands=[]
@@ -104,7 +105,9 @@ def audit_pages(path,budget,mode='lru'):
     return dict(stats)
 
 
-def audit_rounds(path,episode):
+def audit_rounds(path,episode,*,prefix_tokens=32,generation_tokens=64):
+    demand(type(prefix_tokens) is int and prefix_tokens>0 and
+           type(generation_tokens) is int and generation_tokens>0,'invalid round audit limits')
     generated, attempted, accepted = [],0,0
     fallback_consumptions=0
     stopped=False
@@ -112,7 +115,7 @@ def audit_rounds(path,episode):
         demand(not stopped,'round after EOS or cap')
         p,t=row['proposed'],row['target_predictions']
         demand(len(p)==len(t)==4 and row['round']==number,'malformed proposal round')
-        demand(row['base']==32+len(generated),'verification prefix boundary')
+        demand(row['base']==prefix_tokens+len(generated),'verification prefix boundary')
         a=0
         for proposal,target in zip(p,t):
             if proposal!=target:
@@ -125,10 +128,10 @@ def audit_rounds(path,episode):
         if a<4 and (not full or full[-1] not in (151643,151645)):
             fallback=t[a]
             full.append(fallback)
-        committed=full[:64-len(generated)]
+        committed=full[:generation_tokens-len(generated)]
         demand(row['accepted']==a and row['fallback']==fallback and row['committed']==committed,'bad commit provenance')
         demand(row['emitted_accepted']==min(a,len(committed)),'accepted/emitted denominator drift')
-        stop='eos' if committed[-1] in (151643,151645) else ('length' if len(generated)+len(committed)==64 else ('rejected' if fallback is not None else 'proposal_exhausted'))
+        stop='eos' if committed[-1] in (151643,151645) else ('length' if len(generated)+len(committed)==generation_tokens else ('rejected' if fallback is not None else 'proposal_exhausted'))
         # The verifier names its nonterminal outcomes; termination is independently derived.
         demand(row['stop_reason']==stop,'incorrect round stop reason')
         stopped=stop in ('eos','length')
@@ -142,7 +145,7 @@ def audit_rounds(path,episode):
     demand(generated==episode['ids'],'round ledger/output mismatch')
     demand(attempted==episode['attempted'] and accepted==episode['accepted'],'acceptance aggregate mismatch')
     demand(stopped and episode.get('stop_reason',stop)==stop,'missing or incorrect episode stop')
-    return 28*(32+attempted+fallback_consumptions)
+    return 28*(prefix_tokens+attempted+fallback_consumptions)
 
 
 def analyze(run,output):

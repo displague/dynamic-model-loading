@@ -5,6 +5,11 @@ research plan and current state are in `docs/plan.md`; protocols must precede ne
 measurements. Preserve negative results, raw receipts, source snapshots, and fixed
 tolerances. A corrected experiment uses a fresh run directory.
 
+For new performance studies, freeze and run a minutes-scale subset first under
+ADR 0006. Timeouts, correctness failures or a failed acquisition-policy screen
+do not launch a long matrix. A passing screen needs a separately frozen expanded
+protocol; it is not full validation or native-pivot evidence.
+
 Complete a code review and relevant validation before committing. At each completed
 delivery, commit and push to the configured remote, create an annotated release tag,
 publish the GitHub release, and update the associated issues and milestones. Use

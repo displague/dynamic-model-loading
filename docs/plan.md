@@ -44,6 +44,14 @@ departure and comparison before measurements. The project remains about novel
 loading; it does not return to stock flag sweeps or port this failed policy merely
 to obtain a faster implementation.
 
+Before another performance matrix, [ADR 0006](adr/0006-screen-before-performance-matrix.md)
+requires a minutes-scale screen. The [first fixed subset](fault-screen-protocol.md)
+checks the screening workflow against the known v0.20 negative pager: two prompts,
+eight generated tokens, two 512 MiB conditions and a five-minute worker deadline.
+It reuses the frozen calibration index; it does not rerun training or the long
+matrix, invent a new candidate, or satisfy the native pivot gate. A failed screen
+stops that candidate; a pass only warrants a new expanded protocol.
+
 ## Historical stock program after v0.12
 
 The queue established after v0.15 was deliberately small: [independent committed-token
