@@ -84,6 +84,18 @@ or native pivot follows. The next distinct representation/acquisition hypothesis
 needs its own cheap causal-faithfulness check and frozen short protocol; the broader
 novel-loading milestone remains open.
 
+The next owner-authorized hypothesis is [progressive precision with persistent
+increment acquisition](refinement-screen-protocol.md). It replaces the unusable
+two-bit base with embedded 4/6/8-bit weights, tests a local inter-precision signal
+and retains selected increment slabs across tokens. Representation faithfulness,
+traffic, memory and elapsed work are separate outcomes. An additional local
+Richardson-extrapolation diagnostic follows the owner's formula-to-other-domain
+method; its assumptions are tested, not assumed. The
+[inspiration ledger](refinement-inspirations.md) credits PMPD (supplied by the
+owner before freeze), Any-Precision, BitStack, AnyBCQ, DecDEC and the relevant
+numerical-analysis antecedents. No checkpoint results exist for this protocol at
+its source freeze; no long matrix or native change follows automatically.
+
 ## Historical stock program after v0.12
 
 The queue established after v0.15 was deliberately small: [independent committed-token

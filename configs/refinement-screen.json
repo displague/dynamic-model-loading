@@ -1,0 +1,14 @@
+{
+  "protocol": "docs/refinement-screen-protocol.md",
+  "parent": "runs/fault-pager-20260914-v1",
+  "tokens_sha256": "0ef8ea0ab583dd29f7645972623b75666c08cbf21b916e4957d186ce28727270",
+  "corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "quant_group": 128,
+  "cache_slots": 8,
+  "threshold": 0.02,
+  "extra_cuda_mib": 1024,
+  "prefix_tokens": 4,
+  "generation_tokens": 4,
+  "conditions": ["q4", "q6", "q8", "adaptive", "retained", "static"],
+  "worker_timeout_seconds": 300
+}
