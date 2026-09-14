@@ -19,6 +19,21 @@ policy. [v0.20.0](docs/releases/v0.20.0.md) publishes the implementation and raw
 receipts as a negative research result. No llama.cpp patch follows; novel loading
 research remains the primary program.
 
+**Screen first:** [v0.21's bounded subset](docs/fault-screen-results.md) detects the
+same candidate's failure in **3 minutes 22 seconds**, including setup and analysis,
+instead of another hours-scale matrix. Two prompts / eight output tokens retain
+exact outputs but accept only 6/40 proposals and increase prefetch traffic by
+5.66%. This validates a screening workflow, not a new policy or a speedup.
+[ADR 0006](docs/adr/0006-screen-before-performance-matrix.md) requires short screens
+before new long performance studies:
+
+```powershell
+.\.venv\Scripts\python.exe -m dynamic_model_loading.fault_screen --output runs/fault-screen-<fresh-name>
+```
+
+The measured worker has a fixed five-minute limit. A failed or timed-out screen
+does not launch the full suite; a pass requires a separately frozen expanded study.
+
 See the [research stages and delivery history](docs/plan.md),
 [release notes](docs/releases/), and
 [GitHub milestones](https://github.com/displague/dynamic-model-loading/milestones)

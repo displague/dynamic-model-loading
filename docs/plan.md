@@ -52,6 +52,14 @@ It reuses the frozen calibration index; it does not rerun training or the long
 matrix, invent a new candidate, or satisfy the native pivot gate. A failed screen
 stops that candidate; a pass only warrants a new expanded protocol.
 
+The [completed screen](fault-screen-results.md), delivered under
+[#36](https://github.com/displague/dynamic-model-loading/issues/36), finishes in
+195.308 seconds of worker time plus 6.774 seconds of independent analysis. All
+four scored outputs match; 6/40 proposals are accepted (15%), and prefetch adds
+5.6642% H2D traffic. Both screen economics checks fail, so no long matrix runs.
+This confirms that a short subset rejects the known failed policy; it does not
+test the unimplemented alternative representation above or close novel loading.
+
 ## Historical stock program after v0.12
 
 The queue established after v0.15 was deliberately small: [independent committed-token

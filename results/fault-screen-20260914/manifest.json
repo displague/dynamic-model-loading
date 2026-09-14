@@ -1,0 +1,110 @@
+{
+  "source_commit": "1f5bd89ae32f31942facdd4022ce69c6a1ec64a8",
+  "committed_files": {
+    "src/dynamic_model_loading/adapters.py": "69c5bba262f3f40bf2d76f6e36be2ee4a66508a9",
+    "src/dynamic_model_loading/analysis.py": "19372ee01e497c45903ce417320d5b3f54370cfb",
+    "src/dynamic_model_loading/balanced_analysis.py": "2585be13b7eb3e1b67aa62917944295d6c1adf83",
+    "src/dynamic_model_loading/balanced_control.py": "bf998b83d83d44957fcc3b21bf94079257c021d4",
+    "src/dynamic_model_loading/cache.py": "511d35a6426162c01c59069332001f456dfc178e",
+    "src/dynamic_model_loading/cache_analysis.py": "35c22b3aacb1f539f203b4ef49b03da667ee507b",
+    "src/dynamic_model_loading/cache_plot.py": "8a4244b1fb68bdbec892b48e67369477987155b0",
+    "src/dynamic_model_loading/causal.py": "d23004deeedcd15b3daddeae7459ae893fde12ec",
+    "src/dynamic_model_loading/causal_analysis.py": "b35b7db5f924cdd27b2f53fd4f008daae7ec101e",
+    "src/dynamic_model_loading/causal_evidence.py": "45100bb7f0ec1a6601f50569380137436f76c3da",
+    "src/dynamic_model_loading/causal_evidence_analysis.py": "2d3239fa045d6dc000cddd4396db241ea18da25e",
+    "src/dynamic_model_loading/causal_evidence_cost.py": "c522c5c14346c97de40ae3e2f8e63906cfe1228b",
+    "src/dynamic_model_loading/causal_evidence_study.py": "0e48f338a2e447ad5f95442a349bd02c5335b088",
+    "src/dynamic_model_loading/causal_plot.py": "804ac9028d9d82f30e6365cbc3b745127ead188e",
+    "src/dynamic_model_loading/causal_study.py": "17555ae0801347fc19367c1353828f2f9d4737ed",
+    "src/dynamic_model_loading/corpus.py": "cd308c0d47f671d1699ff045beec8cd2cc6a25fd",
+    "src/dynamic_model_loading/dense_interface.py": "bf3e1ac882dc572f1bd4b2f9a8711b25a177d99f",
+    "src/dynamic_model_loading/environment_analysis.py": "eded4b1328d3c874efbb359fcb562cbc2c8ec8aa",
+    "src/dynamic_model_loading/experiment.py": "795122b5918a295943d126ac04331a10ad2548ae",
+    "src/dynamic_model_loading/fault_generation.py": "86e983620ebb82503d670c988faf87ca3467e589",
+    "src/dynamic_model_loading/fault_pager.py": "8f5cae2294386fb5e96783a0bde291679116d893",
+    "src/dynamic_model_loading/fault_pager_analysis.py": "7fa2a1d414cbeef950507c10c51d968611960d36",
+    "src/dynamic_model_loading/fault_pager_run.py": "712c2177d27970744ecdc6a35981e7fab07a6e7b",
+    "src/dynamic_model_loading/fault_pager_study.py": "9b6db01c80275b95f82d3128cf2b9106e5579a03",
+    "src/dynamic_model_loading/fault_resources.py": "b098c20a4b877d2feac36f097df35519cb50902e",
+    "src/dynamic_model_loading/fault_screen.py": "e2053c291856cca0dc81a962763bb60a9003eef2",
+    "src/dynamic_model_loading/ffn.py": "11f2a9401be38a9cae80e2f4a7e9d13cd4725b58",
+    "src/dynamic_model_loading/hardware_analysis.py": "b71b6df1b0e7641176315745a289784b6a6c399b",
+    "src/dynamic_model_loading/hardware_cost.py": "dd71708a7259656e8666bd508f0c29e01b7ccc0b",
+    "src/dynamic_model_loading/layer_plot.py": "e7dfaaf1b0c218de3990c6dfcac0244ac031ca6e",
+    "src/dynamic_model_loading/layer_study.py": "17dfad92ad9dcbed0db5dbaf5db95c181866b587",
+    "src/dynamic_model_loading/metrics.py": "d1f80bf6cefff0f7825d2212728547b43b0cf990",
+    "src/dynamic_model_loading/packing.py": "7ba5a0b3b40be93a87fea40f8f38e51d00533345",
+    "src/dynamic_model_loading/precision.py": "a9b608c0520ed68a0dd3d015b4d5f40189314cf7",
+    "src/dynamic_model_loading/provenance.py": "79fd45ed07eba2d8bad7dcabe73bd7ebf10617a1",
+    "src/dynamic_model_loading/relu.py": "b2c9a6211f01696b9a6ec47bdc4246bd50dd0195",
+    "src/dynamic_model_loading/relu_analysis.py": "de896e426d2e24b58b99d4765842a557d10e48ae",
+    "src/dynamic_model_loading/relu_study.py": "99b882b068c03b28cf01547b5bcf4827de3e60ad",
+    "src/dynamic_model_loading/repair.py": "fe1ec00bda0298261b8096434c30d82ad8004073",
+    "src/dynamic_model_loading/repair_analysis.py": "de7bfacf77f5cfec5e87afc0bb0fdc362f5743ff",
+    "src/dynamic_model_loading/repair_plot.py": "8788500177c8735783f902f4fc04f686a943ad2b",
+    "src/dynamic_model_loading/repair_study.py": "a86ddd46b94be379fae91092ad0069c38cb392f8",
+    "src/dynamic_model_loading/trace.py": "ee0e3de8fc3702049bb43fb929f7a20c7cf9c9dd",
+    "src/dynamic_model_loading/__init__.py": "fed6d111288fa1316d8df32a6164c129f270d640",
+    "configs/fault-screen.json": "d71beeaf2e09ced7e519e07a2f81e51af77a4f83",
+    "docs/fault-screen-protocol.md": "392b0afd3731ba9fbb59801edf629ce427bc1c17"
+  },
+  "environment": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cuda:0",
+    "torch": "2.10.0+cu130",
+    "cuda_build": "13.0",
+    "versions": {
+      "transformers": "5.13.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.19.0",
+      "numpy": "2.3.5"
+    },
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "bf16_reduced_precision_reduction": true,
+    "fp16_reduced_precision_reduction": true,
+    "cpu_threads": 4,
+    "process_id": 11832,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "total_bytes": 17066033152,
+      "compute_capability": [
+        12,
+        0
+      ]
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 5080 Laptop GPU, 616.92, 16303 MiB, 0 MiB, 41, 6.03 W"
+  },
+  "checkpoint": {
+    "config.json": {
+      "bytes": 660,
+      "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+    },
+    "generation_config.json": {
+      "bytes": 242,
+      "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+    },
+    "merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "model.safetensors": {
+      "bytes": 3087467144,
+      "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+    },
+    "tokenizer.json": {
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    "tokenizer_config.json": {
+      "bytes": 7305,
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  }
+}

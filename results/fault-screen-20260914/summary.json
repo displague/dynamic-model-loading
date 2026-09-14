@@ -1,0 +1,90 @@
+{
+  "source_commit": "1f5bd89ae32f31942facdd4022ce69c6a1ec64a8",
+  "conditions": {
+    "target": {
+      "episodes": 2,
+      "tokens": 16,
+      "wall_seconds": 0.4751864999998361,
+      "committed_tokens_per_second": 33.67099023226779,
+      "attempted": 0,
+      "accepted": 0,
+      "acceptance": null,
+      "h2d_bytes": 0,
+      "h2d_per_proposal": null,
+      "h2d_per_committed": 0.0,
+      "target_seconds": 0.47391610001795925
+    },
+    "eager": {
+      "episodes": 2,
+      "tokens": 16,
+      "wall_seconds": 69.88396799999464,
+      "committed_tokens_per_second": 0.2289509376456876,
+      "attempted": 40,
+      "accepted": 6,
+      "acceptance": 0.15,
+      "h2d_bytes": 399532621824,
+      "h2d_per_proposal": 9988315545.6,
+      "h2d_per_committed": 24970788864.0,
+      "target_seconds": 0.5486317000177223
+    },
+    "prefetch": {
+      "episodes": 2,
+      "tokens": 16,
+      "wall_seconds": 75.37074389998452,
+      "committed_tokens_per_second": 0.21228396022243967,
+      "attempted": 40,
+      "accepted": 6,
+      "acceptance": 0.15,
+      "h2d_bytes": 422162989056,
+      "h2d_per_proposal": 10554074726.4,
+      "h2d_per_committed": 26385186816.0,
+      "target_seconds": 0.47173260001000017
+    }
+  },
+  "resources": {
+    "samples": 957,
+    "peak_gpu_used": 9000030208,
+    "min_host_available": 11152490496,
+    "peak_rss": 10070990848,
+    "passed": true,
+    "error": null
+  },
+  "allocation": {
+    "target_parameters_bytes": 6174857216,
+    "draft_cuda_parameters_bytes": 1550637056,
+    "draft_host_parameters_bytes": 4624220160,
+    "controller_cuda_bytes": 2877952,
+    "controller_host_bytes": 2877952,
+    "shared_bytes": 0,
+    "catalogue_aliases_host": true,
+    "host_metadata_bytes": 14399,
+    "metadata_method": "deduplicated sys.getsizeof excluding tensor storage",
+    "cuda": {
+      "allocated_bytes": 7752450560,
+      "reserved_bytes": 7828668416,
+      "peak_allocated_bytes": 7752450560,
+      "peak_reserved_bytes": 7828668416
+    }
+  },
+  "peak_host_metadata_bytes": 94989,
+  "pinned_staging_bytes": 4718592,
+  "target_kv_peak_bytes": 2465792,
+  "draft_kv_peak_bytes": 2465792,
+  "peak_page_payload_bytes": 533200896,
+  "max_ffn_relative_l2": 2.4445395524630156e-07,
+  "logit_relative_l2": 1.2129334630683873e-06,
+  "logit_kl": 8.512211735478559e-08,
+  "all_candidate_ids_match": true,
+  "warmup_wall_seconds": 33.695406100014225,
+  "note": "Known-negative workflow validation on reused diagnostics; not novel policy or native admission.",
+  "decision": "stop",
+  "checks": {
+    "acceptance_at_least_half": false,
+    "byte_saving_at_least_tenth": false
+  },
+  "full_suite_launched": false,
+  "native_admission_evaluated": false,
+  "h2d_per_proposal_saving": -0.05664210128495828,
+  "worker_wall_seconds": 195.30811660000472,
+  "analysis_wall_seconds": 6.774350799998501
+}

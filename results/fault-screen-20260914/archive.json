@@ -1,0 +1,8 @@
+{
+  "asset": "fault-screen-v021-raw.zip",
+  "bytes": 14804797,
+  "sha256": "830526ca089329be8e57456c234b4a55c9e243a92f9072fe9044bce54d44d425",
+  "verified_members": 81,
+  "raw_bytes": 16864217,
+  "verification": "Every decompressed member SHA-256 equals its original local file; complete inventory matched."
+}
