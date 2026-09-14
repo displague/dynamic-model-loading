@@ -93,8 +93,18 @@ Richardson-extrapolation diagnostic follows the owner's formula-to-other-domain
 method; its assumptions are tested, not assumed. The
 [inspiration ledger](refinement-inspirations.md) credits PMPD (supplied by the
 owner before freeze), Any-Precision, BitStack, AnyBCQ, DecDEC and the relevant
-numerical-analysis antecedents. No checkpoint results exist for this protocol at
-its source freeze; no long matrix or native change follows automatically.
+numerical-analysis antecedents. No checkpoint results existed at source freeze.
+The [completed v0.23 screen](refinement-screen-results.md) takes 93.543 seconds
+including analysis. q4 accepts 6/16, q6 5/20, and q8/adaptive/retained/static each
+8/8 proposals. The adaptive controller fetches all eight bits; value-ranked
+retention saves 7.25%, below its 10% threshold and worse than the fixed cache's
+12.5%. Richardson extrapolation worsens every local layer, with 59.28% higher
+mean error: successive change norms shrink fourfold but directions are nearly
+uncorrelated. All four registered hypotheses fail. Peak extra CUDA is 990.635 MiB
+under the new 1024 MiB cap; this is not a larger-model frontier or speedup.
+Bounded issue #38 completes while the broader program remains open. No long
+matrix or native change follows; further uncertainty or prefill hypotheses need
+their own causal controls and prospective short protocols.
 
 ## Historical stock program after v0.12
 
