@@ -21,6 +21,10 @@ endpoint. The next unmeasured delivery is the prospective
 prompt-conditioned side-index/preload draft and dense target-verification boundary.
 It begins on the reproducible 1.5B FP32 artifact as a physical-runtime feasibility experiment;
 results do not establish a 32B gain without a separately frozen target-scale study.
+Under [ADR 0005](adr/0005-native-pivot-evidence-boundary.md), no llama.cpp patch or
+native worktree follows merely because PyTorch is less optimized; a native pivot
+requires a measured policy signal and a question that only the native substrate can
+answer.
 All prior protocols, raw receipts, failed selection/repair gates and published
 stock results remain unchanged.
 
