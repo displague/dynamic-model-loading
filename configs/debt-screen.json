@@ -1,0 +1,18 @@
+{
+  "protocol": "docs/debt-screen-protocol.md",
+  "parent": "runs/fault-pager-20260914-v1",
+  "index_sha256": "9c0db26e82225b835aaf442ede02a76c0ec23e1762c2057a4ffa8a1afcc4754c",
+  "tokens_sha256": "0ef8ea0ab583dd29f7645972623b75666c08cbf21b916e4957d186ce28727270",
+  "corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "bits": 2,
+  "quant_group": 128,
+  "sketch_rank": 16,
+  "page_width": 256,
+  "max_corrections": 4,
+  "extra_cuda_mib": 768,
+  "prefix_tokens": 8,
+  "generation_tokens": 8,
+  "repetitions": 1,
+  "worker_timeout_seconds": 300,
+  "conditions": ["dense_stream", "base", "fixed", "debt"]
+}

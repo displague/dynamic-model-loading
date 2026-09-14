@@ -20,7 +20,7 @@ def write(path, value):
         stream.write('\n')
 
 
-def supervise(output):
+def supervise(output,*,module='dynamic_model_loading.fault_screen',analyzer=None):
     """Only the directly owned inference worker is terminated on timeout."""
     output = Path(output).resolve()
     output.mkdir(parents=True, exist_ok=False)
@@ -28,7 +28,7 @@ def supervise(output):
     with (output/'worker.log').open('x', encoding='utf-8') as log:
         try:
             process = subprocess.Popen([sys.executable, '-u', '-m',
-                'dynamic_model_loading.fault_screen', '--worker', '--output', str(output/'worker')],
+                module, '--worker', '--output', str(output/'worker')],
                 cwd=ROOT, stdout=log, stderr=subprocess.STDOUT)
         except OSError as exc:
             receipt = dict(status='error',reason='launch_error',error=repr(exc),
@@ -59,7 +59,7 @@ def supervise(output):
         return receipt
     analysis_started = time.perf_counter()
     try:
-        report = analyze(output/'worker')
+        report = (analyzer or analyze)(output/'worker')
         report['worker_wall_seconds'] = receipt['worker_wall_seconds']
         report['analysis_wall_seconds'] = time.perf_counter()-analysis_started
         write(output/'summary.json', report)
