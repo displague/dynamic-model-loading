@@ -22,8 +22,9 @@ Keep `.venv` as the measured baseline unless an environment-change protocol call
 another interpreter. Record actual package versions and CUDA execution. Available
 LM Studio/Ollama formats are deployment comparisons, not interchangeable HF weights.
 
-The primary program after v0.12 is stock target-scale heterogeneous speculative
-decoding under docs/adr/0003-verified-speculation-boundary.md. Retire the tested
+The primary program is novel physical dynamic-loading research under ADR 0004,
+with the native-pivot evidence boundary in ADR 0005. Stock target-scale heterogeneous
+speculation under ADR 0003 remains the practical comparison baseline. Retire the tested
 1.5B FP32 per-token paging/repair path as an engineering priority decision; preserve
 its protocols and failures without implying impossibility. Historical Gate A/B/C
 contracts remain reproduction rules, not entrance gates for the new program.

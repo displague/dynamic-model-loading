@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import random
+import json
 
 import torch
 
@@ -22,11 +23,11 @@ FROZEN_CONFIG = {
 
 
 def validate_config(cfg: dict) -> None:
-    if cfg != FROZEN_CONFIG:
+    if json.dumps(cfg, sort_keys=True, allow_nan=False) != json.dumps(FROZEN_CONFIG, sort_keys=True):
         raise ValueError("Fault-pager configuration differs from the frozen protocol inputs")
 
 
-def verification_commit(proposed: torch.Tensor, target_predictions: torch.Tensor, eos_token_id: int) -> dict:
+def verification_commit(proposed: torch.Tensor, target_predictions: torch.Tensor, eos_token_id: int | tuple) -> dict:
     """Commit only a target-verified draft prefix plus a target fallback on mismatch.
 
     ``target_predictions[i]`` is the target greedy token conditional on the common
@@ -35,10 +36,13 @@ def verification_commit(proposed: torch.Tensor, target_predictions: torch.Tensor
     """
     if (proposed.ndim != target_predictions.ndim or proposed.ndim != 1
             or proposed.numel() != FROZEN_CONFIG["proposal_tokens"]
-            or type(eos_token_id) is not int):
+            or not (type(eos_token_id) is int or isinstance(eos_token_id, tuple))):
         raise ValueError("Expected a frozen-length matching one-dimensional proposal and target tensors")
     if proposed.shape != target_predictions.shape or proposed.dtype != torch.long or target_predictions.dtype != torch.long:
         raise ValueError("Proposal and target predictions must be matching torch.long token IDs")
+    eos = (eos_token_id,) if type(eos_token_id) is int else eos_token_id
+    if not eos or any(type(v) is not int or v < 0 for v in eos):
+        raise ValueError("Invalid EOS IDs")
     accepted = 0
     committed = []
     fallback = None
@@ -47,11 +51,11 @@ def verification_commit(proposed: torch.Tensor, target_predictions: torch.Tensor
         if proposal != target:
             fallback = target
             committed.append(target)
-            stop_reason = "eos" if target == eos_token_id else "rejected"
+            stop_reason = "eos" if target in eos else "rejected"
             break
         accepted += 1
         committed.append(proposal)
-        if target == eos_token_id:
+        if target in eos:
             stop_reason = "eos"
             break
     committed_tensor = torch.tensor(committed, dtype=torch.long, device=proposed.device)
