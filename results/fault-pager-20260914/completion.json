@@ -1,0 +1,11 @@
+{
+  "status": "complete",
+  "resources": {
+    "samples": 45198,
+    "peak_gpu_used": 9085300736,
+    "min_host_available": 8952397824,
+    "peak_rss": 10996355072,
+    "passed": true,
+    "error": null
+  }
+}

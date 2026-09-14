@@ -1,0 +1,193 @@
+Loading dense CUDA reference
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<04:05,  1.38it/s]
+Loading weights:  51%|█████     | 171/338 [00:00<00:00, 267.04it/s]
+Loading weights:  73%|███████▎  | 248/338 [00:01<00:00, 269.85it/s]
+Loading weights:  90%|████████▉ | 303/338 [00:01<00:00, 274.91it/s]
+Loading weights: 100%|██████████| 338/338 [00:01<00:00, 238.68it/s]
+Calibration 10/80
+Calibration 20/80
+Calibration 30/80
+Calibration 40/80
+Calibration 50/80
+Calibration 60/80
+Calibration 70/80
+Calibration 80/80
+Dense reference r-1 wikitext-train-8e1c37980c3d3c28: 1.972s
+Dense reference r0 wikitext-validation-59a50d9ab4d0c84c: 1.400s
+Dense reference r0 wikitext-validation-2c7c602b5ac557ff: 1.419s
+Dense reference r0 wikitext-validation-9fb0c61a50d8cdb9: 1.441s
+Dense reference r0 wikitext-validation-b3e260a8369ed0d7: 1.413s
+Dense reference r1 wikitext-validation-59a50d9ab4d0c84c: 1.406s
+Dense reference r1 wikitext-validation-2c7c602b5ac557ff: 1.448s
+Dense reference r1 wikitext-validation-9fb0c61a50d8cdb9: 1.427s
+Dense reference r1 wikitext-validation-b3e260a8369ed0d7: 1.424s
+Dense reference r2 wikitext-validation-59a50d9ab4d0c84c: 1.420s
+Dense reference r2 wikitext-validation-2c7c602b5ac557ff: 1.409s
+Dense reference r2 wikitext-validation-9fb0c61a50d8cdb9: 1.412s
+Dense reference r2 wikitext-validation-b3e260a8369ed0d7: 1.405s
+Loading CPU-backed draft and placing its non-FFN weights on CUDA
+
+Loading weights:   0%|          | 0/338 [00:00<?, ?it/s]
+Loading weights:   0%|          | 1/338 [00:00<02:22,  2.37it/s]
+Loading weights:  61%|██████    | 207/338 [00:00<00:00, 514.40it/s]
+Loading weights:  95%|█████████▍| 321/338 [00:00<00:00, 387.39it/s]
+Loading weights: 100%|██████████| 338/338 [00:00<00:00, 359.30it/s]
+All dense-completion numerical checks passed
+Start eager-128-r0-warmup
+End eager-128-r0-warmup: 100.170s, accepted 45/112, match=False
+Start eager-128-r0-d0
+End eager-128-r0-d0: 110.801s, accepted 38/124, match=True
+Start eager-128-r0-d1
+End eager-128-r0-d1: 118.224s, accepted 34/132, match=True
+Start eager-128-r0-d2
+End eager-128-r0-d2: 126.986s, accepted 32/144, match=True
+Start eager-128-r0-d3
+End eager-128-r0-d3: 92.779s, accepted 48/104, match=True
+Start eager-512-r0-warmup
+End eager-512-r0-warmup: 99.135s, accepted 45/112, match=False
+Start eager-512-r0-d0
+End eager-512-r0-d0: 111.385s, accepted 38/124, match=True
+Start eager-512-r0-d1
+End eager-512-r0-d1: 117.923s, accepted 34/132, match=True
+Start eager-512-r0-d2
+End eager-512-r0-d2: 127.413s, accepted 32/144, match=True
+Start eager-512-r0-d3
+End eager-512-r0-d3: 92.483s, accepted 48/104, match=True
+Start lru-128-r0-warmup
+End lru-128-r0-warmup: 101.292s, accepted 45/112, match=False
+Start lru-128-r0-d0
+End lru-128-r0-d0: 113.712s, accepted 38/124, match=True
+Start lru-128-r0-d1
+End lru-128-r0-d1: 120.244s, accepted 34/132, match=True
+Start lru-128-r0-d2
+End lru-128-r0-d2: 129.216s, accepted 32/144, match=True
+Start lru-128-r0-d3
+End lru-128-r0-d3: 93.992s, accepted 48/104, match=True
+Start prefetch-512-r0-warmup
+End prefetch-512-r0-warmup: 106.771s, accepted 45/112, match=False
+Start prefetch-512-r0-d0
+End prefetch-512-r0-d0: 119.269s, accepted 38/124, match=True
+Start prefetch-512-r0-d1
+End prefetch-512-r0-d1: 127.152s, accepted 34/132, match=True
+Start prefetch-512-r0-d2
+End prefetch-512-r0-d2: 135.762s, accepted 32/144, match=True
+Start prefetch-512-r0-d3
+End prefetch-512-r0-d3: 99.793s, accepted 48/104, match=True
+Start prefetch-128-r0-warmup
+End prefetch-128-r0-warmup: 106.242s, accepted 45/112, match=False
+Start prefetch-128-r0-d0
+End prefetch-128-r0-d0: 118.624s, accepted 38/124, match=True
+Start prefetch-128-r0-d1
+End prefetch-128-r0-d1: 127.317s, accepted 34/132, match=True
+Start prefetch-128-r0-d2
+End prefetch-128-r0-d2: 135.995s, accepted 32/144, match=True
+Start prefetch-128-r0-d3
+End prefetch-128-r0-d3: 99.183s, accepted 48/104, match=True
+Start lru-512-r0-warmup
+End lru-512-r0-warmup: 103.495s, accepted 45/112, match=False
+Start lru-512-r0-d0
+End lru-512-r0-d0: 115.367s, accepted 38/124, match=True
+Start lru-512-r0-d1
+End lru-512-r0-d1: 122.568s, accepted 34/132, match=True
+Start lru-512-r0-d2
+End lru-512-r0-d2: 132.020s, accepted 32/144, match=True
+Start lru-512-r0-d3
+End lru-512-r0-d3: 96.492s, accepted 48/104, match=True
+Start eager-512-r1-d0
+End eager-512-r1-d0: 112.143s, accepted 38/124, match=True
+Start eager-512-r1-d1
+End eager-512-r1-d1: 118.887s, accepted 34/132, match=True
+Start eager-512-r1-d2
+End eager-512-r1-d2: 128.320s, accepted 32/144, match=True
+Start eager-512-r1-d3
+End eager-512-r1-d3: 93.313s, accepted 48/104, match=True
+Start lru-512-r1-d0
+End lru-512-r1-d0: 115.489s, accepted 38/124, match=True
+Start lru-512-r1-d1
+End lru-512-r1-d1: 123.163s, accepted 34/132, match=True
+Start lru-512-r1-d2
+End lru-512-r1-d2: 133.473s, accepted 32/144, match=True
+Start lru-512-r1-d3
+End lru-512-r1-d3: 96.457s, accepted 48/104, match=True
+Start lru-128-r1-d0
+End lru-128-r1-d0: 114.260s, accepted 38/124, match=True
+Start lru-128-r1-d1
+End lru-128-r1-d1: 121.383s, accepted 34/132, match=True
+Start lru-128-r1-d2
+End lru-128-r1-d2: 130.632s, accepted 32/144, match=True
+Start lru-128-r1-d3
+End lru-128-r1-d3: 95.214s, accepted 48/104, match=True
+Start eager-128-r1-d0
+End eager-128-r1-d0: 112.406s, accepted 38/124, match=True
+Start eager-128-r1-d1
+End eager-128-r1-d1: 118.925s, accepted 34/132, match=True
+Start eager-128-r1-d2
+End eager-128-r1-d2: 128.574s, accepted 32/144, match=True
+Start eager-128-r1-d3
+End eager-128-r1-d3: 93.341s, accepted 48/104, match=True
+Start prefetch-128-r1-d0
+End prefetch-128-r1-d0: 119.889s, accepted 38/124, match=True
+Start prefetch-128-r1-d1
+End prefetch-128-r1-d1: 126.462s, accepted 34/132, match=True
+Start prefetch-128-r1-d2
+End prefetch-128-r1-d2: 138.908s, accepted 32/144, match=True
+Start prefetch-128-r1-d3
+End prefetch-128-r1-d3: 101.160s, accepted 48/104, match=True
+Start prefetch-512-r1-d0
+End prefetch-512-r1-d0: 121.757s, accepted 38/124, match=True
+Start prefetch-512-r1-d1
+End prefetch-512-r1-d1: 127.986s, accepted 34/132, match=True
+Start prefetch-512-r1-d2
+End prefetch-512-r1-d2: 138.975s, accepted 32/144, match=True
+Start prefetch-512-r1-d3
+End prefetch-512-r1-d3: 100.896s, accepted 48/104, match=True
+Start eager-512-r2-d0
+End eager-512-r2-d0: 113.562s, accepted 38/124, match=True
+Start eager-512-r2-d1
+End eager-512-r2-d1: 119.562s, accepted 34/132, match=True
+Start eager-512-r2-d2
+End eager-512-r2-d2: 129.879s, accepted 32/144, match=True
+Start eager-512-r2-d3
+End eager-512-r2-d3: 94.237s, accepted 48/104, match=True
+Start lru-128-r2-d0
+End lru-128-r2-d0: 115.230s, accepted 38/124, match=True
+Start lru-128-r2-d1
+End lru-128-r2-d1: 121.352s, accepted 34/132, match=True
+Start lru-128-r2-d2
+End lru-128-r2-d2: 131.486s, accepted 32/144, match=True
+Start lru-128-r2-d3
+End lru-128-r2-d3: 95.527s, accepted 48/104, match=True
+Start prefetch-128-r2-d0
+End prefetch-128-r2-d0: 120.309s, accepted 38/124, match=True
+Start prefetch-128-r2-d1
+End prefetch-128-r2-d1: 126.963s, accepted 34/132, match=True
+Start prefetch-128-r2-d2
+End prefetch-128-r2-d2: 138.427s, accepted 32/144, match=True
+Start prefetch-128-r2-d3
+End prefetch-128-r2-d3: 99.535s, accepted 48/104, match=True
+Start lru-512-r2-d0
+End lru-512-r2-d0: 116.957s, accepted 38/124, match=True
+Start lru-512-r2-d1
+End lru-512-r2-d1: 124.070s, accepted 34/132, match=True
+Start lru-512-r2-d2
+End lru-512-r2-d2: 134.882s, accepted 32/144, match=True
+Start lru-512-r2-d3
+End lru-512-r2-d3: 97.139s, accepted 48/104, match=True
+Start eager-128-r2-d0
+End eager-128-r2-d0: 113.376s, accepted 38/124, match=True
+Start eager-128-r2-d1
+End eager-128-r2-d1: 119.870s, accepted 34/132, match=True
+Start eager-128-r2-d2
+End eager-128-r2-d2: 129.070s, accepted 32/144, match=True
+Start eager-128-r2-d3
+End eager-128-r2-d3: 94.043s, accepted 48/104, match=True
+Start prefetch-512-r2-d0
+End prefetch-512-r2-d0: 121.534s, accepted 38/124, match=True
+Start prefetch-512-r2-d1
+End prefetch-512-r2-d1: 128.300s, accepted 34/132, match=True
+Start prefetch-512-r2-d2
+End prefetch-512-r2-d2: 138.303s, accepted 32/144, match=True
+Start prefetch-512-r2-d3
+End prefetch-512-r2-d3: 100.868s, accepted 48/104, match=True

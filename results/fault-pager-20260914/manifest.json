@@ -1,0 +1,159 @@
+{
+  "source_commit": "26bee331b9b8fd34ddbbfa4364e95c12f4700511",
+  "committed_files": {
+    "src/dynamic_model_loading/adapters.py": "69c5bba262f3f40bf2d76f6e36be2ee4a66508a9",
+    "src/dynamic_model_loading/analysis.py": "19372ee01e497c45903ce417320d5b3f54370cfb",
+    "src/dynamic_model_loading/balanced_analysis.py": "2585be13b7eb3e1b67aa62917944295d6c1adf83",
+    "src/dynamic_model_loading/balanced_control.py": "bf998b83d83d44957fcc3b21bf94079257c021d4",
+    "src/dynamic_model_loading/cache.py": "511d35a6426162c01c59069332001f456dfc178e",
+    "src/dynamic_model_loading/cache_analysis.py": "35c22b3aacb1f539f203b4ef49b03da667ee507b",
+    "src/dynamic_model_loading/cache_plot.py": "8a4244b1fb68bdbec892b48e67369477987155b0",
+    "src/dynamic_model_loading/causal.py": "d23004deeedcd15b3daddeae7459ae893fde12ec",
+    "src/dynamic_model_loading/causal_analysis.py": "b35b7db5f924cdd27b2f53fd4f008daae7ec101e",
+    "src/dynamic_model_loading/causal_evidence.py": "45100bb7f0ec1a6601f50569380137436f76c3da",
+    "src/dynamic_model_loading/causal_evidence_analysis.py": "2d3239fa045d6dc000cddd4396db241ea18da25e",
+    "src/dynamic_model_loading/causal_evidence_cost.py": "c522c5c14346c97de40ae3e2f8e63906cfe1228b",
+    "src/dynamic_model_loading/causal_evidence_study.py": "0e48f338a2e447ad5f95442a349bd02c5335b088",
+    "src/dynamic_model_loading/causal_plot.py": "804ac9028d9d82f30e6365cbc3b745127ead188e",
+    "src/dynamic_model_loading/causal_study.py": "17555ae0801347fc19367c1353828f2f9d4737ed",
+    "src/dynamic_model_loading/corpus.py": "cd308c0d47f671d1699ff045beec8cd2cc6a25fd",
+    "src/dynamic_model_loading/dense_interface.py": "bf3e1ac882dc572f1bd4b2f9a8711b25a177d99f",
+    "src/dynamic_model_loading/environment_analysis.py": "eded4b1328d3c874efbb359fcb562cbc2c8ec8aa",
+    "src/dynamic_model_loading/experiment.py": "795122b5918a295943d126ac04331a10ad2548ae",
+    "src/dynamic_model_loading/fault_generation.py": "86e983620ebb82503d670c988faf87ca3467e589",
+    "src/dynamic_model_loading/fault_pager.py": "8f5cae2294386fb5e96783a0bde291679116d893",
+    "src/dynamic_model_loading/fault_pager_analysis.py": "94fbeac419fa36b0337655a18d64697de34d9ac9",
+    "src/dynamic_model_loading/fault_pager_run.py": "712c2177d27970744ecdc6a35981e7fab07a6e7b",
+    "src/dynamic_model_loading/fault_pager_study.py": "9b6db01c80275b95f82d3128cf2b9106e5579a03",
+    "src/dynamic_model_loading/fault_resources.py": "b098c20a4b877d2feac36f097df35519cb50902e",
+    "src/dynamic_model_loading/ffn.py": "11f2a9401be38a9cae80e2f4a7e9d13cd4725b58",
+    "src/dynamic_model_loading/hardware_analysis.py": "b71b6df1b0e7641176315745a289784b6a6c399b",
+    "src/dynamic_model_loading/hardware_cost.py": "dd71708a7259656e8666bd508f0c29e01b7ccc0b",
+    "src/dynamic_model_loading/layer_plot.py": "e7dfaaf1b0c218de3990c6dfcac0244ac031ca6e",
+    "src/dynamic_model_loading/layer_study.py": "17dfad92ad9dcbed0db5dbaf5db95c181866b587",
+    "src/dynamic_model_loading/metrics.py": "d1f80bf6cefff0f7825d2212728547b43b0cf990",
+    "src/dynamic_model_loading/packing.py": "7ba5a0b3b40be93a87fea40f8f38e51d00533345",
+    "src/dynamic_model_loading/precision.py": "a9b608c0520ed68a0dd3d015b4d5f40189314cf7",
+    "src/dynamic_model_loading/provenance.py": "79fd45ed07eba2d8bad7dcabe73bd7ebf10617a1",
+    "src/dynamic_model_loading/relu.py": "b2c9a6211f01696b9a6ec47bdc4246bd50dd0195",
+    "src/dynamic_model_loading/relu_analysis.py": "de896e426d2e24b58b99d4765842a557d10e48ae",
+    "src/dynamic_model_loading/relu_study.py": "99b882b068c03b28cf01547b5bcf4827de3e60ad",
+    "src/dynamic_model_loading/repair.py": "fe1ec00bda0298261b8096434c30d82ad8004073",
+    "src/dynamic_model_loading/repair_analysis.py": "de7bfacf77f5cfec5e87afc0bb0fdc362f5743ff",
+    "src/dynamic_model_loading/repair_plot.py": "8788500177c8735783f902f4fc04f686a943ad2b",
+    "src/dynamic_model_loading/repair_study.py": "a86ddd46b94be379fae91092ad0069c38cb392f8",
+    "src/dynamic_model_loading/trace.py": "ee0e3de8fc3702049bb43fb929f7a20c7cf9c9dd",
+    "src/dynamic_model_loading/__init__.py": "fed6d111288fa1316d8df32a6164c129f270d640",
+    "configs/fault-pager.json": "60ef347006171bf958703911608993d19403a23d",
+    "docs/fault-pager-protocol.md": "6c6847da215814dee4b44aef703e9eb8601a2288"
+  },
+  "environment": {
+    "python": "3.14.3 (tags/v3.14.3:323c59a, Feb  3 2026, 16:04:56) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\displ\\Documents\\dynamic-model-loading\\.venv\\Scripts\\python.exe",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "device": "cuda:0",
+    "torch": "2.10.0+cu130",
+    "cuda_build": "13.0",
+    "versions": {
+      "transformers": "5.13.1",
+      "safetensors": "0.8.0",
+      "huggingface-hub": "1.19.0",
+      "numpy": "2.3.5"
+    },
+    "tf32_matmul": false,
+    "tf32_cudnn": false,
+    "bf16_reduced_precision_reduction": true,
+    "fp16_reduced_precision_reduction": true,
+    "cpu_threads": 4,
+    "process_id": 21024,
+    "gpu": {
+      "name": "NVIDIA GeForce RTX 5080 Laptop GPU",
+      "total_bytes": 17066033152,
+      "compute_capability": [
+        12,
+        0
+      ]
+    },
+    "nvidia_smi": "NVIDIA GeForce RTX 5080 Laptop GPU, 616.92, 16303 MiB, 0 MiB, 41, 7.69 W"
+  },
+  "checkpoint": {
+    "config.json": {
+      "bytes": 660,
+      "sha256": "98d2ff8cc47488d08a2b0b3acf4eb99ef210779b42bd48605f6b8e36acdbf670"
+    },
+    "generation_config.json": {
+      "bytes": 242,
+      "sha256": "e558847a8b4402616f1273797b015104dc266fe4b520056fca88823ba8f8ebe6"
+    },
+    "merges.txt": {
+      "bytes": 1671839,
+      "sha256": "599bab54075088774b1733fde865d5bd747cbcc7a547c5bc12610e874e26f5e3"
+    },
+    "model.safetensors": {
+      "bytes": 3087467144,
+      "sha256": "dd924a11b4c220f385b51ffa522daea7c9f3d850e31b162bb5661df483c6d3ee"
+    },
+    "tokenizer.json": {
+      "bytes": 7031645,
+      "sha256": "c0382117ea329cdf097041132f6d735924b697924d6f6fc3945713e96ce87539"
+    },
+    "tokenizer_config.json": {
+      "bytes": 7305,
+      "sha256": "5b5d4f65d0acd3b2d56a35b56d374a36cbc1c8fa5cf3b3febbbfabf22f359583"
+    },
+    "vocab.json": {
+      "bytes": 2776833,
+      "sha256": "ca10d7e9fb3ed18575dd1e277a2579c16d108e32f27439684afa0e10b1440910"
+    }
+  },
+  "config_sha256": "8d4615d6c9f948a04d590ba3ee5be4390f65ee096209981ef1723ef1035e5af5",
+  "corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "protocol_sha256": "757edf451ef399428bfff806ceab8b05d3d4ed02cc981d45b3eb3ce0756b9845",
+  "amendment_sha256": "3ad23fa146d19358f1ef9f8bcc2fc2152769a73044ecd2ee9e379db610aa64bc",
+  "tokens_sha256": "0ef8ea0ab583dd29f7645972623b75666c08cbf21b916e4957d186ce28727270",
+  "source_sha256": {
+    "adapters.py": "7bfb4f3793f2b8a96468732b95caddf47bcff6358316018d3329cf4467ce4ffc",
+    "analysis.py": "ba578312bb18e3af8104fd50f6bcf30a02d887fcf6224b4bb56434f5fb1fb086",
+    "balanced_analysis.py": "a52abceea0ed590b36680752648beedd2f1505a059a6ce7c6a0b9dede755a5d1",
+    "balanced_control.py": "dea4a415b426c2bb8fc2a2c4adebab155f1982e60c5a11612fa747856747e965",
+    "cache.py": "b8de5501e47e2b357f46309306b9277ccd4be953e239c19c9ad5b4b363221298",
+    "cache_analysis.py": "bdbb3b28320319c2a89bcf4b513cfc32ef5795450f38f7558f19d7da137c6f57",
+    "cache_plot.py": "dde8ac19e88b4de730d8c76efc0b4268d61135e12b47c540ef05e8baa9023a74",
+    "causal.py": "fd2c7e00a53bef988574122c9ac31a31d6b56ec043cbb87d59741052b76c943a",
+    "causal_analysis.py": "ead048becec0229e0e16a80141f2db9e634d8a5198b08ff04a1b4d40681264c9",
+    "causal_evidence.py": "1c7be9915f1c5df6c6b589cbc8a8db5e7a62b6e675ab9133b9a81465171929fd",
+    "causal_evidence_analysis.py": "730555f4f969cd916d40850cea0e641b9a60dbb8400d81706dfe8910b851ccea",
+    "causal_evidence_cost.py": "400844262f39134b6b41faaa63b3e0729a2ccf30ee777beb61d70dac13de4591",
+    "causal_evidence_study.py": "341cc2eb2a25827310dbd776ed13f8040a6bc2e678e1378838237448fcbb84f3",
+    "causal_plot.py": "18de19d95a2c35b33951e9fb76f318ed461782e873181babee088f0f295a03c9",
+    "causal_study.py": "32bdea4f0c726db198c97063b1b6a88a2d000c0866c766ef808cfe74ce3c0b12",
+    "corpus.py": "127735e3b9f13c040fc4fa99b5c38b4bb1d2f9c39205e38650211d3acc7d4567",
+    "dense_interface.py": "3a1bb926d56a428f7ca4706d892a68b035cacc5effaa76f7292d0ec96325bb86",
+    "environment_analysis.py": "66a45022834e01fe5ba0995cad7782aecba9db6dce54533d968e3e99f4e1a94e",
+    "experiment.py": "5fc3881995fb2318f954167971c3c4790b2b7c78470d02272f2dfa62cfcefe84",
+    "fault_generation.py": "fbef88e055d9aa2d4efa9f6de5e956dcadbfcbb0d6f2357be5c2b2601eb10362",
+    "fault_pager.py": "91db8a747989b472018b58149fe98624e2c3aac29054e51a60852292d74dc170",
+    "fault_pager_analysis.py": "e4b9c90c44e8d671ea13dcaa64f6c18f91bd6b8764aaf8b92e7a9483fc3574cb",
+    "fault_pager_run.py": "34702331bc43a39e3a700329e10407ae4cc6ac3f86a30899573fc8d64b903b56",
+    "fault_pager_study.py": "a433eef396111b94adce9b3c104c8bdf7ae69589c6372e5d969dac7ffc14f641",
+    "fault_resources.py": "de398de5fe69f5835f20da271f9459949aa19d4cf3ff2eaa87d2cf864e7e71d5",
+    "ffn.py": "4bc70ad070e0a68d5d7da7b34b5832d9a65a2a7f21d426ade988a63363e4da43",
+    "hardware_analysis.py": "20aa86c4614229361095c8d31dff4bb4c08ade7834556d4f562cf23a1fadd395",
+    "hardware_cost.py": "027e9195914b0a56d6ce0ba3fa2ef0c56d0995a2af80d770189d045b57c04d9b",
+    "layer_plot.py": "eb9221c88e808700df2898aa69ea1f47f24220d93fba517d2ce4b4323220b651",
+    "layer_study.py": "cb5d76f0f9645d0c97b194f0cc2c87c9a7156eeedf638ec91e033652bfc5eef6",
+    "metrics.py": "580f5a7c4195e7b35894eec3701d976382c0914d7a66b6c2890f8b0955353e53",
+    "packing.py": "b13c919d54ebc7e97669ee454a37b09732b3faa5cb78f697ee6a3a9f6297fe46",
+    "precision.py": "7ecd06ede79e646a50e116e72a143af3a7e7e14e578c80f85ee28e8462926b45",
+    "provenance.py": "7a49031df1c6caa87c8c7cebba1d2005e62e77cedf78eb39b00e30c8b1ea8082",
+    "relu.py": "d0afe4f3c8cccbb496e5ccdfd6793f4ca79c1493bfdcaab31b756121d7add125",
+    "relu_analysis.py": "69bcc87724c9faff444764d9f807a7ead527f691ab7448580d7d8e55a3a5c8cf",
+    "relu_study.py": "8b6efdcf1686bef37790e8d69559983b447f63489e804ac88a7684bc119d0a1a",
+    "repair.py": "112074a192678c3f6748b57af416458abdab126470126a2f6069204b4546e24a",
+    "repair_analysis.py": "24c396b0d4502941be8deb06ceb49b0986186fb05292147c4548e3611eb9c839",
+    "repair_plot.py": "1f3ab5d91fad1ff9fcb94d8b331912d0b8a68dd0863a353193b2a6ae4d32e03e",
+    "repair_study.py": "a56f9692d5a58e928093c5eabcdbc727a90a8ac4c4c5dce67c348ba7bc2b6b21",
+    "trace.py": "02845555dec8869447dd32e3af63fd466b5cc792e3173d75416d4e1652490fda",
+    "__init__.py": "5847814b9916ff654b3721c3d3ed133ce05c97065704bf12687369a3d88a5738"
+  }
+}

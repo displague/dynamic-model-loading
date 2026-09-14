@@ -1,0 +1,10 @@
+{
+  "source_commit": "26bee331b9b8fd34ddbbfa4364e95c12f4700511",
+  "raw_run": "runs/fault-pager-20260914-v1",
+  "first_analysis": "runs/fault-pager-analysis-20260914-v1",
+  "replay_analysis": "runs/fault-pager-analysis-20260914-replay",
+  "new_inference": false,
+  "byte_identical_summary_and_inventory": true,
+  "summary_sha256": "af89b862088493976ebb116b02a72ba3fd04381cdfaad84f51ce7549daefefd8",
+  "inventory_sha256": "e0fe13107429982a20b5c0ab6683b2bdf9821d609d562c47d5cf0a8cb524fb1c"
+}

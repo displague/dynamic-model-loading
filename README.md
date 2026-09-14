@@ -1,19 +1,30 @@
 # Dynamic model loading
 
-Research into executing models under GPU memory pressure, with preserved FFN
-sparsity experiments and a new target-scale stock speculative-decoding comparison.
+Research into novel weight-acquisition mechanisms for inference under smaller
+memory budgets. Stock llama.cpp configurations are practical baselines, not the
+project’s research objective.
 
 The starting point is the final critical review in the
 [shared research conversation](https://chatgpt.com/share/6aa40208-727c-83e9-a91b-b2ce031c96eb).
-The executable first milestone checks packing correctness and produces optional
-hindsight sparsity diagnostics. It is not yet a weight pager.
+The current experiment implements a physical, side-indexed FFN draft pager in
+PyTorch, with dense target verification. Its [prospective protocol](docs/fault-pager-protocol.md)
+and [implementation amendment](docs/fault-pager-amendment-1.md) freeze the inputs,
+resource accounting and comparisons before measurement. This 1.5B FP32 study does
+not by itself establish a large-model speedup or justify a native implementation.
+
+**Current research result:** the [physical pager study](docs/fault-pager-results.md)
+preserves all 72 scored outputs, but the tested policy loses: 30.2% draft acceptance,
+zero LRU demand hits, and 5.3% more transferred bytes for the nominated prefetch
+policy. [v0.20.0](docs/releases/v0.20.0.md) publishes the implementation and raw
+receipts as a negative research result. No llama.cpp patch follows; novel loading
+research remains the primary program.
 
 See the [research stages and delivery history](docs/plan.md),
 [release notes](docs/releases/), and
 [GitHub milestones](https://github.com/displague/dynamic-model-loading/milestones)
 for the original plan, completed experiments, and remaining gates.
 
-**Current measured configuration:** stock b10919, Qwen2.5-32B-Instruct Q4_K_M
+**Preserved practical baseline:** stock b10919, Qwen2.5-32B-Instruct Q4_K_M
 with a 0.5B Q8_0 draft, resident attention/KV and 32 host-backed FFNs. Use
 threshold 2, K16/p_min0 and q8_0 KV under the recorded 15,000 MiB GPU allowance.
 The [continuing-turn study](docs/attention-agent-results.md) measures **23.98 seconds
@@ -36,12 +47,15 @@ whole-layer control. See the [configuration guide](docs/stock-long-context-confi
 for complete settings and distinctions between these workloads. In-process prefix
 retention is measured; complete target/draft disk restart and 32K are unqualified.
 
-[ADR 0003](docs/adr/0003-verified-speculation-boundary.md) preserves and retires the
-tested per-token selective-execution path as the primary implementation strategy.
+[ADR 0004](docs/adr/0004-fault-pager-research-track.md) restores novel physical
+loading research as the primary program. [ADR 0005](docs/adr/0005-native-pivot-evidence-boundary.md)
+requires measured policy evidence and a native-only research question before any
+llama.cpp patch. [ADR 0003](docs/adr/0003-verified-speculation-boundary.md) preserves
+the earlier selective-execution failures and the historical stock-program pivot.
 [#27](https://github.com/displague/dynamic-model-loading/issues/27) remains open:
 the earlier independent replay agrees on 256/256 long IDs and 1,527/1,536 short IDs.
-No margin waiver or new numerical campaign changes those results. New drafts,
-controllers, physical pagers and custom overlap remain deferred.
+No margin waiver or new numerical campaign changes those results. The new physical
+pager study has its own contract; it does not rewrite those historical gates.
 
 **Preserved v0.12 result:** the [complete causal-repair experiment](docs/causal-evidence-results.md)
 finds a mixed quality improvement from partial evidence at matched bytes: relative

@@ -1,0 +1,1886 @@
+{
+  "sha256": "9c0db26e82225b835aaf442ede02a76c0ec23e1762c2057a4ffa8a1afcc4754c",
+  "positions": {
+    "0": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 36
+      },
+      {
+        "document": "wikitext-train-a86b5636edfdf2e1",
+        "position": 28
+      },
+      {
+        "document": "wikitext-train-9a40f17202dc081b",
+        "position": 80
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 35
+      },
+      {
+        "document": "wikitext-train-21c566a0b1196ce1",
+        "position": 102
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 76
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 44
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 3
+      },
+      {
+        "document": "wikitext-train-011e6b3fb22621f4",
+        "position": 16
+      },
+      {
+        "document": "wikitext-train-3f55ee4b48a5d6dc",
+        "position": 77
+      },
+      {
+        "document": "wikitext-train-a68c03660314cf45",
+        "position": 2
+      },
+      {
+        "document": "wikitext-train-0df479d329688304",
+        "position": 96
+      },
+      {
+        "document": "wikitext-train-2df3513b3b7bba1f",
+        "position": 102
+      },
+      {
+        "document": "wikitext-train-d539be56c116ca0e",
+        "position": 116
+      },
+      {
+        "document": "wikitext-train-1c18fe4009737ace",
+        "position": 11
+      }
+    ],
+    "1": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-a6bf0ecd12bf9ee0",
+        "position": 120
+      },
+      {
+        "document": "wikitext-train-c49205bcb5f5ea96",
+        "position": 106
+      },
+      {
+        "document": "wikitext-train-9a40f17202dc081b",
+        "position": 80
+      },
+      {
+        "document": "wikitext-train-812ca8532e867424",
+        "position": 22
+      },
+      {
+        "document": "wikitext-train-bbbb23fc5fe6c48e",
+        "position": 34
+      },
+      {
+        "document": "wikitext-train-5fd855e460b496b7",
+        "position": 1
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 35
+      },
+      {
+        "document": "wikitext-train-a68c03660314cf45",
+        "position": 6
+      },
+      {
+        "document": "wikitext-train-3f55ee4b48a5d6dc",
+        "position": 125
+      },
+      {
+        "document": "wikitext-train-5e741101a00ea2a5",
+        "position": 125
+      },
+      {
+        "document": "wikitext-train-012ceac920d909c3",
+        "position": 1
+      },
+      {
+        "document": "wikitext-train-c49205bcb5f5ea96",
+        "position": 63
+      },
+      {
+        "document": "wikitext-train-c49205bcb5f5ea96",
+        "position": 6
+      },
+      {
+        "document": "wikitext-train-e7f30990bafe7d7f",
+        "position": 36
+      },
+      {
+        "document": "wikitext-train-5fd855e460b496b7",
+        "position": 8
+      }
+    ],
+    "2": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-a15481d84933cb31",
+        "position": 126
+      },
+      {
+        "document": "wikitext-train-a68c03660314cf45",
+        "position": 47
+      },
+      {
+        "document": "wikitext-train-9a40f17202dc081b",
+        "position": 49
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 57
+      },
+      {
+        "document": "wikitext-train-034afecf0c7fbfb2",
+        "position": 10
+      },
+      {
+        "document": "wikitext-train-a86b5636edfdf2e1",
+        "position": 74
+      },
+      {
+        "document": "wikitext-train-5b30089ef32c8db2",
+        "position": 67
+      },
+      {
+        "document": "wikitext-train-1bf1be58f8268537",
+        "position": 37
+      },
+      {
+        "document": "wikitext-train-a6bf0ecd12bf9ee0",
+        "position": 1
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 12
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 58
+      },
+      {
+        "document": "wikitext-train-02934e3e23cd70ad",
+        "position": 2
+      },
+      {
+        "document": "wikitext-train-6f81ef74fa7ec5a6",
+        "position": 97
+      },
+      {
+        "document": "wikitext-train-f161d1f89e14c78d",
+        "position": 24
+      },
+      {
+        "document": "wikitext-train-5e741101a00ea2a5",
+        "position": 113
+      }
+    ],
+    "3": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-24322df2cc3217d7",
+        "position": 5
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 127
+      },
+      {
+        "document": "wikitext-train-d4001945c281b830",
+        "position": 112
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 121
+      },
+      {
+        "document": "wikitext-train-1bf1be58f8268537",
+        "position": 119
+      },
+      {
+        "document": "wikitext-train-5b30089ef32c8db2",
+        "position": 1
+      },
+      {
+        "document": "wikitext-train-21c566a0b1196ce1",
+        "position": 111
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 53
+      },
+      {
+        "document": "wikitext-train-aa16442b777b877f",
+        "position": 89
+      },
+      {
+        "document": "wikitext-train-c49205bcb5f5ea96",
+        "position": 103
+      },
+      {
+        "document": "wikitext-train-2fd033e90393e155",
+        "position": 72
+      },
+      {
+        "document": "wikitext-train-67ee26c8d86fe869",
+        "position": 1
+      },
+      {
+        "document": "wikitext-train-02934e3e23cd70ad",
+        "position": 2
+      },
+      {
+        "document": "wikitext-train-6c594f69c8c1b2aa",
+        "position": 80
+      },
+      {
+        "document": "wikitext-train-6f81ef74fa7ec5a6",
+        "position": 79
+      }
+    ],
+    "4": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-24322df2cc3217d7",
+        "position": 7
+      },
+      {
+        "document": "wikitext-train-2fd033e90393e155",
+        "position": 105
+      },
+      {
+        "document": "wikitext-train-d4001945c281b830",
+        "position": 20
+      },
+      {
+        "document": "wikitext-train-52e3398f942ab05b",
+        "position": 2
+      },
+      {
+        "document": "wikitext-train-549e3ba337bb0738",
+        "position": 25
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 67
+      },
+      {
+        "document": "wikitext-train-24322df2cc3217d7",
+        "position": 23
+      },
+      {
+        "document": "wikitext-train-013e16bd610f13b9",
+        "position": 30
+      },
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 77
+      },
+      {
+        "document": "wikitext-train-5b30089ef32c8db2",
+        "position": 3
+      },
+      {
+        "document": "wikitext-train-f161d1f89e14c78d",
+        "position": 24
+      },
+      {
+        "document": "wikitext-train-066c48cc7e28afd8",
+        "position": 111
+      },
+      {
+        "document": "wikitext-train-5e741101a00ea2a5",
+        "position": 7
+      },
+      {
+        "document": "wikitext-train-5fd855e460b496b7",
+        "position": 1
+      },
+      {
+        "document": "wikitext-train-e7f30990bafe7d7f",
+        "position": 80
+      }
+    ],
+    "5": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-3506e505f17f7739",
+        "position": 113
+      },
+      {
+        "document": "wikitext-train-6f81ef74fa7ec5a6",
+        "position": 79
+      },
+      {
+        "document": "wikitext-train-a6bf0ecd12bf9ee0",
+        "position": 120
+      },
+      {
+        "document": "wikitext-train-7e00e4a37c5af021",
+        "position": 4
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 115
+      },
+      {
+        "document": "wikitext-train-066c48cc7e28afd8",
+        "position": 111
+      },
+      {
+        "document": "wikitext-train-812ca8532e867424",
+        "position": 110
+      },
+      {
+        "document": "wikitext-train-487f9b32ff6db8dd",
+        "position": 27
+      },
+      {
+        "document": "wikitext-train-24322df2cc3217d7",
+        "position": 23
+      },
+      {
+        "document": "wikitext-train-52e3398f942ab05b",
+        "position": 2
+      },
+      {
+        "document": "wikitext-train-5e741101a00ea2a5",
+        "position": 7
+      },
+      {
+        "document": "wikitext-train-034afecf0c7fbfb2",
+        "position": 11
+      },
+      {
+        "document": "wikitext-train-6ef31b3f7d6f7950",
+        "position": 4
+      },
+      {
+        "document": "wikitext-train-9b4a5ecca40134a1",
+        "position": 23
+      },
+      {
+        "document": "wikitext-train-d539be56c116ca0e",
+        "position": 55
+      }
+    ],
+    "6": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-aa16442b777b877f",
+        "position": 89
+      },
+      {
+        "document": "wikitext-train-a86b5636edfdf2e1",
+        "position": 91
+      },
+      {
+        "document": "wikitext-train-6ef31b3f7d6f7950",
+        "position": 7
+      },
+      {
+        "document": "wikitext-train-3506e505f17f7739",
+        "position": 30
+      },
+      {
+        "document": "wikitext-train-0df479d329688304",
+        "position": 120
+      },
+      {
+        "document": "wikitext-train-ad35f253e9e3a34d",
+        "position": 45
+      },
+      {
+        "document": "wikitext-train-1c18fe4009737ace",
+        "position": 108
+      },
+      {
+        "document": "wikitext-train-011e6b3fb22621f4",
+        "position": 81
+      },
+      {
+        "document": "wikitext-train-7e00e4a37c5af021",
+        "position": 4
+      },
+      {
+        "document": "wikitext-train-0d534b2502e9a15c",
+        "position": 82
+      },
+      {
+        "document": "wikitext-train-812ca8532e867424",
+        "position": 64
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 29
+      },
+      {
+        "document": "wikitext-train-9b4a5ecca40134a1",
+        "position": 23
+      },
+      {
+        "document": "wikitext-train-6c594f69c8c1b2aa",
+        "position": 101
+      },
+      {
+        "document": "wikitext-train-ac9c5ee826c95d33",
+        "position": 20
+      }
+    ],
+    "7": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-aa16442b777b877f",
+        "position": 89
+      },
+      {
+        "document": "wikitext-train-c49205bcb5f5ea96",
+        "position": 12
+      },
+      {
+        "document": "wikitext-train-d539be56c116ca0e",
+        "position": 41
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 37
+      },
+      {
+        "document": "wikitext-train-0df479d329688304",
+        "position": 111
+      },
+      {
+        "document": "wikitext-train-013e16bd610f13b9",
+        "position": 30
+      },
+      {
+        "document": "wikitext-train-6f81ef74fa7ec5a6",
+        "position": 79
+      },
+      {
+        "document": "wikitext-train-073cfc2af0c7b544",
+        "position": 17
+      },
+      {
+        "document": "wikitext-train-02934e3e23cd70ad",
+        "position": 97
+      },
+      {
+        "document": "wikitext-train-7e00e4a37c5af021",
+        "position": 4
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 22
+      },
+      {
+        "document": "wikitext-train-9a40f17202dc081b",
+        "position": 88
+      },
+      {
+        "document": "wikitext-train-13a58d810c4db37e",
+        "position": 7
+      },
+      {
+        "document": "wikitext-train-1c18fe4009737ace",
+        "position": 11
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 71
+      }
+    ],
+    "8": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 18
+      },
+      {
+        "document": "wikitext-train-d06dd63347ce015c",
+        "position": 4
+      },
+      {
+        "document": "wikitext-train-9b4a5ecca40134a1",
+        "position": 23
+      },
+      {
+        "document": "wikitext-train-6a10e702f61e8133",
+        "position": 46
+      },
+      {
+        "document": "wikitext-train-c49205bcb5f5ea96",
+        "position": 12
+      },
+      {
+        "document": "wikitext-train-0df479d329688304",
+        "position": 120
+      },
+      {
+        "document": "wikitext-train-9a40f17202dc081b",
+        "position": 88
+      },
+      {
+        "document": "wikitext-train-67ee26c8d86fe869",
+        "position": 88
+      },
+      {
+        "document": "wikitext-train-a6bf0ecd12bf9ee0",
+        "position": 57
+      },
+      {
+        "document": "wikitext-train-8bb3b5d34b673e09",
+        "position": 57
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-1c18fe4009737ace",
+        "position": 92
+      },
+      {
+        "document": "wikitext-train-7e00e4a37c5af021",
+        "position": 4
+      },
+      {
+        "document": "wikitext-train-5b30089ef32c8db2",
+        "position": 94
+      },
+      {
+        "document": "wikitext-train-5e741101a00ea2a5",
+        "position": 86
+      }
+    ],
+    "9": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 37
+      },
+      {
+        "document": "wikitext-train-066c48cc7e28afd8",
+        "position": 10
+      },
+      {
+        "document": "wikitext-train-9a40f17202dc081b",
+        "position": 88
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 29
+      },
+      {
+        "document": "wikitext-train-0df479d329688304",
+        "position": 120
+      },
+      {
+        "document": "wikitext-train-d06dd63347ce015c",
+        "position": 4
+      },
+      {
+        "document": "wikitext-train-a6bf0ecd12bf9ee0",
+        "position": 112
+      },
+      {
+        "document": "wikitext-train-6a10e702f61e8133",
+        "position": 46
+      },
+      {
+        "document": "wikitext-train-d0215dcb2d866b47",
+        "position": 96
+      },
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 17
+      },
+      {
+        "document": "wikitext-train-c49205bcb5f5ea96",
+        "position": 50
+      },
+      {
+        "document": "wikitext-train-67ee26c8d86fe869",
+        "position": 88
+      },
+      {
+        "document": "wikitext-train-0df479d329688304",
+        "position": 69
+      },
+      {
+        "document": "wikitext-train-f161d1f89e14c78d",
+        "position": 95
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 71
+      }
+    ],
+    "10": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-aa16442b777b877f",
+        "position": 89
+      },
+      {
+        "document": "wikitext-train-d06dd63347ce015c",
+        "position": 4
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 34
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 65
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 37
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-d0215dcb2d866b47",
+        "position": 96
+      },
+      {
+        "document": "wikitext-train-6a10e702f61e8133",
+        "position": 57
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 8
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 71
+      },
+      {
+        "document": "wikitext-train-7e00e4a37c5af021",
+        "position": 2
+      },
+      {
+        "document": "wikitext-train-21c566a0b1196ce1",
+        "position": 17
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 11
+      },
+      {
+        "document": "wikitext-train-f161d1f89e14c78d",
+        "position": 95
+      },
+      {
+        "document": "wikitext-train-3506e505f17f7739",
+        "position": 87
+      }
+    ],
+    "11": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-066c48cc7e28afd8",
+        "position": 10
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 37
+      },
+      {
+        "document": "wikitext-train-d06dd63347ce015c",
+        "position": 4
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 22
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 30
+      },
+      {
+        "document": "wikitext-train-21c566a0b1196ce1",
+        "position": 118
+      },
+      {
+        "document": "wikitext-train-d0215dcb2d866b47",
+        "position": 96
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 71
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 33
+      },
+      {
+        "document": "wikitext-train-6f81ef74fa7ec5a6",
+        "position": 10
+      },
+      {
+        "document": "wikitext-train-2df3513b3b7bba1f",
+        "position": 95
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 11
+      },
+      {
+        "document": "wikitext-train-02934e3e23cd70ad",
+        "position": 24
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 1
+      },
+      {
+        "document": "wikitext-train-bbbb23fc5fe6c48e",
+        "position": 5
+      }
+    ],
+    "12": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-3506e505f17f7739",
+        "position": 22
+      },
+      {
+        "document": "wikitext-train-9a768800f82c84ce",
+        "position": 92
+      },
+      {
+        "document": "wikitext-train-1c18fe4009737ace",
+        "position": 92
+      },
+      {
+        "document": "wikitext-train-549e3ba337bb0738",
+        "position": 39
+      },
+      {
+        "document": "wikitext-train-d06dd63347ce015c",
+        "position": 4
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 30
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 12
+      },
+      {
+        "document": "wikitext-train-5fd855e460b496b7",
+        "position": 10
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 75
+      },
+      {
+        "document": "wikitext-train-8aab3b0b00dda495",
+        "position": 67
+      },
+      {
+        "document": "wikitext-train-21c566a0b1196ce1",
+        "position": 118
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 27
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 33
+      },
+      {
+        "document": "wikitext-train-02934e3e23cd70ad",
+        "position": 58
+      }
+    ],
+    "13": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-a15481d84933cb31",
+        "position": 48
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 37
+      },
+      {
+        "document": "wikitext-train-549e3ba337bb0738",
+        "position": 39
+      },
+      {
+        "document": "wikitext-train-9a768800f82c84ce",
+        "position": 92
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 8
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 14
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 32
+      },
+      {
+        "document": "wikitext-train-52e3398f942ab05b",
+        "position": 40
+      },
+      {
+        "document": "wikitext-train-3506e505f17f7739",
+        "position": 22
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 79
+      },
+      {
+        "document": "wikitext-train-7921f3b8ba3d5afc",
+        "position": 1
+      },
+      {
+        "document": "wikitext-train-a15481d84933cb31",
+        "position": 58
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 12
+      },
+      {
+        "document": "wikitext-train-3775ac6a3d0efd74",
+        "position": 9
+      },
+      {
+        "document": "wikitext-train-02934e3e23cd70ad",
+        "position": 58
+      }
+    ],
+    "14": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 116
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 14
+      },
+      {
+        "document": "wikitext-train-073cfc2af0c7b544",
+        "position": 74
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 19
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 8
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 75
+      },
+      {
+        "document": "wikitext-train-3506e505f17f7739",
+        "position": 16
+      },
+      {
+        "document": "wikitext-train-066c48cc7e28afd8",
+        "position": 20
+      },
+      {
+        "document": "wikitext-train-549e3ba337bb0738",
+        "position": 39
+      },
+      {
+        "document": "wikitext-train-6f81ef74fa7ec5a6",
+        "position": 119
+      },
+      {
+        "document": "wikitext-train-47d61b99767b8633",
+        "position": 12
+      },
+      {
+        "document": "wikitext-train-6ef31b3f7d6f7950",
+        "position": 53
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 120
+      },
+      {
+        "document": "wikitext-train-8aab3b0b00dda495",
+        "position": 41
+      },
+      {
+        "document": "wikitext-train-21c566a0b1196ce1",
+        "position": 4
+      }
+    ],
+    "15": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-9a768800f82c84ce",
+        "position": 14
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 14
+      },
+      {
+        "document": "wikitext-train-a68c03660314cf45",
+        "position": 17
+      },
+      {
+        "document": "wikitext-train-073cfc2af0c7b544",
+        "position": 74
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 37
+      },
+      {
+        "document": "wikitext-train-d06dd63347ce015c",
+        "position": 7
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 81
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 120
+      },
+      {
+        "document": "wikitext-train-549e3ba337bb0738",
+        "position": 39
+      },
+      {
+        "document": "wikitext-train-013e16bd610f13b9",
+        "position": 84
+      },
+      {
+        "document": "wikitext-train-52e3398f942ab05b",
+        "position": 40
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 32
+      },
+      {
+        "document": "wikitext-train-bbbb23fc5fe6c48e",
+        "position": 5
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 70
+      }
+    ],
+    "16": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 75
+      },
+      {
+        "document": "wikitext-train-5e741101a00ea2a5",
+        "position": 8
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 116
+      },
+      {
+        "document": "wikitext-train-6f81ef74fa7ec5a6",
+        "position": 119
+      },
+      {
+        "document": "wikitext-train-9a768800f82c84ce",
+        "position": 21
+      },
+      {
+        "document": "wikitext-train-3506e505f17f7739",
+        "position": 24
+      },
+      {
+        "document": "wikitext-train-066c48cc7e28afd8",
+        "position": 21
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 43
+      },
+      {
+        "document": "wikitext-train-47d61b99767b8633",
+        "position": 12
+      },
+      {
+        "document": "wikitext-train-ad35f253e9e3a34d",
+        "position": 123
+      },
+      {
+        "document": "wikitext-train-bbbb23fc5fe6c48e",
+        "position": 5
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 14
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-939b69ccded21d63",
+        "position": 42
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 42
+      }
+    ],
+    "17": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 75
+      },
+      {
+        "document": "wikitext-train-ad35f253e9e3a34d",
+        "position": 123
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 109
+      },
+      {
+        "document": "wikitext-train-d0215dcb2d866b47",
+        "position": 88
+      },
+      {
+        "document": "wikitext-train-3775ac6a3d0efd74",
+        "position": 9
+      },
+      {
+        "document": "wikitext-train-5e741101a00ea2a5",
+        "position": 7
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 11
+      },
+      {
+        "document": "wikitext-train-d539be56c116ca0e",
+        "position": 7
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 81
+      },
+      {
+        "document": "wikitext-train-0d534b2502e9a15c",
+        "position": 105
+      },
+      {
+        "document": "wikitext-train-6f81ef74fa7ec5a6",
+        "position": 118
+      },
+      {
+        "document": "wikitext-train-850abe090d258c3c",
+        "position": 116
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 39
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 43
+      }
+    ],
+    "18": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 67
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 32
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 14
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 104
+      },
+      {
+        "document": "wikitext-train-957b54c84eddb069",
+        "position": 8
+      },
+      {
+        "document": "wikitext-train-3775ac6a3d0efd74",
+        "position": 9
+      },
+      {
+        "document": "wikitext-train-52e3398f942ab05b",
+        "position": 31
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 116
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 77
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 37
+      },
+      {
+        "document": "wikitext-train-0d534b2502e9a15c",
+        "position": 103
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 47
+      },
+      {
+        "document": "wikitext-train-d0215dcb2d866b47",
+        "position": 88
+      },
+      {
+        "document": "wikitext-train-52e3398f942ab05b",
+        "position": 21
+      }
+    ],
+    "19": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 95
+      },
+      {
+        "document": "wikitext-train-8c9658ecfc5714e7",
+        "position": 111
+      },
+      {
+        "document": "wikitext-train-52e3398f942ab05b",
+        "position": 16
+      },
+      {
+        "document": "wikitext-train-9a768800f82c84ce",
+        "position": 89
+      },
+      {
+        "document": "wikitext-train-3e02c8ec17edee9e",
+        "position": 20
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 76
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 11
+      },
+      {
+        "document": "wikitext-train-a86b5636edfdf2e1",
+        "position": 11
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 56
+      },
+      {
+        "document": "wikitext-train-0d534b2502e9a15c",
+        "position": 101
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 45
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 121
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 67
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 1
+      },
+      {
+        "document": "wikitext-train-d539be56c116ca0e",
+        "position": 4
+      }
+    ],
+    "20": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 95
+      },
+      {
+        "document": "wikitext-train-9a768800f82c84ce",
+        "position": 89
+      },
+      {
+        "document": "wikitext-train-3f55ee4b48a5d6dc",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-957b54c84eddb069",
+        "position": 7
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 58
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 11
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 51
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 59
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 67
+      },
+      {
+        "document": "wikitext-train-034afecf0c7fbfb2",
+        "position": 86
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 77
+      },
+      {
+        "document": "wikitext-train-3e02c8ec17edee9e",
+        "position": 40
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 37
+      },
+      {
+        "document": "wikitext-train-3506e505f17f7739",
+        "position": 52
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 63
+      }
+    ],
+    "21": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 111
+      },
+      {
+        "document": "wikitext-train-5b30089ef32c8db2",
+        "position": 123
+      },
+      {
+        "document": "wikitext-train-3f55ee4b48a5d6dc",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-957b54c84eddb069",
+        "position": 8
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 83
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 63
+      },
+      {
+        "document": "wikitext-train-3e02c8ec17edee9e",
+        "position": 89
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 24
+      },
+      {
+        "document": "wikitext-train-47d61b99767b8633",
+        "position": 86
+      },
+      {
+        "document": "wikitext-train-a68c03660314cf45",
+        "position": 24
+      },
+      {
+        "document": "wikitext-train-52e3398f942ab05b",
+        "position": 30
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 99
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 77
+      },
+      {
+        "document": "wikitext-train-3506e505f17f7739",
+        "position": 50
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 27
+      }
+    ],
+    "22": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 99
+      },
+      {
+        "document": "wikitext-train-5b30089ef32c8db2",
+        "position": 123
+      },
+      {
+        "document": "wikitext-train-957b54c84eddb069",
+        "position": 8
+      },
+      {
+        "document": "wikitext-train-52e3398f942ab05b",
+        "position": 30
+      },
+      {
+        "document": "wikitext-train-6f81ef74fa7ec5a6",
+        "position": 118
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 58
+      },
+      {
+        "document": "wikitext-train-3f55ee4b48a5d6dc",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-a68c03660314cf45",
+        "position": 25
+      },
+      {
+        "document": "wikitext-train-d539be56c116ca0e",
+        "position": 124
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 9
+      },
+      {
+        "document": "wikitext-train-ad35f253e9e3a34d",
+        "position": 120
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 31
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 67
+      },
+      {
+        "document": "wikitext-train-13a58d810c4db37e",
+        "position": 13
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 108
+      }
+    ],
+    "23": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 50
+      },
+      {
+        "document": "wikitext-train-5b30089ef32c8db2",
+        "position": 123
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 31
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 51
+      },
+      {
+        "document": "wikitext-train-67ee26c8d86fe869",
+        "position": 50
+      },
+      {
+        "document": "wikitext-train-a8dcdc7e31d5c25d",
+        "position": 109
+      },
+      {
+        "document": "wikitext-train-d539be56c116ca0e",
+        "position": 124
+      },
+      {
+        "document": "wikitext-train-1bf1be58f8268537",
+        "position": 20
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 93
+      },
+      {
+        "document": "wikitext-train-5fd855e460b496b7",
+        "position": 119
+      },
+      {
+        "document": "wikitext-train-013e16bd610f13b9",
+        "position": 16
+      },
+      {
+        "document": "wikitext-train-ad35f253e9e3a34d",
+        "position": 120
+      },
+      {
+        "document": "wikitext-train-034afecf0c7fbfb2",
+        "position": 121
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 30
+      },
+      {
+        "document": "wikitext-train-957b54c84eddb069",
+        "position": 7
+      }
+    ],
+    "24": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e7f30990bafe7d7f",
+        "position": 75
+      },
+      {
+        "document": "wikitext-train-e7f30990bafe7d7f",
+        "position": 60
+      },
+      {
+        "document": "wikitext-train-7921f3b8ba3d5afc",
+        "position": 109
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 31
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 40
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 29
+      },
+      {
+        "document": "wikitext-train-3e02c8ec17edee9e",
+        "position": 83
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 14
+      },
+      {
+        "document": "wikitext-train-1c18fe4009737ace",
+        "position": 26
+      },
+      {
+        "document": "wikitext-train-812ca8532e867424",
+        "position": 48
+      },
+      {
+        "document": "wikitext-train-f161d1f89e14c78d",
+        "position": 16
+      },
+      {
+        "document": "wikitext-train-a86b5636edfdf2e1",
+        "position": 119
+      },
+      {
+        "document": "wikitext-train-52e3398f942ab05b",
+        "position": 30
+      },
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 123
+      },
+      {
+        "document": "wikitext-train-5b30089ef32c8db2",
+        "position": 89
+      }
+    ],
+    "25": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 49
+      },
+      {
+        "document": "wikitext-train-9b4a5ecca40134a1",
+        "position": 46
+      },
+      {
+        "document": "wikitext-train-73339a6861563b90",
+        "position": 31
+      },
+      {
+        "document": "wikitext-train-5b30089ef32c8db2",
+        "position": 88
+      },
+      {
+        "document": "wikitext-train-5fd855e460b496b7",
+        "position": 86
+      },
+      {
+        "document": "wikitext-train-e55026f07ef2354b",
+        "position": 55
+      },
+      {
+        "document": "wikitext-train-e1e2d099ffa04d1f",
+        "position": 15
+      },
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 123
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 51
+      },
+      {
+        "document": "wikitext-train-bfb9fdd07f7ef86a",
+        "position": 53
+      },
+      {
+        "document": "wikitext-train-073cfc2af0c7b544",
+        "position": 35
+      },
+      {
+        "document": "wikitext-train-850abe090d258c3c",
+        "position": 17
+      },
+      {
+        "document": "wikitext-train-e7f30990bafe7d7f",
+        "position": 60
+      },
+      {
+        "document": "wikitext-train-1c18fe4009737ace",
+        "position": 41
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 105
+      }
+    ],
+    "26": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-850abe090d258c3c",
+        "position": 105
+      },
+      {
+        "document": "wikitext-train-034afecf0c7fbfb2",
+        "position": 121
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 40
+      },
+      {
+        "document": "wikitext-train-e55026f07ef2354b",
+        "position": 56
+      },
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 24
+      },
+      {
+        "document": "wikitext-train-7921f3b8ba3d5afc",
+        "position": 35
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 51
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 34
+      },
+      {
+        "document": "wikitext-train-5fd855e460b496b7",
+        "position": 115
+      },
+      {
+        "document": "wikitext-train-9a40f17202dc081b",
+        "position": 90
+      },
+      {
+        "document": "wikitext-train-013e16bd610f13b9",
+        "position": 16
+      },
+      {
+        "document": "wikitext-train-c49205bcb5f5ea96",
+        "position": 42
+      },
+      {
+        "document": "wikitext-train-d539be56c116ca0e",
+        "position": 124
+      },
+      {
+        "document": "wikitext-train-d4001945c281b830",
+        "position": 84
+      },
+      {
+        "document": "wikitext-train-073cfc2af0c7b544",
+        "position": 56
+      }
+    ],
+    "27": [
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 0
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 48
+      },
+      {
+        "document": "wikitext-train-850abe090d258c3c",
+        "position": 105
+      },
+      {
+        "document": "wikitext-train-8e1c37980c3d3c28",
+        "position": 23
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 34
+      },
+      {
+        "document": "wikitext-train-2fd033e90393e155",
+        "position": 102
+      },
+      {
+        "document": "wikitext-train-e357d396871d1012",
+        "position": 16
+      },
+      {
+        "document": "wikitext-train-5b30089ef32c8db2",
+        "position": 123
+      },
+      {
+        "document": "wikitext-train-066c48cc7e28afd8",
+        "position": 109
+      },
+      {
+        "document": "wikitext-train-3e02c8ec17edee9e",
+        "position": 24
+      },
+      {
+        "document": "wikitext-train-6f81ef74fa7ec5a6",
+        "position": 92
+      },
+      {
+        "document": "wikitext-train-812ca8532e867424",
+        "position": 95
+      },
+      {
+        "document": "wikitext-train-9a40f17202dc081b",
+        "position": 90
+      },
+      {
+        "document": "wikitext-train-e55026f07ef2354b",
+        "position": 55
+      },
+      {
+        "document": "wikitext-train-d0051849fb0a5466",
+        "position": 49
+      },
+      {
+        "document": "wikitext-train-8be3b61ce726842a",
+        "position": 21
+      }
+    ]
+  },
+  "observations_per_layer": 10240,
+  "layers": 28,
+  "medoids": 16,
+  "calibration_files": {
+    "layer-00.safetensors": "126d2de8bf4fafac1a1a1c0abf941a24d685244a7722fc1424b25ea179facf24",
+    "layer-01.safetensors": "35ced069340ce49a8d622a0e733b6eef68d80cb23ee68cbf6e04f6d37ba2402c",
+    "layer-02.safetensors": "efa567e742b17db39d95c26a43607c3c47ed7e8f03f46e38dd5056a13b2de241",
+    "layer-03.safetensors": "cb2df71fb5e9d87f4045a02d281291ca60f89eea05ff34c2ef280a5b150c55e6",
+    "layer-04.safetensors": "556e9e26057ef9d52539a7c9e8738c7faf9238c93508700cdbfa3630a2abfab2",
+    "layer-05.safetensors": "7061ad27ba298498579a970acf8731aae0d6a61b4b8d299a0d2e0421937dc409",
+    "layer-06.safetensors": "8cc69e62c039dfcc0d73fbbff136c2c62a8590277e0ab1883322008ff5ed748f",
+    "layer-07.safetensors": "7785cccde892296420f34573ce774ee6a67471fd589da6541ec780bebe842a96",
+    "layer-08.safetensors": "a020b4c1b2c7f8386fdc601f302f00571770a5d7fbdc72abbcb5c30cd9f647c3",
+    "layer-09.safetensors": "4e838654f20b5ced3d1cb4217987e6731188a9ffb07f7f346132b8eddc84c741",
+    "layer-10.safetensors": "b9773973b8ab0330f8b41c0f317af9a653ee491c361952b66784106f84544cb7",
+    "layer-11.safetensors": "ccb5a387cd46f6cbc3787effbd288671c58fae6d78e51216042fb8ba6b20ab26",
+    "layer-12.safetensors": "9392a06770160a501dbd60d99713b72c3db6bd2128cdccf000493abf9781f61c",
+    "layer-13.safetensors": "4eca29b35c439c5b81b8519135b226497855b4697891ff93d58bd48a9f4600b0",
+    "layer-14.safetensors": "d9b327e38a462408e7fc0f3aef4664cd794a0092417930c325d9b6bd8b7a53e5",
+    "layer-15.safetensors": "d7306bbb7456742f7ea72e00e03898d2437affc1a67e07774c0fe294fb31a3eb",
+    "layer-16.safetensors": "d07c085a733bf914e05911a3b179d7d5177b1ebe58ed437736ad9c28f88d87d4",
+    "layer-17.safetensors": "66fc4b8c7d548d3de8dcde0de86bd8819d5edd3e09efa0ba53f8f42060ee70d9",
+    "layer-18.safetensors": "d407003d8a3cca044c7ba81f41d0f5acb1e21d050135ef23ebf000e435307ff1",
+    "layer-19.safetensors": "0b413d0d40df321d69a1eae041c6555ea4d5a1b783230dd3de0c44cecd5a15b3",
+    "layer-20.safetensors": "d133599a3323dd5b0277fb434cf6570e64d3a5bd37089d00905b951e7b720513",
+    "layer-21.safetensors": "bb5d248005c0594e50dc3c72cb0730c9ca54e43426e5cd170198584e428ba9c9",
+    "layer-22.safetensors": "9d8e83007afb56a16791dc86788be5d724a71ce2b7f7b079e310a513ac5eb86d",
+    "layer-23.safetensors": "d260f3b3979dbee8906586752488d05090b4b93ac3517504e22ef53b78e91b46",
+    "layer-24.safetensors": "ae20ccd9731d71569e1ea5d670a4ca9ba92685605195e29365d7bfe0d9f20e60",
+    "layer-25.safetensors": "c07bdeca3c9754b06f4cb2ffd29ac6eb0bd0df206278cd5267c9abcf1152a5b4",
+    "layer-26.safetensors": "b8970df1e3156c2f7058d661d97b43267b8c9c22f10188da0c3ee88058abcc7f",
+    "layer-27.safetensors": "f61fff6482cf9d1db9a85affd287366fa00b37aa3d142d62285efe4288b0b418"
+  }
+}

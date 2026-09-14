@@ -1,0 +1,30 @@
+{
+  "assets": [
+    {
+      "name": "fault-pager-v020-raw-01.zip",
+      "bytes": 1632806856,
+      "sha256": "59455bc06ec50ecb0a1c8c27d9440dc0f4f453fa90b61caf7a2697ef5c54596c",
+      "members": 28
+    },
+    {
+      "name": "fault-pager-v020-raw-02.zip",
+      "bytes": 1620395514,
+      "sha256": "f86b3e6dc82f65c83eedbdff5a8cdd9c920bd3089c850bb7288efc864a7dae72",
+      "members": 253
+    },
+    {
+      "name": "fault-pager-v020-raw-03.zip",
+      "bytes": 1630899633,
+      "sha256": "4bbfd5ae7309930247b828179b48ebfa75a2bfea2f149517a5d903a407e35092",
+      "members": 78
+    },
+    {
+      "name": "fault-pager-v020-raw-04.zip",
+      "bytes": 165342632,
+      "sha256": "ea99eb834d72d8fbdc83c0c668759510cc7b573b9f95b322a37978703898c34a",
+      "members": 52
+    }
+  ],
+  "members": 411,
+  "restoration": "Every ZIP member decompressed and SHA256 checked against the verified run."
+}

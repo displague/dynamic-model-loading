@@ -1,0 +1,17 @@
+{
+  "target_parameters_bytes": 6174857216,
+  "draft_cuda_parameters_bytes": 1550637056,
+  "draft_host_parameters_bytes": 4624220160,
+  "controller_bytes": 2877952,
+  "target_draft_shared_bytes": 0,
+  "controller_host_bytes": 2877952,
+  "host_metadata_bytes": 14399,
+  "metadata_method": "deduplicated sys.getsizeof Python objects, excluding tensor storage",
+  "catalogue_aliases_host": true,
+  "cuda": {
+    "allocated_bytes": 7752261632,
+    "reserved_bytes": 7822376960,
+    "peak_allocated_bytes": 7752261632,
+    "peak_reserved_bytes": 7822376960
+  }
+}

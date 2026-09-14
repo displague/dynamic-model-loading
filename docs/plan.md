@@ -16,10 +16,10 @@ silently damage quality without causing a residency miss.
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research
-endpoint. The next unmeasured delivery is the prospective
+endpoint. The completed [v0.20 physical-pager delivery](fault-pager-results.md) follows the prospective
 [fault-pager protocol](fault-pager-protocol.md): an explicit bounded FFN page cache,
 prompt-conditioned side-index/preload draft and dense target-verification boundary.
-It begins on the reproducible 1.5B FP32 artifact as a physical-runtime feasibility experiment;
+It ran on the reproducible 1.5B FP32 artifact as a physical-runtime feasibility experiment;
 results do not establish a 32B gain without a separately frozen target-scale study.
 Under [ADR 0005](adr/0005-native-pivot-evidence-boundary.md), no llama.cpp patch or
 native worktree follows merely because PyTorch is less optimized; a native pivot
@@ -27,6 +27,22 @@ requires a measured policy signal and a question that only the native substrate 
 answer.
 All prior protocols, raw receipts, failed selection/repair gates and published
 stock results remain unchanged.
+
+The full 72-episode matrix preserves every committed reference output, but accepts
+only 456/1512 proposals per condition. Both LRU budgets have zero demand hits;
+prefetch adds 6.3291% / 5.3032% traffic at 128 / 512 MiB and loses the original
+physical-improvement comparison. The frozen native-admission predicate fails.
+[#35](https://github.com/displague/dynamic-model-loading/issues/35) is a completed
+bounded experiment, not a successful acceleration or a completed research milestone.
+
+The next research question is how a different acquisition representation or
+residency lifetime can reduce repeated FFN acquisition while improving verified
+tokens per byte. A compact resident contribution with causal correction acquisition
+is an untested example, not a selected winner or a novelty claim; see the
+[antecedent check](fault-pager-related-work.md). A new protocol must state the
+departure and comparison before measurements. The project remains about novel
+loading; it does not return to stock flag sweeps or port this failed policy merely
+to obtain a faster implementation.
 
 ## Historical stock program after v0.12
 
@@ -157,7 +173,8 @@ length. No custom shared-resident runtime follows automatically from this gain.
 
 The following stage table, dependencies and release narratives describe the earlier
 program. Statements of remaining work below are historical research questions,
-not prerequisites for the new stock benchmark. ADR 0003 governs current priorities.
+not prerequisites for the current physical-loading research. ADR 0003 governed the
+historical stock program; ADR 0004 and ADR 0005 govern current priorities.
 
 ## Original stages and recorded evidence
 
