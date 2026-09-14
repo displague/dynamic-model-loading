@@ -6,13 +6,28 @@ project’s research objective.
 
 The starting point is the final critical review in the
 [shared research conversation](https://chatgpt.com/share/6aa40208-727c-83e9-a91b-b2ce031c96eb).
-The current experiment implements a physical, side-indexed FFN draft pager in
+The first restored experiment implements a physical, side-indexed FFN draft pager in
 PyTorch, with dense target verification. Its [prospective protocol](docs/fault-pager-protocol.md)
 and [implementation amendment](docs/fault-pager-amendment-1.md) freeze the inputs,
 resource accounting and comparisons before measurement. This 1.5B FP32 study does
 not by itself establish a large-model speedup or justify a native implementation.
 
-**Current research result:** the [physical pager study](docs/fault-pager-results.md)
+**New candidate measured:** [resident-base correction acquisition](docs/debt-screen-results.md)
+computes a packed two-bit FFN base and physically fetches correction pages selected
+by an error estimate updated after each actual correction. Its corrected screen
+finishes in **2 minutes 14 seconds** including analysis. Feedback, fixed selection
+and the base alone each accept **0/64 proposals**; feedback takes 24.31 seconds
+versus 12.57 for the base and 23.51 for fixed selection. Exact final outputs come
+from dense verification/fallback, not a faithful draft. The policy is rejected;
+no long matrix or native port follows. [v0.22.0](docs/releases/v0.22.0.md) preserves
+both the initial accounting failure and the prospectively corrected negative run.
+This is new acquisition code and a measured hypothesis, not a global novelty claim.
+
+```powershell
+.\.venv\Scripts\python.exe -m dynamic_model_loading.debt_screen --output runs/debt-screen-<fresh-name>
+```
+
+**Preserved physical-pager result:** the [physical pager study](docs/fault-pager-results.md)
 preserves all 72 scored outputs, but the tested policy loses: 30.2% draft acceptance,
 zero LRU demand hits, and 5.3% more transferred bytes for the nominated prefetch
 policy. [v0.20.0](docs/releases/v0.20.0.md) publishes the implementation and raw

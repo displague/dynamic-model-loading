@@ -35,10 +35,10 @@ physical-improvement comparison. The frozen native-admission predicate fails.
 [#35](https://github.com/displague/dynamic-model-loading/issues/35) is a completed
 bounded experiment, not a successful acceleration or a completed research milestone.
 
-The next research question is how a different acquisition representation or
+The follow-on research question was how a different acquisition representation or
 residency lifetime can reduce repeated FFN acquisition while improving verified
 tokens per byte. A compact resident contribution with causal correction acquisition
-is an untested example, not a selected winner or a novelty claim; see the
+was nominated for the later correction-debt screen, not a selected winner or a novelty claim; see the
 [antecedent check](fault-pager-related-work.md). A new protocol must state the
 departure and comparison before measurements. The project remains about novel
 loading; it does not return to stock flag sweeps or port this failed policy merely
@@ -58,10 +58,11 @@ The [completed screen](fault-screen-results.md), delivered under
 four scored outputs match; 6/40 proposals are accepted (15%), and prefetch adds
 5.6642% H2D traffic. Both screen economics checks fail, so no long matrix runs.
 This confirms that a short subset rejects the known failed policy; it does not
-test the unimplemented alternative representation above or close novel loading.
+test the alternative representation subsequently implemented below or close novel loading.
 
-The next nominated experiment is the [resident-base / correction-debt short
-screen](debt-screen-protocol-v2.md). It computes all FFN neurons from a packed two-bit
+The [completed resident-base / correction-debt screen](debt-screen-results.md)
+implements the [corrected prospective protocol](debt-screen-protocol-v2.md).
+It computes all FFN neurons from a packed two-bit
 base, then loads up to four paired full-precision pages using a projected output
 error estimate updated after each actual correction. No-correction and fixed
 sketch-ranking controls separate compression from policy value. A new 768 MiB
@@ -72,7 +73,16 @@ acquisition hypothesis with explicit antecedents, not a selected winner. Its fir
 16 MiB baseline overhead margin. That run remains inconclusive; all approximate
 controls recorded 0/64 accepted proposals. A fresh, prospectively corrected screen
 charges all baseline overhead inside the unchanged 768 MiB allowance without
-changing the policy, workload or success criteria.
+changing the policy, workload or success criteria. That corrected run completes in
+125.438 seconds plus 8.703 seconds of independent analysis. All outputs and
+accounting checks pass, but base/fixed/feedback each accept 0/64 proposals.
+Feedback takes 24.313 seconds versus 12.571 for base and 23.515 for fixed, with no
+traffic saving over fixed selection. Four policy economics checks fail: **stop**.
+Both attempts and their identical constructed tensors are preserved by v0.22.0 /
+[#37](https://github.com/displague/dynamic-model-loading/issues/37). No long matrix
+or native pivot follows. The next distinct representation/acquisition hypothesis
+needs its own cheap causal-faithfulness check and frozen short protocol; the broader
+novel-loading milestone remains open.
 
 ## Historical stock program after v0.12
 
