@@ -46,11 +46,12 @@ def audit_cuda(receipt):
 def audit_allocation(account):
     baseline=account['non_ffn_baseline_allocated']
     static=account['target_parameters_bytes']+account['draft_cuda_parameters_bytes']
-    demand(static<=baseline<=static+16*2**20,'non-FFN baseline outside fixed slack')
+    demand(account['charged_baseline_bytes']==static<=baseline,'invalid charged parameter baseline')
     audit_cuda(account['baseline_cuda'])
     demand(account['baseline_cuda']['allocated_bytes']==baseline,'baseline allocator drift')
     audit_cuda(account['construction_cuda'])
     minimum=account['resident_bytes']+account['workspace_bytes']
+    demand(baseline-static+minimum<=768*2**20,'baseline overhead exhausted inference allowance')
     demand(account['construction_cuda']['allocated_bytes']>=baseline+minimum,'constructed allocation undercharged')
     demand(math.isfinite(account['construction_wall_seconds']) and account['construction_wall_seconds']>0,
            'invalid construction timing')
@@ -66,10 +67,11 @@ def audit_episode_memory(row,account,rounds):
     minimum=account['resident_bytes']+account['workspace_bytes']
     baseline=account['non_ffn_baseline_allocated']
     demand(row['cuda']['allocated_bytes']>=baseline+minimum,'resident allocation undercharged')
-    extra=row['cuda']['peak_allocated_bytes']-baseline
+    extra=row['cuda']['peak_allocated_bytes']-account['charged_baseline_bytes']
     page_peak=PAGE_BYTES if row['mode']!='base' and row['cache'].get('load',0) else 0
     demand(row['extra_cuda_peak_bytes']==extra and
-           minimum+max(2*expected_kv,page_peak)<=extra<=768*2**20,'extra CUDA budget failed')
+           baseline-account['charged_baseline_bytes']+minimum+max(2*expected_kv,page_peak)
+           <=extra<=768*2**20,'extra CUDA budget failed')
 
 
 def policy_choices(row,*,pages=35,rank=16,maximum=4,cuda=True):
@@ -211,7 +213,7 @@ def audit_constructed(run,account):
 def analyze(run):
     import torch
     from safetensors.torch import load_file
-    from .debt_screen import validate_config,FROZEN
+    from .debt_screen import validate_config,FROZEN,CONFIG
     from .experiment import digest,load_corpus
     from .fault_pager_analysis import audit_rounds
     from .fault_screen import require_supervisor,full_logit_metrics
@@ -222,7 +224,7 @@ def analyze(run):
     require_supervisor(run)
     demand((run/'completion.json').is_file() and not (run/'failure.json').exists(),'incomplete debt screen')
     manifest=json.loads((run/'manifest.json').read_text(encoding='utf-8'))
-    verify_snapshot(run,manifest,'configs/debt-screen.json','docs/debt-screen-protocol.md',__file__)
+    verify_snapshot(run,manifest,'configs/'+CONFIG.name,FROZEN['protocol'],__file__)
     cfg=json.loads((run/'config.json').read_text(encoding='utf-8'))
     validate_config(cfg)
     frozen_environment(manifest['environment'])

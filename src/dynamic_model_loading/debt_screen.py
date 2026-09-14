@@ -8,8 +8,8 @@ import time
 from .fault_screen import ROOT,supervise,write
 
 
-CONFIG = ROOT/'configs/debt-screen.json'
-FROZEN = dict(protocol='docs/debt-screen-protocol.md',parent='runs/fault-pager-20260914-v1',
+CONFIG = ROOT/'configs/debt-screen-v2.json'
+FROZEN = dict(protocol='docs/debt-screen-protocol-v2.md',parent='runs/fault-pager-20260914-v1',
     index_sha256='9c0db26e82225b835aaf442ede02a76c0ec23e1762c2057a4ffa8a1afcc4754c',
     tokens_sha256='0ef8ea0ab583dd29f7645972623b75666c08cbf21b916e4957d186ce28727270',
     corpus_sha256='5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31',
@@ -54,6 +54,7 @@ def worker(output):
     from .metrics import relative_l2
     from .provenance import committed_inputs,frozen_environment
     from .residual_debt import ResidualDraft
+    from .debt_analysis import audit_allocation
 
     cfg = json.loads(CONFIG.read_text(encoding='utf-8'))
     validate_config(cfg)
@@ -133,6 +134,7 @@ def worker(output):
             if {p.untyped_storage().data_ptr() for p in tp}&{p.untyped_storage().data_ptr() for p in dp}:
                 raise RuntimeError('Unintended shared parameters')
             non_ffn_baseline = torch.cuda.memory_allocated()
+            charged_baseline=unique_tensor_bytes(tp)+unique_tensor_bytes([p for p in dp if p.is_cuda])
             baseline_cuda=cuda_memory(torch.device('cuda'))
             torch.cuda.reset_peak_memory_stats()
             construction_start = time.perf_counter()
@@ -150,12 +152,14 @@ def worker(output):
                 shared_bytes=0,catalogue_aliases_host=True,resident_bytes=pager.resident_bytes,
                 workspace_bytes=pager.workspace_bytes,non_ffn_baseline_allocated=non_ffn_baseline,
                 baseline_cuda=baseline_cuda,
+                charged_baseline_bytes=charged_baseline,
                 construction_h2d_bytes=pager.construction_h2d_bytes,
                 construction_d2h_bytes=pager.resident_bytes,
                 construction_wall_seconds=time.perf_counter()-construction_start,
                 host_calibration_index_bytes=sum(t.numel()*t.element_size() for t in index.values()),
                 construction_cuda=cuda_memory(torch.device('cuda')),constructed_sha256=constructed_hashes)
             write(output/'allocation.json',account)
+            audit_allocation(account)
             resources.boundary()
             # Freeze the constructed candidate before even scalar-reference scoring.
             for d in ds:
@@ -218,7 +222,7 @@ def worker(output):
                         check=resources.check),cleanup)
                     resources.boundary()
                     cuda=cuda_memory(torch.device('cuda'))
-                    extra=cuda['peak_allocated_bytes']-non_ffn_baseline
+                    extra=cuda['peak_allocated_bytes']-charged_baseline
                     match=result['ids']==references[d]['ids'] and result['stop_reason']==references[d]['stop_reason']
                     row=dict(episode=folder.name,mode=mode,document=d,warmup=warm,reference_match=match,
                         **result,cache=dict(pager.cache.stats),cuda=cuda,extra_cuda_peak_bytes=extra,

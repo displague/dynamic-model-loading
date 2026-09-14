@@ -1,0 +1,6 @@
+{
+  "decision": "inconclusive",
+  "reason": "analysis_error",
+  "error": "ValueError('non-FFN baseline outside fixed slack')",
+  "full_suite_launched": false
+}

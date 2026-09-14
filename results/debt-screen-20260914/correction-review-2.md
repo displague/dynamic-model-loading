@@ -1,0 +1,1 @@
+**APPROVE.** The lower bound now includes baseline overhead, and the regression rejects the understated peak. The targeted CPU test passed. No remaining defects in this exact change.

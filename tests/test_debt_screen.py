@@ -155,13 +155,14 @@ def memory_fixture():
         return dict(allocated_bytes=a,reserved_bytes=a+2**20,peak_allocated_bytes=peak or a,
                     peak_reserved_bytes=a+4*2**20)
     account=dict(target_parameters_bytes=6174857216,draft_cuda_parameters_bytes=1550637056,
+        charged_baseline_bytes=6174857216+1550637056,
         non_ffn_baseline_allocated=baseline,baseline_cuda=cuda(baseline),resident_bytes=resident,
         workspace_bytes=workspace,construction_cuda=cuda(baseline+resident+workspace),construction_wall_seconds=1.)
     current=baseline+resident+workspace
     extra=resident+workspace+2*57344*12
     row=dict(mode='base',warmup=False,staging_bytes=PAGE_BYTES,cache={},
         target_kv_peak_bytes=57344*12,draft_kv_peak_bytes=57344*12,
-        cuda=cuda(current,baseline+extra),extra_cuda_peak_bytes=extra)
+        cuda=cuda(current,baseline+extra),extra_cuda_peak_bytes=extra+4096)
     return account,row,[dict(base=8)]
 
 
@@ -183,3 +184,26 @@ def test_physical_memory_lower_bounds_allocator_order_and_exact_kv():
                       ('construction_cuda',account['baseline_cuda']),('construction_wall_seconds',float('nan'))]:
         with pytest.raises(ValueError):
             audit_allocation(dict(account,**{key:value}))
+
+
+def test_baseline_overhead_is_fully_charged_not_waived_by_larger_slack():
+    from dynamic_model_loading.debt_analysis import audit_allocation,audit_episode_memory
+    account,row,rounds=memory_fixture()
+    old_extra=row['extra_cuda_peak_bytes']
+    overhead=24*2**20
+    account['non_ffn_baseline_allocated']+=overhead
+    for name in ('baseline_cuda','construction_cuda'):
+        account[name]={k:v+overhead for k,v in account[name].items()}
+    row['cuda']={k:v+overhead for k,v in row['cuda'].items()}
+    row['extra_cuda_peak_bytes']+=overhead
+    audit_allocation(account)
+    audit_episode_memory(row,account,rounds)
+    with pytest.raises(ValueError,match='budget'):
+        audit_episode_memory(dict(row,extra_cuda_peak_bytes=old_extra),account,rounds)
+    with pytest.raises(ValueError,match='parameter baseline'):
+        audit_allocation(dict(account,charged_baseline_bytes=account['non_ffn_baseline_allocated']))
+    bad=copy.deepcopy(row)
+    bad['cuda']['peak_allocated_bytes']=bad['cuda']['allocated_bytes']
+    bad['extra_cuda_peak_bytes']=bad['cuda']['peak_allocated_bytes']-account['charged_baseline_bytes']
+    with pytest.raises(ValueError,match='budget'):
+        audit_episode_memory(bad,account,rounds)

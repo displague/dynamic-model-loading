@@ -61,13 +61,18 @@ This confirms that a short subset rejects the known failed policy; it does not
 test the unimplemented alternative representation above or close novel loading.
 
 The next nominated experiment is the [resident-base / correction-debt short
-screen](debt-screen-protocol.md). It computes all FFN neurons from a packed two-bit
+screen](debt-screen-protocol-v2.md). It computes all FFN neurons from a packed two-bit
 base, then loads up to four paired full-precision pages using a projected output
 error estimate updated after each actual correction. No-correction and fixed
 sketch-ranking controls separate compression from policy value. A new 768 MiB
 extra-CUDA allowance charges the base, sketches, workspace and physical pages.
 The two-prompt/eight-token screen has a five-minute worker deadline. This is an
-untested acquisition hypothesis with explicit antecedents, not a selected winner.
+acquisition hypothesis with explicit antecedents, not a selected winner. Its first
+138.939-second worker completed, but accounting analysis rejected the assumed
+16 MiB baseline overhead margin. That run remains inconclusive; all approximate
+controls recorded 0/64 accepted proposals. A fresh, prospectively corrected screen
+charges all baseline overhead inside the unchanged 768 MiB allowance without
+changing the policy, workload or success criteria.
 
 ## Historical stock program after v0.12
 
