@@ -4,10 +4,10 @@ This inventory is retrospective. It changes no historical protocol or result.
 
 | Idea | Status and evidence | Remaining scope |
 |---|---|---|
-| Activation-aligned pages |Partially tested: popularity/co-activation packing, widths, quality curves and cache traces, v0.2-v0.4.|Successful physical selective transfers/kernels on32B remain untested.|
+| Activation-aligned pages |Partially tested: popularity/co-activation packing, widths, quality curves and cache traces, v0.2-v0.4. The prospective fault pager adds an exact-completion physical cache on 1.5B.|Successful physical selective transfers/kernels on32B remain untested.|
 | Activation/history side index |Tested analytically: static, recency, EMA, learned causal prediction, current-input/history/residency and partial-evidence controllers, v0.7/v0.12.|Stronger predictors and useful target-scale physical execution remain deferred.|
 | Miss, acquire, correct before commitment |Partially tested: privileged additions v0.8 and causal additive repair v0.12.|Economical physical recovery and target-relative omission certification were not demonstrated.|
-| Literal zero sentinel / demand fault |Requires a distinct contract.|Residency metadata can detect an explicitly requested absent block; it cannot detect an important block never requested. Zero-valued weights do not supply that missing signal.|
+| Literal zero sentinel / demand fault |The prospective fault pager uses explicit residency metadata and recorded demand completion, not numerical-zero inference.|Residency metadata can detect an explicitly requested absent block; it cannot detect an important block never requested. Zero-valued weights do not supply that missing signal.|
 | Related-token lookup as a weight fetch key |Deferred.|Separate draft models propose tokens; they do not constitute that lookup experiment.|
 | Dense model with slice routing |Partially tested by causal FFN selection, not trained into a new routed model.|Target-scale router training or physical sparse execution remains deferred.|
 | Self-derived approximation |Non-sharing low-bit32B draft measured in v0.14.|A shared-component resident draft, pruned/low-bit/layer-skipped frontier remains deferred (#25).|

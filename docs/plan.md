@@ -11,7 +11,20 @@ less real data movement under a bounded memory budget. Corrective refinement is 
 separate hypothesis. A residency miss is observable; an omitted important group can
 silently damage quality without causing a residency miss.
 
-## Primary program after v0.12
+## Primary program after v0.19.2
+
+The project owner has restored novel physical dynamic-loading research as the
+primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
+stock llama.cpp configurations remain fixed practical baselines, not the research
+endpoint. The next unmeasured delivery is the prospective
+[fault-pager protocol](fault-pager-protocol.md): an explicit bounded FFN page cache,
+prompt-conditioned side-index/preload draft and dense target-verification boundary.
+It begins on the reproducible 1.5B FP32 artifact as a physical-runtime feasibility experiment;
+results do not establish a 32B gain without a separately frozen target-scale study.
+All prior protocols, raw receipts, failed selection/repair gates and published
+stock results remain unchanged.
+
+## Historical stock program after v0.12
 
 The queue established after v0.15 was deliberately small: [independent committed-token
 replay](continuing-agent-protocol.md) under [#27](https://github.com/displague/dynamic-model-loading/issues/27)
