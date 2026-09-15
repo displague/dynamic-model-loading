@@ -1,0 +1,23 @@
+{
+  "protocol": "docs/precision-packet-protocol.md",
+  "repo": "facebook/opt-1.3b",
+  "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62",
+  "artifact_manifest": "results/relu-control-20260911/run/manifest.json",
+  "prefix_tokens": 32,
+  "generation_tokens": 16,
+  "cache_rows": 0,
+  "dtype": "float16",
+  "worker_timeout_seconds": 300,
+  "candidate_gpu_limit_mib": 4800,
+  "reference_gpu_limit_mib": 6500,
+  "minimum_traffic_saving": 0.50,
+  "minimum_stream_wall_saving": 0.20,
+  "minimum_resident_memory_saving": 0.15,
+  "maximum_packet_episode_seconds": 5,
+  "warmup_prompt": "The librarian opened a drawer containing old maps of the harbor. Each map showed a different arrangement of streets, bridges, warehouses and canals. She began comparing the names along the river with the list in her notebook.",
+  "prompts": [
+    "The botanist placed three sealed jars beside the window and labeled them north, east and west. Each jar held seeds gathered from a different hillside. Before measuring the water she checked her notebook and noticed that the west jar",
+    "def count_pairs(values):\n    counts = {}\n    for value in values:\n        counts[value] = counts.get(value, 0) + 1\n    return sum(count // 2 for count in counts.values())\n\n# This function counts disjoint equal pairs. For the input",
+    "A workshop has twelve red tiles and eighteen blue tiles. Workers arrange the tiles into identical boxes without leaving any tile unused. Each box must contain the same number of red tiles and the same number of blue tiles. The largest possible number of boxes is"
+  ]
+}

@@ -43,6 +43,12 @@ is not an economics win. Stop this candidate, preserve646 CPU tests and exact
 replay, complete only #53. Next separately test lower-precision packet arithmetic
 against strong resident/offloaded controls and then a larger sparse artifact.
 
+The [FP16 packet protocol](precision-packet-protocol.md) next tests same-precision
+faithfulness, traffic/wall versus direct FP16 streaming, and footprint versus warm
+resident FP16. Resident speed is an independent gate, expected to favor residency.
+Only a surviving physical/footprint component can nominate a separate short scale
+experiment; no FP32-quality, optimized-Q4, CPU-first or deployment claim is implied.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component

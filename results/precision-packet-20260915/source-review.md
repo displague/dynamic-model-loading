@@ -1,0 +1,1 @@
+APPROVED. The latest diff adds an in-episode sample charged to every FP16 mode, resolving the sampling gap. No remaining blockers; all 4 focused CPU tests passed.

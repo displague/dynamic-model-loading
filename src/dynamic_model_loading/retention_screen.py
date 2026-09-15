@@ -52,6 +52,9 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
     for name,digest in artifacts.items(): demand(sha(path/name)==digest,'Checkpoint changed: '+name)
     torch.set_num_threads(4); torch.manual_seed(20260920)
     torch.backends.cuda.matmul.allow_tf32=False; torch.backends.cudnn.allow_tf32=False
+    demand(cfg.get('dtype') in ('float32','float16'),'Unsupported precision')
+    dtype=getattr(torch,cfg['dtype']); itemsize=4 if cfg['dtype']=='float32' else 2
+    if itemsize==2: torch.backends.cuda.matmul.allow_fp16_reduced_precision_reduction=True
     demand(torch.cuda.is_available(),'CUDA required'); env=environment(torch.device('cuda:0')); frozen_environment(env)
     manifest.update(environment=env,cuda_execution=True,artifacts=artifacts); write(output/'manifest.json',manifest)
     tokenizer=AutoTokenizer.from_pretrained(path,local_files_only=True,trust_remote_code=False)
@@ -62,10 +65,11 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
     bank=None; episodes=[]; refs={}; limit=cfg['candidate_gpu_limit_mib']*2**20
     with torch.inference_mode(),Resources(output/'resources.jsonl',gpu_limit=6500*2**20) as resources:
         setup=time.perf_counter()
-        model=AutoModelForCausalLM.from_pretrained(path,dtype=torch.float32,attn_implementation='sdpa',
+        model=AutoModelForCausalLM.from_pretrained(path,dtype=dtype,attn_implementation='sdpa',
             use_safetensors=False,weights_only=True,local_files_only=True,trust_remote_code=False).eval().to('cuda')
         torch.cuda.synchronize(); layers=extract(model)
         demand(len(layers)==24 and model.config.vocab_size==50272 and model.config.eos_token_id==2,'Wrong architecture')
+        demand({p.dtype for p in model.parameters()}=={dtype},'Model precision changed')
         allocation=dict(resident_setup_seconds=time.perf_counter()-setup,
             resident_parameter_bytes=sum(p.numel()*p.element_size() for p in model.parameters()),
             resident_cuda=cuda_memory(torch.device('cuda:0')))
@@ -77,7 +81,9 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
             if bank is not None:
                 bank.begin(key,condition)
                 def record(row):
-                    arrays[f'activity.{row["call"]}']=row.pop('activity'); pages.append(row)
+                    activity=row.pop('activity')
+                    if activity is not None: arrays[f'activity.{row["call"]}']=activity
+                    pages.append(row)
                 bank.record=record
             cache=DynamicCache(config=model.config); tokens=torch.tensor([prefixes[doc]],device='cuda')
             h2d=32*8; d2h=0
@@ -94,6 +100,9 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
                 if token==2 or len(ids)==16: break
                 tokens=torch.tensor([[token]],device='cuda'); h2d+=8
             write(folder/'calls.json',calls); write(folder/'pages.json',pages); save_file(arrays,folder/'tensors.safetensors')
+            # FP16 footprint comparisons require a sample inside even a short
+            # resident episode. This fixed-cost boundary is charged to all FP16 modes.
+            if itemsize==2: resources.boundary()
             finish=time.perf_counter(); mem=cuda_memory(torch.device('cuda:0')); resources.boundary()
             # Resources.boundary records/checks but intentionally returns no sample.
             if bank is not None:
@@ -130,7 +139,7 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
     write(output/'files.json',{p.relative_to(output).as_posix():sha(p) for p in output.rglob('*') if p.is_file()})
 
 
-def audit_pages(pages,arrays,calls,condition,capacity):
+def audit_pages(pages,arrays,calls,condition,capacity,*,itemsize=4):
     states=[OrderedDict() for _ in range(24)]; totals=dict(weight_h2d_bytes=0,metadata_h2d_bytes=0,
         activity_d2h_bytes=0,hits=0,active=0,prefill_h2d_bytes=0,decode_h2d_bytes=0)
     demand(len(pages)==len(calls)*24,'Missing layer calls')
@@ -143,7 +152,7 @@ def audit_pages(pages,arrays,calls,condition,capacity):
         demand(r['active']==active and r['hits']==[list(x) for x in hits] and r['misses']==misses
             and r['inserts']==[list(x) for x in inserts] and r['residency']==[list(x) for x in states[layer].items()],
             'Residency replay mismatch')
-        weight=len(misses)*2048*4; meta=len(misses)*8+16*(len(hits)+len(inserts)); d2h=n*8192+1
+        weight=len(misses)*2048*itemsize; meta=len(misses)*8+16*(len(hits)+len(inserts)); d2h=n*8192+1
         for k,v in [('weight_h2d_bytes',weight),('metadata_h2d_bytes',meta),('activity_d2h_bytes',d2h)]:
             demand(r[k]==v,'Physical byte mismatch: '+k); totals[k]+=v
         clocks=[r[k] for k in ('started','selection_finished','acquisition_finished','finished')]
@@ -164,6 +173,7 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
     from transformers import AutoTokenizer
     output=Path(output); supervisor=require_supervisor(output)
     cfg=json.loads((output/'config.json').read_text()); m=json.loads((output/'manifest.json').read_text())
+    itemsize=4 if cfg['dtype']=='float32' else 2
     verify_snapshot(output,m,config_relative,cfg['protocol'],__file__); frozen_environment(m['environment'])
     demand(m['cuda_execution'] is True and m['environment']['cpu_threads']==4 and
         not m['environment']['tf32_matmul'] and not m['environment']['tf32_cudnn'],'Execution drift')
@@ -198,7 +208,7 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
         for j,c in enumerate(calls):
             a=arrays[f'logits.{j}']; demand(a.shape==(50272,) and a.dtype==np.float32 and np.isfinite(a).all(),'Bad logits')
             demand(c['step']==j and c['input_ids']==(prefixes[r['document']] if j==0 else [ids[-1]])
-                and c['kv_length']==32+j and c['kv_bytes']==c['kv_storage_bytes']==(32+j)*393216,'KV/trajectory drift')
+                and c['kv_length']==32+j and c['kv_bytes']==c['kv_storage_bytes']==(32+j)*98304*itemsize,'KV/trajectory drift')
             demand(r['started']<=c['started']<c['finished']<=r['finished'] and (j==0 or calls[j-1]['finished']<=c['started']),'Call clock drift')
             token=int(a.argmax()); demand(token==c['token'] and (j==n-1 or token!=2),'Token drift'); ids.append(token); values.append(a)
             d2h+=len(c['input_ids'])*8+a.nbytes
@@ -218,7 +228,8 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
             metrics.append(dict(episode=r['episode'],max_relative_l2=float(error.max()),exact=np.array_equal(values,ref[2])))
             demand(r['cuda']['peak_reserved_bytes']<=4800*2**20 and
                 all(s['gpu_used']<=4800*2**20 for s in samples if r['started']<=s['monotonic']<=r['finished']), 'Candidate cap failed')
-        demand(set(arrays)=={f'logits.{j}' for j in range(n)}|{f'activity.{j+1}' for j in range(len(pages))},'Unaccounted tensors')
+        demand(set(arrays)=={f'logits.{j}' for j in range(n)}|({f'activity.{j+1}' for j in range(len(pages))}
+            if r['condition']!='stream' else set()),'Unaccounted tensors')
         if not r['warmup']:
             group=conditions.setdefault(r['condition'],dict(tokens=0,wall_seconds=0.,h2d_bytes=0,prefill_seconds=0.,decode_seconds=0.))
             group['tokens']+=n; group['wall_seconds']+=r['wall_seconds']; group['prefill_seconds']+=calls[0]['finished']-calls[0]['started']
@@ -226,9 +237,9 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
             group['h2d_bytes']+=stats.get('weight_h2d_bytes',0)+stats.get('metadata_h2d_bytes',0)
             for k in ('hits','active','prefill_h2d_bytes','decode_h2d_bytes'): group[k]=group.get(k,0)+stats.get(k,0)
     a=json.loads((output/'allocation.json').read_text())
-    demand(a['cache_bytes']==24*cfg['cache_rows']*2048*4 and a['workspace_bytes']==8192*2048*4
-        and a['packet_cuda_bytes']==a['pinned_bytes']==8192*(8+2048*4)
-        and a['candidate_parameter_bytes']==a['construction_h2d_bytes']==3652419584,'Allocation mismatch')
+    demand(a['cache_bytes']==24*cfg['cache_rows']*2048*itemsize and a['workspace_bytes']==8192*2048*itemsize
+        and a['packet_cuda_bytes']==a['pinned_bytes']==8192*(8+2048*itemsize)
+        and a['candidate_parameter_bytes']==a['construction_h2d_bytes']==913104896*itemsize,'Allocation mismatch')
     result=decider(conditions)
     return dict(conditions=conditions,metrics=metrics,**result,
         allocation=a,resources=completion['resources'],source_commit=m['source_commit'],
