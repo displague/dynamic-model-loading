@@ -1,0 +1,139 @@
+{
+  "conditions": {
+    "stream": {
+      "tokens": 48,
+      "wall_seconds": 11.262525400001323,
+      "h2d_bytes": 80530636800,
+      "prefill_seconds": 0.7404599999936181,
+      "decode_seconds": 10.416655500026536,
+      "hits": 0,
+      "active": 0,
+      "prefill_h2d_bytes": 5033164800,
+      "decode_h2d_bytes": 75497472000
+    },
+    "packet": {
+      "tokens": 48,
+      "wall_seconds": 4.187751399993431,
+      "h2d_bytes": 5982288904,
+      "prefill_seconds": 1.083511600001657,
+      "decode_seconds": 2.221701700022095,
+      "hits": 0,
+      "active": 1166593,
+      "prefill_h2d_bytes": 3469199688,
+      "decode_h2d_bytes": 2513089216
+    }
+  },
+  "metrics": [
+    {
+      "episode": "episode-4",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-5",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-6",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-7",
+      "max_relative_l2": 0.0,
+      "exact": true
+    }
+  ],
+  "checks": {
+    "Hfaithfulness": true,
+    "Hresources": true,
+    "Hacquisition": true,
+    "Hruntime": true,
+    "Hcapacity": true,
+    "Huseful_latency": true,
+    "Hprefill_traffic": false,
+    "Hprefill_runtime": false,
+    "Hdecode_traffic": true,
+    "Hdecode_runtime": true
+  },
+  "h2d_saving": 0.9257141239444415,
+  "wall_saving": 0.6281694157162176,
+  "allocation": {
+    "host_weights_bytes": 1677721600,
+    "cache_bytes": 0,
+    "workspace_bytes": 52428800,
+    "packet_cuda_bytes": 52510720,
+    "pinned_bytes": 52510720,
+    "capacity_rows_per_layer": 0,
+    "host_residency_entries_limit": 0,
+    "host_map_bytes_in_process_rss": true,
+    "original_layout": true,
+    "extra_host_linear_bytes": 1677721600,
+    "parameter_dtype": "torch.float16",
+    "direct_host_contiguous": true,
+    "cpu_first": true,
+    "before_candidate_cuda": {
+      "allocated_bytes": 0,
+      "reserved_bytes": 0,
+      "peak_allocated_bytes": 0,
+      "peak_reserved_bytes": 0
+    },
+    "cpu_loaded_parameter_bytes": 5303193600,
+    "construction_h2d_bytes": 3625472000,
+    "construction_d2h_bytes": 0,
+    "candidate_parameter_bytes": 3625472000,
+    "candidate_cuda": {
+      "allocated_bytes": 3730968576,
+      "reserved_bytes": 3938451456,
+      "peak_allocated_bytes": 3730968576,
+      "peak_reserved_bytes": 3938451456
+    },
+    "candidate_setup_seconds": 7.663517599998158,
+    "reference_kind": "dense_contiguous_fp16_stream",
+    "full_gpu_model_loaded": false,
+    "allocator_fraction": 0.2949229475398127,
+    "tied_embeddings": true,
+    "worker_started": 49820.6347732
+  },
+  "resources": {
+    "samples": 179,
+    "peak_gpu_used": 4763783168,
+    "min_host_available": 7024128000,
+    "peak_rss": 9369878528,
+    "passed": true,
+    "error": null
+  },
+  "source_commit": "edba1e0969f87c5a94c9c73034f733ded33bee0e",
+  "decision": "stop_uniform_long_prefix_expansion",
+  "full_suite_launched": false,
+  "native_admission_evaluated": false,
+  "capacity_claim": false,
+  "scored_peak_gpu_bytes": {
+    "stream": 4763783168,
+    "packet": 4763783168
+  },
+  "warmup_wall_seconds": {
+    "stream": 5.3748344000050565,
+    "packet": 1.4706360999989556
+  },
+  "cold_worker_entry_to_first_logit_seconds": 17.201395199997933,
+  "full_resident_parameter_bytes": 5303193600,
+  "full_resident_parameter_over_budget_bytes": 270028800,
+  "cpu_first_measured": true,
+  "both_offloaded_controls_fit": true,
+  "unique_access_claim": false,
+  "reference_kind": "dense_contiguous_fp16_stream",
+  "fully_resident_scale_reference_measured": false,
+  "optimized_q4_compared": false,
+  "fp32_quality_evaluated": false,
+  "prefill_traffic_fraction": 0.6892680501937867,
+  "decode_traffic_fraction": 0.033287064446343315,
+  "prefill_wall_ratio": 1.4632952489141824,
+  "decode_wall_ratio": 0.21328359184158824,
+  "prefix_tokens": 512,
+  "maximum_kv_positions": 527,
+  "workload_is_new_holdout": false,
+  "worker_wall_seconds": 44.2829053999958,
+  "analysis_wall_seconds": 5.617648400002508
+}

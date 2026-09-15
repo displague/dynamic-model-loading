@@ -19,27 +19,27 @@ four questions are bounded retention, causal early acquisition, stronger warmed
 precision baselines, and larger sparse-model capacity. Additional follow-ups are
 conditional on distinct hypotheses from the results, not automatic expansions.
 v0.31 and v0.34 used Qwen, NOT OPT/ReLU; their failures do not establish ReLU
-predictor failures. Existing protocols/results stay unchanged. Milestone10 remains
+predictor failures. Existing protocols/results stay unchanged. Milestone 10 remains
 open; no native patch, stock-flag sweep or long matrix follows this authorization.
 
-The [v0.37 retention screen](retention-screen-results.md) completes delivery1 in
-34.209s. All checked logits match exactly;48 scored tokens per condition agree.
-LRU saves46.0365% H2D but takes4.241s versus1.892s packets;192MiB cache is charged.
+The [v0.37 retention screen](retention-screen-results.md) completes delivery 1 in
+34.209 s. All checked logits match exactly; 48 scored tokens per condition agree.
+LRU saves 46.0365% H2D but takes 4.241 s versus 1.892 s packets; 192 MiB cache is charged.
 Faithfulness/resources/acquisition pass, runtime fails. Stop this implementation,
 not the observed reuse question. 639 CPU tests and exact raw replay pass. Only #52
-completes; milestone10 stays open. Next candidate must change acquisition timing
+completes; milestone 10 stays open. Next candidate must change acquisition timing
 or representation, not rerun this LRU on more documents hoping to change its gate.
 
 The next [early-acquisition protocol](early-screen-protocol.md), #53, tests same-
-layer previous-activity packets before fc1 against identical late forecasts and
+layer previous-activity packets before `fc1` against identical late forecasts and
 demand-only packets. Actual observed nonzeros force demand completion; no weight
 cache or permission to omit unknown contributions. Event regions and end-to-end
 latency are separate gates. Frozen three new prefixes, short supervised CUDA only.
 
-The [v0.38 result](early-screen-results.md) completes delivery2 in31.987s. All
-logits exact, but early fetching uses37.1284% more H2D and13.2937% more wall than
-packets; it also loses to identical late forecasts. Event-region overlap94.377%
-is not an economics win. Stop this candidate, preserve646 CPU tests and exact
+The [v0.38 result](early-screen-results.md) completes delivery 2 in 31.987 s. All
+logits exact, but early fetching uses 37.1284% more H2D and 13.2937% more wall than
+packets; it also loses to identical late forecasts. Event-region overlap 94.377%
+is not an economics win. Stop this candidate, preserve 646 CPU tests and exact
 replay, complete only #53. Next separately test lower-precision packet arithmetic
 against strong resident/offloaded controls and then a larger sparse artifact.
 
@@ -49,36 +49,44 @@ resident FP16. Resident speed is an independent gate, expected to favor residenc
 Only a surviving physical/footprint component can nominate a separate short scale
 experiment; no FP32-quality, optimized-Q4, CPU-first or deployment claim is implied.
 
-The [v0.39 result](precision-packet-results.md) completes delivery3 in28.474s.
-Exact FP16 logits/48 tokens per condition; packets save94.4095% H2D/52.2284% wall
-versus direct FP16 streaming. Offloaded footprint is21.5662% below resident FP16,
-but resident is about4x faster and fits. Component gates pass; resident-speed fails.
+The [v0.39 result](precision-packet-results.md) completes delivery 3 in 28.474 s.
+Exact FP16 logits/48 tokens per condition; packets save 94.4095% H2D/52.2284% wall
+versus direct FP16 streaming. Offloaded footprint is 21.5662% below resident FP16,
+but resident is about 4x faster and fits. Component gates pass; resident-speed fails.
 650 CPU tests and exact replays pass. Complete only #54, nominate a new SHORT
-larger sparse-model capacity protocol, and keep milestone10/Q4/native questions open.
+larger sparse-model capacity protocol, and keep milestone 10/Q4/native questions open.
 
 The separately frozen [v0.40 scale protocol](scale-screen-protocol.md) tests original
-OPT2.7B FP16 from CPU-only startup,4800MiB across ALL phases, against contiguous
-dense FP16 streaming. New32-token prefixes/16-token cap, no full-resident GPU
+OPT-2.7B FP16 from CPU-only startup, 4800 MiB across ALL phases, against contiguous
+dense FP16 streaming. New 32-token prefixes/16-token cap, no full-resident GPU
 preload. Both controls may fit; full FP16 parameters alone exceed the allowance.
 Measure latency improvement, not unique access over Q4 (unmeasured). No inference
 has occurred on this artifact at protocol freeze; no long matrix/native admission.
 
-The [v0.40 scale result](scale-screen-results.md) completes delivery4 in34.122s.
-All checked logits exact/48 scored tokens per condition; OPT2.7B packets save
-95.2499% outgoing H2D and64.6241% wall versus contiguous FP16 streaming. CPU-first
-peak4321MiB stays below4800MiB; full resident FP16 parameters alone exceed that
+The [v0.40 scale result](scale-screen-results.md) completes delivery 4 in 34.122 s.
+All checked logits exact/48 scored tokens per condition; OPT-2.7B packets save
+95.2499% outgoing H2D and 64.6241% wall versus contiguous FP16 streaming. CPU-first
+peak 4321 MiB stays below 4800 MiB; full resident FP16 parameters alone exceed that
 budget. BOTH offloaded controls fit: packet improves their acquisition, not unique
-access over streaming or unmeasured Q4. All frozen component gates pass;654 tests
+access over streaming or unmeasured Q4. All frozen component gates pass; 654 tests
 and historical raw replays pass. Close only #55. Four-delivery course complete;
-milestone10 stays open for qualified low-bit competition/context durability and
+milestone 10 stays open for qualified low-bit competition/context durability and
 unmeasured ReLU specialist/ranker variants. No extra matrix or native pivot follows.
 
 The owner then requested continuation within the remaining allowance. The separate
-[v0.41 context-union protocol](context-screen-protocol.md) freezes512-token prefixes
-from concatenated known archived WikiText records,16-token continuations, same
-CPU-first OPT2.7B4800MiB boundary. Prefill and decode gates are separate. Expect
+[v0.41 context-union protocol](context-screen-protocol.md) freezes 512-token prefixes
+from concatenated known archived WikiText records, 16-token continuations, same
+CPU-first OPT-2.7B setup and 4800 MiB boundary. Prefill and decode gates are separate. Expect
 union growth to erode prefill savings even if decode remains efficient. No new
 holdout, hours-scale matrix, optimized-Q4 comparison or native patch is implied.
+
+The [v0.41 context result](context-screen-results.md) completes delivery 5 in 49.901 s.
+Exact logits/48 tokens agree and both controls fit 4800 MiB. Overall packet savings
+92.5714% H2D/62.8169% wall hide failed prefill gates: 68.9268% of stream bytes but
+146.3295% of prefill call time. Decode uses 3.3287% of bytes/21.3284% of call time.
+657 tests/replays pass. Close only #56; stop uniform long-prefix expansion. The
+phase asymmetry supports a separate short dense-prefill/packet-decode hypothesis,
+not a long matrix or a causal 32/512 comparison across different source texts.
 
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.

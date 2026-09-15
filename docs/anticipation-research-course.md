@@ -35,7 +35,7 @@ an unverified omission. Historical protocols and notes remain immutable.
   real feasible low-memory baselines; disclose any missing quantized comparison.
 
 Stock 32B target-only and small-draft results remain practical deployment controls,
-not numerically interchangeable models. ADRs0004--0006 and the baseline .venv stay.
+not numerically interchangeable models. ADRs 0004--0006 and the baseline .venv stay.
 Charge setup, warmups, CPU/GPU scratch, metadata, KV, cache/displaced residency and
 all transfers. Unchanged bytes with lower exposed waiting can be an acquisition
 win; predictor accuracy or a synthetic overlap ceiling cannot be called that win.
@@ -46,13 +46,13 @@ study requires a separately frozen protocol even after a passing short screen.
 
 ## Completed course: v0.37-v0.40
 
-- [v0.37 retention](retention-screen-results.md):46.04% fewer H2D bytes,2.24x wall.
-  Reuse exists; this192MiB LRU implementation loses economics.
-- [v0.38 early acquisition](early-screen-results.md):94.38% event-region overlap,
-  but37.13% more bytes/13.29% more wall than demand packets. Stop this forecast.
-- [v0.39 precision](precision-packet-results.md):FP16 packets save94.41% H2D and
-  52.23% wall versus dense streaming; warm resident FP16 is about4x faster and fits.
-- [v0.40 scale](scale-screen-results.md):CPU-first OPT2.7B FP16 under4800MiB,
+- [v0.37 retention](retention-screen-results.md): 46.04% fewer H2D bytes, 2.24x wall.
+  Reuse exists; this 192 MiB LRU implementation loses economics.
+- [v0.38 early acquisition](early-screen-results.md): 94.38% event-region overlap,
+  but 37.13% more bytes/13.29% more wall than demand packets. Stop this forecast.
+- [v0.39 precision](precision-packet-results.md): FP16 packets save 94.41% H2D and
+  52.23% wall versus dense streaming; warm resident FP16 is about 4x faster and fits.
+- [v0.40 scale](scale-screen-results.md): CPU-first OPT-2.7B FP16 under 4800 MiB,
   95.25% less H2D/64.62% less wall than FP16 streaming, all checked logits exact.
   Both offloaded controls fit; full resident FP16 parameter bytes exceed allowance.
 
@@ -61,8 +61,8 @@ same-precision acquisition result, not optimized-Q4 competitiveness or native
 admission. Stop the failed retention/forecast variants. Leave qualified low-bit
 baselines, context/block-union durability and the genuinely unmeasured ReLU
 specialist/ranker variants open; new studies require new protocols. No additional
-release is fabricated by renaming one of the same failed candidates. Milestone10
-remains open and the practical stock32B comparison is unchanged.
+release is fabricated by renaming one of the same failed candidates. Milestone 10
+remains open and the practical stock 32B comparison is unchanged.
 
 ## Owner-requested continuation within the remaining allowance
 
@@ -72,3 +72,9 @@ surviving larger FP16 acquisition result. It separates prefill union economics
 from scalar decode, uses known archived diagnostic text, and freezes all source/
 selection/gates before one minutes-scale worker. This is not automatic expansion
 of the earlier failed retention/forecast methods or full context validation.
+
+[v0.41 completed](context-screen-results.md): exact outputs and bounded memory,
+but both prefill gates fail while decode/whole-episode gates pass. This permits
+one distinct sixth hypothesis: switch physical acquisition grain by phase, dense
+prefill and observed-row scalar decode. It is unmeasured until separately frozen
+and run; no best-of-historical-time recombination is evidence of speedup.
