@@ -12,7 +12,20 @@ and [implementation amendment](docs/fault-pager-amendment-1.md) freeze the input
 resource accounting and comparisons before measurement. This 1.5B FP32 study does
 not by itself establish a large-model speedup or justify a native implementation.
 
-**New candidate measured:** [resident-base correction acquisition](docs/debt-screen-results.md)
+**Latest research:** [v0.24's Bayesian acquisition screen](docs/bayes-screen-results.md)
+predicts remaining local FFN log-error **30.59% more accurately** than a layer
+mean, but does not establish better acquisition. In **3 minutes 9 seconds**, the
+two-prompt screen finds 8/8 accepted proposals with uniform six bits versus 7/8
+with uncertainty-directed precision; calibrated coverage is 50/56 blocks, below
+90%. Explicit high-precision prefill/KV controls pass their state checks but have
+no acceptance headroom on this subset. [All results and limitations](docs/releases/v0.24.0.md)
+are preserved; no long matrix or native port follows.
+
+```powershell
+.\.venv\Scripts\python.exe -m dynamic_model_loading.bayes_screen --output runs/bayes-screen-<fresh-name>
+```
+
+**Preserved candidate:** [resident-base correction acquisition](docs/debt-screen-results.md)
 computes a packed two-bit FFN base and physically fetches correction pages selected
 by an error estimate updated after each actual correction. Its corrected screen
 finishes in **2 minutes 14 seconds** including analysis. Feedback, fixed selection

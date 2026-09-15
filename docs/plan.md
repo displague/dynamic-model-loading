@@ -115,6 +115,17 @@ credits GP regression/kriging, statistical emulation, conformal calibration and
 PMPD. This is a five-minute prospective screen, not an expansion or native pivot;
 no checkpoint results existed when this protocol was written.
 
+The [completed v0.24 screen](bayes-screen-results.md) finishes in 188.955 seconds
+including analysis. GP log-error MAE improves 30.59% over a layer mean, but upper
+coverage is 50/56 blocks (below 90%). No diagnostic error exceeds the fixed
+acquisition threshold. Uniform six-bit and high-prefill/six-bit drafts both accept
+8/8; calibrated GP and constant-bound acquisition accept 7/8. GP saves only
+0.315% traffic relative to the constant bound, so all four compound gates fail.
+The positive prediction component and test limitations are retained separately.
+Prefix KV fingerprints and exact committed outputs pass; peak extra CUDA is
+993.108 MiB. Issue #39 completes, not the broader milestone. Any next downstream
+sensitivity or hazard-containing subset needs a new prospective short protocol.
+
 ## Historical stock program after v0.12
 
 The queue established after v0.15 was deliberately small: [independent committed-token

@@ -1,0 +1,28 @@
+{
+  "fit_documents": [
+    "wikitext-train-8e1c37980c3d3c28",
+    "wikitext-train-850abe090d258c3c",
+    "wikitext-train-957b54c84eddb069",
+    "wikitext-train-86f97e1be8510bb0",
+    "wikitext-train-3f55ee4b48a5d6dc",
+    "wikitext-train-d0215dcb2d866b47",
+    "wikitext-train-812ca8532e867424",
+    "wikitext-train-b2ae0b90262d65d5"
+  ],
+  "calibration_documents": [
+    "wikitext-train-c755da18f6a10caf",
+    "wikitext-train-e1e2d099ffa04d1f",
+    "wikitext-train-aa16442b777b877f",
+    "wikitext-train-73339a6861563b90",
+    "wikitext-train-1c18fe4009737ace",
+    "wikitext-train-e357d396871d1012",
+    "wikitext-train-13a58d810c4db37e",
+    "wikitext-train-a6bf0ecd12bf9ee0",
+    "wikitext-train-bf37898842725980"
+  ],
+  "gp_sha256": "60a6d5f6f6949a429dcfcea2b7d2486e7d182402dcb04314cd0c78a15d04d68a",
+  "host_model_tensor_bytes": 447328,
+  "host_model_metadata_bytes": 24483,
+  "observation_metadata_bytes": 1788312,
+  "projection_d2h_bytes": 98304
+}
