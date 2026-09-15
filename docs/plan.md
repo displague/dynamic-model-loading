@@ -96,6 +96,16 @@ most 30% extra bytes versus packets, while retaining strong dense-stream gates.
 This is an actual physical policy test, not a sum of favorable historical timings.
 No inference has run for this candidate at protocol freeze.
 
+The [v0.42 phase-switch result](phase-screen-results.md) completes delivery 6 in
+40.671 s. Every gate passes with exact checked logits and 48 tokens per condition.
+Compared with always-packet, phase switching buys 26.1433% more outgoing bytes but
+saves 42.0176% of prefill call time and 21.0303% of episode wall at equal footprint.
+It saves 90.6293% H2D and 63.2498% wall against dense streaming. Recording contributes
+to the gain; the report separates call and other episode intervals without claiming
+trace-free timing. All 662 tests and prior raw replays pass. Complete only #57 and
+stop this course at six deliveries. Milestone 10 stays open for qualified low-bit
+competition, instrumentation controls, broader workloads and unmeasured ReLU variants.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component

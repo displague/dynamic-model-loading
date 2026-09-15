@@ -83,3 +83,13 @@ The [sixth protocol](phase-screen-protocol.md) now freezes that policy and paire
 controls on the same known texts. Its primary gain is latency, with an explicit
 extra-byte ceiling rather than a false claim of saving both time and traffic.
 All memory, output, reference, short-screen and native-pivot boundaries remain.
+
+[v0.42 completed](phase-screen-results.md): the phase switch buys 26.14% more bytes
+than always-packet but saves 42.02% of prefill call time and 21.03% of episode wall,
+with exact checked logits and the same measured footprint. Part of the gain is
+recording overhead; the report preserves that accounting limit. All gates pass.
+
+This course ends at six completed deliveries, not six successful methods. The next
+frontiers are qualified low-bit competition, instrumentation-overhead controls and
+broader workloads/context, plus genuinely unmeasured ReLU specialist/ranker variants.
+They need separate short protocols; no native pivot or long matrix is implied.
