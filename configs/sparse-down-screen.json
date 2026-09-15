@@ -1,0 +1,21 @@
+{
+  "protocol": "docs/sparse-down-screen-protocol.md",
+  "repo": "facebook/opt-1.3b",
+  "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62",
+  "artifact_manifest": "results/relu-control-20260911/run/manifest.json",
+  "artifact_bytes": {"config.json":653,"merges.txt":456318,"pytorch_model.bin":2631639353,"README.md":8824,"special_tokens_map.json":441,"tokenizer_config.json":685,"vocab.json":898822},
+  "page_width": 128,
+  "prefix_tokens": 16,
+  "generation_tokens": 8,
+  "cpu_threads": 4,
+  "worker_timeout_seconds": 300,
+  "gpu_limit_mib": 15000,
+  "host_floor_mib": 2048,
+  "relative_l2_tolerance": 0.00001,
+  "minimum_traffic_saving": 0.1,
+  "minimum_wall_saving": 0.05,
+  "prompts": [
+    "The library kept a small notebook beside the window. Every morning the caretaker wrote the date, checked the shelves, and counted the books that had been returned overnight. On Tuesday the notebook contained a message",
+    "def running_total(values):\n    total = 0\n    for value in values:\n        total += value\n        yield total\n\n# A generator keeps its state between successive calls. The next example shows"
+  ]
+}
