@@ -13,6 +13,15 @@ silently damage quality without causing a residency miss.
 
 ## Primary program after v0.19.2
 
+The owner has authorized four to eight further deliveries beginning v0.37:
+[acquisition lifetime and anticipation](anticipation-research-course.md). The first
+four questions are bounded retention, causal early acquisition, stronger warmed
+precision baselines, and larger sparse-model capacity. Additional follow-ups are
+conditional on distinct hypotheses from the results, not automatic expansions.
+v0.31 and v0.34 used Qwen, NOT OPT/ReLU; their failures do not establish ReLU
+predictor failures. Existing protocols/results stay unchanged. Milestone10 remains
+open; no native patch, stock-flag sweep or long matrix follows this authorization.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component
