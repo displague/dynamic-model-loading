@@ -44,7 +44,7 @@ class RowPacket(SparseDown):
             self.workspace.index_copy_(0,device_ids,device_rows)
         if self.cuda: torch.cuda.synchronize()
         acquisition_finished=time.perf_counter()
-        result=x@self.workspace+self.layers[index].fc2.bias
+        result=self.compute(index,x)
         if self.cuda: torch.cuda.synchronize()
         compute_finished=time.perf_counter()
         d2h=(activity.nbytes+1) if self.cuda else 0
@@ -63,3 +63,9 @@ class RowPacket(SparseDown):
         return dict(super().allocation(),packet_host_bytes=self.packet_host.numel(),
             packet_cuda_bytes=self.packet_device.numel() if self.cuda else 0,
             total_pinned_bytes=self.staging.numel()*4+self.packet_host.numel() if self.cuda else 0)
+
+
+class OriginalRowPacket(RowPacket):
+    """Corrected path preserves the original dense weight layout and bias operator."""
+    def __init__(self,*args,**kwargs):
+        super().__init__(*args,**kwargs,original_layout=True)

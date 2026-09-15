@@ -2,7 +2,7 @@ from types import SimpleNamespace
 import numpy as np
 import pytest
 import torch
-from dynamic_model_loading.row_packet import RowPacket
+from dynamic_model_loading.row_packet import RowPacket, OriginalRowPacket
 from dynamic_model_loading.packet_analysis import audit_pages, decision
 
 
@@ -68,3 +68,16 @@ def test_packet_must_beat_both_controls_including_metadata():
     assert all(decision(controls)['checks'].values())
     controls['packet']['h2d_bytes']=51
     assert not decision(controls)['checks']['Htraffic']
+
+
+@pytest.mark.parametrize('condition',['stream','sparse','packet'])
+def test_original_layout_and_fused_operator_exact_on_tiny_rows(condition):
+    torch.manual_seed(991)
+    ls=[SimpleNamespace(fc2=torch.nn.Linear(9,5)) for _ in range(2)]
+    weights=[l.fc2.weight.detach().clone() for l in ls]
+    bank=OriginalRowPacket(ls,width=2,device='cpu'); bank.begin('corrected',condition)
+    for i,selected in [(1,list(range(9))),(0,[1,4,8]),(1,[])]:
+        x=torch.zeros(2,9); x[:,selected]=3.25
+        expected=torch.nn.functional.linear(x,weights[i],ls[i].fc2.bias)
+        torch.testing.assert_close(ls[i].fc2(x),expected,rtol=0,atol=0)
+    assert bank.workspace.T.is_contiguous() and bank.allocation()['workspace_strides']==[1,9]

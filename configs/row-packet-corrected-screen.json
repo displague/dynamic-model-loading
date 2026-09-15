@@ -1,0 +1,21 @@
+{
+  "protocol": "docs/row-packet-corrected-protocol.md",
+  "repo": "facebook/opt-1.3b",
+  "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62",
+  "artifact_manifest": "results/relu-control-20260911/run/manifest.json",
+  "artifact_bytes": {"config.json":653,"merges.txt":456318,"pytorch_model.bin":2631639353,"README.md":8824,"special_tokens_map.json":441,"tokenizer_config.json":685,"vocab.json":898822},
+  "prefix_tokens": 16,
+  "generation_tokens": 8,
+  "cpu_threads": 4,
+  "worker_timeout_seconds": 300,
+  "gpu_limit_mib": 15000,
+  "host_floor_mib": 2048,
+  "relative_l2_tolerance": 0.00001,
+  "minimum_traffic_saving": 0.5,
+  "minimum_wall_saving": 0.2,
+  "original_workspace_layout": true,
+  "prompts": [
+    "A train arrived at the mountain station before sunrise. The conductor carried a wooden box and a list of names. Nobody on the platform knew why the final name had been crossed out, but the stationmaster",
+    "def unique_in_order(items):\n    seen = set()\n    for item in items:\n        if item not in seen:\n            seen.add(item)\n            yield item\n\n# The set records which values have already appeared."
+  ]
+}

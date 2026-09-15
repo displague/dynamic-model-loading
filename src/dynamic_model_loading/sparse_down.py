@@ -29,12 +29,14 @@ def active_extents(activity, width=128):
 
 class SparseDown:
     """One serialized workspace/staging pair shared by all host-backed fc2 layers."""
-    def __init__(self, layers, record=lambda row:None, width=128, device='cuda'):
+    def __init__(self, layers, record=lambda row:None, width=128, device='cuda',original_layout=False):
         self.layers, self.record, self.width = list(layers), record, width
         if not self.layers or type(width) is not int or width <= 0:
             raise ValueError('Missing layers or invalid width')
         self.device = torch.device(device)
         self.cuda = self.device.type == 'cuda'
+        if type(original_layout) is not bool: raise ValueError('Invalid numerical layout')
+        self.original_layout=original_layout
         self.host = []
         self.original = []
         self.condition = 'stream'
@@ -59,7 +61,8 @@ class SparseDown:
             source.weight.data = packed.T
             self.host.append(packed)
             self.original.append(source.forward)
-        self.workspace = torch.zeros((self.neurons,self.hidden),dtype=torch.float32,device=self.device)
+        self.workspace = (torch.zeros((self.hidden,self.neurons),dtype=torch.float32,device=self.device).T
+            if self.original_layout else torch.zeros((self.neurons,self.hidden),dtype=torch.float32,device=self.device))
         self.staging = torch.empty((self.neurons,self.hidden),dtype=torch.float32,pin_memory=self.cuda)
         for i, layer in enumerate(self.layers):
             layer.fc2.forward = lambda x,i=i:self.forward(i,x)
@@ -104,7 +107,7 @@ class SparseDown:
         if self.cuda:
             torch.cuda.synchronize()
         acquisition_finished = time.perf_counter()
-        result = x @ self.workspace + self.layers[index].fc2.bias
+        result = self.compute(index,x)
         if self.cuda:
             torch.cuda.synchronize()
         compute_finished = time.perf_counter()
@@ -118,6 +121,11 @@ class SparseDown:
             started=started,selection_finished=selection_finished,
             acquisition_finished=acquisition_finished,compute_finished=compute_finished))
         return result
+
+    def compute(self,index,x):
+        if self.original_layout:
+            return torch.nn.functional.linear(x,self.workspace.T,self.layers[index].fc2.bias)
+        return x@self.workspace+self.layers[index].fc2.bias
 
     def restore(self):
         """Restore original dense methods and contiguous device weight layout."""
@@ -133,5 +141,7 @@ class SparseDown:
             workspace_bytes=self.workspace.numel()*self.workspace.element_size(),
             pinned_staging_bytes=self.staging.numel()*self.staging.element_size() if self.cuda else 0,
             construction_d2h_bytes=self.construction_d2h,
+            **(dict(original_workspace_layout=True,weight_workspace_contiguous=self.workspace.T.is_contiguous(),
+                    workspace_strides=list(self.workspace.stride())) if self.original_layout else {}),
             host_weight_aliases=all(layer.fc2.weight.untyped_storage().data_ptr()==a.untyped_storage().data_ptr()
                                   for layer,a in zip(self.layers,self.host,strict=True)))
