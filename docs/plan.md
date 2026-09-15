@@ -21,6 +21,13 @@ headroom from physical acquisition and useful memory limits. The first
 full-vocabulary target agreement before building a new specialist pager. All
 prior negatives, the short-screen rule and native boundary remain unchanged.
 
+The [v0.31 specialist result](specialist-screen-results.md) completes the first
+delivery in 23.417s. Both gates fail: diagnostic full-vocabulary matches are base
+37/48, general 34/48, matching specialist 34/48 and wrong-domain 36/48. Numerical
+controls, exact refit, resource audits and 543 source tests pass. Stop this output-
+head candidate before paging; move to a distinct sparse-architecture protocol.
+Complete only #46; five deliveries and the broader research milestone remain.
+
 On 2026-09-15 the owner authorized the next six bounded research releases on
 information-bearing acquisition. The [course and inspirations](information-research-course.md)
 start with [decision-sensitive physical interventions](decision-field-protocol.md),

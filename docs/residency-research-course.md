@@ -46,3 +46,9 @@ frozen HF draft plus full-vocabulary low-rank output corrections against the pin
 1.5B target. Fresh authored documents and declared domain labels provide a
 controlled prerequisite screen, not an online router or generated acceptance test.
 No physical specialist pager follows a failed specialization gate.
+
+The [v0.31 result](specialist-screen-results.md) fails both gates: base/general/
+matching/wrong-domain diagnostic agreement is 37/34/34/36 out of 48. Training
+improvement does not transfer. Stop this output-only ridge candidate, preserving
+its small-data/loss/representation limitations. Next test sparse architecture and
+causal exact-zero discovery rather than implement acquisition for these heads.

@@ -1,6 +1,12 @@
 # Dynamic model loading
 
-Latest research: [v0.30 physical acquisition result](docs/risk-screen-results.md).
+Latest research: [v0.31 output-specialist prerequisite](docs/specialist-screen-results.md).
+The next six-release course begins with a negative: learned general and domain
+heads each match the target on 34/48 diagnostic positions versus the untouched
+draft's 37/48. No specialist pager follows; sparse architecture is the next distinct
+question. [Course and cited inspirations](docs/residency-research-course.md).
+
+Previous course: [v0.30 physical acquisition result](docs/risk-screen-results.md).
 The six-release course is delivered. A real risk-directed draft runtime preserves
 every committed target output but accepts 14/20 proposals versus fixed's 14/16 and
 all35's 16/16. It spends more bytes per accepted token and loses to all35 on time.

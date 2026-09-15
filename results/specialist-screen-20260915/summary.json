@@ -1,0 +1,149 @@
+{
+  "scores": {
+    "fit": {
+      "positions": 96,
+      "agreement": {
+        "base": 75,
+        "general": 79,
+        "specialist": 78,
+        "wrong_domain": 75
+      },
+      "by_domain": {
+        "code": {
+          "positions": 32,
+          "agreement": {
+            "base": 31,
+            "general": 31,
+            "specialist": 30,
+            "wrong_domain": 31
+          }
+        },
+        "prose": {
+          "positions": 32,
+          "agreement": {
+            "base": 18,
+            "general": 20,
+            "specialist": 22,
+            "wrong_domain": 17
+          }
+        },
+        "math": {
+          "positions": 32,
+          "agreement": {
+            "base": 26,
+            "general": 28,
+            "specialist": 26,
+            "wrong_domain": 27
+          }
+        }
+      }
+    },
+    "diagnostic": {
+      "positions": 48,
+      "agreement": {
+        "base": 37,
+        "general": 34,
+        "specialist": 34,
+        "wrong_domain": 36
+      },
+      "by_domain": {
+        "code": {
+          "positions": 16,
+          "agreement": {
+            "base": 13,
+            "general": 13,
+            "specialist": 12,
+            "wrong_domain": 13
+          }
+        },
+        "prose": {
+          "positions": 16,
+          "agreement": {
+            "base": 14,
+            "general": 11,
+            "specialist": 12,
+            "wrong_domain": 11
+          }
+        },
+        "math": {
+          "positions": 16,
+          "agreement": {
+            "base": 10,
+            "general": 10,
+            "specialist": 10,
+            "wrong_domain": 12
+          }
+        }
+      }
+    }
+  },
+  "gates": {
+    "Hgeneral": false,
+    "Hspecialization": false
+  },
+  "decision": "stop_this_output_specialist_candidate",
+  "generated_acceptance_measured": false,
+  "physical_paging_measured": false,
+  "capacity_measured": false,
+  "native_admission_evaluated": false,
+  "source_commit": "b9be9e0eca90094b94ffe4697a82e9310e545329",
+  "replay_exact": true,
+  "numerical_controls": {
+    "readout": {
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    "repeat_draft": {
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    "repeat_hidden": {
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    "repeat_target": {
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    }
+  },
+  "resources": {
+    "samples": 64,
+    "peak_gpu_used": 8955990016,
+    "min_host_available": 9557946368,
+    "peak_rss": 9446006784,
+    "passed": true,
+    "error": null
+  },
+  "allocation": {
+    "target_parameters_bytes": 6174857216,
+    "draft_parameters_bytes": 1976131072,
+    "target_registered_buffers_bytes": 512,
+    "draft_registered_buffers_bytes": 256,
+    "model_construction_h2d_bytes": 8150989056,
+    "baseline_cuda": {
+      "allocated_bytes": 8152497664,
+      "reserved_bytes": 8378122240,
+      "peak_allocated_bytes": 8152497664,
+      "peak_reserved_bytes": 8378122240
+    },
+    "input_tensor_bytes": 175546368,
+    "bank_fp64_bytes": 82653184,
+    "bank_fp32_equivalent_bytes": 41326592,
+    "projection_fp64_bytes": 114688,
+    "feature_fp64_bytes": 19584,
+    "explicit_data_copies": {
+      "h2d_bytes": 40896,
+      "d2h_bytes": 190160896
+    },
+    "inference_cuda": {
+      "allocated_bytes": 8162095104,
+      "reserved_bytes": 8403288064,
+      "peak_allocated_bytes": 8167445504,
+      "peak_reserved_bytes": 8403288064
+    }
+  },
+  "fit_seconds": 0.417646900001273,
+  "score_seconds": 0.4806895000001532,
+  "worker_wall_seconds": 18.932162600001902,
+  "analysis_wall_seconds": 4.485213900003146
+}
