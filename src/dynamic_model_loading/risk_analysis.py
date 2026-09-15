@@ -50,7 +50,11 @@ def audit_policy(row,index):
     pages=policy['pages']; obs=policy['observations']
     demand(len(pages)==len(obs)==(35 if mode=='all35' else 17) and len(set(pages))==len(pages),'Invalid purchased pages')
     demand(all(type(p) is int and 0<=p<35 for p in pages) and all(math.isfinite(v) for v in obs),'Invalid page observation')
-    if mode=='risk':
+    if mode=='fullrisk':
+        from .vocabulary_risk import audit_trace
+        demand(policy['trace'] is None and policy['full_trace']['pages']==pages,'Full-vocabulary trace differs')
+        audit_trace(policy['full_trace'],index,policy['axis'],obs,row['call'])
+    elif mode=='risk':
         axis=np.asarray(policy['axis'],dtype=np.float64)
         demand(axis.shape==(1536,) and np.isfinite(axis).all(),'Invalid current direction')
         prior=index['vector_prior']@axis
@@ -79,7 +83,7 @@ def audit_policy(row,index):
 
 def audit_calls(rows,rounds,prefix,condition,index):
     journal={0:hashlib.sha256(b'').hexdigest()}; calls=[]; crops=[]; length=0; previous_storage=0
-    copy_bytes=0; max_error=0.; expected_events=[]; acquisition_seconds=0.
+    copy_bytes=0; full_h2d=0; max_error=0.; expected_events=[]; acquisition_seconds=0.
     for row in rows:
         if row['kind']=='crop':
             demand(row['after_call']==len(calls) and row['sha256']==journal.get(row['length']),'Crop journal drift')
@@ -98,7 +102,7 @@ def audit_calls(rows,rounds,prefix,condition,index):
         length+=1; previous_storage=row['draft_kv_storage_bytes']; journal[length]=row['post_sha']
         selected,error=audit_policy(row,index); max_error=max(max_error,error)
         count=0 if row['prefill'] else len(selected)
-        demand(row['axis_d2h_bytes']==(6144 if condition=='risk' and count else 0) and
+        demand(row['axis_d2h_bytes']==(6144 if condition in ('risk','fullrisk') and count else 0) and
             row['observation_d2h_bytes']==4*count and row['readout_scalar_d2h_bytes']==(52 if count else 16) and
             row['inherited_correction_d2h_bytes']==27*(8 if row['prefill'] else 4),'Readback accounting drift')
         demand(math.isfinite(row['wall_seconds']) and row['wall_seconds']>0,'Invalid call time')
@@ -107,6 +111,13 @@ def audit_calls(rows,rounds,prefix,condition,index):
             demand(row['policy']['acquisition_seconds']<=row['wall_seconds'],'Acquisition not contained')
         copy_bytes+=sum(row[k] for k in ('kv_fingerprint_d2h_bytes','axis_d2h_bytes','observation_d2h_bytes',
                                          'readout_scalar_d2h_bytes','inherited_correction_d2h_bytes'))
+        if 'full_vocab_h2d_bytes' in row:
+            full=row['policy']['full_trace'] if count else None
+            demand((full is not None)==(condition=='fullrisk' and count>0),'Unexpected Monte Carlo controller')
+            h2d,d2h=(full['h2d_bytes'],full['d2h_bytes']) if full else (0,0)
+            demand(row['full_vocab_h2d_bytes']==h2d and row['full_vocab_d2h_bytes']==d2h,'Controller copies differ')
+            full_h2d+=h2d; copy_bytes+=d2h
+        elif condition=='fullrisk': raise ValueError('Missing full-vocabulary copy ledger')
         for layer in range(27):
             for stage in range(2 if row['prefill'] else 1): expected_events.append(('layer',call,row['prefill'],[layer,stage],SLAB))
         for page in selected:
@@ -125,6 +136,7 @@ def audit_calls(rows,rounds,prefix,condition,index):
                 next_id=calls[cursor]['next_id']; cursor+=1
     demand(cursor==len(calls) and crops==expected_crops,'Missing/extra calls or crops')
     return dict(calls=len(calls),crops=len(crops),explicit_d2h_bytes=copy_bytes,
+        **(dict(full_vocab_h2d_bytes=full_h2d) if any('full_vocab_h2d_bytes' in r for r in calls) else {}),
         max_pair_error=max_error,expected_events=expected_events,acquisition_seconds=acquisition_seconds,
         call_seconds=sum(r['wall_seconds'] for r in calls))
 
@@ -139,7 +151,7 @@ def screen_decision(conditions,target_seconds):
         beats_resident_target_clock=risk['charged_wall_seconds']<=target_seconds,
         native_admission_evaluated=False,full_suite_launched=False)
 
-def analyze(run):
+def analyze(run,*,config_relative='configs/risk-screen.json',validator=None,gate=None,condition_names=None):
     from safetensors.numpy import load_file
     from .experiment import digest,load_corpus
     from .provenance import verify_snapshot,frozen_environment
@@ -148,10 +160,10 @@ def analyze(run):
     from .output_sensors_analysis import integer_identity,relative
     from .decision_field_analysis import validate_parent_reference
     run=Path(run); supervisor=require_supervisor(run)
-    cfg=json.loads((run/'config.json').read_text()); validate_config(cfg)
+    cfg=json.loads((run/'config.json').read_text()); (validator or validate_config)(cfg)
     manifest=json.loads((run/'manifest.json').read_text()); frozen_environment(manifest['environment'])
     validate_execution(manifest['environment'])
-    verify_snapshot(run,manifest,'configs/risk-screen.json',cfg['protocol'],__file__)
+    verify_snapshot(run,manifest,config_relative,cfg['protocol'],__file__)
     demand(json.loads((run/'completion.json').read_text())==dict(complete=True,cuda_execution=True) and not (run/'failure.json').exists(),'Incomplete worker')
     inventory=json.loads((run/'files.json').read_text())
     demand(set(inventory)=={p.relative_to(run).as_posix() for p in run.rglob('*') if p.is_file()}-{'files.json'},'Raw inventory drift')
@@ -194,14 +206,27 @@ def analyze(run):
         construction['plane_snapshot_d2h_bytes']==10321920,'Setup receipts differ')
     demand(sum(p['wall_seconds'] for p in phases)<=supervisor['worker_wall_seconds'],'Phase time exceeds worker')
     demand(all(p['finished_monotonic']<=q['started_monotonic'] for p,q in zip(phases[:-1],phases[1:])),'Overlapping phase charges')
-    corpus=[r['id'] for r in load_corpus(run/'corpus.jsonl') if r['split']=='diagnostic']; docs=[corpus[i] for i in cfg['diagnostic_indices']]
+    if 'prompts' in cfg:
+        from huggingface_hub import snapshot_download
+        from transformers import AutoTokenizer
+        demand((run/'LICENSE-Qwen.txt').stat().st_size==cfg['license_bytes'] and
+            digest(run/'LICENSE-Qwen.txt')==cfg['license_sha256'],'Pinned license changed')
+        snapshot=Path(snapshot_download('Qwen/Qwen2.5-1.5B-Instruct',revision='989aa7980e4cf806f80c7fef2b1adb7bc71aa306',local_files_only=True))
+        for filename in ('tokenizer.json','tokenizer_config.json','merges.txt','vocab.json'):
+            demand(digest(snapshot/filename)==manifest['checkpoint'][filename]['sha256'],'Tokenizer binding changed')
+        tok=AutoTokenizer.from_pretrained(snapshot,local_files_only=True,trust_remote_code=False)
+        docs=[f'authored-{i}' for i in range(len(cfg['prompts']))]
+        tokens=json.loads((run/'authored-token-ids.json').read_text())
+        demand(tokens=={d:tok.encode(p,add_special_tokens=False) for d,p in zip(docs,cfg['prompts'],strict=True)},'Authored tokenizer replay differs')
+    else:
+        corpus=[r['id'] for r in load_corpus(run/'corpus.jsonl') if r['split']=='diagnostic']; docs=[corpus[i] for i in cfg['diagnostic_indices']]
+        tokens=json.loads((run/'token-ids.json').read_text())
     phase_order=[('model_loading',None,None),('construction',None,None),('mechanics',None,None)]
     for di,doc in enumerate(docs):
         phase_order.append(('target_reference',doc,None))
         phase_order.extend(('episode',None,f'episode-{di}-{condition}') for condition in cfg['conditions'][di])
         phase_order.append(('target_repeat',doc,None))
     demand([(p['phase'],p.get('document'),p.get('episode')) for p in phases]==phase_order,'Phase sequence/document binding drift')
-    tokens=json.loads((run/'token-ids.json').read_text())
     all_events=list(read_rows(run/'pages.jsonl.gz')); expected_events=[]
     for layer in range(27):
         for stage in range(2): expected_events.append(dict(episode='mechanics',call=None,prefill=True,cache='layer',kind='load',token=layer+1,key=[layer,stage],slot=1,bytes=SLAB))
@@ -253,10 +278,10 @@ def analyze(run):
         resource['min_host_available']==min(r['host_available'] for r in samples)>=2048*2**20 and
         resource['peak_rss']==max(r['process']['rss'] for r in samples),'Resource receipt drift')
     conditions={}
-    for condition in ('fixed','risk','all35'):
+    for condition in (condition_names or ('fixed','risk','all35')):
         group=[e for e in episodes if e['condition']==condition]
         accepted=sum(e['accepted'] for e in group); attempted=sum(e['attempted'] for e in group)
-        h2d=sum(e['layer_cache']['h2d_bytes']+e['page_cache']['h2d_bytes'] for e in group)
+        h2d=sum(e['layer_cache']['h2d_bytes']+e['page_cache']['h2d_bytes']+e.get('full_vocab_h2d_bytes',0) for e in group)
         conditions[condition]=dict(accepted=accepted,attempted=attempted,acceptance=accepted/attempted,
             h2d_bytes=h2d,h2d_per_accepted=h2d/accepted if accepted else None,
             charged_wall_seconds=sum(e['charged_wall_seconds'] for e in group),
@@ -266,10 +291,14 @@ def analyze(run):
             generator_h2d_bytes=sum(e['generator_copies']['h2d_bytes'] for e in group),
             generator_d2h_bytes=sum(e['generator_copies']['d2h_bytes'] for e in group),
             explicit_d2h_bytes=sum(e['explicit_d2h_bytes']+e['generator_copies']['d2h_bytes'] for e in group),draft_calls=sum(e['calls'] for e in group))
-    return dict(**screen_decision(conditions,target_seconds),conditions=conditions,episodes=episodes,reference_ids=references,
+        if condition_names is not None:
+            conditions[condition]['charged_h2d_bytes']=h2d+conditions[condition]['generator_h2d_bytes']
+            conditions[condition]['charged_h2d_per_accepted']=conditions[condition]['charged_h2d_bytes']/accepted if accepted else None
+    return dict(**(gate or screen_decision)(conditions,target_seconds),conditions=conditions,episodes=episodes,reference_ids=references,
         target_reference_best_sum_seconds=target_seconds,maximum_pair_error=max(e['max_pair_error'] for e in episodes),
         all_committed_outputs_match=True,mechanics_max_relative_l2=max(errors),allocation=a,resource=resource,
         extra_cuda_peak_bytes=peak,worker_page_payload_h2d_bytes=sum(r['bytes'] for r in all_events),
         construction_h2d_bytes=construction['construction_h2d_bytes'],source_commit=manifest['source_commit'],
         new_cuda_inference=True,full_argmax_readouts_used=True,predictor_fit_reused=True,
-        new_to_this_course_document_indices=cfg['diagnostic_indices'],capacity_frontier_tested=False)
+        **(dict(authored_document_ids=docs) if 'prompts' in cfg else dict(new_to_this_course_document_indices=cfg['diagnostic_indices'])),
+        capacity_frontier_tested=False)

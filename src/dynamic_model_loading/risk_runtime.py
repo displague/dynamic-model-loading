@@ -20,9 +20,10 @@ class KVJournal:
 
 
 class RiskReadout:
-    def __init__(self,model,pager,index,record,context,*,budget=17,prefill_tokens=4):
+    def __init__(self,model,pager,index,record,context,*,budget=17,prefill_tokens=4,full_vocabulary=False):
         self.model,self.pager,self.index,self.record,self.context=model,pager,index,record,context
         self.budget,self.prefill_tokens=budget,prefill_tokens
+        self.full_vocabulary=full_vocabulary
         if not 0<budget<=pager.count or prefill_tokens<1: raise ValueError('Invalid runtime budget/prefill')
         self.width=model.config.hidden_size
         self.original=model.forward
@@ -36,7 +37,8 @@ class RiskReadout:
         self.reset('fixed')
 
     def reset(self,condition):
-        if condition not in ('fixed','risk','all35'): raise ValueError('Unknown physical condition')
+        allowed=('fixed','risk','all35','fullrisk') if self.full_vocabulary else ('fixed','risk','all35')
+        if condition not in allowed: raise ValueError('Unknown physical condition')
         self.condition=condition; self.calls=0; self.pager.reset(); self.pending=self.pager.pending
         self.journal.reset(); self.captured.clear(); self.last_cache=None
 
@@ -58,7 +60,7 @@ class RiskReadout:
         post,size2=fingerprint(cache,length+1)
         if before!=prior_after or cache.get_seq_length()!=length+1:
             raise ValueError('Appending token changed prior KV')
-        policy=None; axis_bytes=0; scalar_bytes=0; readout_bytes=16
+        policy=None; axis_bytes=0; scalar_bytes=0; readout_bytes=16; full_trace=None
         if not self.pager.prefill:
             h=self.captured['h'].flatten(); residual=self.captured['residual']
             top=result.logits[0,-1].topk(2).indices.tolist()
@@ -81,7 +83,21 @@ class RiskReadout:
                 return value
             controller_started=time.perf_counter()
             axis_cpu=None
-            if self.condition=='risk':
+            if self.condition=='fullrisk':
+                from .vocabulary_risk import acquire as acquire_vocabulary
+                axis_cpu=axis.cpu().numpy().astype(np.float64)
+                axis_bytes=self.width*4
+                def observe_vector(page):
+                    nonlocal observation_seconds
+                    probe_started=time.perf_counter()
+                    delta=self.pager.acquire(int(page)).flatten()
+                    observations.append(float((axis*delta).sum().item()))
+                    observation_seconds+=time.perf_counter()-probe_started
+                    return delta
+                full_trace=acquire_vocabulary(self.index,h,self.model.model.norm.weight,
+                    self.model.lm_head,observe_vector,seed=20260918+self.calls,budget=self.budget)
+                selected=full_trace['pages']; trace=None
+            elif self.condition=='risk':
                 axis_cpu=axis.cpu().numpy().astype(np.float64)
                 axis_bytes=self.width*4
                 prior=self.index['vector_prior']@axis_cpu
@@ -108,6 +124,7 @@ class RiskReadout:
                 base_rms=base_rms,final_rms=final_rms,base_ids=[u,v],
                 acquisition_seconds=acquisition_seconds,observation_seconds=observation_seconds,
                 nonprobe_acquisition_seconds=acquisition_seconds-observation_seconds,
+                **(dict(full_trace=full_trace) if self.full_vocabulary else {}),
                 trace=None if trace is None else {k:a.tolist() for k,a in trace.items()})
         after,size3=fingerprint(cache,length+1)
         if after!=post: raise ValueError('Readout refinement changed KV')
@@ -121,6 +138,8 @@ class RiskReadout:
             draft_kv_logical_bytes=kv_bytes(cache),draft_kv_storage_bytes=kv_storage_bytes(cache),
             axis_d2h_bytes=axis_bytes,observation_d2h_bytes=scalar_bytes,
             readout_scalar_d2h_bytes=readout_bytes,
+            **(dict(full_vocab_h2d_bytes=0 if full_trace is None else full_trace['h2d_bytes'],
+                    full_vocab_d2h_bytes=0 if full_trace is None else full_trace['d2h_bytes']) if self.full_vocabulary else {}),
             inherited_correction_d2h_bytes=(len(self.pager.layers)-1)*(8 if self.pager.prefill else 4),policy=policy,
             wall_seconds=time.perf_counter()-started))
         self.last_cache=cache
@@ -137,3 +156,8 @@ class RiskReadout:
         self.model.forward=self.original
         for hook in self.hooks: hook.remove()
         self.captured.clear(); self.last_cache=None
+
+
+class VocabularyReadout(RiskReadout):
+    def __init__(self,*args,**kwargs):
+        super().__init__(*args,**kwargs,full_vocabulary=True)

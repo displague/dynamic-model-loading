@@ -15,17 +15,20 @@ FROZEN.update(protocol='docs/risk-screen-protocol.md',diagnostic_indices=[2,3],g
 def validate_config(cfg):
     if cfg!=FROZEN: raise ValueError('Physical risk-screen freeze changed')
 
-def bundle(output):
+def bundle(output,*,config_path=CONFIG,validator=validate_config,source_file=__file__):
     import torch
     from huggingface_hub import snapshot_download
     from .experiment import digest,environment,load_corpus
     from .provenance import committed_inputs,frozen_environment
-    cfg=json.loads(CONFIG.read_text()); validate_config(cfg)
-    provenance,protocol=committed_inputs(__file__,CONFIG,cfg['protocol'])
+    cfg=json.loads(Path(config_path).read_text()); validator(cfg)
+    provenance,protocol=committed_inputs(source_file,config_path,cfg['protocol'])
+    if 'prompts' in cfg:
+        from .numpy_backend import set_blas_threads
+        provenance['numpy_blas']=set_blas_threads(4)
     if provenance['source_commit']!=subprocess.check_output(['git','rev-parse','origin/main'],cwd=ROOT,text=True).strip():
         raise ValueError('Push source before checkpoint inference')
     output.mkdir(parents=True,exist_ok=False)
-    shutil.copyfile(CONFIG,output/'config.json'); shutil.copyfile(protocol,output/'protocol.md')
+    shutil.copyfile(config_path,output/'config.json'); shutil.copyfile(protocol,output/'protocol.md')
     shutil.copytree(Path(__file__).parent,output/'source',ignore=shutil.ignore_patterns('__pycache__'))
     parent,rep=ROOT/cfg['parent'],ROOT/cfg['representation_parent']
     for name,key in [('token-ids.json','tokens_sha256'),('corpus.jsonl','corpus_sha256')]:
@@ -54,10 +57,25 @@ def bundle(output):
             raise ValueError('Checkpoint changed')
     shutil.copyfile(parent_manifest,output/'parent-manifest.json')
     write(output/'manifest.json',dict(**provenance,environment=env,checkpoint=checkpoint))
+    if 'prompts' in cfg:
+        from transformers import AutoTokenizer
+        if (snapshot/'LICENSE').stat().st_size!=cfg['license_bytes'] or digest(snapshot/'LICENSE')!=cfg['license_sha256']:
+            raise ValueError('Pinned Qwen license changed')
+        shutil.copyfile(snapshot/'LICENSE',output/'LICENSE-Qwen.txt')
+        write(output/'NOTICE.json',dict(model='Qwen/Qwen2.5-1.5B-Instruct',
+            revision='989aa7980e4cf806f80c7fef2b1adb7bc71aa306',
+            changes='Experimental quantized representations, acquired corrections and observations; full HF weights external.',
+            corpus='Parent corpus archived only for provenance; inference uses the new authored config prompts.'))
+        tokenizer=AutoTokenizer.from_pretrained(snapshot,local_files_only=True,trust_remote_code=False)
+        docs=[f'authored-{i}' for i in range(len(cfg['prompts']))]
+        tokens={d:tokenizer.encode(p,add_special_tokens=False) for d,p in zip(docs,cfg['prompts'],strict=True)}
+        if any(len(t)<4 for t in tokens.values()): raise ValueError('Short authored prompt')
+        write(output/'authored-token-ids.json',tokens)
+        return snapshot,rep,docs,tokens
     docs=[r['id'] for r in load_corpus(output/'corpus.jsonl') if r['split']=='diagnostic']
     return snapshot,rep,[docs[i] for i in cfg['diagnostic_indices']],json.loads((output/'token-ids.json').read_text())
 
-def worker(output):
+def worker(output,*,bundle_fn=bundle,conditions=None,runtime_class=None):
     import torch
     import numpy as np
     from safetensors.torch import load_file,save_file
@@ -72,7 +90,7 @@ def worker(output):
     from .metrics import relative_l2
     from .output_pages import OutputPageDraft
     from .risk_runtime import RiskReadout
-    snapshot,rep,docs,tokens=bundle(output)
+    snapshot,rep,docs,tokens=bundle_fn(output)
     pages=Ledger(output/'pages.jsonl.gz',True); phases=Ledger(output/'phases.jsonl')
     context={}; runtime=None
     try:
@@ -137,11 +155,11 @@ def worker(output):
                 started=time.perf_counter(); reference=generate(target,prefix,[151643,151645],cap=8,check=resources.check,copy_receipt=True)
                 write(output/f'reference-{di}.json',dict(document=doc,**reference))
                 phase('target_reference',started,document=doc,prefix_h2d_bytes=32)
-                for condition in FROZEN['conditions'][di]:
+                for condition in (conditions or FROZEN['conditions'])[di]:
                     name=f'episode-{di}-{condition}'; folder=output/name; folder.mkdir()
                     calls=Ledger(folder/'calls.jsonl.gz',True); rounds=Ledger(folder/'rounds.jsonl')
                     context.update(episode=name,call=None,prefill=None)
-                    runtime=RiskReadout(draft,pager,index,lambda r:(calls.record(r),calls.flush()),context)
+                    runtime=(runtime_class or RiskReadout)(draft,pager,index,lambda r:(calls.record(r),calls.flush()),context)
                     runtime.reset(condition)
                     started=time.perf_counter()
                     try:

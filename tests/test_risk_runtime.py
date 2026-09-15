@@ -5,7 +5,7 @@ import torch
 from dynamic_model_loading.adapters import extract_ffns
 from dynamic_model_loading.output_pages import OutputPageDraft
 from dynamic_model_loading.fault_generation import generate
-from dynamic_model_loading.risk_runtime import RiskReadout,KVJournal
+from dynamic_model_loading.risk_runtime import RiskReadout,VocabularyReadout,KVJournal
 from dynamic_model_loading.risk_screen import CONFIG,FROZEN,validate_config
 from dynamic_model_loading.risk_analysis import screen_decision
 from test_progressive_precision import tiny_model
@@ -26,7 +26,7 @@ def test_journal_rejects_stale_rejected_suffix():
     with pytest.raises(ValueError): journal.before(1,'c'*64)
 
 
-@pytest.mark.parametrize('condition',['fixed','risk','all35'])
+@pytest.mark.parametrize('condition',['fixed','risk','all35','fullrisk'])
 @pytest.mark.parametrize('force_reject',[False,True])
 def test_physical_readout_generator_with_real_tiny_model(condition,force_reject):
     target=tiny_model(); draft=copy.deepcopy(target)
@@ -36,7 +36,7 @@ def test_physical_readout_generator_with_real_tiny_model(condition,force_reject)
     index=dict(vector_prior=np.zeros((4,16)),vector_covariance=np.eye(4),feature_variance=np.ones(16))
     rows=[]; rounds=[]; events=[]
     pager.page_cache.sink=events.append
-    runtime=RiskReadout(draft,pager,index,rows.append,{},budget=2)
+    runtime=(VocabularyReadout if condition=='fullrisk' else RiskReadout)(draft,pager,index,rows.append,{},budget=2)
     runtime.reset(condition)
     prefix=torch.tensor([[1,2,3,4]])
     try:
