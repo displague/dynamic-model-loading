@@ -1,5 +1,10 @@
 # Dynamic model loading
 
+Latest research: [v0.27 spatial page-field result](docs/spatial-screen-results.md).
+An11.5-second screen finds negligible predictive transfer (0.049% MSE reduction),
+worse than shuffled geometry. This static-field candidate stops; temporal
+decision-sensitive estimation is a new hypothesis, not an achieved loader.
+
 Research into novel weight-acquisition mechanisms for inference under smaller
 memory budgets. Stock llama.cpp configurations are practical baselines, not the
 project’s research objective.

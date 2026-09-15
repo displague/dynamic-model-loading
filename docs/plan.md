@@ -52,6 +52,12 @@ page effects with independent and shuffled-correlation controls. Score unobserve
 sites only; one observation is primary, four descriptive. This CPU-only component
 screen does not measure an online policy, accepted tokens or new traffic savings.
 
+The [v0.27 result](spatial-screen-results.md) stops that static field in11.465s:
+primary diagnostic MSE improves only0.049%, loses to shuffled geometry, and
+four probes worsen error0.966%. Hspatial fails; source/474-test validation and
+exact replay pass. Complete only #42. A different temporal/decision-coordinate
+hypothesis requires a fresh protocol; do not tune away this negative.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research
