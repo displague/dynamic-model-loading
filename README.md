@@ -1,6 +1,11 @@
 # Dynamic model loading
 
-Latest research: [v0.32 physical exact-zero loading](docs/sparse-down-screen-results.md).
+Latest research: [v0.33 compact active-row packets](docs/row-packet-screen-results.md).
+The corrected screen passes: 93.65% fewer weight-plus-index bytes and 69.36% lower
+wall time than streaming, with exact checked logits. Fully resident remains faster;
+capacity/native claims remain open. The first numerical failure is preserved.
+
+Second delivery: [v0.32 physical exact-zero loading](docs/sparse-down-screen-results.md).
 Actual outgoing-weight traffic falls 14.44%; wall time falls 4.90%, narrowly missing
 the frozen 5% gate. Outputs match. Next: compact row packets instead of fragmented
 128-row extents; no longer suite or capacity claim follows this result.

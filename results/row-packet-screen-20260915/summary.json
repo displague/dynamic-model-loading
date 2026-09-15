@@ -1,0 +1,186 @@
+{
+  "source_commit": "03e1414686b1a5bbf1ca05c2312732b3ee64c5f8",
+  "conditions": {
+    "resident": {
+      "tokens": 16,
+      "wall_seconds": 0.7624843999983568,
+      "ttft_seconds": 0.6185894000009284,
+      "h2d_bytes": 0,
+      "d2h_bytes": 0,
+      "extents": 0,
+      "prefill_bytes": 0,
+      "decode_bytes": 0,
+      "active_neurons": 0,
+      "observed_neurons": 0,
+      "metadata_h2d_bytes": 0
+    },
+    "stream": {
+      "tokens": 16,
+      "wall_seconds": 2.1428708999992523,
+      "ttft_seconds": 0.2818033000003197,
+      "h2d_bytes": 25769803776,
+      "d2h_bytes": 0,
+      "extents": 384,
+      "prefill_bytes": 3221225472,
+      "decode_bytes": 22548578304,
+      "active_neurons": 0,
+      "observed_neurons": 0,
+      "metadata_h2d_bytes": 0
+    },
+    "sparse": {
+      "tokens": 16,
+      "wall_seconds": 2.0885622999994666,
+      "ttft_seconds": 0.3470119000012346,
+      "h2d_bytes": 22376611840,
+      "d2h_bytes": 9044352,
+      "extents": 2178,
+      "prefill_bytes": 3220176896,
+      "decode_bytes": 19156434944,
+      "active_neurons": 367698,
+      "observed_neurons": 9043968,
+      "metadata_h2d_bytes": 0
+    },
+    "packet": {
+      "tokens": 16,
+      "wall_seconds": 0.6565153000010469,
+      "ttft_seconds": 0.21229840000160038,
+      "h2d_bytes": 1635580200,
+      "d2h_bytes": 9044352,
+      "extents": 384,
+      "prefill_bytes": 757171600,
+      "decode_bytes": 878408600,
+      "active_neurons": 367698,
+      "observed_neurons": 9043968,
+      "metadata_h2d_bytes": 1595688
+    },
+    "repeat": {
+      "tokens": 16,
+      "wall_seconds": 0.16854479999892646,
+      "ttft_seconds": 0.03390240000226186,
+      "h2d_bytes": 0,
+      "d2h_bytes": 0,
+      "extents": 0,
+      "prefill_bytes": 0,
+      "decode_bytes": 0,
+      "active_neurons": 0,
+      "observed_neurons": 0,
+      "metadata_h2d_bytes": 0
+    }
+  },
+  "controls": [
+    {
+      "episode": "episode-2",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-3",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-4",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-5",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-6",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-7",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-8",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-9",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    }
+  ],
+  "allocation": {
+    "parameters_bytes": 5263032320,
+    "registered_buffers_bytes": 0,
+    "construction_h2d_bytes": 5263032320,
+    "resident_cuda": {
+      "allocated_bytes": 5263032320,
+      "reserved_bytes": 5268045824,
+      "peak_allocated_bytes": 5263032320,
+      "peak_reserved_bytes": 5268045824
+    },
+    "host_down_bytes": 1610612736,
+    "workspace_bytes": 67108864,
+    "pinned_staging_bytes": 67108864,
+    "construction_d2h_bytes": 1610612736,
+    "original_workspace_layout": true,
+    "weight_workspace_contiguous": true,
+    "workspace_strides": [
+      1,
+      8192
+    ],
+    "host_weight_aliases": true,
+    "packet_host_bytes": 67174400,
+    "packet_cuda_bytes": 67174400,
+    "total_pinned_bytes": 134283264,
+    "conversion_seconds": 0.6782674999994924,
+    "hybrid_cuda_parameters_bytes": 3652419584,
+    "hybrid_cuda": {
+      "allocated_bytes": 3796271104,
+      "reserved_bytes": 5435817984,
+      "peak_allocated_bytes": 5339709440,
+      "peak_reserved_bytes": 5435817984
+    },
+    "restore_h2d_bytes": 1610612736,
+    "restore_seconds": 0.49972820000039064,
+    "restore_cuda": {
+      "allocated_bytes": 5406883840,
+      "reserved_bytes": 5437915136,
+      "peak_allocated_bytes": 5406883840,
+      "peak_reserved_bytes": 5437915136
+    }
+  },
+  "episode_explicit_copies": {
+    "h2d_bytes": 49781997656,
+    "d2h_bytes": 34177584
+  },
+  "resources": {
+    "samples": 68,
+    "peak_gpu_used": 5990617088,
+    "min_host_available": 9807609856,
+    "peak_rss": 9047523328,
+    "passed": true,
+    "error": null
+  },
+  "max_kv_bytes": 9043968,
+  "all_output_ids_match": true,
+  "checks": {
+    "Htraffic": true,
+    "Hruntime": true
+  },
+  "savings": {
+    "stream": {
+      "h2d": 0.9365311348810792,
+      "wall": 0.6936281602399492
+    },
+    "sparse": {
+      "h2d": 0.9269067090364294,
+      "wall": 0.6856616151688583
+    }
+  },
+  "decision": "eligible_for_separately_frozen_followup",
+  "full_suite_launched": false,
+  "native_admission_evaluated": false,
+  "worker_wall_seconds": 19.11077010000008,
+  "analysis_wall_seconds": 6.0657953000009
+}

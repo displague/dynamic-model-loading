@@ -62,3 +62,14 @@ do not survive 128-row physical granularity or the prefill union as equivalent b
 savings. The next distinct candidate compacts active rows into one packet rather
 than many extent copies, charging gather/metadata/scatter. No threshold change or
 longer matrix; startup and retained allocator reservation remain capacity caveats.
+
+## Third delivery
+
+[v0.33](row-packet-screen-results.md) passes after a prospective numerical-layout
+correction: exact-active-row packet traffic falls93.65% and wall69.36% vs streaming,
+also beating the128-row control. All checked logits match exactly. The first failed
+attempt is preserved; prompts/gates unchanged. Packetization and gathers are known
+techniques; the tested contribution is their outgoing-only physical acquisition
+application. This does not outperform the fully resident model or establish a
+capacity frontier. Three releases remain, with accepted-prefix risk and useful
+bounded capacity to receive separate protocols. No long matrix or native admission.

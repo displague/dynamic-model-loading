@@ -84,3 +84,11 @@
   tiny threshold miss as statistical impossibility. Next change transport/grain to
   compact active-row packets; charge gather, indices, scatter, staging and setup.
   Initial resident loading and allocator reservation forbid a capacity claim here.
+
+- 2026-09-15: Issue #48 changes physical grain/transport to exact-active-row
+  packets, not the selector. Preserve initial numerical failure; a reviewed fresh
+  correction uses original weight layout and F.linear in all conditions without
+  changing prompts/gates. v0.33 passes93.65% H2D/69.36% wall savings vs streaming,
+  exact checked logits; 579 tests. Nominate only a short follow-up. Native and
+  hard-budget capacity remain unqualified; stronger streaming/precision baselines
+  are still necessary. Accepted-prefix risk is a separate remaining course item.

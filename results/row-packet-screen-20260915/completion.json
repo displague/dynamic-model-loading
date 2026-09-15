@@ -1,0 +1,13 @@
+{
+  "complete": true,
+  "worker_inner_seconds": 13.867225900001358,
+  "resources": {
+    "samples": 68,
+    "peak_gpu_used": 5990617088,
+    "min_host_available": 9807609856,
+    "peak_rss": 9047523328,
+    "passed": true,
+    "error": null
+  },
+  "full_suite_launched": false
+}

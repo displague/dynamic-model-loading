@@ -1,0 +1,352 @@
+[
+  {
+    "episode": "episode-0",
+    "document": 0,
+    "condition": "resident",
+    "ids": [
+      19,
+      10,
+      650,
+      6,
+      1062,
+      6,
+      4204,
+      13431
+    ],
+    "stop_reason": "length",
+    "started": 21736.2094622,
+    "finished": 21736.8861796,
+    "wall_seconds": 0.6767173999978695,
+    "ttft_seconds": 0.6007681999981287,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 0,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "metadata_h2d_bytes": 0,
+    "load_extents": 0,
+    "cuda": {
+      "allocated_bytes": 5281645056,
+      "reserved_bytes": 5299503104,
+      "peak_allocated_bytes": 5282241024,
+      "peak_reserved_bytes": 5299503104
+    }
+  },
+  {
+    "episode": "episode-1",
+    "document": 1,
+    "condition": "resident",
+    "ids": [
+      1215,
+      36907,
+      1640,
+      46740,
+      43,
+      50118,
+      1437,
+      1437
+    ],
+    "stop_reason": "length",
+    "started": 21736.8879703,
+    "finished": 21736.9737373,
+    "wall_seconds": 0.08576700000048731,
+    "ttft_seconds": 0.017821200002799742,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 0,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "metadata_h2d_bytes": 0,
+    "load_extents": 0,
+    "cuda": {
+      "allocated_bytes": 5281645056,
+      "reserved_bytes": 5299503104,
+      "peak_allocated_bytes": 5282241024,
+      "peak_reserved_bytes": 5299503104
+    }
+  },
+  {
+    "episode": "episode-2",
+    "document": 0,
+    "condition": "stream",
+    "ids": [
+      19,
+      10,
+      650,
+      6,
+      1062,
+      6,
+      4204,
+      13431
+    ],
+    "stop_reason": "length",
+    "started": 21737.654532,
+    "finished": 21738.7325117,
+    "wall_seconds": 1.0779796999995597,
+    "ttft_seconds": 0.14226380000036443,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 12884901888,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "metadata_h2d_bytes": 0,
+    "load_extents": 192,
+    "cuda": {
+      "allocated_bytes": 3805315584,
+      "reserved_bytes": 5435817984,
+      "peak_allocated_bytes": 3872491008,
+      "peak_reserved_bytes": 5435817984
+    }
+  },
+  {
+    "episode": "episode-3",
+    "document": 0,
+    "condition": "sparse",
+    "ids": [
+      19,
+      10,
+      650,
+      6,
+      1062,
+      6,
+      4204,
+      13431
+    ],
+    "stop_reason": "length",
+    "started": 21738.7418221,
+    "finished": 21739.8089843,
+    "wall_seconds": 1.0671622000008938,
+    "ttft_seconds": 0.19768420000036713,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 11034165248,
+    "raw_tensor_bytes": 2173952,
+    "activity_d2h_bytes": 4522176,
+    "metadata_h2d_bytes": 0,
+    "load_extents": 1093,
+    "cuda": {
+      "allocated_bytes": 3805315584,
+      "reserved_bytes": 5437915136,
+      "peak_allocated_bytes": 3872491008,
+      "peak_reserved_bytes": 5437915136
+    }
+  },
+  {
+    "episode": "episode-4",
+    "document": 0,
+    "condition": "packet",
+    "ids": [
+      19,
+      10,
+      650,
+      6,
+      1062,
+      6,
+      4204,
+      13431
+    ],
+    "stop_reason": "length",
+    "started": 21739.8181988,
+    "finished": 21740.2036068,
+    "wall_seconds": 0.38540800000191666,
+    "ttft_seconds": 0.15573950000180048,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 871391232,
+    "raw_tensor_bytes": 2173952,
+    "activity_d2h_bytes": 4522176,
+    "metadata_h2d_bytes": 850968,
+    "load_extents": 192,
+    "cuda": {
+      "allocated_bytes": 3805315584,
+      "reserved_bytes": 5437915136,
+      "peak_allocated_bytes": 3805911552,
+      "peak_reserved_bytes": 5437915136
+    }
+  },
+  {
+    "episode": "episode-5",
+    "document": 1,
+    "condition": "packet",
+    "ids": [
+      1215,
+      36907,
+      1640,
+      46740,
+      43,
+      50118,
+      1437,
+      1437
+    ],
+    "stop_reason": "length",
+    "started": 21740.2120952,
+    "finished": 21740.4832025,
+    "wall_seconds": 0.2711072999991302,
+    "ttft_seconds": 0.056558899999799905,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 762593280,
+    "raw_tensor_bytes": 2173952,
+    "activity_d2h_bytes": 4522176,
+    "metadata_h2d_bytes": 744720,
+    "load_extents": 192,
+    "cuda": {
+      "allocated_bytes": 3805315584,
+      "reserved_bytes": 5437915136,
+      "peak_allocated_bytes": 3805911552,
+      "peak_reserved_bytes": 5437915136
+    }
+  },
+  {
+    "episode": "episode-6",
+    "document": 1,
+    "condition": "sparse",
+    "ids": [
+      1215,
+      36907,
+      1640,
+      46740,
+      43,
+      50118,
+      1437,
+      1437
+    ],
+    "stop_reason": "length",
+    "started": 21740.4914394,
+    "finished": 21741.5128395,
+    "wall_seconds": 1.0214000999985728,
+    "ttft_seconds": 0.14932770000086748,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 11342446592,
+    "raw_tensor_bytes": 2173952,
+    "activity_d2h_bytes": 4522176,
+    "metadata_h2d_bytes": 0,
+    "load_extents": 1085,
+    "cuda": {
+      "allocated_bytes": 3805315584,
+      "reserved_bytes": 5437915136,
+      "peak_allocated_bytes": 3872474624,
+      "peak_reserved_bytes": 5437915136
+    }
+  },
+  {
+    "episode": "episode-7",
+    "document": 1,
+    "condition": "stream",
+    "ids": [
+      1215,
+      36907,
+      1640,
+      46740,
+      43,
+      50118,
+      1437,
+      1437
+    ],
+    "stop_reason": "length",
+    "started": 21741.5207915,
+    "finished": 21742.5856827,
+    "wall_seconds": 1.0648911999996926,
+    "ttft_seconds": 0.1395394999999553,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 12884901888,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "metadata_h2d_bytes": 0,
+    "load_extents": 192,
+    "cuda": {
+      "allocated_bytes": 3805315584,
+      "reserved_bytes": 5437915136,
+      "peak_allocated_bytes": 3872491008,
+      "peak_reserved_bytes": 5437915136
+    }
+  },
+  {
+    "episode": "episode-8",
+    "document": 0,
+    "condition": "repeat",
+    "ids": [
+      19,
+      10,
+      650,
+      6,
+      1062,
+      6,
+      4204,
+      13431
+    ],
+    "stop_reason": "length",
+    "started": 21743.0936204,
+    "finished": 21743.1780749,
+    "wall_seconds": 0.08445449999999255,
+    "ttft_seconds": 0.017058600002201274,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 0,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "metadata_h2d_bytes": 0,
+    "load_extents": 0,
+    "cuda": {
+      "allocated_bytes": 5415928320,
+      "reserved_bytes": 5437915136,
+      "peak_allocated_bytes": 5416524288,
+      "peak_reserved_bytes": 5437915136
+    }
+  },
+  {
+    "episode": "episode-9",
+    "document": 1,
+    "condition": "repeat",
+    "ids": [
+      1215,
+      36907,
+      1640,
+      46740,
+      43,
+      50118,
+      1437,
+      1437
+    ],
+    "stop_reason": "length",
+    "started": 21743.1860123,
+    "finished": 21743.2701026,
+    "wall_seconds": 0.08409029999893392,
+    "ttft_seconds": 0.016843800000060583,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 0,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "metadata_h2d_bytes": 0,
+    "load_extents": 0,
+    "cuda": {
+      "allocated_bytes": 5415928320,
+      "reserved_bytes": 5437915136,
+      "peak_allocated_bytes": 5416524288,
+      "peak_reserved_bytes": 5437915136
+    }
+  }
+]

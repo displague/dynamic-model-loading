@@ -36,6 +36,16 @@ change transport/grain to compact active-row packets, under a new short protocol
 current startup/reserved memory does not establish a hard-budget capacity frontier.
 Complete only #47; four deliveries and milestone 10 remain open.
 
+The [v0.33 packet result](row-packet-screen-results.md) completes delivery three.
+Corrected exact-active-row packets pass50% byte/20% wall gates against BOTH controls:
+93.65% fewer H2D bytes and69.36% lower wall than streaming, all checked logits exact.
+First numerical failure remains archived; correction restores original arithmetic
+without changing prompts/gates. 579 CPU tests and exact raw replay pass. Nominate
+packet transport for separately frozen capacity/stress work; fully resident remains
+faster and startup/reservation still invalidate a hard-budget capacity claim.
+Only #48 completes; three deliveries and milestone10 remain open. Accepted-prefix
+risk remains a separate pending question, not answered by a non-speculative loader.
+
 On 2026-09-15 the owner authorized the next six bounded research releases on
 information-bearing acquisition. The [course and inspirations](information-research-course.md)
 start with [decision-sensitive physical interventions](decision-field-protocol.md),
