@@ -106,6 +106,15 @@ Bounded issue #38 completes while the broader program remains open. No long
 matrix or native change follows; further uncertainty or prefill hypotheses need
 their own causal controls and prospective short protocols.
 
+The owner-authorized [Bayesian acquisition screen](bayes-screen-protocol.md)
+tests that next question: a per-layer Gaussian-process error surrogate calibrated
+on document blocks, and eight-bit prefill with explicit mixed-precision KV
+retention/rollback. Six paired conditions separate prefill, mean prediction,
+calibrated uncertainty and a constant-layer bound. The [formula-transfer ledger](bayes-inspirations.md)
+credits GP regression/kriging, statistical emulation, conformal calibration and
+PMPD. This is a five-minute prospective screen, not an expansion or native pivot;
+no checkpoint results existed when this protocol was written.
+
 ## Historical stock program after v0.12
 
 The queue established after v0.15 was deliberately small: [independent committed-token

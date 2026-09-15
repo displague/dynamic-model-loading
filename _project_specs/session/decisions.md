@@ -22,3 +22,11 @@
   Formula transfer is conditional: test Richardson's leading-error premise and
   include the analytically optimal fixed cache control for mandatory increments.
   No native admission, global novelty or larger-model access is established.
+
+- 2026-09-14: Review approved the Bayesian acquisition screen under ADRs 0004/0006
+  for bounded inference after resolving NumPy scalar leakage in report JSON.
+  Source: issue #39 pre-inference review and exact CPU serialization reproduction.
+  Keep fit and document-block calibration distinct, retain explicit empirical-only
+  coverage claims, compare a constant-layer predictor, and fingerprint prefill KV
+  across rollback. Statistical prediction, phase control, physical traffic and
+  larger-model capacity remain separate claims. ADR 0005 is unchanged.

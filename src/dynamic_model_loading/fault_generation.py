@@ -23,7 +23,10 @@ def step(model, tokens, cache, pager=None):
         if tokens.shape[1] != 1:
             raise ValueError('Draft must execute one token at a time')
         pager.begin_token()
-    return model(tokens, past_key_values=cache, use_cache=True).logits
+    result = model(tokens, past_key_values=cache, use_cache=True).logits
+    if pager is not None and hasattr(pager, 'after_cache_step'):
+        pager.after_cache_step(cache)
+    return result
 
 
 @torch.inference_mode()
@@ -91,6 +94,8 @@ def generate(target, prefix, eos, cap=64, *, draft=None, pager=None, record=lamb
             target_cache.crop(base + a)
             draft_cache.crop(base + a)
             pager.pending.clear()
+            if hasattr(pager, 'after_cache_crop'):
+                pager.after_cache_crop(draft_cache)
             if not done:
                 fallback = prefix.new_tensor([[verdict['fallback']]])
                 t0 = time.perf_counter()
