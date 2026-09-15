@@ -1,0 +1,7 @@
+{
+  "event": "First repeat-audit command addressed risk_screen instead of risk_analysis",
+  "error": "AttributeError: module dynamic_model_loading.risk_screen has no attribute analyze",
+  "analysis_started": false,
+  "inference_rerun": false,
+  "correction": "Invoke the unchanged risk_analysis analyzer; preserve original measurement"
+}

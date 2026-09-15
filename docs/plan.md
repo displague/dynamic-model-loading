@@ -92,6 +92,14 @@ fixed17 and same-pager all35. Audit actual KV histories, rejected work, transfer
 controller/readback cost and memory under a300s CUDA worker. Statistical nomination
 does not guarantee physical economics or authorize a native pivot.
 
+The [completed v0.30 screen](risk-screen-results.md) passes faithfulness but fails
+acquisition/runtime in 82.047s. Risk accepts 14/20 versus fixed's 14/16 and all35's 16/16;
+bytes per accept are 12.112% worse than fixed and 28.645% worse than all35. Every
+committed output/KV/physical ledger passes, with 520 source tests and exact replay.
+Stop this physical candidate. The six authorized releases v0.25--v0.30 are
+delivered; complete only #45, keep milestone 10 and novel-loading research open.
+No native port or long matrix follows from the component wins or this negative.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research

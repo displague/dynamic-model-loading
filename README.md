@@ -1,18 +1,16 @@
 # Dynamic model loading
 
-Latest research: [v0.29 acquisition result](docs/acquisition-screen-results.md).
-Risk-directed17-page acquisition makes0/32 diagnostic pair errors versus2/32 for
-fixed/contribution controls. This proxy win admits a physical generated test;
-no accepted-token, speedup or larger-model result is claimed yet.
+Latest research: [v0.30 physical acquisition result](docs/risk-screen-results.md).
+The six-release course is delivered. A real risk-directed draft runtime preserves
+every committed target output but accepts 14/20 proposals versus fixed's 14/16 and
+all35's 16/16. It spends more bytes per accepted token and loses to all35 on time.
+Stop this candidate; no larger-model speedup, long suite or native port follows.
 
-Latest research: [v0.28 decision-coordinate result](docs/recursive-screen-results.md).
-Vector representation lowers diagnostic prediction MSE10.325%; recursion adds
-only1.372% and fails its separate gate. Acquisition/acceptance gains are unmeasured.
-
-Latest research: [v0.27 spatial page-field result](docs/spatial-screen-results.md).
-An11.5-second screen finds negligible predictive transfer (0.049% MSE reduction),
-worse than shuffled geometry. This static-field candidate stops; temporal
-decision-sensitive estimation is a new hypothesis, not an achieved loader.
+Component evidence remains: [v0.29's binary-risk win](docs/acquisition-screen-results.md),
+[v0.28's geometry pass/temporal failure](docs/recursive-screen-results.md), and
+[v0.27's static-field negative](docs/spatial-screen-results.md). The
+[course summary](docs/information-research-course.md) keeps these distinct from
+physical acquisition and deployable performance.
 
 Research into novel weight-acquisition mechanisms for inference under smaller
 memory budgets. Stock llama.cpp configurations are practical baselines, not the
@@ -26,7 +24,7 @@ and [implementation amendment](docs/fault-pager-amendment-1.md) freeze the input
 resource accounting and comparisons before measurement. This 1.5B FP32 study does
 not by itself establish a large-model speedup or justify a native implementation.
 
-**Latest research:** [v0.26's output-margin sensor screen](docs/output-sensors-results.md)
+**Preserved result:** [v0.26's output-margin sensor screen](docs/output-sensors-results.md)
 finds selective-acquisition headroom in a controlled two-bit final FFN. A paid
 17-page oracle repairs all nine diagnostic base/high-precision disagreements;
 fixed17 repairs seven. Both introduce two new disagreements. All projected-margin
@@ -42,7 +40,7 @@ finishes in **1 minute 58 seconds**. Additive predictions match all 48 paired
 diagnostic argmaxes, but none of the tested singleton/pair loads repairs the one
 base disagreement. This four-region action set stops; no predictor is fitted or
 runtime gain claimed. The [six-release course](docs/information-research-course.md)
-continues with a distinct, finer observation/acquisition hypothesis.
+records the subsequent finer observation, estimation and physical-policy tests.
 
 ```powershell
 .\.venv\Scripts\python.exe -m dynamic_model_loading.decision_field --output runs/decision-field-<fresh-name>

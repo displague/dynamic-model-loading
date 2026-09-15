@@ -79,3 +79,21 @@ forcing and restores full-vocabulary readout/dense verification. It measures
 the actual selected-page loads and controller cost under the same bounded
 resource contract, rather than extending the failed recurrence or assuming
 the pairwise proxy is an acceptance certificate.
+
+## Completed six-delivery record
+
+| Release | Tested premise | Measured outcome |
+|---|---|---|
+| [v0.25](decision-field-results.md) | Downstream singleton/pair acquisition | Joint approximation passes; no frozen repair opportunity |
+| [v0.26](output-sensors-results.md) | Physical final-FFN margin sensors | Numerical/readout checks and oracle acquisition headroom pass |
+| [v0.27](spatial-screen-results.md) | Static joint scalar page field | Only 0.049% diagnostic MSE benefit; loses to shuffled geometry |
+| [v0.28](recursive-screen-results.md) | Changing decision coordinates and recursion | Geometry: 10.325% improvement passes; temporal: 1.372% fails |
+| [v0.29](acquisition-screen-results.md) | Decision-risk acquisition and scalar sufficiency | Binary risk: 0/32 errors versus fixed's 2/32; risk nominated |
+| [v0.30](risk-screen-results.md) | Physical policy on generated trajectories | Correct commits/state; more bytes per accept and slower than all35 |
+
+These are six completed research deliveries, not six successes or a completed
+novel-loading milestone. Protocols precede every new calculation/inference; failed
+gates remain failed. The physical runtime is real, but there is no deployable
+inference gain or larger-model capacity result. Stock/native baselines are unchanged.
+Further work needs a new hypothesis/protocol; full competing-token or accepted-
+prefix risk is an unmeasured possibility, not an automatic continuation or port.

@@ -1,0 +1,26 @@
+{
+  "fixed": {
+    "decode_calls": 17,
+    "observed_page_count": 289,
+    "observation_seconds": 0.956329899985576,
+    "nonprobe_acquisition_seconds": 0.000251600009505637
+  },
+  "risk": {
+    "decode_calls": 21,
+    "observed_page_count": 357,
+    "observation_seconds": 1.1479310001304839,
+    "nonprobe_acquisition_seconds": 0.4966329998424044
+  },
+  "all35": {
+    "decode_calls": 16,
+    "observed_page_count": 560,
+    "observation_seconds": 1.5988506001158385,
+    "nonprobe_acquisition_seconds": 0.00044999989040661603
+  },
+  "total_screen_seconds": 82.04694430000382,
+  "extra_cuda_mib": 912.328125,
+  "risk_more_bytes_per_accept_vs_fixed_pct": 12.112367748996732,
+  "risk_more_bytes_per_accept_vs_all35_pct": 28.644688644688653,
+  "risk_more_wall_vs_all35_pct": 13.295216649170438,
+  "derivation": "Arithmetic aggregation of frozen raw receipts only; no new inference or gates"
+}

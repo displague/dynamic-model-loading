@@ -1,0 +1,1 @@
+APPROVED for commit. The readability edits preserve all reviewed numbers, hashes, gate outcomes, and claim boundaries.
