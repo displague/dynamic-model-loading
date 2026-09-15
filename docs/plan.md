@@ -36,6 +36,13 @@ demand-only packets. Actual observed nonzeros force demand completion; no weight
 cache or permission to omit unknown contributions. Event regions and end-to-end
 latency are separate gates. Frozen three new prefixes, short supervised CUDA only.
 
+The [v0.38 result](early-screen-results.md) completes delivery2 in31.987s. All
+logits exact, but early fetching uses37.1284% more H2D and13.2937% more wall than
+packets; it also loses to identical late forecasts. Event-region overlap94.377%
+is not an economics win. Stop this candidate, preserve646 CPU tests and exact
+replay, complete only #53. Next separately test lower-precision packet arithmetic
+against strong resident/offloaded controls and then a larger sparse artifact.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component
