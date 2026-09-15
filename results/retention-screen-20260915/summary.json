@@ -1,0 +1,137 @@
+{
+  "conditions": {
+    "resident": {
+      "tokens": 48,
+      "wall_seconds": 0.4831445000017993,
+      "h2d_bytes": 0,
+      "prefill_seconds": 0.054592000000411645,
+      "decode_seconds": 0.41398030002892483,
+      "hits": 0,
+      "active": 0,
+      "prefill_h2d_bytes": 0,
+      "decode_h2d_bytes": 0
+    },
+    "packet": {
+      "tokens": 48,
+      "wall_seconds": 1.8918263000086881,
+      "h2d_bytes": 4317841200,
+      "prefill_seconds": 0.2234242999984417,
+      "decode_seconds": 1.369668500003172,
+      "hits": 0,
+      "active": 526566,
+      "prefill_h2d_bytes": 1468989000,
+      "decode_h2d_bytes": 2848852200
+    },
+    "retained": {
+      "tokens": 48,
+      "wall_seconds": 4.241057700011879,
+      "h2d_bytes": 2330056432,
+      "prefill_seconds": 0.3091500000009546,
+      "decode_seconds": 1.6352110999941942,
+      "hits": 243218,
+      "active": 526566,
+      "prefill_h2d_bytes": 1470033096,
+      "decode_h2d_bytes": 860023336
+    }
+  },
+  "metrics": [
+    {
+      "episode": "episode-4",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-5",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-6",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-7",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-8",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-9",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-10",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-11",
+      "max_relative_l2": 0.0,
+      "exact": true
+    }
+  ],
+  "checks": {
+    "Hfaithfulness": true,
+    "Hresources": true,
+    "Hacquisition": true,
+    "Hruntime": false
+  },
+  "h2d_saving": 0.46036541779257656,
+  "wall_saving": -1.241779649639294,
+  "allocation": {
+    "resident_setup_seconds": 3.3861923000004026,
+    "resident_parameter_bytes": 5263032320,
+    "resident_cuda": {
+      "allocated_bytes": 5263032320,
+      "reserved_bytes": 5268045824,
+      "peak_allocated_bytes": 5263032320,
+      "peak_reserved_bytes": 5268045824
+    },
+    "before_candidate_cuda": {
+      "allocated_bytes": 9568256,
+      "reserved_bytes": 23068672,
+      "peak_allocated_bytes": 5291880960,
+      "peak_reserved_bytes": 5312086016
+    },
+    "host_weights_bytes": 1610612736,
+    "cache_bytes": 201326592,
+    "workspace_bytes": 67108864,
+    "packet_cuda_bytes": 67174400,
+    "pinned_bytes": 67174400,
+    "capacity_rows_per_layer": 1024,
+    "host_residency_entries_limit": 24576,
+    "host_map_bytes_in_process_rss": true,
+    "original_layout": true,
+    "candidate_setup_seconds": 3.5136104000048363,
+    "construction_h2d_bytes": 3652419584,
+    "reference_return_d2h_bytes": 5263032320,
+    "candidate_parameter_bytes": 3652419584,
+    "candidate_cuda": {
+      "allocated_bytes": 3997597696,
+      "reserved_bytes": 4016046080,
+      "peak_allocated_bytes": 5291880960,
+      "peak_reserved_bytes": 5312086016
+    }
+  },
+  "resources": {
+    "samples": 114,
+    "peak_gpu_used": 5864787968,
+    "min_host_available": 5163614208,
+    "peak_rss": 12820336640,
+    "passed": true,
+    "error": null
+  },
+  "source_commit": "2ab452ebad572f54a72e8099d08c701c0c24446b",
+  "decision": "stop_this_retention_candidate",
+  "full_suite_launched": false,
+  "native_admission_evaluated": false,
+  "capacity_claim": false,
+  "worker_wall_seconds": 27.59505480000371,
+  "analysis_wall_seconds": 6.613747700001113
+}

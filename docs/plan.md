@@ -22,6 +22,14 @@ v0.31 and v0.34 used Qwen, NOT OPT/ReLU; their failures do not establish ReLU
 predictor failures. Existing protocols/results stay unchanged. Milestone10 remains
 open; no native patch, stock-flag sweep or long matrix follows this authorization.
 
+The [v0.37 retention screen](retention-screen-results.md) completes delivery1 in
+34.209s. All checked logits match exactly;48 scored tokens per condition agree.
+LRU saves46.0365% H2D but takes4.241s versus1.892s packets;192MiB cache is charged.
+Faithfulness/resources/acquisition pass, runtime fails. Stop this implementation,
+not the observed reuse question. 639 CPU tests and exact raw replay pass. Only #52
+completes; milestone10 stays open. Next candidate must change acquisition timing
+or representation, not rerun this LRU on more documents hoping to change its gate.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component
