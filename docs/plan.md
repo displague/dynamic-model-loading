@@ -49,6 +49,13 @@ resident FP16. Resident speed is an independent gate, expected to favor residenc
 Only a surviving physical/footprint component can nominate a separate short scale
 experiment; no FP32-quality, optimized-Q4, CPU-first or deployment claim is implied.
 
+The [v0.39 result](precision-packet-results.md) completes delivery3 in28.474s.
+Exact FP16 logits/48 tokens per condition; packets save94.4095% H2D/52.2284% wall
+versus direct FP16 streaming. Offloaded footprint is21.5662% below resident FP16,
+but resident is about4x faster and fits. Component gates pass; resident-speed fails.
+650 CPU tests and exact replays pass. Complete only #54, nominate a new SHORT
+larger sparse-model capacity protocol, and keep milestone10/Q4/native questions open.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component

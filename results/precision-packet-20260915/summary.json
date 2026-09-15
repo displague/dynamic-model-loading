@@ -1,0 +1,151 @@
+{
+  "conditions": {
+    "resident": {
+      "tokens": 48,
+      "wall_seconds": 0.38210299998900155,
+      "h2d_bytes": 0,
+      "prefill_seconds": 0.026846599990676623,
+      "decode_seconds": 0.3404547000172897,
+      "hits": 0,
+      "active": 0,
+      "prefill_h2d_bytes": 0,
+      "decode_h2d_bytes": 0
+    },
+    "stream": {
+      "tokens": 48,
+      "wall_seconds": 3.1954688999976497,
+      "h2d_bytes": 38654705664,
+      "prefill_seconds": 0.20200660000409698,
+      "decode_seconds": 2.938687600020785,
+      "hits": 0,
+      "active": 0,
+      "prefill_h2d_bytes": 2415919104,
+      "decode_h2d_bytes": 36238786560
+    },
+    "packet": {
+      "tokens": 48,
+      "wall_seconds": 1.5265279999948689,
+      "h2d_bytes": 2161006344,
+      "prefill_seconds": 0.1550031000006129,
+      "decode_seconds": 1.079943099990487,
+      "hits": 0,
+      "active": 526561,
+      "prefill_h2d_bytes": 735280848,
+      "decode_h2d_bytes": 1425725496
+    }
+  },
+  "metrics": [
+    {
+      "episode": "episode-4",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-5",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-6",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-7",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-8",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-9",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-10",
+      "max_relative_l2": 0.0,
+      "exact": true
+    },
+    {
+      "episode": "episode-11",
+      "max_relative_l2": 0.0,
+      "exact": true
+    }
+  ],
+  "checks": {
+    "Hfaithfulness": true,
+    "Hresources": true,
+    "Htransport": true,
+    "Hresident_speed": false,
+    "Hfootprint": true
+  },
+  "h2d_saving": 0.9440946113318205,
+  "wall_saving": 0.5222835684628344,
+  "allocation": {
+    "resident_setup_seconds": 2.3424947999956203,
+    "resident_parameter_bytes": 2631516160,
+    "resident_cuda": {
+      "allocated_bytes": 2631516160,
+      "reserved_bytes": 2847932416,
+      "peak_allocated_bytes": 2631516160,
+      "peak_reserved_bytes": 2847932416
+    },
+    "before_candidate_cuda": {
+      "allocated_bytes": 9568256,
+      "reserved_bytes": 23068672,
+      "peak_allocated_bytes": 2651640832,
+      "peak_reserved_bytes": 2860515328
+    },
+    "host_weights_bytes": 805306368,
+    "cache_bytes": 0,
+    "workspace_bytes": 33554432,
+    "packet_cuda_bytes": 33619968,
+    "pinned_bytes": 33619968,
+    "capacity_rows_per_layer": 0,
+    "host_residency_entries_limit": 0,
+    "host_map_bytes_in_process_rss": true,
+    "original_layout": true,
+    "extra_host_linear_bytes": 805306368,
+    "parameter_dtype": "torch.float16",
+    "direct_host_contiguous": true,
+    "candidate_setup_seconds": 2.1002708000014536,
+    "construction_h2d_bytes": 1826209792,
+    "reference_return_d2h_bytes": 2631516160,
+    "candidate_parameter_bytes": 1826209792,
+    "candidate_cuda": {
+      "allocated_bytes": 1902952448,
+      "reserved_bytes": 2113929216,
+      "peak_allocated_bytes": 2651640832,
+      "peak_reserved_bytes": 2860515328
+    }
+  },
+  "resources": {
+    "samples": 107,
+    "peak_gpu_used": 3413217280,
+    "min_host_available": 12921286656,
+    "peak_rss": 4899934208,
+    "passed": true,
+    "error": null
+  },
+  "source_commit": "cc1260e03ae49987e8f228af08c375a40db0b423",
+  "decision": "eligible_for_short_scale_protocol",
+  "full_suite_launched": false,
+  "native_admission_evaluated": false,
+  "capacity_claim": false,
+  "scored_peak_gpu_bytes": {
+    "resident": 3413217280,
+    "stream": 2677116928,
+    "packet": 2677116928
+  },
+  "resident_memory_saving": 0.21566173249890497,
+  "useful_packet_latency_passed": true,
+  "reference_dtype": "float16",
+  "fp32_quality_evaluated": false,
+  "optimized_q4_compared": false,
+  "worker_wall_seconds": 22.971046900005604,
+  "analysis_wall_seconds": 5.502665899999556
+}
