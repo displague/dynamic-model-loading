@@ -66,3 +66,9 @@ v0.27's static field fails. The fourth delivery separates
 motivates recursive predict/update. The proposed application keeps correction
 vectors in a separable matrix-normal field and projects into the current readout
 direction; separability and Markov behavior are hypotheses, not inherited truths.
+
+v0.28 passes geometry but fails recurrence. The fifth delivery applies only the
+[static current-direction premise](acquisition-screen-protocol.md) to actual
+fixed-budget acquisition decisions. A derived commutation identity may permit
+scalar observations; decision-risk ranking borrows the metareasoning framing but
+does not provide calibrated probabilities or a multi-step optimal controller.

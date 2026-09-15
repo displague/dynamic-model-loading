@@ -1,0 +1,14 @@
+{
+  "protocol": "docs/acquisition-screen-protocol.md",
+  "parent_release": "v0.26.0",
+  "fit_positions": 96,
+  "diagnostic_positions": 32,
+  "budget": 17,
+  "quadrature": 32,
+  "audit_quadrature": 128,
+  "numerical_tolerance": 0.0001,
+  "commutation_tolerance": 0.0000000001,
+  "minimum_fewer_errors": 2,
+  "maximum_document_extra_errors": 1,
+  "timeout_seconds": 300
+}

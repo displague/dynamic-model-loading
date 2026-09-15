@@ -57,3 +57,9 @@
   and temporal gates, causal observed-only filtering and document resets. A
   representation win does not turn a failed temporal gate into success. The
   matrix-normal covariance omits feature cross-covariance and is not a certificate.
+
+- 2026-09-15: Issue44 uses only v0.28's passing geometry premise. Test projected
+  sufficient observations and fixed-budget pair-decision acquisition separately.
+  Undercovered Gaussian risk is a ranking model, not a safety certificate; all
+  diagnostic risk-path actions receive a higher-order numerical audit. No
+  full-argmax or physical savings claim follows from a binary proxy improvement.

@@ -71,6 +71,13 @@ in12.177s with exact replay and483 source tests. Complete #43 only; advance the
 static vector/current-axis premise into a new decision-acquisition screen, not
 the failed recurrence. Undercovered Gaussian bands are not safety guarantees.
 
+Fifth delivery: [decision acquisition](acquisition-screen-protocol.md),
+[#44](https://github.com/displague/dynamic-model-loading/issues/44). Test scalar
+projection/conditioning equivalence and fixed17-page decisions under risk-directed,
+contribution-ranked, fixed and independent-risk controls. Only purchased
+measurements reach the controller; pairwise shadows score the outcomes. Numerical
+and algebraic gates cannot substitute for a failed acquisition gate.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research
