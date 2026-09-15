@@ -1,0 +1,128 @@
+{
+  "source_commit": "9ca324ea4031bc52686ea7d781b31aff81983d78",
+  "conditions": {
+    "stream": {
+      "tokens": 16,
+      "wall_seconds": 2.6464711999979045,
+      "ttft_seconds": 0.862511600000289,
+      "h2d_bytes": 25769803776,
+      "d2h_bytes": 0,
+      "extents": 384,
+      "prefill_bytes": 3221225472,
+      "decode_bytes": 22548578304,
+      "active_neurons": 0,
+      "observed_neurons": 0,
+      "metadata_h2d_bytes": 0
+    },
+    "packet": {
+      "tokens": 16,
+      "wall_seconds": 0.7369093999986944,
+      "ttft_seconds": 0.26834360000066226,
+      "h2d_bytes": 1635580200,
+      "d2h_bytes": 9044352,
+      "extents": 384,
+      "prefill_bytes": 757171600,
+      "decode_bytes": 878408600,
+      "active_neurons": 367698,
+      "observed_neurons": 9043968,
+      "metadata_h2d_bytes": 1595688
+    }
+  },
+  "controls": [
+    {
+      "episode": "episode-0",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-1",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-2",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-3",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    }
+  ],
+  "allocation": {
+    "parameters_bytes": 5263032320,
+    "registered_buffers_bytes": 0,
+    "construction_h2d_bytes": 3652419584,
+    "cpu_first": true,
+    "cpu_loaded_parameter_bytes": 5263032320,
+    "before_residency_cuda": {
+      "allocated_bytes": 0,
+      "reserved_bytes": 0,
+      "peak_allocated_bytes": 0,
+      "peak_reserved_bytes": 0
+    },
+    "allocator_limit_bytes": 5033164800,
+    "allocator_fraction": 0.2949229475398127,
+    "host_down_bytes": 1610612736,
+    "workspace_bytes": 67108864,
+    "pinned_staging_bytes": 67108864,
+    "construction_d2h_bytes": 0,
+    "original_workspace_layout": true,
+    "weight_workspace_contiguous": true,
+    "workspace_strides": [
+      1,
+      8192
+    ],
+    "host_weight_aliases": true,
+    "packet_host_bytes": 67174400,
+    "packet_cuda_bytes": 67174400,
+    "total_pinned_bytes": 134283264,
+    "extra_host_linear_bytes": 1610612736,
+    "direct_dense_host_contiguous": true,
+    "conversion_seconds": 3.2012346999981673,
+    "hybrid_cuda_parameters_bytes": 3652419584,
+    "hybrid_cuda": {
+      "allocated_bytes": 3786702848,
+      "reserved_bytes": 3793747968,
+      "peak_allocated_bytes": 3786702848,
+      "peak_reserved_bytes": 3793747968
+    },
+    "setup_seconds": 4.22667310000179
+  },
+  "episode_explicit_copies": {
+    "h2d_bytes": 27405384712,
+    "d2h_bytes": 15479904
+  },
+  "resources": {
+    "samples": 49,
+    "peak_gpu_used": 4380004352,
+    "min_host_available": 7993212928,
+    "peak_rss": 10591019008,
+    "passed": true,
+    "error": null
+  },
+  "max_kv_bytes": 9043968,
+  "all_output_ids_match": true,
+  "checks": {
+    "Hfaithfulness": true,
+    "Hcapacity": true,
+    "Hacquisition": true,
+    "Hruntime": true
+  },
+  "savings": {
+    "h2d": 0.9365311348810792,
+    "wall": 0.7215501910622424
+  },
+  "useful_latency_passed": true,
+  "declared_gpu_limit_bytes": 5033164800,
+  "full_fp32_parameters_exceed_budget": true,
+  "physical_smaller_gpu_tested": false,
+  "reference_reused": true,
+  "lower_precision_baseline_tested": false,
+  "decision": "eligible_for_separately_frozen_followup",
+  "native_admission_evaluated": false,
+  "full_suite_launched": false,
+  "worker_wall_seconds": 17.075812600000063,
+  "analysis_wall_seconds": 5.957318600001599
+}

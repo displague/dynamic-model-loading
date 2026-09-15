@@ -82,3 +82,13 @@ fail:13/20 accepts versus15/16 per control,837.2MB per accept versus644.1MB all3
 35.847s versus9.532s. Stop this ranker; another order of the same35 pages is not
 queued. Two deliveries remain for cold-start bounded packet capacity and a stronger
 low-memory comparison/stress question. Preserve all four delivered outcomes.
+
+## Fifth delivery
+
+[v0.35](capacity-screen-results.md) passes all gates with CPU-first construction
+under4800MiB, below the full FP32 parameter payload. Packet saves93.65%bytes and
+72.16%wall versus strengthened contiguous dense streaming, every checked logit
+exact. Both fit; no full-GPU startup or restoration occurs. One delivery remains
+for an ordinary resident-FP16 comparison before claiming capacity unavailable
+through precision reduction. Artificial budget, known prefixes, small sample and
+sampled NVML remain explicit limitations; no native admission or long matrix.

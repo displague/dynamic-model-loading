@@ -54,6 +54,14 @@ the prior's limitations and589 passing CPU tests. Only #49 completes. Two releas
 remain for packet capacity and a stronger low-memory comparison; milestone10 stays
 open. A full-vocabulary event alone did not repair this acquisition policy.
 
+The [v0.35 capacity result](capacity-screen-results.md) completes delivery five in
+23.033s. CPU-first loading stays below4800MiB from startup; full FP32 parameters
+exceed that allowance. Packet saves93.65%H2D/72.16%wall versus strengthened contiguous
+dense streaming, with all checked logits exact. All four gates and604 CPU tests
+pass. Both methods fit; this is useful acquisition under an imposed FP32 budget,
+not access unavailable through ordinary lower precision. Only #50 completes.
+One delivery remains for the stronger resident-FP16 comparison; milestone10 open.
+
 On 2026-09-15 the owner authorized the next six bounded research releases on
 information-bearing acquisition. The [course and inspirations](information-research-course.md)
 start with [decision-sensitive physical interventions](decision-field-protocol.md),

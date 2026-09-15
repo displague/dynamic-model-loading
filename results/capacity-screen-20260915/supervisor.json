@@ -1,0 +1,7 @@
+{
+  "status": "complete",
+  "worker_exit_code": 0,
+  "timeout_seconds": 300,
+  "worker_wall_seconds": 17.075812600000063,
+  "full_suite_launched": false
+}
