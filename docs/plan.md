@@ -30,6 +30,12 @@ not the observed reuse question. 639 CPU tests and exact raw replay pass. Only #
 completes; milestone10 stays open. Next candidate must change acquisition timing
 or representation, not rerun this LRU on more documents hoping to change its gate.
 
+The next [early-acquisition protocol](early-screen-protocol.md), #53, tests same-
+layer previous-activity packets before fc1 against identical late forecasts and
+demand-only packets. Actual observed nonzeros force demand completion; no weight
+cache or permission to omit unknown contributions. Event regions and end-to-end
+latency are separate gates. Frozen three new prefixes, short supervised CUDA only.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component

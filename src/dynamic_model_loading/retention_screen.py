@@ -25,7 +25,8 @@ def decision(conditions):
         h2d_saving=1-r['h2d_bytes']/p['h2d_bytes'],wall_saving=1-r['wall_seconds']/p['wall_seconds'])
 
 
-def worker(output):
+def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
+           bank_conditions=('packet','retained'),source_file=__file__):
     import torch
     from huggingface_hub import snapshot_download
     from transformers import AutoModelForCausalLM,AutoTokenizer,DynamicCache
@@ -38,12 +39,12 @@ def worker(output):
     from .retained_rows import RetainedRows
     from .capacity_down import move_except_down
     from .relu import extract
-    started=time.perf_counter(); cfg=json.loads(CONFIG.read_text())
-    manifest,protocol=committed_inputs(__file__,CONFIG,cfg['protocol'])
+    started=time.perf_counter(); cfg=json.loads(Path(config_path).read_text())
+    manifest,protocol=committed_inputs(source_file,config_path,cfg['protocol'])
     demand(subprocess.check_output(['git','rev-parse','origin/main'],cwd=ROOT,text=True).strip()==manifest['source_commit'],
            'Push reviewed source first')
     output=Path(output); output.mkdir(parents=True,exist_ok=False)
-    shutil.copyfile(CONFIG,output/'config.json'); shutil.copyfile(protocol,output/'protocol.md')
+    shutil.copyfile(config_path,output/'config.json'); shutil.copyfile(protocol,output/'protocol.md')
     shutil.copytree(Path(__file__).parent,output/'source',ignore=shutil.ignore_patterns('__pycache__'))
     parent=ROOT/cfg['artifact_manifest']; shutil.copyfile(parent,output/'artifact-manifest.json')
     path=Path(snapshot_download(cfg['repo'],revision=cfg['revision'],local_files_only=True))
@@ -115,14 +116,14 @@ def worker(output):
         for d in range(3): episode(d,'resident')
         setup=time.perf_counter(); model.cpu(); torch.cuda.empty_cache()
         allocation['before_candidate_cuda']=cuda_memory(torch.device('cuda:0'))
-        bank=RetainedRows(layers,capacity=cfg['cache_rows'])
+        bank=(bank_type or RetainedRows)(layers,capacity=cfg['cache_rows'])
         moved=move_except_down(model,layers); torch.cuda.synchronize()
         allocation.update(bank.allocation(),candidate_setup_seconds=time.perf_counter()-setup,
             construction_h2d_bytes=moved,reference_return_d2h_bytes=allocation['resident_parameter_bytes'],
             candidate_parameter_bytes=sum(p.numel()*p.element_size() for p in model.parameters() if p.is_cuda),
             candidate_cuda=cuda_memory(torch.device('cuda:0')))
-        episode(3,'packet',True); episode(3,'retained',True)
-        for d,c in ORDER: episode(d,c)
+        for c in bank_conditions: episode(3,c,True)
+        for d,c in hybrid_order: episode(d,c)
         write(output/'episodes.json',episodes); write(output/'allocation.json',allocation); resources.boundary()
     write(output/'completion.json',dict(complete=True,worker_inner_seconds=time.perf_counter()-started,
         resources=resources.receipt(),full_suite_launched=False))
@@ -153,7 +154,8 @@ def audit_pages(pages,arrays,calls,condition,capacity):
     return totals
 
 
-def analyze(output):
+def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_order=ORDER,
+            bank_conditions=('packet','retained'),page_auditor=audit_pages,decider=decision):
     from safetensors.numpy import load_file
     from .provenance import verify_snapshot,frozen_environment
     from .specialist_analysis import audit_resources
@@ -162,7 +164,7 @@ def analyze(output):
     from transformers import AutoTokenizer
     output=Path(output); supervisor=require_supervisor(output)
     cfg=json.loads((output/'config.json').read_text()); m=json.loads((output/'manifest.json').read_text())
-    verify_snapshot(output,m,'configs/retention-screen.json',cfg['protocol'],__file__); frozen_environment(m['environment'])
+    verify_snapshot(output,m,config_relative,cfg['protocol'],__file__); frozen_environment(m['environment'])
     demand(m['cuda_execution'] is True and m['environment']['cpu_threads']==4 and
         not m['environment']['tf32_matmul'] and not m['environment']['tf32_cudnn'],'Execution drift')
     inventory=json.loads((output/'files.json').read_text())
@@ -182,8 +184,8 @@ def analyze(output):
     tokenizer=AutoTokenizer.from_pretrained(path,local_files_only=True,trust_remote_code=False)
     demand(prefixes==[tokenizer.encode(p,add_special_tokens=False)[:32]
         for p in [*cfg['prompts'],cfg['warmup_prompt']]],'Tokenization changed')
-    expected=[(3,'resident',True),*[(d,'resident',False) for d in range(3)],(3,'packet',True),(3,'retained',True),
-        *[(d,c,False) for d,c in ORDER]]
+    expected=[(3,'resident',True),*[(d,'resident',False) for d in range(3)],
+        *[(3,c,True) for c in bank_conditions],*[(d,c,False) for d,c in hybrid_order]]
     demand([(r['document'],r['condition'],r['warmup']) for r in episodes]==expected,'Episode order drift')
     refs={}; metrics=[]; conditions={}; previous=0
     for i,r in enumerate(episodes):
@@ -212,7 +214,7 @@ def analyze(output):
             ref=refs[r['document']]; demand((ids,stop)==ref[:2],'Reference IDs differ')
             error=np.linalg.norm(values.astype(np.float64)-ref[2],axis=1)/np.maximum(np.linalg.norm(ref[2].astype(np.float64),axis=1),1e-30)
             demand(np.all(error<=1e-5),'Numerical contract failed')
-            stats=audit_pages(pages,arrays,calls,r['condition'],cfg['cache_rows'])
+            stats=page_auditor(pages,arrays,calls,r['condition'],cfg['cache_rows'])
             metrics.append(dict(episode=r['episode'],max_relative_l2=float(error.max()),exact=np.array_equal(values,ref[2])))
             demand(r['cuda']['peak_reserved_bytes']<=4800*2**20 and
                 all(s['gpu_used']<=4800*2**20 for s in samples if r['started']<=s['monotonic']<=r['finished']), 'Candidate cap failed')
@@ -224,10 +226,10 @@ def analyze(output):
             group['h2d_bytes']+=stats.get('weight_h2d_bytes',0)+stats.get('metadata_h2d_bytes',0)
             for k in ('hits','active','prefill_h2d_bytes','decode_h2d_bytes'): group[k]=group.get(k,0)+stats.get(k,0)
     a=json.loads((output/'allocation.json').read_text())
-    demand(a['cache_bytes']==24*1024*2048*4 and a['workspace_bytes']==8192*2048*4
+    demand(a['cache_bytes']==24*cfg['cache_rows']*2048*4 and a['workspace_bytes']==8192*2048*4
         and a['packet_cuda_bytes']==a['pinned_bytes']==8192*(8+2048*4)
         and a['candidate_parameter_bytes']==a['construction_h2d_bytes']==3652419584,'Allocation mismatch')
-    result=decision(conditions)
+    result=decider(conditions)
     return dict(conditions=conditions,metrics=metrics,**result,
         allocation=a,resources=completion['resources'],source_commit=m['source_commit'],
         decision='eligible_for_separate_followup' if all(result['checks'].values()) else 'stop_this_retention_candidate',

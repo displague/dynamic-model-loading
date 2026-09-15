@@ -1,0 +1,23 @@
+{
+  "protocol": "docs/early-screen-protocol.md",
+  "repo": "facebook/opt-1.3b",
+  "revision": "3f5c25d0bc631cb57ac65913f76e22c2dfb61d62",
+  "artifact_manifest": "results/relu-control-20260911/run/manifest.json",
+  "prefix_tokens": 32,
+  "generation_tokens": 16,
+  "cache_rows": 0,
+  "prefetch_rows": 1024,
+  "dtype": "float32",
+  "worker_timeout_seconds": 300,
+  "candidate_gpu_limit_mib": 4800,
+  "reference_gpu_limit_mib": 6500,
+  "maximum_traffic_multiplier": 1.25,
+  "minimum_wall_saving": 0.05,
+  "minimum_event_region_overlap_fraction": 0.10,
+  "warmup_prompt": "The librarian opened a drawer containing old maps of the harbor. Each map showed a different arrangement of streets, bridges, warehouses and canals. She began comparing the names along the river with the list in her notebook.",
+  "prompts": [
+    "Inside the observatory, a mechanic checked the telescope before the visitors arrived. A loose brass screw lay beside a diagram of the tracking gears. She compared the positions in the diagram with the actual mechanism and realized that",
+    "def running_totals(numbers):\n    total = 0\n    result = []\n    for number in numbers:\n        total += number\n        result.append(total)\n    return result\n\n# For a list of three numbers this function returns",
+    "A baker prepares twenty-four small loaves and sixteen large loaves for delivery. Every basket must contain identical numbers of small and large loaves, and none may remain in the kitchen. To use as many baskets as possible, the baker should"
+  ]
+}

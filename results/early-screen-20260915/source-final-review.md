@@ -1,0 +1,1 @@
+APPROVED. The shared-anchor endpoints, zero intervals, and exact duration/intersection reconstruction introduce no accounting or clock bug. The plan paragraph preserves the protocol’s scope.
