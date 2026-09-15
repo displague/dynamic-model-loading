@@ -37,6 +37,14 @@ the final hidden correction. Test that identity, full-vocabulary limits, paid
 probe cost and a half-page acquisition opportunity before fitting spatial or
 recursive controllers. It is not a predictor sweep over v0.25's failed action set.
 
+The [completed v0.26 screen](output-sensors-results.md) passes both component
+gates in145.072 seconds. All4480 projected observations and eight full-model/KV
+checks pass; an oracle17-page set repairs9/9 diagnostic base/high differences
+versus7/9 for fixed17, while both introduce two new differences. No online policy
+exists yet: collection observes all pages and charges those observations. This
+admits a new short spatial page-field estimation protocol with independent and
+shuffled controls. Complete only #41; broader milestone10 remains open.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research

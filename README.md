@@ -12,7 +12,18 @@ and [implementation amendment](docs/fault-pager-amendment-1.md) freeze the input
 resource accounting and comparisons before measurement. This 1.5B FP32 study does
 not by itself establish a large-model speedup or justify a native implementation.
 
-**Latest research:** [v0.25's downstream intervention screen](docs/decision-field-results.md)
+**Latest research:** [v0.26's output-margin sensor screen](docs/output-sensors-results.md)
+finds selective-acquisition headroom in a controlled two-bit final FFN. A paid
+17-page oracle repairs all nine diagnostic base/high-precision disagreements;
+fixed17 repairs seven. Both introduce two new disagreements. All projected-margin
+and numerical/KV checks pass in **2 minutes 25 seconds**. This admits a short
+spatial-estimation test, not an online loading win or capacity/speedup claim.
+
+```powershell
+.\.venv\Scripts\python.exe -m dynamic_model_loading.output_sensors --output runs/output-sensors-<fresh-name>
+```
+
+**Preserved result:** [v0.25's downstream intervention screen](docs/decision-field-results.md)
 finishes in **1 minute 58 seconds**. Additive predictions match all 48 paired
 diagnostic argmaxes, but none of the tested singleton/pair loads repairs the one
 base disagreement. This four-region action set stops; no predictor is fitted or
