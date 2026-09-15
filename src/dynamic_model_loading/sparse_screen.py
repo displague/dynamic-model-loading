@@ -22,7 +22,8 @@ def validate_config(cfg):
         raise ValueError('Frozen sparse screen changed')
 
 
-def worker(output):
+def worker(output,*,config_path=CONFIG,validator=validate_config,source_file=__file__,bank_type=None,
+           hybrid_order=None):
     import numpy as np
     import torch
     from huggingface_hub import snapshot_download
@@ -37,13 +38,13 @@ def worker(output):
     from .sparse_analysis import compare, bounded_cuda
 
     started=time.perf_counter()
-    cfg=json.loads(CONFIG.read_text())
-    validate_config(cfg)
-    manifest,protocol=committed_inputs(__file__,CONFIG,cfg['protocol'])
+    cfg=json.loads(Path(config_path).read_text())
+    validator(cfg)
+    manifest,protocol=committed_inputs(source_file,config_path,cfg['protocol'])
     if subprocess.check_output(['git','rev-parse','origin/main'],cwd=ROOT,text=True).strip()!=manifest['source_commit']:
         raise ValueError('Push reviewed source before inference')
     output=Path(output); output.mkdir(parents=True,exist_ok=False)
-    shutil.copyfile(CONFIG,output/'config.json'); shutil.copyfile(protocol,output/'protocol.md')
+    shutil.copyfile(config_path,output/'config.json'); shutil.copyfile(protocol,output/'protocol.md')
     shutil.copytree(Path(__file__).parent,output/'source',ignore=shutil.ignore_patterns('__pycache__'))
     parent=ROOT/cfg['artifact_manifest']
     shutil.copyfile(parent,output/'artifact-manifest.json')
@@ -93,7 +94,7 @@ def worker(output):
                 activity=row.pop('activity')
                 if activity is not None: tensors[f'activity.{row["call"]}']=activity
                 pages.append(row)
-            if bank is not None and condition in ('stream','sparse'):
+            if bank is not None and condition in ('stream','sparse','packet'):
                 bank.record=record; bank.begin(key,condition)
             cache=DynamicCache(config=model.config)
             tokens=torch.tensor([prefixes[doc]],device='cuda')
@@ -123,7 +124,9 @@ def worker(output):
                 explicit_copies=copies,weight_h2d_bytes=sum(r['weight_h2d_bytes'] for r in pages),
                 raw_tensor_bytes=sum(a.nbytes for a in tensors.values()),
                 activity_d2h_bytes=sum(r['activity_d2h_bytes'] for r in pages),
-                load_extents=sum(len(r['extents']) for r in pages),cuda=cuda_memory(torch.device('cuda:0')))
+                **(dict(metadata_h2d_bytes=sum(r.get('metadata_h2d_bytes',0) for r in pages)) if bank_type else {}),
+                load_extents=sum(r['packets'] if 'packets' in r else len(r['extents']) for r in pages),
+                cuda=cuda_memory(torch.device('cuda:0')))
             write(folder/'episode.json',row); episodes.append(row)
             bounded_cuda(row['cuda'])
             resources.boundary()
@@ -135,11 +138,11 @@ def worker(output):
                 if ids!=ref['ids'] or stop!=ref['stop_reason']: raise ValueError('Greedy reference mismatch')
                 compare(a,arrays)
         episode(0,'resident'); episode(1,'resident')
-        construction=time.perf_counter(); bank=SparseDown(layers,width=128)
+        construction=time.perf_counter(); bank=(bank_type or SparseDown)(layers,width=128)
         allocation.update(bank.allocation(),conversion_seconds=time.perf_counter()-construction,
             hybrid_cuda_parameters_bytes=sum(p.numel()*p.element_size() for p in model.parameters() if p.is_cuda),
             hybrid_cuda=cuda_memory(torch.device('cuda:0')))
-        for doc,condition in [(0,'stream'),(0,'sparse'),(1,'sparse'),(1,'stream')]: episode(doc,condition)
+        for doc,condition in (hybrid_order or [(0,'stream'),(0,'sparse'),(1,'sparse'),(1,'stream')]): episode(doc,condition)
         restore=time.perf_counter(); allocation['restore_h2d_bytes']=bank.restore()
         allocation['restore_seconds']=time.perf_counter()-restore
         allocation['restore_cuda']=cuda_memory(torch.device('cuda:0'))

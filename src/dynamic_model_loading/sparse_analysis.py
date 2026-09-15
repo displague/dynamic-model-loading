@@ -77,13 +77,14 @@ def decision(conditions):
         full_suite_launched=False,native_admission_evaluated=False)
 
 
-def analyze(output):
+def analyze(output,*,config_relative='configs/sparse-down-screen.json',validator=validate_config,
+            hybrid_order=None,page_auditor=audit_pages,gate=decision,packet_bytes=0):
     from huggingface_hub import snapshot_download
     from transformers import AutoTokenizer
     output=Path(output); supervisor=require_supervisor(output)
-    cfg=json.loads((output/'config.json').read_text()); validate_config(cfg)
+    cfg=json.loads((output/'config.json').read_text()); validator(cfg)
     manifest=json.loads((output/'manifest.json').read_text())
-    verify_snapshot(output,manifest,'configs/sparse-down-screen.json',cfg['protocol'],__file__)
+    verify_snapshot(output,manifest,config_relative,cfg['protocol'],__file__)
     env=manifest['environment']; frozen_environment(env)
     demand(env['device']=='cuda:0' and env['cpu_threads']==4 and not env['tf32_matmul']
         and not env['tf32_cudnn'] and manifest['cuda_execution'] is True,'Execution settings changed')
@@ -106,7 +107,7 @@ def analyze(output):
     demand(prefixes==[tok.encode(p,add_special_tokens=False)[:16] for p in cfg['prompts']],
            'Independent tokenization mismatch')
     episodes=json.loads((output/'episodes.json').read_text())
-    order=[(0,'resident'),(1,'resident'),(0,'stream'),(0,'sparse'),(1,'sparse'),(1,'stream'),(0,'repeat'),(1,'repeat')]
+    order=[(0,'resident'),(1,'resident')]+(hybrid_order or [(0,'stream'),(0,'sparse'),(1,'sparse'),(1,'stream')])+[(0,'repeat'),(1,'repeat')]
     demand([(r['document'],r['condition']) for r in episodes]==order,'Episode matrix changed')
     refs={}; conditions={}; controls=[]; allcopies=dict(h2d_bytes=0,d2h_bytes=0)
     completion=json.loads((output/'completion.json').read_text())
@@ -122,7 +123,7 @@ def analyze(output):
         calls=json.loads((folder/'calls.json').read_text()); tensors=load_file(folder/'tensors.safetensors')
         count=len(calls); demand(1<=count<=8,'Invalid output count')
         keys={f'logits.{j}' for j in range(count)}
-        if mode=='sparse': keys|={f'activity.{j+1}' for j in range(count*24)}
+        if mode in ('sparse','packet'): keys|={f'activity.{j+1}' for j in range(count*24)}
         demand(set(tensors)==keys,'Tensor inventory changed')
         demand(row['raw_tensor_bytes']==sum(a.nbytes for a in tensors.values()),'Raw array accounting changed')
         ids=[]; copy_h2d=128+8*(count-1); copy_d2h=0; previous=row['started']
@@ -144,9 +145,11 @@ def analyze(output):
         else:
             ref,reason,a=refs[doc]; demand(ids==ref and stop==reason,'Reference output mismatch')
             controls.append(dict(episode=row['episode'],**compare(a,arrays)))
-        pages=json.loads((folder/'pages.json').read_text()); stats=audit_pages(pages,tensors,calls,row)
-        demand(row['weight_h2d_bytes']==stats['h2d_bytes'] and row['activity_d2h_bytes']==stats['d2h_bytes']
+        pages=json.loads((folder/'pages.json').read_text()); stats=page_auditor(pages,tensors,calls,row)
+        demand(row['weight_h2d_bytes']==stats['h2d_bytes']-stats.get('metadata_h2d_bytes',0) and row['activity_d2h_bytes']==stats['d2h_bytes']
                and row['load_extents']==stats['extents'],'Episode acquisition totals changed')
+        if packet_bytes:
+            demand(row['metadata_h2d_bytes']==stats['metadata_h2d_bytes'],'Packet metadata accounting changed')
         group=conditions.setdefault(mode,dict(tokens=0,wall_seconds=0.,ttft_seconds=0.,**{k:0 for k in stats}))
         group['tokens']+=count; group['wall_seconds']+=row['wall_seconds']; group['ttft_seconds']+=row['ttft_seconds']
         for k,v in stats.items(): group[k]+=v
@@ -157,9 +160,12 @@ def analyze(output):
         construction_d2h_bytes=1610612736,restore_h2d_bytes=1610612736,
         hybrid_cuda_parameters_bytes=3652419584,host_weight_aliases=True)
     demand(all(allocation.get(k)==v for k,v in constants.items()),'Persistent allocation/copy accounting changed')
+    if packet_bytes:
+        demand(allocation['packet_host_bytes']==allocation['packet_cuda_bytes']==packet_bytes and
+            allocation['total_pinned_bytes']==67108864+packet_bytes,'Packet buffers undercharged')
     for k in ('resident_cuda','hybrid_cuda','restore_cuda'): bounded_cuda(allocation[k])
     demand(allocation['resident_cuda']['allocated_bytes']>=constants['parameters_bytes'] and
-        allocation['hybrid_cuda']['allocated_bytes']>=constants['hybrid_cuda_parameters_bytes']+67108864,
+        allocation['hybrid_cuda']['allocated_bytes']>=constants['hybrid_cuda_parameters_bytes']+67108864+packet_bytes,
         'Persistent CUDA allocation undercharged')
     demand(all(math.isfinite(allocation[k]) and allocation[k]>0 for k in ('conversion_seconds','restore_seconds')),
            'Setup timing invalid')
@@ -168,4 +174,4 @@ def analyze(output):
     return dict(source_commit=manifest['source_commit'],conditions=conditions,controls=controls,
         allocation=allocation,episode_explicit_copies=allcopies,resources=completion['resources'],
         max_kv_bytes=max((16+len(r['ids'])-1)*393216 for r in episodes),
-        all_output_ids_match=True,**decision(conditions))
+        all_output_ids_match=True,**gate(conditions))
