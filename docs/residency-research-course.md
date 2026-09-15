@@ -73,3 +73,12 @@ techniques; the tested contribution is their outgoing-only physical acquisition
 application. This does not outperform the fully resident model or establish a
 capacity frontier. Three releases remain, with accepted-prefix risk and useful
 bounded capacity to receive separate protocols. No long matrix or native admission.
+
+## Fourth delivery
+
+[v0.34](vocabulary-risk-screen-results.md) changes the risk event to full-vocabulary
+argmax and measures actual prefixes. Faithfulness passes, acquisition and timing
+fail:13/20 accepts versus15/16 per control,837.2MB per accept versus644.1MB all35,
+35.847s versus9.532s. Stop this ranker; another order of the same35 pages is not
+queued. Two deliveries remain for cold-start bounded packet capacity and a stronger
+low-memory comparison/stress question. Preserve all four delivered outcomes.

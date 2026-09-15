@@ -46,6 +46,14 @@ faster and startup/reservation still invalidate a hard-budget capacity claim.
 Only #48 completes; three deliveries and milestone10 remain open. Accepted-prefix
 risk remains a separate pending question, not answered by a non-speculative loader.
 
+The [v0.34 full-vocabulary result](vocabulary-risk-screen-results.md) completes
+delivery four in84.876s. Faithfulness passes, acquisition/runtime fail:13/20 accepts
+versus15/16 for both controls,35.847s versus9.532s all35, and more H2D per accepted
+token. All committed outputs match. Stop this full-vocabulary ranker, preserving
+the prior's limitations and589 passing CPU tests. Only #49 completes. Two releases
+remain for packet capacity and a stronger low-memory comparison; milestone10 stays
+open. A full-vocabulary event alone did not repair this acquisition policy.
+
 On 2026-09-15 the owner authorized the next six bounded research releases on
 information-bearing acquisition. The [course and inspirations](information-research-course.md)
 start with [decision-sensitive physical interventions](decision-field-protocol.md),
