@@ -29,6 +29,14 @@ four-region action set. Next: a distinct finer decision-sensitive acquisition
 geometry with cheaper observations, not a more elaborate predictor over the
 failed action set. This completes only #40; milestone 10 remains open.
 
+The second delivery is the prospective [output-margin sensor screen](output-sensors-protocol.md),
+[#41](https://github.com/displague/dynamic-model-loading/issues/41). It changes to
+35 final-FFN neuron pages and a controlled two-bit base. A bias-free readout after
+RMS normalization makes a two-token decision direction directly observable from
+the final hidden correction. Test that identity, full-vocabulary limits, paid
+probe cost and a half-page acquisition opportunity before fitting spatial or
+recursive controllers. It is not a predictor sweep over v0.25's failed action set.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research

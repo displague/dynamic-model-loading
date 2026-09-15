@@ -40,3 +40,17 @@ The proposed novelty is an experimental combination and application, not inventi
 of Bayes filtering, quantization, sensor placement or speculative verification.
 The first test also checks a prerequisite often hidden by additive utility scores:
 two acquired regions can interact. We will measure their joint output directly.
+
+## Evidence-led revision after the first delivery
+
+v0.25's Hjoint passes but Hdecision fails: no frozen singleton/pair repairs the
+one diagnostic disagreement. The next release therefore changes unit and signal
+before spatial fitting. [v0.26's protocol](output-sensors-protocol.md) uses final-FFN
+pages and the positive-scalar readout property of
+[RMSNorm, Zhang and Sennrich 2019](https://arxiv.org/html/1910.07467v1). Projecting
+page corrections onto the difference of two readout rows can measure that pair's
+margin without a complete model replay. This algebraic application is not a
+full-argmax certificate; full vocabulary, numerical and KV checks remain required.
+The local two-bit region is a declared controlled challenge, not a natural target
+baseline or evidence of a larger-model capacity frontier. Subsequent spatial,
+recursive and information-directed screens depend on its measured action headroom.

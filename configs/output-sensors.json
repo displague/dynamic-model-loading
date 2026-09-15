@@ -1,0 +1,20 @@
+{
+  "protocol": "docs/output-sensors-protocol.md",
+  "parent": "runs/fault-pager-20260914-v1",
+  "representation_parent": "runs/refinement-screen-20260914-v1/worker",
+  "tokens_sha256": "0ef8ea0ab583dd29f7645972623b75666c08cbf21b916e4957d186ce28727270",
+  "corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "representation_files_sha256": "f693d26dd4ca7bdcc4a66d1cfce8af4f3e165f48e2b1da8c806e91d478421dde",
+  "fit_documents": 6,
+  "diagnostic_documents": 2,
+  "prefix_tokens": 4,
+  "positions": 16,
+  "page_width": 256,
+  "oracle_pages": 17,
+  "final_base_sha256": [
+    "8a461dfcc154e9e92df2f4dcdfca1f70c779f7397d3f58fc45ddc43929e23578",
+    "4513fcfbe9000824ae32980c85ee9d0b0c2c6fd0e7ee490aa4860024ca2069a0",
+    "847e4b143e7bd49ff3d20f467ec75f06564e37059c5f7ff555dd4d42a05c3f4a"
+  ],
+  "worker_timeout_seconds": 300
+}

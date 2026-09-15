@@ -39,3 +39,9 @@
   results; source/protocol review and CPU validation precede checkpoint inference.
 - Source: v0.25 implementation review; specification:
   `docs/decision-field-protocol.md` and `docs/information-research-course.md`.
+
+- 2026-09-15: After v0.25's zero repair opportunities, change acquisition unit
+  and observation cost rather than fit a richer model over the failed action set.
+  The v0.26 output-margin core review approves final-FFN neuron pages and explicit
+  RMS/readout limits; integration review and a frozen short checkpoint screen
+  remain required. ADRs 0004--0006 are unchanged; see issue #41 and its protocol.
