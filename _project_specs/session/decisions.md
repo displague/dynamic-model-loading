@@ -45,3 +45,9 @@
   The v0.26 output-margin core review approves final-FFN neuron pages and explicit
   RMS/readout limits; integration review and a frozen short checkpoint screen
   remain required. ADRs 0004--0006 are unchanged; see issue #41 and its protocol.
+
+- 2026-09-15: v0.26's measured page headroom supports a bounded static spatial
+  field screen (#42). Freeze covariance shrinkage, probe selection, shuffled
+  controls and unobserved-only gates before fitting reused development data.
+  A statistical component win cannot substitute for physical acquisition or
+  accepted-token evidence. The native boundary and original negatives remain.

@@ -1,0 +1,13 @@
+{
+  "protocol": "docs/spatial-screen-protocol.md",
+  "parent_release": "v0.26.0",
+  "fit_positions": 96,
+  "diagnostic_positions": 32,
+  "shrinkage": 0.5,
+  "shuffle_seed": 2701,
+  "budgets": [1, 4],
+  "primary_budget": 1,
+  "primary_mse_ratio": 0.9,
+  "per_document_max_ratio": 1.05,
+  "timeout_seconds": 300
+}

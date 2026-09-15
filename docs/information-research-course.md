@@ -54,3 +54,8 @@ full-argmax certificate; full vocabulary, numerical and KV checks remain require
 The local two-bit region is a declared controlled challenge, not a natural target
 baseline or evidence of a larger-model capacity frontier. Subsequent spatial,
 recursive and information-directed screens depend on its measured action headroom.
+
+v0.26 passes the observation/action screen. The third delivery now tests the
+[actual joint page field](spatial-screen-protocol.md), using fit-only covariance
+plus independent variance and Gaussian conditioning. This deliberately reuses
+development data and measures predictions on unobserved pages, not loader speed.

@@ -21,7 +21,7 @@ def main():
     args = parser.parse_args()
     root = Path(__file__).resolve().parents[1]
     def run(*cmd):
-        return subprocess.check_output(cmd,cwd=root,text=True).strip()
+        return subprocess.check_output(cmd,cwd=root,encoding='utf-8').strip()
     def sha(path):
         with path.open('rb') as stream:
             return hashlib.file_digest(stream,'sha256').hexdigest()

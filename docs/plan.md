@@ -45,6 +45,13 @@ exists yet: collection observes all pages and charges those observations. This
 admits a new short spatial page-field estimation protocol with independent and
 shuffled controls. Complete only #41; broader milestone10 remains open.
 
+The third delivery is the prospective [spatial page-field screen](spatial-screen-protocol.md),
+[#42](https://github.com/displague/dynamic-model-loading/issues/42). Reuse the
+published v0.26 development observations to test Gaussian conditioning over signed
+page effects with independent and shuffled-correlation controls. Score unobserved
+sites only; one observation is primary, four descriptive. This CPU-only component
+screen does not measure an online policy, accepted tokens or new traffic savings.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research
