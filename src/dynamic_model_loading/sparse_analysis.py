@@ -78,10 +78,14 @@ def decision(conditions):
 
 
 def analyze(output,*,config_relative='configs/sparse-down-screen.json',validator=validate_config,
-            hybrid_order=None,page_auditor=audit_pages,gate=decision,packet_bytes=0):
+            hybrid_order=None,page_auditor=audit_pages,gate=decision,packet_bytes=0,cold_capacity=False):
     from huggingface_hub import snapshot_download
     from transformers import AutoTokenizer
     output=Path(output); supervisor=require_supervisor(output)
+    check_cuda=bounded_cuda
+    if cold_capacity:
+        from .capacity_support import bounded, load_references, audit_allocation
+        check_cuda=bounded
     cfg=json.loads((output/'config.json').read_text()); validator(cfg)
     manifest=json.loads((output/'manifest.json').read_text())
     verify_snapshot(output,manifest,config_relative,cfg['protocol'],__file__)
@@ -108,10 +112,15 @@ def analyze(output,*,config_relative='configs/sparse-down-screen.json',validator
            'Independent tokenization mismatch')
     episodes=json.loads((output/'episodes.json').read_text())
     order=[(0,'resident'),(1,'resident')]+(hybrid_order or [(0,'stream'),(0,'sparse'),(1,'sparse'),(1,'stream')])+[(0,'repeat'),(1,'repeat')]
+    if cold_capacity: order=hybrid_order
     demand([(r['document'],r['condition']) for r in episodes]==order,'Episode matrix changed')
     refs={}; conditions={}; controls=[]; allcopies=dict(h2d_bytes=0,d2h_bytes=0)
+    if cold_capacity:
+        refs={doc:(r['ids'],r['stop_reason'],a) for doc,(r,a) in load_references(output,prefixes).items()}
     completion=json.loads((output/'completion.json').read_text())
     samples=list(read_rows(output/'resources.jsonl')); audit_resources(samples,completion['resources'])
+    if cold_capacity:
+        demand(all(r['gpu_used']<=4800*2**20 for r in samples),'Total GPU capacity cap exceeded')
     last=samples[0]['monotonic']
     for i,row in enumerate(episodes):
         folder=output/f'episode-{i}'; mode=row['condition']; doc=row['document']
@@ -119,7 +128,7 @@ def analyze(output,*,config_relative='configs/sparse-down-screen.json',validator
         demand(last<=row['started']<row['finished']<=samples[-1]['monotonic'] and
             row['wall_seconds']==row['finished']-row['started'] and 0<row['ttft_seconds']<row['wall_seconds'],
             'Episode clocks changed')
-        last=row['finished']; bounded_cuda(row['cuda'])
+        last=row['finished']; check_cuda(row['cuda'])
         calls=json.loads((folder/'calls.json').read_text()); tensors=load_file(folder/'tensors.safetensors')
         count=len(calls); demand(1<=count<=8,'Invalid output count')
         keys={f'logits.{j}' for j in range(count)}
@@ -132,6 +141,7 @@ def analyze(output,*,config_relative='configs/sparse-down-screen.json',validator
             demand(logits.shape==(50272,) and logits.dtype==np.float32 and np.isfinite(logits).all(),'Invalid logits')
             demand(c['step']==j and c['input_ids']==(prefixes[doc] if j==0 else [ids[-1]]) and
                 c['kv_length']==16+j and c['kv_bytes']==(16+j)*393216,'Input/KV contract failed')
+            if cold_capacity: demand(c['kv_storage_bytes']==c['kv_bytes'],'KV backing storage differs')
             demand(previous<=c['started']<c['finished']<=row['finished'],'Forward timing changed')
             previous=c['finished']; ids.append(int(logits.argmax()))
             demand(c['token']==ids[-1] and (j==count-1 or ids[-1]!=2),'Greedy/EOS reconstruction failed')
@@ -159,16 +169,20 @@ def analyze(output,*,config_relative='configs/sparse-down-screen.json',validator
         host_down_bytes=1610612736,workspace_bytes=67108864,pinned_staging_bytes=67108864,
         construction_d2h_bytes=1610612736,restore_h2d_bytes=1610612736,
         hybrid_cuda_parameters_bytes=3652419584,host_weight_aliases=True)
-    demand(all(allocation.get(k)==v for k,v in constants.items()),'Persistent allocation/copy accounting changed')
+    if cold_capacity:
+        audit_allocation(allocation,env)
+    else:
+        demand(all(allocation.get(k)==v for k,v in constants.items()),'Persistent allocation/copy accounting changed')
     if packet_bytes:
         demand(allocation['packet_host_bytes']==allocation['packet_cuda_bytes']==packet_bytes and
             allocation['total_pinned_bytes']==67108864+packet_bytes,'Packet buffers undercharged')
-    for k in ('resident_cuda','hybrid_cuda','restore_cuda'): bounded_cuda(allocation[k])
-    demand(allocation['resident_cuda']['allocated_bytes']>=constants['parameters_bytes'] and
-        allocation['hybrid_cuda']['allocated_bytes']>=constants['hybrid_cuda_parameters_bytes']+67108864+packet_bytes,
-        'Persistent CUDA allocation undercharged')
-    demand(all(math.isfinite(allocation[k]) and allocation[k]>0 for k in ('conversion_seconds','restore_seconds')),
-           'Setup timing invalid')
+    if not cold_capacity:
+        for k in ('resident_cuda','hybrid_cuda','restore_cuda'): bounded_cuda(allocation[k])
+        demand(allocation['resident_cuda']['allocated_bytes']>=constants['parameters_bytes'] and
+            allocation['hybrid_cuda']['allocated_bytes']>=constants['hybrid_cuda_parameters_bytes']+67108864+packet_bytes,
+            'Persistent CUDA allocation undercharged')
+        demand(all(math.isfinite(allocation[k]) and allocation[k]>0 for k in ('conversion_seconds','restore_seconds')),
+               'Setup timing invalid')
     demand(completion['complete'] is True and completion['full_suite_launched'] is False and
         0<completion['worker_inner_seconds']<=supervisor['worker_wall_seconds'],'Invalid completion')
     return dict(source_commit=manifest['source_commit'],conditions=conditions,controls=controls,

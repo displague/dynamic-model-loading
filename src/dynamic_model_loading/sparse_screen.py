@@ -23,7 +23,7 @@ def validate_config(cfg):
 
 
 def worker(output,*,config_path=CONFIG,validator=validate_config,source_file=__file__,bank_type=None,
-           hybrid_order=None):
+           hybrid_order=None,cold_capacity=False):
     import numpy as np
     import torch
     from huggingface_hub import snapshot_download
@@ -36,6 +36,11 @@ def worker(output,*,config_path=CONFIG,validator=validate_config,source_file=__f
     from .relu import extract
     from .sparse_down import SparseDown
     from .sparse_analysis import compare, bounded_cuda
+
+    if cold_capacity:
+        from .capacity_support import bounded as bounded_cuda, copy_references, load_references
+        from .capacity_down import move_except_down
+        from .decision_field import kv_storage_bytes
 
     started=time.perf_counter()
     cfg=json.loads(Path(config_path).read_text())
@@ -69,11 +74,19 @@ def worker(output,*,config_path=CONFIG,validator=validate_config,source_file=__f
         license='OPT custom license; checkpoint external, not redistributed',
         observations='Authored prompt continuations and execution receipts; no checkpoint weights in archive'))
     episodes=[]; refs={}; bank=None
-    with torch.inference_mode(),Resources(output/'resources.jsonl') as resources:
+    if cold_capacity:
+        copy_references(output); refs=load_references(output,prefixes)
+    with torch.inference_mode(),Resources(output/'resources.jsonl',
+            **(dict(gpu_limit=4800*2**20) if cold_capacity else {})) as resources:
         resources.boundary()
+        setup_started=time.perf_counter()
+        if cold_capacity:
+            torch.cuda.memory.set_per_process_memory_fraction(4800*2**20/env['gpu']['total_bytes'])
+            bounded_cuda(cuda_memory(torch.device('cuda:0')))
         model=AutoModelForCausalLM.from_pretrained(path,dtype=torch.float32,
             attn_implementation='sdpa',use_safetensors=False,weights_only=True,
-            local_files_only=True,trust_remote_code=False).eval().to('cuda')
+            local_files_only=True,trust_remote_code=False).eval()
+        if not cold_capacity: model=model.to('cuda')
         layers=extract(model)
         if (len(layers)!=24 or model.config.eos_token_id!=2 or model.config.vocab_size!=50272
             or any(layer.fc2.weight.shape!=(2048,8192) for layer in layers)
@@ -82,8 +95,23 @@ def worker(output,*,config_path=CONFIG,validator=validate_config,source_file=__f
         allocation=dict(parameters_bytes=sum(p.numel()*p.element_size() for p in model.parameters()),
             registered_buffers_bytes=sum(p.numel()*p.element_size() for p in model.buffers()))
         allocation['construction_h2d_bytes']=sum(allocation.values())
-        allocation['resident_cuda']=cuda_memory(torch.device('cuda:0'))
-        bounded_cuda(allocation['resident_cuda'])
+        if cold_capacity:
+            if any(p.device.type!='cpu' for p in model.parameters()): raise ValueError('Not CPU-first')
+            allocation.update(cpu_first=True,cpu_loaded_parameter_bytes=allocation['parameters_bytes'],
+                before_residency_cuda=cuda_memory(torch.device('cuda:0')),
+                allocator_limit_bytes=4800*2**20,
+                allocator_fraction=torch.cuda.memory.get_per_process_memory_fraction())
+            construction=time.perf_counter(); bank=bank_type(layers,width=128)
+            def capacity_check():
+                resources.check(); bounded_cuda(cuda_memory(torch.device('cuda:0')))
+            allocation['construction_h2d_bytes']=move_except_down(model,layers,check=capacity_check)
+            allocation.update(bank.allocation(),conversion_seconds=time.perf_counter()-construction,
+                hybrid_cuda_parameters_bytes=sum(p.numel()*p.element_size() for p in model.parameters() if p.is_cuda),
+                hybrid_cuda=cuda_memory(torch.device('cuda:0')),setup_seconds=time.perf_counter()-setup_started)
+            bounded_cuda(allocation['hybrid_cuda']); resources.boundary()
+        else:
+            allocation['resident_cuda']=cuda_memory(torch.device('cuda:0'))
+            bounded_cuda(allocation['resident_cuda'])
         def episode(doc,condition):
             resources.boundary(); bounded_cuda(cuda_memory(torch.device('cuda:0')))
             torch.cuda.reset_peak_memory_stats(); torch.cuda.synchronize()
@@ -110,7 +138,8 @@ def worker(output,*,config_path=CONFIG,validator=validate_config,source_file=__f
                 token=int(logits.argmax()); ids.append(token)
                 torch.cuda.synchronize(); finish=time.perf_counter()
                 calls.append(dict(step=step,input_ids=actual,token=token,kv_length=cache.get_seq_length(),
-                    kv_bytes=kv_bytes(cache),started=callstart,finished=finish))
+                    kv_bytes=kv_bytes(cache),started=callstart,finished=finish,
+                    **(dict(kv_storage_bytes=kv_storage_bytes(cache)) if cold_capacity else {})))
                 if first is None: first=finish-begin
                 del result
                 if token==2 or len(ids)==8: break
@@ -137,16 +166,18 @@ def worker(output,*,config_path=CONFIG,validator=validate_config,source_file=__f
                 ref,a=refs[doc]
                 if ids!=ref['ids'] or stop!=ref['stop_reason']: raise ValueError('Greedy reference mismatch')
                 compare(a,arrays)
-        episode(0,'resident'); episode(1,'resident')
-        construction=time.perf_counter(); bank=(bank_type or SparseDown)(layers,width=128)
-        allocation.update(bank.allocation(),conversion_seconds=time.perf_counter()-construction,
-            hybrid_cuda_parameters_bytes=sum(p.numel()*p.element_size() for p in model.parameters() if p.is_cuda),
-            hybrid_cuda=cuda_memory(torch.device('cuda:0')))
+        if not cold_capacity:
+            episode(0,'resident'); episode(1,'resident')
+            construction=time.perf_counter(); bank=(bank_type or SparseDown)(layers,width=128)
+            allocation.update(bank.allocation(),conversion_seconds=time.perf_counter()-construction,
+                hybrid_cuda_parameters_bytes=sum(p.numel()*p.element_size() for p in model.parameters() if p.is_cuda),
+                hybrid_cuda=cuda_memory(torch.device('cuda:0')))
         for doc,condition in (hybrid_order or [(0,'stream'),(0,'sparse'),(1,'sparse'),(1,'stream')]): episode(doc,condition)
-        restore=time.perf_counter(); allocation['restore_h2d_bytes']=bank.restore()
-        allocation['restore_seconds']=time.perf_counter()-restore
-        allocation['restore_cuda']=cuda_memory(torch.device('cuda:0'))
-        episode(0,'repeat'); episode(1,'repeat')
+        if not cold_capacity:
+            restore=time.perf_counter(); allocation['restore_h2d_bytes']=bank.restore()
+            allocation['restore_seconds']=time.perf_counter()-restore
+            allocation['restore_cuda']=cuda_memory(torch.device('cuda:0'))
+            episode(0,'repeat'); episode(1,'repeat')
         write(output/'episodes.json',episodes); write(output/'allocation.json',allocation)
         resources.boundary()
     write(output/'completion.json',dict(complete=True,worker_inner_seconds=time.perf_counter()-started,
