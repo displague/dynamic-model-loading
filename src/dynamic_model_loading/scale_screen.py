@@ -14,9 +14,9 @@ ARCHITECTURE=(32,2560,10240)
 ORDER=[(0,'packet'),(1,'packet'),(2,'packet')]
 
 
-def worker(output):
-    base_worker(output,config_path=CONFIG,hybrid_order=ORDER,bank_type=PrecisionRows,
-        bank_conditions=('packet',),source_file=__file__,architecture=ARCHITECTURE,cold_reference=True)
+def worker(output,*,config_path=CONFIG,source_file=__file__):
+    base_worker(output,config_path=config_path,hybrid_order=ORDER,bank_type=PrecisionRows,
+        bank_conditions=('packet',),source_file=source_file,architecture=ARCHITECTURE,cold_reference=True)
 
 
 def audit_pages(pages,arrays,calls,condition,capacity):
@@ -31,9 +31,9 @@ def decision(conditions):
         h2d_saving=1-p['h2d_bytes']/s['h2d_bytes'],wall_saving=1-p['wall_seconds']/s['wall_seconds'])
 
 
-def analyze(output):
+def analyze(output,*,config_relative='configs/scale-screen.json'):
     output=Path(output)
-    result=base_analyze(output,config_relative='configs/scale-screen.json',hybrid_order=ORDER,
+    result=base_analyze(output,config_relative=config_relative,hybrid_order=ORDER,
         bank_conditions=('packet',),page_auditor=audit_pages,decider=decision,
         architecture=ARCHITECTURE,cold_reference=True)
     m=json.loads((output/'manifest.json').read_text()); a=result['allocation']

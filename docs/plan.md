@@ -73,6 +73,13 @@ and historical raw replays pass. Close only #55. Four-delivery course complete;
 milestone10 stays open for qualified low-bit competition/context durability and
 unmeasured ReLU specialist/ranker variants. No extra matrix or native pivot follows.
 
+The owner then requested continuation within the remaining allowance. The separate
+[v0.41 context-union protocol](context-screen-protocol.md) freezes512-token prefixes
+from concatenated known archived WikiText records,16-token continuations, same
+CPU-first OPT2.7B4800MiB boundary. Prefill and decode gates are separate. Expect
+union growth to erode prefill savings even if decode remains efficient. No new
+holdout, hours-scale matrix, optimized-Q4 comparison or native patch is implied.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component

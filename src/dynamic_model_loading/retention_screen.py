@@ -41,6 +41,7 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
     from .capacity_down import move_except_down
     from .relu import extract
     started=time.perf_counter(); cfg=json.loads(Path(config_path).read_text()); layer_count,hidden,neurons=architecture
+    prefix_length=cfg['prefix_tokens']; generation_length=cfg['generation_tokens']
     manifest,protocol=committed_inputs(source_file,config_path,cfg['protocol'])
     demand(subprocess.check_output(['git','rev-parse','origin/main'],cwd=ROOT,text=True).strip()==manifest['source_commit'],
            'Push reviewed source first')
@@ -59,8 +60,8 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
     demand(torch.cuda.is_available(),'CUDA required'); env=environment(torch.device('cuda:0')); frozen_environment(env)
     manifest.update(environment=env,cuda_execution=True,artifacts=artifacts); write(output/'manifest.json',manifest)
     tokenizer=AutoTokenizer.from_pretrained(path,local_files_only=True,trust_remote_code=False)
-    prefixes=[tokenizer.encode(p,add_special_tokens=False)[:32] for p in [*cfg['prompts'],cfg['warmup_prompt']]]
-    demand(all(len(p)==32 for p in prefixes),'Short prompt'); write(output/'tokens.json',prefixes)
+    prefixes=[tokenizer.encode(p,add_special_tokens=False)[:prefix_length] for p in [*cfg['prompts'],cfg['warmup_prompt']]]
+    demand(all(len(p)==prefix_length for p in prefixes),'Short prompt'); write(output/'tokens.json',prefixes)
     write(output/'NOTICE.json',dict(checkpoint=cfg['repo'],license='OPT custom license; weights not redistributed',
         reference_gpu_startup=not cold_reference,capacity_claim=False))
     bank=None; episodes=[]; refs={}; limit=cfg['candidate_gpu_limit_mib']*2**20
@@ -94,8 +95,8 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
                     pages.append(row)
                 bank.record=record
             cache=DynamicCache(config=model.config); tokens=torch.tensor([prefixes[doc]],device='cuda')
-            h2d=32*8; d2h=0
-            for step in range(16):
+            h2d=prefix_length*8; d2h=0
+            for step in range(generation_length):
                 resources.check(); torch.cuda.synchronize(); callstart=time.perf_counter()
                 actual=tokens.cpu().tolist()[0]; d2h+=len(actual)*8
                 result=model(tokens,past_key_values=cache,use_cache=True)
@@ -105,7 +106,7 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
                 calls.append(dict(step=step,input_ids=actual,token=token,started=callstart,finished=finish,
                     kv_length=cache.get_seq_length(),kv_bytes=kv_bytes(cache),kv_storage_bytes=kv_storage_bytes(cache)))
                 del result
-                if token==2 or len(ids)==16: break
+                if token==2 or len(ids)==generation_length: break
                 tokens=torch.tensor([[token]],device='cuda'); h2d+=8
             write(folder/'calls.json',calls); write(folder/'pages.json',pages); save_file(arrays,folder/'tensors.safetensors')
             # FP16 footprint comparisons require a sample inside even a short
@@ -187,6 +188,7 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
     output=Path(output); supervisor=require_supervisor(output)
     cfg=json.loads((output/'config.json').read_text()); m=json.loads((output/'manifest.json').read_text())
     itemsize=4 if cfg['dtype']=='float32' else 2; layer_count,hidden,neurons=architecture
+    prefix_length=cfg['prefix_tokens']; generation_length=cfg['generation_tokens']
     verify_snapshot(output,m,config_relative,cfg['protocol'],__file__); frozen_environment(m['environment'])
     demand(m['cuda_execution'] is True and m['environment']['cpu_threads']==4 and
         not m['environment']['tf32_matmul'] and not m['environment']['tf32_cudnn'],'Execution drift')
@@ -205,7 +207,7 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
     for name in ('config.json','vocab.json','merges.txt','tokenizer_config.json','special_tokens_map.json'):
         demand(sha(path/name)==m['artifacts'][name],'Tokenizer changed')
     tokenizer=AutoTokenizer.from_pretrained(path,local_files_only=True,trust_remote_code=False)
-    demand(prefixes==[tokenizer.encode(p,add_special_tokens=False)[:32]
+    demand(prefixes==[tokenizer.encode(p,add_special_tokens=False)[:prefix_length]
         for p in [*cfg['prompts'],cfg['warmup_prompt']]],'Tokenization changed')
     reference_condition='stream' if cold_reference else 'resident'
     expected=[(3,reference_condition,True),*[(d,reference_condition,False) for d in range(3)],
@@ -216,19 +218,19 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
         folder=output/f'episode-{i}'; demand(r==json.loads((folder/'episode.json').read_text()),'Episode changed')
         calls=json.loads((folder/'calls.json').read_text()); pages=json.loads((folder/'pages.json').read_text())
         arrays=load_file(folder/'tensors.safetensors'); ids=[]; n=len(calls); d2h=0
-        demand(1<=n<=16 and r['started']>=previous and r['finished']>r['started']
+        demand(1<=n<=generation_length and r['started']>=previous and r['finished']>r['started']
             and r['wall_seconds']==r['finished']-r['started'],'Episode clocks invalid'); previous=r['finished']
         values=[]
         for j,c in enumerate(calls):
             a=arrays[f'logits.{j}']; demand(a.shape==(50272,) and a.dtype==np.float32 and np.isfinite(a).all(),'Bad logits')
             demand(c['step']==j and c['input_ids']==(prefixes[r['document']] if j==0 else [ids[-1]])
-                and c['kv_length']==32+j and c['kv_bytes']==c['kv_storage_bytes']==(32+j)*2*layer_count*hidden*itemsize,'KV/trajectory drift')
+                and c['kv_length']==prefix_length+j and c['kv_bytes']==c['kv_storage_bytes']==(prefix_length+j)*2*layer_count*hidden*itemsize,'KV/trajectory drift')
             demand(r['started']<=c['started']<c['finished']<=r['finished'] and (j==0 or calls[j-1]['finished']<=c['started']),'Call clock drift')
             token=int(a.argmax()); demand(token==c['token'] and (j==n-1 or token!=2),'Token drift'); ids.append(token); values.append(a)
             d2h+=len(c['input_ids'])*8+a.nbytes
         stop='eos' if ids[-1]==2 else 'length'
-        demand(ids==r['ids'] and r['stop_reason']==stop and (stop=='eos' or n==16),'Generation changed')
-        demand(r['explicit_copies']==dict(h2d_bytes=256+8*(n-1),d2h_bytes=d2h)
+        demand(ids==r['ids'] and r['stop_reason']==stop and (stop=='eos' or n==generation_length),'Generation changed')
+        demand(r['explicit_copies']==dict(h2d_bytes=prefix_length*8+8*(n-1),d2h_bytes=d2h)
             and r['ttft_seconds']==calls[0]['finished']-r['started'],'Token copy/TTFT mismatch')
         values=np.stack(values)
         if r['condition']=='resident' or (cold_reference and i<4):

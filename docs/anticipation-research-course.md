@@ -63,3 +63,12 @@ baselines, context/block-union durability and the genuinely unmeasured ReLU
 specialist/ranker variants open; new studies require new protocols. No additional
 release is fabricated by renaming one of the same failed candidates. Milestone10
 remains open and the practical stock32B comparison is unchanged.
+
+## Owner-requested continuation within the remaining allowance
+
+After v0.40 the owner explicitly requested continuation. The fifth delivery is a
+new [512-token context-union screen](context-screen-protocol.md), justified by the
+surviving larger FP16 acquisition result. It separates prefill union economics
+from scalar decode, uses known archived diagnostic text, and freezes all source/
+selection/gates before one minutes-scale worker. This is not automatic expansion
+of the earlier failed retention/forecast methods or full context validation.
