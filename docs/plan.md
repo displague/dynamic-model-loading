@@ -62,6 +62,16 @@ pass. Both methods fit; this is useful acquisition under an imposed FP32 budget,
 not access unavailable through ordinary lower precision. Only #50 completes.
 One delivery remains for the stronger resident-FP16 comparison; milestone10 open.
 
+The [v0.36 ordinary-FP16 result](resident-precision-results.md) completes the sixth
+delivery in31.048s. FP16 fits and matches all16 greedy outputs; first episode13.067s
+misses5s while the second takes0.062s. Full-logit numerical fidelity also differs;
+no task-quality loss or warmed speed comparison is inferred. All resource/state
+audits, exact repeat audit and622 CPU tests pass. Preserve the compound gate failure.
+[Course conclusion](residency-course-results.md): exact outgoing-row packet loading
+is the measured acquisition result, not uniquely enabled larger-model capacity.
+Complete only #51 and the six deliveries. Milestone10 remains open, with no automatic
+next sweep, long matrix, model download or native pivot.
+
 On 2026-09-15 the owner authorized the next six bounded research releases on
 information-bearing acquisition. The [course and inspirations](information-research-course.md)
 start with [decision-sensitive physical interventions](decision-field-protocol.md),

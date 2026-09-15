@@ -92,3 +92,13 @@ exact. Both fit; no full-GPU startup or restoration occurs. One delivery remains
 for an ordinary resident-FP16 comparison before claiming capacity unavailable
 through precision reduction. Artificial budget, known prefixes, small sample and
 sampled NVML remain explicit limitations; no native admission or long matrix.
+
+## Sixth delivery and end of this authorization
+
+[v0.36](resident-precision-results.md) observes ordinary FP16 capacity and16/16
+greedy parity, but its first-use13.067s episode misses the5s bar; second0.062s.
+FP32 numerical fidelity differs without changed tokens. Both gates remain failed,
+not waived. The [six-release conclusion](residency-course-results.md) preserves
+the exact-FP32 packet acquisition result and denies a uniquely enabled access or
+paired warmed-FP16 speedup claim. Complete only #51 and the six deliveries, leaving
+milestone10 open. No new experiment or native implementation is automatically queued.

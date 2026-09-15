@@ -1,0 +1,148 @@
+{
+  "source_commit": "3ea316fd07950736ea83f20719f8e90fcebc04b1",
+  "metrics": [
+    {
+      "first_divergence": null,
+      "aligned_positions": 8,
+      "relative_l2": [
+        0.0012560680217439794,
+        0.001057962151934379,
+        0.0008295597112174709,
+        0.0006501565423844717,
+        0.0006505164793872743,
+        0.0006152115414457727,
+        0.0007279544831889989,
+        0.0007109637748826597
+      ],
+      "all_ids_match": true,
+      "fp32_numerical": false
+    },
+    {
+      "first_divergence": null,
+      "aligned_positions": 8,
+      "relative_l2": [
+        0.0018766468457113651,
+        0.0018669110625652427,
+        0.001867900641892894,
+        0.0016982009589451173,
+        0.001820478954002196,
+        0.002271800015321601,
+        0.003782059601430273,
+        0.005116864577258555
+      ],
+      "all_ids_match": true,
+      "fp32_numerical": false
+    }
+  ],
+  "episodes": [
+    {
+      "document": 0,
+      "condition": "resident_fp16",
+      "ids": [
+        19,
+        10,
+        650,
+        6,
+        1062,
+        6,
+        4204,
+        13431
+      ],
+      "stop_reason": "length",
+      "started": 25862.5579443,
+      "finished": 25875.6253352,
+      "wall_seconds": 13.067390899999737,
+      "ttft_seconds": 11.104313800002274,
+      "explicit_copies": {
+        "h2d_bytes": 184,
+        "d2h_bytes": 1608888
+      },
+      "raw_tensor_bytes": 1608704,
+      "cuda": {
+        "allocated_bytes": 2645606912,
+        "reserved_bytes": 2854223872,
+        "peak_allocated_bytes": 2646135808,
+        "peak_reserved_bytes": 2854223872
+      }
+    },
+    {
+      "document": 1,
+      "condition": "resident_fp16",
+      "ids": [
+        1215,
+        36907,
+        1640,
+        46740,
+        43,
+        50118,
+        1437,
+        1437
+      ],
+      "stop_reason": "length",
+      "started": 25875.6271005,
+      "finished": 25875.688707,
+      "wall_seconds": 0.06160649999947054,
+      "ttft_seconds": 0.008004599996638717,
+      "explicit_copies": {
+        "h2d_bytes": 184,
+        "d2h_bytes": 1608888
+      },
+      "raw_tensor_bytes": 1608704,
+      "cuda": {
+        "allocated_bytes": 2645606912,
+        "reserved_bytes": 2854223872,
+        "peak_allocated_bytes": 2646135808,
+        "peak_reserved_bytes": 2854223872
+      }
+    }
+  ],
+  "allocation": {
+    "parameters_bytes": 2631516160,
+    "buffers_bytes": 0,
+    "construction_h2d_bytes": 2631516160,
+    "parameter_dtype": "torch.float16",
+    "all_parameters_cuda": true,
+    "tied_embeddings": true,
+    "allocator_fraction": 0.2949229475398127,
+    "before_cuda": {
+      "allocated_bytes": 0,
+      "reserved_bytes": 0,
+      "peak_allocated_bytes": 0,
+      "peak_reserved_bytes": 0
+    },
+    "resident_cuda": {
+      "allocated_bytes": 2631516160,
+      "reserved_bytes": 2847932416,
+      "peak_allocated_bytes": 2631516160,
+      "peak_reserved_bytes": 2847932416
+    },
+    "setup_seconds": 2.301883500000258
+  },
+  "resources": {
+    "samples": 84,
+    "peak_gpu_used": 3406925824,
+    "min_host_available": 15109443584,
+    "peak_rss": 3365748736,
+    "passed": true,
+    "error": null
+  },
+  "episode_explicit_copies": {
+    "h2d_bytes": 368,
+    "d2h_bytes": 3217776
+  },
+  "tokens": 16,
+  "wall_seconds": 13.128997399999207,
+  "reference_reused": true,
+  "checks": {
+    "Hordinary_access": false,
+    "Hfp32_numerical": false
+  },
+  "useful_latency_passed": false,
+  "decision": "ordinary_precision_access_unresolved",
+  "native_admission_evaluated": false,
+  "full_suite_launched": false,
+  "course_delivery_number": 6,
+  "paired_packet_speedup_measured": false,
+  "worker_wall_seconds": 25.024023699999816,
+  "analysis_wall_seconds": 6.024013099999138
+}
