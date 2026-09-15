@@ -1,0 +1,2436 @@
+{
+  "source_commit": "1c67774f63ac6ee1be4eeeaf620d4d7d9b415c69",
+  "statistics": {
+    "fit": {
+      "positions": 24,
+      "opportunities": 0,
+      "base_all8_matches": 22,
+      "base_target_matches": 22,
+      "all8_target_matches": 24,
+      "pairs": 144,
+      "additive_argmax_fraction": 1.0,
+      "aggregate_interaction_ratio": 0.06033347259377358,
+      "mean_pair_logit_relative_l2": 0.0027154256900137593
+    },
+    "diagnostic": {
+      "positions": 8,
+      "opportunities": 0,
+      "base_all8_matches": 7,
+      "base_target_matches": 7,
+      "all8_target_matches": 8,
+      "pairs": 48,
+      "additive_argmax_fraction": 1.0,
+      "aggregate_interaction_ratio": 0.06835811212810095,
+      "mean_pair_logit_relative_l2": 0.0036009630855710207
+    }
+  },
+  "gates": {
+    "Hdecision": false,
+    "Hjoint": true
+  },
+  "decision": "stop_this_action_frontier",
+  "additive_model_supported": true,
+  "frames": [
+    {
+      "document": "wikitext-train-8e1c37980c3d3c28",
+      "split": "fit",
+      "position": 0,
+      "argmax": {
+        "1": 18654,
+        "1+15": 18654,
+        "1+22": 18654,
+        "1+8": 18654,
+        "15": 18654,
+        "15+22": 18654,
+        "22": 18654,
+        "8": 18654,
+        "8+15": 18654,
+        "8+22": 18654,
+        "all8": 18654,
+        "base": 18654,
+        "target": 18654
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0014442046932116408,
+          "interaction_norm": 1.7057042419980042,
+          "joint_change_norm": 24.05019310378224,
+          "interaction_ratio": 0.07092268384862813
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001095498652478188,
+          "interaction_norm": 1.3067275277950907,
+          "joint_change_norm": 34.194431094320834,
+          "interaction_ratio": 0.03821462986737972
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0006027478394676446,
+          "interaction_norm": 0.7154682272027908,
+          "joint_change_norm": 37.054217911387006,
+          "interaction_ratio": 0.019308685151951964
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0036912742249055907,
+          "interaction_norm": 4.376253753371309,
+          "joint_change_norm": 25.639650741306212,
+          "interaction_ratio": 0.17068304859243025
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0013825476789706222,
+          "interaction_norm": 1.632722925223322,
+          "joint_change_norm": 44.5911856357532,
+          "interaction_ratio": 0.03661537368753445
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0013493556029115928,
+          "interaction_norm": 1.6097100891041012,
+          "joint_change_norm": 44.25162118340669,
+          "interaction_ratio": 0.03637629641708368
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-8e1c37980c3d3c28",
+      "split": "fit",
+      "position": 1,
+      "argmax": {
+        "1": 549,
+        "1+15": 549,
+        "1+22": 549,
+        "1+8": 549,
+        "15": 549,
+        "15+22": 549,
+        "22": 549,
+        "8": 549,
+        "8+15": 549,
+        "8+22": 549,
+        "all8": 549,
+        "base": 549,
+        "target": 549
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001974701576720082,
+          "interaction_norm": 2.5734249080214915,
+          "joint_change_norm": 69.93955052581668,
+          "interaction_ratio": 0.03679498779551874
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0019088035639021521,
+          "interaction_norm": 2.4882006771687175,
+          "joint_change_norm": 67.1714483209104,
+          "interaction_ratio": 0.037042534281550445
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0013725912346877972,
+          "interaction_norm": 1.7978568958121663,
+          "joint_change_norm": 48.87359989819168,
+          "interaction_ratio": 0.03678584961118624
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.003470698506179089,
+          "interaction_norm": 4.513978541650574,
+          "joint_change_norm": 86.52857349199367,
+          "interaction_ratio": 0.05216749056966996
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0034691955449517916,
+          "interaction_norm": 4.535123445560882,
+          "joint_change_norm": 63.601484814852896,
+          "interaction_ratio": 0.07130530771039156
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002479460939172858,
+          "interaction_norm": 3.2399527732017366,
+          "joint_change_norm": 65.02285436443796,
+          "interaction_ratio": 0.04982790750837476
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-8e1c37980c3d3c28",
+      "split": "fit",
+      "position": 2,
+      "argmax": {
+        "1": 8444,
+        "1+15": 8444,
+        "1+22": 8444,
+        "1+8": 8444,
+        "15": 8444,
+        "15+22": 8444,
+        "22": 8444,
+        "8": 8444,
+        "8+15": 8444,
+        "8+22": 8444,
+        "all8": 8444,
+        "base": 8444,
+        "target": 8444
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.00560007701198832,
+          "interaction_norm": 8.803469837204043,
+          "joint_change_norm": 67.4055975470099,
+          "interaction_ratio": 0.13060443283014206
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0016171939011728757,
+          "interaction_norm": 2.5078514626195343,
+          "joint_change_norm": 41.990758339409176,
+          "interaction_ratio": 0.05972389072730475
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0012919214652966676,
+          "interaction_norm": 2.0182203006856736,
+          "joint_change_norm": 68.6063716023995,
+          "interaction_ratio": 0.029417388699435117
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0028826789639868067,
+          "interaction_norm": 4.509374579956694,
+          "joint_change_norm": 60.71371146893086,
+          "interaction_ratio": 0.07427275438867355
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0024268706800784716,
+          "interaction_norm": 3.8271642166300017,
+          "joint_change_norm": 84.22524507909539,
+          "interaction_ratio": 0.045439632891966494
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001447504336901668,
+          "interaction_norm": 2.2423855021051997,
+          "joint_change_norm": 67.0163303171688,
+          "interaction_ratio": 0.03346028485135849
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-8e1c37980c3d3c28",
+      "split": "fit",
+      "position": 3,
+      "argmax": {
+        "1": 265,
+        "1+15": 265,
+        "1+22": 265,
+        "1+8": 265,
+        "15": 265,
+        "15+22": 265,
+        "22": 265,
+        "8": 265,
+        "8+15": 265,
+        "8+22": 265,
+        "all8": 265,
+        "base": 265,
+        "target": 265
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0008982547143617703,
+          "interaction_norm": 1.4776871428490872,
+          "joint_change_norm": 36.68172010354576,
+          "interaction_ratio": 0.04028401990631431
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0005934015390018302,
+          "interaction_norm": 0.9630131704299024,
+          "joint_change_norm": 36.1204449489632,
+          "interaction_ratio": 0.026661165768876963
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0019071372483093923,
+          "interaction_norm": 3.2018032175669537,
+          "joint_change_norm": 131.83307129159527,
+          "interaction_ratio": 0.024286798344286754
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0008307208286230628,
+          "interaction_norm": 1.3531732581798745,
+          "joint_change_norm": 33.853154845256014,
+          "interaction_ratio": 0.0399718509062236
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0018580565206953448,
+          "interaction_norm": 3.1301332235059176,
+          "joint_change_norm": 138.2540395396526,
+          "interaction_ratio": 0.022640446774129627
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002316979749342302,
+          "interaction_norm": 3.852790423231606,
+          "joint_change_norm": 126.12905475195318,
+          "interaction_ratio": 0.030546414787683513
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-850abe090d258c3c",
+      "split": "fit",
+      "position": 0,
+      "argmax": {
+        "1": 549,
+        "1+15": 549,
+        "1+22": 549,
+        "1+8": 549,
+        "15": 549,
+        "15+22": 549,
+        "22": 549,
+        "8": 549,
+        "8+15": 549,
+        "8+22": 549,
+        "all8": 2587,
+        "base": 549,
+        "target": 2587
+      },
+      "opportunity": false,
+      "base_target_match": false,
+      "all8_target_match": true,
+      "base_all8_match": false,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.009364399679252804,
+          "interaction_norm": 11.700641485580109,
+          "joint_change_norm": 66.55624924314768,
+          "interaction_ratio": 0.1758007943451644
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.005959298360773437,
+          "interaction_norm": 7.419417042063181,
+          "joint_change_norm": 130.4396763620765,
+          "interaction_ratio": 0.05688006325213692
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.00485740870901184,
+          "interaction_norm": 6.142613772357507,
+          "joint_change_norm": 104.07904124874436,
+          "interaction_ratio": 0.059018739014677586
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.009763118629167311,
+          "interaction_norm": 12.161629609367111,
+          "joint_change_norm": 126.11207166662273,
+          "interaction_ratio": 0.0964350949805692
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.007509189224124788,
+          "interaction_norm": 9.52625681359579,
+          "joint_change_norm": 121.13473222508627,
+          "interaction_ratio": 0.07864182830647279
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.01168907862162009,
+          "interaction_norm": 14.72757484352453,
+          "joint_change_norm": 132.88909538115223,
+          "interaction_ratio": 0.11082605989063987
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-850abe090d258c3c",
+      "split": "fit",
+      "position": 1,
+      "argmax": {
+        "1": 43980,
+        "1+15": 43980,
+        "1+22": 43980,
+        "1+8": 43980,
+        "15": 43980,
+        "15+22": 43980,
+        "22": 43980,
+        "8": 43980,
+        "8+15": 43980,
+        "8+22": 43980,
+        "all8": 43980,
+        "base": 43980,
+        "target": 43980
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0033494214894912336,
+          "interaction_norm": 4.183422025642648,
+          "joint_change_norm": 34.419817112710554,
+          "interaction_ratio": 0.12154108814534617
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0045864626200233394,
+          "interaction_norm": 5.757635942267215,
+          "joint_change_norm": 67.72835622760265,
+          "interaction_ratio": 0.08501071431467422
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002193305139025619,
+          "interaction_norm": 2.755287217602769,
+          "joint_change_norm": 55.66186238817841,
+          "interaction_ratio": 0.04950044966853181
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.003707215332124262,
+          "interaction_norm": 4.660259620221539,
+          "joint_change_norm": 76.60246726038787,
+          "interaction_ratio": 0.06083693889885215
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0024232885513762216,
+          "interaction_norm": 3.0478730800024287,
+          "joint_change_norm": 61.749833031303446,
+          "interaction_ratio": 0.049358401964542005
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0054935459446304605,
+          "interaction_norm": 6.95133719118771,
+          "joint_change_norm": 104.41412524329779,
+          "interaction_ratio": 0.06657468206519221
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-850abe090d258c3c",
+      "split": "fit",
+      "position": 2,
+      "argmax": {
+        "1": 330,
+        "1+15": 330,
+        "1+22": 330,
+        "1+8": 330,
+        "15": 330,
+        "15+22": 330,
+        "22": 330,
+        "8": 330,
+        "8+15": 330,
+        "8+22": 330,
+        "all8": 330,
+        "base": 330,
+        "target": 330
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0017219389939392424,
+          "interaction_norm": 2.406914881636143,
+          "joint_change_norm": 34.90806307522533,
+          "interaction_ratio": 0.06895011265590269
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0013634284902097906,
+          "interaction_norm": 1.8889221110121408,
+          "joint_change_norm": 48.992882760458464,
+          "interaction_ratio": 0.03855503094699841
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.000990363852826575,
+          "interaction_norm": 1.3741134222137172,
+          "joint_change_norm": 55.27202466186347,
+          "interaction_ratio": 0.024860920703015724
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002980053984402167,
+          "interaction_norm": 4.123049241328024,
+          "joint_change_norm": 51.74711623966506,
+          "interaction_ratio": 0.07967688908947616
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0018132326035203853,
+          "interaction_norm": 2.5116833699669434,
+          "joint_change_norm": 59.22098014743787,
+          "interaction_ratio": 0.0424120533586881
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0018727334811141755,
+          "interaction_norm": 2.569629615039478,
+          "joint_change_norm": 74.2844820246368,
+          "interaction_ratio": 0.034591741707066734
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-850abe090d258c3c",
+      "split": "fit",
+      "position": 3,
+      "argmax": {
+        "1": 785,
+        "1+15": 785,
+        "1+22": 785,
+        "1+8": 785,
+        "15": 785,
+        "15+22": 785,
+        "22": 785,
+        "8": 785,
+        "8+15": 785,
+        "8+22": 785,
+        "all8": 785,
+        "base": 785,
+        "target": 785
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0008305232230963743,
+          "interaction_norm": 1.0781426546731934,
+          "joint_change_norm": 23.412711811993415,
+          "interaction_ratio": 0.046049456523054415
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0008410163429244388,
+          "interaction_norm": 1.092579405144187,
+          "joint_change_norm": 27.046491010819423,
+          "interaction_ratio": 0.0403963458589553
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.000593258676591623,
+          "interaction_norm": 0.769370970924764,
+          "joint_change_norm": 38.440271337946214,
+          "interaction_ratio": 0.020014712283398517
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0014162554969354584,
+          "interaction_norm": 1.8451325973037092,
+          "joint_change_norm": 29.526553094622262,
+          "interaction_ratio": 0.062490619592158465
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.000812115466896014,
+          "interaction_norm": 1.057035820932461,
+          "joint_change_norm": 35.98011471006062,
+          "interaction_ratio": 0.029378333822735057
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0016021311420760715,
+          "interaction_norm": 2.0860084400645067,
+          "joint_change_norm": 41.59891998202326,
+          "interaction_ratio": 0.05014573553750827
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-957b54c84eddb069",
+      "split": "fit",
+      "position": 0,
+      "argmax": {
+        "1": 53401,
+        "1+15": 53401,
+        "1+22": 53401,
+        "1+8": 53401,
+        "15": 53401,
+        "15+22": 53401,
+        "22": 53401,
+        "8": 53401,
+        "8+15": 53401,
+        "8+22": 53401,
+        "all8": 53401,
+        "base": 53401,
+        "target": 53401
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0014781453291837832,
+          "interaction_norm": 2.097123288001625,
+          "joint_change_norm": 31.170571765691903,
+          "interaction_ratio": 0.06727894835441671
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0007600819401089436,
+          "interaction_norm": 1.102541663277257,
+          "joint_change_norm": 59.15740517866233,
+          "interaction_ratio": 0.018637424341846152
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0013484468428542284,
+          "interaction_norm": 1.9216872097797277,
+          "joint_change_norm": 103.9485636756371,
+          "interaction_ratio": 0.018486904886691784
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0018128829124473517,
+          "interaction_norm": 2.6335119578504713,
+          "joint_change_norm": 61.742822803509696,
+          "interaction_ratio": 0.042652924474013074
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0032183199227405336,
+          "interaction_norm": 4.59484047382335,
+          "joint_change_norm": 108.83560632372725,
+          "interaction_ratio": 0.042218173160685823
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.005155015251414692,
+          "interaction_norm": 7.522840825635599,
+          "joint_change_norm": 124.24248204458767,
+          "interaction_ratio": 0.06054966628029719
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-957b54c84eddb069",
+      "split": "fit",
+      "position": 1,
+      "argmax": {
+        "1": 11099,
+        "1+15": 11099,
+        "1+22": 11099,
+        "1+8": 11099,
+        "15": 11099,
+        "15+22": 11099,
+        "22": 11099,
+        "8": 11099,
+        "8+15": 11099,
+        "8+22": 11099,
+        "all8": 11099,
+        "base": 11099,
+        "target": 11099
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.003878747075856052,
+          "interaction_norm": 5.828349253178372,
+          "joint_change_norm": 78.79900911592995,
+          "interaction_ratio": 0.07396475309230909
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0009953449082905175,
+          "interaction_norm": 1.5419989940603058,
+          "joint_change_norm": 45.03809234589983,
+          "interaction_ratio": 0.034237662248602904
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002038485645910189,
+          "interaction_norm": 3.174742348805925,
+          "joint_change_norm": 91.0255739184561,
+          "interaction_ratio": 0.03487747686875307
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0033479795400596316,
+          "interaction_norm": 5.029845528838022,
+          "joint_change_norm": 92.71975186730157,
+          "interaction_ratio": 0.054247832069661106
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.006604246633028454,
+          "interaction_norm": 9.952528436465762,
+          "joint_change_norm": 104.2134551976052,
+          "interaction_ratio": 0.09550137664655868
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0028164330930164805,
+          "interaction_norm": 4.376052407726849,
+          "joint_change_norm": 92.54684543330333,
+          "interaction_ratio": 0.047284727936843435
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-957b54c84eddb069",
+      "split": "fit",
+      "position": 2,
+      "argmax": {
+        "1": 315,
+        "1+15": 315,
+        "1+22": 315,
+        "1+8": 315,
+        "15": 315,
+        "15+22": 315,
+        "22": 315,
+        "8": 315,
+        "8+15": 315,
+        "8+22": 315,
+        "all8": 315,
+        "base": 315,
+        "target": 315
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.013662016256708922,
+          "interaction_norm": 17.1911855512476,
+          "joint_change_norm": 112.97098041588264,
+          "interaction_ratio": 0.152173465149734
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0053367712157004,
+          "interaction_norm": 6.881389954903886,
+          "joint_change_norm": 74.27970879277385,
+          "interaction_ratio": 0.09264158498657615
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.007769580166627776,
+          "interaction_norm": 10.033497371037274,
+          "joint_change_norm": 104.03963075402734,
+          "interaction_ratio": 0.09643918666684503
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.008018357743745506,
+          "interaction_norm": 9.951937914740114,
+          "joint_change_norm": 145.22484592450712,
+          "interaction_ratio": 0.06852779117364996
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.01223224381381632,
+          "interaction_norm": 15.23190372686586,
+          "joint_change_norm": 159.08421587162658,
+          "interaction_ratio": 0.09574742310800516
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.004131751046217657,
+          "interaction_norm": 5.268978462909046,
+          "joint_change_norm": 81.02750722437204,
+          "interaction_ratio": 0.06502703394686446
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-957b54c84eddb069",
+      "split": "fit",
+      "position": 3,
+      "argmax": {
+        "1": 279,
+        "1+15": 279,
+        "1+22": 279,
+        "1+8": 279,
+        "15": 279,
+        "15+22": 279,
+        "22": 279,
+        "8": 279,
+        "8+15": 279,
+        "8+22": 279,
+        "all8": 279,
+        "base": 279,
+        "target": 279
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.003691472535470937,
+          "interaction_norm": 7.220791632354245,
+          "joint_change_norm": 64.39081412688785,
+          "interaction_ratio": 0.11214008908359242
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.003156757047003566,
+          "interaction_norm": 6.18567681360753,
+          "joint_change_norm": 79.33153393468558,
+          "interaction_ratio": 0.07797248467047489
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.005673199460116731,
+          "interaction_norm": 10.886756903840519,
+          "joint_change_norm": 179.60870649865169,
+          "interaction_ratio": 0.06061374816438671
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.003944054593526064,
+          "interaction_norm": 7.7357896779847435,
+          "joint_change_norm": 87.23714923661295,
+          "interaction_ratio": 0.08867540658628119
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0076442961212811215,
+          "interaction_norm": 14.719050831129843,
+          "joint_change_norm": 183.2830922729783,
+          "interaction_ratio": 0.08030773951155065
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.008671671145995123,
+          "interaction_norm": 16.643437758297097,
+          "joint_change_norm": 182.69499090063698,
+          "interaction_ratio": 0.09109958448367654
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-86f97e1be8510bb0",
+      "split": "fit",
+      "position": 0,
+      "argmax": {
+        "1": 651,
+        "1+15": 651,
+        "1+22": 651,
+        "1+8": 651,
+        "15": 651,
+        "15+22": 651,
+        "22": 651,
+        "8": 651,
+        "8+15": 651,
+        "8+22": 651,
+        "all8": 651,
+        "base": 651,
+        "target": 651
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0010993366866948022,
+          "interaction_norm": 1.349535209244797,
+          "joint_change_norm": 17.632777893745143,
+          "interaction_ratio": 0.07653559849599853
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0009662106912384987,
+          "interaction_norm": 1.1882197987347076,
+          "joint_change_norm": 22.636750338994062,
+          "interaction_ratio": 0.05249074098272314
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0015810415403739423,
+          "interaction_norm": 1.9470603571911205,
+          "joint_change_norm": 66.9413094812784,
+          "interaction_ratio": 0.02908608111013512
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0007998911917948135,
+          "interaction_norm": 0.9780036062746843,
+          "joint_change_norm": 27.77738539043113,
+          "interaction_ratio": 0.03520862718100139
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0013754567563294998,
+          "interaction_norm": 1.6836461304919468,
+          "joint_change_norm": 65.83832531190687,
+          "interaction_ratio": 0.025572432508204443
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0012755063926841,
+          "interaction_norm": 1.564044465791602,
+          "joint_change_norm": 62.47458320771985,
+          "interaction_ratio": 0.02503489235920723
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-86f97e1be8510bb0",
+      "split": "fit",
+      "position": 1,
+      "argmax": {
+        "1": 75,
+        "1+15": 75,
+        "1+22": 75,
+        "1+8": 75,
+        "15": 75,
+        "15+22": 75,
+        "22": 261,
+        "8": 261,
+        "8+15": 75,
+        "8+22": 261,
+        "all8": 75,
+        "base": 75,
+        "target": 75
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.012894148914560024,
+          "interaction_norm": 21.07488020142609,
+          "joint_change_norm": 118.61840653902783,
+          "interaction_ratio": 0.17766956087453453
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.004537564379504703,
+          "interaction_norm": 7.547264678589161,
+          "joint_change_norm": 131.7497307017088,
+          "interaction_ratio": 0.057284858484278264
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.009015448914687595,
+          "interaction_norm": 15.414412985044084,
+          "joint_change_norm": 179.6186291554897,
+          "interaction_ratio": 0.08581745143873887
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0023161026958858706,
+          "interaction_norm": 3.6973776062355506,
+          "joint_change_norm": 108.97645782052791,
+          "interaction_ratio": 0.03392822339963297
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.004100403052201098,
+          "interaction_norm": 6.743803606376505,
+          "joint_change_norm": 119.17373687175031,
+          "interaction_ratio": 0.05658800154629622
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0023794561060270607,
+          "interaction_norm": 4.005569561499089,
+          "joint_change_norm": 121.78984685799901,
+          "interaction_ratio": 0.032889191216156036
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-86f97e1be8510bb0",
+      "split": "fit",
+      "position": 2,
+      "argmax": {
+        "1": 264,
+        "1+15": 264,
+        "1+22": 264,
+        "1+8": 264,
+        "15": 264,
+        "15+22": 264,
+        "22": 264,
+        "8": 264,
+        "8+15": 264,
+        "8+22": 264,
+        "all8": 264,
+        "base": 264,
+        "target": 264
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.004112607471088888,
+          "interaction_norm": 4.886916923116041,
+          "joint_change_norm": 37.89498050001473,
+          "interaction_ratio": 0.1289594785017541
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.003916121826657933,
+          "interaction_norm": 4.669995786733512,
+          "joint_change_norm": 68.06907662723715,
+          "interaction_ratio": 0.06860671567953752
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0029741660261196007,
+          "interaction_norm": 3.5520654599454176,
+          "joint_change_norm": 58.701368300245946,
+          "interaction_ratio": 0.060510777905164015
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001902836457774988,
+          "interaction_norm": 2.239775115962452,
+          "joint_change_norm": 29.75788423867215,
+          "interaction_ratio": 0.07526661163133803
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0012676856501535208,
+          "interaction_norm": 1.4982832486000135,
+          "joint_change_norm": 36.466629690515106,
+          "interaction_ratio": 0.04108641959280689
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001914180344571958,
+          "interaction_norm": 2.2651047071381525,
+          "joint_change_norm": 40.550752892701325,
+          "interaction_ratio": 0.05585851175517497
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-86f97e1be8510bb0",
+      "split": "fit",
+      "position": 3,
+      "argmax": {
+        "1": 279,
+        "1+15": 279,
+        "1+22": 279,
+        "1+8": 279,
+        "15": 279,
+        "15+22": 279,
+        "22": 279,
+        "8": 279,
+        "8+15": 279,
+        "8+22": 279,
+        "all8": 279,
+        "base": 279,
+        "target": 279
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001072670184574114,
+          "interaction_norm": 1.3482028494857696,
+          "joint_change_norm": 14.17543716711054,
+          "interaction_ratio": 0.09510837892279138
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0007189769760165547,
+          "interaction_norm": 0.9027457008195522,
+          "joint_change_norm": 17.21565648594175,
+          "interaction_ratio": 0.052437483377803885
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.00047678654939038256,
+          "interaction_norm": 0.5997864852730983,
+          "joint_change_norm": 24.607846452780414,
+          "interaction_ratio": 0.02437379014145015
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0008615695794517297,
+          "interaction_norm": 1.0787705168147739,
+          "joint_change_norm": 17.24715809917206,
+          "interaction_ratio": 0.06254772586949033
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.000452383229633822,
+          "interaction_norm": 0.5678304667242078,
+          "joint_change_norm": 22.676167132252246,
+          "interaction_ratio": 0.025040848544310833
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0006516850602476702,
+          "interaction_norm": 0.8172050294411992,
+          "joint_change_norm": 25.647695999700705,
+          "interaction_ratio": 0.03186270725646216
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-3f55ee4b48a5d6dc",
+      "split": "fit",
+      "position": 0,
+      "argmax": {
+        "1": 220,
+        "1+15": 220,
+        "1+22": 220,
+        "1+8": 220,
+        "15": 220,
+        "15+22": 220,
+        "22": 220,
+        "8": 220,
+        "8+15": 220,
+        "8+22": 220,
+        "all8": 220,
+        "base": 220,
+        "target": 220
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0037496658230384496,
+          "interaction_norm": 4.341934933524424,
+          "joint_change_norm": 43.580580580005204,
+          "interaction_ratio": 0.09963003878650728
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002599020363338787,
+          "interaction_norm": 2.9889654124816625,
+          "joint_change_norm": 52.96607574901904,
+          "interaction_ratio": 0.05643169463120023
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002696764079388598,
+          "interaction_norm": 3.0699666715605796,
+          "joint_change_norm": 86.45559366703496,
+          "interaction_ratio": 0.0355091734536448
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.005903301960873491,
+          "interaction_norm": 6.8144088359819985,
+          "joint_change_norm": 60.184514148141275,
+          "interaction_ratio": 0.11322528614601192
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0038242949701384793,
+          "interaction_norm": 4.370055258905834,
+          "joint_change_norm": 68.43928754553001,
+          "interaction_ratio": 0.06385302091285806
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.005088905535912381,
+          "interaction_norm": 5.783480133791041,
+          "joint_change_norm": 80.3393716656396,
+          "interaction_ratio": 0.07198811758026957
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-3f55ee4b48a5d6dc",
+      "split": "fit",
+      "position": 1,
+      "argmax": {
+        "1": 16,
+        "1+15": 16,
+        "1+22": 16,
+        "1+8": 16,
+        "15": 16,
+        "15+22": 16,
+        "22": 16,
+        "8": 16,
+        "8+15": 16,
+        "8+22": 16,
+        "all8": 16,
+        "base": 16,
+        "target": 16
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0010596562223944386,
+          "interaction_norm": 0.7894824901980116,
+          "joint_change_norm": 11.134328436975434,
+          "interaction_ratio": 0.07090526336337077
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0005608520688687216,
+          "interaction_norm": 0.42033746680132505,
+          "joint_change_norm": 17.689614611081222,
+          "interaction_ratio": 0.023761821613570655
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0010964046471479767,
+          "interaction_norm": 0.8157003414063491,
+          "joint_change_norm": 38.427661808595396,
+          "interaction_ratio": 0.021226905385742085
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002484272298746178,
+          "interaction_norm": 1.8573813584567398,
+          "joint_change_norm": 15.952168972749403,
+          "interaction_ratio": 0.11643440848887991
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002160369186281461,
+          "interaction_norm": 1.6039256898689753,
+          "joint_change_norm": 40.50243116215654,
+          "interaction_ratio": 0.039600726273626846
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002315436718883209,
+          "interaction_norm": 1.72957264076684,
+          "joint_change_norm": 34.6132228541189,
+          "interaction_ratio": 0.049968552424497055
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-3f55ee4b48a5d6dc",
+      "split": "fit",
+      "position": 2,
+      "argmax": {
+        "1": 22,
+        "1+15": 22,
+        "1+22": 22,
+        "1+8": 22,
+        "15": 22,
+        "15+22": 22,
+        "22": 22,
+        "8": 22,
+        "8+15": 22,
+        "8+22": 22,
+        "all8": 24,
+        "base": 22,
+        "target": 24
+      },
+      "opportunity": false,
+      "base_target_match": false,
+      "all8_target_match": true,
+      "base_all8_match": false,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0005503872377249284,
+          "interaction_norm": 0.4850593636142673,
+          "joint_change_norm": 7.429427470986527,
+          "interaction_ratio": 0.06528892912792082
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.00042936188385219175,
+          "interaction_norm": 0.3787384816160087,
+          "joint_change_norm": 11.3088064351372,
+          "interaction_ratio": 0.033490579557471555
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0004445941058757276,
+          "interaction_norm": 0.3914358137147031,
+          "joint_change_norm": 33.858175194371164,
+          "interaction_ratio": 0.011561042834339706
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.000791306716874887,
+          "interaction_norm": 0.6983326131790809,
+          "joint_change_norm": 14.133444292971893,
+          "interaction_ratio": 0.04940993849081354
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0007745189140540965,
+          "interaction_norm": 0.6826844831598622,
+          "joint_change_norm": 38.34711481781064,
+          "interaction_ratio": 0.017802760035620296
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0014332095225125607,
+          "interaction_norm": 1.2642521335427819,
+          "joint_change_norm": 40.87174110609636,
+          "interaction_ratio": 0.030932181975340613
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-3f55ee4b48a5d6dc",
+      "split": "fit",
+      "position": 3,
+      "argmax": {
+        "1": 1154,
+        "1+15": 1154,
+        "1+22": 1154,
+        "1+8": 1154,
+        "15": 1154,
+        "15+22": 1154,
+        "22": 1154,
+        "8": 1154,
+        "8+15": 1154,
+        "8+22": 1154,
+        "all8": 1154,
+        "base": 1154,
+        "target": 1154
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0012516423044207016,
+          "interaction_norm": 1.225748205657264,
+          "joint_change_norm": 16.569220678699658,
+          "interaction_ratio": 0.0739774205091618
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0006702707373031409,
+          "interaction_norm": 0.6585094410633322,
+          "joint_change_norm": 25.03172519464379,
+          "interaction_ratio": 0.026306993862502053
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0012267897989441312,
+          "interaction_norm": 1.201141788717227,
+          "joint_change_norm": 59.93024983278859,
+          "interaction_ratio": 0.02004232907535899
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0015520974252366355,
+          "interaction_norm": 1.5219847886739073,
+          "joint_change_norm": 20.64791875016857,
+          "interaction_ratio": 0.07371129299225287
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0016010325580035748,
+          "interaction_norm": 1.5647022935742503,
+          "joint_change_norm": 59.01461185853236,
+          "interaction_ratio": 0.02651381148324921
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0018933182169473374,
+          "interaction_norm": 1.8564575790608644,
+          "joint_change_norm": 60.984696475061114,
+          "interaction_ratio": 0.03044136785726298
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-d0215dcb2d866b47",
+      "split": "fit",
+      "position": 0,
+      "argmax": {
+        "1": 198,
+        "1+15": 198,
+        "1+22": 198,
+        "1+8": 198,
+        "15": 198,
+        "15+22": 198,
+        "22": 198,
+        "8": 198,
+        "8+15": 198,
+        "8+22": 198,
+        "all8": 198,
+        "base": 198,
+        "target": 198
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.00270513326752279,
+          "interaction_norm": 3.5646323762276273,
+          "joint_change_norm": 30.38211644506871,
+          "interaction_ratio": 0.11732666427872239
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0010825167711683312,
+          "interaction_norm": 1.4239631896405416,
+          "joint_change_norm": 34.27280271012861,
+          "interaction_ratio": 0.04154790612498461
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0014743043897177798,
+          "interaction_norm": 1.9548794267503633,
+          "joint_change_norm": 48.09693769425155,
+          "interaction_ratio": 0.0406445715770384
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0013047446497606778,
+          "interaction_norm": 1.7188224123365337,
+          "joint_change_norm": 33.13710191652336,
+          "interaction_ratio": 0.05187002824406519
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001293822524689563,
+          "interaction_norm": 1.7182478982988767,
+          "joint_change_norm": 46.65146191673145,
+          "interaction_ratio": 0.03683159814725186
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0011435956367496956,
+          "interaction_norm": 1.51702074883161,
+          "joint_change_norm": 48.27604629113694,
+          "interaction_ratio": 0.031423881311302033
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-d0215dcb2d866b47",
+      "split": "fit",
+      "position": 1,
+      "argmax": {
+        "1": 16,
+        "1+15": 16,
+        "1+22": 16,
+        "1+8": 16,
+        "15": 16,
+        "15+22": 16,
+        "22": 16,
+        "8": 16,
+        "8+15": 16,
+        "8+22": 16,
+        "all8": 16,
+        "base": 16,
+        "target": 16
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0010124919979177828,
+          "interaction_norm": 1.1706016356177198,
+          "joint_change_norm": 12.60602593303641,
+          "interaction_ratio": 0.09286048131552252
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0006859023501380614,
+          "interaction_norm": 0.7928107473158641,
+          "joint_change_norm": 32.081276957772324,
+          "interaction_ratio": 0.024712568279604906
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0005639496497683912,
+          "interaction_norm": 0.6527625955018411,
+          "joint_change_norm": 43.282309031024624,
+          "interaction_ratio": 0.015081510439610394
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0015296144096435978,
+          "interaction_norm": 1.7677543632363957,
+          "joint_change_norm": 36.87023743481713,
+          "interaction_ratio": 0.04794529371723216
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.00115691775818454,
+          "interaction_norm": 1.3386961194776827,
+          "joint_change_norm": 40.235441195958636,
+          "interaction_ratio": 0.03327156555728648
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002116883136238859,
+          "interaction_norm": 2.448064261642827,
+          "joint_change_norm": 46.43275171570002,
+          "interaction_ratio": 0.05272279094359764
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-d0215dcb2d866b47",
+      "split": "fit",
+      "position": 2,
+      "argmax": {
+        "1": 220,
+        "1+15": 220,
+        "1+22": 220,
+        "1+8": 220,
+        "15": 220,
+        "15+22": 220,
+        "22": 220,
+        "8": 220,
+        "8+15": 220,
+        "8+22": 220,
+        "all8": 220,
+        "base": 220,
+        "target": 220
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0010777024231650816,
+          "interaction_norm": 1.3715198568432858,
+          "joint_change_norm": 22.31764066102227,
+          "interaction_ratio": 0.06145451831916281
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0007679756355349848,
+          "interaction_norm": 0.9857301577505159,
+          "joint_change_norm": 20.812791713005286,
+          "interaction_ratio": 0.047361746148382525
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001046067341911738,
+          "interaction_norm": 1.3272136119509468,
+          "joint_change_norm": 54.648515875140326,
+          "interaction_ratio": 0.024286361499429077
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0011201641542331162,
+          "interaction_norm": 1.4400684293426897,
+          "joint_change_norm": 19.929234256379484,
+          "interaction_ratio": 0.07225909489631865
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001352119614448957,
+          "interaction_norm": 1.7175832602696135,
+          "joint_change_norm": 52.50007246306253,
+          "interaction_ratio": 0.03271582646820256
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0015398984074002757,
+          "interaction_norm": 1.9736817371684077,
+          "joint_change_norm": 50.600345814746504,
+          "interaction_ratio": 0.039005301354940854
+        }
+      ]
+    },
+    {
+      "document": "wikitext-train-d0215dcb2d866b47",
+      "split": "fit",
+      "position": 3,
+      "argmax": {
+        "1": 279,
+        "1+15": 279,
+        "1+22": 279,
+        "1+8": 279,
+        "15": 279,
+        "15+22": 279,
+        "22": 279,
+        "8": 279,
+        "8+15": 279,
+        "8+22": 279,
+        "all8": 279,
+        "base": 279,
+        "target": 279
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0009482924202631113,
+          "interaction_norm": 1.2209514692038452,
+          "joint_change_norm": 33.059771638231545,
+          "interaction_ratio": 0.03693163650870146
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0008800627030723919,
+          "interaction_norm": 1.1363285063044068,
+          "joint_change_norm": 28.124866742030612,
+          "interaction_ratio": 0.04040298276707014
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0011003871131346004,
+          "interaction_norm": 1.4084621667996577,
+          "joint_change_norm": 54.505544768017636,
+          "interaction_ratio": 0.02584071350528185
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0010472038822276185,
+          "interaction_norm": 1.3546688544926253,
+          "joint_change_norm": 21.20678142554927,
+          "interaction_ratio": 0.06387904073272346
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0009562758881749166,
+          "interaction_norm": 1.2260807398857299,
+          "joint_change_norm": 48.86313565169854,
+          "interaction_ratio": 0.025092142031681298
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0012646019488969547,
+          "interaction_norm": 1.6259850608193445,
+          "joint_change_norm": 47.05736092958794,
+          "interaction_ratio": 0.034553256466131
+        }
+      ]
+    },
+    {
+      "document": "wikitext-validation-59a50d9ab4d0c84c",
+      "split": "diagnostic",
+      "position": 0,
+      "argmax": {
+        "1": 2308,
+        "1+15": 2308,
+        "1+22": 2308,
+        "1+8": 2308,
+        "15": 2308,
+        "15+22": 2308,
+        "22": 2308,
+        "8": 2308,
+        "8+15": 2308,
+        "8+22": 2308,
+        "all8": 2308,
+        "base": 2308,
+        "target": 2308
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0024553431336261818,
+          "interaction_norm": 5.578184185482872,
+          "joint_change_norm": 52.83002842360319,
+          "interaction_ratio": 0.10558737808648752
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0016016750003865687,
+          "interaction_norm": 3.652798617332255,
+          "joint_change_norm": 57.91674243368106,
+          "interaction_ratio": 0.06306982167574392
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0029500982487867824,
+          "interaction_norm": 6.779219723142985,
+          "joint_change_norm": 125.48077359020374,
+          "interaction_ratio": 0.05402596373275975
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0023781385995062525,
+          "interaction_norm": 5.417310088986667,
+          "joint_change_norm": 73.98313988070687,
+          "interaction_ratio": 0.07322357631376199
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.004234080588132262,
+          "interaction_norm": 9.70715425576812,
+          "joint_change_norm": 128.6629708855402,
+          "interaction_ratio": 0.07544637115836302
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0036503462242108257,
+          "interaction_norm": 8.410932088475512,
+          "joint_change_norm": 139.12152752349408,
+          "interaction_ratio": 0.06045744492745826
+        }
+      ]
+    },
+    {
+      "document": "wikitext-validation-59a50d9ab4d0c84c",
+      "split": "diagnostic",
+      "position": 1,
+      "argmax": {
+        "1": 3988,
+        "1+15": 3988,
+        "1+22": 3988,
+        "1+8": 3988,
+        "15": 3988,
+        "15+22": 3988,
+        "22": 3988,
+        "8": 3988,
+        "8+15": 3988,
+        "8+22": 3988,
+        "all8": 3988,
+        "base": 3988,
+        "target": 3988
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.00282849045910778,
+          "interaction_norm": 5.778394161891668,
+          "joint_change_norm": 61.789384391736654,
+          "interaction_ratio": 0.09351758750754662
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0018738213015318252,
+          "interaction_norm": 3.815714400552546,
+          "joint_change_norm": 62.02826439595624,
+          "interaction_ratio": 0.0615157370226419
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0035534878089477392,
+          "interaction_norm": 7.253561442608543,
+          "joint_change_norm": 145.17412501276016,
+          "interaction_ratio": 0.04996456112252089
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002301423607185764,
+          "interaction_norm": 4.700534168804818,
+          "joint_change_norm": 79.27722623198612,
+          "interaction_ratio": 0.05929236417845666
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.004542257889815863,
+          "interaction_norm": 9.301047369259129,
+          "joint_change_norm": 153.9518047428499,
+          "interaction_ratio": 0.060415318838223
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.004036384552418888,
+          "interaction_norm": 8.241561578753817,
+          "joint_change_norm": 150.53223433640144,
+          "interaction_ratio": 0.054749480170047916
+        }
+      ]
+    },
+    {
+      "document": "wikitext-validation-59a50d9ab4d0c84c",
+      "split": "diagnostic",
+      "position": 2,
+      "argmax": {
+        "1": 1,
+        "1+15": 1,
+        "1+22": 1,
+        "1+8": 1,
+        "15": 1,
+        "15+22": 1,
+        "22": 1,
+        "8": 1,
+        "8+15": 1,
+        "8+22": 1,
+        "all8": 1,
+        "base": 1,
+        "target": 1
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.006038974725952153,
+          "interaction_norm": 6.673328663298506,
+          "joint_change_norm": 38.28244138204421,
+          "interaction_ratio": 0.17431826243005827
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0024843939684937063,
+          "interaction_norm": 2.7522946508076505,
+          "joint_change_norm": 35.4167828283835,
+          "interaction_ratio": 0.07771159408081312
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0019124200445968925,
+          "interaction_norm": 2.1467460605475344,
+          "joint_change_norm": 50.82840828737887,
+          "interaction_ratio": 0.04223516204580008
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0037159056916706537,
+          "interaction_norm": 4.086732185798323,
+          "joint_change_norm": 38.641798990151266,
+          "interaction_ratio": 0.10575936660816229
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0019468012758091227,
+          "interaction_norm": 2.168860622193526,
+          "joint_change_norm": 44.63909228993907,
+          "interaction_ratio": 0.048586575374480724
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0016106194050336273,
+          "interaction_norm": 1.7967463964054964,
+          "joint_change_norm": 41.453350371620196,
+          "interaction_ratio": 0.043343816128203365
+        }
+      ]
+    },
+    {
+      "document": "wikitext-validation-59a50d9ab4d0c84c",
+      "split": "diagnostic",
+      "position": 3,
+      "argmax": {
+        "1": 374,
+        "1+15": 374,
+        "1+22": 374,
+        "1+8": 374,
+        "15": 374,
+        "15+22": 374,
+        "22": 374,
+        "8": 374,
+        "8+15": 374,
+        "8+22": 374,
+        "all8": 374,
+        "base": 374,
+        "target": 374
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0024978246490469243,
+          "interaction_norm": 2.8402030107839837,
+          "joint_change_norm": 38.15847253210875,
+          "interaction_ratio": 0.07443177942707409
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002078094945279982,
+          "interaction_norm": 2.356474832210226,
+          "joint_change_norm": 37.85117379978542,
+          "interaction_ratio": 0.062256321155979184
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.00186916488613235,
+          "interaction_norm": 2.1169335602501342,
+          "joint_change_norm": 50.224024923892,
+          "interaction_ratio": 0.04214981900510906
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0016912987004407028,
+          "interaction_norm": 1.9179079694715688,
+          "joint_change_norm": 31.27627992664278,
+          "interaction_ratio": 0.0613214862499614
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0016082549306063766,
+          "interaction_norm": 1.8210512813964839,
+          "joint_change_norm": 49.66464245701172,
+          "interaction_ratio": 0.036666956436316504
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0015822615354891538,
+          "interaction_norm": 1.7874169212853994,
+          "joint_change_norm": 45.482053598457796,
+          "interaction_ratio": 0.03929938909675809
+        }
+      ]
+    },
+    {
+      "document": "wikitext-validation-2c7c602b5ac557ff",
+      "split": "diagnostic",
+      "position": 0,
+      "argmax": {
+        "1": 5059,
+        "1+15": 5059,
+        "1+22": 5059,
+        "1+8": 5059,
+        "15": 5059,
+        "15+22": 5059,
+        "22": 5059,
+        "8": 5059,
+        "8+15": 5059,
+        "8+22": 5059,
+        "all8": 5059,
+        "base": 5059,
+        "target": 5059
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0007376070420348254,
+          "interaction_norm": 1.4006613897324762,
+          "joint_change_norm": 26.08982567742119,
+          "interaction_ratio": 0.05368611530987134
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0007358776085558506,
+          "interaction_norm": 1.400511752565468,
+          "joint_change_norm": 51.68145076376826,
+          "interaction_ratio": 0.027098924892164776
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0012618137407204555,
+          "interaction_norm": 2.388592391668584,
+          "joint_change_norm": 122.7191627959529,
+          "interaction_ratio": 0.019463890864706554
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001218307346397443,
+          "interaction_norm": 2.317475092582301,
+          "joint_change_norm": 44.096735769102224,
+          "interaction_ratio": 0.0525543456258754
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001591372207653381,
+          "interaction_norm": 3.010541235476919,
+          "joint_change_norm": 124.25307834883318,
+          "interaction_ratio": 0.024229107845722762
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0033342318342812504,
+          "interaction_norm": 6.319674010308949,
+          "joint_change_norm": 129.23184218093516,
+          "interaction_ratio": 0.04890183335358547
+        }
+      ]
+    },
+    {
+      "document": "wikitext-validation-2c7c602b5ac557ff",
+      "split": "diagnostic",
+      "position": 1,
+      "argmax": {
+        "1": 374,
+        "1+15": 374,
+        "1+22": 374,
+        "1+8": 374,
+        "15": 374,
+        "15+22": 374,
+        "22": 374,
+        "8": 374,
+        "8+15": 374,
+        "8+22": 374,
+        "all8": 374,
+        "base": 374,
+        "target": 374
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.03044853564223967,
+          "interaction_norm": 37.14639300922535,
+          "joint_change_norm": 198.25007673005547,
+          "interaction_ratio": 0.18737139284846396
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.008133548823082697,
+          "interaction_norm": 9.994424547681882,
+          "joint_change_norm": 117.15930884796539,
+          "interaction_ratio": 0.08530627780206
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.010673006872211047,
+          "interaction_norm": 13.132315374608195,
+          "joint_change_norm": 139.86879392332241,
+          "interaction_ratio": 0.0938902453238245
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.006325669263248774,
+          "interaction_norm": 7.739406917750154,
+          "joint_change_norm": 104.33956738901809,
+          "interaction_ratio": 0.07417518695371493
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.008482409899019803,
+          "interaction_norm": 10.409031987666534,
+          "joint_change_norm": 121.36147927828814,
+          "interaction_ratio": 0.08576882919989864
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0029054513082157505,
+          "interaction_norm": 3.5811977912295863,
+          "joint_change_norm": 63.76012505514588,
+          "interaction_ratio": 0.056166730980094885
+        }
+      ]
+    },
+    {
+      "document": "wikitext-validation-2c7c602b5ac557ff",
+      "split": "diagnostic",
+      "position": 2,
+      "argmax": {
+        "1": 2016,
+        "1+15": 2016,
+        "1+22": 2016,
+        "1+8": 2016,
+        "15": 2016,
+        "15+22": 2016,
+        "22": 2016,
+        "8": 2016,
+        "8+15": 2016,
+        "8+22": 2016,
+        "all8": 14682,
+        "base": 2016,
+        "target": 14682
+      },
+      "opportunity": false,
+      "base_target_match": false,
+      "all8_target_match": true,
+      "base_all8_match": false,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0026135433973598367,
+          "interaction_norm": 5.011155375910137,
+          "joint_change_norm": 61.484361756386065,
+          "interaction_ratio": 0.08150292582958552
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002078741722595007,
+          "interaction_norm": 3.998606783837696,
+          "joint_change_norm": 34.93903857087707,
+          "interaction_ratio": 0.1144452436985681
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001890222571413175,
+          "interaction_norm": 3.658608389864295,
+          "joint_change_norm": 66.28749589499418,
+          "interaction_ratio": 0.05519303965954432
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.001126039226923944,
+          "interaction_norm": 2.1771278030181436,
+          "joint_change_norm": 45.66578451004719,
+          "interaction_ratio": 0.047675252410021365
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0008796006060135366,
+          "interaction_norm": 1.7129801169693797,
+          "joint_change_norm": 53.55032895448022,
+          "interaction_ratio": 0.0319882277179936
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0020835560346460125,
+          "interaction_norm": 4.06407434825322,
+          "joint_change_norm": 67.51883539039358,
+          "interaction_ratio": 0.06019171279769211
+        }
+      ]
+    },
+    {
+      "document": "wikitext-validation-2c7c602b5ac557ff",
+      "split": "diagnostic",
+      "position": 3,
+      "argmax": {
+        "1": 111,
+        "1+15": 111,
+        "1+22": 111,
+        "1+8": 111,
+        "15": 111,
+        "15+22": 111,
+        "22": 111,
+        "8": 111,
+        "8+15": 111,
+        "8+22": 111,
+        "all8": 111,
+        "base": 111,
+        "target": 111
+      },
+      "opportunity": false,
+      "base_target_match": true,
+      "all8_target_match": true,
+      "base_all8_match": true,
+      "pairs": [
+        {
+          "pair": "1+8",
+          "argmax_match": true,
+          "logit_relative_l2": 0.00422380843433341,
+          "interaction_norm": 5.246822681622076,
+          "joint_change_norm": 45.751409561736935,
+          "interaction_ratio": 0.11468111544283713
+        },
+        {
+          "pair": "1+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.002530586170566582,
+          "interaction_norm": 3.129117227934624,
+          "joint_change_norm": 53.22516128714578,
+          "interaction_ratio": 0.05879018780334492
+        },
+        {
+          "pair": "1+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.005166752055327439,
+          "interaction_norm": 6.417564602224385,
+          "joint_change_norm": 98.38093472490586,
+          "interaction_ratio": 0.0652317913035617
+        },
+        {
+          "pair": "8+15",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0016548709451610676,
+          "interaction_norm": 2.0627195585585816,
+          "joint_change_norm": 40.20819809487885,
+          "interaction_ratio": 0.051300969859211405
+        },
+        {
+          "pair": "8+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.0029163936110246135,
+          "interaction_norm": 3.6523941534683146,
+          "joint_change_norm": 100.45950680236862,
+          "interaction_ratio": 0.03635687920162275
+        },
+        {
+          "pair": "15+22",
+          "argmax_match": true,
+          "logit_relative_l2": 0.00439271957217504,
+          "interaction_norm": 5.462666806967703,
+          "joint_change_norm": 109.86316542295943,
+          "interaction_ratio": 0.04972245962454404
+        }
+      ]
+    }
+  ],
+  "traffic": {
+    "loads": 4664,
+    "h2d_bytes": 48141434880,
+    "hits": 0
+  },
+  "allocation": {
+    "target_parameters_bytes": 6174857216,
+    "draft_cuda_parameters_bytes": 1550637056,
+    "draft_host_parameters_bytes": 4624220160,
+    "charged_baseline_bytes": 7725494272,
+    "shared_bytes": 0,
+    "resident_bytes": 650280960,
+    "workspace_bytes": 254607360,
+    "cache_pool_bytes": 20643840,
+    "staging_bytes": 10321920,
+    "host_increments_bytes": 578027520,
+    "host_metadata_bytes": 51450,
+    "metadata_method": "deduplicated Python containers; tensor storage separately charged; observed RSS includes other objects"
+  },
+  "resources": {
+    "samples": 488,
+    "peak_gpu_used": 9325088768,
+    "min_host_available": 6183895040,
+    "peak_rss": 10640404480,
+    "passed": true,
+    "error": null
+  },
+  "max_ffn_relative_l2": 0.0,
+  "peak_extra_cuda_bytes": 959768576,
+  "branch_wall_seconds": 58.14662629988743,
+  "note": "Privileged teacher-forced development interventions; no causal policy, generated accepts, capacity or speedup claim.",
+  "worker_wall_seconds": 110.1211345000047,
+  "analysis_wall_seconds": 8.118987699999707
+}

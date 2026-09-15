@@ -12,7 +12,18 @@ and [implementation amendment](docs/fault-pager-amendment-1.md) freeze the input
 resource accounting and comparisons before measurement. This 1.5B FP32 study does
 not by itself establish a large-model speedup or justify a native implementation.
 
-**Latest research:** [v0.24's Bayesian acquisition screen](docs/bayes-screen-results.md)
+**Latest research:** [v0.25's downstream intervention screen](docs/decision-field-results.md)
+finishes in **1 minute 58 seconds**. Additive predictions match all 48 paired
+diagnostic argmaxes, but none of the tested singleton/pair loads repairs the one
+base disagreement. This four-region action set stops; no predictor is fitted or
+runtime gain claimed. The [six-release course](docs/information-research-course.md)
+continues with a distinct, finer observation/acquisition hypothesis.
+
+```powershell
+.\.venv\Scripts\python.exe -m dynamic_model_loading.decision_field --output runs/decision-field-<fresh-name>
+```
+
+**Preserved result:** [v0.24's Bayesian acquisition screen](docs/bayes-screen-results.md)
 predicts remaining local FFN log-error **30.59% more accurately** than a layer
 mean, but does not establish better acquisition. In **3 minutes 9 seconds**, the
 two-prompt screen finds 8/8 accepted proposals with uniform six bits versus 7/8

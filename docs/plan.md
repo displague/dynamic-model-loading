@@ -21,6 +21,14 @@ Later spatial, recursive and value-of-information hypotheses receive separate
 prospective protocols after the preceding result. This authorization does not
 promise positive gates, launch a long matrix or authorize a native pivot.
 
+The [v0.25 result](decision-field-results.md) completes the first delivery in
+118.240 seconds: Hjoint passes (48/48 additive argmax matches, 6.836% interaction
+ratio), but Hdecision fails (zero repair opportunities in eight diagnostic
+positions). All 28 numerical controls and physical/KV accounting pass. Stop this
+four-region action set. Next: a distinct finer decision-sensitive acquisition
+geometry with cheaper observations, not a more elaborate predictor over the
+failed action set. This completes only #40; milestone 10 remains open.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research
