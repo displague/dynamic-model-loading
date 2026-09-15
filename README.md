@@ -1,5 +1,10 @@
 # Dynamic model loading
 
+Latest research: [v0.29 acquisition result](docs/acquisition-screen-results.md).
+Risk-directed17-page acquisition makes0/32 diagnostic pair errors versus2/32 for
+fixed/contribution controls. This proxy win admits a physical generated test;
+no accepted-token, speedup or larger-model result is claimed yet.
+
 Latest research: [v0.28 decision-coordinate result](docs/recursive-screen-results.md).
 Vector representation lowers diagnostic prediction MSE10.325%; recursion adds
 only1.372% and fails its separate gate. Acquisition/acceptance gains are unmeasured.

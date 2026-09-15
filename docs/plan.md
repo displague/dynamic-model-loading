@@ -78,6 +78,12 @@ contribution-ranked, fixed and independent-risk controls. Only purchased
 measurements reach the controller; pairwise shadows score the outcomes. Numerical
 and algebraic gates cannot substitute for a failed acquisition gate.
 
+The [v0.29 result](acquisition-screen-results.md) nominates risk:0/32 diagnostic
+pair errors versus fixed2, contribution2 and independent-risk3. Hcommutation,
+Hnumerical and Hrisk pass; Hcontribution fails. Completed in26.592s,492 source
+tests and exact replay pass. This is a binary-proxy/reused-data win, not full
+argmax or accepted tokens. Sixth delivery requires a fresh short physical protocol.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research

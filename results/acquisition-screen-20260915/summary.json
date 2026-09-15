@@ -1,0 +1,175 @@
+{
+  "metrics": {
+    "fit": {
+      "fixed": {
+        "pair_errors": 5,
+        "base_pair_errors": 15,
+        "repairs": 11,
+        "new_errors": 1,
+        "posterior_forecast_errors": 9,
+        "positions": 96
+      },
+      "contribution": {
+        "pair_errors": 8,
+        "base_pair_errors": 15,
+        "repairs": 10,
+        "new_errors": 3,
+        "posterior_forecast_errors": 8,
+        "positions": 96
+      },
+      "risk": {
+        "pair_errors": 5,
+        "base_pair_errors": 15,
+        "repairs": 11,
+        "new_errors": 1,
+        "posterior_forecast_errors": 5,
+        "positions": 96
+      },
+      "independent_risk": {
+        "pair_errors": 7,
+        "base_pair_errors": 15,
+        "repairs": 9,
+        "new_errors": 1,
+        "posterior_forecast_errors": 7,
+        "positions": 96
+      }
+    },
+    "diagnostic": {
+      "fixed": {
+        "pair_errors": 2,
+        "base_pair_errors": 7,
+        "repairs": 7,
+        "new_errors": 2,
+        "posterior_forecast_errors": 1,
+        "positions": 32
+      },
+      "contribution": {
+        "pair_errors": 2,
+        "base_pair_errors": 7,
+        "repairs": 7,
+        "new_errors": 2,
+        "posterior_forecast_errors": 2,
+        "positions": 32
+      },
+      "risk": {
+        "pair_errors": 0,
+        "base_pair_errors": 7,
+        "repairs": 7,
+        "new_errors": 0,
+        "posterior_forecast_errors": 0,
+        "positions": 32
+      },
+      "independent_risk": {
+        "pair_errors": 3,
+        "base_pair_errors": 7,
+        "repairs": 4,
+        "new_errors": 0,
+        "posterior_forecast_errors": 3,
+        "positions": 32
+      }
+    },
+    "diagnostic_0": {
+      "fixed": {
+        "pair_errors": 1,
+        "base_pair_errors": 2,
+        "repairs": 2,
+        "new_errors": 1,
+        "posterior_forecast_errors": 0,
+        "positions": 16
+      },
+      "contribution": {
+        "pair_errors": 0,
+        "base_pair_errors": 2,
+        "repairs": 2,
+        "new_errors": 0,
+        "posterior_forecast_errors": 0,
+        "positions": 16
+      },
+      "risk": {
+        "pair_errors": 0,
+        "base_pair_errors": 2,
+        "repairs": 2,
+        "new_errors": 0,
+        "posterior_forecast_errors": 0,
+        "positions": 16
+      },
+      "independent_risk": {
+        "pair_errors": 1,
+        "base_pair_errors": 2,
+        "repairs": 1,
+        "new_errors": 0,
+        "posterior_forecast_errors": 1,
+        "positions": 16
+      }
+    },
+    "diagnostic_1": {
+      "fixed": {
+        "pair_errors": 1,
+        "base_pair_errors": 5,
+        "repairs": 5,
+        "new_errors": 1,
+        "posterior_forecast_errors": 1,
+        "positions": 16
+      },
+      "contribution": {
+        "pair_errors": 2,
+        "base_pair_errors": 5,
+        "repairs": 5,
+        "new_errors": 2,
+        "posterior_forecast_errors": 2,
+        "positions": 16
+      },
+      "risk": {
+        "pair_errors": 0,
+        "base_pair_errors": 5,
+        "repairs": 5,
+        "new_errors": 0,
+        "posterior_forecast_errors": 0,
+        "positions": 16
+      },
+      "independent_risk": {
+        "pair_errors": 2,
+        "base_pair_errors": 5,
+        "repairs": 3,
+        "new_errors": 0,
+        "posterior_forecast_errors": 2,
+        "positions": 16
+      }
+    }
+  },
+  "gates": {
+    "Hcommutation": true,
+    "Hnumerical": true,
+    "Hrisk": true,
+    "Hcontribution": false
+  },
+  "nominated_policy": "risk",
+  "decision": "eligible_for_short_physical_policy",
+  "max_commutation_error": 1.1102230246251565e-15,
+  "max_quadrature_error": 1.519250003578776e-11,
+  "new_inference": false,
+  "cuda_execution": false,
+  "new_h2d_bytes": 0,
+  "accepted_tokens_measured": false,
+  "reused_development_data": true,
+  "pages_per_position": 17,
+  "proposed_page_payload_bytes": 15040512,
+  "proposed_scalar_readback_bytes": 68,
+  "proposed_full_vector_readback_bytes": 104448,
+  "current_axis_bytes": 6144,
+  "full_argmax_certified": false,
+  "risk_is_calibrated": false,
+  "recurrence_used": false,
+  "source_commit": "2eaaf9f4a342222826ce544456abd4711232ebc4",
+  "replay_exact": true,
+  "resources": {
+    "complete": true,
+    "calculation_seconds": 12.875398999996833,
+    "process_peak_rss": 220962816,
+    "input_tensor_bytes": 56665088,
+    "prediction_tensor_bytes": 3113032,
+    "new_inference": false
+  },
+  "worker_wall_seconds": 13.497667599993292,
+  "analysis_wall_seconds": 13.09388630000467
+}
