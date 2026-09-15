@@ -59,3 +59,10 @@ v0.26 passes the observation/action screen. The third delivery now tests the
 [actual joint page field](spatial-screen-protocol.md), using fit-only covariance
 plus independent variance and Gaussian conditioning. This deliberately reuses
 development data and measures predictions on unobserved pages, not loader speed.
+
+v0.27's static field fails. The fourth delivery separates
+[decision coordinates and temporal persistence](recursive-screen-protocol.md).
+[Kalman's original state-estimation paper](https://people.math.harvard.edu/archive/116_fall_03/handouts/Kalman1960.pdf)
+motivates recursive predict/update. The proposed application keeps correction
+vectors in a separable matrix-normal field and projects into the current readout
+direction; separability and Markov behavior are hypotheses, not inherited truths.

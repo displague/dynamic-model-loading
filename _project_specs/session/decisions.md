@@ -51,3 +51,9 @@
   controls and unobserved-only gates before fitting reused development data.
   A statistical component win cannot substitute for physical acquisition or
   accepted-token evidence. The native boundary and original negatives remain.
+
+- 2026-09-15: After the static scalar page-field negative, issue43 separates a
+  changing readout operator from temporal persistence. Freeze separate geometry
+  and temporal gates, causal observed-only filtering and document resets. A
+  representation win does not turn a failed temporal gate into success. The
+  matrix-normal covariance omits feature cross-covariance and is not a certificate.

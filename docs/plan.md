@@ -58,6 +58,13 @@ four probes worsen error0.966%. Hspatial fails; source/474-test validation and
 exact replay pass. Complete only #42. A different temporal/decision-coordinate
 hypothesis requires a fresh protocol; do not tune away this negative.
 
+Fourth delivery: [recursive/coordinate protocol](recursive-screen-protocol.md),
+[#43](https://github.com/displague/dynamic-model-loading/issues/43). Test a
+matrix-normal correction-vector field with current-token projection, separately
+from carrying a posterior across tokens. Four causal rotating observations;
+static/recursive scalar and vector controls. Hgeometry and Htemporal are distinct.
+Reuse-data CPU screening remains separate from physical acquisition and generation.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research
