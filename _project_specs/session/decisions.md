@@ -30,3 +30,12 @@
   coverage claims, compare a constant-layer predictor, and fingerprint prefill KV
   across rollback. Statistical prediction, phase control, physical traffic and
   larger-model capacity remain separate claims. ADR 0005 is unchanged.
+# 2026-09-15: Information-bearing acquisition course
+
+- Owner authorized six further bounded research deliveries. First test downstream
+  singleton/pair precision interventions with identical prior KV; then use results
+  to formulate spatial, recursive and information-directed acquisition hypotheses.
+- ADRs 0004--0006 remain in force. Raw oracle opportunities are not causal-policy
+  results; source/protocol review and CPU validation precede checkpoint inference.
+- Source: v0.25 implementation review; specification:
+  `docs/decision-field-protocol.md` and `docs/information-research-course.md`.

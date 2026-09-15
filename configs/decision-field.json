@@ -1,0 +1,14 @@
+{
+  "protocol": "docs/decision-field-protocol.md",
+  "parent": "runs/fault-pager-20260914-v1",
+  "representation_parent": "runs/refinement-screen-20260914-v1/worker",
+  "tokens_sha256": "0ef8ea0ab583dd29f7645972623b75666c08cbf21b916e4957d186ce28727270",
+  "corpus_sha256": "5a100c930dae2532232c83d50af75f67b0d8c1e4c5365fdf4c14f450c1eb0b31",
+  "representation_files_sha256": "f693d26dd4ca7bdcc4a66d1cfce8af4f3e165f48e2b1da8c806e91d478421dde",
+  "sites": [1, 8, 15, 22],
+  "fit_documents": 6,
+  "diagnostic_documents": 2,
+  "prefix_tokens": 4,
+  "positions": 4,
+  "worker_timeout_seconds": 300
+}

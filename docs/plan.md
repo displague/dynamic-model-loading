@@ -13,6 +13,14 @@ silently damage quality without causing a residency miss.
 
 ## Primary program after v0.19.2
 
+On 2026-09-15 the owner authorized the next six bounded research releases on
+information-bearing acquisition. The [course and inspirations](information-research-course.md)
+start with [decision-sensitive physical interventions](decision-field-protocol.md),
+tracked in [#40](https://github.com/displague/dynamic-model-loading/issues/40).
+Later spatial, recursive and value-of-information hypotheses receive separate
+prospective protocols after the preceding result. This authorization does not
+promise positive gates, launch a long matrix or authorize a native pivot.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research
