@@ -78,3 +78,8 @@ but both prefill gates fail while decode/whole-episode gates pass. This permits
 one distinct sixth hypothesis: switch physical acquisition grain by phase, dense
 prefill and observed-row scalar decode. It is unmeasured until separately frozen
 and run; no best-of-historical-time recombination is evidence of speedup.
+
+The [sixth protocol](phase-screen-protocol.md) now freezes that policy and paired
+controls on the same known texts. Its primary gain is latency, with an explicit
+extra-byte ceiling rather than a false claim of saving both time and traffic.
+All memory, output, reference, short-screen and native-pivot boundaries remain.

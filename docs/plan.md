@@ -88,6 +88,14 @@ Exact logits/48 tokens agree and both controls fit 4800 MiB. Overall packet savi
 phase asymmetry supports a separate short dense-prefill/packet-decode hypothesis,
 not a long matrix or a causal 32/512 comparison across different source texts.
 
+The new [v0.42 phase-switch protocol](phase-screen-protocol.md) tests dense outgoing
+transfers during multi-token prefill and exact packets during scalar decode. It
+uses the same known 512-token inputs, with paired packet/phase episodes and a
+dense-streamed reference. Freeze a 10% prefill gain, 5% whole-episode gain and at
+most 30% extra bytes versus packets, while retaining strong dense-stream gates.
+This is an actual physical policy test, not a sum of favorable historical timings.
+No inference has run for this candidate at protocol freeze.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component

@@ -14,9 +14,10 @@ ARCHITECTURE=(32,2560,10240)
 ORDER=[(0,'packet'),(1,'packet'),(2,'packet')]
 
 
-def worker(output,*,config_path=CONFIG,source_file=__file__):
-    base_worker(output,config_path=config_path,hybrid_order=ORDER,bank_type=PrecisionRows,
-        bank_conditions=('packet',),source_file=source_file,architecture=ARCHITECTURE,cold_reference=True)
+def worker(output,*,config_path=CONFIG,source_file=__file__,hybrid_order=ORDER,
+           bank_type=PrecisionRows,bank_conditions=('packet',)):
+    base_worker(output,config_path=config_path,hybrid_order=hybrid_order,bank_type=bank_type,
+        bank_conditions=bank_conditions,source_file=source_file,architecture=ARCHITECTURE,cold_reference=True)
 
 
 def audit_pages(pages,arrays,calls,condition,capacity):
@@ -31,10 +32,11 @@ def decision(conditions):
         h2d_saving=1-p['h2d_bytes']/s['h2d_bytes'],wall_saving=1-p['wall_seconds']/s['wall_seconds'])
 
 
-def analyze(output,*,config_relative='configs/scale-screen.json'):
+def analyze(output,*,config_relative='configs/scale-screen.json',hybrid_order=ORDER,
+            bank_conditions=('packet',),page_auditor=audit_pages,decider=decision):
     output=Path(output)
-    result=base_analyze(output,config_relative=config_relative,hybrid_order=ORDER,
-        bank_conditions=('packet',),page_auditor=audit_pages,decider=decision,
+    result=base_analyze(output,config_relative=config_relative,hybrid_order=hybrid_order,
+        bank_conditions=bank_conditions,page_auditor=page_auditor,decider=decider,
         architecture=ARCHITECTURE,cold_reference=True)
     m=json.loads((output/'manifest.json').read_text()); a=result['allocation']
     audit_allocation(a,m['environment']['gpu']['total_bytes'])
@@ -47,7 +49,7 @@ def analyze(output,*,config_relative='configs/scale-screen.json'):
         demand(bool(values) and max(values)<=LIMIT,'Cold episode sampled cap exceeded')
         if r['warmup']: warmups[r['condition']]=r['wall_seconds']
         else: peaks[r['condition']]=max(peaks.get(r['condition'],0),max(values))
-    useful=all(r['wall_seconds']<=5 for r in rows if r['condition']=='packet' and not r['warmup'])
+    useful=all(r['wall_seconds']<=5 for r in rows if r['condition'] in bank_conditions and not r['warmup'])
     calls=json.loads((output/'episode-0/calls.json').read_text())
     cold_ttft=calls[0]['finished']-a['worker_started']
     completion=json.loads((output/'completion.json').read_text())

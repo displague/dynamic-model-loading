@@ -249,8 +249,9 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
             metrics.append(dict(episode=r['episode'],max_relative_l2=float(error.max()),exact=np.array_equal(values,ref[2])))
             demand(r['cuda']['peak_reserved_bytes']<=4800*2**20 and
                 all(s['gpu_used']<=4800*2**20 for s in samples if r['started']<=s['monotonic']<=r['finished']), 'Candidate cap failed')
-        demand(set(arrays)=={f'logits.{j}' for j in range(n)}|({f'activity.{j+1}' for j in range(len(pages))}
-            if r['condition']!='stream' else set()),'Unaccounted tensors')
+        expected_activity={f'activity.{j+1}' for j,p in enumerate(pages)
+            if p.get('physical_condition',p['condition'])!='stream'}
+        demand(set(arrays)=={f'logits.{j}' for j in range(n)}|expected_activity,'Unaccounted tensors')
         if not r['warmup']:
             group=conditions.setdefault(r['condition'],dict(tokens=0,wall_seconds=0.,h2d_bytes=0,prefill_seconds=0.,decode_seconds=0.))
             group['tokens']+=n; group['wall_seconds']+=r['wall_seconds']; group['prefill_seconds']+=calls[0]['finished']-calls[0]['started']
