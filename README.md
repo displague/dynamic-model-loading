@@ -1,6 +1,11 @@
 # Dynamic model loading
 
-Latest research: [v0.31 output-specialist prerequisite](docs/specialist-screen-results.md).
+Latest research: [v0.32 physical exact-zero loading](docs/sparse-down-screen-results.md).
+Actual outgoing-weight traffic falls 14.44%; wall time falls 4.90%, narrowly missing
+the frozen 5% gate. Outputs match. Next: compact row packets instead of fragmented
+128-row extents; no longer suite or capacity claim follows this result.
+
+First delivery: [v0.31 output-specialist prerequisite](docs/specialist-screen-results.md).
 The next six-release course begins with a negative: learned general and domain
 heads each match the target on 34/48 diagnostic positions versus the untouched
 draft's 37/48. No specialist pager follows; sparse architecture is the next distinct

@@ -1,0 +1,274 @@
+[
+  {
+    "episode": "episode-0",
+    "document": 0,
+    "condition": "resident",
+    "ids": [
+      159,
+      5,
+      2523,
+      9,
+      5,
+      82,
+      54,
+      376
+    ],
+    "stop_reason": "length",
+    "started": 20341.3340514,
+    "finished": 20342.5662412,
+    "wall_seconds": 1.2321897999972862,
+    "ttft_seconds": 1.1409034999996948,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 0,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "load_extents": 0,
+    "cuda": {
+      "allocated_bytes": 5281645056,
+      "reserved_bytes": 5299503104,
+      "peak_allocated_bytes": 5282241024,
+      "peak_reserved_bytes": 5299503104
+    }
+  },
+  {
+    "episode": "episode-1",
+    "document": 1,
+    "condition": "resident",
+    "ids": [
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437
+    ],
+    "stop_reason": "length",
+    "started": 20342.5680124,
+    "finished": 20342.6526034,
+    "wall_seconds": 0.08459100000254693,
+    "ttft_seconds": 0.016717099999368656,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 0,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "load_extents": 0,
+    "cuda": {
+      "allocated_bytes": 5281645056,
+      "reserved_bytes": 5299503104,
+      "peak_allocated_bytes": 5282241024,
+      "peak_reserved_bytes": 5299503104
+    }
+  },
+  {
+    "episode": "episode-2",
+    "document": 0,
+    "condition": "stream",
+    "ids": [
+      159,
+      5,
+      2523,
+      9,
+      5,
+      82,
+      54,
+      376
+    ],
+    "stop_reason": "length",
+    "started": 20343.2810831,
+    "finished": 20344.354585,
+    "wall_seconds": 1.0735019000021566,
+    "ttft_seconds": 0.16481000000203494,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 12884901888,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "load_extents": 192,
+    "cuda": {
+      "allocated_bytes": 3738141184,
+      "reserved_bytes": 5366611968,
+      "peak_allocated_bytes": 3738737152,
+      "peak_reserved_bytes": 5366611968
+    }
+  },
+  {
+    "episode": "episode-3",
+    "document": 0,
+    "condition": "sparse",
+    "ids": [
+      159,
+      5,
+      2523,
+      9,
+      5,
+      82,
+      54,
+      376
+    ],
+    "stop_reason": "length",
+    "started": 20344.3627903,
+    "finished": 20345.3808012,
+    "wall_seconds": 1.0180108999993536,
+    "ttft_seconds": 0.19316819999949075,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 11047796736,
+    "raw_tensor_bytes": 2173952,
+    "activity_d2h_bytes": 4522176,
+    "load_extents": 1101,
+    "cuda": {
+      "allocated_bytes": 3738141184,
+      "reserved_bytes": 5366611968,
+      "peak_allocated_bytes": 3738737152,
+      "peak_reserved_bytes": 5366611968
+    }
+  },
+  {
+    "episode": "episode-4",
+    "document": 1,
+    "condition": "sparse",
+    "ids": [
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437
+    ],
+    "stop_reason": "length",
+    "started": 20345.3890936,
+    "finished": 20346.3417441,
+    "wall_seconds": 0.9526504999994359,
+    "ttft_seconds": 0.13491830000202754,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 11000610816,
+    "raw_tensor_bytes": 2173952,
+    "activity_d2h_bytes": 4522176,
+    "load_extents": 1185,
+    "cuda": {
+      "allocated_bytes": 3738141184,
+      "reserved_bytes": 5366611968,
+      "peak_allocated_bytes": 3738737152,
+      "peak_reserved_bytes": 5366611968
+    }
+  },
+  {
+    "episode": "episode-5",
+    "document": 1,
+    "condition": "stream",
+    "ids": [
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437
+    ],
+    "stop_reason": "length",
+    "started": 20346.3499645,
+    "finished": 20347.3486542,
+    "wall_seconds": 0.9986896999980672,
+    "ttft_seconds": 0.1245610999976634,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 12884901888,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "load_extents": 192,
+    "cuda": {
+      "allocated_bytes": 3738141184,
+      "reserved_bytes": 5366611968,
+      "peak_allocated_bytes": 3738737152,
+      "peak_reserved_bytes": 5366611968
+    }
+  },
+  {
+    "episode": "episode-6",
+    "document": 0,
+    "condition": "repeat",
+    "ids": [
+      159,
+      5,
+      2523,
+      9,
+      5,
+      82,
+      54,
+      376
+    ],
+    "stop_reason": "length",
+    "started": 20347.8545285,
+    "finished": 20347.9477212,
+    "wall_seconds": 0.09319269999832613,
+    "ttft_seconds": 0.01692679999905522,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 0,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "load_extents": 0,
+    "cuda": {
+      "allocated_bytes": 5348753920,
+      "reserved_bytes": 5366611968,
+      "peak_allocated_bytes": 5349349888,
+      "peak_reserved_bytes": 5366611968
+    }
+  },
+  {
+    "episode": "episode-7",
+    "document": 1,
+    "condition": "repeat",
+    "ids": [
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437,
+      1437
+    ],
+    "stop_reason": "length",
+    "started": 20347.9551608,
+    "finished": 20348.0396596,
+    "wall_seconds": 0.08449879999898258,
+    "ttft_seconds": 0.016847800001414726,
+    "explicit_copies": {
+      "h2d_bytes": 184,
+      "d2h_bytes": 1608888
+    },
+    "weight_h2d_bytes": 0,
+    "raw_tensor_bytes": 1608704,
+    "activity_d2h_bytes": 0,
+    "load_extents": 0,
+    "cuda": {
+      "allocated_bytes": 5348753920,
+      "reserved_bytes": 5366611968,
+      "peak_allocated_bytes": 5349349888,
+      "peak_reserved_bytes": 5366611968
+    }
+  }
+]

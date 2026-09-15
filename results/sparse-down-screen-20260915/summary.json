@@ -1,0 +1,142 @@
+{
+  "source_commit": "12a9822a58bab6e3581c4d3c6f9f50f28cf062bf",
+  "conditions": {
+    "resident": {
+      "tokens": 16,
+      "wall_seconds": 1.316780799999833,
+      "ttft_seconds": 1.1576205999990634,
+      "h2d_bytes": 0,
+      "d2h_bytes": 0,
+      "extents": 0,
+      "prefill_bytes": 0,
+      "decode_bytes": 0,
+      "active_neurons": 0,
+      "observed_neurons": 0
+    },
+    "stream": {
+      "tokens": 16,
+      "wall_seconds": 2.072191600000224,
+      "ttft_seconds": 0.28937109999969834,
+      "h2d_bytes": 25769803776,
+      "d2h_bytes": 0,
+      "extents": 384,
+      "prefill_bytes": 3221225472,
+      "decode_bytes": 22548578304,
+      "active_neurons": 0,
+      "observed_neurons": 0
+    },
+    "sparse": {
+      "tokens": 16,
+      "wall_seconds": 1.9706613999987894,
+      "ttft_seconds": 0.3280865000015183,
+      "h2d_bytes": 22048407552,
+      "d2h_bytes": 9044352,
+      "extents": 2286,
+      "prefill_bytes": 3219128320,
+      "decode_bytes": 18829279232,
+      "active_neurons": 369908,
+      "observed_neurons": 9043968
+    },
+    "repeat": {
+      "tokens": 16,
+      "wall_seconds": 0.1776914999973087,
+      "ttft_seconds": 0.033774600000469945,
+      "h2d_bytes": 0,
+      "d2h_bytes": 0,
+      "extents": 0,
+      "prefill_bytes": 0,
+      "decode_bytes": 0,
+      "active_neurons": 0,
+      "observed_neurons": 0
+    }
+  },
+  "controls": [
+    {
+      "episode": "episode-2",
+      "relative_l2": 8.547463708259223e-06,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-3",
+      "relative_l2": 8.547463708259223e-06,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-4",
+      "relative_l2": 7.007316044313691e-06,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-5",
+      "relative_l2": 7.007316044313691e-06,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-6",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    },
+    {
+      "episode": "episode-7",
+      "relative_l2": 0.0,
+      "argmax_identical": true
+    }
+  ],
+  "allocation": {
+    "parameters_bytes": 5263032320,
+    "registered_buffers_bytes": 0,
+    "construction_h2d_bytes": 5263032320,
+    "resident_cuda": {
+      "allocated_bytes": 5263032320,
+      "reserved_bytes": 5268045824,
+      "peak_allocated_bytes": 5263032320,
+      "peak_reserved_bytes": 5268045824
+    },
+    "host_down_bytes": 1610612736,
+    "workspace_bytes": 67108864,
+    "pinned_staging_bytes": 67108864,
+    "construction_d2h_bytes": 1610612736,
+    "host_weight_aliases": true,
+    "conversion_seconds": 0.6258583000017097,
+    "hybrid_cuda_parameters_bytes": 3652419584,
+    "hybrid_cuda": {
+      "allocated_bytes": 3729096704,
+      "reserved_bytes": 5366611968,
+      "peak_allocated_bytes": 5339709440,
+      "peak_reserved_bytes": 5366611968
+    },
+    "restore_h2d_bytes": 1610612736,
+    "restore_seconds": 0.49772200000006706,
+    "restore_cuda": {
+      "allocated_bytes": 5339709440,
+      "reserved_bytes": 5366611968,
+      "peak_allocated_bytes": 5339709440,
+      "peak_reserved_bytes": 5366611968
+    }
+  },
+  "episode_explicit_copies": {
+    "h2d_bytes": 47818212800,
+    "d2h_bytes": 21915456
+  },
+  "resources": {
+    "samples": 68,
+    "peak_gpu_used": 5919313920,
+    "min_host_available": 9604304896,
+    "peak_rss": 8909803520,
+    "passed": true,
+    "error": null
+  },
+  "max_kv_bytes": 9043968,
+  "all_output_ids_match": true,
+  "checks": {
+    "Htraffic": true,
+    "Hruntime": false
+  },
+  "weight_traffic_saving": 0.1444091796875,
+  "wall_saving": 0.048996531016448186,
+  "decision": "stop_128_row_exact_zero_candidate",
+  "full_suite_launched": false,
+  "native_admission_evaluated": false,
+  "worker_wall_seconds": 19.624792000002344,
+  "analysis_wall_seconds": 4.505872800000361
+}

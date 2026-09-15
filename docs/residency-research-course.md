@@ -52,3 +52,13 @@ matching/wrong-domain diagnostic agreement is 37/34/34/36 out of 48. Training
 improvement does not transfer. Stop this output-only ridge candidate, preserving
 its small-data/loss/representation limitations. Next test sparse architecture and
 causal exact-zero discovery rather than implement acquisition for these heads.
+
+## Second delivery
+
+[v0.32](sparse-down-screen-results.md) implements physical exact-zero outgoing-weight
+acquisition on OPT. Htraffic passes (14.4409% saved); Hruntime narrowly fails
+(4.89965% against 5%). All outputs match. Approximately 95.91% activation zeros
+do not survive 128-row physical granularity or the prefill union as equivalent byte
+savings. The next distinct candidate compacts active rows into one packet rather
+than many extent copies, charging gather/metadata/scatter. No threshold change or
+longer matrix; startup and retained allocator reservation remain capacity caveats.

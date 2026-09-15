@@ -77,3 +77,10 @@
   ridge specialists; train only on authored fit documents and compare untouched,
   general and wrong-domain controls before any paging. Teacher-forced agreement
   is not accepted-prefix or capacity evidence. No failed gate is retuned.
+
+- 2026-09-15: Issue #47 physically loads only outgoing OPT weights after exact
+  ReLU-zero discovery. v0.32 saves 14.4409% traffic; 4.89965% wall saving narrowly
+  misses the frozen 5% requirement. Preserve that negative without interpreting a
+  tiny threshold miss as statistical impossibility. Next change transport/grain to
+  compact active-row packets; charge gather, indices, scatter, staging and setup.
+  Initial resident loading and allocator reservation forbid a capacity claim here.

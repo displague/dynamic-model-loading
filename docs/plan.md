@@ -28,6 +28,14 @@ controls, exact refit, resource audits and 543 source tests pass. Stop this outp
 head candidate before paging; move to a distinct sparse-architecture protocol.
 Complete only #46; five deliveries and the broader research milestone remain.
 
+The [v0.32 sparse result](sparse-down-screen-results.md) completes delivery two:
+real exact-zero outgoing-weight acquisition saves 14.4409% H2D and preserves all
+tested outputs, but 4.89965% wall saving narrowly misses the frozen 5% bar. No
+post-hoc repeat or expansion. 566 CPU tests and independent raw replay pass. Next
+change transport/grain to compact active-row packets, under a new short protocol;
+current startup/reserved memory does not establish a hard-budget capacity frontier.
+Complete only #47; four deliveries and milestone 10 remain open.
+
 On 2026-09-15 the owner authorized the next six bounded research releases on
 information-bearing acquisition. The [course and inspirations](information-research-course.md)
 start with [decision-sensitive physical interventions](decision-field-protocol.md),

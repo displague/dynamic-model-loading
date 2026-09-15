@@ -1,0 +1,32 @@
+{
+  "parameters_bytes": 5263032320,
+  "registered_buffers_bytes": 0,
+  "construction_h2d_bytes": 5263032320,
+  "resident_cuda": {
+    "allocated_bytes": 5263032320,
+    "reserved_bytes": 5268045824,
+    "peak_allocated_bytes": 5263032320,
+    "peak_reserved_bytes": 5268045824
+  },
+  "host_down_bytes": 1610612736,
+  "workspace_bytes": 67108864,
+  "pinned_staging_bytes": 67108864,
+  "construction_d2h_bytes": 1610612736,
+  "host_weight_aliases": true,
+  "conversion_seconds": 0.6258583000017097,
+  "hybrid_cuda_parameters_bytes": 3652419584,
+  "hybrid_cuda": {
+    "allocated_bytes": 3729096704,
+    "reserved_bytes": 5366611968,
+    "peak_allocated_bytes": 5339709440,
+    "peak_reserved_bytes": 5366611968
+  },
+  "restore_h2d_bytes": 1610612736,
+  "restore_seconds": 0.49772200000006706,
+  "restore_cuda": {
+    "allocated_bytes": 5339709440,
+    "reserved_bytes": 5366611968,
+    "peak_allocated_bytes": 5339709440,
+    "peak_reserved_bytes": 5366611968
+  }
+}
