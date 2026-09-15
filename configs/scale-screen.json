@@ -1,0 +1,23 @@
+{
+  "protocol": "docs/scale-screen-protocol.md",
+  "repo": "facebook/opt-2.7b",
+  "revision": "905a4b602cda5c501f1b3a2650a4152680238254",
+  "artifact_manifest": "results/opt27-artifact-20260915/manifest.json",
+  "prefix_tokens": 32,
+  "generation_tokens": 16,
+  "cache_rows": 0,
+  "dtype": "float16",
+  "worker_timeout_seconds": 300,
+  "candidate_gpu_limit_mib": 4800,
+  "reference_gpu_limit_mib": 4800,
+  "expected_candidate_parameters_bytes": 3625472000,
+  "minimum_traffic_saving": 0.50,
+  "minimum_stream_wall_saving": 0.20,
+  "maximum_packet_episode_seconds": 5,
+  "warmup_prompt": "The librarian opened a drawer containing old maps of the harbor. Each map showed a different arrangement of streets, bridges, warehouses and canals. She began comparing the names along the river with the list in her notebook.",
+  "prompts": [
+    "At sunrise the ferry engineer inspected the fuel gauge, the ropes and the small radio beside the wheel. A handwritten notice said the northern landing was closed for repairs. She unfolded the route chart and decided that the next crossing would",
+    "def longest_run(items):\n    best = current = 0\n    previous = object()\n    for item in items:\n        current = current + 1 if item == previous else 1\n        best = max(best, current)\n        previous = item\n    return best\n\n# Example:",
+    "A warehouse receives boxes containing six glass jars each. On Monday it receives fifteen boxes and on Tuesday it receives nine more. Before shipping the jars, workers remove twelve damaged jars. The total number of undamaged jars available for shipment is"
+  ]
+}

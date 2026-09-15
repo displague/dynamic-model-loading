@@ -56,6 +56,13 @@ but resident is about4x faster and fits. Component gates pass; resident-speed fa
 650 CPU tests and exact replays pass. Complete only #54, nominate a new SHORT
 larger sparse-model capacity protocol, and keep milestone10/Q4/native questions open.
 
+The separately frozen [v0.40 scale protocol](scale-screen-protocol.md) tests original
+OPT2.7B FP16 from CPU-only startup,4800MiB across ALL phases, against contiguous
+dense FP16 streaming. New32-token prefixes/16-token cap, no full-resident GPU
+preload. Both controls may fit; full FP16 parameters alone exceed the allowance.
+Measure latency improvement, not unique access over Q4 (unmeasured). No inference
+has occurred on this artifact at protocol freeze; no long matrix/native admission.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component

@@ -17,14 +17,15 @@ def worker(output):
         bank_conditions=('stream','packet'),source_file=__file__)
 
 
-def audit_pages(pages,arrays,calls,condition,capacity):
-    if condition=='packet': return packet_audit(pages,arrays,calls,condition,capacity,itemsize=2)
-    demand(condition=='stream' and len(pages)==24*len(calls),'Missing dense control rows')
+def audit_pages(pages,arrays,calls,condition,capacity,*,architecture=(24,2048,8192)):
+    layer_count,hidden,neurons=architecture
+    if condition=='packet': return packet_audit(pages,arrays,calls,condition,capacity,itemsize=2,architecture=architecture)
+    demand(condition=='stream' and len(pages)==layer_count*len(calls),'Missing dense control rows')
     totals=dict(weight_h2d_bytes=0,metadata_h2d_bytes=0,activity_d2h_bytes=0,hits=0,active=0,
         prefill_h2d_bytes=0,decode_h2d_bytes=0)
     last=0.
     for j,r in enumerate(pages):
-        step,layer=divmod(j,24); payload=2048*8192*2
+        step,layer=divmod(j,layer_count); payload=hidden*neurons*2
         demand(r['layer']==layer and r['call']==j+1 and r['tokens']==len(calls[step]['input_ids'])
             and r['condition']=='stream' and r['direct_contiguous_copy'] is True,'Wrong dense control')
         demand(r['weight_h2d_bytes']==payload and r['metadata_h2d_bytes']==r['activity_d2h_bytes']==0,'Stream bytes changed')

@@ -26,7 +26,8 @@ def decision(conditions):
 
 
 def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
-           bank_conditions=('packet','retained'),source_file=__file__):
+           bank_conditions=('packet','retained'),source_file=__file__,
+           architecture=(24,2048,8192),cold_reference=False):
     import torch
     from huggingface_hub import snapshot_download
     from transformers import AutoModelForCausalLM,AutoTokenizer,DynamicCache
@@ -39,7 +40,7 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
     from .retained_rows import RetainedRows
     from .capacity_down import move_except_down
     from .relu import extract
-    started=time.perf_counter(); cfg=json.loads(Path(config_path).read_text())
+    started=time.perf_counter(); cfg=json.loads(Path(config_path).read_text()); layer_count,hidden,neurons=architecture
     manifest,protocol=committed_inputs(source_file,config_path,cfg['protocol'])
     demand(subprocess.check_output(['git','rev-parse','origin/main'],cwd=ROOT,text=True).strip()==manifest['source_commit'],
            'Push reviewed source first')
@@ -61,20 +62,27 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
     prefixes=[tokenizer.encode(p,add_special_tokens=False)[:32] for p in [*cfg['prompts'],cfg['warmup_prompt']]]
     demand(all(len(p)==32 for p in prefixes),'Short prompt'); write(output/'tokens.json',prefixes)
     write(output/'NOTICE.json',dict(checkpoint=cfg['repo'],license='OPT custom license; weights not redistributed',
-        reference_gpu_startup=True,capacity_claim=False))
+        reference_gpu_startup=not cold_reference,capacity_claim=False))
     bank=None; episodes=[]; refs={}; limit=cfg['candidate_gpu_limit_mib']*2**20
-    with torch.inference_mode(),Resources(output/'resources.jsonl',gpu_limit=6500*2**20) as resources:
+    with torch.inference_mode(),Resources(output/'resources.jsonl',gpu_limit=cfg['reference_gpu_limit_mib']*2**20) as resources:
         setup=time.perf_counter()
+        if cold_reference: torch.cuda.memory.set_per_process_memory_fraction(limit/env['gpu']['total_bytes'])
         model=AutoModelForCausalLM.from_pretrained(path,dtype=dtype,attn_implementation='sdpa',
-            use_safetensors=False,weights_only=True,local_files_only=True,trust_remote_code=False).eval().to('cuda')
+            use_safetensors=False,weights_only=True,local_files_only=True,trust_remote_code=False).eval()
+        if not cold_reference: model=model.to('cuda')
         torch.cuda.synchronize(); layers=extract(model)
-        demand(len(layers)==24 and model.config.vocab_size==50272 and model.config.eos_token_id==2,'Wrong architecture')
+        demand(len(layers)==layer_count and all(l.fc2.weight.shape==(hidden,neurons) for l in layers)
+            and model.config.vocab_size==50272 and model.config.eos_token_id==2,'Wrong architecture')
         demand({p.dtype for p in model.parameters()}=={dtype},'Model precision changed')
         allocation=dict(resident_setup_seconds=time.perf_counter()-setup,
             resident_parameter_bytes=sum(p.numel()*p.element_size() for p in model.parameters()),
             resident_cuda=cuda_memory(torch.device('cuda:0')))
+        if cold_reference:
+            from .scale_support import construct
+            bank,allocation=construct(model,layers,bank_type,cfg,resources,setup)
+            allocation['worker_started']=started
 
-        def episode(doc,condition,warmup=False):
+        def episode(doc,condition,warmup=False,reference=False):
             resources.boundary(); torch.cuda.reset_peak_memory_stats(); torch.cuda.synchronize()
             begin=time.perf_counter(); key=f'episode-{len(episodes)}'; folder=output/key; folder.mkdir()
             arrays={}; pages=[]; calls=[]; ids=[]
@@ -112,25 +120,28 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
                 stop_reason='eos' if ids[-1]==2 else 'length',started=begin,finished=finish,
                 wall_seconds=finish-begin,ttft_seconds=calls[0]['finished']-begin,
                 explicit_copies=dict(h2d_bytes=h2d,d2h_bytes=d2h),cuda=mem)
+            if cold_reference: row['reference']=reference
             write(folder/'episode.json',row); episodes.append(row)
             print(f'{key} doc{doc} {condition} warmup={warmup}: {len(ids)} tokens {row["wall_seconds"]:.3f}s',flush=True)
             logits=np.stack([arrays[f'logits.{s}'] for s in range(len(ids))])
-            if condition=='resident': refs[doc]=(ids,row['stop_reason'],logits)
+            if condition=='resident' or reference: refs[doc]=(ids,row['stop_reason'],logits)
             else:
                 reference=refs[doc]; demand((ids,row['stop_reason'])==reference[:2],'Greedy mismatch')
                 demand(np.all(np.linalg.norm(logits.astype(np.float64)-reference[2],axis=1)/
                     np.maximum(np.linalg.norm(reference[2].astype(np.float64),axis=1),1e-30)<=1e-5),'Logit mismatch')
 
-        episode(3,'resident',True)
-        for d in range(3): episode(d,'resident')
-        setup=time.perf_counter(); model.cpu(); torch.cuda.empty_cache()
-        allocation['before_candidate_cuda']=cuda_memory(torch.device('cuda:0'))
-        bank=(bank_type or RetainedRows)(layers,capacity=cfg['cache_rows'])
-        moved=move_except_down(model,layers); torch.cuda.synchronize()
-        allocation.update(bank.allocation(),candidate_setup_seconds=time.perf_counter()-setup,
-            construction_h2d_bytes=moved,reference_return_d2h_bytes=allocation['resident_parameter_bytes'],
-            candidate_parameter_bytes=sum(p.numel()*p.element_size() for p in model.parameters() if p.is_cuda),
-            candidate_cuda=cuda_memory(torch.device('cuda:0')))
+        reference_condition='stream' if cold_reference else 'resident'
+        episode(3,reference_condition,True,reference=True)
+        for d in range(3): episode(d,reference_condition,reference=True)
+        if not cold_reference:
+            setup=time.perf_counter(); model.cpu(); torch.cuda.empty_cache()
+            allocation['before_candidate_cuda']=cuda_memory(torch.device('cuda:0'))
+            bank=(bank_type or RetainedRows)(layers,capacity=cfg['cache_rows'])
+            moved=move_except_down(model,layers); torch.cuda.synchronize()
+            allocation.update(bank.allocation(),candidate_setup_seconds=time.perf_counter()-setup,
+                construction_h2d_bytes=moved,reference_return_d2h_bytes=allocation['resident_parameter_bytes'],
+                candidate_parameter_bytes=sum(p.numel()*p.element_size() for p in model.parameters() if p.is_cuda),
+                candidate_cuda=cuda_memory(torch.device('cuda:0')))
         for c in bank_conditions: episode(3,c,True)
         for d,c in hybrid_order: episode(d,c)
         write(output/'episodes.json',episodes); write(output/'allocation.json',allocation); resources.boundary()
@@ -139,20 +150,21 @@ def worker(output,*,config_path=CONFIG,hybrid_order=ORDER,bank_type=None,
     write(output/'files.json',{p.relative_to(output).as_posix():sha(p) for p in output.rglob('*') if p.is_file()})
 
 
-def audit_pages(pages,arrays,calls,condition,capacity,*,itemsize=4):
-    states=[OrderedDict() for _ in range(24)]; totals=dict(weight_h2d_bytes=0,metadata_h2d_bytes=0,
+def audit_pages(pages,arrays,calls,condition,capacity,*,itemsize=4,architecture=(24,2048,8192)):
+    layer_count,hidden,neurons=architecture
+    states=[OrderedDict() for _ in range(layer_count)]; totals=dict(weight_h2d_bytes=0,metadata_h2d_bytes=0,
         activity_d2h_bytes=0,hits=0,active=0,prefill_h2d_bytes=0,decode_h2d_bytes=0)
-    demand(len(pages)==len(calls)*24,'Missing layer calls')
+    demand(len(pages)==len(calls)*layer_count,'Missing layer calls')
     for j,r in enumerate(pages):
-        step,layer=divmod(j,24); n=len(calls[step]['input_ids']); packed=arrays[f'activity.{j+1}']
-        demand(packed.dtype==np.uint8 and packed.shape==(n,1024),'Activity shape changed')
+        step,layer=divmod(j,layer_count); n=len(calls[step]['input_ids']); packed=arrays[f'activity.{j+1}']
+        demand(packed.dtype==np.uint8 and packed.shape==(n,neurons//8),'Activity shape changed')
         active=np.flatnonzero(np.unpackbits(packed,axis=1).any(axis=0)).tolist()
         hits,misses,inserts=retention_plan(states[layer],active,capacity if condition=='retained' else 0)
         demand(r['call']==j+1 and r['layer']==layer and r['condition']==condition and r['tokens']==n,'Call identity drift')
         demand(r['active']==active and r['hits']==[list(x) for x in hits] and r['misses']==misses
             and r['inserts']==[list(x) for x in inserts] and r['residency']==[list(x) for x in states[layer].items()],
             'Residency replay mismatch')
-        weight=len(misses)*2048*itemsize; meta=len(misses)*8+16*(len(hits)+len(inserts)); d2h=n*8192+1
+        weight=len(misses)*hidden*itemsize; meta=len(misses)*8+16*(len(hits)+len(inserts)); d2h=n*neurons+1
         for k,v in [('weight_h2d_bytes',weight),('metadata_h2d_bytes',meta),('activity_d2h_bytes',d2h)]:
             demand(r[k]==v,'Physical byte mismatch: '+k); totals[k]+=v
         clocks=[r[k] for k in ('started','selection_finished','acquisition_finished','finished')]
@@ -164,7 +176,8 @@ def audit_pages(pages,arrays,calls,condition,capacity,*,itemsize=4):
 
 
 def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_order=ORDER,
-            bank_conditions=('packet','retained'),page_auditor=audit_pages,decider=decision):
+            bank_conditions=('packet','retained'),page_auditor=audit_pages,decider=decision,
+            architecture=(24,2048,8192),cold_reference=False):
     from safetensors.numpy import load_file
     from .provenance import verify_snapshot,frozen_environment
     from .specialist_analysis import audit_resources
@@ -173,7 +186,7 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
     from transformers import AutoTokenizer
     output=Path(output); supervisor=require_supervisor(output)
     cfg=json.loads((output/'config.json').read_text()); m=json.loads((output/'manifest.json').read_text())
-    itemsize=4 if cfg['dtype']=='float32' else 2
+    itemsize=4 if cfg['dtype']=='float32' else 2; layer_count,hidden,neurons=architecture
     verify_snapshot(output,m,config_relative,cfg['protocol'],__file__); frozen_environment(m['environment'])
     demand(m['cuda_execution'] is True and m['environment']['cpu_threads']==4 and
         not m['environment']['tf32_matmul'] and not m['environment']['tf32_cudnn'],'Execution drift')
@@ -186,7 +199,7 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
     completion=json.loads((output/'completion.json').read_text()); samples=list(read_rows(output/'resources.jsonl'))
     audit_resources(samples,completion['resources']); demand(completion['complete'] and not completion['full_suite_launched']
         and 0<completion['worker_inner_seconds']<=supervisor['worker_wall_seconds'],'Incomplete run')
-    demand(all(s['gpu_used']<=6500*2**20 for s in samples),'Reference GPU allowance failed')
+    demand(all(s['gpu_used']<=cfg['reference_gpu_limit_mib']*2**20 for s in samples),'Reference GPU allowance failed')
     episodes=json.loads((output/'episodes.json').read_text()); prefixes=json.loads((output/'tokens.json').read_text())
     path=Path(snapshot_download(cfg['repo'],revision=cfg['revision'],local_files_only=True))
     for name in ('config.json','vocab.json','merges.txt','tokenizer_config.json','special_tokens_map.json'):
@@ -194,7 +207,8 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
     tokenizer=AutoTokenizer.from_pretrained(path,local_files_only=True,trust_remote_code=False)
     demand(prefixes==[tokenizer.encode(p,add_special_tokens=False)[:32]
         for p in [*cfg['prompts'],cfg['warmup_prompt']]],'Tokenization changed')
-    expected=[(3,'resident',True),*[(d,'resident',False) for d in range(3)],
+    reference_condition='stream' if cold_reference else 'resident'
+    expected=[(3,reference_condition,True),*[(d,reference_condition,False) for d in range(3)],
         *[(3,c,True) for c in bank_conditions],*[(d,c,False) for d,c in hybrid_order]]
     demand([(r['document'],r['condition'],r['warmup']) for r in episodes]==expected,'Episode order drift')
     refs={}; metrics=[]; conditions={}; previous=0
@@ -208,7 +222,7 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
         for j,c in enumerate(calls):
             a=arrays[f'logits.{j}']; demand(a.shape==(50272,) and a.dtype==np.float32 and np.isfinite(a).all(),'Bad logits')
             demand(c['step']==j and c['input_ids']==(prefixes[r['document']] if j==0 else [ids[-1]])
-                and c['kv_length']==32+j and c['kv_bytes']==c['kv_storage_bytes']==(32+j)*98304*itemsize,'KV/trajectory drift')
+                and c['kv_length']==32+j and c['kv_bytes']==c['kv_storage_bytes']==(32+j)*2*layer_count*hidden*itemsize,'KV/trajectory drift')
             demand(r['started']<=c['started']<c['finished']<=r['finished'] and (j==0 or calls[j-1]['finished']<=c['started']),'Call clock drift')
             token=int(a.argmax()); demand(token==c['token'] and (j==n-1 or token!=2),'Token drift'); ids.append(token); values.append(a)
             d2h+=len(c['input_ids'])*8+a.nbytes
@@ -217,10 +231,15 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
         demand(r['explicit_copies']==dict(h2d_bytes=256+8*(n-1),d2h_bytes=d2h)
             and r['ttft_seconds']==calls[0]['finished']-r['started'],'Token copy/TTFT mismatch')
         values=np.stack(values)
-        if r['condition']=='resident':
-            demand(not pages,'Unexpected reference paging'); refs[r['document']]=(ids,stop,values)
-            stats={}
+        if r['condition']=='resident' or (cold_reference and i<4):
+            if cold_reference:
+                demand(r['reference'] is True and r['condition']=='stream','Wrong cold reference')
+                stats=page_auditor(pages,arrays,calls,r['condition'],cfg['cache_rows'])
+            else:
+                demand(not pages,'Unexpected reference paging'); stats={}
+            refs[r['document']]=(ids,stop,values)
         else:
+            if cold_reference: demand(r['reference'] is False,'Candidate relabeled as reference')
             ref=refs[r['document']]; demand((ids,stop)==ref[:2],'Reference IDs differ')
             error=np.linalg.norm(values.astype(np.float64)-ref[2],axis=1)/np.maximum(np.linalg.norm(ref[2].astype(np.float64),axis=1),1e-30)
             demand(np.all(error<=1e-5),'Numerical contract failed')
@@ -237,9 +256,9 @@ def analyze(output,*,config_relative='configs/retention-screen.json',hybrid_orde
             group['h2d_bytes']+=stats.get('weight_h2d_bytes',0)+stats.get('metadata_h2d_bytes',0)
             for k in ('hits','active','prefill_h2d_bytes','decode_h2d_bytes'): group[k]=group.get(k,0)+stats.get(k,0)
     a=json.loads((output/'allocation.json').read_text())
-    demand(a['cache_bytes']==24*cfg['cache_rows']*2048*itemsize and a['workspace_bytes']==8192*2048*itemsize
-        and a['packet_cuda_bytes']==a['pinned_bytes']==8192*(8+2048*itemsize)
-        and a['candidate_parameter_bytes']==a['construction_h2d_bytes']==913104896*itemsize,'Allocation mismatch')
+    demand(a['cache_bytes']==layer_count*cfg['cache_rows']*hidden*itemsize and a['workspace_bytes']==neurons*hidden*itemsize
+        and a['packet_cuda_bytes']==a['pinned_bytes']==neurons*(8+hidden*itemsize)
+        and a['candidate_parameter_bytes']==a['construction_h2d_bytes']==cfg.get('expected_candidate_parameters_bytes',913104896*itemsize),'Allocation mismatch')
     result=decider(conditions)
     return dict(conditions=conditions,metrics=metrics,**result,
         allocation=a,resources=completion['resources'],source_commit=m['source_commit'],
