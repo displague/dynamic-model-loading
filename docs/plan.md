@@ -13,6 +13,14 @@ silently damage quality without causing a residency miss.
 
 ## Primary program after v0.19.2
 
+The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
+draft specialists, sparse architecture, accepted-prefix risk, then capacity.
+[Course and inspirations](residency-research-course.md) distinguish component
+headroom from physical acquisition and useful memory limits. The first
+[output-specialist protocol](specialist-screen-protocol.md), issue #46, tests
+full-vocabulary target agreement before building a new specialist pager. All
+prior negatives, the short-screen rule and native boundary remain unchanged.
+
 On 2026-09-15 the owner authorized the next six bounded research releases on
 information-bearing acquisition. The [course and inspirations](information-research-course.md)
 start with [decision-sensitive physical interventions](decision-field-protocol.md),

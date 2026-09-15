@@ -71,3 +71,9 @@
   page payloads, rejected work and cropped storage. Source review and tiny-model
   forced-rejection/tamper tests precede inference. Six delivered releases do not
   close milestone10 or authorize native work.
+
+- 2026-09-15: The second six-delivery authorization starts with issue #46 under
+  ADRs 0004--0006. Use a frozen 0.5B HF backbone and output-only full-vocabulary
+  ridge specialists; train only on authored fit documents and compare untouched,
+  general and wrong-domain controls before any paging. Teacher-forced agreement
+  is not accepted-prefix or capacity evidence. No failed gate is retuned.
