@@ -63,3 +63,11 @@
   Undercovered Gaussian risk is a ranking model, not a safety certificate; all
   diagnostic risk-path actions receive a higher-order numerical audit. No
   full-argmax or physical savings claim follows from a binary proxy improvement.
+
+- 2026-09-15: Issue45 follows the nominated risk policy into a separately frozen
+  physical generated-trajectory screen. Actual full-readout proposal IDs must
+  link to verifier rounds; old/new KV fingerprints link through rejection crops.
+  Charge observation/controller time, original host weights, workspace, index,
+  page payloads, rejected work and cropped storage. Source review and tiny-model
+  forced-rejection/tamper tests precede inference. Six delivered releases do not
+  close milestone10 or authorize native work.

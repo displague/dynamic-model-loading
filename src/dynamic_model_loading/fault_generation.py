@@ -31,7 +31,7 @@ def step(model, tokens, cache, pager=None):
 
 @torch.inference_mode()
 def generate(target, prefix, eos, cap=64, *, draft=None, pager=None, record=lambda r: None,
-             check=lambda: None):
+             check=lambda: None, copy_receipt=False):
     """Both caches end at the last consumed token; saved logits predict the next.
 
     Batched target logits are a candidate numerical path, not a substituted reference.
@@ -39,6 +39,11 @@ def generate(target, prefix, eos, cap=64, *, draft=None, pager=None, record=lamb
     """
     sync(target)
     started = time.perf_counter()
+    copies={'h2d_bytes':0,'d2h_bytes':0,'operations':{}}
+    def charge(direction,size,operation):
+        if copy_receipt and prefix.is_cuda:
+            copies[direction+'_bytes']+=size
+            copies['operations'][operation]=copies['operations'].get(operation,0)+size
     target_cache = DynamicCache(config=target.config)
     draft_cache = DynamicCache(config=draft.config) if draft is not None else None
     t0 = time.perf_counter()
@@ -56,10 +61,12 @@ def generate(target, prefix, eos, cap=64, *, draft=None, pager=None, record=lamb
         check()
         if draft is None:
             token = int(target_next.argmax(-1).item())
+            charge('d2h',8,'target_argmax')
             output.append(token)
             if token in eos or len(output) == cap:
                 break
             t0 = time.perf_counter()
+            charge('h2d',8,'target_next_token')
             target_next = step(target, prefix.new_tensor([[token]]), target_cache)[:, -1, :]
             sync(target)
             target_seconds += time.perf_counter() - t0
@@ -71,18 +78,25 @@ def generate(target, prefix, eos, cap=64, *, draft=None, pager=None, record=lamb
         proposed = []
         for i in range(4):
             token = int(draft_next.argmax(-1).item())
+            charge('d2h',8,'draft_argmax')
             proposed.append(token)
             # Consume even the fourth: its KV can be cropped on rejection.
+            charge('h2d',8,'draft_next_token')
             draft_next = step(draft, prefix.new_tensor([[token]]), draft_cache, pager)[:, -1, :]
         sync(target)
         t0 = time.perf_counter()
+        charge('h2d',32,'target_proposal_batch')
         logits = step(target, prefix.new_tensor([proposed]), target_cache)
         predictions = torch.cat((target_next.argmax(-1), logits[0, :3].argmax(-1)))
         sync(target)
         target_seconds += time.perf_counter() - t0
         peak_tkv = max(peak_tkv, kv_bytes(target_cache))
         peak_dkv = max(peak_dkv, kv_bytes(draft_cache))
+        charge('h2d',32,'verifier_proposals')
         verdict = verification_commit(prefix.new_tensor(proposed), predictions, tuple(eos))
+        charge('d2h',64,'verifier_inputs')
+        charge('h2d',8*verdict['committed'].numel(),'verifier_committed_tensor')
+        charge('d2h',8*verdict['committed'].numel(),'verifier_committed_readback')
         committed = verdict['committed'].tolist()[:cap-len(output)]
         emitted_accepted = min(verdict['accepted'], len(committed))
         attempted += 4
@@ -97,6 +111,7 @@ def generate(target, prefix, eos, cap=64, *, draft=None, pager=None, record=lamb
             if hasattr(pager, 'after_cache_crop'):
                 pager.after_cache_crop(draft_cache)
             if not done:
+                charge('h2d',8,'fallback_token')
                 fallback = prefix.new_tensor([[verdict['fallback']]])
                 t0 = time.perf_counter()
                 target_next = step(target, fallback, target_cache)[:, -1, :]
@@ -105,6 +120,7 @@ def generate(target, prefix, eos, cap=64, *, draft=None, pager=None, record=lamb
                 draft_next = step(draft, fallback, draft_cache, pager)[:, -1, :]
         else:
             target_next = logits[:, -1, :]
+        charge('d2h',32,'ledger_target_predictions')
         record(dict(kind='verification', round=rounds, base=base, proposed=proposed,
                     target_predictions=predictions.tolist(), accepted=a, emitted_accepted=emitted_accepted,
                     fallback=verdict['fallback'], committed=committed,
@@ -120,4 +136,5 @@ def generate(target, prefix, eos, cap=64, *, draft=None, pager=None, record=lamb
                 started_monotonic=started,finished_monotonic=time.perf_counter(),
                 wall_seconds=wall, prefill_seconds=prefill_seconds, decode_seconds=wall-prefill_seconds,
                 target_seconds=target_seconds, attempted=attempted, accepted=accepted, rounds=rounds,
-                target_kv_peak_bytes=peak_tkv, draft_kv_peak_bytes=peak_dkv)
+                target_kv_peak_bytes=peak_tkv, draft_kv_peak_bytes=peak_dkv,
+                **({'generator_copies':copies} if copy_receipt else {}))

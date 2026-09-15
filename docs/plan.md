@@ -84,6 +84,14 @@ Hnumerical and Hrisk pass; Hcontribution fails. Completed in26.592s,492 source
 tests and exact replay pass. This is a binary-proxy/reused-data win, not full
 argmax or accepted tokens. Sixth delivery requires a fresh short physical protocol.
 
+Sixth delivery: [physical risk-acquisition protocol](risk-screen-protocol.md),
+[#45](https://github.com/displague/dynamic-model-loading/issues/45). Use two
+documents outside this course's estimator fit/diagnostics, with generated K4 draft
+trajectories, full readouts and scalar dense target references. Compare risk17,
+fixed17 and same-pager all35. Audit actual KV histories, rejected work, transfers,
+controller/readback cost and memory under a300s CUDA worker. Statistical nomination
+does not guarantee physical economics or authorize a native pivot.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research

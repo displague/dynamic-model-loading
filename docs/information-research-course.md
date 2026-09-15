@@ -72,3 +72,10 @@ v0.28 passes geometry but fails recurrence. The fifth delivery applies only the
 fixed-budget acquisition decisions. A derived commutation identity may permit
 scalar observations; decision-risk ranking borrows the metareasoning framing but
 does not provide calibrated probabilities or a multi-step optimal controller.
+
+v0.29 nominates risk (zero versus two fixed diagnostic pair errors). The sixth
+[physical generated-trajectory screen](risk-screen-protocol.md) removes teacher
+forcing and restores full-vocabulary readout/dense verification. It measures
+the actual selected-page loads and controller cost under the same bounded
+resource contract, rather than extending the failed recurrence or assuming
+the pairwise proxy is an acceptance certificate.
