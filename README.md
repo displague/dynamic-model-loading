@@ -1,5 +1,9 @@
 # Dynamic model loading
 
+Latest research: [v0.28 decision-coordinate result](docs/recursive-screen-results.md).
+Vector representation lowers diagnostic prediction MSE10.325%; recursion adds
+only1.372% and fails its separate gate. Acquisition/acceptance gains are unmeasured.
+
 Latest research: [v0.27 spatial page-field result](docs/spatial-screen-results.md).
 An11.5-second screen finds negligible predictive transfer (0.049% MSE reduction),
 worse than shuffled geometry. This static-field candidate stops; temporal

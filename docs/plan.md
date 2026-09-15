@@ -65,6 +65,12 @@ from carrying a posterior across tokens. Four causal rotating observations;
 static/recursive scalar and vector controls. Hgeometry and Htemporal are distinct.
 Reuse-data CPU screening remains separate from physical acquisition and generation.
 
+The [v0.28 result](recursive-screen-results.md) passes Hgeometry (10.325% lower
+diagnostic MSE) but fails Htemporal (only1.372% additional reduction). Completed
+in12.177s with exact replay and483 source tests. Complete #43 only; advance the
+static vector/current-axis premise into a new decision-acquisition screen, not
+the failed recurrence. Undercovered Gaussian bands are not safety guarantees.
+
 The project owner has restored novel physical dynamic-loading research as the
 primary track in [ADR 0004](adr/0004-fault-pager-research-track.md). The completed
 stock llama.cpp configurations remain fixed practical baselines, not the research

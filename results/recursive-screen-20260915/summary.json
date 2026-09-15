@@ -1,0 +1,151 @@
+{
+  "metrics": {
+    "fit": {
+      "static_scalar": {
+        "mse": 0.04121067008548479,
+        "mae": 0.13091220699003012,
+        "coverage90": 0.9153225806451613,
+        "unobserved_predictions": 2976
+      },
+      "recursive_scalar": {
+        "mse": 0.04121133611205567,
+        "mae": 0.13091304427311923,
+        "coverage90": 0.9153225806451613,
+        "unobserved_predictions": 2976
+      },
+      "static_vector": {
+        "mse": 0.034181325106420406,
+        "mae": 0.11466019333458977,
+        "coverage90": 0.896505376344086,
+        "unobserved_predictions": 2976
+      },
+      "recursive_vector": {
+        "mse": 0.033962419172998255,
+        "mae": 0.1143451259879801,
+        "coverage90": 0.895497311827957,
+        "unobserved_predictions": 2976
+      }
+    },
+    "diagnostic": {
+      "static_scalar": {
+        "mse": 0.09180880636420602,
+        "mae": 0.21058858113887846,
+        "coverage90": 0.780241935483871,
+        "unobserved_predictions": 992
+      },
+      "recursive_scalar": {
+        "mse": 0.09181014633850647,
+        "mae": 0.210594214343368,
+        "coverage90": 0.780241935483871,
+        "unobserved_predictions": 992
+      },
+      "static_vector": {
+        "mse": 0.08232945318763528,
+        "mae": 0.1936110865616784,
+        "coverage90": 0.7933467741935484,
+        "unobserved_predictions": 992
+      },
+      "recursive_vector": {
+        "mse": 0.08119993562415638,
+        "mae": 0.19259438444380708,
+        "coverage90": 0.7953629032258065,
+        "unobserved_predictions": 992
+      }
+    },
+    "diagnostic_0": {
+      "static_scalar": {
+        "mse": 0.0639082089714506,
+        "mae": 0.16274107393598106,
+        "coverage90": 0.8689516129032258,
+        "unobserved_predictions": 496
+      },
+      "recursive_scalar": {
+        "mse": 0.06390262181728754,
+        "mae": 0.16274634483538547,
+        "coverage90": 0.8689516129032258,
+        "unobserved_predictions": 496
+      },
+      "static_vector": {
+        "mse": 0.048276896431204266,
+        "mae": 0.13507705275252546,
+        "coverage90": 0.8850806451612904,
+        "unobserved_predictions": 496
+      },
+      "recursive_vector": {
+        "mse": 0.048874746178838614,
+        "mae": 0.1350471713566022,
+        "coverage90": 0.8850806451612904,
+        "unobserved_predictions": 496
+      }
+    },
+    "diagnostic_1": {
+      "static_scalar": {
+        "mse": 0.11970940375696144,
+        "mae": 0.25843608834177584,
+        "coverage90": 0.6915322580645161,
+        "unobserved_predictions": 496
+      },
+      "recursive_scalar": {
+        "mse": 0.11971767085972541,
+        "mae": 0.25844208385135053,
+        "coverage90": 0.6915322580645161,
+        "unobserved_predictions": 496
+      },
+      "static_vector": {
+        "mse": 0.11638200994406632,
+        "mae": 0.25214512037083137,
+        "coverage90": 0.7016129032258065,
+        "unobserved_predictions": 496
+      },
+      "recursive_vector": {
+        "mse": 0.11352512506947417,
+        "mae": 0.25014159753101195,
+        "coverage90": 0.7056451612903226,
+        "unobserved_predictions": 496
+      }
+    }
+  },
+  "geometry_mse_ratios": {
+    "fit": 0.829429005534655,
+    "diagnostic": 0.8967489770102652,
+    "diagnostic_0": 0.7554099419805486,
+    "diagnostic_1": 0.9722044074361065
+  },
+  "temporal_mse_ratios": {
+    "fit": 0.9935957446722558,
+    "diagnostic": 0.9862805166347377,
+    "diagnostic_0": 1.0123837651512313,
+    "diagnostic_1": 0.9754525216056572
+  },
+  "rho_scalar": 0.0024274268079437526,
+  "rho_vector": 0.1898074630599691,
+  "gates": {
+    "Hgeometry": true,
+    "Htemporal": false
+  },
+  "decision": "eligible_for_decision_acquisition_screen",
+  "new_inference": false,
+  "cuda_execution": false,
+  "new_h2d_bytes": 0,
+  "accepted_tokens_measured": false,
+  "reused_development_data": true,
+  "observation_pages_per_position": 4,
+  "hypothetical_page_payload_per_position": 3538944,
+  "vector_observation_d2h_per_position": 24576,
+  "vector_state_bytes": 430080,
+  "vector_page_covariance_bytes": 9800,
+  "diagonal_feature_covariance_bytes": 12288,
+  "full_argmax_certified": false,
+  "source_commit": "cc969abee45dad9ac29225bd0545b613f66e93cf",
+  "replay_exact": true,
+  "resources": {
+    "complete": true,
+    "calculation_seconds": 5.750387599997339,
+    "process_peak_rss": 220917760,
+    "input_tensor_bytes": 56665088,
+    "prediction_tensor_bytes": 753080,
+    "new_inference": false
+  },
+  "worker_wall_seconds": 6.522163000001456,
+  "analysis_wall_seconds": 5.654813400004059
+}
