@@ -43,3 +43,23 @@ win; predictor accuracy or a synthetic overlap ceiling cannot be called that win
 Each delivery receives a separate frozen protocol and <=300-second supervised
 worker. Failed correctness/resources/timeouts stop that candidate. An expanded
 study requires a separately frozen protocol even after a passing short screen.
+
+## Completed course: v0.37-v0.40
+
+- [v0.37 retention](retention-screen-results.md):46.04% fewer H2D bytes,2.24x wall.
+  Reuse exists; this192MiB LRU implementation loses economics.
+- [v0.38 early acquisition](early-screen-results.md):94.38% event-region overlap,
+  but37.13% more bytes/13.29% more wall than demand packets. Stop this forecast.
+- [v0.39 precision](precision-packet-results.md):FP16 packets save94.41% H2D and
+  52.23% wall versus dense streaming; warm resident FP16 is about4x faster and fits.
+- [v0.40 scale](scale-screen-results.md):CPU-first OPT2.7B FP16 under4800MiB,
+  95.25% less H2D/64.62% less wall than FP16 streaming, all checked logits exact.
+  Both offloaded controls fit; full resident FP16 parameter bytes exceed allowance.
+
+Four deliveries are complete, not four successful methods. This supplies a larger
+same-precision acquisition result, not optimized-Q4 competitiveness or native
+admission. Stop the failed retention/forecast variants. Leave qualified low-bit
+baselines, context/block-union durability and the genuinely unmeasured ReLU
+specialist/ranker variants open; new studies require new protocols. No additional
+release is fabricated by renaming one of the same failed candidates. Milestone10
+remains open and the practical stock32B comparison is unchanged.

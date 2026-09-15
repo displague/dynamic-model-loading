@@ -63,6 +63,16 @@ preload. Both controls may fit; full FP16 parameters alone exceed the allowance.
 Measure latency improvement, not unique access over Q4 (unmeasured). No inference
 has occurred on this artifact at protocol freeze; no long matrix/native admission.
 
+The [v0.40 scale result](scale-screen-results.md) completes delivery4 in34.122s.
+All checked logits exact/48 scored tokens per condition; OPT2.7B packets save
+95.2499% outgoing H2D and64.6241% wall versus contiguous FP16 streaming. CPU-first
+peak4321MiB stays below4800MiB; full resident FP16 parameters alone exceed that
+budget. BOTH offloaded controls fit: packet improves their acquisition, not unique
+access over streaming or unmeasured Q4. All frozen component gates pass;654 tests
+and historical raw replays pass. Close only #55. Four-delivery course complete;
+milestone10 stays open for qualified low-bit competition/context durability and
+unmeasured ReLU specialist/ranker variants. No extra matrix or native pivot follows.
+
 The owner has authorized a second six-delivery course, v0.31--v0.36, prioritizing
 draft specialists, sparse architecture, accepted-prefix risk, then capacity.
 [Course and inspirations](residency-research-course.md) distinguish component
